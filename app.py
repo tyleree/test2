@@ -225,20 +225,97 @@ def home():
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Veterans Benefits Assistant</title>
+    <title>Veterans Benefits AI - Trusted data, free forever</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            500: '#22c55e',
+                            600: '#16a34a',
+                            700: '#15803d',
+                            900: '#14532d'
+                        }
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.5s ease-in-out',
+                        'slide-up': 'slideUp 0.6s ease-out',
+                        'pulse-slow': 'pulse 3s infinite',
+                        'glow': 'glow 2s ease-in-out infinite alternate',
+                        'float': 'float 3s ease-in-out infinite'
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' }
+                        },
+                        slideUp: {
+                            '0%': { transform: 'translateY(20px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' }
+                        },
+                        glow: {
+                            '0%': { textShadow: '0 0 5px #22c55e, 0 0 10px #22c55e, 0 0 15px #22c55e' },
+                            '100%': { textShadow: '0 0 10px #22c55e, 0 0 20px #22c55e, 0 0 30px #22c55e' }
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-10px)' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
     <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+        }
+        .card-gradient {
+            background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+        }
+        .typing-dot {
+            animation: typing 1.4s infinite ease-in-out;
+        }
+        .typing-dot:nth-child(1) { animation-delay: -0.32s; }
+        .typing-dot:nth-child(2) { animation-delay: -0.16s; }
+        @keyframes typing {
+            0%, 80%, 100% {
+                transform: scale(0.8);
+                opacity: 0.5;
+            }
+            40% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+        .loading-spinner {
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        .title-shadow {
+            text-shadow: 0 4px 8px rgba(0, 0, 0, 0.5), 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+        .tagline-shadow {
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4), 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #f5f5f5;
+            background-color: #111827;
+            color: #f9fafb;
         }
         .container {
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
         }
         h1 {
             color: #2c3e50;
@@ -406,29 +483,147 @@ def home():
 </head>
 <body>
     <div class="container">
-        <h1>Veterans Benefits Knowledge Base Assistant</h1>
+        <h1 class="text-5xl md:text-7xl font-bold mb-6 animate-fade-in title-shadow">
+            <span class="bg-gradient-to-r from-green-400 to-green-600 bg-clip-text text-transparent animate-glow">
+                Veterans Benefits AI
+            </span>
+        </h1>
+        <p class="text-xl md:text-2xl mb-8 text-green-300 animate-slide-up tagline-shadow animate-float">
+            Trusted data, free forever
+        </p>
         
-        <div class="status success">
-            ✅ App is running successfully on Render!
+        <div class="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 max-w-2xl mx-auto animate-slide-up border border-gray-700">
+            <p class="text-lg text-gray-200">
+                Get instant, accurate answers about VA benefits with AI-powered assistance backed by official sources.
+            </p>
         </div>
         
-        <div class="mcp-info">
-            🔗 Connected to Pinecone MCP Assistant: <strong>vb</strong><br>
-            📍 Endpoint: <code>https://prod-1-data.ke.pinecone.io/mcp/assistants/vb</code>
+        <!-- Status Cards -->
+        <div class="grid md:grid-cols-3 gap-6 mb-12 mt-12">
+            <div class="bg-gray-800 rounded-2xl shadow-lg p-6 border border-gray-700 hover:shadow-xl hover:shadow-green-500/20 transition-all duration-300 hover:scale-105">
+                <div class="flex items-center space-x-3">
+                    <div class="w-12 h-12 bg-green-900 rounded-full flex items-center justify-center">
+                        <span class="text-2xl">✅</span>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-gray-100">AI Powered</h3>
+                        <p class="text-gray-400 text-sm">Advanced AI assistance</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-gray-800 rounded-2xl shadow-lg p-6 border border-gray-700 hover:shadow-xl hover:shadow-green-500/20 transition-all duration-300 hover:scale-105">
+                <div class="flex items-center space-x-3">
+                    <div class="w-12 h-12 bg-green-900 rounded-full flex items-center justify-center">
+                        <span class="text-2xl">🏠</span>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-gray-100">Trusted Sources</h3>
+                        <p class="text-gray-400 text-sm">Official VA documentation</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-gray-800 rounded-2xl shadow-lg p-6 border border-gray-700 hover:shadow-xl hover:shadow-green-500/20 transition-all duration-300 hover:scale-105">
+                <div class="flex items-center space-x-3">
+                    <div class="w-12 h-12 bg-green-900 rounded-full flex items-center justify-center">
+                        <span class="text-2xl">🚀</span>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-gray-100">Instant Results</h3>
+                        <p class="text-gray-400 text-sm">Real-time responses</p>
+                    </div>
+                </div>
+            </div>
         </div>
-        
-        <div class="input-group">
-            <textarea id="prompt" placeholder="Ask a question about veterans benefits..."></textarea>
+
+        <!-- Main Interface Card -->
+        <div class="bg-gray-800 rounded-3xl shadow-2xl p-8 max-w-4xl mx-auto border border-gray-700">
+            <!-- Input Section -->
+            <div class="space-y-6">
+                <div class="relative">
+                    <textarea id="prompt" 
+                              placeholder="Ask a question about veterans benefits..."
+                              class="w-full h-32 p-6 text-lg border-2 border-gray-600 rounded-2xl resize-none focus:border-green-500 focus:ring-4 focus:ring-green-500/20 transition-all duration-300 font-medium bg-gray-700 text-gray-100 placeholder-gray-400"></textarea>
+                    
+                    <!-- Typing Indicator -->
+                    <div id="typingIndicator" class="absolute top-6 right-6 hidden">
+                        <div class="flex space-x-1">
+                            <div class="w-2 h-2 bg-green-500 rounded-full typing-dot"></div>
+                            <div class="w-2 h-2 bg-green-500 rounded-full typing-dot"></div>
+                            <div class="w-2 h-2 bg-green-500 rounded-full typing-dot"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center">
+                    <button onclick="ask()" id="askButton" 
+                            class="px-8 py-4 bg-gradient-to-r from-green-600 to-green-700 text-white text-lg font-semibold rounded-2xl hover:from-green-700 hover:to-green-800 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-green-500/30">
+                        Ask Question
+                    </button>
+                </div>
+            </div>
+
+            <!-- Sample Questions -->
+            <div class="mt-8 pt-6 border-t border-gray-700">
+                <p class="text-center text-gray-400 mb-4 font-medium">Try these sample questions:</p>
+                <div class="flex flex-wrap justify-center gap-3">
+                    <button onclick="setSampleQuestion('How do I apply for VA disability benefits?')" 
+                            class="px-4 py-2 bg-gray-700 hover:bg-gray-600 text-gray-200 rounded-full text-sm font-medium transition-colors duration-200 hover:shadow-lg hover:shadow-green-500/20">
+                        Disability Benefits
+                    </button>
+                    <button onclick="setSampleQuestion('What are the requirements for VA pension?')" 
+                            class="px-4 py-2 bg-gray-700 hover:bg-gray-600 text-gray-200 rounded-full text-sm font-medium transition-colors duration-200 hover:shadow-lg hover:shadow-green-500/20">
+                        Pension Requirements
+                    </button>
+                    <button onclick="setSampleQuestion('How do I use my GI Bill for education?')" 
+                            class="px-4 py-2 bg-gray-700 hover:bg-gray-600 text-gray-200 rounded-full text-sm font-medium transition-colors duration-200 hover:shadow-lg hover:shadow-green-500/20">
+                        GI Bill Education
+                    </button>
+                </div>
+            </div>
         </div>
-        
-        <button onclick="ask()" id="askButton">Ask Question</button>
-        
-        <div id="response" class="response" style="display: none;"></div>
-        
-        <div id="refs" class="citations" style="display: none;"></div>
+
+        <!-- Response Section -->
+        <div id="response" class="mt-12 max-w-4xl mx-auto hidden">
+            <div class="bg-gray-800 rounded-3xl shadow-xl p-8 border border-gray-700">
+                <div class="prose prose-lg max-w-none prose-invert">
+                    <!-- Response content will be inserted here -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Citations Section -->
+        <div id="refs" class="mt-8 max-w-4xl mx-auto hidden">
+            <div class="bg-gray-800 rounded-3xl shadow-xl p-8 border border-gray-700">
+                <h3 class="text-2xl font-bold text-gray-100 mb-6 text-center">Sources & Footnotes</h3>
+                <div class="space-y-4">
+                    <!-- Citations will be inserted here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="bg-gray-950 text-white py-12 mt-20 border-t border-gray-800">
+        <div class="container mx-auto px-4 text-center">
+            <h3 class="text-2xl font-bold mb-4 text-green-400">Veterans Benefits AI</h3>
+            <p class="text-gray-400 mb-6">Empowering veterans with trusted information and AI assistance</p>
+            <div class="flex justify-center space-x-6 text-sm text-gray-500">
+                <span>© 2024 Veterans Benefits AI</span>
+                <span>•</span>
+                <span>Free Forever</span>
+                <span>•</span>
+                <span>Trusted Data</span>
+            </div>
+        </div>
     </div>
 
     <script>
+        function setSampleQuestion(question) {
+            document.getElementById('prompt').value = question;
+        }
+        
         async function ask() {
             const prompt = document.getElementById('prompt').value.trim();
             if (!prompt) {
@@ -465,80 +660,68 @@ def home():
                 
                 // Convert markdown headers
                 formattedContent = formattedContent
-                    .replace(/### (.*?)(?=\\n|$)/g, '<h3>$1</h3>')     // H3 headers
-                    .replace(/## (.*?)(?=\\n|$)/g, '<h2>$1</h2>')      // H2 headers
-                    .replace(/# (.*?)(?=\\n|$)/g, '<h1>$1</h1>');     // H1 headers
+                    .replace(/### (.*?)(?=\n|$)/g, '<h3 class="text-2xl font-bold text-green-400 mt-8 mb-4">$1</h3>')
+                    .replace(/#### (.*?)(?=\n|$)/g, '<h4 class="text-xl font-semibold text-green-300 mt-6 mb-3">$1</h4>');
                 
                 // Convert numbered lists
-                formattedContent = formattedContent.replace(/(\\d+\\.\\s+.*?)(?=\\n\\d+\\.|$)/gs, function(match) {
-                    const items = match.split('\\n').filter(line => line.trim());
-                    if (items.length > 0) {
-                        const listItems = items.map(item => 
-                            item.replace(/^\\d+\\.\\s+/, '<li>') + '</li>'
-                        ).join('');
-                        return `<ol>${listItems}</ol>`;
-                    }
-                    return match;
+                formattedContent = formattedContent.replace(/\d+\.\s+(.*?)(?=\n\d+\.|$)/gs, function(match, content) {
+                    return `<li class="mb-2 text-gray-200">${content}</li>`;
+                });
+                formattedContent = formattedContent.replace(/(<li.*?<\/li>)+/gs, function(match) {
+                    return `<ol class="list-decimal list-inside space-y-2 my-4 text-gray-200">${match}</ol>`;
                 });
                 
                 // Convert bullet lists
-                formattedContent = formattedContent.replace(/(- .*?)(?=\\n-|$)/gs, function(match) {
-                    const items = match.split('\\n').filter(line => line.trim());
-                    if (items.length > 0) {
-                        const listItems = items.map(item => 
-                            item.replace(/^- /, '<li>') + '</li>'
-                        ).join('');
-                        return `<ul>${listItems}</ul>`;
-                    }
-                    return match;
+                formattedContent = formattedContent.replace(/- (.*?)(?=\n-|$)/gs, function(match, content) {
+                    return `<li class="mb-2 text-gray-200">${content}</li>`;
+                });
+                formattedContent = formattedContent.replace(/(<li.*?<\/li>)+/gs, function(match) {
+                    return `<ul class="list-disc list-inside space-y-2 my-4 text-gray-200">${match}</ul>`;
                 });
                 
                 // Convert bold and italic text
                 formattedContent = formattedContent
-                    .replace(/\\*\\*(.*?)\\*\\*/g, '<strong>$1</strong>')  // Bold text
-                    .replace(/\\*(.*?)\\*/g, '<em>$1</em>');              // Italic text
+                    .replace(/\*\*(.*?)\*\*/g, '<strong class="font-semibold text-green-300">$1</strong>')
+                    .replace(/\*(.*?)\*/g, '<em class="italic text-gray-300">$1</em>');
                 
                 // Convert line breaks
                 formattedContent = formattedContent
-                    .replace(/\\n\\n/g, '<br><br>')  // Double line breaks become <br><br>
-                    .replace(/\\n/g, '<br>');         // Single line breaks become <br>
+                    .replace(/\n\n/g, '<br><br>')
+                    .replace(/\n/g, '<br>');
                 
-                responseDiv.innerHTML = `<strong>Answer:</strong><br><br>${formattedContent}`;
+                responseDiv.querySelector('.prose').innerHTML = `
+                    <h2 class="text-3xl font-bold text-green-400 mb-6 text-center">Answer</h2>
+                    <div class="text-gray-200 leading-relaxed">
+                        ${formattedContent}
+                    </div>
+                `;
                 
                 // Display citations if available
                 if (data.citations && data.citations.length > 0) {
                     refsDiv.style.display = 'block';
-                    refsDiv.innerHTML = '<h3>Sources & Footnotes:</h3>';
+                    refsDiv.querySelector('.space-y-4').innerHTML = '';
                     
                     data.citations.forEach((c, i) => {
-                        const div = document.createElement('div');
-                        div.className = 'citation-item';
-                        
-                        // Create the reference link
-                        const a = document.createElement('a');
-                        a.href = c.url;
-                        a.target = '_blank';
-                        a.textContent = `[${i+1}] ${c.file} (Page ${c.page})`;
-                        a.style.fontWeight = 'bold';
-                        a.style.color = '#3498db';
-                        div.appendChild(a);
-                        
-                        // Add the source content as a footnote
-                        if (c.source_text && c.source_text !== 'Source content not available') {
-                            const sourceDiv = document.createElement('div');
-                            sourceDiv.className = 'source-content';
-                            sourceDiv.style.marginTop = '8px';
-                            sourceDiv.style.padding = '10px';
-                            sourceDiv.style.backgroundColor = '#f8f9fa';
-                            sourceDiv.style.borderLeft = '3px solid #3498db';
-                            sourceDiv.style.fontSize = '14px';
-                            sourceDiv.style.color = '#555';
-                            sourceDiv.style.fontStyle = 'italic';
-                            sourceDiv.innerHTML = `<strong>Source:</strong> ${c.source_text}`;
-                            div.appendChild(sourceDiv);
-                        }
-                        
-                        refsDiv.appendChild(div);
+                        const citationDiv = document.createElement('div');
+                        citationDiv.className = 'bg-gray-700 rounded-2xl p-6 border border-gray-600';
+                        citationDiv.innerHTML = `
+                            <div class="flex items-start space-x-4">
+                                <div class="w-8 h-8 bg-green-900 rounded-full flex items-center justify-center flex-shrink-0">
+                                    <span class="text-green-400 font-bold text-sm">${i+1}</span>
+                                </div>
+                                <div class="flex-1">
+                                    <a href="${c.url}" target="_blank" class="text-lg font-semibold text-green-400 hover:text-green-300 transition-colors">
+                                        ${c.file} (Page ${c.page})
+                                    </a>
+                                    ${c.source_text && c.source_text !== 'Source content not available' ? 
+                                        `<div class="mt-3 p-4 bg-gray-800 rounded-xl border-l-4 border-green-500">
+                                            <p class="text-gray-300 italic">${c.source_text}</p>
+                                        </div>` : ''
+                                    }
+                                </div>
+                            </div>
+                        `;
+                        refsDiv.querySelector('.space-y-4').appendChild(citationDiv);
                     });
                 }
             } catch (error) {
@@ -551,11 +734,25 @@ def home():
             }
         }
 
-        // Allow Enter key to submit
+        // Event listeners
         document.getElementById('prompt').addEventListener('keydown', function(e) {
             if (e.key === 'Enter' && e.ctrlKey) {
                 ask();
             }
+        });
+        
+        document.getElementById('prompt').addEventListener('input', function(e) {
+            const typingIndicator = document.getElementById('typingIndicator');
+            if (e.target.value.length > 0) {
+                typingIndicator.classList.remove('hidden');
+            } else {
+                typingIndicator.classList.add('hidden');
+            }
+        });
+        
+        document.getElementById('prompt').addEventListener('blur', function() {
+            const typingIndicator = document.getElementById('typingIndicator');
+            typingIndicator.classList.add('hidden');
         });
     </script>
 </body>
