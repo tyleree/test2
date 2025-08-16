@@ -241,9 +241,11 @@
     </div>
 
     <script>
+        // Global variables and functions
         let mockDataMode = false;
         
-        function toggleMockData() {
+        // Make functions globally accessible
+        window.toggleMockData = function() {
             mockDataMode = !mockDataMode;
             console.log('Mock data mode:', mockDataMode);
             const button = document.getElementById('mockToggle');
@@ -254,13 +256,13 @@
                 button.textContent = 'Enable Mock Data Mode';
                 button.className = 'px-6 py-3 rounded-full font-medium transition-all duration-300 hover:scale-105 bg-gray-700 text-gray-200 hover:bg-gray-600';
             }
-        }
+        };
         
-        function setSampleQuestion(question) {
+        window.setSampleQuestion = function(question) {
             document.getElementById('prompt').value = question;
-        }
+        };
         
-        async function ask() {
+        window.ask = async function() {
             const prompt = document.getElementById('prompt').value.trim();
             if (!prompt) {
                 alert('Please enter a question');
@@ -312,7 +314,7 @@
                 button.disabled = false;
                 button.innerHTML = 'Ask Question';
             }
-        }
+        };
         
         function generateMockResponse(prompt) {
             const mockResponses = {
@@ -459,19 +461,23 @@ The VA offers several education benefit programs to help veterans pay for colleg
                 .replace(/### (.*?)(?=\n|$)/g, '<h3 class="text-2xl font-bold text-green-400 mt-8 mb-4">$1</h3>')
                 .replace(/#### (.*?)(?=\n|$)/g, '<h4 class="text-xl font-semibold text-green-300 mt-6 mb-3">$1</h4>');
             
-            // Convert numbered lists
-            formattedContent = formattedContent.replace(/\d+\.\s+(.*?)(?=\n\d+\.|$)/gs, function(match, content) {
+            // Convert numbered lists - Fixed regex
+            formattedContent = formattedContent.replace(/(\d+)\.\s+(.*?)(?=\n\d+\.|$)/gs, function(match, number, content) {
                 return `<li class="mb-2 text-gray-200">${content}</li>`;
             });
-            formattedContent = formattedContent.replace(/(<li.*?<\/li>)+/gs, function(match) {
+            
+            // Wrap numbered lists in ol tags
+            formattedContent = formattedContent.replace(/(<li class="mb-2 text-gray-200">.*?<\/li>)+/gs, function(match) {
                 return `<ol class="list-decimal list-inside space-y-2 my-4 text-gray-200">${match}</ol>`;
             });
             
-            // Convert bullet lists
+            // Convert bullet lists - Fixed regex
             formattedContent = formattedContent.replace(/- (.*?)(?=\n-|$)/gs, function(match, content) {
                 return `<li class="mb-2 text-gray-200">${content}</li>`;
             });
-            formattedContent = formattedContent.replace(/(<li.*?<\/li>)+/gs, function(match) {
+            
+            // Wrap bullet lists in ul tags
+            formattedContent = formattedContent.replace(/(<li class="mb-2 text-gray-200">.*?<\/li>)+/gs, function(match) {
                 return `<ul class="list-disc list-inside space-y-2 my-4 text-gray-200">${match}</ul>`;
             });
             
@@ -525,24 +531,33 @@ The VA offers several education benefit programs to help veterans pay for colleg
         }
 
         // Event listeners
-        document.getElementById('prompt').addEventListener('keydown', function(e) {
-            if (e.key === 'Enter' && e.ctrlKey) {
-                ask();
-            }
-        });
-        
-        document.getElementById('prompt').addEventListener('input', function(e) {
-            const typingIndicator = document.getElementById('typingIndicator');
-            if (e.target.value.length > 0) {
-                typingIndicator.classList.remove('hidden');
-            } else {
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('prompt').addEventListener('keydown', function(e) {
+                if (e.key === 'Enter' && e.ctrlKey) {
+                    ask();
+                }
+            });
+            
+            document.getElementById('prompt').addEventListener('input', function(e) {
+                const typingIndicator = document.getElementById('typingIndicator');
+                if (e.target.value.length > 0) {
+                    typingIndicator.classList.remove('hidden');
+                } else {
+                    typingIndicator.classList.add('hidden');
+                }
+            });
+            
+            document.getElementById('prompt').addEventListener('blur', function() {
+                const typingIndicator = document.getElementById('typingIndicator');
                 typingIndicator.classList.add('hidden');
-            }
+            });
         });
         
-        document.getElementById('prompt').addEventListener('blur', function() {
-            const typingIndicator = document.getElementById('typingIndicator');
-            typingIndicator.classList.add('hidden');
+        // Error handling for message channel issues
+        window.addEventListener('error', function(e) {
+            if (e.message.includes('message channel closed')) {
+                console.warn('Message channel error detected, this is likely harmless for local testing');
+            }
         });
     </script>
 </body>

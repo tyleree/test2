@@ -620,11 +620,15 @@ def home():
     </div>
 
     <script>
-        function setSampleQuestion(question) {
-            document.getElementById('prompt').value = question;
-        }
+        // Global variables and functions
+        let mockDataMode = false;
         
-        async function ask() {
+        // Make functions globally accessible
+        window.setSampleQuestion = function(question) {
+            document.getElementById('prompt').value = question;
+        };
+        
+        window.ask = async function() {
             const prompt = document.getElementById('prompt').value.trim();
             if (!prompt) {
                 alert('Please enter a question');
@@ -663,31 +667,35 @@ def home():
                     .replace(/### (.*?)(?=\n|$)/g, '<h3 class="text-2xl font-bold text-green-400 mt-8 mb-4">$1</h3>')
                     .replace(/#### (.*?)(?=\n|$)/g, '<h4 class="text-xl font-semibold text-green-300 mt-6 mb-3">$1</h4>');
                 
-                            // Convert numbered lists
-            formattedContent = formattedContent.replace(/\\d+\\.\\s+(.*?)(?=\\n\\d+\\.|$)/gs, function(match, content) {
+                            // Convert numbered lists - Fixed regex
+            formattedContent = formattedContent.replace(/(\\d+)\\.\\s+(.*?)(?=\\n\\d+\\.|$)/gs, function(match, number, content) {
                 return `<li class="mb-2 text-gray-200">${content}</li>`;
             });
-            formattedContent = formattedContent.replace(/(<li.*?<\/li>)+/gs, function(match) {
+            
+            // Wrap numbered lists in ol tags
+            formattedContent = formattedContent.replace(/(<li class="mb-2 text-gray-200">.*?<\/li>)+/gs, function(match) {
                 return `<ol class="list-decimal list-inside space-y-2 my-4 text-gray-200">${match}</ol>`;
             });
             
-            // Convert bullet lists
+            // Convert bullet lists - Fixed regex
             formattedContent = formattedContent.replace(/- (.*?)(?=\n-|$)/gs, function(match, content) {
                 return `<li class="mb-2 text-gray-200">${content}</li>`;
             });
-            formattedContent = formattedContent.replace(/(<li.*?<\/li>)+/gs, function(match) {
+            
+            // Wrap bullet lists in ul tags
+            formattedContent = formattedContent.replace(/(<li class="mb-2 text-gray-200">.*?<\/li>)+/gs, function(match) {
                 return `<ul class="list-disc list-inside space-y-2 my-4 text-gray-200">${match}</ul>`;
             });
             
             // Convert bold and italic text
             formattedContent = formattedContent
-                .replace(/\\*\\*(.*?)\\*\\*/g, '<strong class="font-semibold text-green-300">$1</strong>')
-                .replace(/\\*(.*?)\\*/g, '<em class="italic text-gray-300">$1</em>');
+                .replace(/\*\*(.*?)\*\*/g, '<strong class="font-semibold text-green-300">$1</strong>')
+                .replace(/\*(.*?)\*/g, '<em class="italic text-gray-300">$1</em>');
             
             // Convert line breaks
             formattedContent = formattedContent
-                .replace(/\\n\\n/g, '<br><br>')
-                .replace(/\\n/g, '<br>');
+                .replace(/\n\n/g, '<br><br>')
+                .replace(/\n/g, '<br>');
                 
                 responseDiv.querySelector('.prose').innerHTML = `
                     <h2 class="text-3xl font-bold text-green-400 mb-6 text-center">Answer</h2>
@@ -735,24 +743,33 @@ def home():
         }
 
         // Event listeners
-        document.getElementById('prompt').addEventListener('keydown', function(e) {
-            if (e.key === 'Enter' && e.ctrlKey) {
-                ask();
-            }
-        });
-        
-        document.getElementById('prompt').addEventListener('input', function(e) {
-            const typingIndicator = document.getElementById('typingIndicator');
-            if (e.target.value.length > 0) {
-                typingIndicator.classList.remove('hidden');
-            } else {
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('prompt').addEventListener('keydown', function(e) {
+                if (e.key === 'Enter' && e.ctrlKey) {
+                    ask();
+                }
+            });
+            
+            document.getElementById('prompt').addEventListener('input', function(e) {
+                const typingIndicator = document.getElementById('typingIndicator');
+                if (e.target.value.length > 0) {
+                    typingIndicator.classList.remove('hidden');
+                } else {
+                    typingIndicator.classList.add('hidden');
+                }
+            });
+            
+            document.getElementById('prompt').addEventListener('blur', function() {
+                const typingIndicator = document.getElementById('typingIndicator');
                 typingIndicator.classList.add('hidden');
-            }
+            });
         });
         
-        document.getElementById('prompt').addEventListener('blur', function() {
-            const typingIndicator = document.getElementById('typingIndicator');
-            typingIndicator.classList.add('hidden');
+        // Error handling for message channel issues
+        window.addEventListener('error', function(e) {
+            if (e.message.includes('message channel closed')) {
+                console.warn('Message channel error detected, this is likely harmless for local testing');
+            }
         });
     </script>
 </body>
@@ -797,8 +814,7 @@ def ask():
                 
                 resp = assistant.chat(
                     messages=[Message(role="user", content=prompt)], 
-                    include_highlights=True,
-                    include_citations=True
+                    include_highlights=True
                 )
                 
                 # Debug: Log the response structure
