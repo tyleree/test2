@@ -172,30 +172,30 @@ def process_mcp_response(mcp_response):
         if "citations" in response_data and response_data["citations"]:
             for citation in response_data["citations"]:
                 try:
-                                    # Extract source text from various possible fields
-                source_text = ""
-                if citation.get("text"):
-                    source_text = citation.get("text")
-                elif citation.get("content"):
-                    source_text = citation.get("content")
-                elif citation.get("snippet"):
-                    source_text = citation.get("snippet")
-                elif citation.get("highlight"):
-                    source_text = citation.get("highlight")
-                
-                # Clean up source text
-                if source_text:
-                    source_text = source_text.strip()
-                    if len(source_text) > 500:  # Limit to 500 characters
-                        source_text = source_text[:500] + "..."
-                
-                citation_data = {
-                    "file": citation.get("file", {}).get("name", "Unknown"),
-                    "page": citation.get("page", 1),
-                    "url": citation.get("url", "#"),
-                    "source_text": source_text,
-                    "confidence": citation.get("confidence", 0.0)
-                }
+                    # Extract source text from various possible fields
+                    source_text = ""
+                    if citation.get("text"):
+                        source_text = citation.get("text")
+                    elif citation.get("content"):
+                        source_text = citation.get("content")
+                    elif citation.get("snippet"):
+                        source_text = citation.get("snippet")
+                    elif citation.get("highlight"):
+                        source_text = citation.get("highlight")
+                    
+                    # Clean up source text
+                    if source_text:
+                        source_text = source_text.strip()
+                        if len(source_text) > 500:  # Limit to 500 characters
+                            source_text = source_text[:500] + "..."
+                    
+                    citation_data = {
+                        "file": citation.get("file", {}).get("name", "Unknown"),
+                        "page": citation.get("page", 1),
+                        "url": citation.get("url", "#"),
+                        "source_text": source_text,
+                        "confidence": citation.get("confidence", 0.0)
+                    }
                     citations.append(citation_data)
                 except Exception as e:
                     print(f"Error processing citation: {e}")
