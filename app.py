@@ -172,13 +172,30 @@ def process_mcp_response(mcp_response):
         if "citations" in response_data and response_data["citations"]:
             for citation in response_data["citations"]:
                 try:
-                    citation_data = {
-                        "file": citation.get("file", {}).get("name", "Unknown"),
-                        "page": citation.get("page", 1),
-                        "url": citation.get("url", "#"),
-                        "text": citation.get("text", ""),
-                        "confidence": citation.get("confidence", 0.0)
-                    }
+                                    # Extract source text from various possible fields
+                source_text = ""
+                if citation.get("text"):
+                    source_text = citation.get("text")
+                elif citation.get("content"):
+                    source_text = citation.get("content")
+                elif citation.get("snippet"):
+                    source_text = citation.get("snippet")
+                elif citation.get("highlight"):
+                    source_text = citation.get("highlight")
+                
+                # Clean up source text
+                if source_text:
+                    source_text = source_text.strip()
+                    if len(source_text) > 500:  # Limit to 500 characters
+                        source_text = source_text[:500] + "..."
+                
+                citation_data = {
+                    "file": citation.get("file", {}).get("name", "Unknown"),
+                    "page": citation.get("page", 1),
+                    "url": citation.get("url", "#"),
+                    "source_text": source_text,
+                    "confidence": citation.get("confidence", 0.0)
+                }
                     citations.append(citation_data)
                 except Exception as e:
                     print(f"Error processing citation: {e}")
@@ -340,6 +357,21 @@ def home():
         .citation-item a:hover {
             text-decoration: underline;
         }
+        .source-content {
+            margin-top: 8px;
+            padding: 12px;
+            background-color: #f8f9fa;
+            border-left: 3px solid #3498db;
+            border-radius: 4px;
+            font-size: 14px;
+            color: #555;
+            font-style: italic;
+            line-height: 1.4;
+        }
+        .source-content strong {
+            color: #2c3e50;
+            font-style: normal;
+        }
         .loading {
             text-align: center;
             color: #7f8c8d;
@@ -476,16 +508,36 @@ def home():
                 // Display citations if available
                 if (data.citations && data.citations.length > 0) {
                     refsDiv.style.display = 'block';
-                    refsDiv.innerHTML = '<h3>References:</h3>';
+                    refsDiv.innerHTML = '<h3>Sources & Footnotes:</h3>';
                     
                     data.citations.forEach((c, i) => {
                         const div = document.createElement('div');
                         div.className = 'citation-item';
+                        
+                        // Create the reference link
                         const a = document.createElement('a');
                         a.href = c.url;
                         a.target = '_blank';
-                        a.textContent = `Reference ${i+1}: ${c.file} (Page ${c.page})`;
+                        a.textContent = `[${i+1}] ${c.file} (Page ${c.page})`;
+                        a.style.fontWeight = 'bold';
+                        a.style.color = '#3498db';
                         div.appendChild(a);
+                        
+                        // Add the source content as a footnote
+                        if (c.source_text && c.source_text !== 'Source content not available') {
+                            const sourceDiv = document.createElement('div');
+                            sourceDiv.className = 'source-content';
+                            sourceDiv.style.marginTop = '8px';
+                            sourceDiv.style.padding = '10px';
+                            sourceDiv.style.backgroundColor = '#f8f9fa';
+                            sourceDiv.style.borderLeft = '3px solid #3498db';
+                            sourceDiv.style.fontSize = '14px';
+                            sourceDiv.style.color = '#555';
+                            sourceDiv.style.fontStyle = 'italic';
+                            sourceDiv.innerHTML = `<strong>Source:</strong> ${c.source_text}`;
+                            div.appendChild(sourceDiv);
+                        }
+                        
                         refsDiv.appendChild(div);
                     });
                 }
@@ -548,7 +600,8 @@ def ask():
                 
                 resp = assistant.chat(
                     messages=[Message(role="user", content=prompt)], 
-                    include_highlights=True
+                    include_highlights=True,
+                    include_citations=True
                 )
                 
                 # Debug: Log the response structure
@@ -562,6 +615,17 @@ def ask():
                         print(f"🔍 First citation attributes: {dir(resp.citations[0])}")
                         if hasattr(resp.citations[0], 'references'):
                             print(f"🔍 First citation references: {resp.citations[0].references}")
+                        
+                        # Log all available attributes and their values
+                        print(f"🔍 First citation full details:")
+                        for attr in dir(resp.citations[0]):
+                            if not attr.startswith('_'):
+                                try:
+                                    value = getattr(resp.citations[0], attr)
+                                    if not callable(value):
+                                        print(f"  {attr}: {value}")
+                                except:
+                                    pass
                 
                 # Process citations from the response
                 citations = []
@@ -608,10 +672,40 @@ def ask():
                                 elif hasattr(citation, 'page'):
                                     page_num = citation.page
                                 
+                                # Try to extract the actual source content/text
+                                source_text = ""
+                                try:
+                                    # Look for text content in various possible locations
+                                    if hasattr(citation, 'text'):
+                                        source_text = citation.text
+                                    elif hasattr(citation, 'content'):
+                                        source_text = citation.content
+                                    elif hasattr(citation, 'snippet'):
+                                        source_text = citation.snippet
+                                    elif hasattr(citation, 'highlight'):
+                                        source_text = citation.highlight
+                                    elif hasattr(ref, 'text'):
+                                        source_text = ref.text
+                                    elif hasattr(ref, 'content'):
+                                        source_text = ref.content
+                                    elif hasattr(ref, 'snippet'):
+                                        source_text = ref.snippet
+                                    
+                                    # If we found text, clean it up
+                                    if source_text:
+                                        # Limit length and clean up whitespace
+                                        source_text = source_text.strip()
+                                        if len(source_text) > 500:  # Limit to 500 characters
+                                            source_text = source_text[:500] + "..."
+                                except Exception as e:
+                                    print(f"⚠️ Could not extract source text: {e}")
+                                    source_text = "Source content not available"
+                                
                                 citation_data = {
                                     "file": file_name,
                                     "page": page_num,
-                                    "url": url
+                                    "url": url,
+                                    "source_text": source_text
                                 }
                                 citations.append(citation_data)
                                 print(f"✅ Successfully processed citation {i+1}: {citation_data}")
@@ -622,7 +716,8 @@ def ask():
                                 citations.append({
                                     "file": "Document",
                                     "page": 1,
-                                    "url": "#"
+                                    "url": "#",
+                                    "source_text": "Source content not available"
                                 })
                                 continue
                     else:
