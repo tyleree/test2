@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request, jsonify
+from threading import Lock
 from pinecone import Pinecone
 import os
 from dotenv import load_dotenv
@@ -9,6 +10,10 @@ import json
 load_dotenv('env.txt')  # Using env.txt since .env is blocked
 
 app = Flask(__name__)
+
+# Ask counter (thread-safe)
+ask_count_lock = Lock()
+app.config['ASK_COUNT'] = 0
 
 # Initialize Pinecone MCP Assistant
 try:
@@ -571,6 +576,11 @@ def home():
                             class="px-8 py-4 bg-gradient-to-r from-green-600 to-green-700 text-white text-lg font-semibold rounded-2xl hover:from-green-700 hover:to-green-800 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-green-500/30">
                         Ask Question
                     </button>
+                    <div class="mt-3 text-center">
+                        <span id="askCountBadge" class="inline-block px-3 py-1 rounded-full bg-gray-700 text-gray-200 text-sm">
+                            Asked <span id="askCountValue">0</span> times
+                        </span>
+                    </div>
                 </div>
             </div>
 
@@ -668,6 +678,10 @@ def home():
                 }
                 
                 const data = await res.json();
+                if (typeof data.ask_count === 'number') {
+                    const badge = document.getElementById('askCountValue');
+                    if (badge) badge.textContent = data.ask_count;
+                }
                 
                 // Display response with proper formatting
                 let formattedContent = data.content;
@@ -745,7 +759,7 @@ def home():
         }
 
         // Event listeners
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', async function() {
             document.getElementById('prompt').addEventListener('keydown', function(e) {
                 if (e.key === 'Enter' && e.ctrlKey) {
                     ask();
@@ -765,6 +779,16 @@ def home():
                 const typingIndicator = document.getElementById('typingIndicator');
                 typingIndicator.classList.add('hidden');
             });
+
+            // Initialize ask counter from metrics endpoint
+            try {
+                const m = await fetch('/metrics').then(r => r.json());
+                if (m && typeof m.ask_count === 'number') {
+                    document.getElementById('askCountValue').textContent = m.ask_count;
+                }
+            } catch (err) {
+                // ignore metrics init errors in UI
+            }
         });
         
         // Error handling for message channel issues
@@ -785,6 +809,10 @@ def ask():
         prompt = request.json.get("prompt", "")
         if not prompt:
             return jsonify({"error": "No prompt provided"}), 400
+        # Increment ask counter
+        with ask_count_lock:
+            app.config['ASK_COUNT'] += 1
+            current_ask_count = app.config['ASK_COUNT']
         
         # Try using the MCP server first (more direct integration)
         print(f"🔄 Attempting to use MCP server for prompt: {prompt[:50]}...")
@@ -803,7 +831,8 @@ def ask():
                     "content": content,
                     "citations": citations or [],
                     "source": "mcp_server",
-                    "metadata": metadata
+                    "metadata": metadata,
+                    "ask_count": current_ask_count
                 })
         else:
             print(f"⚠️ MCP server failed: {mcp_response.get('error', 'Unknown error')}")
@@ -949,6 +978,7 @@ def ask():
                     "content": resp.message.content,
                     "citations": citations,
                     "source": "pinecone_sdk",
+                    "ask_count": current_ask_count,
                     "debug_info": {
                         "response_type": str(type(resp)),
                         "has_citations": hasattr(resp, 'citations'),
@@ -965,7 +995,8 @@ def ask():
                             "content": resp.message.content,
                             "citations": [],
                             "source": "pinecone_sdk_fallback",
-                            "warning": "Citations could not be processed, but content is available"
+                            "warning": "Citations could not be processed, but content is available",
+                            "ask_count": current_ask_count
                         })
                 except:
                     pass
@@ -990,11 +1021,18 @@ def health():
             "main": "/",
             "ask": "/ask",
             "health": "/health",
+            "metrics": "/metrics",
             "mcp_test": "/mcp/test",
             "mcp_status": "/mcp/status",
             "mcp_chat": "/mcp/chat",
             "debug": "/debug"
         }
+    })
+
+@app.route("/metrics")
+def metrics():
+    return jsonify({
+        "ask_count": app.config.get("ASK_COUNT", 0)
     })
 
 # Debug routes to help troubleshoot
