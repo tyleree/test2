@@ -219,7 +219,7 @@ def process_mcp_response(mcp_response):
 @app.route("/")
 def home():
     # Temporary inline HTML to fix template issue
-    html_content = """
+    html_content = r"""
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -668,34 +668,34 @@ def home():
                     .replace(/#### (.*?)(?=\n|$)/g, '<h4 class="text-xl font-semibold text-green-300 mt-6 mb-3">$1</h4>');
                 
                             // Convert numbered lists - Fixed regex
-            formattedContent = formattedContent.replace(/(\\d+)\\.\\s+(.*?)(?=\\n\\d+\\.|$)/gs, function(match, number, content) {
+            formattedContent = formattedContent.replace(/(\d+)\.\s+(.*?)(?=\n\d+\.|$)/gs, function(match, number, content) {
                 return `<li class="mb-2 text-gray-200">${content}</li>`;
             });
             
             // Wrap numbered lists in ol tags
-            formattedContent = formattedContent.replace(/(<li class="mb-2 text-gray-200">.*?<\\/li>)+/gs, function(match) {
+            formattedContent = formattedContent.replace(/(<li class="mb-2 text-gray-200">.*?<\/li>)+/gs, function(match) {
                 return `<ol class="list-decimal list-inside space-y-2 my-4 text-gray-200">${match}</ol>`;
             });
             
             // Convert bullet lists - Fixed regex
-            formattedContent = formattedContent.replace(/- (.*?)(?=\\n-|$)/gs, function(match, content) {
+            formattedContent = formattedContent.replace(/- (.*?)(?=\n-|$)/gs, function(match, content) {
                 return `<li class="mb-2 text-gray-200">${content}</li>`;
             });
             
             // Wrap bullet lists in ul tags
-            formattedContent = formattedContent.replace(/(<li class="mb-2 text-gray-200">.*?<\\/li>)+/gs, function(match) {
+            formattedContent = formattedContent.replace(/(<li class="mb-2 text-gray-200">.*?<\/li>)+/gs, function(match) {
                 return `<ul class="list-disc list-inside space-y-2 my-4 text-gray-200">${match}</ul>`;
             });
             
             // Convert bold and italic text
             formattedContent = formattedContent
-                .replace(/\\*\\*(.*?)\\*\\*/g, '<strong class="font-semibold text-green-300">$1</strong>')
-                .replace(/\\*(.*?)\\*/g, '<em class="italic text-gray-300">$1</em>');
+                .replace(/\*\*(.*?)\*\*/g, '<strong class="font-semibold text-green-300">$1</strong>')
+                .replace(/\*(.*?)\*/g, '<em class="italic text-gray-300">$1</em>');
             
             // Convert line breaks
             formattedContent = formattedContent
-                .replace(/\\n\\n/g, '<br><br>')
-                .replace(/\\n/g, '<br>');
+                .replace(/\n\n/g, '<br><br>')
+                .replace(/\n/g, '<br>');
                 
                 responseDiv.querySelector('.prose').innerHTML = `
                     <h2 class="text-3xl font-bold text-green-400 mb-6 text-center">Answer</h2>
