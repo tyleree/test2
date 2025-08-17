@@ -268,8 +268,8 @@ def home():
                             '100%': { transform: 'translateY(0)', opacity: '1' }
                         },
                         glow: {
-                            '0%': { textShadow: '0 0 5px #22c55e, 0 0 10px #22c55e, 0 0 15px #22c55e' },
-                            '100%': { textShadow: '0 0 10px #22c55e, 0 0 20px #22c55e, 0 0 30px #22c55e' }
+                            '0%': { textShadow: '0 0 2px #22c55e, 0 0 4px #22c55e, 0 0 6px #22c55e' },
+                            '100%': { textShadow: '0 0 4px #22c55e, 0 0 8px #22c55e, 0 0 12px #22c55e' }
                         },
                         float: {
                             '0%, 100%': { transform: 'translateY(0px)' },
@@ -493,18 +493,18 @@ def home():
 </head>
 <body class="bg-gray-900 min-h-screen">
     <div class="container">
-        <h1 class="text-5xl md:text-7xl font-bold mb-6 animate-fade-in title-shadow">
-            <span class="bg-gradient-to-r from-green-400 to-green-600 bg-clip-text text-transparent animate-glow">
+        <h1 class="text-5xl md:text-7xl font-bold mb-3 animate-fade-in title-shadow text-white">
+            <span class="animate-glow">
                 Veterans Benefits AI
             </span>
         </h1>
-        <p class="text-xl md:text-2xl mb-8 text-green-300 animate-slide-up tagline-shadow animate-float">
+        <p class="text-lg md:text-xl mb-8 text-gray-100 text-center animate-slide-up tagline-shadow animate-float">
             Trusted data, free forever
         </p>
         
-        <div class="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 max-w-2xl mx-auto animate-slide-up border border-gray-700">
-            <p class="text-lg text-gray-200">
-                Get instant, accurate answers about VA benefits with AI-powered assistance backed by official sources.
+        <div class="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 max-w-3xl mx-auto animate-slide-up border border-gray-700">
+            <p class="text-lg text-white text-center">
+                Get instant, accurate answers about VA benefits with advanced RAG based AI-powered assistance backed by official sources.
             </p>
         </div>
         
@@ -597,7 +597,7 @@ def home():
         <!-- Response Section -->
         <div id="response" class="mt-12 max-w-4xl mx-auto hidden">
             <div class="bg-gray-800 rounded-3xl shadow-xl p-8 border border-gray-700">
-                <div class="prose prose-lg max-w-none prose-invert">
+                <div class="prose prose-lg max-w-none prose-invert text-white">
                     <!-- Response content will be inserted here -->
                 </div>
             </div>
