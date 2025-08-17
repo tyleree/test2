@@ -189,10 +189,20 @@ def process_mcp_response(mcp_response):
                         if len(source_text) > 500:  # Limit to 500 characters
                             source_text = source_text[:500] + "..."
                     
+                    # Prefer explicit source_url if provided, then url, then nested file.signed_url
+                    file_obj = citation.get("file", {}) or {}
+                    source_url = (
+                        citation.get("source_url")
+                        or citation.get("url")
+                        or file_obj.get("signed_url")
+                        or "#"
+                    )
+
                     citation_data = {
-                        "file": citation.get("file", {}).get("name", "Unknown"),
+                        "file": file_obj.get("name", "Unknown"),
                         "page": citation.get("page", 1),
                         "url": citation.get("url", "#"),
+                        "source_url": source_url,
                         "source_text": source_text,
                         "confidence": citation.get("confidence", 0.0)
                     }
@@ -697,41 +707,33 @@ def home():
                 .replace(/\n\n/g, '<br><br>')
                 .replace(/\n/g, '<br>');
                 
+                // Append footnote-style sources (URLs only) at the end of the answer
+                let footnotes = '';
+                if (data.citations && data.citations.length > 0) {
+                    const uniqueUrls = Array.from(new Set(
+                        data.citations
+                            .map(c => c.source_url)
+                            .filter(u => !!u && u !== '#')
+                    ));
+                    if (uniqueUrls.length > 0) {
+                        footnotes = '<hr class="my-6 border-gray-700">' +
+                            '<div class="text-sm text-gray-400"><div class="font-semibold text-gray-300 mb-2">Sources</div>' +
+                            '<ol class="list-decimal list-inside space-y-1">' +
+                            uniqueUrls.map((u, idx) => `<li><a class="text-green-400 hover:text-green-300 break-words" href="${u}" target="_blank">${u}</a></li>`).join('') +
+                            '</ol></div>';
+                    }
+                }
+
                 responseDiv.querySelector('.prose').innerHTML = `
                     <h2 class="text-3xl font-bold text-green-400 mb-6 text-center">Answer</h2>
                     <div class="text-gray-200 leading-relaxed">
                         ${formattedContent}
+                        ${footnotes}
                     </div>
                 `;
                 
-                // Display citations if available
-                if (data.citations && data.citations.length > 0) {
-                    refsDiv.style.display = 'block';
-                    refsDiv.querySelector('.space-y-4').innerHTML = '';
-                    
-                    data.citations.forEach((c, i) => {
-                        const citationDiv = document.createElement('div');
-                        citationDiv.className = 'bg-gray-700 rounded-2xl p-6 border border-gray-600';
-                        citationDiv.innerHTML = `
-                            <div class="flex items-start space-x-4">
-                                <div class="w-8 h-8 bg-green-900 rounded-full flex items-center justify-center flex-shrink-0">
-                                    <span class="text-green-400 font-bold text-sm">${i+1}</span>
-                                </div>
-                                <div class="flex-1">
-                                    <a href="${c.url}" target="_blank" class="text-lg font-semibold text-green-400 hover:text-green-300 transition-colors">
-                                        ${c.file} (Page ${c.page})
-                                    </a>
-                                    ${c.source_text && c.source_text !== 'Source content not available' ? 
-                                        `<div class="mt-3 p-4 bg-gray-800 rounded-xl border-l-4 border-green-500">
-                                            <p class="text-gray-300 italic">${c.source_text}</p>
-                                        </div>` : ''
-                                    }
-                                </div>
-                            </div>
-                        `;
-                        refsDiv.querySelector('.space-y-4').appendChild(citationDiv);
-                    });
-                }
+                // Hide the detailed citation cards section; we now show URLs as footnotes only
+                refsDiv.style.display = 'none';
             } catch (error) {
                 responseDiv.querySelector('.prose').innerHTML = `<div class="text-red-400 font-semibold">Error: ${error.message}</div>`;
                 console.error('Error:', error);
@@ -864,6 +866,7 @@ def ask():
                                             file_name = ref.file.name
                                         if hasattr(ref.file, 'signed_url'):
                                             url = ref.file.signed_url
+                                            source_url = ref.file.signed_url
                                     
                                     # Try to get page information
                                     if hasattr(ref, 'pages') and ref.pages:
@@ -878,6 +881,7 @@ def ask():
                                         file_name = citation.file.name
                                     if hasattr(citation.file, 'signed_url'):
                                         url = citation.file.signed_url
+                                        source_url = citation.file.signed_url
                                 
                                 # Alternative structure: direct page access
                                 if hasattr(citation, 'pages') and citation.pages:
@@ -918,6 +922,7 @@ def ask():
                                     "file": file_name,
                                     "page": page_num,
                                     "url": url,
+                                    "source_url": source_url or url,
                                     "source_text": source_text
                                 }
                                 citations.append(citation_data)
