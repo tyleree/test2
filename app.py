@@ -145,12 +145,91 @@ def call_mcp_server(prompt, options=None):
 
 def process_mcp_response(mcp_response):
     """
-    Deprecated: Previously processed/normalized MCP responses. Kept for compatibility but no-op now.
+    Process and format MCP server response with clean JSON structure
+    
+    Args:
+        mcp_response (dict): Response from call_mcp_server function
+    
+    Returns:
+        tuple: (content, citations, metadata) or (None, None, None) if error
     """
     if not mcp_response or not mcp_response.get("success"):
         return None, None, None
-    # Return empty tuple signals no post-processing
-    return None, None, None
+    
+    try:
+        response_data = mcp_response.get("data", {})
+        content = ""
+        citations = []
+        metadata = {}
+        
+        # Extract content from various possible response formats
+        if "message" in response_data:
+            content = response_data["message"].get("content", "")
+        elif "content" in response_data:
+            content = response_data["content"]
+        elif "response" in response_data:
+            content = response_data["response"]
+        elif "choices" in response_data and response_data["choices"]:
+            # Handle OpenAI-style responses
+            content = response_data["choices"][0].get("message", {}).get("content", "")
+        
+        # Extract citations if available
+        if "citations" in response_data and response_data["citations"]:
+            for citation in response_data["citations"]:
+                try:
+                    # Extract source text from various possible fields
+                    source_text = ""
+                    if citation.get("text"):
+                        source_text = citation.get("text")
+                    elif citation.get("content"):
+                        source_text = citation.get("content")
+                    elif citation.get("snippet"):
+                        source_text = citation.get("snippet")
+                    elif citation.get("highlight"):
+                        source_text = citation.get("highlight")
+                    
+                    # Clean up source text
+                    if source_text:
+                        source_text = source_text.strip()
+                        if len(source_text) > 500:  # Limit to 500 characters
+                            source_text = source_text[:500] + "..."
+                    
+                    # Prefer explicit source_url if provided, then url, then nested file.signed_url
+                    file_obj = citation.get("file", {}) or {}
+                    source_url = (
+                        citation.get("source_url")
+                        or citation.get("url")
+                        or file_obj.get("signed_url")
+                        or "#"
+                    )
+
+                    citation_data = {
+                        "file": file_obj.get("name", "Unknown"),
+                        "page": citation.get("page", 1),
+                        "url": citation.get("url", "#"),
+                        "source_url": source_url,
+                        "source_text": source_text,
+                        "confidence": citation.get("confidence", 0.0)
+                    }
+                    citations.append(citation_data)
+                except Exception as e:
+                    print(f"Error processing citation: {e}")
+                    continue
+        
+        # Extract metadata
+        metadata = {
+            "model": response_data.get("model", "unknown"),
+            "usage": response_data.get("usage", {}),
+            "created": response_data.get("created"),
+            "id": response_data.get("id"),
+            "response_time": mcp_response.get("response_time")
+        }
+        
+        return content, citations, metadata
+        
+    except Exception as e:
+        print(f"Error processing MCP response: {e}")
+        return None, None, None
 
 @app.route("/")
 def home():
@@ -603,15 +682,71 @@ def home():
                     const badge = document.getElementById('askCountValue');
                     if (badge) badge.textContent = data.ask_count;
                 }
-
-                const raw = (data && 'raw_response' in data) ? data.raw_response : data;
-                const pretty = JSON.stringify(raw, null, 2);
+                
+                // Display response with proper formatting
+                let formattedContent = data.content;
+                
+                // Convert markdown headers
+                formattedContent = formattedContent
+                    .replace(/### (.*?)(?=\n|$)/g, '<h3 class="text-2xl font-bold text-green-400 mt-8 mb-4">$1</h3>')
+                    .replace(/#### (.*?)(?=\n|$)/g, '<h4 class="text-xl font-semibold text-green-300 mt-6 mb-3">$1</h4>');
+                
+                            // Convert numbered lists - Fixed regex
+            formattedContent = formattedContent.replace(/(\d+)\.\s+(.*?)(?=\n\d+\.|$)/gs, function(match, number, content) {
+                return `<li class="mb-2 text-gray-200">${content}</li>`;
+            });
+            
+            // Wrap numbered lists in ol tags
+            formattedContent = formattedContent.replace(/(<li class="mb-2 text-gray-200">.*?<\/li>)+/gs, function(match) {
+                return `<ol class="list-decimal list-inside space-y-2 my-4 text-gray-200">${match}</ol>`;
+            });
+            
+            // Convert bullet lists - Fixed regex
+            formattedContent = formattedContent.replace(/- (.*?)(?=\n-|$)/gs, function(match, content) {
+                return `<li class="mb-2 text-gray-200">${content}</li>`;
+            });
+            
+            // Wrap bullet lists in ul tags
+            formattedContent = formattedContent.replace(/(<li class="mb-2 text-gray-200">.*?<\/li>)+/gs, function(match) {
+                return `<ul class="list-disc list-inside space-y-2 my-4 text-gray-200">${match}</ul>`;
+            });
+            
+            // Convert bold and italic text
+            formattedContent = formattedContent
+                .replace(/\*\*(.*?)\*\*/g, '<strong class="font-semibold text-green-300">$1</strong>')
+                .replace(/\*(.*?)\*/g, '<em class="italic text-gray-300">$1</em>');
+            
+            // Convert line breaks
+            formattedContent = formattedContent
+                .replace(/\n\n/g, '<br><br>')
+                .replace(/\n/g, '<br>');
+                
+                // Append footnote-style sources (URLs only) at the end of the answer
+                let footnotes = '';
+                if (data.citations && data.citations.length > 0) {
+                    const uniqueUrls = Array.from(new Set(
+                        data.citations
+                            .map(c => c.source_url)
+                            .filter(u => !!u && u !== '#')
+                    ));
+                    if (uniqueUrls.length > 0) {
+                        footnotes = '<hr class="my-6 border-gray-700">' +
+                            '<div class="text-sm text-gray-400"><div class="font-semibold text-gray-300 mb-2">Sources</div>' +
+                            '<ol class="list-decimal list-inside space-y-1">' +
+                            uniqueUrls.map((u, idx) => `<li><a class="text-green-400 hover:text-green-300 break-words" href="${u}" target="_blank">${u}</a></li>`).join('') +
+                            '</ol></div>';
+                    }
+                }
 
                 responseDiv.querySelector('.prose').innerHTML = `
-                    <h2 class="text-3xl font-bold text-green-400 mb-6 text-center">Raw Response</h2>
-                    <pre class="text-sm text-gray-200 whitespace-pre-wrap bg-gray-900/50 p-4 rounded-xl border border-gray-700 overflow-x-auto">${pretty}</pre>
+                    <h2 class="text-3xl font-bold text-green-400 mb-6 text-center">Answer</h2>
+                    <div class="text-gray-200 leading-relaxed">
+                        ${formattedContent}
+                        ${footnotes}
+                    </div>
                 `;
-
+                
+                // Hide the detailed citation cards section; we now show URLs as footnotes only
                 refsDiv.style.display = 'none';
             } catch (error) {
                 responseDiv.querySelector('.prose').innerHTML = `<div class="text-red-400 font-semibold">Error: ${error.message}</div>`;
@@ -686,14 +821,19 @@ def ask():
         mcp_response = call_mcp_server(prompt)
         
         if mcp_response and mcp_response.get("success"):
-            # Return raw MCP server response with no post-processing
-            print("✅ Returning raw MCP server response")
-            return jsonify({
-                "success": True,
-                "raw_response": mcp_response.get("data"),
-                "source": "mcp_server",
-                "ask_count": current_ask_count
-            })
+            # Process MCP server response
+            content, citations, metadata = process_mcp_response(mcp_response)
+            
+            if content:
+                print("✅ Successfully processed MCP server response")
+                return jsonify({
+                    "success": True,
+                    "content": content,
+                    "citations": citations or [],
+                    "source": "mcp_server",
+                    "metadata": metadata,
+                    "ask_count": current_ask_count
+                })
         else:
             print(f"⚠️ MCP server failed: {mcp_response.get('error', 'Unknown error')}")
         
@@ -708,27 +848,142 @@ def ask():
                     include_highlights=True
                 )
                 
-                # Serialize SDK response as raw as possible
-                raw_sdk = None
+                # Debug: Log the response structure
+                print(f"🔍 Pinecone SDK response type: {type(resp)}")
+                print(f"🔍 Response attributes: {dir(resp)}")
+                if hasattr(resp, 'citations'):
+                    print(f"🔍 Citations type: {type(resp.citations)}")
+                    print(f"🔍 Citations count: {len(resp.citations) if resp.citations else 0}")
+                    if resp.citations:
+                        print(f"🔍 First citation type: {type(resp.citations[0])}")
+                        print(f"🔍 First citation attributes: {dir(resp.citations[0])}")
+                        if hasattr(resp.citations[0], 'references'):
+                            print(f"🔍 First citation references: {resp.citations[0].references}")
+                        
+                        # Log all available attributes and their values
+                        print(f"🔍 First citation full details:")
+                        for attr in dir(resp.citations[0]):
+                            if not attr.startswith('_'):
+                                try:
+                                    value = getattr(resp.citations[0], attr)
+                                    if not callable(value):
+                                        print(f"  {attr}: {value}")
+                                except:
+                                    pass
+                
+                # Process citations from the response
+                citations = []
                 try:
-                    if hasattr(resp, "model_dump"):
-                        raw_sdk = resp.model_dump()
-                    elif hasattr(resp, "dict"):
-                        raw_sdk = resp.dict()
-                    elif hasattr(resp, "model_dump_json"):
-                        raw_sdk = json.loads(resp.model_dump_json())
-                except Exception:
-                    raw_sdk = None
-
-                if raw_sdk is None:
-                    # Fallback best-effort representation
-                    raw_sdk = {"repr": repr(resp)}
-
+                    if hasattr(resp, 'citations') and resp.citations:
+                        print(f"🔍 Processing {len(resp.citations)} citations...")
+                        for i, citation in enumerate(resp.citations):
+                            try:
+                                print(f"🔍 Processing citation {i+1}: {type(citation)}")
+                                print(f"🔍 Citation attributes: {dir(citation)}")
+                                
+                                # Handle different citation structures
+                                file_name = "Unknown"
+                                page_num = 1
+                                url = "#"
+                                
+                                # Try to extract file information from different possible structures
+                                if hasattr(citation, 'references') and citation.references:
+                                    print(f"🔍 Citation has references: {citation.references}")
+                                    ref = citation.references[0]
+                                    if hasattr(ref, 'file') and ref.file:
+                                        if hasattr(ref.file, 'name'):
+                                            file_name = ref.file.name
+                                        if hasattr(ref.file, 'signed_url'):
+                                            url = ref.file.signed_url
+                                            source_url = ref.file.signed_url
+                                    
+                                    # Try to get page information
+                                    if hasattr(ref, 'pages') and ref.pages:
+                                        page_num = ref.pages[0] if ref.pages else 1
+                                    elif hasattr(ref, 'page'):
+                                        page_num = ref.page
+                                
+                                # Alternative structure: direct file access
+                                elif hasattr(citation, 'file') and citation.file:
+                                    print(f"🔍 Citation has direct file: {citation.file}")
+                                    if hasattr(citation.file, 'name'):
+                                        file_name = citation.file.name
+                                    if hasattr(citation.file, 'signed_url'):
+                                        url = citation.file.signed_url
+                                        source_url = citation.file.signed_url
+                                
+                                # Alternative structure: direct page access
+                                if hasattr(citation, 'pages') and citation.pages:
+                                    page_num = citation.pages[0] if citation.pages else 1
+                                elif hasattr(citation, 'page'):
+                                    page_num = citation.page
+                                
+                                # Try to extract the actual source content/text
+                                source_text = ""
+                                try:
+                                    # Look for text content in various possible locations
+                                    if hasattr(citation, 'text'):
+                                        source_text = citation.text
+                                    elif hasattr(citation, 'content'):
+                                        source_text = citation.content
+                                    elif hasattr(citation, 'snippet'):
+                                        source_text = citation.snippet
+                                    elif hasattr(citation, 'highlight'):
+                                        source_text = citation.highlight
+                                    elif hasattr(ref, 'text'):
+                                        source_text = ref.text
+                                    elif hasattr(ref, 'content'):
+                                        source_text = ref.content
+                                    elif hasattr(ref, 'snippet'):
+                                        source_text = ref.snippet
+                                    
+                                    # If we found text, clean it up
+                                    if source_text:
+                                        # Limit length and clean up whitespace
+                                        source_text = source_text.strip()
+                                        if len(source_text) > 500:  # Limit to 500 characters
+                                            source_text = source_text[:500] + "..."
+                                except Exception as e:
+                                    print(f"⚠️ Could not extract source text: {e}")
+                                    source_text = "Source content not available"
+                                
+                                citation_data = {
+                                    "file": file_name,
+                                    "page": page_num,
+                                    "url": url,
+                                    "source_url": source_url or url,
+                                    "source_text": source_text
+                                }
+                                citations.append(citation_data)
+                                print(f"✅ Successfully processed citation {i+1}: {citation_data}")
+                                
+                            except Exception as e:
+                                print(f"❌ Error processing citation {i+1}: {e}")
+                                # Add a basic citation entry to avoid breaking the response
+                                citations.append({
+                                    "file": "Document",
+                                    "page": 1,
+                                    "url": "#",
+                                    "source_text": "Source content not available"
+                                })
+                                continue
+                    else:
+                        print("⚠️ No citations found in response")
+                        
+                except Exception as e:
+                    print(f"❌ Error in citation processing loop: {e}")
+                    # Continue without citations rather than failing completely
+                
                 return jsonify({
-                    "success": True,
-                    "raw_response": raw_sdk,
+                    "content": resp.message.content,
+                    "citations": citations,
                     "source": "pinecone_sdk",
-                    "ask_count": current_ask_count
+                    "ask_count": current_ask_count,
+                    "debug_info": {
+                        "response_type": str(type(resp)),
+                        "has_citations": hasattr(resp, 'citations'),
+                        "citations_count": len(citations) if citations else 0
+                    }
                 })
                 
             except Exception as e:
@@ -802,10 +1057,16 @@ def test_mcp():
         mcp_response = call_mcp_server(test_prompt)
         
         if mcp_response and mcp_response.get("success"):
+            content, citations, metadata = process_mcp_response(mcp_response)
             return jsonify({
                 "success": True,
                 "mcp_server_status": "working",
-                "raw_response": mcp_response.get("data")
+                "response": {
+                    "content": content,
+                    "citations": citations or [],
+                    "metadata": metadata
+                },
+                "raw_response": mcp_response
             })
         else:
             return jsonify({
@@ -900,9 +1161,13 @@ def mcp_chat():
         mcp_response = call_mcp_server(prompt, options)
         
         if mcp_response and mcp_response.get("success"):
+            content, citations, metadata = process_mcp_response(mcp_response)
+            
             return jsonify({
                 "success": True,
-                "raw_response": mcp_response.get("data"),
+                "content": content,
+                "citations": citations or [],
+                "metadata": metadata,
                 "source": "mcp_server_advanced"
             })
         else:
