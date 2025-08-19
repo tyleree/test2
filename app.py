@@ -773,6 +773,21 @@ def home():
     """
     return html_content
 
+@app.route('/favicon.ico')
+def favicon():
+    try:
+        # Serve our custom logo as the favicon
+        target = os.path.join(FRONTEND_BUILD_DIR, 'logo.svg')
+        if os.path.exists(target):
+            return send_from_directory(FRONTEND_BUILD_DIR, 'logo.svg')
+        # Fallback to placeholder if logo not present
+        fallback = os.path.join(FRONTEND_BUILD_DIR, 'placeholder.svg')
+        if os.path.exists(fallback):
+            return send_from_directory(FRONTEND_BUILD_DIR, 'placeholder.svg')
+    except Exception:
+        pass
+    return jsonify({"error": "favicon not available"}), 404
+
 @app.route("/ask", methods=["POST"])
 def ask():
     try:
