@@ -21,12 +21,10 @@ export const ChatBot = () => {
   }]);
   const [inputValue, setInputValue] = useState("");
   const [isTyping, setIsTyping] = useState(false);
-  const scrollAreaRef = useRef<HTMLDivElement>(null);
+  const endRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
-    if (scrollAreaRef.current) {
-      scrollAreaRef.current.scrollTop = scrollAreaRef.current.scrollHeight;
-    }
-  }, [messages]);
+    endRef.current?.scrollIntoView({ behavior: "smooth", block: "end" });
+  }, [messages, isTyping]);
   const handleSendMessage = async () => {
     if (!inputValue.trim()) return;
     const userMessage: Message = {
@@ -93,7 +91,7 @@ export const ChatBot = () => {
         </div>
 
         {/* Messages */}
-        <ScrollArea className="flex-1 p-4" ref={scrollAreaRef}>
+        <ScrollArea className="flex-1 p-4">
           <div className="space-y-4">
             {messages.map(message => <div key={message.id} className={`flex gap-3 animate-fadeInUp ${message.isUser ? "flex-row-reverse" : "flex-row"}`}>
                 <div className={`w-8 h-8 rounded-full flex items-center justify-center ${message.isUser ? "bg-accent/20" : "bg-primary/20"}`}>
@@ -101,9 +99,9 @@ export const ChatBot = () => {
                 </div>
                 <div className={`max-w-[80%] p-3 rounded-lg ${message.isUser ? "bg-primary text-primary-foreground" : "bg-secondary text-secondary-foreground"}`}>
                   {message.isUser ? (
-                    <p className="text-sm">{message.content}</p>
+                    <p className="text-sm whitespace-pre-wrap break-words">{message.content}</p>
                   ) : (
-                    <div className="prose prose-sm dark:prose-invert max-w-none overflow-auto max-h-72 md:max-h-96 pr-2">
+                    <div className="prose prose-sm dark:prose-invert max-w-none whitespace-pre-wrap break-words">
                       <ReactMarkdown remarkPlugins={[remarkGfm]}>{message.content}</ReactMarkdown>
                     </div>
                   )}
@@ -126,6 +124,7 @@ export const ChatBot = () => {
                   </div>
                 </div>
               </div>}
+            <div ref={endRef} />
           </div>
         </ScrollArea>
 
