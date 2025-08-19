@@ -1,0 +1,174 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Light mode - White and light grays */
+    --background: 0 0% 100%;
+    --foreground: 0 0% 10%;
+
+    --card: 0 0% 98%;
+    --card-foreground: 0 0% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 10%;
+
+    --primary: 0 0% 20%;
+    --primary-foreground: 0 0% 95%;
+    --primary-glow: 0 0% 30%;
+
+    --secondary: 0 0% 95%;
+    --secondary-foreground: 0 0% 20%;
+
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
+
+    --accent: 0 0% 15%;
+    --accent-foreground: 0 0% 95%;
+    --accent-glow: 0 0% 25%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 90%;
+    --input: 0 0% 95%;
+    --ring: 0 0% 20%;
+
+    --radius: 0.75rem;
+
+    /* Light mode specific */
+    --hero-bg: linear-gradient(135deg, hsl(0 0% 98%), hsl(0 0% 95%));
+    --chat-bg: hsl(0 0% 98%);
+    --typing-cursor: hsl(0 0% 20%);
+    --glow-primary: hsl(0 0% 20% / 0.1);
+    --glow-accent: hsl(0 0% 15% / 0.1);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 0 0% 10%;
+    --sidebar-primary: 0 0% 20%;
+    --sidebar-primary-foreground: 0 0% 95%;
+    --sidebar-accent: 0 0% 95%;
+    --sidebar-accent-foreground: 0 0% 20%;
+    --sidebar-border: 0 0% 90%;
+    --sidebar-ring: 0 0% 20%;
+  }
+
+  .dark {
+    /* Dark mode - Dark grays and white */
+    --background: 0 0% 8%;
+    --foreground: 0 0% 95%;
+
+    --card: 0 0% 12%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 0 0% 12%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 0 0% 90%;
+    --primary-foreground: 0 0% 10%;
+    --primary-glow: 0 0% 80%;
+
+    --secondary: 0 0% 18%;
+    --secondary-foreground: 0 0% 95%;
+
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 60%;
+
+    --accent: 0 0% 85%;
+    --accent-foreground: 0 0% 10%;
+    --accent-glow: 0 0% 75%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 95%;
+
+    --border: 0 0% 20%;
+    --input: 0 0% 18%;
+    --ring: 0 0% 80%;
+
+    /* Dark mode specific */
+    --hero-bg: linear-gradient(135deg, hsl(0 0% 8%), hsl(0 0% 12%));
+    --chat-bg: hsl(0 0% 12%);
+    --typing-cursor: hsl(0 0% 90%);
+    --glow-primary: hsl(0 0% 90% / 0.2);
+    --glow-accent: hsl(0 0% 85% / 0.2);
+
+    --sidebar-background: 0 0% 12%;
+    --sidebar-foreground: 0 0% 95%;
+    --sidebar-primary: 0 0% 90%;
+    --sidebar-primary-foreground: 0 0% 10%;
+    --sidebar-accent: 0 0% 18%;
+    --sidebar-accent-foreground: 0 0% 95%;
+    --sidebar-border: 0 0% 20%;
+    --sidebar-ring: 0 0% 80%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground overflow-hidden;
+    background: var(--hero-bg);
+  }
+}
+
+@layer components {
+  /* Typing animation styles */
+  .typing-text {
+    @apply relative;
+  }
+  
+  
+  @keyframes typewriter {
+    from { width: 0; }
+    to { width: 100%; }
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+  
+  @keyframes glow {
+    0%, 100% { box-shadow: 0 0 20px var(--glow-primary); }
+    50% { box-shadow: 0 0 30px var(--glow-accent), 0 0 40px var(--glow-primary); }
+  }
+  
+  /* Animation classes */
+  .animate-fadeInUp {
+    animation: fadeInUp 0.8s ease-out forwards;
+  }
+  
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+  
+  .animate-glow {
+    animation: glow 2s ease-in-out infinite;
+  }
+  
+  .animate-typewriter {
+    animation: typewriter 3s steps(20) forwards;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid var(--typing-cursor);
+  }
+}
