@@ -324,8 +324,8 @@ def home():
         }
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #111827;
-            color: #f9fafb;
+            background-color: #ffffff;
+            color: #000000;
         }
         .container {
             max-width: 1200px;
@@ -496,70 +496,24 @@ def home():
         }
     </style>
 </head>
-<body class="bg-gray-900 min-h-screen">
+<body class="bg-white min-h-screen">
     <div class="container">
-        <h1 class="text-5xl md:text-7xl font-bold mb-3 animate-fade-in title-shadow text-white">
-            <span class="animate-glow">
-                Veterans Benefits AI
-            </span>
-        </h1>
-        <p class="text-lg md:text-xl mb-8 text-gray-100 text-center animate-slide-up tagline-shadow animate-float">
-            Trusted data, free forever
+        <h1 class="text-5xl md:text-7xl font-bold mb-3 animate-fade-in text-black">Veterans benifits ai.</h1>
+        <p class="text-xl md:text-2xl mb-2 text-black text-center animate-slide-up">
+            "Advanced rag based ai that sses the 38 CFR as its source"
         </p>
-        
-        <div class="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 max-w-3xl mx-auto animate-slide-up border border-gray-700">
-            <p class="text-lg text-white text-center">
-                Get instant, accurate answers about VA benefits with advanced RAG based AI-powered assistance backed by official sources.
-            </p>
-        </div>
-        
-        <!-- Status Cards -->
-        <div class="grid md:grid-cols-3 gap-6 mb-12 mt-12">
-            <div class="bg-gray-800 rounded-2xl shadow-lg p-6 border border-gray-700 hover:shadow-xl hover:shadow-green-500/20 transition-all duration-300 hover:scale-105">
-                <div class="flex items-center space-x-3">
-                    <div class="w-12 h-12 bg-green-900 rounded-full flex items-center justify-center">
-                        <span class="text-2xl">✅</span>
-                    </div>
-                    <div>
-                        <h3 class="font-semibold text-gray-100">AI Powered</h3>
-                        <p class="text-gray-400 text-sm">Advanced AI assistance</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="bg-gray-800 rounded-2xl shadow-lg p-6 border border-gray-700 hover:shadow-xl hover:shadow-green-500/20 transition-all duration-300 hover:scale-105">
-                <div class="flex items-center space-x-3">
-                    <div class="w-12 h-12 bg-green-900 rounded-full flex items-center justify-center">
-                        <span class="text-2xl">🏠</span>
-                    </div>
-                    <div>
-                        <h3 class="font-semibold text-gray-100">Trusted Sources</h3>
-                        <p class="text-gray-400 text-sm">Official VA documentation</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="bg-gray-800 rounded-2xl shadow-lg p-6 border border-gray-700 hover:shadow-xl hover:shadow-green-500/20 transition-all duration-300 hover:scale-105">
-                <div class="flex items-center space-x-3">
-                    <div class="w-12 h-12 bg-green-900 rounded-full flex items-center justify-center">
-                        <span class="text-2xl">🚀</span>
-                    </div>
-                    <div>
-                        <h3 class="font-semibold text-gray-100">Instant Results</h3>
-                        <p class="text-gray-400 text-sm">Real-time responses</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <p class="text-base md:text-lg mb-8 text-black text-center animate-slide-up">
+            38 CFR is the governing laws for veterans benifits.
+        </p>
 
         <!-- Main Interface Card -->
-        <div class="bg-gray-800 rounded-3xl shadow-2xl p-8 max-w-4xl mx-auto border border-gray-700">
+        <div class="bg-white rounded-3xl shadow-2xl p-8 max-w-4xl mx-auto border border-gray-200">
             <!-- Input Section -->
             <div class="space-y-6">
                 <div class="relative">
                     <textarea id="prompt" 
                               placeholder="Ask a question about veterans benefits..."
-                              class="w-full h-32 p-6 text-lg border-2 border-gray-600 rounded-2xl resize-none focus:border-green-500 focus:ring-4 focus:ring-green-500/20 transition-all duration-300 font-medium bg-gray-700 text-gray-100 placeholder-gray-400"></textarea>
+                              class="w-full h-32 p-6 text-lg border-2 border-gray-300 rounded-2xl resize-none focus:border-black focus:ring-4 focus:ring-black/10 transition-all duration-300 font-medium bg-white text-black placeholder-gray-500"></textarea>
                     
                     <!-- Typing Indicator -->
                     <div id="typingIndicator" class="absolute top-6 right-6 hidden">
@@ -573,11 +527,11 @@ def home():
 
                 <div class="text-center">
                     <button onclick="ask()" id="askButton" 
-                            class="px-8 py-4 bg-gradient-to-r from-green-600 to-green-700 text-white text-lg font-semibold rounded-2xl hover:from-green-700 hover:to-green-800 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-green-500/30">
+                            class="px-8 py-4 bg-white text-black text-lg font-semibold rounded-2xl border-2 border-black hover:bg-black hover:text-white transform hover:scale-105 transition-all duration-300 shadow-sm">
                         Ask Question
                     </button>
                     <div class="mt-3 text-center">
-                        <span id="askCountBadge" class="inline-block px-3 py-1 rounded-full bg-gray-700 text-gray-200 text-sm">
+                        <span id="askCountBadge" class="inline-block px-3 py-1 rounded-full bg-gray-100 text-gray-800 text-sm">
                             Asked <span id="askCountValue">0</span> times
                         </span>
                     </div>
@@ -585,19 +539,19 @@ def home():
             </div>
 
             <!-- Sample Questions -->
-            <div class="mt-8 pt-6 border-t border-gray-700">
-                <p class="text-center text-gray-400 mb-4 font-medium">Try these sample questions:</p>
+            <div class="mt-8 pt-6 border-t border-gray-200">
+                <p class="text-center text-black mb-4 font-medium">Try these sample questions:</p>
                 <div class="flex flex-wrap justify-center gap-3">
                     <button onclick="setSampleQuestion('How do I apply for VA disability benefits?')" 
-                            class="px-4 py-2 bg-gray-700 hover:bg-gray-600 text-gray-200 rounded-full text-sm font-medium transition-colors duration-200 hover:shadow-lg hover:shadow-green-500/20">
+                            class="px-4 py-2 bg-gray-100 hover:bg-gray-200 text-gray-800 rounded-full text-sm font-medium transition-colors duration-200">
                         Disability Benefits
                     </button>
                     <button onclick="setSampleQuestion('What are the requirements for VA pension?')" 
-                            class="px-4 py-2 bg-gray-700 hover:bg-gray-600 text-gray-200 rounded-full text-sm font-medium transition-colors duration-200 hover:shadow-lg hover:shadow-green-500/20">
+                            class="px-4 py-2 bg-gray-100 hover:bg-gray-200 text-gray-800 rounded-full text-sm font-medium transition-colors duration-200">
                         Pension Requirements
                     </button>
                     <button onclick="setSampleQuestion('How do I use my GI Bill for education?')" 
-                            class="px-4 py-2 bg-gray-700 hover:bg-gray-600 text-gray-200 rounded-full text-sm font-medium transition-colors duration-200 hover:shadow-lg hover:shadow-green-500/20">
+                            class="px-4 py-2 bg-gray-100 hover:bg-gray-200 text-gray-800 rounded-full text-sm font-medium transition-colors duration-200">
                         GI Bill Education
                     </button>
                 </div>
@@ -606,8 +560,8 @@ def home():
 
         <!-- Response Section -->
         <div id="response" class="mt-12 max-w-4xl mx-auto hidden">
-            <div class="bg-gray-800 rounded-3xl shadow-xl p-8 border border-gray-700">
-                <div class="prose prose-lg max-w-none prose-invert text-white">
+            <div class="bg-white rounded-3xl shadow-xl p-8 border border-gray-200">
+                <div class="prose prose-lg max-w-none text-black">
                     <!-- Response content will be inserted here -->
                 </div>
             </div>
@@ -615,8 +569,8 @@ def home():
 
         <!-- Citations Section -->
         <div id="refs" class="mt-8 max-w-4xl mx-auto hidden">
-            <div class="bg-gray-800 rounded-3xl shadow-xl p-8 border border-gray-700">
-                <h3 class="text-2xl font-bold text-gray-100 mb-6 text-center">Sources & Footnotes</h3>
+            <div class="bg-white rounded-3xl shadow-xl p-8 border border-gray-200">
+                <h3 class="text-2xl font-bold text-black mb-6 text-center">Sources & Footnotes</h3>
                 <div class="space-y-4">
                     <!-- Citations will be inserted here -->
                 </div>
@@ -625,11 +579,11 @@ def home():
     </div>
 
     <!-- Footer -->
-    <div class="bg-gray-950 text-white py-12 mt-20 border-t border-gray-800">
+    <div class="bg-white text-black py-12 mt-20 border-t border-gray-200">
         <div class="container mx-auto px-4 text-center">
-            <h3 class="text-2xl font-bold mb-4 text-green-400">Veterans Benefits AI</h3>
-            <p class="text-gray-400 mb-6">Empowering veterans with trusted information and AI assistance</p>
-            <div class="flex justify-center space-x-6 text-sm text-gray-500">
+            <h3 class="text-2xl font-bold mb-4 text-black">Veterans Benefits AI</h3>
+            <p class="text-black mb-6">Empowering veterans with trusted information and AI assistance</p>
+            <div class="flex justify-center space-x-6 text-sm text-black">
                 <span>© 2024 Veterans Benefits AI</span>
                 <span>•</span>
                 <span>Free Forever</span>
@@ -663,7 +617,7 @@ def home():
             button.disabled = true;
             button.innerHTML = '<svg class="loading-spinner w-5 h-5 mr-2 inline" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>Processing...';
             responseDiv.style.display = 'block';
-            responseDiv.querySelector('.prose').innerHTML = '<div class="text-center text-gray-400 italic">Processing your question...</div>';
+            responseDiv.querySelector('.prose').innerHTML = '<div class="text-center text-black italic">Processing your question...</div>';
             refsDiv.style.display = 'none';
 
             try {
@@ -688,33 +642,33 @@ def home():
                 
                 // Convert markdown headers
                 formattedContent = formattedContent
-                    .replace(/### (.*?)(?=\n|$)/g, '<h3 class="text-2xl font-bold text-green-400 mt-8 mb-4">$1</h3>')
-                    .replace(/#### (.*?)(?=\n|$)/g, '<h4 class="text-xl font-semibold text-green-300 mt-6 mb-3">$1</h4>');
+                    .replace(/### (.*?)(?=\n|$)/g, '<h3 class="text-2xl font-bold text-black mt-8 mb-4">$1</h3>')
+                    .replace(/#### (.*?)(?=\n|$)/g, '<h4 class="text-xl font-semibold text-black mt-6 mb-3">$1</h4>');
                 
                             // Convert numbered lists - Fixed regex
             formattedContent = formattedContent.replace(/(\d+)\.\s+(.*?)(?=\n\d+\.|$)/gs, function(match, number, content) {
-                return `<li class="mb-2 text-gray-200">${content}</li>`;
+                return `<li class="mb-2 text-black">${content}</li>`;
             });
             
             // Wrap numbered lists in ol tags
-            formattedContent = formattedContent.replace(/(<li class="mb-2 text-gray-200">.*?<\/li>)+/gs, function(match) {
-                return `<ol class="list-decimal list-inside space-y-2 my-4 text-gray-200">${match}</ol>`;
+            formattedContent = formattedContent.replace(/(<li class="mb-2 text-black">.*?<\/li>)+/gs, function(match) {
+                return `<ol class="list-decimal list-inside space-y-2 my-4 text-black">${match}</ol>`;
             });
             
             // Convert bullet lists - Fixed regex
             formattedContent = formattedContent.replace(/- (.*?)(?=\n-|$)/gs, function(match, content) {
-                return `<li class="mb-2 text-gray-200">${content}</li>`;
+                return `<li class="mb-2 text-black">${content}</li>`;
             });
             
             // Wrap bullet lists in ul tags
-            formattedContent = formattedContent.replace(/(<li class="mb-2 text-gray-200">.*?<\/li>)+/gs, function(match) {
-                return `<ul class="list-disc list-inside space-y-2 my-4 text-gray-200">${match}</ul>`;
+            formattedContent = formattedContent.replace(/(<li class="mb-2 text-black">.*?<\/li>)+/gs, function(match) {
+                return `<ul class="list-disc list-inside space-y-2 my-4 text-black">${match}</ul>`;
             });
             
             // Convert bold and italic text
             formattedContent = formattedContent
-                .replace(/\*\*(.*?)\*\*/g, '<strong class="font-semibold text-green-300">$1</strong>')
-                .replace(/\*(.*?)\*/g, '<em class="italic text-gray-300">$1</em>');
+                .replace(/\*\*(.*?)\*\*/g, '<strong class="font-semibold text-black">$1</strong>')
+                .replace(/\*(.*?)\*/g, '<em class="italic text-black">$1</em>');
             
             // Convert line breaks
             formattedContent = formattedContent
@@ -730,20 +684,20 @@ def home():
                             .filter(u => !!u && u !== '#')
                     ));
                     if (uniqueUrls.length > 0) {
-                        footnotes = '<hr class="my-6 border-gray-700">' +
-                            '<div class="text-sm text-gray-400"><div class="font-semibold text-gray-300 mb-2">Sources</div>' +
+                        footnotes = '<hr class="my-6 border-gray-200">' +
+                            '<div class="text-sm text-black"><div class="font-semibold text-black mb-2">Sources<\/div>' +
                             '<ol class="list-decimal list-inside space-y-1">' +
-                            uniqueUrls.map((u, idx) => `<li><a class="text-green-400 hover:text-green-300 break-words" href="${u}" target="_blank">${u}</a></li>`).join('') +
-                            '</ol></div>';
+                            uniqueUrls.map((u, idx) => `<li><a class="text-black underline hover:opacity-80 break-words" href="${u}" target="_blank">${u}<\/a><\/li>`).join('') +
+                            '<\/ol><\/div>';
                     }
                 }
 
                 responseDiv.querySelector('.prose').innerHTML = `
-                    <h2 class="text-3xl font-bold text-green-400 mb-6 text-center">Answer</h2>
-                    <div class="text-gray-200 leading-relaxed">
+                    <h2 class="text-3xl font-bold text-black mb-6 text-center">Answer<\/h2>
+                    <div class="text-black leading-relaxed">
                         ${formattedContent}
                         ${footnotes}
-                    </div>
+                    <\/div>
                 `;
                 
                 // Hide the detailed citation cards section; we now show URLs as footnotes only
