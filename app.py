@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, render_template, request, jsonify, send_from_directory
 from threading import Lock
 from pinecone import Pinecone
 import os
@@ -15,16 +15,24 @@ app = Flask(__name__)
 ask_count_lock = Lock()
 app.config['ASK_COUNT'] = 0
 
+# Optional SPA build directory (for serving a built frontend)
+FRONTEND_BUILD_DIR = os.getenv(
+    "FRONTEND_BUILD_DIR",
+    os.path.join(os.path.dirname(__file__), "frontend", "dist")
+)
+
 # Initialize Pinecone MCP Assistant
 try:
     pc = Pinecone(api_key=os.getenv("PINECONE_API_KEY"))
     # Use your existing MCP assistant
     assistant = pc.assistant.Assistant(assistant_name="vb")
+    app.config['PINECONE_ASSISTANT'] = assistant
     print("✅ Pinecone MCP Assistant 'vb' connected successfully")
     
     # Also try to get the index for additional functionality
     try:
         index = pc.Index(os.getenv("PINECONE_INDEX_NAME", "veterans-benefits"))
+        app.config['PINECONE_INDEX'] = index
         print(f"✅ Pinecone Index '{os.getenv('PINECONE_INDEX_NAME', 'veterans-benefits')}' connected successfully")
     except Exception as e:
         print(f"⚠️ Warning: Could not connect to Pinecone index: {e}")
@@ -233,7 +241,15 @@ def process_mcp_response(mcp_response):
 
 @app.route("/")
 def home():
-    # Temporary inline HTML to fix template issue
+    # Prefer serving built SPA if available
+    try:
+        index_path = os.path.join(FRONTEND_BUILD_DIR, "index.html")
+        if os.path.exists(index_path):
+            return send_from_directory(FRONTEND_BUILD_DIR, "index.html")
+    except Exception:
+        pass
+
+    # Fallback: inline HTML (legacy UI)
     html_content = r"""
 <!DOCTYPE html>
 <html lang="en">
@@ -768,6 +784,10 @@ def ask():
             app.config['ASK_COUNT'] += 1
             current_ask_count = app.config['ASK_COUNT']
         
+        # Resolve Pinecone assistant/index from app config if available
+        assistant_ref = app.config.get('PINECONE_ASSISTANT') or assistant
+        index_ref = app.config.get('PINECONE_INDEX') or index
+        
         # Try using the MCP server first (more direct integration)
         print(f"🔄 Attempting to use MCP server for prompt: {prompt[:50]}...")
         
@@ -792,12 +812,12 @@ def ask():
             print(f"⚠️ MCP server failed: {mcp_response.get('error', 'Unknown error')}")
         
         # Fallback to Pinecone SDK if MCP server fails
-        if assistant:
+        if assistant_ref:
             print("🔄 Falling back to Pinecone SDK...")
             try:
                 from pinecone_plugins.assistant.models.chat import Message
                 
-                resp = assistant.chat(
+                resp = assistant_ref.chat(
                     messages=[Message(role="user", content=prompt)], 
                     include_highlights=True
                 )
@@ -944,7 +964,14 @@ def ask():
                 print(f"Error with Pinecone SDK fallback: {e}")
                 return jsonify({"error": f"Both MCP server and Pinecone SDK failed: {str(e)}"}), 500
         else:
-            return jsonify({"error": "Neither MCP server nor Pinecone SDK available"}), 500
+            return jsonify({
+                "error": "Neither MCP server nor Pinecone SDK available",
+                "details": {
+                    "mcp_api_key_configured": bool(MCP_API_KEY),
+                    "assistant_ready": bool(assistant_ref),
+                    "index_ready": bool(index_ref)
+                }
+            }), 500
         
     except Exception as e:
         print(f"Error in ask endpoint: {e}")
@@ -984,6 +1011,8 @@ def debug():
         "app_name": app.name,
         "template_folder": app.template_folder,
         "static_folder": app.static_folder,
+        "frontend_build_dir": FRONTEND_BUILD_DIR,
+        "frontend_build_present": os.path.exists(os.path.join(FRONTEND_BUILD_DIR, "index.html")),
         "routes": [str(rule) for rule in app.url_map.iter_rules()],
         "current_working_directory": os.getcwd(),
         "files_in_cwd": os.listdir(".") if os.path.exists(".") else "Directory not accessible",
@@ -998,6 +1027,23 @@ def test():
 @app.route("/ping")
 def ping():
     return jsonify({"message": "pong", "status": "ok"})
+
+# Serve SPA static assets and enable client-side routing fallback
+@app.route('/<path:path>')
+def serve_spa_assets(path):
+    try:
+        # If SPA build exists and the requested file exists, serve it
+        target_path = os.path.join(FRONTEND_BUILD_DIR, path)
+        if os.path.exists(target_path) and os.path.isfile(target_path):
+            return send_from_directory(FRONTEND_BUILD_DIR, path)
+        # Otherwise, if SPA build exists, return index.html for client-side routing
+        index_path = os.path.join(FRONTEND_BUILD_DIR, 'index.html')
+        if os.path.exists(index_path):
+            return send_from_directory(FRONTEND_BUILD_DIR, 'index.html')
+    except Exception:
+        pass
+    # If no SPA, 404 for unknown paths
+    return jsonify({"error": "Not found"}), 404
 
 @app.route("/mcp/test", methods=["POST"])
 def test_mcp():
@@ -1148,6 +1194,14 @@ if __name__ == "__main__":
     print(f"📍 Current working directory: {os.getcwd()}")
     print(f"📂 Files in current directory: {os.listdir('.') if os.path.exists('.') else 'Directory not accessible'}")
     print(f"🔗 MCP Endpoint: https://prod-1-data.ke.pinecone.io/mcp/assistants/vb")
+    try:
+        spa_index = os.path.join(FRONTEND_BUILD_DIR, 'index.html')
+        if os.path.exists(spa_index):
+            print(f"🧩 SPA build detected at: {spa_index}. Serving frontend from build directory.")
+        else:
+            print("ℹ️ No SPA build detected. Serving inline fallback UI.")
+    except Exception as e:
+        print(f"⚠️ Could not check SPA build: {e}")
     
     # Get port from environment variable (for cloud deployment)
     port = int(os.environ.get("PORT", 5000))
