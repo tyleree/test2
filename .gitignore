@@ -158,3 +158,8 @@ credentials.json
 
 veteran-ai-spark/node_modules
 
+# Allow committed SPA build for Render
+!frontend/dist
+!frontend/dist/**
+!frontend/dist/assets/**
+
