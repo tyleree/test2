@@ -114,7 +114,7 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground overflow-hidden;
+    @apply bg-background text-foreground overflow-x-hidden;
     background: var(--hero-bg);
   }
 }

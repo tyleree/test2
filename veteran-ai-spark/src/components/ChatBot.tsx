@@ -76,7 +76,7 @@ export const ChatBot = () => {
       handleSendMessage();
     }
   };
-  return <Card className="w-full max-w-3xl h-[820px] md:max-w-4xl md:h-[900px] bg-card/80 backdrop-blur-sm border-border/50 animate-fadeInUp animate-glow">
+  return <Card className="w-full max-w-3xl h-[80vh] md:max-w-4xl md:h-[85vh] bg-card/80 backdrop-blur-sm border-border/50 animate-fadeInUp animate-glow">
       <div className="flex flex-col h-full">
         {/* Header */}
         <div className="flex items-center gap-3 p-4 border-b border-border/50">
