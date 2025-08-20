@@ -1,4 +1,6 @@
 from flask import Flask, render_template, request, jsonify, send_from_directory
+from flask_limiter import Limiter
+from flask_limiter.util import get_remote_address
 from threading import Lock
 from pinecone import Pinecone
 import os
@@ -10,6 +12,73 @@ import json
 load_dotenv('env.txt')  # Using env.txt since .env is blocked
 
 app = Flask(__name__)
+
+# Initialize intelligent rate limiter (per-IP)
+limiter = Limiter(
+    app=app,
+    key_func=get_remote_address,
+    default_limits=["1000 per day", "100 per hour"],  # base per-IP guards
+    storage_uri="memory://",  # swap to Redis in production: redis://host:6379
+    strategy="fixed-window",
+)
+
+# Suspicious behavior tracking (in-memory)
+suspicious_ips = {}
+suspicious_lock = Lock()
+
+def is_suspicious_request(ip_address: str, prompt: str):
+    """Heuristics to flag abusive patterns for temporary throttling."""
+    from datetime import datetime, timedelta
+    now = datetime.now()
+    with suspicious_lock:
+        data = suspicious_ips.setdefault(ip_address, {
+            "requests": [],
+            "short_prompts": 0,
+            "identical_prompts": [],
+            "last_prompt": None,
+            "last_request_time": None,
+        })
+
+        # Keep only last hour of requests
+        data["requests"] = [t for t in data["requests"] if now - t < timedelta(hours=1)]
+        data["requests"].append(now)
+
+        # Burst detection: >5 in 60s
+        recent_min = [t for t in data["requests"] if now - t < timedelta(minutes=1)]
+        if len(recent_min) > 5:
+            return True, "Burst requests detected"
+
+        # Very short prompts: <5 chars repeatedly
+        if len((prompt or "").strip()) < 5:
+            data["short_prompts"] += 1
+            if data["short_prompts"] > 3:
+                return True, "Too many short prompts"
+
+        # Identical prompts repeated within 10 minutes
+        if data["last_prompt"] == prompt:
+            data["identical_prompts"].append(now)
+            data["identical_prompts"] = [t for t in data["identical_prompts"] if now - t < timedelta(minutes=10)]
+            if len(data["identical_prompts"]) > 2:
+                return True, "Identical prompts repeated"
+
+        data["last_prompt"] = prompt
+        data["last_request_time"] = now
+        return False, ""
+
+def get_rate_limit_for_ip(ip_address: str) -> str:
+    """Dynamic per-IP limit; tightens if heavy recent usage detected."""
+    from datetime import datetime, timedelta
+    now = datetime.now()
+    with suspicious_lock:
+        data = suspicious_ips.get(ip_address)
+        if data:
+            recent_hour = [t for t in data.get("requests", []) if now - t < timedelta(hours=1)]
+            if len(recent_hour) > 20:
+                return "5 per hour"
+            if len(recent_hour) > 10:
+                return "15 per hour"
+    # Normal users get generous limit to support ~5000/day aggregate
+    return "250 per hour"
 
 # Ask counter (thread-safe)
 ask_count_lock = Lock()
@@ -789,11 +858,22 @@ def favicon():
     return jsonify({"error": "favicon not available"}), 404
 
 @app.route("/ask", methods=["POST"])
+@limiter.limit(lambda: get_rate_limit_for_ip(get_remote_address()))
 def ask():
     try:
+        client_ip = get_remote_address()
         prompt = request.json.get("prompt", "")
         if not prompt:
             return jsonify({"error": "No prompt provided"}), 400
+        # Intelligent throttling for suspicious behavior
+        suspicious, reason = is_suspicious_request(client_ip, prompt)
+        if suspicious:
+            print(f"🚨 Suspicious request from {client_ip}: {reason}")
+            return jsonify({
+                "error": "Rate limit exceeded due to suspicious activity",
+                "reason": reason,
+                "retry_after": 300,
+            }), 429
         # Increment ask counter
         with ask_count_lock:
             app.config['ASK_COUNT'] += 1
@@ -1006,6 +1086,7 @@ def health():
             "ask": "/ask",
             "health": "/health",
             "metrics": "/metrics",
+            "rate_limit_status": "/rate-limit-status",
             "mcp_test": "/mcp/test",
             "mcp_status": "/mcp/status",
             "mcp_chat": "/mcp/chat",
@@ -1018,6 +1099,34 @@ def metrics():
     return jsonify({
         "ask_count": app.config.get("ASK_COUNT", 0)
     })
+
+# Rate limit status for debugging/ops
+@app.route("/rate-limit-status")
+def rate_limit_status():
+    from datetime import datetime, timedelta
+    ip = get_remote_address()
+    now = datetime.now()
+    with suspicious_lock:
+        data = suspicious_ips.get(ip, {"requests": []})
+        recent = [t for t in data.get("requests", []) if now - t < timedelta(hours=1)]
+    return jsonify({
+        "ip": ip,
+        "current_limit": get_rate_limit_for_ip(ip),
+        "requests_last_hour": len(recent),
+        "tracked": ip in suspicious_ips,
+        "total_requests": app.config.get("ASK_COUNT", 0),
+    })
+
+@app.errorhandler(429)
+def ratelimit_handler(e):
+    ip = get_remote_address()
+    print(f"🚨 Rate limit exceeded for {ip}: {getattr(e, 'description', '')}")
+    return jsonify({
+        "error": "Rate limit exceeded",
+        "message": "Too many requests. Please wait before retrying.",
+        "retry_after": getattr(e, 'retry_after', 60),
+        "limit": getattr(e, 'description', 'n/a'),
+    }), 429
 
 # Debug routes to help troubleshoot
 @app.route("/debug")
