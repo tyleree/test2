@@ -112,9 +112,12 @@ except Exception as e:
     assistant = None
     index = None
 
-# MCP Server configuration
+# MCP Server configuration (kept as fallback)
 MCP_SERVER_URL = "https://prod-1-data.ke.pinecone.io/mcp/assistants/vb"
 MCP_API_KEY = os.getenv("PINECONE_API_KEY")
+
+# OpenAI configuration for direct queries
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
 def call_mcp_server(prompt, options=None):
     """
@@ -307,6 +310,152 @@ def process_mcp_response(mcp_response):
     except Exception as e:
         print(f"Error processing MCP response: {e}")
         return None, None, None
+
+
+def query_direct_pinecone(prompt, index):
+    """
+    Query Pinecone index directly using OpenAI embeddings and GPT-4
+    
+    Args:
+        prompt (str): User's question
+        index: Pinecone index object
+        
+    Returns:
+        dict: Response with content, citations, and metadata
+    """
+    try:
+        from openai import OpenAI
+        
+        # Initialize OpenAI client with proper v1.0+ syntax
+        client = OpenAI(api_key=OPENAI_API_KEY)
+        
+        print(f"🔍 Generating embedding for query: {prompt[:50]}...")
+        
+        # Generate embedding for the user's question
+        # Note: Using text-embedding-ada-002 which produces 1536 dims, but we need to truncate to 1024
+        # or use a different model that matches your index dimensions
+        embed_response = client.embeddings.create(
+            model="text-embedding-3-small",
+            input=prompt,
+            dimensions=1024  # Truncate to match your index
+        )
+        query_vector = embed_response.data[0].embedding
+        
+        print(f"📊 Querying Pinecone index with {len(query_vector)}-dimensional vector...")
+        
+        # Query Pinecone index
+        results = index.query(
+            vector=query_vector,
+            top_k=5,
+            include_metadata=True
+        )
+        
+        if not results.matches:
+            print("⚠️ No matches found in Pinecone index")
+            return None
+            
+        print(f"✅ Found {len(results.matches)} matches")
+        for i, match in enumerate(results.matches):
+            print(f"  Match {i+1}: Score={match.score:.4f}, ID={match.id}, Metadata keys={list(match.metadata.keys()) if match.metadata else 'None'}")
+        
+        # Build context from top matches
+        context_chunks = []
+        context_text_parts = []
+        
+        for i, match in enumerate(results.matches):
+            if match.score > 0.02:  # Lower threshold for this index (scores seem to be lower)
+                # Extract text content from different possible fields
+                chunk_text = (
+                    match.metadata.get('context', '') or 
+                    match.metadata.get('text', '') or 
+                    match.metadata.get('preview', '')
+                )
+                
+                heading = match.metadata.get('heading', '')
+                source_url = match.metadata.get('source_url', 'https://veteransbenefitskb.com')  # Default source
+                
+                if chunk_text:
+                    context_chunks.append({
+                        'text': chunk_text,
+                        'source_url': source_url,
+                        'score': match.score,
+                        'rank': i + 1,
+                        'heading': heading
+                    })
+                    
+                    # Include heading in context if available
+                    context_part = f"Section: {heading}\n{chunk_text}" if heading else chunk_text
+                    context_text_parts.append(f"Source {i+1}: {context_part}")
+        
+        if not context_chunks:
+            print("⚠️ No relevant chunks found (all below threshold)")
+            print(f"  Threshold: 0.02, Best score: {max(match.score for match in results.matches) if results.matches else 'N/A'}")
+            return None
+            
+        # Limit context to top 3 chunks to avoid token limits
+        context_text = '\n\n'.join(context_text_parts[:3])
+        
+        print(f"🤖 Generating answer with GPT-4 using {len(context_chunks)} context chunks...")
+        
+        # Generate answer using GPT-4
+        response = client.chat.completions.create(
+            model="gpt-4",
+            messages=[
+                {
+                    "role": "system", 
+                    "content": """You are a Veterans Benefits AI assistant. Answer questions based only on the provided context from the 38 CFR (Code of Federal Regulations). 
+
+Instructions:
+- Be accurate and cite your sources
+- Only use information from the provided context
+- If the context doesn't contain enough information, say so
+- Provide detailed, helpful answers
+- Use a professional but friendly tone"""
+                },
+                {
+                    "role": "user", 
+                    "content": f"""Context from 38 CFR:
+{context_text}
+
+Question: {prompt}
+
+Please provide a detailed answer based on the context above."""
+                }
+            ],
+            temperature=0.3,
+            max_tokens=800,
+            top_p=1.0
+        )
+        
+        answer_content = response.choices[0].message.content
+        
+        print(f"✅ Generated answer with {len(answer_content)} characters")
+        
+        return {
+            'success': True,
+            'content': answer_content,
+            'citations': context_chunks,
+            'source': 'direct_pinecone_gpt4',
+            'metadata': {
+                'model': 'gpt-4',
+                'embedding_model': 'text-embedding-3-small',
+                'chunks_used': len(context_chunks),
+                'total_matches': len(results.matches),
+                'usage': {
+                    'prompt_tokens': response.usage.prompt_tokens,
+                    'completion_tokens': response.usage.completion_tokens,
+                    'total_tokens': response.usage.total_tokens
+                }
+            }
+        }
+        
+    except Exception as e:
+        print(f"❌ Error in direct Pinecone query: {e}")
+        print(f"❌ Error type: {type(e)}")
+        import traceback
+        print(f"❌ Full traceback: {traceback.format_exc()}")
+        return None
+
 
 @app.route("/")
 def home():
@@ -883,10 +1032,33 @@ def ask():
         assistant_ref = app.config.get('PINECONE_ASSISTANT') or assistant
         index_ref = app.config.get('PINECONE_INDEX') or index
         
-        # Try using the MCP server first (more direct integration)
-        print(f"🔄 Attempting to use MCP server for prompt: {prompt[:50]}...")
+        # Try direct Pinecone query first (cost-effective, high-performance)
+        if index_ref and OPENAI_API_KEY:
+            print(f"🚀 Attempting direct Pinecone + GPT-4 query for prompt: {prompt[:50]}...")
+            
+            direct_response = query_direct_pinecone(prompt, index_ref)
+            
+            if direct_response and direct_response.get("success"):
+                print("✅ Successfully processed direct Pinecone query")
+                return jsonify({
+                    "success": True,
+                    "content": direct_response["content"],
+                    "citations": direct_response.get("citations", []),
+                    "source": direct_response["source"],
+                    "metadata": direct_response.get("metadata", {}),
+                    "ask_count": current_ask_count
+                })
+            else:
+                print("⚠️ Direct Pinecone query failed, falling back to MCP")
+        else:
+            if not index_ref:
+                print("⚠️ No Pinecone index available for direct query")
+            if not OPENAI_API_KEY:
+                print("⚠️ No OpenAI API key available for direct query")
         
-        # Call the MCP server directly
+        # Fallback to MCP server if direct query fails
+        print(f"🔄 Falling back to MCP server for prompt: {prompt[:50]}...")
+        
         mcp_response = call_mcp_server(prompt)
         
         if mcp_response and mcp_response.get("success"):
@@ -906,7 +1078,7 @@ def ask():
         else:
             print(f"⚠️ MCP server failed: {mcp_response.get('error', 'Unknown error')}")
         
-        # Fallback to Pinecone SDK if MCP server fails
+        # Final fallback to Pinecone SDK if both direct and MCP fail
         if assistant_ref:
             print("🔄 Falling back to Pinecone SDK...")
             try:
@@ -1241,6 +1413,73 @@ def mcp_status():
             "api_key_configured": bool(MCP_API_KEY),
             "connection_test": "error",
             "error": str(e)
+        }), 500
+
+@app.route("/debug/direct", methods=["POST"])
+def debug_direct():
+    """Debug endpoint to test direct Pinecone query"""
+    try:
+        prompt = request.json.get("prompt", "What are VA disability benefits?")
+        index_ref = app.config.get('PINECONE_INDEX') or index
+        
+        if not index_ref:
+            return jsonify({"error": "No Pinecone index available"}), 500
+            
+        if not OPENAI_API_KEY:
+            return jsonify({"error": "No OpenAI API key available"}), 500
+            
+        print(f"🔧 DEBUG: Testing direct query with prompt: {prompt}")
+        print(f"🔧 DEBUG: OpenAI API key available: {bool(OPENAI_API_KEY)}")
+        print(f"🔧 DEBUG: Pinecone index available: {bool(index_ref)}")
+        
+        # Test OpenAI directly first
+        embed_success = False
+        embed_error = None
+        embed_dims = None
+        try:
+            from openai import OpenAI
+            client = OpenAI(api_key=OPENAI_API_KEY)
+            test_embed = client.embeddings.create(model="text-embedding-3-small", input="test", dimensions=1024)
+            embed_success = True
+            embed_dims = len(test_embed.data[0].embedding)
+        except Exception as e:
+            embed_success = False
+            embed_error = str(e)
+        
+        result = query_direct_pinecone(prompt, index_ref)
+        
+        if result:
+            return jsonify({
+                "success": True,
+                "result": result,
+                "debug": {
+                    "openai_key_set": bool(OPENAI_API_KEY),
+                    "index_available": bool(index_ref),
+                    "embed_test_success": embed_success,
+                    "embed_dims": embed_dims if embed_success else None
+                }
+            })
+        else:
+            return jsonify({
+                "success": False,
+                "error": "Direct query returned None",
+                "debug": {
+                    "openai_key_set": bool(OPENAI_API_KEY),
+                    "index_available": bool(index_ref),
+                    "embed_test_success": embed_success,
+                    "embed_error": embed_error if not embed_success else None,
+                    "embed_dims": embed_dims if embed_success else None
+                }
+            })
+            
+    except Exception as e:
+        return jsonify({
+            "success": False,
+            "error": str(e),
+            "debug": {
+                "openai_key_set": bool(OPENAI_API_KEY),
+                "index_available": bool(index_ref)
+            }
         }), 500
 
 @app.route("/mcp/chat", methods=["POST"])
