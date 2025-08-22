@@ -255,11 +255,12 @@ def track_visitor_location_async(ip_address, stats):
     def _track():
         location = get_location_from_ip(ip_address)
         
-        # Track in database if available
-        if DATABASE_AVAILABLE and hasattr(g, 'db') and g.db is not None:
+        # Track in database if available (with proper Flask app context)
+        if DATABASE_AVAILABLE:
             try:
-                from analytics import track_visitor_location
-                track_visitor_location(ip_address, {'location': location})
+                with app.app_context():
+                    from analytics import track_visitor_location
+                    track_visitor_location(ip_address, {'location': location})
             except Exception as e:
                 print(f"⚠️ Failed to track location in database: {e}")
         
