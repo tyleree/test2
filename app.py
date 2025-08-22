@@ -116,31 +116,105 @@ def save_stats(stats):
     except Exception as e:
         print(f"Error saving stats: {e}")
 
+def get_real_ip():
+    """Get the real client IP address, accounting for proxies and load balancers"""
+    # Check various headers that proxies might use
+    headers_to_check = [
+        'X-Forwarded-For',
+        'X-Real-IP', 
+        'X-Client-IP',
+        'CF-Connecting-IP',  # Cloudflare
+        'True-Client-IP',
+        'HTTP_X_FORWARDED_FOR',
+        'HTTP_X_REAL_IP'
+    ]
+    
+    for header in headers_to_check:
+        ip = request.headers.get(header)
+        if ip:
+            # X-Forwarded-For can contain multiple IPs, take the first one
+            if ',' in ip:
+                ip = ip.split(',')[0].strip()
+            print(f"🔍 Found IP in header {header}: {ip}")
+            return ip
+    
+    # Fallback to remote_addr
+    ip = request.remote_addr
+    print(f"🔍 Using remote_addr: {ip}")
+    return ip
+
 def get_location_from_ip(ip_address):
     """Get location (state) from IP address using free ipapi service"""
-    if ip_address in ['127.0.0.1', 'localhost', '::1'] or ip_address.startswith('192.168.') or ip_address.startswith('10.'):
-        return 'Local'  # Local/private IP
+    print(f"🌍 Getting location for IP: {ip_address}")
+    
+    # Check for local/private IPs
+    if (ip_address in ['127.0.0.1', 'localhost', '::1'] or 
+        ip_address.startswith('192.168.') or 
+        ip_address.startswith('10.') or 
+        ip_address.startswith('172.')):
+        print(f"🏠 Local/private IP detected: {ip_address}")
+        return 'Local'
     
     try:
-        # Use ipapi.co for free IP geolocation (1000 requests/day limit)
-        response = requests.get(f'http://ipapi.co/{ip_address}/json/', timeout=2)
-        if response.status_code == 200:
-            data = response.json()
-            region = data.get('region_code', 'Unknown')
-            country = data.get('country_code', '')
-            
-            # Only track US states
-            if country == 'US' and region:
-                return region
-            elif country and country != 'US':
-                return f'International-{country}'
-            else:
-                return 'Unknown'
-    except Exception as e:
-        print(f"Error getting location for IP {ip_address}: {e}")
+        # Try multiple geolocation services for better reliability
+        services = [
+            {
+                'name': 'ipapi.co',
+                'url': f'http://ipapi.co/{ip_address}/json/',
+                'region_key': 'region_code',
+                'country_key': 'country_code'
+            },
+            {
+                'name': 'ip-api.com',
+                'url': f'http://ip-api.com/json/{ip_address}',
+                'region_key': 'region',
+                'country_key': 'countryCode'
+            }
+        ]
+        
+        for service in services:
+            try:
+                print(f"🔍 Querying {service['name']} for IP: {ip_address}")
+                response = requests.get(service['url'], timeout=5)
+                
+                if response.status_code == 200:
+                    data = response.json()
+                    print(f"📊 {service['name']} response: {data}")
+                    
+                    # Handle different API response formats
+                    if service['name'] == 'ip-api.com' and data.get('status') == 'fail':
+                        print(f"❌ {service['name']} failed: {data.get('message', 'Unknown error')}")
+                        continue
+                    
+                    region = data.get(service['region_key'], 'Unknown')
+                    country = data.get(service['country_key'], '')
+                    city = data.get('city', '')
+                    
+                    # Only track US states
+                    if country == 'US' and region:
+                        print(f"🇺🇸 US location found: {region} ({city})")
+                        return region
+                    elif country and country != 'US':
+                        print(f"🌍 International location: {country}")
+                        return f'International-{country}'
+                    else:
+                        print(f"❓ Unknown location: country={country}, region={region}")
+                        continue  # Try next service
+                else:
+                    print(f"❌ {service['name']} API error: {response.status_code}")
+                    continue
+                    
+            except Exception as e:
+                print(f"❌ Error with {service['name']}: {e}")
+                continue
+        
+        # If all services failed
+        print(f"❌ All geolocation services failed for IP: {ip_address}")
         return 'Unknown'
-    
-    return 'Unknown'
+            
+    except Exception as e:
+        print(f"❌ Error getting location for IP {ip_address}: {e}")
+        return 'Unknown'
 
 def track_visitor_location_async(ip_address, stats):
     """Track visitor location asynchronously to avoid blocking requests"""
@@ -549,7 +623,7 @@ Please provide a detailed answer based on the context above."""
 @app.route("/")
 def home():
     # Track visit
-    client_ip = get_remote_address()
+    client_ip = get_real_ip()  # Use improved IP detection
     with stats_lock:
         stats = app.config['STATS']
         stats['visit_count'] += 1
@@ -1420,6 +1494,69 @@ def get_visitor_locations():
             "unknown": unknown_count,
             "total_tracked": sum(locations.values())
         })
+
+@app.route("/debug/ip")
+def debug_ip():
+    """Debug endpoint to check IP detection and geolocation"""
+    client_ip = get_real_ip()
+    
+    # Get all headers for debugging
+    headers_info = {}
+    for header in ['X-Forwarded-For', 'X-Real-IP', 'X-Client-IP', 'CF-Connecting-IP', 'True-Client-IP']:
+        value = request.headers.get(header)
+        if value:
+            headers_info[header] = value
+    
+    # Test geolocation
+    location = get_location_from_ip(client_ip)
+    
+    return jsonify({
+        "detected_ip": client_ip,
+        "remote_addr": request.remote_addr,
+        "headers": headers_info,
+        "all_headers": dict(request.headers),
+        "location": location,
+        "is_local": client_ip in ['127.0.0.1', 'localhost', '::1'] or client_ip.startswith(('192.168.', '10.', '172.'))
+    })
+
+@app.route("/debug/populate-sample-locations")
+def populate_sample_locations():
+    """Populate sample location data for testing (development only)"""
+    sample_locations = {
+        'CA': 45,  # California
+        'NY': 32,  # New York
+        'TX': 28,  # Texas
+        'FL': 22,  # Florida
+        'WA': 18,  # Washington
+        'IL': 15,  # Illinois
+        'PA': 12,  # Pennsylvania
+        'OH': 10,  # Ohio
+        'GA': 8,   # Georgia
+        'NC': 7,   # North Carolina
+        'VA': 6,   # Virginia
+        'MI': 5,   # Michigan
+        'CO': 4,   # Colorado
+        'OR': 3,   # Oregon
+        'AZ': 2,   # Arizona
+        'NV': 1,   # Nevada
+        'International-CA': 8,  # Canada
+        'International-UK': 5,  # United Kingdom
+        'International-DE': 3,  # Germany
+        'Local': 12,
+        'Unknown': 5
+    }
+    
+    with stats_lock:
+        stats = app.config['STATS']
+        stats['visitor_locations'] = sample_locations
+        save_stats(stats)
+        app.config['STATS'] = stats
+    
+    return jsonify({
+        "message": "Sample location data populated successfully",
+        "locations": sample_locations,
+        "total": sum(sample_locations.values())
+    })
 
 @app.route("/stats")
 def stats_page():
