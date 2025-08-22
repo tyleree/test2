@@ -19,10 +19,9 @@ services:
         generateValue: true
       - key: ADMIN_TOKEN
         generateValue: true
-      # Keep existing environment variables
       - key: PINECONE_API_KEY
-        sync: false  # Set manually in dashboard
+        sync: false
       - key: OPENAI_API_KEY
-        sync: false  # Set manually in dashboard
-      - key: MCP_API_KEY
-        sync: false  # Set manually in dashboard
+        sync: false
+      - key: PINECONE_INDEX_NAME
+        value: veterans-benefits-kb

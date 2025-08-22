@@ -22,14 +22,18 @@ app.secret_key = os.environ.get("SECRET_KEY", "dev-key-change-in-production")
 
 # Initialize database (gracefully handle missing DATABASE_URL)
 try:
-    from db import Base, engine, SessionLocal
+    from db import Base, engine, SessionLocal, DATABASE_URL
     from models import Event
     from analytics import bp as analytics_bp
-    DATABASE_AVAILABLE = engine is not None
-    if DATABASE_AVAILABLE:
+    
+    # Check if we have a valid database connection
+    if engine and DATABASE_URL:
+        DATABASE_AVAILABLE = True
         print("📊 Database connection established")
     else:
+        DATABASE_AVAILABLE = False
         print("⚠️ DATABASE_URL not found - analytics will be disabled")
+        
 except Exception as e:
     print(f"⚠️ Database initialization failed: {e} - analytics will be disabled")
     DATABASE_AVAILABLE = False
@@ -267,10 +271,15 @@ print(f"📊 Loaded stats: Ask count={app.config['STATS']['ask_count']}, Visit c
 # Legacy compatibility
 ask_count_lock = stats_lock
 
-# Register analytics blueprint if database is available
-if DATABASE_AVAILABLE and analytics_bp:
+# Register analytics blueprint if available
+if analytics_bp:
     app.register_blueprint(analytics_bp)
-    print("📈 Analytics blueprint registered")
+    if DATABASE_AVAILABLE:
+        print("📈 Analytics blueprint registered with database support")
+    else:
+        print("📈 Analytics blueprint registered (database not available)")
+else:
+    print("⚠️ Analytics blueprint not available")
 
 # Initialize database tables on first request
 def init_db():
