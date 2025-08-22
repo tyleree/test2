@@ -75,7 +75,28 @@ def ensure_database_schema():
             
             g.db.commit()
             print("✅ Database schema updated with token usage tracking")
-            
+        
+        # Performance columns
+        perf_check = g.db.execute(text("""
+            SELECT column_name FROM information_schema.columns 
+            WHERE table_name='events' AND column_name='response_ms'
+        """)).mappings().all()
+        if not perf_check:
+            print("🔧 Adding performance analytics columns to events table...")
+            g.db.execute(text("""
+                ALTER TABLE events
+                ADD COLUMN IF NOT EXISTS response_ms INTEGER,
+                ADD COLUMN IF NOT EXISTS prompt_chars INTEGER,
+                ADD COLUMN IF NOT EXISTS answer_chars INTEGER,
+                ADD COLUMN IF NOT EXISTS success INTEGER
+            """))
+            g.db.execute(text("""
+                CREATE INDEX IF NOT EXISTS idx_events_response_ms ON events(response_ms) WHERE response_ms IS NOT NULL;
+                CREATE INDEX IF NOT EXISTS idx_events_success ON events(success) WHERE success IS NOT NULL;
+            """))
+            g.db.commit()
+            print("✅ Database schema updated with performance analytics")
+        
         return True
         
     except Exception as e:
@@ -499,6 +520,84 @@ def stats():
             db.rollback()
             token_stats = {"available": False, "error": str(e)}
 
+        # Performance analytics
+        performance = {}
+        try:
+            perf_col_check = db.execute(text("""
+                SELECT column_name FROM information_schema.columns 
+                WHERE table_name='events' AND column_name='response_ms'
+            """ )).mappings().all()
+            if perf_col_check:
+                # summary
+                perf_summary = db.execute(text("""
+                    WITH recent AS (
+                        SELECT * FROM events 
+                        WHERE ts >= now() - (:days || ' days')::interval 
+                          AND type='chat_question'
+                          AND response_ms IS NOT NULL
+                    )
+                    SELECT 
+                        COUNT(*) AS total_chats,
+                        AVG(response_ms) AS avg_ms,
+                        percentile_cont(0.95) WITHIN GROUP (ORDER BY response_ms) AS p95_ms,
+                        AVG(answer_chars) AS avg_answer_chars,
+                        AVG(prompt_chars) AS avg_prompt_chars,
+                        SUM(CASE WHEN success=1 THEN 1 ELSE 0 END)::float / NULLIF(COUNT(*),0) AS success_rate
+                    FROM recent
+                """), {"days": days}).mappings().one()
+                
+                # provider breakdown
+                perf_by_provider = db.execute(text("""
+                    WITH recent AS (
+                        SELECT * FROM events 
+                        WHERE ts >= now() - (:days || ' days')::interval 
+                          AND type='chat_question'
+                          AND response_ms IS NOT NULL
+                    )
+                    SELECT 
+                        coalesce(api_provider,'unknown') AS provider,
+                        COUNT(*) AS queries,
+                        AVG(response_ms) AS avg_ms,
+                        percentile_cont(0.95) WITHIN GROUP (ORDER BY response_ms) AS p95_ms,
+                        SUM(CASE WHEN success=1 THEN 1 ELSE 0 END)::float / NULLIF(COUNT(*),0) AS success_rate,
+                        AVG(answer_chars) AS avg_answer_chars
+                    FROM recent
+                    GROUP BY 1
+                    ORDER BY queries DESC
+                """), {"days": days}).mappings().all()
+                
+                # daily
+                perf_daily = db.execute(text("""
+                    WITH recent AS (
+                        SELECT * FROM events 
+                        WHERE ts >= now() - (:days || ' days')::interval 
+                          AND type='chat_question'
+                          AND response_ms IS NOT NULL
+                    )
+                    SELECT 
+                        to_char(date_trunc('day', ts), 'YYYY-MM-DD') AS day,
+                        AVG(response_ms) AS avg_ms,
+                        percentile_cont(0.95) WITHIN GROUP (ORDER BY response_ms) AS p95_ms,
+                        COUNT(*) AS queries
+                    FROM recent
+                    GROUP BY date_trunc('day', ts)
+                    ORDER BY day DESC
+                    LIMIT 30
+                """), {"days": days}).mappings().all()
+                
+                performance = {
+                    "available": True,
+                    "summary": dict(perf_summary) if perf_summary else {},
+                    "by_provider": [dict(r) for r in perf_by_provider],
+                    "daily": [dict(r) for r in perf_daily]
+                }
+            else:
+                performance = {"available": False, "message": "Performance columns not available"}
+        except Exception as e:
+            print(f"⚠️ Performance analytics query failed: {e}")
+            db.rollback()
+            performance = {"available": False, "error": str(e)}
+
         # Get service start date
         try:
             service_start = db.execute(text("""
@@ -537,7 +636,8 @@ def stats():
             "engagement_rate": (total_asks / max(total_visits, 1) * 100) if total_visits > 0 else 0,
             "questions_per_user": (total_asks / max(total_uniques, 1)) if total_uniques > 0 else 0
           },
-          "token_usage": token_stats
+          "token_usage": token_stats,
+          "performance": performance
         })
         
     except Exception as e:

@@ -30,6 +30,12 @@ class Event(Base):
     model_used = Column(String(64), nullable=True)           # Model name (gpt-4, text-embedding-3-small, etc.)
     api_provider = Column(String(32), nullable=True)         # 'openai', 'pinecone_mcp', 'pinecone_direct'
 
+    # Performance analytics fields
+    response_ms = Column(Integer, nullable=True)            # end-to-end processing time in milliseconds
+    prompt_chars = Column(Integer, nullable=True)           # input prompt size in characters
+    answer_chars = Column(Integer, nullable=True)           # output answer size in characters
+    success = Column(Integer, nullable=True)                # 1 for success, 0 for failure
+
 # Composite indexes for better query performance
 Index("idx_events_type_ts", Event.type, Event.ts.desc())
 Index("idx_events_path_ts", Event.path, Event.ts.desc())

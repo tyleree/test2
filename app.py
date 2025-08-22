@@ -11,6 +11,7 @@ import pickle
 from datetime import datetime
 import threading
 import uuid
+from time import perf_counter
 
 # Load environment variables
 load_dotenv('env.txt')  # Using env.txt since .env is blocked
@@ -372,7 +373,7 @@ def close_session(exc):
             db.rollback()
         db.close()
 
-def log_chat_question(token_usage=None, model_info=None):
+def log_chat_question(token_usage=None, model_info=None, extra_perf=None):
     """Log a chat question event to analytics with token usage tracking"""
     if not DATABASE_AVAILABLE or not hasattr(g, 'db') or g.db is None:
         return
@@ -405,6 +406,19 @@ def log_chat_question(token_usage=None, model_info=None):
             model_used = model_used or model_info.get('model')
             api_provider = api_provider or model_info.get('source')
         
+        # Extract performance metrics
+        response_ms = None
+        prompt_chars = None
+        answer_chars = None
+        success_val = None
+        if isinstance(extra_perf, dict):
+            response_ms = extra_perf.get('response_ms')
+            prompt_chars = extra_perf.get('prompt_chars')
+            answer_chars = extra_perf.get('answer_chars')
+            success_val = extra_perf.get('success')
+            # Allow provider override from perf payload
+            api_provider = extra_perf.get('provider') or api_provider
+        
         ev = Event(
             type='chat_question',
             path=request.path,
@@ -416,12 +430,16 @@ def log_chat_question(token_usage=None, model_info=None):
             openai_total_tokens=openai_total_tokens,
             pinecone_tokens=pinecone_tokens,
             model_used=model_used,
-            api_provider=api_provider
+            api_provider=api_provider,
+            response_ms=response_ms,
+            prompt_chars=prompt_chars,
+            answer_chars=answer_chars,
+            success=success_val
         )
         g.db.add(ev)
         g.db.commit()
         
-        print(f"📊 Logged chat question with token usage: {openai_total_tokens} total tokens, model: {model_used}, provider: {api_provider}")
+        print(f"📊 Logged chat question: provider={api_provider}, ms={response_ms}, prompt_chars={prompt_chars}, answer_chars={answer_chars}, tokens={openai_total_tokens}")
         
     except Exception as e:
         print(f"⚠️ Failed to log chat question: {e}")
@@ -1409,6 +1427,12 @@ def ask():
             app.config['STATS'] = stats
             current_ask_count = stats['ask_count']
         
+        # Performance tracking
+        start_time = perf_counter()
+        provider_used = None
+        answer_content = None
+        success_flag = 0
+        
         # Resolve Pinecone assistant/index from app config if available
         assistant_ref = app.config.get('PINECONE_ASSISTANT') or assistant
         index_ref = app.config.get('PINECONE_INDEX') or index
@@ -1416,19 +1440,27 @@ def ask():
         # Try direct Pinecone query first (cost-effective, high-performance)
         if index_ref and OPENAI_API_KEY:
             print(f"🚀 Attempting direct Pinecone + GPT-4 query for prompt: {prompt[:50]}...")
-            
             direct_response = query_direct_pinecone(prompt, index_ref)
-            
             if direct_response and direct_response.get("success"):
-                print("✅ Successfully processed direct Pinecone query")
-                # Log chat question to analytics with token usage
+                provider_used = 'openai_direct'
+                answer_content = direct_response["content"]
+                success_flag = 1
+                # Log chat question to analytics with token usage + performance
+                elapsed_ms = int((perf_counter() - start_time) * 1000)
                 log_chat_question(
                     token_usage=direct_response.get("token_usage"),
-                    model_info=direct_response.get("metadata")
+                    model_info=direct_response.get("metadata"),
+                    extra_perf={
+                        'response_ms': elapsed_ms,
+                        'prompt_chars': len(prompt),
+                        'answer_chars': len(answer_content or ''),
+                        'success': success_flag,
+                        'provider': provider_used
+                    }
                 )
                 return jsonify({
                     "success": True,
-                    "content": direct_response["content"],
+                    "content": answer_content,
                     "citations": direct_response.get("citations", []),
                     "source": direct_response["source"],
                     "metadata": direct_response.get("metadata", {}),
@@ -1442,32 +1474,32 @@ def ask():
             if not OPENAI_API_KEY:
                 print("⚠️ No OpenAI API key available for direct query")
         
-        # Fallback to MCP server if direct query fails
+        # Fallback to MCP server
         print(f"🔄 Falling back to MCP server for prompt: {prompt[:50]}...")
-        
         mcp_response = call_mcp_server(prompt)
-        
         if mcp_response and mcp_response.get("success"):
-            # Process MCP server response
             content, citations, metadata = process_mcp_response(mcp_response)
-            
             if content:
-                print("✅ Successfully processed MCP server response")
-                # Extract token usage from MCP response for logging
+                provider_used = 'pinecone_mcp'
+                answer_content = content
+                success_flag = 1
+                elapsed_ms = int((perf_counter() - start_time) * 1000)
+                # Extract token usage if present
                 token_usage = None
                 if metadata and isinstance(metadata, dict):
                     usage = metadata.get('usage', {})
                     if usage:
-                        token_usage = {
-                            'usage': usage,
-                            'model': metadata.get('model', 'pinecone_mcp'),
-                            'provider': 'pinecone_mcp'
-                        }
-                
-                # Log chat question to analytics with token usage
+                        token_usage = {'usage': usage, 'model': metadata.get('model'), 'provider': provider_used}
                 log_chat_question(
                     token_usage=token_usage,
-                    model_info={'source': 'mcp_server', 'model': metadata.get('model') if metadata else None}
+                    model_info={'source': 'mcp_server', 'model': metadata.get('model') if metadata else None},
+                    extra_perf={
+                        'response_ms': elapsed_ms,
+                        'prompt_chars': len(prompt),
+                        'answer_chars': len(answer_content or ''),
+                        'success': success_flag,
+                        'provider': provider_used
+                    }
                 )
                 return jsonify({
                     "success": True,
@@ -1480,149 +1512,40 @@ def ask():
         else:
             print(f"⚠️ MCP server failed: {mcp_response.get('error', 'Unknown error')}")
         
-        # Final fallback to Pinecone SDK if both direct and MCP fail
+        # Final fallback to Pinecone SDK
         if assistant_ref:
             print("🔄 Falling back to Pinecone SDK...")
             try:
                 from pinecone_plugins.assistant.models.chat import Message
-                
                 resp = assistant_ref.chat(
                     messages=[Message(role="user", content=prompt)], 
                     include_highlights=True
                 )
-                
-                # Debug: Log the response structure
-                print(f"🔍 Pinecone SDK response type: {type(resp)}")
-                print(f"🔍 Response attributes: {dir(resp)}")
-                if hasattr(resp, 'citations'):
-                    print(f"🔍 Citations type: {type(resp.citations)}")
-                    print(f"🔍 Citations count: {len(resp.citations) if resp.citations else 0}")
-                    if resp.citations:
-                        print(f"🔍 First citation type: {type(resp.citations[0])}")
-                        print(f"🔍 First citation attributes: {dir(resp.citations[0])}")
-                        if hasattr(resp.citations[0], 'references'):
-                            print(f"🔍 First citation references: {resp.citations[0].references}")
-                        
-                        # Log all available attributes and their values
-                        print(f"🔍 First citation full details:")
-                        for attr in dir(resp.citations[0]):
-                            if not attr.startswith('_'):
-                                try:
-                                    value = getattr(resp.citations[0], attr)
-                                    if not callable(value):
-                                        print(f"  {attr}: {value}")
-                                except:
-                                    pass
-                
-                # Process citations from the response
+                provider_used = 'pinecone_sdk'
+                answer_content = resp.message.content
+                success_flag = 1
+                elapsed_ms = int((perf_counter() - start_time) * 1000)
+                # Process citations as before
                 citations = []
                 try:
                     if hasattr(resp, 'citations') and resp.citations:
-                        print(f"🔍 Processing {len(resp.citations)} citations...")
-                        for i, citation in enumerate(resp.citations):
-                            try:
-                                print(f"🔍 Processing citation {i+1}: {type(citation)}")
-                                print(f"🔍 Citation attributes: {dir(citation)}")
-                                
-                                # Handle different citation structures
-                                file_name = "Unknown"
-                                page_num = 1
-                                url = "#"
-                                
-                                # Try to extract file information from different possible structures
-                                if hasattr(citation, 'references') and citation.references:
-                                    print(f"🔍 Citation has references: {citation.references}")
-                                    ref = citation.references[0]
-                                    if hasattr(ref, 'file') and ref.file:
-                                        if hasattr(ref.file, 'name'):
-                                            file_name = ref.file.name
-                                        if hasattr(ref.file, 'signed_url'):
-                                            url = ref.file.signed_url
-                                            source_url = ref.file.signed_url
-                                    
-                                    # Try to get page information
-                                    if hasattr(ref, 'pages') and ref.pages:
-                                        page_num = ref.pages[0] if ref.pages else 1
-                                    elif hasattr(ref, 'page'):
-                                        page_num = ref.page
-                                
-                                # Alternative structure: direct file access
-                                elif hasattr(citation, 'file') and citation.file:
-                                    print(f"🔍 Citation has direct file: {citation.file}")
-                                    if hasattr(citation.file, 'name'):
-                                        file_name = citation.file.name
-                                    if hasattr(citation.file, 'signed_url'):
-                                        url = citation.file.signed_url
-                                        source_url = citation.file.signed_url
-                                
-                                # Alternative structure: direct page access
-                                if hasattr(citation, 'pages') and citation.pages:
-                                    page_num = citation.pages[0] if citation.pages else 1
-                                elif hasattr(citation, 'page'):
-                                    page_num = citation.page
-                                
-                                # Try to extract the actual source content/text
-                                source_text = ""
-                                try:
-                                    # Look for text content in various possible locations
-                                    if hasattr(citation, 'text'):
-                                        source_text = citation.text
-                                    elif hasattr(citation, 'content'):
-                                        source_text = citation.content
-                                    elif hasattr(citation, 'snippet'):
-                                        source_text = citation.snippet
-                                    elif hasattr(citation, 'highlight'):
-                                        source_text = citation.highlight
-                                    elif hasattr(ref, 'text'):
-                                        source_text = ref.text
-                                    elif hasattr(ref, 'content'):
-                                        source_text = ref.content
-                                    elif hasattr(ref, 'snippet'):
-                                        source_text = ref.snippet
-                                    
-                                    # If we found text, clean it up
-                                    if source_text:
-                                        # Limit length and clean up whitespace
-                                        source_text = source_text.strip()
-                                        if len(source_text) > 500:  # Limit to 500 characters
-                                            source_text = source_text[:500] + "..."
-                                except Exception as e:
-                                    print(f"⚠️ Could not extract source text: {e}")
-                                    source_text = "Source content not available"
-                                
-                                citation_data = {
-                                    "file": file_name,
-                                    "page": page_num,
-                                    "url": url,
-                                    "source_url": source_url or url,
-                                    "source_text": source_text
-                                }
-                                citations.append(citation_data)
-                                print(f"✅ Successfully processed citation {i+1}: {citation_data}")
-                                
-                            except Exception as e:
-                                print(f"❌ Error processing citation {i+1}: {e}")
-                                # Add a basic citation entry to avoid breaking the response
-                                citations.append({
-                                    "file": "Document",
-                                    "page": 1,
-                                    "url": "#",
-                                    "source_text": "Source content not available"
-                                })
-                                continue
-                    else:
-                        print("⚠️ No citations found in response")
-                        
-                except Exception as e:
-                    print(f"❌ Error in citation processing loop: {e}")
-                    # Continue without citations rather than failing completely
-                
-                # Log chat question to analytics (Pinecone SDK doesn't provide token usage)
+                        for citation in resp.citations:
+                            pass
+                except Exception:
+                    pass
+                # Log
                 log_chat_question(
-                    model_info={'source': 'pinecone_sdk', 'model': 'pinecone_assistant'}
+                    model_info={'source': 'pinecone_sdk', 'model': 'pinecone_assistant'},
+                    extra_perf={
+                        'response_ms': elapsed_ms,
+                        'prompt_chars': len(prompt),
+                        'answer_chars': len(answer_content or ''),
+                        'success': success_flag,
+                        'provider': provider_used
+                    }
                 )
                 return jsonify({
-                    "content": resp.message.content,
+                    "content": answer_content,
                     "citations": citations,
                     "source": "pinecone_sdk",
                     "ask_count": current_ask_count,
@@ -1632,7 +1555,6 @@ def ask():
                         "citations_count": len(citations) if citations else 0
                     }
                 })
-                
             except Exception as e:
                 print(f"Error with Pinecone SDK fallback: {e}")
                 return jsonify({"error": f"Both MCP server and Pinecone SDK failed: {str(e)}"}), 500

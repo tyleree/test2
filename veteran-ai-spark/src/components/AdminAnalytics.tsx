@@ -46,29 +46,30 @@ interface AnalyticsData {
     engagement_rate: number;
     questions_per_user: number;
   };
-  token_usage: {
+  token_usage: any;
+  performance?: {
     available: boolean;
     summary?: {
-      queries_with_tokens: number;
-      total_tokens: number;
-      avg_tokens_per_query: number;
-      total_prompt_tokens: number;
-      total_completion_tokens: number;
-      unique_models: number;
-      unique_providers: number;
+      total_chats: number;
+      avg_ms: number;
+      p95_ms: number;
+      success_rate: number;
+      avg_answer_chars: number;
+      avg_prompt_chars: number;
     };
-    daily_usage?: Array<{
-      day: string;
-      daily_tokens: number;
-      avg_tokens: number;
+    by_provider?: Array<{
+      provider: string;
       queries: number;
+      avg_ms: number;
+      p95_ms: number;
+      success_rate: number;
+      avg_answer_chars: number;
     }>;
-    model_breakdown?: Array<{
-      model_used: string;
-      api_provider: string;
-      usage_count: number;
-      total_tokens: number;
-      avg_tokens: number;
+    daily?: Array<{
+      day: string;
+      avg_ms: number;
+      p95_ms: number;
+      queries: number;
     }>;
     message?: string;
     error?: string;
@@ -263,6 +264,7 @@ const AdminAnalytics = () => {
               <TabsTrigger value="locations">Locations</TabsTrigger>
               <TabsTrigger value="traffic">Traffic</TabsTrigger>
               <TabsTrigger value="tokens">Tokens</TabsTrigger>
+              <TabsTrigger value="performance">Performance</TabsTrigger>
               <TabsTrigger value="timeline">Timeline</TabsTrigger>
             </TabsList>
 
@@ -722,6 +724,143 @@ const AdminAnalytics = () => {
                   </CardContent>
                 </Card>
               )}
+            </TabsContent>
+
+            <TabsContent value="performance" className="space-y-6">
+              {analytics.performance ? (
+                analytics.performance.available ? (
+                  <>
+                    {analytics.performance.summary && (
+                      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <Card>
+                          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+                            <CardTitle className="text-sm font-medium">Avg Response Time</CardTitle>
+                            <TrendingUp className="h-4 w-4 text-muted-foreground" />
+                          </CardHeader>
+                          <CardContent>
+                            <div className="text-2xl font-bold text-blue-600">
+                              {Math.round(analytics.performance.summary.avg_ms || 0)} ms
+                            </div>
+                            <p className="text-xs text-muted-foreground">Average over last {days} days</p>
+                          </CardContent>
+                        </Card>
+
+                        <Card>
+                          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+                            <CardTitle className="text-sm font-medium">p95 Response Time</CardTitle>
+                            <TrendingUp className="h-4 w-4 text-muted-foreground" />
+                          </CardHeader>
+                          <CardContent>
+                            <div className="text-2xl font-bold text-orange-600">
+                              {Math.round(analytics.performance.summary.p95_ms || 0)} ms
+                            </div>
+                            <p className="text-xs text-muted-foreground">95th percentile</p>
+                          </CardContent>
+                        </Card>
+
+                        <Card>
+                          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+                            <CardTitle className="text-sm font-medium">Success Rate</CardTitle>
+                            <TrendingUp className="h-4 w-4 text-muted-foreground" />
+                          </CardHeader>
+                          <CardContent>
+                            <div className="text-2xl font-bold text-green-600">
+                              {((analytics.performance.summary.success_rate || 0) * 100).toFixed(1)}%
+                            </div>
+                            <p className="text-xs text-muted-foreground">Successful responses</p>
+                          </CardContent>
+                        </Card>
+
+                        <Card>
+                          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+                            <CardTitle className="text-sm font-medium">Avg Answer Size</CardTitle>
+                            <BarChart3 className="h-4 w-4 text-muted-foreground" />
+                          </CardHeader>
+                          <CardContent>
+                            <div className="text-2xl font-bold text-purple-600">
+                              {Math.round(analytics.performance.summary.avg_answer_chars || 0)} chars
+                            </div>
+                            <p className="text-xs text-muted-foreground">Response length</p>
+                          </CardContent>
+                        </Card>
+                      </div>
+                    )}
+
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                      {analytics.performance.by_provider && analytics.performance.by_provider.length > 0 && (
+                        <Card>
+                          <CardHeader>
+                            <CardTitle>Performance by Provider</CardTitle>
+                            <CardDescription>Comparative performance metrics</CardDescription>
+                          </CardHeader>
+                          <CardContent>
+                            <Table>
+                              <TableHeader>
+                                <TableRow>
+                                  <TableHead>Provider</TableHead>
+                                  <TableHead className="text-right">Avg ms</TableHead>
+                                  <TableHead className="text-right">p95 ms</TableHead>
+                                  <TableHead className="text-right">Success</TableHead>
+                                  <TableHead className="text-right">Queries</TableHead>
+                                </TableRow>
+                              </TableHeader>
+                              <TableBody>
+                                {analytics.performance.by_provider.map((row: any, idx: number) => (
+                                  <TableRow key={idx}>
+                                    <TableCell className="font-medium">{row.provider}</TableCell>
+                                    <TableCell className="text-right">{Math.round(row.avg_ms || 0)}</TableCell>
+                                    <TableCell className="text-right">{Math.round(row.p95_ms || 0)}</TableCell>
+                                    <TableCell className="text-right">{((row.success_rate || 0) * 100).toFixed(1)}%</TableCell>
+                                    <TableCell className="text-right">{row.queries}</TableCell>
+                                  </TableRow>
+                                ))}
+                              </TableBody>
+                            </Table>
+                          </CardContent>
+                        </Card>
+                      )}
+
+                      {analytics.performance.daily && analytics.performance.daily.length > 0 && (
+                        <Card>
+                          <CardHeader>
+                            <CardTitle>Daily Performance</CardTitle>
+                            <CardDescription>Average and p95 response times</CardDescription>
+                          </CardHeader>
+                          <CardContent>
+                            <Table>
+                              <TableHeader>
+                                <TableRow>
+                                  <TableHead>Date</TableHead>
+                                  <TableHead className="text-right">Avg ms</TableHead>
+                                  <TableHead className="text-right">p95 ms</TableHead>
+                                  <TableHead className="text-right">Queries</TableHead>
+                                </TableRow>
+                              </TableHeader>
+                              <TableBody>
+                                {analytics.performance.daily.slice(0, 10).map((d: any, idx: number) => (
+                                  <TableRow key={idx}>
+                                    <TableCell className="font-medium">{new Date(d.day).toLocaleDateString('en-US', {month:'short', day:'numeric'})}</TableCell>
+                                    <TableCell className="text-right">{Math.round(d.avg_ms || 0)}</TableCell>
+                                    <TableCell className="text-right">{Math.round(d.p95_ms || 0)}</TableCell>
+                                    <TableCell className="text-right">{d.queries}</TableCell>
+                                  </TableRow>
+                                ))}
+                              </TableBody>
+                            </Table>
+                          </CardContent>
+                        </Card>
+                      )}
+                    </div>
+                  </>
+                ) : (
+                  <Card>
+                    <CardHeader>
+                      <CardTitle>Performance Analytics</CardTitle>
+                      <CardDescription>{analytics.performance.message || analytics.performance.error || 'Performance data not yet available.'}</CardDescription>
+                    </CardHeader>
+                  </Card>
+                )
+              ) : null}
             </TabsContent>
 
             <TabsContent value="timeline" className="space-y-6">
