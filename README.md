@@ -383,3 +383,47 @@ python -c "from db import engine; print('✅ Database connected' if engine else 
 - Analytics events are collected asynchronously
 - Database queries use indexes for optimal performance
 - Failed analytics calls don't impact site functionality
+
+## 🔧 Render Blueprint Secrets
+
+### Why ADMIN_TOKEN Was Empty
+
+The Blueprint previously used `env: python` (wrong key). When a variable is defined via Blueprint with `generateValue: true`, Render generates it only if a value doesn't already exist. If `ADMIN_TOKEN` was created in the dashboard (even empty), generation is skipped and you end up with an empty runtime variable.
+
+### Fix Steps to Follow on Render After This Commit
+
+1. **Go to the service `veterans-benefits-ai` → Environment tab**
+
+2. **If `ADMIN_TOKEN` exists (especially if blank), delete that row completely** (don't leave an empty value)
+
+3. **In Blueprints, click Sync / Apply** so the updated render.yaml is applied to the existing service
+
+4. **Redeploy the service**
+
+5. **In the service Shell, verify:**
+   ```bash
+   printenv | grep '^TEST_FLAG='        # expect: TEST_FLAG=on
+   printenv | grep '^ADMIN_TOKEN='      # line should exist
+   printf %s "$ADMIN_TOKEN" | wc -c     # should be > 0
+   ```
+
+### Alternative: Manual Service Setup
+
+If the service was created manually (not from Blueprint):
+
+- **Either** recreate from the Blueprint, **or**
+- **Manually set `ADMIN_TOKEN`** as a secret in the Environment tab (give it any strong value); in that case, `generateValue: true` isn't used
+
+### About sync: false Keys
+
+`PINECONE_API_KEY` and `OPENAI_API_KEY` won't be auto-populated from the Blueprint. Ensure they're set in the Render dashboard for the live service.
+
+### Token Length Verification
+
+Use the provided script to safely verify token generation without exposing secrets:
+
+```bash
+# In Render shell
+./scripts/verify_admin_token_len.sh
+# Should output a positive integer (typically 32+ characters)
+```

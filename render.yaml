@@ -6,7 +6,7 @@ databases:
 services:
   - type: web
     name: veterans-benefits-ai
-    env: python
+    runtime: python
     plan: free
     buildCommand: pip install -r requirements.txt
     startCommand: gunicorn app:app --bind 0.0.0.0:$PORT
@@ -19,6 +19,8 @@ services:
         generateValue: true
       - key: ADMIN_TOKEN
         generateValue: true
+      - key: TEST_FLAG
+        value: on
       - key: PINECONE_API_KEY
         sync: false
       - key: OPENAI_API_KEY
