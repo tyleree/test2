@@ -48,6 +48,8 @@ export const USHeatMap: React.FC<USHeatMapProps> = ({ className }) => {
         }
         const data = await response.json();
         console.log('🗺️ Heat map received location data:', data);
+        console.log('🗺️ US states data:', data.us_states);
+        console.log('🗺️ Available state codes:', Object.keys(data.us_states || {}));
         setLocationData(data);
         setError(null);
       } catch (err) {

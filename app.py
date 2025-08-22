@@ -654,6 +654,7 @@ def home():
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Veterans Benefits AI - Trusted data, free forever</title>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self';">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -1522,6 +1523,52 @@ def debug_ip():
         "is_local": client_ip in ['127.0.0.1', 'localhost', '::1'] or client_ip.startswith(('192.168.', '10.', '172.'))
     })
 
+@app.route("/debug/api-comparison")
+def debug_api_comparison():
+    """Debug endpoint to compare raw data vs API format"""
+    with stats_lock:
+        stats = app.config['STATS']
+        raw_locations = stats.get('visitor_locations', {})
+        
+        # Process the same way as /api/locations
+        us_locations = {}
+        international_count = 0
+        local_count = 0
+        unknown_count = 0
+        
+        for location, count in raw_locations.items():
+            if location == 'Local':
+                local_count += count
+            elif location == 'Unknown':
+                unknown_count += count
+            elif location.startswith('International-'):
+                international_count += count
+            elif len(location) == 2 and location.isalpha():  # US state codes
+                us_locations[location.upper()] = count
+        
+        api_format = {
+            "us_states": us_locations,
+            "international": international_count,
+            "local": local_count,
+            "unknown": unknown_count,
+            "total_tracked": sum(raw_locations.values())
+        }
+        
+        return jsonify({
+            "raw_visitor_locations": raw_locations,
+            "api_formatted_response": api_format,
+            "data_comparison": {
+                "raw_total_entries": len(raw_locations),
+                "us_states_count": len(us_locations),
+                "has_us_data": len(us_locations) > 0,
+                "sample_us_states": list(us_locations.keys())[:5]
+            },
+            "frontend_expects": {
+                "structure": "{ us_states: { 'CA': 45, 'NY': 32, ... }, international: 8, local: 12, unknown: 5 }",
+                "note": "Frontend looks for 'us_states' object with 2-letter state codes as keys"
+            }
+        })
+
 @app.route("/debug/populate-sample-locations")
 def populate_sample_locations():
     """Populate sample location data for testing (development only)"""
@@ -1555,9 +1602,32 @@ def populate_sample_locations():
         save_stats(stats)
         app.config['STATS'] = stats
     
+    # Filter and format the response to match /api/locations format
+    us_locations = {}
+    international_count = 0
+    local_count = 0
+    unknown_count = 0
+    
+    for location, count in sample_locations.items():
+        if location == 'Local':
+            local_count += count
+        elif location == 'Unknown':
+            unknown_count += count
+        elif location.startswith('International-'):
+            international_count += count
+        elif len(location) == 2 and location.isalpha():  # US state codes
+            us_locations[location.upper()] = count
+    
     return jsonify({
         "message": "Sample location data populated successfully",
-        "locations": sample_locations,
+        "locations": sample_locations,  # Raw data for debugging
+        "formatted_for_heatmap": {      # Properly formatted data
+            "us_states": us_locations,
+            "international": international_count,
+            "local": local_count,
+            "unknown": unknown_count,
+            "total_tracked": sum(sample_locations.values())
+        },
         "total": sum(sample_locations.values())
     })
 
@@ -1583,6 +1653,7 @@ def stats_page():
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Veterans Benefits AI - Statistics</title>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self';">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body {{
