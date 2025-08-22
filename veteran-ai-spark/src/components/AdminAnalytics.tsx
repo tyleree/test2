@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, Suspense, lazy } from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -7,7 +7,9 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@
 import { ArrowLeft, RefreshCw, Users, MessageSquare, Eye, TrendingUp, Globe, BarChart3, Calendar, Link, Cpu, Zap } from "lucide-react";
 import { Link as RouterLink, useSearchParams } from "react-router-dom";
 import { useToast } from "@/hooks/use-toast";
-import USHeatMap from "@/components/USHeatMap";
+
+// Lazy load heavy map component
+const USHeatMap = lazy(() => import("@/components/USHeatMap"));
 
 interface AnalyticsData {
   totals: {
@@ -414,7 +416,13 @@ const AdminAnalytics = () => {
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <USHeatMap />
+                  <Suspense fallback={
+                    <div className="flex items-center justify-center h-64">
+                      <div className="text-muted-foreground">Loading map...</div>
+                    </div>
+                  }>
+                    <USHeatMap />
+                  </Suspense>
                 </CardContent>
               </Card>
             </TabsContent>
