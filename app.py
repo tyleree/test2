@@ -273,14 +273,18 @@ if DATABASE_AVAILABLE and analytics_bp:
     print("📈 Analytics blueprint registered")
 
 # Initialize database tables on first request
-@app.before_first_request
 def init_db():
+    """Initialize database tables if available"""
     if DATABASE_AVAILABLE:
         try:
             Base.metadata.create_all(bind=engine)
             print("📊 Database tables initialized")
         except Exception as e:
             print(f"⚠️ Database table initialization failed: {e}")
+
+# Call init_db on startup instead of using deprecated before_first_request
+if DATABASE_AVAILABLE:
+    init_db()
 
 def client_ip(request):
     """Helper to get client IP respecting X-Forwarded-For"""
