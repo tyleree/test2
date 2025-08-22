@@ -254,6 +254,16 @@ def track_visitor_location_async(ip_address, stats):
     """Track visitor location asynchronously to avoid blocking requests"""
     def _track():
         location = get_location_from_ip(ip_address)
+        
+        # Track in database if available
+        if DATABASE_AVAILABLE and hasattr(g, 'db') and g.db is not None:
+            try:
+                from analytics import track_visitor_location
+                track_visitor_location(ip_address, {'location': location})
+            except Exception as e:
+                print(f"⚠️ Failed to track location in database: {e}")
+        
+        # Also track in file-based stats for backward compatibility
         with stats_lock:
             current_stats = app.config['STATS']
             if 'visitor_locations' not in current_stats:
@@ -1779,9 +1789,94 @@ def populate_sample_locations():
 
 @app.route("/stats")
 def stats_page():
-    """Serve the stats page - either SPA component or fallback HTML"""
+    """Redirect to admin analytics - stats functionality has been moved there"""
+    from flask import redirect, url_for, request
+    
+    # Get admin token from environment or generate a notice
+    admin_token = os.environ.get("ADMIN_TOKEN", "")
+    
+    if admin_token:
+        # Redirect to admin analytics with token
+        return redirect(f"/admin/analytics?token={admin_token}")
+    else:
+        # Show notice that admin token is required
+        return f"""
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Stats Moved - Veterans Benefits AI</title>
+            <style>
+                body {{
+                    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+                    background: #f8f9fa;
+                    margin: 0;
+                    padding: 40px 20px;
+                    text-align: center;
+                }}
+                .container {{
+                    max-width: 600px;
+                    margin: 0 auto;
+                    background: white;
+                    padding: 40px;
+                    border-radius: 12px;
+                    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+                }}
+                .icon {{ font-size: 48px; margin-bottom: 20px; }}
+                .title {{ color: #2c3e50; margin-bottom: 20px; }}
+                .message {{ color: #6c757d; margin-bottom: 30px; line-height: 1.6; }}
+                .btn {{
+                    display: inline-block;
+                    background: #007bff;
+                    color: white;
+                    padding: 12px 24px;
+                    text-decoration: none;
+                    border-radius: 6px;
+                    margin: 10px;
+                    transition: background 0.3s;
+                }}
+                .btn:hover {{ background: #0056b3; }}
+                .btn-secondary {{
+                    background: #6c757d;
+                }}
+                .btn-secondary:hover {{ background: #545b62; }}
+            </style>
+        </head>
+        <body>
+            <div class="container">
+                <div class="icon">📊</div>
+                <h1 class="title">Statistics Have Moved!</h1>
+                <div class="message">
+                    <p>The statistics page has been upgraded and moved to the admin analytics dashboard.</p>
+                    <p>This new dashboard includes:</p>
+                    <ul style="text-align: left; max-width: 400px; margin: 0 auto;">
+                        <li>📈 Comprehensive analytics</li>
+                        <li>🗺️ Interactive location heat maps</li>
+                        <li>📊 Daily activity timelines</li>
+                        <li>🔍 Traffic source analysis</li>
+                        <li>👥 User engagement metrics</li>
+                    </ul>
+                </div>
+                <div>
+                    <a href="/admin/analytics" class="btn">
+                        🔒 Access Admin Analytics
+                    </a>
+                    <a href="/" class="btn btn-secondary">
+                        ← Back to Home
+                    </a>
+                </div>
+                <div style="margin-top: 30px; font-size: 14px; color: #6c757d;">
+                    <p><strong>Note:</strong> Admin analytics requires a valid admin token.</p>
+                    <p>Contact the administrator for access credentials.</p>
+                </div>
+            </div>
+        </body>
+        </html>
+        """
+    
+    # Fallback: Try to serve the SPA (for backward compatibility during transition)
     try:
-        # Try to serve the SPA first (it will handle the /stats route)
         index_path = os.path.join(FRONTEND_BUILD_DIR, "index.html")
         if os.path.exists(index_path):
             return send_from_directory(FRONTEND_BUILD_DIR, "index.html")
