@@ -9,6 +9,7 @@ import requests
 import json
 import pickle
 from datetime import datetime
+import threading
 
 # Load environment variables
 load_dotenv('env.txt')  # Using env.txt since .env is blocked
@@ -101,6 +102,7 @@ def load_stats():
         'ask_count': 0,
         'visit_count': 0,
         'unique_visitors': set(),
+        'visitor_locations': {},  # {'state_code': count}
         'first_visit': datetime.now().isoformat(),
         'last_updated': datetime.now().isoformat()
     }
@@ -114,8 +116,58 @@ def save_stats(stats):
     except Exception as e:
         print(f"Error saving stats: {e}")
 
+def get_location_from_ip(ip_address):
+    """Get location (state) from IP address using free ipapi service"""
+    if ip_address in ['127.0.0.1', 'localhost', '::1'] or ip_address.startswith('192.168.') or ip_address.startswith('10.'):
+        return 'Local'  # Local/private IP
+    
+    try:
+        # Use ipapi.co for free IP geolocation (1000 requests/day limit)
+        response = requests.get(f'http://ipapi.co/{ip_address}/json/', timeout=2)
+        if response.status_code == 200:
+            data = response.json()
+            region = data.get('region_code', 'Unknown')
+            country = data.get('country_code', '')
+            
+            # Only track US states
+            if country == 'US' and region:
+                return region
+            elif country and country != 'US':
+                return f'International-{country}'
+            else:
+                return 'Unknown'
+    except Exception as e:
+        print(f"Error getting location for IP {ip_address}: {e}")
+        return 'Unknown'
+    
+    return 'Unknown'
+
+def track_visitor_location_async(ip_address, stats):
+    """Track visitor location asynchronously to avoid blocking requests"""
+    def _track():
+        location = get_location_from_ip(ip_address)
+        with stats_lock:
+            current_stats = app.config['STATS']
+            if 'visitor_locations' not in current_stats:
+                current_stats['visitor_locations'] = {}
+            
+            current_stats['visitor_locations'][location] = current_stats['visitor_locations'].get(location, 0) + 1
+            save_stats(current_stats)
+            app.config['STATS'] = current_stats
+    
+    # Run in background thread to avoid blocking the request
+    thread = threading.Thread(target=_track)
+    thread.daemon = True
+    thread.start()
+
 # Initialize stats
 app.config['STATS'] = load_stats()
+
+# Ensure visitor_locations field exists (for backward compatibility)
+if 'visitor_locations' not in app.config['STATS']:
+    app.config['STATS']['visitor_locations'] = {}
+    save_stats(app.config['STATS'])
+
 print(f"📊 Loaded stats: Ask count={app.config['STATS']['ask_count']}, Visit count={app.config['STATS']['visit_count']}")
 
 # Legacy compatibility
@@ -508,6 +560,9 @@ def home():
         
         save_stats(stats)
         app.config['STATS'] = stats
+    
+    # Track visitor location asynchronously (don't block the request)
+    track_visitor_location_async(client_ip, stats)
     
     # Prefer serving built SPA if available
     try:
@@ -1330,8 +1385,40 @@ def metrics():
             "ask_count": stats['ask_count'],
             "visit_count": stats['visit_count'],
             "unique_visitors": len(stats['unique_visitors']),
+            "visitor_locations": stats.get('visitor_locations', {}),
             "first_visit": stats['first_visit'],
             "last_updated": stats['last_updated']
+        })
+
+@app.route("/api/locations")
+def get_visitor_locations():
+    """API endpoint specifically for location data used by heat map"""
+    with stats_lock:
+        stats = app.config['STATS']
+        locations = stats.get('visitor_locations', {})
+        
+        # Filter out non-US locations for the US heat map
+        us_locations = {}
+        international_count = 0
+        local_count = 0
+        unknown_count = 0
+        
+        for location, count in locations.items():
+            if location == 'Local':
+                local_count += count
+            elif location == 'Unknown':
+                unknown_count += count
+            elif location.startswith('International-'):
+                international_count += count
+            elif len(location) == 2 and location.isalpha():  # US state codes
+                us_locations[location.upper()] = count
+        
+        return jsonify({
+            "us_states": us_locations,
+            "international": international_count,
+            "local": local_count,
+            "unknown": unknown_count,
+            "total_tracked": sum(locations.values())
         })
 
 @app.route("/stats")

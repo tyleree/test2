@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowLeft, RefreshCw, Users, MessageSquare, Eye, TrendingUp } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useToast } from "@/hooks/use-toast";
+import USHeatMap from "@/components/USHeatMap";
 
 interface StatsData {
   ask_count: number;
@@ -212,6 +213,11 @@ const Stats = () => {
                   </div>
                 </CardContent>
               </Card>
+            </div>
+
+            {/* Visitor Location Heat Map */}
+            <div className="mb-12">
+              <USHeatMap />
             </div>
 
             {/* Detailed Analytics */}
