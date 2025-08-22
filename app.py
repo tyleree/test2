@@ -21,6 +21,11 @@ app = Flask(__name__)
 app.secret_key = os.environ.get("SECRET_KEY", "dev-key-change-in-production")
 
 # Initialize database (gracefully handle missing DATABASE_URL)
+print("🔍 Environment check:")
+print(f"   DATABASE_URL: {'✅ Set' if os.getenv('DATABASE_URL') else '❌ Not set'}")
+print(f"   PINECONE_API_KEY: {'✅ Set' if os.getenv('PINECONE_API_KEY') else '❌ Not set'}")
+print(f"   OPENAI_API_KEY: {'✅ Set' if os.getenv('OPENAI_API_KEY') else '❌ Not set'}")
+
 try:
     from db import Base, engine, SessionLocal, DATABASE_URL
     from models import Event
@@ -277,6 +282,10 @@ print(f"📊 Loaded stats: Ask count={app.config['STATS']['ask_count']}, Visit c
 ask_count_lock = stats_lock
 
 # Register analytics blueprint if available
+print(f"🔍 Analytics registration check:")
+print(f"   analytics_bp: {'✅ Available' if analytics_bp else '❌ Not available'}")
+print(f"   DATABASE_AVAILABLE: {'✅ Yes' if DATABASE_AVAILABLE else '❌ No'}")
+
 if analytics_bp:
     app.register_blueprint(analytics_bp)
     if DATABASE_AVAILABLE:
