@@ -14,12 +14,77 @@ def _admin_ok():
     given = request.args.get("token") or request.headers.get("X-Admin-Token")
     return token and given == token
 
+def ensure_database_schema():
+    """Ensure database schema is up to date"""
+    if not hasattr(g, 'db') or g.db is None:
+        return False
+        
+    try:
+        # Check if location column exists
+        column_check = g.db.execute(text("""
+            SELECT column_name 
+            FROM information_schema.columns 
+            WHERE table_name='events' AND column_name='location'
+        """)).mappings().all()
+        
+        if not column_check:
+            print("🔧 Adding location tracking columns to events table...")
+            # Add location tracking columns
+            g.db.execute(text("""
+                ALTER TABLE events 
+                ADD COLUMN IF NOT EXISTS location VARCHAR(64),
+                ADD COLUMN IF NOT EXISTS country VARCHAR(8),
+                ADD COLUMN IF NOT EXISTS lat FLOAT,
+                ADD COLUMN IF NOT EXISTS lng FLOAT
+            """))
+            
+            # Add index
+            g.db.execute(text("""
+                CREATE INDEX IF NOT EXISTS idx_events_location ON events(location)
+            """))
+            
+            g.db.commit()
+            print("✅ Database schema updated with location tracking")
+            
+        return True
+        
+    except Exception as e:
+        print(f"⚠️ Database schema update failed: {e}")
+        if g.db:
+            g.db.rollback()
+        return False
+
 def migrate_legacy_stats():
     """Migrate file-based stats to database if they exist"""
     if not hasattr(g, 'db') or g.db is None:
         return False
         
     try:
+        # Ensure schema is up to date first
+        ensure_database_schema()
+        
+        # Check if legacy stats table exists
+        table_check = g.db.execute(text("""
+            SELECT table_name 
+            FROM information_schema.tables 
+            WHERE table_name='legacy_stats'
+        """)).mappings().all()
+        
+        if not table_check:
+            print("🔧 Creating legacy_stats table...")
+            g.db.execute(text("""
+                CREATE TABLE legacy_stats (
+                    id SERIAL PRIMARY KEY,
+                    key VARCHAR(64) UNIQUE NOT NULL,
+                    value TEXT,
+                    updated_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
+                )
+            """))
+            g.db.execute(text("""
+                CREATE INDEX IF NOT EXISTS idx_legacy_stats_key ON legacy_stats(key)
+            """))
+            g.db.commit()
+        
         # Check if legacy stats file exists
         stats_file = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'stats.pkl')
         if not os.path.exists(stats_file):
@@ -40,11 +105,13 @@ def migrate_legacy_stats():
                 # Convert set to list for JSON serialization
                 value = list(value) if isinstance(value, set) else value
             
-            legacy_stat = LegacyStats(
-                key=key,
-                value=json.dumps(value) if not isinstance(value, str) else value
-            )
-            g.db.add(legacy_stat)
+            g.db.execute(text("""
+                INSERT INTO legacy_stats (key, value) 
+                VALUES (:key, :value)
+                ON CONFLICT (key) DO UPDATE SET 
+                    value = EXCLUDED.value,
+                    updated_at = NOW()
+            """), {"key": key, "value": json.dumps(value) if not isinstance(value, str) else value})
             
         g.db.commit()
         print("✅ Successfully migrated legacy stats to database")
@@ -131,7 +198,12 @@ def stats():
         return jsonify({"error": "database not available"}), 503
         
     # Try to migrate legacy stats first
-    migrate_legacy_stats()
+    try:
+        migrate_legacy_stats()
+    except Exception as e:
+        print(f"⚠️ Legacy migration failed: {e}")
+        # Reset transaction state
+        g.db.rollback()
         
     try:
         days = int(request.args.get("days", 30))
@@ -139,6 +211,12 @@ def stats():
         days = 30
     
     db = g.db
+    
+    # Start fresh transaction
+    try:
+        db.rollback()  # Clear any previous transaction state
+    except Exception:
+        pass
     
     try:
         # Get totals (including legacy data)
@@ -227,16 +305,35 @@ def stats():
           group by 1 order by 2 desc nulls last limit 10
         """), {"days": days}).mappings().all()
 
-        # Get visitor locations (combining database and legacy data)
+        # Get visitor locations (handling case where location column doesn't exist yet)
+        visitor_locations = []
         try:
-            visitor_locations = db.execute(text("""
-              select location, count(*) as count, 'db' as source
-              from events 
-              where type='visitor_location' and location is not null
-              group by location
-              
-              union all
-              
+            # Check if location column exists first
+            column_check = db.execute(text("""
+              SELECT column_name 
+              FROM information_schema.columns 
+              WHERE table_name='events' AND column_name='location'
+            """)).mappings().all()
+            
+            if column_check:
+                # Location column exists, use it
+                visitor_locations = db.execute(text("""
+                  select location, count(*) as count, 'db' as source
+                  from events 
+                  where type='visitor_location' and location is not null
+                  group by location
+                """)).mappings().all()
+            else:
+                print("📍 Location column not yet migrated - using legacy data only")
+                
+        except Exception as e:
+            print(f"⚠️ Location query failed: {e}")
+            # Reset transaction state
+            db.rollback()
+            
+        # Always try to get legacy location data
+        try:
+            legacy_locations = db.execute(text("""
               select 
                 locations.key as location,
                 locations.value::integer as count,
@@ -245,15 +342,13 @@ def stats():
               json_each_text(cast(ls.value as json)) as locations(key, value)
               where ls.key = 'visitor_locations'
             """)).mappings().all()
+            
+            visitor_locations.extend(legacy_locations)
+            
         except Exception as e:
-            print(f"⚠️ Complex location query failed, using simple fallback: {e}")
-            # Fallback to simpler query
-            visitor_locations = db.execute(text("""
-              select location, count(*) as count, 'db' as source
-              from events 
-              where type='visitor_location' and location is not null
-              group by location
-            """)).mappings().all()
+            print(f"⚠️ Legacy location query failed: {e}")
+            # Reset transaction state
+            db.rollback()
 
         # Process visitor locations for heat map
         location_data = {}
