@@ -24,15 +24,20 @@ app.secret_key = os.environ.get("SECRET_KEY", "dev-key-change-in-production")
 try:
     from db import Base, engine, SessionLocal, DATABASE_URL
     from models import Event
-    from analytics import bp as analytics_bp
-    
-    # Check if we have a valid database connection
+    DATABASE_AVAILABLE = False
     if engine and DATABASE_URL:
         DATABASE_AVAILABLE = True
         print("📊 Database connection established")
     else:
-        DATABASE_AVAILABLE = False
         print("⚠️ DATABASE_URL not found - analytics will be disabled")
+        
+    # Try to import analytics blueprint
+    try:
+        from analytics import bp as analytics_bp
+        print("📈 Analytics module imported successfully")
+    except Exception as e:
+        print(f"⚠️ Analytics import failed: {e} - analytics will be disabled")
+        analytics_bp = None
         
 except Exception as e:
     print(f"⚠️ Database initialization failed: {e} - analytics will be disabled")
