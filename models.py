@@ -21,6 +21,14 @@ class Event(Base):
     country = Column(String(8), nullable=True)    # country code
     lat = Column(Float, nullable=True)            # latitude (for future use)
     lng = Column(Float, nullable=True)            # longitude (for future use)
+    
+    # Token usage tracking fields
+    openai_prompt_tokens = Column(Integer, nullable=True)     # OpenAI prompt tokens
+    openai_completion_tokens = Column(Integer, nullable=True) # OpenAI completion tokens
+    openai_total_tokens = Column(Integer, nullable=True)      # OpenAI total tokens
+    pinecone_tokens = Column(Integer, nullable=True)          # Pinecone API tokens (if available)
+    model_used = Column(String(64), nullable=True)           # Model name (gpt-4, text-embedding-3-small, etc.)
+    api_provider = Column(String(32), nullable=True)         # 'openai', 'pinecone_mcp', 'pinecone_direct'
 
 # Composite indexes for better query performance
 Index("idx_events_type_ts", Event.type, Event.ts.desc())

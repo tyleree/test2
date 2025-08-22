@@ -372,21 +372,57 @@ def close_session(exc):
             db.rollback()
         db.close()
 
-def log_chat_question():
-    """Log a chat question event to analytics"""
+def log_chat_question(token_usage=None, model_info=None):
+    """Log a chat question event to analytics with token usage tracking"""
     if not DATABASE_AVAILABLE or not hasattr(g, 'db') or g.db is None:
         return
     
     try:
+        # Extract token usage information
+        openai_prompt_tokens = None
+        openai_completion_tokens = None
+        openai_total_tokens = None
+        pinecone_tokens = None
+        model_used = None
+        api_provider = None
+        
+        if token_usage and isinstance(token_usage, dict):
+            # OpenAI token usage
+            if 'usage' in token_usage:
+                usage = token_usage['usage']
+                openai_prompt_tokens = usage.get('prompt_tokens')
+                openai_completion_tokens = usage.get('completion_tokens')
+                openai_total_tokens = usage.get('total_tokens')
+            
+            # Pinecone token usage (if available)
+            pinecone_tokens = token_usage.get('pinecone_tokens')
+            
+            # Model and provider info
+            model_used = token_usage.get('model')
+            api_provider = token_usage.get('provider')
+        
+        if model_info and isinstance(model_info, dict):
+            model_used = model_used or model_info.get('model')
+            api_provider = api_provider or model_info.get('source')
+        
         ev = Event(
             type='chat_question',
             path=request.path,
             sid=getattr(g, 'sid', None),
             ip=getattr(g, 'client_ip', None),
-            ua=request.headers.get('User-Agent')
+            ua=request.headers.get('User-Agent'),
+            openai_prompt_tokens=openai_prompt_tokens,
+            openai_completion_tokens=openai_completion_tokens,
+            openai_total_tokens=openai_total_tokens,
+            pinecone_tokens=pinecone_tokens,
+            model_used=model_used,
+            api_provider=api_provider
         )
         g.db.add(ev)
         g.db.commit()
+        
+        print(f"📊 Logged chat question with token usage: {openai_total_tokens} total tokens, model: {model_used}, provider: {api_provider}")
+        
     except Exception as e:
         print(f"⚠️ Failed to log chat question: {e}")
         if g.db:
@@ -754,6 +790,15 @@ Please provide a detailed answer based on the context above."""
                     'completion_tokens': response.usage.completion_tokens,
                     'total_tokens': response.usage.total_tokens
                 }
+            },
+            'token_usage': {
+                'usage': {
+                    'prompt_tokens': response.usage.prompt_tokens,
+                    'completion_tokens': response.usage.completion_tokens,
+                    'total_tokens': response.usage.total_tokens
+                },
+                'model': 'gpt-4',
+                'provider': 'openai_direct'
             }
         }
         
@@ -1376,8 +1421,11 @@ def ask():
             
             if direct_response and direct_response.get("success"):
                 print("✅ Successfully processed direct Pinecone query")
-                # Log chat question to analytics
-                log_chat_question()
+                # Log chat question to analytics with token usage
+                log_chat_question(
+                    token_usage=direct_response.get("token_usage"),
+                    model_info=direct_response.get("metadata")
+                )
                 return jsonify({
                     "success": True,
                     "content": direct_response["content"],
@@ -1405,8 +1453,22 @@ def ask():
             
             if content:
                 print("✅ Successfully processed MCP server response")
-                # Log chat question to analytics
-                log_chat_question()
+                # Extract token usage from MCP response for logging
+                token_usage = None
+                if metadata and isinstance(metadata, dict):
+                    usage = metadata.get('usage', {})
+                    if usage:
+                        token_usage = {
+                            'usage': usage,
+                            'model': metadata.get('model', 'pinecone_mcp'),
+                            'provider': 'pinecone_mcp'
+                        }
+                
+                # Log chat question to analytics with token usage
+                log_chat_question(
+                    token_usage=token_usage,
+                    model_info={'source': 'mcp_server', 'model': metadata.get('model') if metadata else None}
+                )
                 return jsonify({
                     "success": True,
                     "content": content,
@@ -1555,8 +1617,10 @@ def ask():
                     print(f"❌ Error in citation processing loop: {e}")
                     # Continue without citations rather than failing completely
                 
-                # Log chat question to analytics
-                log_chat_question()
+                # Log chat question to analytics (Pinecone SDK doesn't provide token usage)
+                log_chat_question(
+                    model_info={'source': 'pinecone_sdk', 'model': 'pinecone_assistant'}
+                )
                 return jsonify({
                     "content": resp.message.content,
                     "citations": citations,

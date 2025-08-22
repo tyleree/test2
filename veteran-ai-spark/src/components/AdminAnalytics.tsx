@@ -4,7 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
-import { ArrowLeft, RefreshCw, Users, MessageSquare, Eye, TrendingUp, Globe, BarChart3, Calendar, Link } from "lucide-react";
+import { ArrowLeft, RefreshCw, Users, MessageSquare, Eye, TrendingUp, Globe, BarChart3, Calendar, Link, Cpu, Zap } from "lucide-react";
 import { Link as RouterLink, useSearchParams } from "react-router-dom";
 import { useToast } from "@/hooks/use-toast";
 import USHeatMap from "@/components/USHeatMap";
@@ -45,6 +45,33 @@ interface AnalyticsData {
     last_updated: string;
     engagement_rate: number;
     questions_per_user: number;
+  };
+  token_usage: {
+    available: boolean;
+    summary?: {
+      queries_with_tokens: number;
+      total_tokens: number;
+      avg_tokens_per_query: number;
+      total_prompt_tokens: number;
+      total_completion_tokens: number;
+      unique_models: number;
+      unique_providers: number;
+    };
+    daily_usage?: Array<{
+      day: string;
+      daily_tokens: number;
+      avg_tokens: number;
+      queries: number;
+    }>;
+    model_breakdown?: Array<{
+      model_used: string;
+      api_provider: string;
+      usage_count: number;
+      total_tokens: number;
+      avg_tokens: number;
+    }>;
+    message?: string;
+    error?: string;
   };
 }
 
@@ -231,10 +258,11 @@ const AdminAnalytics = () => {
 
         {analytics && (
           <Tabs defaultValue="overview" className="space-y-6">
-            <TabsList className="grid w-full grid-cols-4">
+            <TabsList className="grid w-full grid-cols-5">
               <TabsTrigger value="overview">Overview</TabsTrigger>
               <TabsTrigger value="locations">Locations</TabsTrigger>
               <TabsTrigger value="traffic">Traffic</TabsTrigger>
+              <TabsTrigger value="tokens">Tokens</TabsTrigger>
               <TabsTrigger value="timeline">Timeline</TabsTrigger>
             </TabsList>
 
@@ -473,6 +501,227 @@ const AdminAnalytics = () => {
                   </CardContent>
                 </Card>
               </div>
+            </TabsContent>
+
+            <TabsContent value="tokens" className="space-y-6">
+              {analytics.token_usage.available ? (
+                <>
+                  {/* Token Usage Overview */}
+                  {analytics.token_usage.summary && (
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                      <Card>
+                        <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+                          <CardTitle className="text-sm font-medium">Total Tokens</CardTitle>
+                          <Zap className="h-4 w-4 text-muted-foreground" />
+                        </CardHeader>
+                        <CardContent>
+                          <div className="text-2xl font-bold text-yellow-600">
+                            {formatNumber(analytics.token_usage.summary.total_tokens)}
+                          </div>
+                          <p className="text-xs text-muted-foreground">
+                            Over {analytics.token_usage.summary.queries_with_tokens} queries
+                          </p>
+                        </CardContent>
+                      </Card>
+
+                      <Card>
+                        <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+                          <CardTitle className="text-sm font-medium">Avg per Query</CardTitle>
+                          <Cpu className="h-4 w-4 text-muted-foreground" />
+                        </CardHeader>
+                        <CardContent>
+                          <div className="text-2xl font-bold text-blue-600">
+                            {Math.round(analytics.token_usage.summary.avg_tokens_per_query || 0)}
+                          </div>
+                          <p className="text-xs text-muted-foreground">
+                            Tokens per question
+                          </p>
+                        </CardContent>
+                      </Card>
+
+                      <Card>
+                        <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+                          <CardTitle className="text-sm font-medium">Prompt Tokens</CardTitle>
+                          <MessageSquare className="h-4 w-4 text-muted-foreground" />
+                        </CardHeader>
+                        <CardContent>
+                          <div className="text-2xl font-bold text-green-600">
+                            {formatNumber(analytics.token_usage.summary.total_prompt_tokens)}
+                          </div>
+                          <p className="text-xs text-muted-foreground">
+                            Input processing
+                          </p>
+                        </CardContent>
+                      </Card>
+
+                      <Card>
+                        <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+                          <CardTitle className="text-sm font-medium">Completion Tokens</CardTitle>
+                          <Eye className="h-4 w-4 text-muted-foreground" />
+                        </CardHeader>
+                        <CardContent>
+                          <div className="text-2xl font-bold text-purple-600">
+                            {formatNumber(analytics.token_usage.summary.total_completion_tokens)}
+                          </div>
+                          <p className="text-xs text-muted-foreground">
+                            Response generation
+                          </p>
+                        </CardContent>
+                      </Card>
+                    </div>
+                  )}
+
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                    {/* Model Breakdown */}
+                    {analytics.token_usage.model_breakdown && analytics.token_usage.model_breakdown.length > 0 && (
+                      <Card>
+                        <CardHeader>
+                          <CardTitle className="flex items-center space-x-2">
+                            <Cpu className="h-5 w-5" />
+                            <span>Model Usage</span>
+                          </CardTitle>
+                          <CardDescription>Token consumption by AI model</CardDescription>
+                        </CardHeader>
+                        <CardContent>
+                          <Table>
+                            <TableHeader>
+                              <TableRow>
+                                <TableHead>Model</TableHead>
+                                <TableHead>Provider</TableHead>
+                                <TableHead className="text-right">Uses</TableHead>
+                                <TableHead className="text-right">Total Tokens</TableHead>
+                                <TableHead className="text-right">Avg</TableHead>
+                              </TableRow>
+                            </TableHeader>
+                            <TableBody>
+                              {analytics.token_usage.model_breakdown.map((model, index) => (
+                                <TableRow key={index}>
+                                  <TableCell className="font-medium">
+                                    {model.model_used || 'Unknown'}
+                                  </TableCell>
+                                  <TableCell>
+                                    <Badge variant="outline">
+                                      {model.api_provider || 'Unknown'}
+                                    </Badge>
+                                  </TableCell>
+                                  <TableCell className="text-right">
+                                    {formatNumber(model.usage_count)}
+                                  </TableCell>
+                                  <TableCell className="text-right">
+                                    {formatNumber(model.total_tokens || 0)}
+                                  </TableCell>
+                                  <TableCell className="text-right">
+                                    {Math.round(model.avg_tokens || 0)}
+                                  </TableCell>
+                                </TableRow>
+                              ))}
+                            </TableBody>
+                          </Table>
+                        </CardContent>
+                      </Card>
+                    )}
+
+                    {/* Daily Token Usage */}
+                    {analytics.token_usage.daily_usage && analytics.token_usage.daily_usage.length > 0 && (
+                      <Card>
+                        <CardHeader>
+                          <CardTitle className="flex items-center space-x-2">
+                            <Calendar className="h-5 w-5" />
+                            <span>Daily Token Usage</span>
+                          </CardTitle>
+                          <CardDescription>Token consumption over time (last {days} days)</CardDescription>
+                        </CardHeader>
+                        <CardContent>
+                          <Table>
+                            <TableHeader>
+                              <TableRow>
+                                <TableHead>Date</TableHead>
+                                <TableHead className="text-right">Queries</TableHead>
+                                <TableHead className="text-right">Total Tokens</TableHead>
+                                <TableHead className="text-right">Avg</TableHead>
+                              </TableRow>
+                            </TableHeader>
+                            <TableBody>
+                              {analytics.token_usage.daily_usage.slice(0, 10).map((day, index) => (
+                                <TableRow key={index}>
+                                  <TableCell className="font-medium">
+                                    {new Date(day.day).toLocaleDateString('en-US', {
+                                      month: 'short',
+                                      day: 'numeric'
+                                    })}
+                                  </TableCell>
+                                  <TableCell className="text-right">
+                                    {formatNumber(day.queries)}
+                                  </TableCell>
+                                  <TableCell className="text-right">
+                                    {formatNumber(day.daily_tokens)}
+                                  </TableCell>
+                                  <TableCell className="text-right">
+                                    {Math.round(day.avg_tokens || 0)}
+                                  </TableCell>
+                                </TableRow>
+                              ))}
+                            </TableBody>
+                          </Table>
+                        </CardContent>
+                      </Card>
+                    )}
+                  </div>
+
+                  {/* Token Usage Summary */}
+                  {analytics.token_usage.summary && (
+                    <Card>
+                      <CardHeader>
+                        <CardTitle>Token Usage Insights</CardTitle>
+                        <CardDescription>AI resource consumption analysis</CardDescription>
+                      </CardHeader>
+                      <CardContent className="space-y-4">
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                          <div className="text-center p-4 bg-muted rounded-lg">
+                            <div className="text-2xl font-bold text-primary">
+                              {analytics.token_usage.summary.unique_models}
+                            </div>
+                            <p className="text-sm text-muted-foreground">AI Models Used</p>
+                          </div>
+                          <div className="text-center p-4 bg-muted rounded-lg">
+                            <div className="text-2xl font-bold text-primary">
+                              {analytics.token_usage.summary.unique_providers}
+                            </div>
+                            <p className="text-sm text-muted-foreground">API Providers</p>
+                          </div>
+                          <div className="text-center p-4 bg-muted rounded-lg">
+                            <div className="text-2xl font-bold text-primary">
+                              {((analytics.token_usage.summary.total_completion_tokens / Math.max(analytics.token_usage.summary.total_tokens, 1)) * 100).toFixed(1)}%
+                            </div>
+                            <p className="text-sm text-muted-foreground">Response Ratio</p>
+                          </div>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  )}
+                </>
+              ) : (
+                <Card>
+                  <CardHeader>
+                    <CardTitle className="flex items-center space-x-2">
+                      <Zap className="h-5 w-5" />
+                      <span>Token Usage Tracking</span>
+                    </CardTitle>
+                    <CardDescription>AI token consumption analytics</CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="text-center py-8">
+                      <Zap className="h-12 w-12 mx-auto text-muted-foreground mb-4" />
+                      <p className="text-lg font-medium text-muted-foreground mb-2">
+                        Token Tracking Not Available
+                      </p>
+                      <p className="text-sm text-muted-foreground">
+                        {analytics.token_usage.message || analytics.token_usage.error || 'Token usage tracking is being set up. Check back shortly.'}
+                      </p>
+                    </div>
+                  </CardContent>
+                </Card>
+              )}
             </TabsContent>
 
             <TabsContent value="timeline" className="space-y-6">

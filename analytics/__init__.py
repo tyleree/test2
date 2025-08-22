@@ -45,6 +45,36 @@ def ensure_database_schema():
             
             g.db.commit()
             print("✅ Database schema updated with location tracking")
+        
+        # Check if token tracking columns exist
+        token_check = g.db.execute(text("""
+            SELECT column_name 
+            FROM information_schema.columns 
+            WHERE table_name='events' AND column_name='openai_total_tokens'
+        """)).mappings().all()
+        
+        if not token_check:
+            print("🔧 Adding token usage tracking columns to events table...")
+            # Add token tracking columns
+            g.db.execute(text("""
+                ALTER TABLE events 
+                ADD COLUMN IF NOT EXISTS openai_prompt_tokens INTEGER,
+                ADD COLUMN IF NOT EXISTS openai_completion_tokens INTEGER,
+                ADD COLUMN IF NOT EXISTS openai_total_tokens INTEGER,
+                ADD COLUMN IF NOT EXISTS pinecone_tokens INTEGER,
+                ADD COLUMN IF NOT EXISTS model_used VARCHAR(64),
+                ADD COLUMN IF NOT EXISTS api_provider VARCHAR(32)
+            """))
+            
+            # Add indexes for token analysis
+            g.db.execute(text("""
+                CREATE INDEX IF NOT EXISTS idx_events_tokens ON events(openai_total_tokens) WHERE openai_total_tokens IS NOT NULL;
+                CREATE INDEX IF NOT EXISTS idx_events_model ON events(model_used) WHERE model_used IS NOT NULL;
+                CREATE INDEX IF NOT EXISTS idx_events_provider ON events(api_provider) WHERE api_provider IS NOT NULL;
+            """))
+            
+            g.db.commit()
+            print("✅ Database schema updated with token usage tracking")
             
         return True
         
@@ -386,6 +416,89 @@ def stats():
         total_visits = (totals.get('pageviews', 0) or 0) + (totals.get('legacy_visit_count', 0) or 0)
         total_uniques = (totals.get('uniques', 0) or 0) + (totals.get('legacy_unique_count', 0) or 0)
 
+        # Get token usage analytics
+        token_stats = {}
+        try:
+            # Check if token columns exist before querying
+            token_column_check = db.execute(text("""
+                SELECT column_name 
+                FROM information_schema.columns 
+                WHERE table_name='events' AND column_name='openai_total_tokens'
+            """)).mappings().all()
+            
+            if token_column_check:
+                # Get token usage summary
+                token_summary = db.execute(text("""
+                    WITH recent AS (
+                        SELECT * FROM events 
+                        WHERE ts >= now() - (:days || ' days')::interval 
+                        AND type='chat_question'
+                        AND openai_total_tokens IS NOT NULL
+                    )
+                    SELECT 
+                        COUNT(*) as queries_with_tokens,
+                        SUM(openai_total_tokens) as total_tokens,
+                        AVG(openai_total_tokens) as avg_tokens_per_query,
+                        SUM(openai_prompt_tokens) as total_prompt_tokens,
+                        SUM(openai_completion_tokens) as total_completion_tokens,
+                        COUNT(DISTINCT model_used) as unique_models,
+                        COUNT(DISTINCT api_provider) as unique_providers
+                    FROM recent
+                """), {"days": days}).mappings().one()
+                
+                # Get daily token usage
+                daily_tokens = db.execute(text("""
+                    WITH recent AS (
+                        SELECT * FROM events 
+                        WHERE ts >= now() - (:days || ' days')::interval 
+                        AND type='chat_question'
+                        AND openai_total_tokens IS NOT NULL
+                    )
+                    SELECT 
+                        to_char(date_trunc('day', ts), 'YYYY-MM-DD') as day,
+                        SUM(openai_total_tokens) as daily_tokens,
+                        AVG(openai_total_tokens) as avg_tokens,
+                        COUNT(*) as queries
+                    FROM recent
+                    GROUP BY date_trunc('day', ts)
+                    ORDER BY day DESC
+                    LIMIT 30
+                """), {"days": days}).mappings().all()
+                
+                # Get model usage breakdown
+                model_breakdown = db.execute(text("""
+                    WITH recent AS (
+                        SELECT * FROM events 
+                        WHERE ts >= now() - (:days || ' days')::interval 
+                        AND type='chat_question'
+                        AND model_used IS NOT NULL
+                    )
+                    SELECT 
+                        model_used,
+                        api_provider,
+                        COUNT(*) as usage_count,
+                        SUM(openai_total_tokens) as total_tokens,
+                        AVG(openai_total_tokens) as avg_tokens
+                    FROM recent
+                    GROUP BY model_used, api_provider
+                    ORDER BY total_tokens DESC NULLS LAST
+                    LIMIT 10
+                """), {"days": days}).mappings().all()
+                
+                token_stats = {
+                    "summary": dict(token_summary) if token_summary else {},
+                    "daily_usage": [dict(d) for d in daily_tokens],
+                    "model_breakdown": [dict(m) for m in model_breakdown],
+                    "available": True
+                }
+            else:
+                token_stats = {"available": False, "message": "Token tracking not yet available"}
+                
+        except Exception as e:
+            print(f"⚠️ Token analytics query failed: {e}")
+            db.rollback()
+            token_stats = {"available": False, "error": str(e)}
+
         # Get service start date
         try:
             service_start = db.execute(text("""
@@ -423,7 +536,8 @@ def stats():
             "last_updated": datetime.now().isoformat(),
             "engagement_rate": (total_asks / max(total_visits, 1) * 100) if total_visits > 0 else 0,
             "questions_per_user": (total_asks / max(total_uniques, 1)) if total_uniques > 0 else 0
-          }
+          },
+          "token_usage": token_stats
         })
         
     except Exception as e:
