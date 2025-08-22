@@ -1487,13 +1487,16 @@ def get_visitor_locations():
             elif len(location) == 2 and location.isalpha():  # US state codes
                 us_locations[location.upper()] = count
         
-        return jsonify({
+        result = {
             "us_states": us_locations,
             "international": international_count,
             "local": local_count,
             "unknown": unknown_count,
             "total_tracked": sum(locations.values())
-        })
+        }
+        
+        print(f"🗺️ API /api/locations returning: {result}")
+        return jsonify(result)
 
 @app.route("/debug/ip")
 def debug_ip():

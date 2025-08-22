@@ -47,6 +47,7 @@ export const USHeatMap: React.FC<USHeatMapProps> = ({ className }) => {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
         const data = await response.json();
+        console.log('🗺️ Heat map received location data:', data);
         setLocationData(data);
         setError(null);
       } catch (err) {
@@ -96,14 +97,34 @@ export const USHeatMap: React.FC<USHeatMapProps> = ({ className }) => {
   }
 
   // Create color scale based on visitor counts
-  const maxCount = Math.max(...Object.values(locationData.us_states), 1);
+  const stateValues = Object.values(locationData.us_states);
+  const maxCount = stateValues.length > 0 ? Math.max(...stateValues) : 1;
+  const minCount = stateValues.length > 0 ? Math.min(...stateValues.filter(v => v > 0)) : 0;
+  
+  console.log('🎨 Heat map color scale:', { maxCount, minCount, stateValues });
+  
   const colorScale = scaleLinear<string>()
     .domain([0, maxCount])
     .range(["#e0e7ff", "#3b82f6"]); // Light blue to blue
 
   // Get state visitor count
   const getStateCount = (stateCode: string): number => {
-    return locationData.us_states[stateCode] || 0;
+    if (!stateCode || !locationData) return 0;
+    
+    // Try multiple variations of the state code
+    const variations = [
+      stateCode.toUpperCase(),
+      stateCode.toLowerCase(),
+      stateCode
+    ];
+    
+    for (const variation of variations) {
+      if (locationData.us_states[variation] !== undefined) {
+        return locationData.us_states[variation];
+      }
+    }
+    
+    return 0;
   };
 
   // Get state color based on visitor count
@@ -142,6 +163,16 @@ export const USHeatMap: React.FC<USHeatMapProps> = ({ className }) => {
                     const stateCode = geo.properties.STUSPS;
                     const count = getStateCount(stateCode);
                     const isHovered = hoveredState === stateCode;
+                    
+                    // Debug logging for first few states
+                    if (geo.rsmKey && parseInt(geo.rsmKey) < 5) {
+                      console.log(`🗺️ State ${stateCode}:`, { 
+                        stateCode, 
+                        count, 
+                        color: getStateColor(stateCode),
+                        availableStates: Object.keys(locationData.us_states)
+                      });
+                    }
                     
                     return (
                       <Geography
