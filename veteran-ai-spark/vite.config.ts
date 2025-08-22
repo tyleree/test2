@@ -21,6 +21,12 @@ export default defineConfig(({ mode }) => ({
     },
   },
   build: {
+    target: "es2018",
+    minify: "esbuild",
+    cssCodeSplit: true,
+    assetsInlineLimit: 0,
+    sourcemap: false,
+    chunkSizeWarningLimit: 1000,
     rollupOptions: {
       plugins: [
         visualizer({ 
@@ -30,6 +36,17 @@ export default defineConfig(({ mode }) => ({
           open: false
         })
       ],
+      output: {
+        manualChunks(id) {
+          if (id.includes("node_modules")) {
+            if (id.includes("recharts") || id.includes("d3-")) return "vendor-charts";
+            if (id.includes("react-simple-maps")) return "vendor-maps";
+            if (id.includes("@radix-ui") || id.includes("@hookform")) return "vendor-ui";
+            if (id.includes("react-router")) return "vendor-router";
+            return "vendor";
+          }
+        },
+      },
     },
   },
 }));
