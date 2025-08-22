@@ -1,7 +1,6 @@
 databases:
   - name: appdb
     databaseName: appdb
-    plan: free
 
 services:
   - type: web

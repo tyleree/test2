@@ -427,3 +427,61 @@ Use the provided script to safely verify token generation without exposing secre
 ./scripts/verify_admin_token_len.sh
 # Should output a positive integer (typically 32+ characters)
 ```
+
+## 🗄️ Resolving Render DB Plan Errors
+
+### Why the Error Appears
+
+When a Render Blueprint attempts to change a database plan to a lower tier (e.g., from Basic to Free), you may encounter errors like:
+
+```
+Error: cannot downgrade database plan from [current-plan] to Free
+```
+
+This happens because Render doesn't support in-place downgrades of existing database instances for data safety reasons.
+
+### Resolution Options
+
+**Option A: Retain Existing Plan (Recommended)**
+- Remove or omit the `plan:` specification in the Blueprint
+- This tells Render to keep the current database instance type
+- No data migration required
+- Current implementation: `databases.appdb` has no plan specified
+
+**Option B: Create New Free Database + Migration**
+- Provision a new Free database instance with a different name
+- Export data from existing database using `pg_dump`
+- Import data to new Free database using `pg_restore`
+- Update application to use new database connection
+- Delete old database instance
+
+### Applying the Fix
+
+1. **Sync the Blueprint:**
+   - Go to Render Dashboard → Blueprints
+   - Click "Sync" or "Apply" to update the service configuration
+
+2. **Redeploy the service:**
+   - The database configuration will be updated without changing the plan
+   - Existing data and connections remain intact
+
+3. **Verify the fix:**
+   - Check that deployment succeeds without plan-related errors
+   - Confirm database connectivity in application logs
+
+### Migration Path (If Choosing Option B)
+
+If you need to migrate to a Free plan database:
+
+```bash
+# Export from existing database
+pg_dump $EXISTING_DATABASE_URL > backup.sql
+
+# Import to new Free database  
+psql $NEW_FREE_DATABASE_URL < backup.sql
+
+# Update environment variables to use new database
+# Delete old database instance after verification
+```
+
+**Note:** Always test migrations in a staging environment first.
