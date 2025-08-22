@@ -482,7 +482,7 @@ MCP_API_KEY = os.getenv("PINECONE_API_KEY")
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
 # Configuration to disable fallbacks (force OpenAI + Pinecone direct only)
-DISABLE_FALLBACKS = os.getenv("DISABLE_FALLBACKS", "false").lower() == "true"
+DISABLE_FALLBACKS = True  # Force debugging mode
 
 def call_mcp_server(prompt, options=None):
     """
