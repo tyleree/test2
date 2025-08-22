@@ -7,6 +7,8 @@ import os
 from dotenv import load_dotenv
 import requests
 import json
+import pickle
+from datetime import datetime
 
 # Load environment variables
 load_dotenv('env.txt')  # Using env.txt since .env is blocked
@@ -80,9 +82,44 @@ def get_rate_limit_for_ip(ip_address: str) -> str:
     # Normal users get generous limit to support ~5000/day aggregate
     return "250 per hour"
 
-# Ask counter (thread-safe)
-ask_count_lock = Lock()
-app.config['ASK_COUNT'] = 0
+# Persistent counters with file-based storage
+STATS_FILE = os.path.join(os.path.dirname(__file__), 'stats.pkl')
+stats_lock = Lock()
+
+def load_stats():
+    """Load statistics from file"""
+    try:
+        if os.path.exists(STATS_FILE):
+            with open(STATS_FILE, 'rb') as f:
+                stats = pickle.load(f)
+                return stats
+    except Exception as e:
+        print(f"Warning: Could not load stats file: {e}")
+    
+    # Return default stats if file doesn't exist or can't be loaded
+    return {
+        'ask_count': 0,
+        'visit_count': 0,
+        'unique_visitors': set(),
+        'first_visit': datetime.now().isoformat(),
+        'last_updated': datetime.now().isoformat()
+    }
+
+def save_stats(stats):
+    """Save statistics to file"""
+    try:
+        stats['last_updated'] = datetime.now().isoformat()
+        with open(STATS_FILE, 'wb') as f:
+            pickle.dump(stats, f)
+    except Exception as e:
+        print(f"Error saving stats: {e}")
+
+# Initialize stats
+app.config['STATS'] = load_stats()
+print(f"📊 Loaded stats: Ask count={app.config['STATS']['ask_count']}, Visit count={app.config['STATS']['visit_count']}")
+
+# Legacy compatibility
+ask_count_lock = stats_lock
 
 # Optional SPA build directory (for serving a built frontend)
 FRONTEND_BUILD_DIR = os.getenv(
@@ -459,6 +496,19 @@ Please provide a detailed answer based on the context above."""
 
 @app.route("/")
 def home():
+    # Track visit
+    client_ip = get_remote_address()
+    with stats_lock:
+        stats = app.config['STATS']
+        stats['visit_count'] += 1
+        
+        # Track unique visitors (basic IP-based tracking)
+        if client_ip not in stats['unique_visitors']:
+            stats['unique_visitors'].add(client_ip)
+        
+        save_stats(stats)
+        app.config['STATS'] = stats
+    
     # Prefer serving built SPA if available
     try:
         index_path = os.path.join(FRONTEND_BUILD_DIR, "index.html")
@@ -823,6 +873,8 @@ def home():
                 <span>Free Forever</span>
                 <span>•</span>
                 <span>Trusted Data</span>
+                <span>•</span>
+                <a href="/stats" class="underline hover:opacity-80">Statistics</a>
             </div>
         </div>
     </div>
@@ -1023,10 +1075,13 @@ def ask():
                 "reason": reason,
                 "retry_after": 300,
             }), 429
-        # Increment ask counter
-        with ask_count_lock:
-            app.config['ASK_COUNT'] += 1
-            current_ask_count = app.config['ASK_COUNT']
+        # Increment ask counter (persistent)
+        with stats_lock:
+            stats = app.config['STATS']
+            stats['ask_count'] += 1
+            save_stats(stats)
+            app.config['STATS'] = stats
+            current_ask_count = stats['ask_count']
         
         # Resolve Pinecone assistant/index from app config if available
         assistant_ref = app.config.get('PINECONE_ASSISTANT') or assistant
@@ -1253,11 +1308,12 @@ def health():
         "mcp_endpoint": MCP_SERVER_URL,
         "mcp_api_key_configured": bool(MCP_API_KEY),
         "environment": os.getenv("FLASK_ENV", "production"),
-        "endpoints": {
+                    "endpoints": {
             "main": "/",
             "ask": "/ask",
             "health": "/health",
             "metrics": "/metrics",
+            "stats": "/stats",
             "rate_limit_status": "/rate-limit-status",
             "mcp_test": "/mcp/test",
             "mcp_status": "/mcp/status",
@@ -1268,9 +1324,129 @@ def health():
 
 @app.route("/metrics")
 def metrics():
-    return jsonify({
-        "ask_count": app.config.get("ASK_COUNT", 0)
-    })
+    with stats_lock:
+        stats = app.config['STATS']
+        return jsonify({
+            "ask_count": stats['ask_count'],
+            "visit_count": stats['visit_count'],
+            "unique_visitors": len(stats['unique_visitors']),
+            "first_visit": stats['first_visit'],
+            "last_updated": stats['last_updated']
+        })
+
+@app.route("/stats")
+def stats_page():
+    """Serve the stats page - either SPA component or fallback HTML"""
+    try:
+        # Try to serve the SPA first (it will handle the /stats route)
+        index_path = os.path.join(FRONTEND_BUILD_DIR, "index.html")
+        if os.path.exists(index_path):
+            return send_from_directory(FRONTEND_BUILD_DIR, "index.html")
+    except Exception:
+        pass
+    
+    # Fallback: inline HTML stats page
+    with stats_lock:
+        stats = app.config['STATS']
+        
+    stats_html = f"""
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veterans Benefits AI - Statistics</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #ffffff;
+            color: #000000;
+        }}
+    </style>
+</head>
+<body class="bg-white min-h-screen">
+    <div class="container mx-auto px-4 py-12 max-w-4xl">
+        <div class="text-center mb-12">
+            <h1 class="text-5xl md:text-6xl font-bold mb-4 text-black">Statistics</h1>
+            <p class="text-xl text-gray-600">Veterans Benefits AI Usage Analytics</p>
+            <div class="mt-6">
+                <a href="/" class="inline-block px-6 py-3 bg-black text-white rounded-lg hover:bg-gray-800 transition-colors">
+                    ← Back to Home
+                </a>
+            </div>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+            <!-- Questions Asked -->
+            <div class="bg-white rounded-3xl shadow-xl p-8 border border-gray-200 text-center">
+                <div class="text-6xl font-bold text-blue-600 mb-4">{stats['ask_count']:,}</div>
+                <h3 class="text-2xl font-semibold text-black mb-2">Questions Asked</h3>
+                <p class="text-gray-600">Total questions processed by our AI</p>
+            </div>
+            
+            <!-- Website Visits -->
+            <div class="bg-white rounded-3xl shadow-xl p-8 border border-gray-200 text-center">
+                <div class="text-6xl font-bold text-green-600 mb-4">{stats['visit_count']:,}</div>
+                <h3 class="text-2xl font-semibold text-black mb-2">Website Visits</h3>
+                <p class="text-gray-600">Total page views since launch</p>
+            </div>
+            
+            <!-- Unique Visitors -->
+            <div class="bg-white rounded-3xl shadow-xl p-8 border border-gray-200 text-center">
+                <div class="text-6xl font-bold text-purple-600 mb-4">{len(stats['unique_visitors']):,}</div>
+                <h3 class="text-2xl font-semibold text-black mb-2">Unique Visitors</h3>
+                <p class="text-gray-600">Different users who visited our site</p>
+            </div>
+            
+            <!-- Engagement Rate -->
+            <div class="bg-white rounded-3xl shadow-xl p-8 border border-gray-200 text-center">
+                <div class="text-6xl font-bold text-orange-600 mb-4">{(stats['ask_count'] / max(stats['visit_count'], 1) * 100):.1f}%</div>
+                <h3 class="text-2xl font-semibold text-black mb-2">Engagement Rate</h3>
+                <p class="text-gray-600">Percentage of visits that asked questions</p>
+            </div>
+        </div>
+        
+        <!-- Additional Info -->
+        <div class="bg-white rounded-3xl shadow-xl p-8 border border-gray-200">
+            <h3 class="text-2xl font-semibold text-black mb-6 text-center">Service Information</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm">
+                <div>
+                    <span class="font-semibold text-gray-700">Service Started:</span>
+                    <span class="text-gray-600 ml-2">{datetime.fromisoformat(stats['first_visit']).strftime('%B %d, %Y at %I:%M %p')}</span>
+                </div>
+                <div>
+                    <span class="font-semibold text-gray-700">Last Updated:</span>
+                    <span class="text-gray-600 ml-2">{datetime.fromisoformat(stats['last_updated']).strftime('%B %d, %Y at %I:%M %p')}</span>
+                </div>
+                <div>
+                    <span class="font-semibold text-gray-700">Questions per Visit:</span>
+                    <span class="text-gray-600 ml-2">{(stats['ask_count'] / max(stats['visit_count'], 1)):.2f}</span>
+                </div>
+                <div>
+                    <span class="font-semibold text-gray-700">Questions per Unique User:</span>
+                    <span class="text-gray-600 ml-2">{(stats['ask_count'] / max(len(stats['unique_visitors']), 1)):.2f}</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <div class="text-center mt-12 text-gray-500">
+            <p>Statistics are updated in real-time and persist across server restarts</p>
+            <p class="mt-2">Veterans Benefits AI - Trusted data, free forever</p>
+        </div>
+    </div>
+    
+    <script>
+        // Auto-refresh every 30 seconds
+        setTimeout(() => {{
+            window.location.reload();
+        }}, 30000);
+    </script>
+</body>
+</html>
+    """
+    return stats_html
 
 # Rate limit status for debugging/ops
 @app.route("/rate-limit-status")
@@ -1286,7 +1462,7 @@ def rate_limit_status():
         "current_limit": get_rate_limit_for_ip(ip),
         "requests_last_hour": len(recent),
         "tracked": ip in suspicious_ips,
-        "total_requests": app.config.get("ASK_COUNT", 0),
+        "total_requests": app.config['STATS']['ask_count'],
     })
 
 @app.errorhandler(429)
