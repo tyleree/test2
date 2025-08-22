@@ -482,7 +482,7 @@ MCP_API_KEY = os.getenv("PINECONE_API_KEY")
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
 # Configuration to disable fallbacks (force OpenAI + Pinecone direct only)
-DISABLE_FALLBACKS = os.getenv("DISABLE_FALLBACKS", "true").lower() == "true"
+DISABLE_FALLBACKS = os.getenv("DISABLE_FALLBACKS", "false").lower() == "true"
 
 def call_mcp_server(prompt, options=None):
     """
@@ -828,7 +828,14 @@ Please provide a detailed answer based on the context above."""
         print(f"❌ Error type: {type(e)}")
         import traceback
         print(f"❌ Full traceback: {traceback.format_exc()}")
-        return None
+        
+        # Return detailed error info instead of None for debugging
+        return {
+            'success': False,
+            'error': str(e),
+            'error_type': type(e).__name__,
+            'traceback': traceback.format_exc()
+        }
 
 
 @app.route("/")
@@ -1470,7 +1477,34 @@ def ask():
                     "ask_count": current_ask_count
                 })
             else:
-                print("⚠️ Direct Pinecone query failed, falling back to MCP")
+                if direct_response and not direct_response.get("success"):
+                    print(f"⚠️ Direct Pinecone query failed with error: {direct_response.get('error', 'Unknown error')}")
+                    if DISABLE_FALLBACKS:
+                        # Return the actual error details when fallbacks are disabled
+                        elapsed_ms = int((perf_counter() - start_time) * 1000)
+                        log_chat_question(
+                            extra_perf={
+                                'response_ms': elapsed_ms,
+                                'prompt_chars': len(prompt),
+                                'answer_chars': 0,
+                                'success': 0,
+                                'provider': 'openai_direct_failed'
+                            }
+                        )
+                        return jsonify({
+                            "error": "Direct OpenAI + Pinecone query failed",
+                            "details": {
+                                "primary_method": "openai_direct",
+                                "fallbacks_disabled": True,
+                                "index_available": bool(index_ref),
+                                "openai_key_available": bool(OPENAI_API_KEY),
+                                "actual_error": direct_response.get('error'),
+                                "error_type": direct_response.get('error_type'),
+                                "traceback": direct_response.get('traceback')
+                            }
+                        }), 500
+                else:
+                    print("⚠️ Direct Pinecone query returned None, falling back to MCP")
         else:
             if not index_ref:
                 print("⚠️ No Pinecone index available for direct query")
