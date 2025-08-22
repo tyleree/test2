@@ -275,3 +275,111 @@ For technical support or questions about veterans benefits:
 
 
 >>>>>>> b6374a9 (Add new features and fix bugs)
+
+## 📊 Analytics System
+
+### Overview
+The application includes a comprehensive analytics system that tracks:
+- **Pageviews**: Every page visit and SPA navigation
+- **Unique Visitors**: Anonymous session-based tracking (no PII)
+- **Chat Questions**: Count of AI assistant interactions
+- **Geographic Data**: Visitor locations displayed on a heat map
+- **Daily Metrics**: Time-series data for trends
+
+### Database Setup
+The analytics system uses PostgreSQL for data persistence:
+
+1. **For Render Deployment**: The `render.yaml` file automatically provisions a PostgreSQL database
+2. **For Local Development**: Set `DATABASE_URL` in your environment:
+   ```bash
+   export DATABASE_URL="postgresql://user:password@localhost:5432/dbname"
+   ```
+
+### Environment Variables
+Required for analytics functionality:
+```bash
+DATABASE_URL=postgresql://user:password@host:port/database
+SECRET_KEY=your-secret-key-for-sessions
+ADMIN_TOKEN=your-admin-token-for-dashboard-access
+```
+
+### Analytics Dashboard
+Access the analytics dashboard at `/admin/analytics?token=YOUR_ADMIN_TOKEN`
+
+**Features:**
+- **Real-time Statistics**: Total pageviews, unique visitors, chat questions
+- **Daily Breakdown**: Day-by-day metrics for the last 30 days
+- **Top Pages**: Most visited pages on your site
+- **Top Referrers**: Sources of incoming traffic
+- **Geographic Heat Map**: US states heat map showing visitor distribution
+
+### API Endpoints
+
+#### Collect Events
+```http
+POST /api/analytics/event
+Content-Type: application/json
+
+{
+  "type": "pageview" | "chat_question",
+  "path": "/current-page",
+  "ref": "https://referrer.com/",
+  "meta": {"custom": "data"}
+}
+```
+
+#### Get Statistics
+```http
+GET /api/analytics/stats?days=30
+```
+
+Returns comprehensive analytics data including totals, daily breakdown, top pages, and referrers.
+
+### Client-Side Tracking
+The analytics system automatically tracks:
+- **Page Loads**: Initial page visits
+- **SPA Navigation**: Single-page app route changes
+- **Chat Interactions**: When users submit questions
+
+**Manual Tracking:**
+```javascript
+// Track custom pageview
+window.analyticsTrack('/custom-page', {custom: 'metadata'});
+
+// Track chat interaction
+window.analyticsChatHit({prompt_length: 50});
+```
+
+### Privacy & Security
+- **No PII**: Only anonymous session IDs, no personal information
+- **IP Privacy**: IP addresses stored for geolocation only
+- **Secure Cookies**: HttpOnly, Secure, SameSite=Lax
+- **Strict CSP**: Content Security Policy without unsafe-eval
+- **Rate Limiting**: Built-in protection against abuse
+
+### Data Retention
+- Events are stored indefinitely by default
+- Consider implementing data retention policies for production
+- Geographic data is aggregated at the state level (US) or country level (international)
+
+### Troubleshooting
+
+**Database Connection Issues:**
+```bash
+# Check if DATABASE_URL is set
+echo $DATABASE_URL
+
+# Verify database connectivity
+python -c "from db import engine; print('✅ Database connected' if engine else '❌ No connection')"
+```
+
+**Missing Analytics Data:**
+1. Verify `DATABASE_URL` is properly configured
+2. Check that `/static/analytics.js` is being served
+3. Ensure `ADMIN_TOKEN` is set for dashboard access
+4. Check browser console for JavaScript errors
+
+**Performance Optimization:**
+- Analytics events are collected asynchronously
+- Database queries use indexes for optimal performance
+- Failed analytics calls don't impact site functionality

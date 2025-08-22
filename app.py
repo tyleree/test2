@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, jsonify, send_from_directory
+from flask import Flask, render_template, request, jsonify, send_from_directory, g, make_response
 from flask_limiter import Limiter
 from flask_limiter.util import get_remote_address
 from threading import Lock
@@ -10,11 +10,31 @@ import json
 import pickle
 from datetime import datetime
 import threading
+import uuid
 
 # Load environment variables
 load_dotenv('env.txt')  # Using env.txt since .env is blocked
 
 app = Flask(__name__)
+
+# Set SECRET_KEY for sessions
+app.secret_key = os.environ.get("SECRET_KEY", "dev-key-change-in-production")
+
+# Initialize database (gracefully handle missing DATABASE_URL)
+try:
+    from db import Base, engine, SessionLocal
+    from models import Event
+    from analytics import bp as analytics_bp
+    DATABASE_AVAILABLE = engine is not None
+    if DATABASE_AVAILABLE:
+        print("📊 Database connection established")
+    else:
+        print("⚠️ DATABASE_URL not found - analytics will be disabled")
+except Exception as e:
+    print(f"⚠️ Database initialization failed: {e} - analytics will be disabled")
+    DATABASE_AVAILABLE = False
+    SessionLocal = None
+    analytics_bp = None
 
 # Initialize intelligent rate limiter (per-IP)
 limiter = Limiter(
@@ -246,6 +266,93 @@ print(f"📊 Loaded stats: Ask count={app.config['STATS']['ask_count']}, Visit c
 
 # Legacy compatibility
 ask_count_lock = stats_lock
+
+# Register analytics blueprint if database is available
+if DATABASE_AVAILABLE and analytics_bp:
+    app.register_blueprint(analytics_bp)
+    print("📈 Analytics blueprint registered")
+
+# Initialize database tables on first request
+@app.before_first_request
+def init_db():
+    if DATABASE_AVAILABLE:
+        try:
+            Base.metadata.create_all(bind=engine)
+            print("📊 Database tables initialized")
+        except Exception as e:
+            print(f"⚠️ Database table initialization failed: {e}")
+
+def client_ip(request):
+    """Helper to get client IP respecting X-Forwarded-For"""
+    xf = request.headers.get("X-Forwarded-For", "")
+    return (xf.split(",")[0].strip() if xf else request.remote_addr) or ""
+
+@app.before_request
+def open_session():
+    """Initialize database session and session ID for each request"""
+    # Initialize database session if available
+    if DATABASE_AVAILABLE and SessionLocal:
+        g.db = SessionLocal()
+    else:
+        g.db = None
+    
+    # Handle session ID cookie
+    sid = request.cookies.get("sid")
+    if not sid:
+        sid = uuid.uuid4().hex
+        g._set_sid_cookie = sid
+    g.sid = sid
+    
+    # Store client IP
+    g.client_ip = client_ip(request)
+
+@app.after_request
+def set_headers(resp):
+    """Set security headers and session cookie"""
+    # Set strict Content Security Policy (no unsafe-eval)
+    csp = ("default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; "
+           "img-src 'self' data: https:; connect-src 'self'; frame-ancestors 'none'; "
+           "base-uri 'self'; form-action 'self'")
+    resp.headers.setdefault("Content-Security-Policy", csp)
+    
+    # Set session ID cookie if needed
+    if getattr(g, "_set_sid_cookie", None):
+        resp.set_cookie(
+            "sid", g._set_sid_cookie,
+            httponly=True, samesite="Lax", 
+            secure=request.is_secure, path="/"
+        )
+    
+    return resp
+
+@app.teardown_request
+def close_session(exc):
+    """Clean up database session"""
+    db = getattr(g, 'db', None)
+    if db is not None:
+        if exc: 
+            db.rollback()
+        db.close()
+
+def log_chat_question():
+    """Log a chat question event to analytics"""
+    if not DATABASE_AVAILABLE or not hasattr(g, 'db') or g.db is None:
+        return
+    
+    try:
+        ev = Event(
+            type='chat_question',
+            path=request.path,
+            sid=getattr(g, 'sid', None),
+            ip=getattr(g, 'client_ip', None),
+            ua=request.headers.get('User-Agent')
+        )
+        g.db.add(ev)
+        g.db.commit()
+    except Exception as e:
+        print(f"⚠️ Failed to log chat question: {e}")
+        if g.db:
+            g.db.rollback()
 
 # Optional SPA build directory (for serving a built frontend)
 FRONTEND_BUILD_DIR = os.getenv(
@@ -654,8 +761,9 @@ def home():
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Veterans Benefits AI - Trusted data, free forever</title>
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.tailwindcss.com https://unpkg.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://unpkg.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https:;">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self';">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="/static/analytics.js" defer></script>
     <script>
         tailwind.config = {
             theme: {
@@ -1029,6 +1137,11 @@ def home():
             const responseDiv = document.getElementById('response');
             const refsDiv = document.getElementById('refs');
 
+            // Track chat question in analytics
+            if (window.analyticsChatHit) {
+                window.analyticsChatHit({prompt_length: prompt.length});
+            }
+
             // Show loading state
             button.disabled = true;
             button.innerHTML = '<svg class="loading-spinner w-5 h-5 mr-2 inline" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>Processing...';
@@ -1225,6 +1338,8 @@ def ask():
             
             if direct_response and direct_response.get("success"):
                 print("✅ Successfully processed direct Pinecone query")
+                # Log chat question to analytics
+                log_chat_question()
                 return jsonify({
                     "success": True,
                     "content": direct_response["content"],
@@ -1252,6 +1367,8 @@ def ask():
             
             if content:
                 print("✅ Successfully processed MCP server response")
+                # Log chat question to analytics
+                log_chat_question()
                 return jsonify({
                     "success": True,
                     "content": content,
@@ -1400,6 +1517,8 @@ def ask():
                     print(f"❌ Error in citation processing loop: {e}")
                     # Continue without citations rather than failing completely
                 
+                # Log chat question to analytics
+                log_chat_question()
                 return jsonify({
                     "content": resp.message.content,
                     "citations": citations,
@@ -1653,7 +1772,7 @@ def stats_page():
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Veterans Benefits AI - Statistics</title>
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.tailwindcss.com https://unpkg.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://unpkg.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https:;">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self';">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body {{
@@ -1799,6 +1918,14 @@ def ping():
     return jsonify({"message": "pong", "status": "ok"})
 
 # Serve SPA static assets and enable client-side routing fallback
+@app.route('/static/<path:filename>')
+def serve_static(filename):
+    """Serve static files (analytics.js, etc.)"""
+    try:
+        return send_from_directory('static', filename)
+    except Exception:
+        return jsonify({"error": "Static file not found"}), 404
+
 @app.route('/<path:path>')
 def serve_spa_assets(path):
     try:
