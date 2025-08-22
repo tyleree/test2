@@ -462,9 +462,9 @@ try:
     
     # Also try to get the index for additional functionality
     try:
-        index = pc.Index(os.getenv("PINECONE_INDEX_NAME", "veterans-benefits"))
+        index = pc.Index(os.getenv("PINECONE_INDEX_NAME", "veterans-benefits-kb"))
         app.config['PINECONE_INDEX'] = index
-        print(f"✅ Pinecone Index '{os.getenv('PINECONE_INDEX_NAME', 'veterans-benefits')}' connected successfully")
+        print(f"✅ Pinecone Index '{os.getenv('PINECONE_INDEX_NAME', 'veterans-benefits-kb')}' connected successfully")
     except Exception as e:
         print(f"⚠️ Warning: Could not connect to Pinecone index: {e}")
         index = None
@@ -480,6 +480,9 @@ MCP_API_KEY = os.getenv("PINECONE_API_KEY")
 
 # OpenAI configuration for direct queries
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+
+# Configuration to disable fallbacks (force OpenAI + Pinecone direct only)
+DISABLE_FALLBACKS = os.getenv("DISABLE_FALLBACKS", "true").lower() == "true"
 
 def call_mcp_server(prompt, options=None):
     """
@@ -1474,7 +1477,29 @@ def ask():
             if not OPENAI_API_KEY:
                 print("⚠️ No OpenAI API key available for direct query")
         
-        # Fallback to MCP server
+        # Check if fallbacks are disabled
+        if DISABLE_FALLBACKS:
+            elapsed_ms = int((perf_counter() - start_time) * 1000)
+            log_chat_question(
+                extra_perf={
+                    'response_ms': elapsed_ms,
+                    'prompt_chars': len(prompt),
+                    'answer_chars': 0,
+                    'success': 0,
+                    'provider': 'openai_direct_failed'
+                }
+            )
+            return jsonify({
+                "error": "Direct OpenAI + Pinecone query failed and fallbacks are disabled",
+                "details": {
+                    "primary_method": "openai_direct",
+                    "fallbacks_disabled": True,
+                    "index_available": bool(index_ref),
+                    "openai_key_available": bool(OPENAI_API_KEY)
+                }
+            }), 500
+        
+        # Fallback to MCP server (only if fallbacks enabled)
         print(f"🔄 Falling back to MCP server for prompt: {prompt[:50]}...")
         mcp_response = call_mcp_server(prompt)
         if mcp_response and mcp_response.get("success"):
@@ -1512,8 +1537,8 @@ def ask():
         else:
             print(f"⚠️ MCP server failed: {mcp_response.get('error', 'Unknown error')}")
         
-        # Final fallback to Pinecone SDK
-        if assistant_ref:
+        # Final fallback to Pinecone SDK (only if fallbacks enabled)
+        if not DISABLE_FALLBACKS and assistant_ref:
             print("🔄 Falling back to Pinecone SDK...")
             try:
                 from pinecone_plugins.assistant.models.chat import Message
