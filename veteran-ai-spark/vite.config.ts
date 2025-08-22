@@ -3,6 +3,7 @@ import react from "@vitejs/plugin-react-swc";
 import path from "path";
 import { componentTagger } from "lovable-tagger";
 import { visualizer } from "rollup-plugin-visualizer";
+import { VitePWA } from "vite-plugin-pwa";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
@@ -14,6 +15,40 @@ export default defineConfig(({ mode }) => ({
     react(),
     mode === 'development' &&
     componentTagger(),
+    VitePWA({
+      registerType: "autoUpdate",
+      workbox: { 
+        globPatterns: ["**/*.{js,css,html,svg,png,woff2}"],
+        runtimeCaching: [{
+          urlPattern: /^https:\/\/veteransbenefits\.ai\/api\//,
+          handler: 'NetworkFirst',
+          options: {
+            cacheName: 'api-cache',
+            expiration: {
+              maxEntries: 50,
+              maxAgeSeconds: 5 * 60, // 5 minutes
+            },
+          },
+        }],
+      },
+      manifest: { 
+        name: "Veterans Benefits AI",
+        short_name: "VetBenefitsAI", 
+        description: "AI assistant for U.S. Veterans benefits navigation",
+        start_url: "/", 
+        display: "standalone",
+        background_color: "#0b0b0f",
+        theme_color: "#0b0b0f",
+        icons: [
+          {
+            src: "/logo.svg",
+            sizes: "any",
+            type: "image/svg+xml",
+            purpose: "any maskable"
+          }
+        ]
+      },
+    }),
   ].filter(Boolean),
   resolve: {
     alias: {
