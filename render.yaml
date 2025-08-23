@@ -4,7 +4,7 @@ databases:
 
 services:
   - type: web
-    name: veterans-benefits-ai
+    name: test2
     runtime: python
     plan: free
     buildCommand: pip install -r requirements.txt
