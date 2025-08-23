@@ -708,6 +708,13 @@ def query_direct_pinecone(prompt, index):
         
         print(f"📊 Querying Pinecone index with {len(query_vector)}-dimensional vector...")
         
+        # Check index stats first
+        try:
+            stats = index.describe_index_stats()
+            print(f"📊 Index stats: {stats}")
+        except Exception as e:
+            print(f"⚠️ Could not get index stats: {e}")
+        
         # Query Pinecone index
         results = index.query(
             vector=query_vector,
@@ -717,10 +724,23 @@ def query_direct_pinecone(prompt, index):
         
         if not results.matches:
             print("⚠️ No matches found in Pinecone index")
+            # Try a broader query with lower top_k to see if there's any data
+            print("🔍 Attempting broader query to check index status...")
+            test_results = index.query(
+                vector=query_vector,
+                top_k=1,
+                include_metadata=False
+            )
+            print(f"📊 Test query found {len(test_results.matches) if test_results.matches else 0} matches")
+            
             return {
                 'success': False,
                 'error': 'No matches found in knowledge base',
-                'error_type': 'NoMatchesFound'
+                'error_type': 'NoMatchesFound',
+                'debug_info': {
+                    'query_vector_length': len(query_vector),
+                    'test_query_matches': len(test_results.matches) if test_results.matches else 0
+                }
             }
             
         print(f"✅ Found {len(results.matches)} matches")
