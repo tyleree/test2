@@ -2415,7 +2415,7 @@ if __name__ == "__main__":
     print("🚀 Starting Veterans Benefits Assistant...")
     print(f"📁 Templates folder: {app.template_folder}")
     print(f"🔑 Pinecone API Key: {'✅ Set' if os.getenv('PINECONE_API_KEY') else '❌ Missing'}")
-    print(f"📊 Pinecone Index: {os.getenv('PINECONE_INDEX_NAME', 'veterans-benefits')}")
+    print(f"📊 Pinecone Index: {os.getenv('PINECONE_INDEX_NAME', 'veterans-benefits-kb')}")
     print(f"📍 Current working directory: {os.getcwd()}")
     print(f"📂 Files in current directory: {os.listdir('.') if os.path.exists('.') else 'Directory not accessible'}")
     print(f"🔗 MCP Endpoint: https://prod-1-data.ke.pinecone.io/mcp/assistants/vb")
