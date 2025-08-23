@@ -690,24 +690,158 @@ def query_direct_pinecone(prompt, index):
     """
     print(f"🔍 query_direct_pinecone called with prompt: '{prompt[:50]}...', index: {type(index)}")
     
-    # Quick test to return a simple success response for debugging
-    print("🧪 TESTING: Returning simple success response for debugging")
-    return {
-        'success': True,
-        'content': f"Test response for: {prompt}",
-        'citations': [],
-        'source': 'direct_pinecone_gpt4_test',
-        'metadata': {'model': 'test', 'chunks_used': 0},
-        'token_usage': {
-            'usage': {'prompt_tokens': 10, 'completion_tokens': 20, 'total_tokens': 30},
-            'model': 'gpt-4-test',
-            'provider': 'openai_direct'
+    try:
+        from openai import OpenAI
+        
+        # Initialize OpenAI client with proper v1.0+ syntax
+        client = OpenAI(api_key=OPENAI_API_KEY)
+        
+        print(f"🔍 Generating embedding for query: {prompt[:50]}...")
+        
+        # Generate embedding for the user's question
+        embed_response = client.embeddings.create(
+            model="text-embedding-3-small",
+            input=prompt,
+            dimensions=1024  # Match your index dimensions
+        )
+        query_vector = embed_response.data[0].embedding
+        
+        print(f"📊 Querying Pinecone index with {len(query_vector)}-dimensional vector...")
+        
+        # Query Pinecone index
+        results = index.query(
+            vector=query_vector,
+            top_k=5,
+            include_metadata=True
+        )
+        
+        if not results.matches:
+            print("⚠️ No matches found in Pinecone index")
+            return {
+                'success': False,
+                'error': 'No matches found in knowledge base',
+                'error_type': 'NoMatchesFound'
+            }
+            
+        print(f"✅ Found {len(results.matches)} matches")
+        for i, match in enumerate(results.matches):
+            print(f"  Match {i+1}: Score={match.score:.4f}, ID={match.id}")
+        
+        # Build context from top matches
+        context_chunks = []
+        context_text_parts = []
+        
+        for i, match in enumerate(results.matches):
+            if match.score > 0.02:  # Lower threshold based on our testing
+                # Extract text content from metadata
+                chunk_text = (
+                    match.metadata.get('context', '') or 
+                    match.metadata.get('text', '') or 
+                    match.metadata.get('preview', '')
+                )
+                
+                heading = match.metadata.get('heading', '')
+                source_url = match.metadata.get('source_url', 'https://veteransbenefitskb.com')
+                
+                if chunk_text:
+                    context_chunks.append({
+                        'text': chunk_text,
+                        'source_url': source_url,
+                        'score': match.score,
+                        'rank': i + 1,
+                        'heading': heading
+                    })
+                    
+                    # Include heading in context if available
+                    context_part = f"Section: {heading}\n{chunk_text}" if heading else chunk_text
+                    context_text_parts.append(f"Source {i+1}: {context_part}")
+        
+        if not context_chunks:
+            print("⚠️ No relevant chunks found (all below threshold)")
+            return {
+                'success': False,
+                'error': 'No relevant information found above threshold',
+                'error_type': 'BelowThreshold'
+            }
+            
+        # Limit context to top 3 chunks to avoid token limits
+        context_text = '\n\n'.join(context_text_parts[:3])
+        
+        print(f"🤖 Generating answer with GPT-4 using {len(context_chunks)} context chunks...")
+        
+        # Generate answer using GPT-4
+        response = client.chat.completions.create(
+            model="gpt-4",
+            messages=[
+                {
+                    "role": "system", 
+                    "content": """You are a Veterans Benefits AI assistant. Answer questions based only on the provided context from the 38 CFR (Code of Federal Regulations). 
+
+Instructions:
+- Be accurate and cite your sources
+- Only use information from the provided context
+- If the context doesn't contain enough information, say so
+- Provide detailed, helpful answers
+- Use a professional but friendly tone"""
+                },
+                {
+                    "role": "user", 
+                    "content": f"""Context from 38 CFR:
+{context_text}
+
+Question: {prompt}
+
+Please provide a detailed answer based on the context above."""
+                }
+            ],
+            temperature=0.3,
+            max_tokens=800,
+            top_p=1.0
+        )
+        
+        answer_content = response.choices[0].message.content
+        
+        print(f"✅ Generated answer with {len(answer_content)} characters")
+        
+        return {
+            'success': True,
+            'content': answer_content,
+            'citations': context_chunks,
+            'source': 'direct_pinecone_gpt4',
+            'metadata': {
+                'model': 'gpt-4',
+                'embedding_model': 'text-embedding-3-small',
+                'chunks_used': len(context_chunks),
+                'total_matches': len(results.matches),
+                'usage': {
+                    'prompt_tokens': response.usage.prompt_tokens,
+                    'completion_tokens': response.usage.completion_tokens,
+                    'total_tokens': response.usage.total_tokens
+                }
+            },
+            'token_usage': {
+                'usage': {
+                    'prompt_tokens': response.usage.prompt_tokens,
+                    'completion_tokens': response.usage.completion_tokens,
+                    'total_tokens': response.usage.total_tokens
+                },
+                'model': 'gpt-4',
+                'provider': 'openai_direct'
+            }
         }
-    }
-    
-    # Original code (temporarily commented out for debugging)
-    # All the complex OpenAI + Pinecone logic is temporarily disabled
-    # to test the routing logic first
+        
+    except Exception as e:
+        print(f"❌ Error in direct Pinecone query: {e}")
+        print(f"❌ Error type: {type(e)}")
+        import traceback
+        print(f"❌ Full traceback: {traceback.format_exc()}")
+        
+        return {
+            'success': False,
+            'error': str(e),
+            'error_type': type(e).__name__,
+            'traceback': traceback.format_exc()
+        }
 
 
 @app.route("/")
