@@ -689,6 +689,24 @@ def query_direct_pinecone(prompt, index):
         dict: Response with content, citations, and metadata
     """
     print(f"🔍 query_direct_pinecone called with prompt: '{prompt[:50]}...', index: {type(index)}")
+    
+    # Quick test to return a simple success response for debugging
+    print("🧪 TESTING: Returning simple success response for debugging")
+    return {
+        'success': True,
+        'content': f"Test response for: {prompt}",
+        'citations': [],
+        'source': 'direct_pinecone_gpt4_test',
+        'metadata': {'model': 'test', 'chunks_used': 0},
+        'token_usage': {
+            'usage': {'prompt_tokens': 10, 'completion_tokens': 20, 'total_tokens': 30},
+            'model': 'gpt-4-test',
+            'provider': 'openai_direct'
+        }
+    }
+    
+    # Original code (temporarily commented out for debugging)
+    """
     try:
         from openai import OpenAI
         
@@ -837,6 +855,7 @@ Please provide a detailed answer based on the context above."""
             'error_type': type(e).__name__,
             'traceback': traceback.format_exc()
         }
+    """
 
 
 @app.route("/")
