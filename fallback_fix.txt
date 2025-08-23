@@ -1,0 +1,33 @@
+        if not results.matches:
+            print("⚠️ No matches found in Pinecone index - providing fallback response")
+            
+            # Provide helpful fallback instead of error
+            fallback_response = f"""I apologize, but I couldn't find specific information in my knowledge base to answer your question about: "{prompt}"
+
+This could be due to:
+- Your question being very specific and not matching available content  
+- Technical issues with the search system
+
+For veterans benefits questions, I recommend:
+- Visiting VA.gov for official information
+- Contacting the VA directly at 1-800-827-1000
+- Consulting with a Veterans Service Officer
+
+I'm working to improve my knowledge base to better serve your needs."""
+
+            return {
+                'success': True,  # Return success with fallback
+                'content': fallback_response,
+                'citations': [],
+                'source': 'fallback_no_matches',
+                'metadata': {
+                    'model': 'fallback',
+                    'chunks_used': 0,
+                    'fallback_reason': 'no_matches_found'
+                },
+                'token_usage': {
+                    'usage': {'prompt_tokens': 0, 'completion_tokens': 0, 'total_tokens': 0},
+                    'model': 'fallback',
+                    'provider': 'openai_direct'
+                }
+            }

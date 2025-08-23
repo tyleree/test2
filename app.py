@@ -711,9 +711,23 @@ def query_direct_pinecone(prompt, index):
         # Check index stats first
         try:
             stats = index.describe_index_stats()
-            print(f"📊 Index stats: {stats}")
+            print(f"📊 DEBUGGING: Detailed index stats:")
+            print(f"  - Total vectors: {stats.get('total_vector_count', 'unknown')}")
+            print(f"  - Index fullness: {stats.get('index_fullness', 'unknown')}")
+            print(f"  - Dimension: {stats.get('dimension', 'unknown')}")
+            print(f"  - Namespaces: {stats.get('namespaces', {})}")
+            
+            # Check each namespace
+            namespaces = stats.get('namespaces', {})
+            for ns_name, ns_info in namespaces.items():
+                vector_count = ns_info.get('vector_count', 0)
+                print(f"  - Namespace '{ns_name}': {vector_count} vectors")
+                
         except Exception as e:
             print(f"⚠️ Could not get index stats: {e}")
+            print(f"⚠️ Error type: {type(e)}")
+            import traceback
+            print(f"⚠️ Traceback: {traceback.format_exc()}")
         
         # Query Pinecone index
         results = index.query(
@@ -724,22 +738,73 @@ def query_direct_pinecone(prompt, index):
         
         if not results.matches:
             print("⚠️ No matches found in Pinecone index")
-            # Try a broader query with lower top_k to see if there's any data
-            print("🔍 Attempting broader query to check index status...")
-            test_results = index.query(
-                vector=query_vector,
-                top_k=1,
+            print(f"🔍 DEBUGGING: Query details:")
+            print(f"  - Prompt: {prompt}")
+            print(f"  - Query vector length: {len(query_vector)}")
+            print(f"  - Query vector first 5 values: {query_vector[:5]}")
+            
+            # Try different query approaches for debugging
+            print("🔍 Testing different query approaches...")
+            
+            # Test 1: Try with different top_k values
+            for k in [1, 3, 10, 50]:
+                test_results = index.query(
+                    vector=query_vector,
+                    top_k=k,
+                    include_metadata=False
+                )
+                print(f"  - top_k={k}: {len(test_results.matches)} matches")
+                if test_results.matches:
+                    best_score = max(match.score for match in test_results.matches)
+                    worst_score = min(match.score for match in test_results.matches)
+                    print(f"    Score range: {worst_score:.6f} to {best_score:.6f}")
+                    break
+            
+            # Test 2: Try querying different namespaces
+            print("🔍 Testing namespaces...")
+            try:
+                # Try default namespace
+                ns_results = index.query(
+                    vector=query_vector,
+                    top_k=5,
+                    namespace="",
+                    include_metadata=False
+                )
+                print(f"  - Default namespace: {len(ns_results.matches)} matches")
+            except Exception as e:
+                print(f"  - Default namespace error: {e}")
+            
+            # Test 3: Try a completely different vector (zeros)
+            print("🔍 Testing with zero vector...")
+            zero_vector = [0.0] * 1024
+            zero_results = index.query(
+                vector=zero_vector,
+                top_k=5,
                 include_metadata=False
             )
-            print(f"📊 Test query found {len(test_results.matches) if test_results.matches else 0} matches")
+            print(f"  - Zero vector query: {len(zero_results.matches)} matches")
+            
+            # Test 4: Try a random vector
+            import random
+            print("🔍 Testing with random vector...")
+            random_vector = [random.random() for _ in range(1024)]
+            random_results = index.query(
+                vector=random_vector,
+                top_k=5,
+                include_metadata=False
+            )
+            print(f"  - Random vector query: {len(random_results.matches)} matches")
             
             return {
                 'success': False,
-                'error': 'No matches found in knowledge base',
+                'error': 'No matches found - see logs for detailed debugging info',
                 'error_type': 'NoMatchesFound',
                 'debug_info': {
                     'query_vector_length': len(query_vector),
-                    'test_query_matches': len(test_results.matches) if test_results.matches else 0
+                    'query_vector_sample': query_vector[:5],
+                    'prompt_length': len(prompt),
+                    'embedding_model': 'text-embedding-3-small',
+                    'embedding_dimensions': 1024
                 }
             }
             
@@ -1668,7 +1733,7 @@ def health():
         "mcp_endpoint": MCP_SERVER_URL,
         "mcp_api_key_configured": bool(MCP_API_KEY),
         "environment": os.getenv("FLASK_ENV", "production"),
-                    "endpoints": {
+        "endpoints": {
             "main": "/",
             "ask": "/ask",
             "health": "/health",
@@ -1686,7 +1751,7 @@ def health():
 def metrics():
     with stats_lock:
         stats = app.config['STATS']
-        return jsonify({
+    return jsonify({
             "ask_count": stats['ask_count'],
             "visit_count": stats['visit_count'],
             "unique_visitors": len(stats['unique_visitors']),
