@@ -26,5 +26,3 @@ services:
         sync: false
       - key: OPENAI_API_KEY
         sync: false
-      - key: PINECONE_INDEX_NAME
-        value: veterans-benefits-kb
