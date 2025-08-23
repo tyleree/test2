@@ -688,6 +688,7 @@ def query_direct_pinecone(prompt, index):
     Returns:
         dict: Response with content, citations, and metadata
     """
+    print(f"🔍 query_direct_pinecone called with prompt: '{prompt[:50]}...', index: {type(index)}")
     try:
         from openai import OpenAI
         
@@ -1450,7 +1451,9 @@ def ask():
         # Try direct Pinecone query first (cost-effective, high-performance)
         if index_ref and OPENAI_API_KEY:
             print(f"🚀 Attempting direct Pinecone + GPT-4 query for prompt: {prompt[:50]}...")
+            print(f"🔍 Debug: index_ref type: {type(index_ref)}, OPENAI_API_KEY: {'[REDACTED]' if OPENAI_API_KEY else 'None'}")
             direct_response = query_direct_pinecone(prompt, index_ref)
+            print(f"🔍 Debug: direct_response type: {type(direct_response)}, content: {direct_response}")
             if direct_response and direct_response.get("success"):
                 provider_used = 'openai_direct'
                 answer_content = direct_response["content"]
