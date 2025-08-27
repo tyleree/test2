@@ -80,10 +80,9 @@ const TimelineView = () => {
         params.append('cache_mode', cacheMode);
       }
 
-      // Temporarily fetch directly from FastAPI for development
-      const response = await fetch(`http://localhost:8000/admin/timeline?${params}`, {
+      const response = await fetch(`/api/analytics/timeline?${params}`, {
         headers: {
-          'Content-Type': 'application/json'
+          'X-Admin-Token': 'flip_ruby'
         }
       });
       if (!response.ok) throw new Error('Failed to fetch timeline');
@@ -478,10 +477,9 @@ const AdminAnalytics = () => {
     }
 
     try {
-      // Temporarily fetch directly from FastAPI for development
-      const response = await fetch(`http://localhost:8000/admin/analytics?token=${adminToken}`, {
+      const response = await fetch(`/api/analytics/stats?days=${days}`, {
         headers: {
-          'Content-Type': 'application/json'
+          'X-Admin-Token': adminToken
         }
       });
       

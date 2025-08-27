@@ -1,11 +1,11 @@
 # Render.com deployment configuration
 services:
   - type: web
-    name: veteran-ai-rag-pipeline
+    name: veteran-ai-spa-with-analytics
     env: python
     plan: starter  # Upgrade to standard/pro for production
-    buildCommand: "pip install -r requirements.txt"
-    startCommand: "uvicorn app.main:app --host 0.0.0.0 --port $PORT"
+    buildCommand: "pip install -r requirements.txt && npm install && npm run build"
+    startCommand: "python app.py"
     envVars:
       - key: PYTHON_VERSION
         value: 3.11
@@ -38,19 +38,4 @@ services:
       name: rag-cache-disk
       mountPath: /opt/render/project/data
       sizeGB: 1
-    healthCheckPath: /healthz
-    
-  # Optional: Separate Flask frontend service
-  - type: web
-    name: veteran-ai-frontend
-    env: python
-    plan: starter
-    buildCommand: "pip install -r ../requirements.txt"
-    startCommand: "python ../app.py"
-    rootDir: ./
-    envVars:
-      - key: PYTHON_VERSION
-        value: 3.11
-      - key: RAG_PIPELINE_URL
-        value: https://veteran-ai-rag-pipeline.onrender.com
     healthCheckPath: /
