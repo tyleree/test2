@@ -4,12 +4,387 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
-import { ArrowLeft, RefreshCw, Users, MessageSquare, Eye, TrendingUp, Globe, BarChart3, Calendar, Link, Cpu, Zap } from "lucide-react";
+import { ArrowLeft, RefreshCw, Users, MessageSquare, Eye, TrendingUp, Globe, BarChart3, Calendar, Link, Cpu, Zap, Clock, Hash, CheckCircle, XCircle, AlertCircle } from "lucide-react";
 import { Link as RouterLink, useSearchParams } from "react-router-dom";
 import { useToast } from "@/hooks/use-toast";
 
 // Lazy load heavy map component
 const USHeatMap = lazy(() => import("@/components/USHeatMap"));
+
+interface TimelineEntry {
+  id: number;
+  timestamp: string;
+  question: string;
+  question_hash: string;
+  cache_mode: string;
+  semantic_similarity?: number;
+  answer_preview: string;
+  citations_count: number;
+  token_usage: {
+    model_big?: string;
+    model_small?: string;
+    tokens_big?: number;
+    tokens_small?: number;
+    total_tokens?: number;
+  };
+  latency_ms: number;
+  retrieved_docs: number;
+  compressed_tokens: number;
+  final_tokens: number;
+  user_ip: string;
+  error_message: string;
+  created_at: string;
+}
+
+interface TimelineData {
+  status: string;
+  entries: TimelineEntry[];
+  stats: {
+    total_questions: number;
+    exact_hits: number;
+    semantic_hits: number;
+    cache_misses: number;
+    cache_hit_rate: number;
+    avg_latency: number;
+    total_tokens_used: number;
+    avg_similarity: number;
+    hourly_breakdown: Array<{
+      hour: string;
+      questions: number;
+      hits: number;
+    }>;
+  };
+  pagination: {
+    limit: number;
+    offset: number;
+    total_returned: number;
+  };
+}
+
+const TimelineView = () => {
+  const [timelineData, setTimelineData] = useState<TimelineData | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [filter, setFilter] = useState<string>('all');
+  const [selectedQuestion, setSelectedQuestion] = useState<TimelineEntry | null>(null);
+  const { toast } = useToast();
+
+  const fetchTimeline = async (cacheMode?: string) => {
+    try {
+      setLoading(true);
+      const params = new URLSearchParams({
+        limit: '50',
+        offset: '0'
+      });
+      
+      if (cacheMode && cacheMode !== 'all') {
+        params.append('cache_mode', cacheMode);
+      }
+
+      const response = await fetch(`/admin/timeline?${params}`);
+      if (!response.ok) throw new Error('Failed to fetch timeline');
+      
+      const data = await response.json();
+      setTimelineData(data);
+    } catch (error) {
+      console.error('Timeline fetch error:', error);
+      toast({
+        title: "Error",
+        description: "Failed to load timeline data",
+        variant: "destructive"
+      });
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  useEffect(() => {
+    fetchTimeline(filter === 'all' ? undefined : filter);
+  }, [filter]);
+
+  const getCacheModeIcon = (mode: string) => {
+    switch (mode) {
+      case 'exact_hit':
+        return <CheckCircle className="h-4 w-4 text-green-600" />;
+      case 'semantic_hit':
+        return <CheckCircle className="h-4 w-4 text-blue-600" />;
+      case 'miss':
+        return <XCircle className="h-4 w-4 text-red-600" />;
+      default:
+        return <AlertCircle className="h-4 w-4 text-gray-600" />;
+    }
+  };
+
+  const getCacheModeBadge = (mode: string) => {
+    switch (mode) {
+      case 'exact_hit':
+        return <Badge variant="default" className="bg-green-100 text-green-800">Exact Hit</Badge>;
+      case 'semantic_hit':
+        return <Badge variant="default" className="bg-blue-100 text-blue-800">Semantic Hit</Badge>;
+      case 'miss':
+        return <Badge variant="destructive">Cache Miss</Badge>;
+      default:
+        return <Badge variant="secondary">Unknown</Badge>;
+    }
+  };
+
+  const formatTimestamp = (timestamp: string) => {
+    return new Date(timestamp).toLocaleString();
+  };
+
+  const formatTokens = (tokens: number) => {
+    return tokens?.toLocaleString() || '0';
+  };
+
+  if (loading) {
+    return (
+      <div className="flex items-center justify-center py-8">
+        <RefreshCw className="h-6 w-6 animate-spin mr-2" />
+        Loading timeline...
+      </div>
+    );
+  }
+
+  return (
+    <div className="space-y-6">
+      {/* Timeline Stats */}
+      {timelineData?.stats && (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+          <Card>
+            <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+              <CardTitle className="text-sm font-medium">Total Questions</CardTitle>
+              <MessageSquare className="h-4 w-4 text-muted-foreground" />
+            </CardHeader>
+            <CardContent>
+              <div className="text-2xl font-bold">{timelineData.stats.total_questions}</div>
+              <p className="text-xs text-muted-foreground">Last 24 hours</p>
+            </CardContent>
+          </Card>
+
+          <Card>
+            <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+              <CardTitle className="text-sm font-medium">Cache Hit Rate</CardTitle>
+              <Zap className="h-4 w-4 text-muted-foreground" />
+            </CardHeader>
+            <CardContent>
+              <div className="text-2xl font-bold text-green-600">
+                {timelineData.stats.cache_hit_rate?.toFixed(1) || 0}%
+              </div>
+              <p className="text-xs text-muted-foreground">
+                {(timelineData.stats.exact_hits || 0) + (timelineData.stats.semantic_hits || 0)} hits
+              </p>
+            </CardContent>
+          </Card>
+
+          <Card>
+            <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+              <CardTitle className="text-sm font-medium">Avg Latency</CardTitle>
+              <Clock className="h-4 w-4 text-muted-foreground" />
+            </CardHeader>
+            <CardContent>
+              <div className="text-2xl font-bold text-blue-600">
+                {Math.round(timelineData.stats.avg_latency || 0)}ms
+              </div>
+              <p className="text-xs text-muted-foreground">Response time</p>
+            </CardContent>
+          </Card>
+
+          <Card>
+            <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+              <CardTitle className="text-sm font-medium">Tokens Used</CardTitle>
+              <Hash className="h-4 w-4 text-muted-foreground" />
+            </CardHeader>
+            <CardContent>
+              <div className="text-2xl font-bold text-purple-600">
+                {formatTokens(timelineData.stats.total_tokens_used)}
+              </div>
+              <p className="text-xs text-muted-foreground">Total consumption</p>
+            </CardContent>
+          </Card>
+        </div>
+      )}
+
+      {/* Filters */}
+      <Card>
+        <CardHeader>
+          <CardTitle>Question Timeline</CardTitle>
+          <CardDescription>
+            Comprehensive view of all questions, cache performance, and token usage
+          </CardDescription>
+        </CardHeader>
+        <CardContent>
+          <div className="flex gap-2 mb-4">
+            <Button
+              variant={filter === 'all' ? 'default' : 'outline'}
+              size="sm"
+              onClick={() => setFilter('all')}
+            >
+              All Questions
+            </Button>
+            <Button
+              variant={filter === 'exact_hit' ? 'default' : 'outline'}
+              size="sm"
+              onClick={() => setFilter('exact_hit')}
+            >
+              Exact Hits
+            </Button>
+            <Button
+              variant={filter === 'semantic_hit' ? 'default' : 'outline'}
+              size="sm"
+              onClick={() => setFilter('semantic_hit')}
+            >
+              Semantic Hits
+            </Button>
+            <Button
+              variant={filter === 'miss' ? 'default' : 'outline'}
+              size="sm"
+              onClick={() => setFilter('miss')}
+            >
+              Cache Misses
+            </Button>
+          </div>
+
+          {/* Timeline Table */}
+          <div className="rounded-md border">
+            <Table>
+              <TableHeader>
+                <TableRow>
+                  <TableHead>Timestamp</TableHead>
+                  <TableHead>Question</TableHead>
+                  <TableHead>Cache Mode</TableHead>
+                  <TableHead>Similarity</TableHead>
+                  <TableHead>Latency</TableHead>
+                  <TableHead>Tokens</TableHead>
+                  <TableHead>Citations</TableHead>
+                  <TableHead>Actions</TableHead>
+                </TableRow>
+              </TableHeader>
+              <TableBody>
+                {timelineData?.entries?.map((entry) => (
+                  <TableRow key={entry.id}>
+                    <TableCell className="text-sm">
+                      {formatTimestamp(entry.timestamp)}
+                    </TableCell>
+                    <TableCell className="max-w-md">
+                      <div className="truncate" title={entry.question}>
+                        {entry.question}
+                      </div>
+                      {entry.answer_preview && (
+                        <div className="text-xs text-muted-foreground mt-1 truncate">
+                          {entry.answer_preview}
+                        </div>
+                      )}
+                    </TableCell>
+                    <TableCell>
+                      <div className="flex items-center gap-2">
+                        {getCacheModeIcon(entry.cache_mode)}
+                        {getCacheModeBadge(entry.cache_mode)}
+                      </div>
+                    </TableCell>
+                    <TableCell>
+                      {entry.semantic_similarity ? (
+                        <Badge variant="outline">
+                          {(entry.semantic_similarity * 100).toFixed(1)}%
+                        </Badge>
+                      ) : (
+                        <span className="text-muted-foreground">-</span>
+                      )}
+                    </TableCell>
+                    <TableCell>
+                      <Badge variant="outline" className="text-xs">
+                        {entry.latency_ms}ms
+                      </Badge>
+                    </TableCell>
+                    <TableCell>
+                      <div className="text-sm">
+                        <div className="font-medium">
+                          {formatTokens(entry.token_usage?.total_tokens || 0)}
+                        </div>
+                        {entry.token_usage?.tokens_big && (
+                          <div className="text-xs text-muted-foreground">
+                            Big: {formatTokens(entry.token_usage.tokens_big)}
+                          </div>
+                        )}
+                      </div>
+                    </TableCell>
+                    <TableCell>
+                      <Badge variant="outline">
+                        {entry.citations_count}
+                      </Badge>
+                    </TableCell>
+                    <TableCell>
+                      <Button
+                        variant="ghost"
+                        size="sm"
+                        onClick={() => setSelectedQuestion(entry)}
+                      >
+                        <Eye className="h-4 w-4" />
+                      </Button>
+                    </TableCell>
+                  </TableRow>
+                ))}
+              </TableBody>
+            </Table>
+          </div>
+
+          {(!timelineData?.entries || timelineData.entries.length === 0) && (
+            <div className="text-center py-8 text-muted-foreground">
+              No questions found for the selected filter.
+            </div>
+          )}
+        </CardContent>
+      </Card>
+
+      {/* Question Details Modal/Dialog would go here */}
+      {selectedQuestion && (
+        <Card className="mt-4">
+          <CardHeader>
+            <CardTitle>Question Details</CardTitle>
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={() => setSelectedQuestion(null)}
+              className="absolute top-4 right-4"
+            >
+              ✕
+            </Button>
+          </CardHeader>
+          <CardContent className="space-y-4">
+            <div>
+              <label className="font-medium">Question:</label>
+              <p className="mt-1">{selectedQuestion.question}</p>
+            </div>
+            <div>
+              <label className="font-medium">Answer Preview:</label>
+              <p className="mt-1 text-sm text-muted-foreground">{selectedQuestion.answer_preview}</p>
+            </div>
+            <div className="grid grid-cols-2 gap-4">
+              <div>
+                <label className="font-medium">Cache Mode:</label>
+                <div className="mt-1">{getCacheModeBadge(selectedQuestion.cache_mode)}</div>
+              </div>
+              <div>
+                <label className="font-medium">Latency:</label>
+                <p className="mt-1">{selectedQuestion.latency_ms}ms</p>
+              </div>
+            </div>
+            <div>
+              <label className="font-medium">Token Usage:</label>
+              <div className="mt-1 text-sm space-y-1">
+                <div>Total: {formatTokens(selectedQuestion.token_usage?.total_tokens || 0)}</div>
+                {selectedQuestion.token_usage?.tokens_big && (
+                  <div>Big Model: {formatTokens(selectedQuestion.token_usage.tokens_big)}</div>
+                )}
+                {selectedQuestion.token_usage?.tokens_small && (
+                  <div>Small Model: {formatTokens(selectedQuestion.token_usage.tokens_small)}</div>
+                )}
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+      )}
+    </div>
+  );
+};
 
 interface AnalyticsData {
   totals: {
@@ -261,7 +636,7 @@ const AdminAnalytics = () => {
 
         {analytics && (
           <Tabs defaultValue="overview" className="space-y-6">
-            <TabsList className="grid w-full grid-cols-5">
+            <TabsList className="grid w-full grid-cols-6">
               <TabsTrigger value="overview">Overview</TabsTrigger>
               <TabsTrigger value="locations">Locations</TabsTrigger>
               <TabsTrigger value="traffic">Traffic</TabsTrigger>
@@ -925,6 +1300,10 @@ const AdminAnalytics = () => {
                   </Table>
                 </CardContent>
               </Card>
+            </TabsContent>
+
+            <TabsContent value="timeline" className="space-y-6">
+              <TimelineView />
             </TabsContent>
           </Tabs>
         )}

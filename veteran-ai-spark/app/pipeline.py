@@ -22,6 +22,7 @@ from .compress import compressor
 from .answer import answer_generator
 from .validators import validator, UseCache
 from .metrics import metrics
+from .timeline import timeline, TimelineEntry
 
 logger = logging.getLogger(__name__)
 
@@ -62,6 +63,9 @@ class RAGPipeline:
                     exact_hit, "exact", start_time
                 )
                 self.metrics.record_cache_hit("exact")
+                
+                # Log to timeline
+                self._log_to_timeline(question, q_hash, result, "exact_hit", start_time)
                 return result
             
             # Step 2: Check semantic cache
@@ -72,6 +76,10 @@ class RAGPipeline:
                     semantic_result, "semantic", start_time
                 )
                 self.metrics.record_cache_hit("semantic")
+                
+                # Log to timeline with semantic similarity
+                self._log_to_timeline(question, q_hash, result, "semantic_hit", start_time, 
+                                    semantic_similarity=getattr(semantic_result, 'similarity', None))
                 return result
             
             # Step 3: Full pipeline execution
@@ -81,6 +89,9 @@ class RAGPipeline:
             )
             
             self.metrics.record_cache_miss()
+            
+            # Log to timeline
+            self._log_to_timeline(question, q_hash, result, "miss", start_time)
             return result
             
         except Exception as e:
@@ -322,6 +333,54 @@ class RAGPipeline:
                 "compress_budget_tokens": settings.compress_budget_tokens
             }
         }
+    
+    def _log_to_timeline(
+        self, 
+        question: str, 
+        question_hash: str, 
+        result: AnswerPayload, 
+        cache_mode: str, 
+        start_time: float,
+        semantic_similarity: float = None,
+        user_ip: str = "",
+        retrieved_docs: int = 0,
+        compressed_tokens: int = 0
+    ):
+        """Log question and response to timeline."""
+        try:
+            # Extract token usage details
+            token_usage_dict = {}
+            if result.token_usage:
+                token_usage_dict = {
+                    "model_big": result.token_usage.model_big,
+                    "model_small": result.token_usage.model_small,
+                    "tokens_big": result.token_usage.tokens_big,
+                    "tokens_small": result.token_usage.tokens_small,
+                    "total_tokens": result.token_usage.total_tokens
+                }
+            
+            # Create timeline entry
+            entry = TimelineEntry(
+                question=question,
+                question_hash=question_hash,
+                cache_mode=cache_mode,
+                semantic_similarity=semantic_similarity,
+                answer_preview=result.answer[:200] if result.answer else "",
+                citations_count=len(result.citations),
+                token_usage=token_usage_dict,
+                latency_ms=result.latency_ms,
+                retrieved_docs=retrieved_docs,
+                compressed_tokens=compressed_tokens,
+                final_tokens=token_usage_dict.get("total_tokens", 0),
+                user_ip=user_ip,
+                error_message=""
+            )
+            
+            # Log to timeline database
+            timeline.log_question(entry)
+            
+        except Exception as e:
+            logger.error(f"Failed to log to timeline: {e}")
 
 
 # Global pipeline instance

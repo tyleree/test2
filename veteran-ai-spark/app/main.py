@@ -18,6 +18,7 @@ from .pipeline import pipeline
 from .cache import cache
 from .metrics import metrics
 from .validators import validator
+from .timeline import timeline
 
 # Set up logging
 logging.basicConfig(
@@ -236,6 +237,92 @@ async def get_admin_analytics(_: bool = Depends(verify_admin_token)):
     except Exception as e:
         logger.error(f"Admin analytics retrieval failed: {e}")
         raise HTTPException(status_code=500, detail="Failed to retrieve admin analytics")
+
+
+@app.get("/admin/timeline")
+async def get_timeline(
+    limit: int = 100,
+    offset: int = 0,
+    cache_mode: str = None,
+    date_from: str = None,
+    date_to: str = None,
+    _: bool = Depends(verify_admin_token)
+):
+    """
+    Get comprehensive timeline of all questions and responses.
+    
+    Query parameters:
+    - limit: Maximum number of entries to return (default: 100)
+    - offset: Number of entries to skip (default: 0)
+    - cache_mode: Filter by cache mode (exact_hit, semantic_hit, miss)
+    - date_from: ISO format date string (e.g., "2024-01-01T00:00:00Z")
+    - date_to: ISO format date string
+    """
+    try:
+        entries = timeline.get_timeline(
+            limit=min(limit, 500),  # Cap at 500 for performance
+            offset=offset,
+            cache_mode_filter=cache_mode,
+            date_from=date_from,
+            date_to=date_to
+        )
+        
+        stats = timeline.get_timeline_stats(hours=24)
+        
+        return {
+            "status": "ok",
+            "entries": entries,
+            "stats": stats,
+            "pagination": {
+                "limit": limit,
+                "offset": offset,
+                "total_returned": len(entries)
+            }
+        }
+    
+    except Exception as e:
+        logger.error(f"Timeline retrieval failed: {e}")
+        raise HTTPException(status_code=500, detail="Failed to retrieve timeline")
+
+
+@app.get("/admin/timeline/{question_id}")
+async def get_question_details(
+    question_id: int,
+    _: bool = Depends(verify_admin_token)
+):
+    """Get detailed information for a specific question."""
+    try:
+        details = timeline.get_question_details(question_id)
+        if not details:
+            raise HTTPException(status_code=404, detail="Question not found")
+        
+        return {
+            "status": "ok",
+            "question": details
+        }
+    
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.error(f"Question details retrieval failed: {e}")
+        raise HTTPException(status_code=500, detail="Failed to retrieve question details")
+
+
+@app.get("/timeline/stats")
+async def get_timeline_stats(hours: int = 24):
+    """Get public timeline statistics (no auth required)."""
+    try:
+        stats = timeline.get_timeline_stats(hours=min(hours, 168))  # Cap at 1 week
+        
+        return {
+            "status": "ok",
+            "stats": stats,
+            "period_hours": hours
+        }
+    
+    except Exception as e:
+        logger.error(f"Timeline stats retrieval failed: {e}")
+        raise HTTPException(status_code=500, detail="Failed to retrieve timeline stats")
 
 
 @app.post("/admin/cache/invalidate")
