@@ -6,7 +6,7 @@ Tracks every question, cache hits, token usage, and performance metrics.
 import sqlite3
 import logging
 import json
-from datetime import datetime
+from datetime import datetime, timedelta
 from typing import List, Dict, Any, Optional
 from dataclasses import dataclass, asdict, field
 from contextlib import contextmanager
@@ -199,7 +199,7 @@ class TimelineTracker:
         """Get timeline statistics for the last N hours."""
         try:
             cutoff = datetime.utcnow().replace(microsecond=0)
-            cutoff = (cutoff - datetime.timedelta(hours=hours)).isoformat()
+            cutoff = (cutoff - timedelta(hours=hours)).isoformat()
             
             with self._get_connection() as conn:
                 # Basic stats

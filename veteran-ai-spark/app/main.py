@@ -5,7 +5,7 @@ FastAPI main application for RAG pipeline with multi-layer semantic caching.
 import logging
 import os
 from typing import Dict, Any
-from fastapi import FastAPI, HTTPException, Header, Depends
+from fastapi import FastAPI, HTTPException, Header, Depends, Query
 from fastapi.middleware.cors import CORSMiddleware
 import uvicorn
 
@@ -47,12 +47,19 @@ app.add_middleware(
 
 
 # Dependency for admin authentication
-def verify_admin_token(x_admin_token: str = Header(None)) -> bool:
-    """Verify admin token for protected endpoints."""
+def verify_admin_token(
+    x_admin_token: str = Header(None),
+    token: str = Query(None)
+) -> bool:
+    """Verify admin token for protected endpoints. Accepts token via header or query parameter."""
     if not settings.admin_token:
-        raise HTTPException(status_code=501, detail="Admin token not configured")
+        # For development, allow access if no admin token is configured
+        return True
     
-    if x_admin_token != settings.admin_token:
+    # Check both header and query parameter
+    provided_token = x_admin_token or token
+    
+    if provided_token != settings.admin_token:
         raise HTTPException(status_code=401, detail="Invalid admin token")
     
     return True

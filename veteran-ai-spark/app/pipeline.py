@@ -351,13 +351,18 @@ class RAGPipeline:
             # Extract token usage details
             token_usage_dict = {}
             if result.token_usage:
-                token_usage_dict = {
-                    "model_big": result.token_usage.model_big,
-                    "model_small": result.token_usage.model_small,
-                    "tokens_big": result.token_usage.tokens_big,
-                    "tokens_small": result.token_usage.tokens_small,
-                    "total_tokens": result.token_usage.total_tokens
-                }
+                # Convert Pydantic model to dict
+                if hasattr(result.token_usage, 'dict'):
+                    token_usage_dict = result.token_usage.dict()
+                else:
+                    # Fallback for direct dict access
+                    token_usage_dict = {
+                        "model_big": getattr(result.token_usage, 'model_big', ''),
+                        "model_small": getattr(result.token_usage, 'model_small', ''),
+                        "tokens_big": getattr(result.token_usage, 'tokens_big', 0),
+                        "tokens_small": getattr(result.token_usage, 'tokens_small', 0),
+                        "total_tokens": getattr(result.token_usage, 'total_tokens', 0)
+                    }
             
             # Create timeline entry
             entry = TimelineEntry(
