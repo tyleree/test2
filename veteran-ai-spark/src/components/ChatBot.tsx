@@ -40,7 +40,7 @@ export const ChatBot = () => {
       const res = await fetch('/ask', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ prompt: userMessage.content })
+        body: JSON.stringify({ question: userMessage.content })
       });
 
       if (!res.ok) {
