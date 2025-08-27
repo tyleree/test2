@@ -8,8 +8,8 @@ import { ArrowLeft, RefreshCw, Users, MessageSquare, Eye, TrendingUp, Globe, Bar
 import { Link as RouterLink, useSearchParams } from "react-router-dom";
 import { useToast } from "@/hooks/use-toast";
 
-// Lazy load heavy map component
-const USHeatMap = lazy(() => import("@/components/USHeatMap"));
+// USHeatMap removed due to CSP issues in production
+// const USHeatMap = lazy(() => import("@/components/USHeatMap"));
 
 interface TimelineEntry {
   id: number;
