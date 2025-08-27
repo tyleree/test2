@@ -80,7 +80,12 @@ const TimelineView = () => {
         params.append('cache_mode', cacheMode);
       }
 
-      const response = await fetch(`/admin/timeline?${params}`);
+      // Temporarily fetch directly from FastAPI for development
+      const response = await fetch(`http://localhost:8000/admin/timeline?${params}`, {
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      });
       if (!response.ok) throw new Error('Failed to fetch timeline');
       
       const data = await response.json();
@@ -473,9 +478,10 @@ const AdminAnalytics = () => {
     }
 
     try {
-      const response = await fetch(`/api/analytics/stats?days=${days}`, {
+      // Temporarily fetch directly from FastAPI for development
+      const response = await fetch(`http://localhost:8000/admin/analytics?token=${adminToken}`, {
         headers: {
-          'X-Admin-Token': adminToken
+          'Content-Type': 'application/json'
         }
       });
       
