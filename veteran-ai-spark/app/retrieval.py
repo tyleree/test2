@@ -27,10 +27,17 @@ class DocumentRetriever:
     
     def _embed_query(self, query: str) -> List[float]:
         """Generate embedding for query using OpenAI."""
-        response = self.openai_client.embeddings.create(
-            model="text-embedding-ada-002",
-            input=query
-        )
+        # Use configurable embedding model to match Pinecone index dimensions
+        embed_params = {
+            "model": settings.embedding_model,
+            "input": query
+        }
+        
+        # For text-embedding-3-large, we can specify dimensions to match Pinecone
+        if settings.embedding_model == "text-embedding-3-large":
+            embed_params["dimensions"] = 1024  # Match typical Pinecone index
+        
+        response = self.openai_client.embeddings.create(**embed_params)
         return response.data[0].embedding
     
     def _rewrite_query(self, query: str) -> List[str]:
@@ -228,6 +235,12 @@ class DocumentRetriever:
 
 # Global retriever instance
 retriever = DocumentRetriever()
+
+
+
+
+
+
 
 
 

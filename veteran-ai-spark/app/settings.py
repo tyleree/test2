@@ -24,9 +24,12 @@ class Settings(BaseSettings):
     model_big: str = "gpt-4o"
     model_small: str = "gpt-4o-mini"
     
-    # Cache Configuration
-    cache_db_path: str = "data/cache.sqlite"
-    faiss_path: str = "data/query_cache.faiss"
+    # Embedding Model Configuration
+    embedding_model: str = "text-embedding-3-small"  # 1536D -> matches Pinecone or use text-embedding-3-large for 1024D
+    
+    # Cache Configuration (production-ready paths)
+    cache_db_path: str = "data/cache.sqlite"  # Override with CACHE_DB_PATH for production
+    faiss_path: str = "data/query_cache.faiss"  # Override with FAISS_PATH for production
     
     # Similarity Thresholds (tuneable defaults)
     sim_threshold: float = 0.92  # cosine similarity for semantic hits

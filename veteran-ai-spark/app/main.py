@@ -15,7 +15,7 @@ from .schemas import (
     ClearCacheResponse, HealthResponse, MetricsData
 )
 from .pipeline import pipeline
-from .cache_simple import cache
+from .cache import cache
 from .metrics import metrics
 from .validators import validator
 

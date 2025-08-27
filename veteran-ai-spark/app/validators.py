@@ -9,8 +9,8 @@ from enum import Enum
 from .settings import settings
 from .utils import jaccard_overlap, hash_string
 from .schemas import CacheEntry
-from .cache_simple import cache
-from .retrieval_simple import retriever
+from .cache import cache
+from .retrieval import retriever
 
 logger = logging.getLogger(__name__)
 
