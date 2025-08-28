@@ -12,8 +12,8 @@ services:
         sync: false
       - key: PINECONE_API_KEY  
         sync: false
-      - key: PINECONE_INDEX
-        value: veteran-rag
+      - key: PINECONE_INDEX_NAME
+        value: thriving-walnut
       - key: PINECONE_NAMESPACE
         value: production
       - key: SECRET_KEY
