@@ -748,29 +748,52 @@ def query_direct_pinecone_original(prompt, index):
     try:
         from openai import OpenAI
         
-        # Initialize OpenAI client with explicit timeout and max_retries
-        # Try different initialization methods to avoid the proxies issue
+        # Initialize OpenAI client - minimal approach to avoid proxies issue
         try:
-            client = OpenAI(
-                api_key=OPENAI_API_KEY,
-                timeout=60.0,
-                max_retries=3
-            )
+            # Try the most basic initialization first
+            client = OpenAI(api_key=OPENAI_API_KEY)
         except TypeError as e:
             if 'proxies' in str(e):
-                print("🔄 Trying alternative OpenAI client initialization...")
-                client = OpenAI(api_key=OPENAI_API_KEY)
+                print("🔄 Trying httpx client bypass...")
+                # Try to initialize with explicit httpx client that doesn't have proxies
+                import httpx
+                try:
+                    http_client = httpx.Client(timeout=60.0)
+                    client = OpenAI(api_key=OPENAI_API_KEY, http_client=http_client)
+                except Exception as e2:
+                    print(f"❌ httpx client approach failed: {e2}")
+                    # Last resort - try with environment variable approach
+                    import os
+                    os.environ.pop('HTTP_PROXY', None)
+                    os.environ.pop('HTTPS_PROXY', None)
+                    os.environ.pop('http_proxy', None)
+                    os.environ.pop('https_proxy', None)
+                    client = OpenAI(api_key=OPENAI_API_KEY)
             else:
                 raise
         
         print(f"🔍 Generating embedding for query: {prompt[:50]}...")
         
         # Generate embedding for the user's question
-        embed_response = client.embeddings.create(
-            model="text-embedding-3-small",
-            input=prompt,
-            dimensions=1024  # Match your index dimensions
-        )
+        # Try text-embedding-3-large which supports custom dimensions
+        try:
+            embed_response = client.embeddings.create(
+                model="text-embedding-3-large",
+                input=prompt,
+                dimensions=1024  # Match the Pinecone index
+            )
+        except (TypeError, Exception) as e:
+            print(f"🔄 text-embedding-3-large failed ({e}), trying fallback...")
+            # Fallback to ada-002 and truncate if needed
+            embed_response = client.embeddings.create(
+                model="text-embedding-ada-002",
+                input=prompt
+            )
+            # Truncate to 1024 dimensions if needed
+            full_embedding = embed_response.data[0].embedding
+            if len(full_embedding) > 1024:
+                print(f"🔧 Truncating embedding from {len(full_embedding)} to 1024 dimensions")
+                embed_response.data[0].embedding = full_embedding[:1024]
         query_vector = embed_response.data[0].embedding
         
         print(f"📊 Querying Pinecone index with {len(query_vector)}-dimensional vector...")
@@ -799,7 +822,7 @@ def query_direct_pinecone_original(prompt, index):
         # Query Pinecone index
         results = index.query(
             vector=query_vector,
-            top_k=5,
+            top_k=25,  # INCREASED: Get more results to improve chances of finding relevant content
             include_metadata=True
         )
         
@@ -884,7 +907,7 @@ def query_direct_pinecone_original(prompt, index):
         context_text_parts = []
         
         for i, match in enumerate(results.matches):
-            if match.score > 0.02:  # Lower threshold based on our testing
+            if match.score > 0.005:  # LOWERED: Even more lenient threshold to catch more potentially relevant content
                 # Extract text content from metadata
                 chunk_text = (
                     match.metadata.get('context', '') or 
@@ -916,8 +939,8 @@ def query_direct_pinecone_original(prompt, index):
                 'error_type': 'BelowThreshold'
             }
             
-        # Limit context to top 3 chunks to avoid token limits
-        context_text = '\n\n'.join(context_text_parts[:3])
+        # Limit context to top 8 chunks to provide more comprehensive information
+        context_text = '\n\n'.join(context_text_parts[:8])
         
         print(f"🤖 Generating answer with GPT-4 using {len(context_chunks)} context chunks...")
         
