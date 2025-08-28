@@ -869,10 +869,17 @@ def query_thriving_walnut_system(prompt, index):
         citations = []
         
         for i, match in enumerate(results.matches):
-            if match.score > 0.1:  # Reasonable threshold for semantic similarity
-                metadata = match.metadata or {}
-                text_content = metadata.get('text', '')
-                
+            metadata = match.metadata or {}
+            text_content = metadata.get('text', '')
+            
+            print(f"Match {i+1}: Score={match.score:.4f}, ID={match.id}")
+            print(f"  - Has metadata: {bool(metadata)}")
+            print(f"  - Text content length: {len(text_content) if text_content else 0}")
+            print(f"  - Heading: {metadata.get('heading', 'N/A')[:50]}...")
+            print(f"  - Metadata keys: {list(metadata.keys()) if metadata else []}")
+            
+            # Use a more permissive threshold for semantic vectors
+            if match.score > 0.01:  # Very low threshold for semantic similarity
                 if text_content:
                     context_chunks.append({
                         'text': text_content,
@@ -888,8 +895,10 @@ def query_thriving_walnut_system(prompt, index):
                         'rank': i + 1,
                         'heading': metadata.get('heading', 'Unknown Section')
                     })
-                
-                print(f"Match {i+1}: Score={match.score:.4f}, ID={match.id}, Heading={metadata.get('heading', 'N/A')[:50]}...")
+                else:
+                    print(f"  ⚠️ Match {i+1} has no text content in metadata")
+            else:
+                print(f"  ⚠️ Match {i+1} below score threshold ({match.score:.4f} < 0.01)")
         
         if not context_chunks:
             print("⚠️ No valid content found in matches")
