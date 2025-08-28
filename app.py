@@ -799,7 +799,7 @@ Answer:"""
         # Fallback to a simple context-based response
         return f"Based on the available information: {context[:500]}..."
 
-def query_thriving_walnut_system(prompt, index):
+def query_advanced_rag_system(prompt, index):
     """
     THRIVING WALNUT SYSTEM: Query using semantic vectors and metadata search.
     No external embedding API required - uses pre-generated semantic vectors.
@@ -811,15 +811,36 @@ def query_thriving_walnut_system(prompt, index):
     Returns:
         dict: Response with content, citations, and metadata
     """
-    print(f"🥜 THRIVING WALNUT SYSTEM: Processing query: '{prompt[:50]}...'")
+    print(f"🚀 ADVANCED RAG SYSTEM: Processing query: '{prompt[:50]}...'")
     
     try:
-        # Import medical term expansion
+        # Initialize OpenAI client for embeddings and GPT
+        from openai import OpenAI
+        try:
+            client = OpenAI(api_key=OPENAI_API_KEY)
+        except TypeError as e:
+            if 'proxies' in str(e):
+                print("🔄 OpenAI client proxies issue, trying httpx bypass...")
+                import httpx
+                try:
+                    http_client = httpx.Client(timeout=60.0)
+                    client = OpenAI(api_key=OPENAI_API_KEY, http_client=http_client)
+                except Exception as e2:
+                    print(f"❌ httpx client failed: {e2}")
+                    import os
+                    os.environ.pop('HTTP_PROXY', None)
+                    os.environ.pop('HTTPS_PROXY', None)
+                    os.environ.pop('http_proxy', None)
+                    os.environ.pop('https_proxy', None)
+                    client = OpenAI(api_key=OPENAI_API_KEY)
+            else:
+                raise
+        
+        # Import and initialize the advanced RAG system
         import sys
         import os
         sys.path.insert(0, os.path.dirname(__file__))
-        
-        from medical_terms import expand_medical_query
+        from rag_system import AdvancedRAGSystem
         import random
         import hashlib
         
@@ -1855,7 +1876,7 @@ def ask():
         if index_ref and OPENAI_API_KEY:
             print(f"🚀 Attempting direct Pinecone + GPT-4 query for prompt: {prompt[:50]}...")
             print(f"🔍 Debug: index_ref type: {type(index_ref)}, OPENAI_API_KEY: {'[REDACTED]' if OPENAI_API_KEY else 'None'}")
-            direct_response = query_thriving_walnut_system(prompt, index_ref)
+            direct_response = query_advanced_rag_system(prompt, index_ref)
             print(f"🔍 Debug: direct_response type: {type(direct_response)}, content: {direct_response}")
             if direct_response and direct_response.get("success"):
                 provider_used = 'openai_direct'
@@ -2654,7 +2675,7 @@ def debug_direct():
             embed_success = False
             embed_error = str(e)
         
-        result = query_thriving_walnut_system(prompt, index_ref)
+        result = query_advanced_rag_system(prompt, index_ref)
         
         if result:
             return jsonify({
