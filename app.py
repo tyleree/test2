@@ -458,7 +458,8 @@ try:
     
     # Try to get the index for direct queries
     try:
-        index_name = os.getenv("PINECONE_INDEX_NAME", "thriving-walnut")
+        # FORCE thriving-walnut index - override any environment variable
+        index_name = "thriving-walnut"  # os.getenv("PINECONE_INDEX_NAME", "thriving-walnut")
         index = pc.Index(index_name)
         app.config['PINECONE_INDEX'] = index
         print(f"✅ Pinecone Index '{index_name}' connected successfully")
@@ -469,7 +470,7 @@ try:
         
     except Exception as e:
         print(f"❌ Error connecting to Pinecone index: {e}")
-        print(f"🔍 Attempted index name: {os.getenv('PINECONE_INDEX_NAME', 'thriving-walnut')}")
+        print(f"🔍 FORCED index name: thriving-walnut (overriding env vars)")
         index = None
     
     # Try to initialize MCP assistant (optional, fallback to direct index queries)
@@ -2761,7 +2762,7 @@ if __name__ == "__main__":
     print(f"🥜 THRIVING-WALNUT VERSION - Updated Environment Check")
     print(f"📁 Templates folder: {app.template_folder}")
     print(f"🔑 Pinecone API Key: {'✅ Set' if os.getenv('PINECONE_API_KEY') else '❌ Missing'}")
-    print(f"📊 Pinecone Index: {os.getenv('PINECONE_INDEX_NAME', 'thriving-walnut')}")
+    print(f"📊 Pinecone Index: thriving-walnut (HARDCODED - bypassing env vars)")
     print(f"📍 Current working directory: {os.getcwd()}")
     print(f"📂 Files in current directory: {os.listdir('.') if os.path.exists('.') else 'Directory not accessible'}")
     print(f"🔗 MCP Endpoint: https://prod-1-data.ke.pinecone.io/mcp/assistants/vb")
