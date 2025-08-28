@@ -2059,6 +2059,39 @@ def health():
         }
     })
 
+@app.route("/debug/config")
+def debug_config():
+    """Debug endpoint to check current configuration"""
+    try:
+        index_name = os.getenv("PINECONE_INDEX_NAME", "NOT_SET")
+        namespace = os.getenv("PINECONE_NAMESPACE", "production")
+        
+        # Get index stats if possible
+        index_stats = None
+        if index_ref:
+            try:
+                stats = index_ref.describe_index_stats()
+                index_stats = {
+                    "total_vectors": stats.total_vector_count,
+                    "dimension": stats.dimension,
+                    "namespaces": {ns: ns_stats.vector_count for ns, ns_stats in stats.namespaces.items()}
+                }
+            except Exception as e:
+                index_stats = {"error": str(e)}
+        
+        return jsonify({
+            "config": {
+                "PINECONE_INDEX_NAME": index_name,
+                "PINECONE_NAMESPACE": namespace,
+                "OPENAI_API_KEY": "SET" if os.getenv("OPENAI_API_KEY") else "NOT_SET",
+                "PINECONE_API_KEY": "SET" if os.getenv("PINECONE_API_KEY") else "NOT_SET"
+            },
+            "index_stats": index_stats,
+            "timestamp": datetime.now().isoformat()
+        })
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
 @app.route("/metrics")
 def metrics():
     with stats_lock:
@@ -2725,6 +2758,7 @@ def mcp_chat():
 
 if __name__ == "__main__":
     print("🚀 Starting Veterans Benefits Assistant...")
+    print(f"🥜 THRIVING-WALNUT VERSION - Updated Environment Check")
     print(f"📁 Templates folder: {app.template_folder}")
     print(f"🔑 Pinecone API Key: {'✅ Set' if os.getenv('PINECONE_API_KEY') else '❌ Missing'}")
     print(f"📊 Pinecone Index: {os.getenv('PINECONE_INDEX_NAME', 'thriving-walnut')}")
