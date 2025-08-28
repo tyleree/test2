@@ -841,50 +841,28 @@ def query_advanced_rag_system(prompt, index):
         import os
         sys.path.insert(0, os.path.dirname(__file__))
         from rag_system import AdvancedRAGSystem
-        import random
-        import hashlib
+        # Initialize the advanced RAG system
+        rag = AdvancedRAGSystem(pinecone_index=index, openai_client=client)
         
-        # Apply medical term expansion
-        expanded_query = expand_medical_query(prompt)
+        # Perform advanced search with fallback
+        search_results, query_data = rag.search_with_fallback(prompt, max_results=6)
         
-        if expanded_query != prompt:
-            print(f"✅ Medical expansion applied: '{prompt}' -> '{expanded_query}'")
-        else:
-            print(f"ℹ️  No medical expansion needed for: '{prompt}'")
-        
-        # Generate a query vector using the same method as ingestion
-        query_vector = generate_query_vector(expanded_query)
-        
-        print(f"📊 Querying thriving-walnut index with semantic vector...")
-        
-        # Check index stats
-        try:
-            stats = index.describe_index_stats()
-            print(f"📊 Index stats: {stats.total_vector_count} vectors")
-            namespace_stats = stats.namespaces.get('production', {})
-            print(f"📂 Production namespace: {namespace_stats.get('vector_count', 0)} vectors")
-        except Exception as e:
-            print(f"⚠️ Could not get index stats: {e}")
-        
-        # Query Pinecone index
-        results = index.query(
-            vector=query_vector,
-            top_k=25,  # Get multiple results for better coverage
-            include_metadata=True,
-            namespace="production"  # Use the production namespace
-        )
-        
-        if not results.matches:
-            print("⚠️ No matches found in thriving-walnut index")
+        if not search_results:
+            print("❌ No results from advanced RAG search")
             return {
                 "success": False,
-                "content": "I couldn't find relevant information for your question. Please try rephrasing your question or asking about a specific VA disability rating or benefit.",
+                "content": "I couldn't find relevant information for your question. Please try rephrasing your question or asking about a specific VA disability condition with its diagnostic code (e.g., 'PTSD 9411' or 'ulnar neuropathy 8515').",
                 "citations": [],
-                "source": "thriving_walnut_semantic",
-                "metadata": {"error": "no_matches_found"}
+                "source": "advanced_rag_system",
+                "metadata": {"error": "no_results_found", "query_data": query_data}
             }
         
-        print(f"✅ Found {len(results.matches)} matches")
+        # Generate answer using the advanced system
+        result = rag.generate_answer(prompt, search_results)
+        result["metadata"]["query_expansion"] = query_data
+        
+        print(f"✅ Advanced RAG completed: {len(search_results)} results, success={result['success']}")
+        return result
         
         # Process matches and extract content from metadata
         context_chunks = []
