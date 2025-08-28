@@ -14,6 +14,7 @@ from rank_bm25 import BM25Okapi
 import numpy as np
 
 from .config import config
+from .medical_terms import expand_medical_query
 from .utils import (
     is_query_complex,
     merge_scores,
@@ -53,8 +54,11 @@ class HybridRetriever:
         
     def rewrite_query(self, query: str) -> str:
         """Rewrite complex queries for better retrieval."""
-        if not is_query_complex(query):
-            return query
+        # First, expand medical terminology
+        expanded_query = self._expand_medical_terms(query)
+        
+        if not is_query_complex(expanded_query):
+            return expanded_query
             
         logger.info("Query is complex, attempting rewrite")
         
@@ -66,11 +70,12 @@ class HybridRetriever:
                         "role": "system",
                         "content": """Rewrite the user's query to be clearer and more focused for document retrieval. 
                         Break down complex questions into key search terms while preserving the core intent.
+                        For medical conditions, include related terms and synonyms.
                         Keep it concise and specific. Return only the rewritten query."""
                     },
                     {
                         "role": "user",
-                        "content": f"Rewrite this query: {query}"
+                        "content": f"Rewrite this query: {expanded_query}"
                     }
                 ],
                 temperature=0,
@@ -82,8 +87,17 @@ class HybridRetriever:
             return rewritten
             
         except Exception as e:
-            logger.warning(f"Query rewriting failed: {e}, using original query")
-            return query
+            logger.warning(f"Query rewriting failed: {e}, using expanded query")
+            return expanded_query
+    
+    def _expand_medical_terms(self, query: str) -> str:
+        """Expand medical terminology for better matching."""
+        expanded_query = expand_medical_query(query)
+        
+        if expanded_query != query:
+            logger.info(f"Medical term expansion: '{query}' -> '{expanded_query}'")
+        
+        return expanded_query
     
     def generate_query_embedding(self, query: str) -> List[float]:
         """Generate embedding for query."""
@@ -221,7 +235,7 @@ class HybridRetriever:
         self, 
         vector_candidates: List[RetrievalCandidate],
         bm25_results: List[Tuple[int, float]],
-        vector_weight: float = 0.65
+        vector_weight: float = 0.6  # Reduced to give more weight to BM25 exact matches
     ) -> List[RetrievalCandidate]:
         """Merge vector and BM25 search results."""
         
@@ -296,6 +310,9 @@ class HybridRetriever:
         
         # Optionally rewrite query
         processed_query = self.rewrite_query(query)
+        
+        if processed_query != query:
+            logger.info(f"Query processed: '{query}' -> '{processed_query}'")
         
         # Load BM25 corpus if needed
         if not self.corpus_loaded:
