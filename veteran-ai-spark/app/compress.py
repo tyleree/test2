@@ -1,259 +1,314 @@
 """
-Context compression module using small LLM to extract minimal verbatim quotes.
+Quote-only compression system using deterministic LLM calls.
+Extracts minimal verbatim spans from reranked candidates.
 """
 
-import json
 import logging
+import json
 from typing import List, Dict, Any, Optional
+from dataclasses import dataclass
+
 import openai
 
-from .settings import settings
-from .utils import count_tokens, merge_and_deduplicate_quotes
-from .schemas import CompressedPack
+from .config import config
+from .rerank import RerankedCandidate
+from .utils import get_token_count
 
 logger = logging.getLogger(__name__)
 
+@dataclass
+class Quote:
+    """Represents a compressed quote with source information."""
+    text: str
+    source_url: str
+    title: str
+    section: str
+    chunk_id: str
+    token_count: int
 
-class ContextCompressor:
-    """Compress context using small model to extract minimal verbatim quotes."""
+@dataclass
+class CompressionResult:
+    """Result of the compression process."""
+    quotes: List[Quote]
+    sources: List[Dict[str, str]]
+    total_tokens: int
+    compression_ratio: float
+    status: str  # 'success', 'no_evidence', 'error'
+    error_message: Optional[str] = None
+
+class QuoteCompressor:
+    """Compresses reranked candidates into minimal quotes."""
     
     def __init__(self):
-        self.client = None
+        self.openai_client = openai.OpenAI(api_key=config.openai_api_key)
     
-    def _build_compression_prompt(self, query: str, passages: List[Dict[str, Any]]) -> str:
-        """Build prompt for context compression."""
+    def prepare_compression_prompt(self, query: str, candidates: List[RerankedCandidate]) -> str:
+        """Prepare the compression prompt with candidates."""
         
-        # System prompt enforces verbatim extraction
-        system_prompt = """You are a precise quote extraction assistant. Your task is to extract minimal verbatim quotes from passages that directly answer the user's question.
+        # Build context from candidates
+        context_parts = []
+        for i, candidate in enumerate(candidates, 1):
+            source_info = f"Source {i}: {candidate.source_url}"
+            if candidate.title:
+                source_info += f" - {candidate.title}"
+            if candidate.section:
+                source_info += f" ({candidate.section})"
+            
+            context_parts.append(f"{source_info}\n{candidate.text}\n")
+        
+        context = "\n".join(context_parts)
+        
+        prompt = f"""Extract minimal verbatim quotes from the provided sources that directly answer the user's question. Follow these strict requirements:
 
-CRITICAL RULES:
-1. Extract ONLY verbatim text - no paraphrasing or summarization
-2. Keep quotes minimal but complete - around 50-120 tokens each
-3. Only include quotes that directly address the question
-4. Return valid JSON with the exact format specified
-5. If a passage has no relevant information, omit it entirely
+REQUIREMENTS:
+1. Copy EXACT text spans only - no paraphrasing or summarization
+2. Each quote must be ≤{config.quote_max_tokens} tokens
+3. Maximum {config.max_quotes} quotes total
+4. Only include quotes that directly answer the question
+5. Each quote must include its source URL
 
-Return JSON format:
-{
+QUESTION: {query}
+
+SOURCES:
+{context}
+
+Return your response as valid JSON in this exact format:
+{{
   "quotes": [
-    {
-      "doc_id": "document_id",
-      "chunk_id": "chunk_identifier", 
-      "url": "source_url",
-      "quote": "exact verbatim text from passage"
-    }
+    {{
+      "text": "exact verbatim quote here",
+      "source_url": "https://...",
+      "source_title": "document title",
+      "source_section": "section name if any"
+    }}
+  ],
+  "sources": [
+    {{
+      "url": "https://...",
+      "title": "document title"
+    }}
   ]
-}"""
+}}
 
-        # Build user prompt with passages
-        passages_text = []
-        for i, passage in enumerate(passages, 1):
-            doc_id = passage.get('doc_id', f'doc_{i}')
-            chunk_id = passage.get('chunk_id', f'chunk_{i}')
-            url = passage.get('url', '')
-            text = passage.get('text', '').strip()
-            
-            if text:
-                passages_text.append(f"""
-PASSAGE {i}:
-Doc ID: {doc_id}
-Chunk ID: {chunk_id}
-URL: {url}
-Text: {text}
-""")
+If no relevant quotes can be found, return:
+{{
+  "quotes": [],
+  "sources": [],
+  "no_evidence": true
+}}
+
+</END>"""
         
-        user_prompt = f"""Question: {query}
-
-{chr(10).join(passages_text)}
-
-Extract minimal verbatim quotes that answer the question. Return JSON only."""
-
-        return system_prompt, user_prompt
+        return prompt
     
-    def compress_context(
-        self, 
-        query: str, 
-        passages: List[Dict[str, Any]], 
-        max_tokens: int = None
-    ) -> CompressedPack:
-        """
-        Compress passages into minimal verbatim quotes.
-        
-        Args:
-            query: The user question
-            passages: List of retrieved passages
-            max_tokens: Token budget for compression (defaults to settings.compress_budget_tokens)
-        
-        Returns:
-            CompressedPack with quotes, sources, and metadata
-        """
-        if max_tokens is None:
-            max_tokens = settings.compress_budget_tokens
-        
-        if not passages:
-            return CompressedPack(quotes=[], sources=[], top_doc_ids=[])
-        
+    def parse_compression_response(self, response: str, candidates: List[RerankedCandidate]) -> CompressionResult:
+        """Parse and validate the compression response."""
         try:
-            # Build compression prompt
-            system_prompt, user_prompt = self._build_compression_prompt(query, passages)
+            # Clean response
+            response = response.strip()
+            if response.endswith('</END>'):
+                response = response[:-6].strip()
             
-            # Initialize client if needed
-            if self.client is None:
-                self.client = openai.OpenAI(api_key=settings.openai_api_key)
+            # Parse JSON
+            data = json.loads(response)
             
-            # Call small model for compression
-            response = self.client.chat.completions.create(
-                model=settings.model_small,
-                messages=[
-                    {"role": "system", "content": system_prompt},
-                    {"role": "user", "content": user_prompt}
-                ],
-                max_tokens=min(max_tokens // 2, 1000),  # Leave room for quotes
-                temperature=0,
-                response_format={"type": "json_object"}
-            )
+            # Check for no evidence
+            if data.get('no_evidence', False):
+                return CompressionResult(
+                    quotes=[],
+                    sources=[],
+                    total_tokens=0,
+                    compression_ratio=0.0,
+                    status='no_evidence'
+                )
             
-            # Parse response
-            content = response.choices[0].message.content.strip()
-            result = json.loads(content)
+            # Validate structure
+            if 'quotes' not in data or 'sources' not in data:
+                raise ValueError("Missing required fields: quotes, sources")
             
-            quotes = result.get('quotes', [])
+            # Create candidate lookup for chunk_id mapping
+            candidate_lookup = {candidate.source_url: candidate for candidate in candidates}
             
-            # Validate and clean quotes
-            valid_quotes = []
-            for quote in quotes:
-                if (isinstance(quote, dict) and 
-                    'quote' in quote and 
-                    quote['quote'].strip()):
-                    
-                    # Ensure required fields
-                    quote.setdefault('doc_id', 'unknown')
-                    quote.setdefault('chunk_id', 'unknown')
-                    quote.setdefault('url', '')
-                    
-                    valid_quotes.append(quote)
-            
-            # Merge and deduplicate within token budget
-            final_quotes = merge_and_deduplicate_quotes(valid_quotes, max_tokens)
-            
-            # Extract unique sources
-            sources = {}
-            top_doc_ids = []
-            
-            for quote in final_quotes:
-                doc_id = quote['doc_id']
-                url = quote.get('url', '')
+            # Process quotes
+            quotes = []
+            for quote_data in data['quotes']:
+                if not isinstance(quote_data, dict):
+                    continue
                 
-                if doc_id not in sources:
-                    sources[doc_id] = {'doc_id': doc_id, 'url': url}
-                    top_doc_ids.append(doc_id)
+                quote_text = quote_data.get('text', '').strip()
+                source_url = quote_data.get('source_url', '').strip()
+                
+                if not quote_text or not source_url:
+                    continue
+                
+                # Find corresponding candidate for chunk_id
+                candidate = candidate_lookup.get(source_url)
+                chunk_id = candidate.chunk_id if candidate else 'unknown'
+                
+                # Validate quote length
+                quote_tokens = get_token_count(quote_text)
+                if quote_tokens > config.quote_max_tokens:
+                    logger.warning(f"Quote exceeds token limit ({quote_tokens} > {config.quote_max_tokens}), truncating")
+                    # Truncate quote (rough approximation)
+                    words = quote_text.split()
+                    truncated_words = words[:config.quote_max_tokens]
+                    quote_text = ' '.join(truncated_words)
+                    quote_tokens = get_token_count(quote_text)
+                
+                quote = Quote(
+                    text=quote_text,
+                    source_url=source_url,
+                    title=quote_data.get('source_title', ''),
+                    section=quote_data.get('source_section', ''),
+                    chunk_id=chunk_id,
+                    token_count=quote_tokens
+                )
+                quotes.append(quote)
             
-            sources_list = list(sources.values())
+            # Limit number of quotes
+            if len(quotes) > config.max_quotes:
+                logger.warning(f"Too many quotes ({len(quotes)} > {config.max_quotes}), keeping first {config.max_quotes}")
+                quotes = quotes[:config.max_quotes]
             
-            logger.info(f"Compressed {len(passages)} passages to {len(final_quotes)} quotes, {len(sources_list)} sources")
+            # Process sources
+            sources = []
+            for source_data in data['sources']:
+                if isinstance(source_data, dict) and 'url' in source_data:
+                    sources.append({
+                        'url': source_data['url'],
+                        'title': source_data.get('title', '')
+                    })
             
-            return CompressedPack(
-                quotes=final_quotes,
-                sources=sources_list,
-                top_doc_ids=top_doc_ids
+            # Calculate metrics
+            total_tokens = sum(quote.token_count for quote in quotes)
+            original_tokens = sum(candidate.token_count for candidate in candidates)
+            compression_ratio = 1.0 - (total_tokens / original_tokens) if original_tokens > 0 else 0.0
+            
+            return CompressionResult(
+                quotes=quotes,
+                sources=sources,
+                total_tokens=total_tokens,
+                compression_ratio=compression_ratio,
+                status='success'
             )
             
         except json.JSONDecodeError as e:
-            logger.error(f"JSON parsing failed in compression: {e}")
-            return self._fallback_compression(query, passages, max_tokens)
+            logger.error(f"Failed to parse compression response as JSON: {e}")
+            return CompressionResult(
+                quotes=[],
+                sources=[],
+                total_tokens=0,
+                compression_ratio=0.0,
+                status='error',
+                error_message=f"JSON parsing error: {e}"
+            )
+        except Exception as e:
+            logger.error(f"Error processing compression response: {e}")
+            return CompressionResult(
+                quotes=[],
+                sources=[],
+                total_tokens=0,
+                compression_ratio=0.0,
+                status='error',
+                error_message=f"Processing error: {e}"
+            )
+    
+    def compress(self, query: str, candidates: List[RerankedCandidate]) -> CompressionResult:
+        """Main compression function."""
+        if not candidates:
+            return CompressionResult(
+                quotes=[],
+                sources=[],
+                total_tokens=0,
+                compression_ratio=0.0,
+                status='no_evidence'
+            )
+        
+        logger.info(f"Compressing {len(candidates)} candidates for query: '{query[:50]}...'")
+        
+        # Prepare prompt
+        prompt = self.prepare_compression_prompt(query, candidates)
+        
+        # Check if prompt is too long
+        prompt_tokens = get_token_count(prompt)
+        if prompt_tokens > config.compress_budget_tokens:
+            logger.warning(f"Prompt too long ({prompt_tokens} tokens), truncating candidates")
+            # Reduce candidates to fit budget
+            while prompt_tokens > config.compress_budget_tokens and len(candidates) > 1:
+                candidates = candidates[:-1]
+                prompt = self.prepare_compression_prompt(query, candidates)
+                prompt_tokens = get_token_count(prompt)
+        
+        try:
+            # Make deterministic API call
+            response = self.openai_client.chat.completions.create(
+                model=config.model_small,
+                messages=[
+                    {
+                        "role": "user",
+                        "content": prompt
+                    }
+                ],
+                temperature=0,
+                top_p=1,
+                max_tokens=1000,
+                stop=["</END>"]
+            )
+            
+            response_text = response.choices[0].message.content
+            
+            # Parse response
+            result = self.parse_compression_response(response_text, candidates)
+            
+            # Validate token budget
+            if result.total_tokens > config.compress_budget_tokens:
+                logger.warning(f"Compressed quotes exceed budget ({result.total_tokens} > {config.compress_budget_tokens})")
+                # Truncate quotes to fit budget
+                budget_remaining = config.compress_budget_tokens
+                filtered_quotes = []
+                
+                for quote in result.quotes:
+                    if quote.token_count <= budget_remaining:
+                        filtered_quotes.append(quote)
+                        budget_remaining -= quote.token_count
+                    else:
+                        break
+                
+                result.quotes = filtered_quotes
+                result.total_tokens = sum(q.token_count for q in filtered_quotes)
+            
+            logger.info(f"Compression complete: {len(result.quotes)} quotes, {result.total_tokens} tokens, {result.compression_ratio:.2%} compression")
+            return result
             
         except Exception as e:
-            logger.error(f"Context compression failed: {e}")
-            return self._fallback_compression(query, passages, max_tokens)
+            logger.error(f"Compression failed: {e}")
+            return CompressionResult(
+                quotes=[],
+                sources=[],
+                total_tokens=0,
+                compression_ratio=0.0,
+                status='error',
+                error_message=str(e)
+            )
     
-    def _fallback_compression(
-        self, 
-        query: str, 
-        passages: List[Dict[str, Any]], 
-        max_tokens: int
-    ) -> CompressedPack:
-        """
-        Fallback compression using simple truncation.
-        Used when LLM compression fails.
-        """
-        logger.warning("Using fallback compression due to LLM failure")
-        
-        quotes = []
-        sources = {}
-        top_doc_ids = []
-        current_tokens = 0
-        
-        for passage in passages:
-            text = passage.get('text', '').strip()
-            if not text:
-                continue
-            
-            # Truncate passage to fit budget
-            passage_tokens = count_tokens(text)
-            if current_tokens + passage_tokens > max_tokens:
-                remaining_tokens = max_tokens - current_tokens
-                if remaining_tokens < 50:  # Not worth including
-                    break
-                
-                # Truncate text
-                words = text.split()
-                truncated_words = words[:int(len(words) * (remaining_tokens / passage_tokens))]
-                text = ' '.join(truncated_words)
-                
-                if len(text) < 50:  # Too short to be useful
-                    break
-            
-            doc_id = passage.get('doc_id', 'unknown')
-            chunk_id = passage.get('chunk_id', 'unknown')
-            url = passage.get('url', '')
-            
-            quotes.append({
-                'doc_id': doc_id,
-                'chunk_id': chunk_id,
-                'url': url,
-                'quote': text
-            })
-            
-            if doc_id not in sources:
-                sources[doc_id] = {'doc_id': doc_id, 'url': url}
-                top_doc_ids.append(doc_id)
-            
-            current_tokens += count_tokens(text)
-            
-            if current_tokens >= max_tokens:
-                break
-        
-        sources_list = list(sources.values())
-        
-        return CompressedPack(
-            quotes=quotes,
-            sources=sources_list,
-            top_doc_ids=top_doc_ids
-        )
-    
-    def estimate_compression_ratio(self, original_passages: List[Dict[str, Any]], compressed_pack: CompressedPack) -> float:
-        """
-        Estimate compression ratio achieved.
-        
-        Args:
-            original_passages: Original passages before compression
-            compressed_pack: Compressed result
-        
-        Returns:
-            Compression ratio (0.0 to 1.0, lower is better compression)
-        """
-        original_tokens = sum(count_tokens(p.get('text', '')) for p in original_passages)
-        compressed_tokens = sum(count_tokens(q.get('quote', '')) for q in compressed_pack.quotes)
-        
-        if original_tokens == 0:
-            return 1.0
-        
-        ratio = compressed_tokens / original_tokens
-        logger.info(f"Compression ratio: {ratio:.2f} ({original_tokens} -> {compressed_tokens} tokens)")
-        
-        return ratio
-
-
-# Global compressor instance
-compressor = ContextCompressor()
-
+    def get_debug_info(self, result: CompressionResult) -> Dict[str, Any]:
+        """Get debug information about compression result."""
+        return {
+            'status': result.status,
+            'quotes_count': len(result.quotes),
+            'sources_count': len(result.sources),
+            'total_tokens': result.total_tokens,
+            'compression_ratio': round(result.compression_ratio, 3),
+            'token_budget': config.compress_budget_tokens,
+            'max_quotes': config.max_quotes,
+            'quote_max_tokens': config.quote_max_tokens,
+            'error_message': result.error_message,
+            'quotes_preview': [
+                {
+                    'text': quote.text[:100] + "..." if len(quote.text) > 100 else quote.text,
+                    'source_url': quote.source_url,
+                    'token_count': quote.token_count
+                }
+                for quote in result.quotes[:3]  # First 3 quotes for debug
+            ]
+        }

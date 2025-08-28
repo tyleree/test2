@@ -1,246 +1,324 @@
 """
-Document retrieval module with Pinecone vector search and optional BM25.
+Hybrid retrieval system combining Pinecone vector search with BM25.
+Includes query rewriting and score fusion.
 """
 
 import logging
-from typing import List, Dict, Any, Optional
-from pinecone import Pinecone
-import openai
-from rank_bm25 import BM25Okapi
+from typing import List, Dict, Any, Optional, Tuple
+from dataclasses import dataclass
+import json
 
-from .settings import settings
-from .utils import extract_doc_ids_from_results, count_tokens
+import openai
+from pinecone import Pinecone
+from rank_bm25 import BM25Okapi
+import numpy as np
+
+from .config import config
+from .utils import (
+    is_query_complex,
+    merge_scores,
+    get_token_count,
+    normalize_query
+)
 
 logger = logging.getLogger(__name__)
 
+@dataclass
+class RetrievalCandidate:
+    """Represents a retrieval candidate with scores and metadata."""
+    chunk_id: str
+    doc_id: str
+    text: str
+    title: str
+    section: str
+    source_url: str
+    vector_score: float
+    bm25_score: float = 0.0
+    combined_score: float = 0.0
+    token_count: int = 0
 
-class DocumentRetriever:
-    """Document retrieval using Pinecone vector search with optional BM25 hybrid."""
+class HybridRetriever:
+    """Hybrid retrieval system combining vector and BM25 search."""
     
     def __init__(self):
-        self.pc = Pinecone(api_key=settings.pinecone_api_key)
-        self.index = self.pc.Index(settings.pinecone_index)
-        self.openai_client = openai.OpenAI(api_key=settings.openai_api_key)
-        self.bm25_corpus = None  # Optional BM25 corpus
-        self.bm25_index = None
-        self.doc_texts = {}  # doc_id -> text mapping for BM25
-    
-    def _embed_query(self, query: str) -> List[float]:
-        """Generate embedding for query using OpenAI."""
-        # Use configurable embedding model to match Pinecone index dimensions
-        embed_params = {
-            "model": settings.embedding_model,
-            "input": query
-        }
+        self.openai_client = openai.OpenAI(api_key=config.openai_api_key)
+        self.pc = Pinecone(api_key=config.pinecone_api_key)
+        self.index = self.pc.Index(config.pinecone_index)
         
-        # For text-embedding-3-large, we can specify dimensions to match Pinecone
-        if settings.embedding_model == "text-embedding-3-large":
-            embed_params["dimensions"] = 1024  # Match typical Pinecone index
+        # BM25 corpus - will be populated from Pinecone
+        self.bm25_corpus: List[str] = []
+        self.bm25_metadata: List[Dict[str, Any]] = []
+        self.bm25_model: Optional[BM25Okapi] = None
+        self.corpus_loaded = False
         
-        response = self.openai_client.embeddings.create(**embed_params)
-        return response.data[0].embedding
-    
-    def _rewrite_query(self, query: str) -> List[str]:
-        """
-        Optional query rewrite using small model to expand into subqueries.
-        Keeps costs low by using small model.
-        """
+    def rewrite_query(self, query: str) -> str:
+        """Rewrite complex queries for better retrieval."""
+        if not is_query_complex(query):
+            return query
+            
+        logger.info("Query is complex, attempting rewrite")
+        
         try:
             response = self.openai_client.chat.completions.create(
-                model=settings.model_small,
+                model=config.model_small,
                 messages=[
                     {
                         "role": "system",
-                        "content": "You are a query expansion assistant. Given a user question, generate up to 3 related subqueries that would help find comprehensive information. Return only the queries, one per line, no numbering or explanation."
+                        "content": """Rewrite the user's query to be clearer and more focused for document retrieval. 
+                        Break down complex questions into key search terms while preserving the core intent.
+                        Keep it concise and specific. Return only the rewritten query."""
                     },
                     {
                         "role": "user",
-                        "content": f"Expand this query into subqueries: {query}"
+                        "content": f"Rewrite this query: {query}"
                     }
                 ],
-                max_tokens=150,
-                temperature=0.3
+                temperature=0,
+                max_tokens=100
             )
             
-            subqueries = [line.strip() for line in response.choices[0].message.content.strip().split('\n') if line.strip()]
-            
-            # Always include original query
-            if query not in subqueries:
-                subqueries.insert(0, query)
-            
-            return subqueries[:3]  # Limit to 3 subqueries
+            rewritten = response.choices[0].message.content.strip()
+            logger.info(f"Query rewritten: '{query}' -> '{rewritten}'")
+            return rewritten
             
         except Exception as e:
-            logger.warning(f"Query rewrite failed: {e}")
-            return [query]  # Fallback to original query
+            logger.warning(f"Query rewriting failed: {e}, using original query")
+            return query
     
-    def _vector_search(self, query: str, k: int = 50) -> List[Dict[str, Any]]:
-        """Perform vector search using Pinecone."""
+    def generate_query_embedding(self, query: str) -> List[float]:
+        """Generate embedding for query."""
         try:
-            # Generate embedding
-            embedding = self._embed_query(query)
+            response = self.openai_client.embeddings.create(
+                model=config.embed_model,
+                input=query
+            )
+            return response.data[0].embedding
+        except Exception as e:
+            logger.error(f"Failed to generate query embedding: {e}")
+            raise
+    
+    def load_bm25_corpus(self, namespace: str = None) -> None:
+        """Load corpus from Pinecone for BM25 search."""
+        if self.corpus_loaded:
+            return
             
-            # Search Pinecone
+        if not namespace:
+            namespace = config.pinecone_namespace
+            
+        logger.info("Loading BM25 corpus from Pinecone")
+        
+        try:
+            # Get all vectors from Pinecone (this might need pagination for large corpora)
+            # For now, we'll fetch a reasonable sample
+            stats = self.index.describe_index_stats()
+            total_vectors = stats.get('total_vector_count', 0)
+            
+            if total_vectors > 10000:
+                logger.warning(f"Large corpus ({total_vectors} vectors). Consider using a subset for BM25.")
+            
+            # Fetch vectors in batches
+            self.bm25_corpus = []
+            self.bm25_metadata = []
+            
+            # Use query to get sample of vectors
+            dummy_query = [0.0] * 1536  # Dimension for text-embedding-3-small
             results = self.index.query(
-                vector=embedding,
-                top_k=k,
-                include_metadata=True
+                vector=dummy_query,
+                top_k=min(5000, total_vectors),  # Limit corpus size
+                include_metadata=True,
+                namespace=namespace
             )
             
-            # Convert to standard format
-            documents = []
             for match in results['matches']:
-                metadata = match.get('metadata', {})
-                documents.append({
-                    'doc_id': metadata.get('doc_id', match['id']),
-                    'chunk_id': match['id'],
-                    'text': metadata.get('text', ''),
-                    'url': metadata.get('url', ''),
-                    'title': metadata.get('title', ''),
-                    'score': match['score']
-                })
+                if 'text' in match['metadata']:
+                    self.bm25_corpus.append(match['metadata']['text'])
+                    self.bm25_metadata.append(match['metadata'])
             
-            return documents
+            # Create BM25 model
+            if self.bm25_corpus:
+                tokenized_corpus = [doc.lower().split() for doc in self.bm25_corpus]
+                self.bm25_model = BM25Okapi(tokenized_corpus)
+                self.corpus_loaded = True
+                logger.info(f"BM25 corpus loaded with {len(self.bm25_corpus)} documents")
+            else:
+                logger.warning("No documents found for BM25 corpus")
+                
+        except Exception as e:
+            logger.error(f"Failed to load BM25 corpus: {e}")
+            # Continue without BM25
+            self.bm25_model = None
+    
+    def vector_search(self, query: str, top_k: int = None, namespace: str = None) -> List[RetrievalCandidate]:
+        """Perform vector search using Pinecone."""
+        if not top_k:
+            top_k = config.retrieval_top_k
+        if not namespace:
+            namespace = config.pinecone_namespace
+            
+        # Generate query embedding
+        query_embedding = self.generate_query_embedding(query)
+        
+        # Search Pinecone
+        try:
+            results = self.index.query(
+                vector=query_embedding,
+                top_k=top_k,
+                include_metadata=True,
+                namespace=namespace
+            )
+            
+            candidates = []
+            for match in results['matches']:
+                metadata = match['metadata']
+                
+                # Ensure required fields exist
+                if not all(key in metadata for key in ['text', 'source_url', 'doc_id']):
+                    logger.warning(f"Skipping result with incomplete metadata: {match['id']}")
+                    continue
+                
+                candidate = RetrievalCandidate(
+                    chunk_id=match['id'],
+                    doc_id=metadata.get('doc_id', ''),
+                    text=metadata['text'],
+                    title=metadata.get('title', ''),
+                    section=metadata.get('section', ''),
+                    source_url=metadata['source_url'],
+                    vector_score=match['score'],
+                    token_count=metadata.get('token_count', get_token_count(metadata['text']))
+                )
+                candidates.append(candidate)
+            
+            logger.info(f"Vector search returned {len(candidates)} candidates")
+            return candidates
             
         except Exception as e:
             logger.error(f"Vector search failed: {e}")
-            return []
+            raise
     
-    def _bm25_search(self, query: str, k: int = 50) -> List[Dict[str, Any]]:
-        """
-        Perform BM25 search if corpus is available locally.
-        This is optional and provides zero-token hybrid search.
-        """
-        if not self.bm25_index:
+    def bm25_search(self, query: str, top_k: int = None) -> List[Tuple[int, float]]:
+        """Perform BM25 search on loaded corpus."""
+        if not self.bm25_model or not self.bm25_corpus:
+            logger.warning("BM25 model not available")
             return []
         
-        try:
-            # Tokenize query
-            query_tokens = query.lower().split()
-            
-            # Get BM25 scores
-            scores = self.bm25_index.get_scores(query_tokens)
-            
-            # Get top-k results
-            top_indices = sorted(range(len(scores)), key=lambda i: scores[i], reverse=True)[:k]
-            
-            documents = []
-            for idx in top_indices:
-                if scores[idx] > 0:  # Only include positive scores
-                    doc_id = list(self.doc_texts.keys())[idx]
-                    documents.append({
-                        'doc_id': doc_id,
-                        'chunk_id': f"{doc_id}-bm25",
-                        'text': self.doc_texts[doc_id],
-                        'url': '',  # Would need to be populated from metadata
-                        'title': doc_id,
-                        'score': scores[idx]
-                    })
-            
-            return documents
-            
-        except Exception as e:
-            logger.error(f"BM25 search failed: {e}")
-            return []
+        if not top_k:
+            top_k = config.retrieval_top_k
+        
+        # Tokenize query
+        tokenized_query = query.lower().split()
+        
+        # Get BM25 scores
+        scores = self.bm25_model.get_scores(tokenized_query)
+        
+        # Get top K indices and scores
+        top_indices = np.argsort(scores)[::-1][:top_k]
+        results = [(idx, scores[idx]) for idx in top_indices if scores[idx] > 0]
+        
+        logger.info(f"BM25 search returned {len(results)} candidates")
+        return results
     
-    def retrieve_top_chunks(
+    def merge_search_results(
         self, 
-        query: str, 
-        k: int = None, 
-        use_query_expansion: bool = True,
-        use_bm25_hybrid: bool = False
-    ) -> List[Dict[str, Any]]:
-        """
-        Retrieve top relevant chunks using vector search and optional BM25.
+        vector_candidates: List[RetrievalCandidate],
+        bm25_results: List[Tuple[int, float]],
+        vector_weight: float = 0.65
+    ) -> List[RetrievalCandidate]:
+        """Merge vector and BM25 search results."""
         
-        Args:
-            query: The search query
-            k: Number of results to return (defaults to settings.retrieve_k)
-            use_query_expansion: Whether to expand query into subqueries
-            use_bm25_hybrid: Whether to include BM25 results
+        # Create lookup for vector candidates
+        vector_lookup = {candidate.chunk_id: candidate for candidate in vector_candidates}
         
-        Returns:
-            List of document chunks with metadata and scores
-        """
-        if k is None:
-            k = settings.retrieve_k
+        # Add BM25 candidates
+        all_candidates = {}
         
-        all_results = []
-        seen_doc_ids = set()
+        # Add vector candidates
+        for candidate in vector_candidates:
+            all_candidates[candidate.chunk_id] = candidate
         
-        # Generate subqueries if enabled
-        queries = self._rewrite_query(query) if use_query_expansion else [query]
+        # Add BM25 candidates
+        for corpus_idx, bm25_score in bm25_results:
+            if corpus_idx < len(self.bm25_metadata):
+                metadata = self.bm25_metadata[corpus_idx]
+                chunk_id = metadata.get('chunk_id', f"bm25_{corpus_idx}")
+                
+                if chunk_id in all_candidates:
+                    # Update existing candidate with BM25 score
+                    all_candidates[chunk_id].bm25_score = bm25_score
+                else:
+                    # Create new candidate from BM25
+                    candidate = RetrievalCandidate(
+                        chunk_id=chunk_id,
+                        doc_id=metadata.get('doc_id', ''),
+                        text=metadata.get('text', ''),
+                        title=metadata.get('title', ''),
+                        section=metadata.get('section', ''),
+                        source_url=metadata.get('source_url', ''),
+                        vector_score=0.0,
+                        bm25_score=bm25_score,
+                        token_count=metadata.get('token_count', 0)
+                    )
+                    all_candidates[chunk_id] = candidate
         
-        # Perform vector search for each query
-        for q in queries:
-            results = self._vector_search(q, k=k)
+        # Calculate combined scores
+        candidates = list(all_candidates.values())
+        
+        # Normalize scores to 0-1 range
+        if candidates:
+            vector_scores = [c.vector_score for c in candidates]
+            bm25_scores = [c.bm25_score for c in candidates]
             
-            # Add unique results
-            for result in results:
-                doc_id = result['doc_id']
-                if doc_id not in seen_doc_ids:
-                    all_results.append(result)
-                    seen_doc_ids.add(doc_id)
-        
-        # Optional BM25 hybrid search
-        if use_bm25_hybrid:
-            bm25_results = self._bm25_search(query, k=k//2)
+            max_vector = max(vector_scores) if max(vector_scores) > 0 else 1.0
+            max_bm25 = max(bm25_scores) if max(bm25_scores) > 0 else 1.0
             
-            for result in bm25_results:
-                doc_id = result['doc_id']
-                if doc_id not in seen_doc_ids:
-                    all_results.append(result)
-                    seen_doc_ids.add(doc_id)
+            for candidate in candidates:
+                norm_vector = candidate.vector_score / max_vector
+                norm_bm25 = candidate.bm25_score / max_bm25
+                candidate.combined_score = merge_scores(norm_vector, norm_bm25, vector_weight)
         
-        # Sort by score (descending) and limit results
-        all_results.sort(key=lambda x: x['score'], reverse=True)
+        # Sort by combined score and deduplicate
+        candidates.sort(key=lambda x: x.combined_score, reverse=True)
         
-        logger.info(f"Retrieved {len(all_results)} unique chunks for query: {query[:100]}")
+        # Deduplicate by doc_id + chunk_id
+        seen = set()
+        unique_candidates = []
+        for candidate in candidates:
+            key = f"{candidate.doc_id}:{candidate.chunk_id}"
+            if key not in seen:
+                seen.add(key)
+                unique_candidates.append(candidate)
         
-        return all_results[:k]
+        # Return top 60 for reranking
+        return unique_candidates[:60]
     
-    def load_bm25_corpus(self, doc_texts: Dict[str, str]):
-        """
-        Load BM25 corpus for hybrid search.
+    def retrieve(self, query: str, namespace: str = None) -> List[RetrievalCandidate]:
+        """Main retrieval function combining vector and BM25 search."""
+        logger.info(f"Starting hybrid retrieval for query: '{query[:100]}...'")
         
-        Args:
-            doc_texts: Dictionary mapping doc_id to text content
-        """
-        try:
-            self.doc_texts = doc_texts
-            
-            # Tokenize all documents
-            tokenized_corpus = [text.lower().split() for text in doc_texts.values()]
-            
-            # Build BM25 index
-            self.bm25_index = BM25Okapi(tokenized_corpus)
-            
-            logger.info(f"Loaded BM25 corpus with {len(doc_texts)} documents")
-            
-        except Exception as e:
-            logger.error(f"Failed to load BM25 corpus: {e}")
-            self.bm25_index = None
+        # Optionally rewrite query
+        processed_query = self.rewrite_query(query)
+        
+        # Load BM25 corpus if needed
+        if not self.corpus_loaded:
+            self.load_bm25_corpus(namespace)
+        
+        # Vector search
+        vector_candidates = self.vector_search(processed_query, namespace=namespace)
+        
+        # BM25 search
+        bm25_results = self.bm25_search(processed_query)
+        
+        # Merge results
+        merged_candidates = self.merge_search_results(vector_candidates, bm25_results)
+        
+        logger.info(f"Hybrid retrieval returned {len(merged_candidates)} candidates")
+        return merged_candidates
     
-    def get_fresh_top_docs(self, query: str, k: int = None) -> List[str]:
-        """
-        Get fresh top document IDs for cache validation.
-        Used by validators to check if cached results are still relevant.
-        """
-        if k is None:
-            k = settings.retrieve_k
-        
-        results = self.retrieve_top_chunks(query, k=k, use_query_expansion=False)
-        return extract_doc_ids_from_results(results)
-
-
-# Global retriever instance
-retriever = DocumentRetriever()
-
-
-
-
-
-
-
-
-
+    def get_debug_info(self) -> Dict[str, Any]:
+        """Get debug information about the retriever state."""
+        return {
+            'corpus_loaded': self.corpus_loaded,
+            'bm25_corpus_size': len(self.bm25_corpus),
+            'pinecone_index': config.pinecone_index,
+            'namespace': config.pinecone_namespace,
+            'retrieval_top_k': config.retrieval_top_k
+        }

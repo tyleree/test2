@@ -1,294 +1,338 @@
 """
-Answer generation module using big model with compressed context.
+Answer generation system with citations and HTML sanitization.
+Generates structured responses with numbered citations.
 """
 
 import logging
-from typing import List, Dict, Any, Tuple
-import openai
+import json
+import re
+from typing import List, Dict, Any, Optional
+from dataclasses import dataclass
 
-from .settings import settings
-from .utils import format_citations, validate_and_clean_response, count_tokens
-from .schemas import CompressedPack, Citation, TokenUsage
+import openai
+from bs4 import BeautifulSoup
+
+from .config import config
+from .compress import CompressionResult, Quote
+from .utils import sanitize_html, get_token_count
 
 logger = logging.getLogger(__name__)
 
+@dataclass
+class Citation:
+    """Represents a citation with number and URL."""
+    n: int
+    url: str
+    title: str = ""
+
+@dataclass
+class AnswerResult:
+    """Complete answer result with all formats."""
+    answer_plain: str
+    answer_html: str
+    citations: List[Citation]
+    token_usage: Dict[str, int]
+    status: str  # 'success', 'no_evidence', 'error'
+    error_message: Optional[str] = None
 
 class AnswerGenerator:
-    """Generate final answers using big model with compressed context."""
+    """Generates answers with proper citations and formatting."""
     
     def __init__(self):
-        self.client = None
+        self.openai_client = openai.OpenAI(api_key=config.openai_api_key)
     
-    def _build_answer_prompt(self, query: str, compressed_pack: CompressedPack) -> Tuple[str, str]:
-        """Build system and user prompts for answer generation."""
+    def prepare_answer_prompt(self, query: str, compression_result: CompressionResult) -> str:
+        """Prepare the answer generation prompt."""
         
-        # System prompt enforces citation format and source usage
-        system_prompt = """You are a helpful AI assistant that provides accurate, well-sourced answers. 
-
-CRITICAL RULES:
-1. Use ONLY the provided quotes to answer the question
-2. Cite sources using [n] format where n matches the source number
-3. Every factual claim must be cited
-4. If the quotes don't contain enough information, say so clearly
-5. Keep answers concise but comprehensive (300-700 tokens target)
-6. Maintain a professional, informative tone
-7. Do not make assumptions beyond what's explicitly stated in the quotes
-
-CITATION FORMAT:
-- Use [1], [2], etc. to cite sources
-- Numbers correspond to the source list provided
-- Multiple citations can be used: [1][2] or [1, 2]
-
-If you cannot adequately answer based on the provided quotes, respond with: "I don't have enough information in the provided sources to fully answer that question."""
-
-        # Build user prompt with quotes and sources
-        if not compressed_pack.quotes:
-            user_prompt = f"""Question: {query}
-
-No relevant quotes were found to answer this question."""
-            return system_prompt, user_prompt
+        if compression_result.status == 'no_evidence':
+            return self._get_no_evidence_prompt(query)
         
-        # Format quotes
-        quotes_text = []
-        for i, quote in enumerate(compressed_pack.quotes, 1):
-            quote_text = quote.get('quote', '').strip()
-            if quote_text:
-                quotes_text.append(f"Quote {i}: {quote_text}")
+        # Build quotes context with numbered references
+        quotes_context = []
+        citation_map = {}  # url -> citation number
         
-        # Format sources
-        sources_text = []
-        for i, source in enumerate(compressed_pack.sources, 1):
-            url = source.get('url', 'No URL')
-            doc_id = source.get('doc_id', 'Unknown')
-            sources_text.append(f"[{i}] {doc_id} ({url})")
+        for i, quote in enumerate(compression_result.quotes, 1):
+            # Assign citation numbers
+            if quote.source_url not in citation_map:
+                citation_map[quote.source_url] = len(citation_map) + 1
+            
+            citation_num = citation_map[quote.source_url]
+            
+            quote_text = f"[{citation_num}] {quote.text}"
+            if quote.title or quote.section:
+                source_info = " - "
+                if quote.title:
+                    source_info += quote.title
+                if quote.section:
+                    source_info += f" ({quote.section})"
+                quote_text += source_info
+            
+            quotes_context.append(quote_text)
         
-        user_prompt = f"""Question: {query}
+        quotes_text = "\n\n".join(quotes_context)
+        
+        # Build sources list
+        sources_list = []
+        for source in compression_result.sources:
+            if source['url'] in citation_map:
+                citation_num = citation_map[source['url']]
+                sources_list.append(f"[{citation_num}] {source['url']} - {source.get('title', '')}")
+        
+        sources_text = "\n".join(sources_list)
+        
+        prompt = f"""Answer the user's question using ONLY the provided quotes. Follow these strict requirements:
+
+REQUIREMENTS:
+1. Use ONLY information from the provided quotes - no external knowledge
+2. Cite every fact with [n] where n is the citation number
+3. If the quotes don't fully answer the question, acknowledge the limitations
+4. Write in a clear, helpful tone
+5. Return response as valid JSON in the exact format specified below
+
+QUESTION: {query}
 
 QUOTES:
-{chr(10).join(quotes_text)}
+{quotes_text}
 
 SOURCES:
-{chr(10).join(sources_text)}
+{sources_text}
 
-Please provide a comprehensive answer using only the information from these quotes. Cite each source using [n] format."""
+Return your response as valid JSON in this exact format:
+{{
+  "answer_plain": "Your answer here with citations [1], [2], etc.",
+  "answer_html": "<p>Your answer with HTML formatting and citations [1], [2], etc.</p><p><strong>Sources</strong></p><ol><li><a href='url'>[1] Title</a></li><li><a href='url'>[2] Title</a></li></ol>",
+  "citations": [
+    {{"n": 1, "url": "https://...", "title": "Source Title"}},
+    {{"n": 2, "url": "https://...", "title": "Source Title"}}
+  ]
+}}
 
-        return system_prompt, user_prompt
+HTML FORMATTING RULES:
+- Use <p> for paragraphs
+- Use <ul><li> for bullet lists
+- Use <ol><li> for numbered lists
+- Use <strong> for emphasis
+- Use <em> for italics
+- End with Sources section: <p><strong>Sources</strong></p><ol><li><a href='url'>[n] Title</a></li></ol>
+- Only use allowed HTML tags: p, ul, ol, li, strong, em, a, br, h3
+
+</END>"""
+        
+        return prompt
     
-    def generate_answer(
-        self, 
-        query: str, 
-        compressed_pack: CompressedPack,
-        max_tokens: int = 700
-    ) -> Tuple[str, List[Citation], Dict[str, Any]]:
-        """
-        Generate answer using big model with compressed context.
-        
-        Args:
-            query: The user question
-            compressed_pack: Compressed context with quotes and sources
-            max_tokens: Maximum tokens for answer generation
-        
-        Returns:
-            Tuple of (answer, citations, token_usage_info)
-        """
+    def _get_no_evidence_prompt(self, query: str) -> str:
+        """Get prompt for no evidence case."""
+        return f"""The user asked: "{query}"
+
+However, no relevant evidence was found in the knowledge base to answer this question.
+
+Return a helpful response in JSON format:
+{{
+  "answer_plain": "I don't have sufficient information in my knowledge base to answer this question about [topic]. For accurate information, please consult official VA resources or speak with a VA representative.",
+  "answer_html": "<p>I don't have sufficient information in my knowledge base to answer this question about [topic]. For accurate information, please consult official VA resources or speak with a VA representative.</p>",
+  "citations": []
+}}
+
+Replace [topic] with the relevant topic from the user's question.
+
+</END>"""
+    
+    def parse_answer_response(self, response: str, compression_result: CompressionResult) -> AnswerResult:
+        """Parse and validate the answer response."""
         try:
-            # Build prompts
-            system_prompt, user_prompt = self._build_answer_prompt(query, compressed_pack)
+            # Clean response
+            response = response.strip()
+            if response.endswith('</END>'):
+                response = response[:-6].strip()
             
-            # Calculate input tokens for monitoring
-            input_tokens = count_tokens(system_prompt + user_prompt, settings.model_big)
+            # Parse JSON
+            data = json.loads(response)
             
-            # Initialize client if needed
-            if self.client is None:
-                self.client = openai.OpenAI(api_key=settings.openai_api_key)
+            # Validate required fields
+            required_fields = ['answer_plain', 'answer_html', 'citations']
+            for field in required_fields:
+                if field not in data:
+                    raise ValueError(f"Missing required field: {field}")
             
-            # Generate answer using big model
-            response = self.client.chat.completions.create(
-                model=settings.model_big,
-                messages=[
-                    {"role": "system", "content": system_prompt},
-                    {"role": "user", "content": user_prompt}
-                ],
-                max_tokens=max_tokens,
-                temperature=0,  # Deterministic for consistency
-                presence_penalty=0.1,  # Slight penalty for repetition
-                frequency_penalty=0.1
+            # Extract data
+            answer_plain = data['answer_plain'].strip()
+            answer_html = data['answer_html'].strip()
+            citations_data = data['citations']
+            
+            # Validate and sanitize HTML
+            answer_html = sanitize_html(answer_html)
+            
+            # Process citations
+            citations = []
+            for citation_data in citations_data:
+                if isinstance(citation_data, dict) and all(k in citation_data for k in ['n', 'url']):
+                    citation = Citation(
+                        n=int(citation_data['n']),
+                        url=citation_data['url'],
+                        title=citation_data.get('title', '')
+                    )
+                    citations.append(citation)
+            
+            # Sort citations by number
+            citations.sort(key=lambda x: x.n)
+            
+            # Validate citations are used in text
+            cited_numbers = set(re.findall(r'\[(\d+)\]', answer_plain))
+            citation_numbers = {str(c.n) for c in citations}
+            
+            if cited_numbers != citation_numbers:
+                logger.warning(f"Citation mismatch - used: {cited_numbers}, defined: {citation_numbers}")
+            
+            # Determine status
+            status = 'no_evidence' if not citations else 'success'
+            
+            return AnswerResult(
+                answer_plain=answer_plain,
+                answer_html=answer_html,
+                citations=citations,
+                token_usage={},  # Will be filled by caller
+                status=status
             )
             
-            # Extract answer
-            answer = response.choices[0].message.content.strip()
+        except json.JSONDecodeError as e:
+            logger.error(f"Failed to parse answer response as JSON: {e}")
+            return self._create_error_result(f"JSON parsing error: {e}")
+        except Exception as e:
+            logger.error(f"Error processing answer response: {e}")
+            return self._create_error_result(f"Processing error: {e}")
+    
+    def _create_error_result(self, error_message: str) -> AnswerResult:
+        """Create an error result."""
+        return AnswerResult(
+            answer_plain="I apologize, but I encountered an error while generating the response. Please try again.",
+            answer_html="<p>I apologize, but I encountered an error while generating the response. Please try again.</p>",
+            citations=[],
+            token_usage={},
+            status='error',
+            error_message=error_message
+        )
+    
+    def _create_no_evidence_result(self, query: str) -> AnswerResult:
+        """Create a no evidence result."""
+        # Extract topic from query for more helpful message
+        topic = "this topic"
+        if "rating" in query.lower():
+            topic = "VA ratings"
+        elif "benefit" in query.lower():
+            topic = "VA benefits"
+        elif "disability" in query.lower():
+            topic = "VA disability"
+        elif "healthcare" in query.lower() or "health care" in query.lower():
+            topic = "VA healthcare"
+        
+        answer_plain = f"I don't have sufficient information in my knowledge base to answer this question about {topic}. For accurate information, please consult official VA resources or speak with a VA representative."
+        answer_html = f"<p>I don't have sufficient information in my knowledge base to answer this question about {topic}. For accurate information, please consult official VA resources or speak with a VA representative.</p>"
+        
+        return AnswerResult(
+            answer_plain=answer_plain,
+            answer_html=answer_html,
+            citations=[],
+            token_usage={},
+            status='no_evidence'
+        )
+    
+    def generate_answer(self, query: str, compression_result: CompressionResult) -> AnswerResult:
+        """Main answer generation function."""
+        logger.info(f"Generating answer for query: '{query[:50]}...'")
+        
+        # Handle no evidence case
+        if compression_result.status == 'no_evidence':
+            return self._create_no_evidence_result(query)
+        
+        # Handle compression error
+        if compression_result.status == 'error':
+            return self._create_error_result(compression_result.error_message or "Compression failed")
+        
+        # Prepare prompt
+        prompt = self.prepare_answer_prompt(query, compression_result)
+        
+        try:
+            # Make deterministic API call
+            response = self.openai_client.chat.completions.create(
+                model=config.model_big,
+                messages=[
+                    {
+                        "role": "user",
+                        "content": prompt
+                    }
+                ],
+                temperature=0,
+                max_tokens=1500,
+                stop=["</END>"]
+            )
             
-            # Validate and clean answer
-            answer = validate_and_clean_response(answer)
+            response_text = response.choices[0].message.content
             
-            # Extract token usage
-            usage = response.usage
-            output_tokens = usage.completion_tokens if usage else count_tokens(answer, settings.model_big)
-            
-            token_usage_info = {
-                'input_tokens': input_tokens,
-                'output_tokens': output_tokens,
-                'total_tokens': input_tokens + output_tokens,
-                'model': settings.model_big
+            # Track token usage
+            token_usage = {
+                'prompt_tokens': response.usage.prompt_tokens,
+                'completion_tokens': response.usage.completion_tokens,
+                'total_tokens': response.usage.total_tokens
             }
             
-            # Format citations from sources
-            citations = format_citations(compressed_pack.sources)
+            # Parse response
+            result = self.parse_answer_response(response_text, compression_result)
+            result.token_usage = token_usage
             
-            logger.info(f"Generated answer: {len(answer)} chars, {output_tokens} tokens, {len(citations)} citations")
-            
-            return answer, citations, token_usage_info
+            logger.info(f"Answer generation complete: {result.status}, {len(result.citations)} citations")
+            return result
             
         except Exception as e:
             logger.error(f"Answer generation failed: {e}")
-            
-            # Fallback response
-            fallback_answer = "I apologize, but I'm unable to generate an answer at this time due to a technical issue. Please try again."
-            fallback_citations = []
-            fallback_usage = {
-                'input_tokens': 0,
-                'output_tokens': 0,
-                'total_tokens': 0,
-                'model': settings.model_big,
-                'error': str(e)
-            }
-            
-            return fallback_answer, fallback_citations, fallback_usage
+            return self._create_error_result(str(e))
     
-    def enhance_answer_with_detail(
-        self, 
-        original_answer: str,
-        query: str, 
-        compressed_pack: CompressedPack,
-        max_tokens: int = 1000
-    ) -> Tuple[str, List[Citation], Dict[str, Any]]:
-        """
-        Enhance existing answer with more detail.
-        Used when user requests more detail via ?detail=more parameter.
-        
-        Args:
-            original_answer: Previously generated answer
-            query: The user question
-            compressed_pack: Compressed context (may be expanded)
-            max_tokens: Maximum tokens for enhanced answer
-        
-        Returns:
-            Tuple of (enhanced_answer, citations, token_usage_info)
-        """
+    def get_debug_info(self, result: AnswerResult) -> Dict[str, Any]:
+        """Get debug information about answer generation."""
+        return {
+            'status': result.status,
+            'citations_count': len(result.citations),
+            'token_usage': result.token_usage,
+            'answer_length': {
+                'plain': len(result.answer_plain),
+                'html': len(result.answer_html)
+            },
+            'error_message': result.error_message,
+            'citations': [
+                {
+                    'n': citation.n,
+                    'url': citation.url,
+                    'title': citation.title
+                }
+                for citation in result.citations
+            ],
+            'html_valid': self._validate_html_structure(result.answer_html)
+        }
+    
+    def _validate_html_structure(self, html: str) -> Dict[str, Any]:
+        """Validate HTML structure for debugging."""
         try:
-            # Build enhanced prompt
-            system_prompt = """You are a helpful AI assistant providing detailed, comprehensive answers.
-
-TASK: Expand the previous answer with more detail and context while maintaining accuracy.
-
-RULES:
-1. Use ONLY the provided quotes to expand the answer
-2. Maintain all existing citations and add new ones as needed
-3. Provide more comprehensive coverage of the topic
-4. Include additional context and nuance where supported by quotes
-5. Keep the enhanced answer well-structured and readable
-6. Target 500-1000 tokens for detailed response
-
-CITATION FORMAT: Use [1], [2], etc. matching the source list."""
-
-            # Format quotes and sources
-            quotes_text = []
-            for i, quote in enumerate(compressed_pack.quotes, 1):
-                quote_text = quote.get('quote', '').strip()
-                if quote_text:
-                    quotes_text.append(f"Quote {i}: {quote_text}")
+            soup = BeautifulSoup(html, 'html.parser')
             
-            sources_text = []
-            for i, source in enumerate(compressed_pack.sources, 1):
-                url = source.get('url', 'No URL')
-                doc_id = source.get('doc_id', 'Unknown')
-                sources_text.append(f"[{i}] {doc_id} ({url})")
+            # Check for required elements
+            has_paragraphs = len(soup.find_all('p')) > 0
+            has_sources = 'Sources' in html or 'sources' in html.lower()
+            has_citations = len(re.findall(r'\[\d+\]', html)) > 0
+            has_links = len(soup.find_all('a')) > 0
             
-            user_prompt = f"""Original Question: {query}
-
-Previous Answer: {original_answer}
-
-QUOTES FOR EXPANSION:
-{chr(10).join(quotes_text)}
-
-SOURCES:
-{chr(10).join(sources_text)}
-
-Please provide a more detailed and comprehensive answer using the quotes above. Expand on the previous answer with additional context, examples, and nuance where supported by the quotes."""
-
-            # Initialize client if needed
-            if self.client is None:
-                self.client = openai.OpenAI(api_key=settings.openai_api_key)
+            # Check tag usage
+            all_tags = [tag.name for tag in soup.find_all()]
+            allowed_tags = {'p', 'ul', 'ol', 'li', 'strong', 'em', 'a', 'br', 'h3'}
+            invalid_tags = set(all_tags) - allowed_tags
             
-            # Generate enhanced answer
-            response = self.client.chat.completions.create(
-                model=settings.model_big,
-                messages=[
-                    {"role": "system", "content": system_prompt},
-                    {"role": "user", "content": user_prompt}
-                ],
-                max_tokens=max_tokens,
-                temperature=0.1,  # Slightly more creative for detail
-                presence_penalty=0.1,
-                frequency_penalty=0.1
-            )
-            
-            enhanced_answer = response.choices[0].message.content.strip()
-            enhanced_answer = validate_and_clean_response(enhanced_answer)
-            
-            # Token usage
-            usage = response.usage
-            input_tokens = count_tokens(system_prompt + user_prompt, settings.model_big)
-            output_tokens = usage.completion_tokens if usage else count_tokens(enhanced_answer, settings.model_big)
-            
-            token_usage_info = {
-                'input_tokens': input_tokens,
-                'output_tokens': output_tokens,
-                'total_tokens': input_tokens + output_tokens,
-                'model': settings.model_big,
-                'enhancement': True
+            return {
+                'valid': len(invalid_tags) == 0,
+                'has_paragraphs': has_paragraphs,
+                'has_sources': has_sources,
+                'has_citations': has_citations,
+                'has_links': has_links,
+                'invalid_tags': list(invalid_tags),
+                'tag_counts': {tag: all_tags.count(tag) for tag in set(all_tags)}
             }
-            
-            citations = format_citations(compressed_pack.sources)
-            
-            logger.info(f"Enhanced answer: {len(enhanced_answer)} chars, {output_tokens} tokens")
-            
-            return enhanced_answer, citations, token_usage_info
             
         except Exception as e:
-            logger.error(f"Answer enhancement failed: {e}")
-            # Return original answer if enhancement fails
-            return original_answer, format_citations(compressed_pack.sources), {'error': str(e)}
-    
-    def validate_citations(self, answer: str, citations: List[Citation]) -> bool:
-        """
-        Validate that answer contains proper citations.
-        
-        Args:
-            answer: Generated answer text
-            citations: List of citations
-        
-        Returns:
-            True if citations are properly formatted, False otherwise
-        """
-        if not citations:
-            return '[' not in answer  # No citations expected
-        
-        # Check if answer contains citation markers
-        citation_markers = []
-        for i in range(1, len(citations) + 1):
-            if f'[{i}]' in answer:
-                citation_markers.append(i)
-        
-        # Should have at least some citations if sources are provided
-        has_citations = len(citation_markers) > 0
-        
-        if not has_citations:
-            logger.warning("Generated answer lacks proper citations")
-        
-        return has_citations
-
-
-# Global answer generator instance
-answer_generator = AnswerGenerator()
-
+            return {'valid': False, 'error': str(e)}

@@ -1,351 +1,297 @@
 """
-Metrics collection and monitoring for the RAG pipeline.
-Tracks cache performance, token usage, latency, and other key metrics.
+Comprehensive metrics tracking and logging for RAG pipeline.
+Tracks token usage, cache performance, latency, and quality metrics.
 """
 
 import logging
+import json
 import time
-from typing import Dict, Any, List
-from dataclasses import dataclass, field
+from typing import Dict, Any, Optional, List
+from dataclasses import dataclass, asdict
+from datetime import datetime, timedelta
 from collections import defaultdict, deque
-import threading
 
 logger = logging.getLogger(__name__)
-
 
 @dataclass
 class RequestMetrics:
     """Metrics for a single request."""
-    timestamp: float
-    cache_mode: str  # "miss", "exact", "semantic"
+    timestamp: str
+    query: str
+    cache_mode: str  # 'exact', 'semantic', 'miss'
     latency_ms: int
-    tokens_big: int
-    tokens_small: int
-    saved_tokens: int = 0
-    success: bool = True
-    error: str = ""
-
+    tokens_small_in: int
+    tokens_small_out: int
+    tokens_big_in: int
+    tokens_big_out: int
+    retrieved: int
+    reranked: int
+    quotes: int
+    saved_tokens_estimate: int
+    status: str
+    error_message: Optional[str] = None
 
 @dataclass
-class RollingMetrics:
-    """Rolling window metrics."""
-    window_size: int = 1000
-    requests: deque = field(default_factory=deque)
-    
-    def add_request(self, request: RequestMetrics):
-        """Add request to rolling window."""
-        self.requests.append(request)
-        if len(self.requests) > self.window_size:
-            self.requests.popleft()
-    
-    def get_stats(self) -> Dict[str, Any]:
-        """Get statistics from rolling window."""
-        if not self.requests:
-            return {
-                "total_requests": 0,
-                "cache_hit_ratio": 0.0,
-                "avg_latency_ms": 0.0,
-                "total_tokens": 0,
-                "tokens_saved": 0,
-                "success_rate": 1.0
-            }
-        
-        total = len(self.requests)
-        cache_hits = sum(1 for r in self.requests if r.cache_mode in ["exact", "semantic"])
-        exact_hits = sum(1 for r in self.requests if r.cache_mode == "exact")
-        semantic_hits = sum(1 for r in self.requests if r.cache_mode == "semantic")
-        
-        avg_latency = sum(r.latency_ms for r in self.requests) / total
-        total_tokens = sum(r.tokens_big + r.tokens_small for r in self.requests)
-        total_saved = sum(r.saved_tokens for r in self.requests)
-        successes = sum(1 for r in self.requests if r.success)
-        
-        return {
-            "total_requests": total,
-            "cache_hit_ratio": cache_hits / total,
-            "exact_cache_hits": exact_hits,
-            "semantic_cache_hits": semantic_hits,
-            "cache_misses": total - cache_hits,
-            "avg_latency_ms": avg_latency,
-            "total_tokens": total_tokens,
-            "tokens_saved": total_saved,
-            "success_rate": successes / total,
-            "model_usage": self._get_model_usage()
-        }
-    
-    def _get_model_usage(self) -> Dict[str, int]:
-        """Get token usage by model type."""
-        big_tokens = sum(r.tokens_big for r in self.requests)
-        small_tokens = sum(r.tokens_small for r in self.requests)
-        
-        return {
-            "big_model_tokens": big_tokens,
-            "small_model_tokens": small_tokens
-        }
+class AggregateMetrics:
+    """Aggregate metrics over time window."""
+    total_requests: int
+    cache_hit_rate: float
+    avg_latency_ms: float
+    total_tokens_used: int
+    total_tokens_saved: int
+    avg_retrieved: float
+    avg_reranked: float
+    avg_quotes: float
+    success_rate: float
 
-
-class MetricsCollector:
-    """Centralized metrics collection for the RAG pipeline."""
+class MetricsTracker:
+    """Tracks and aggregates RAG pipeline metrics."""
     
-    def __init__(self):
-        self.lock = threading.Lock()
-        self.rolling_metrics = RollingMetrics()
-        self.start_time = time.time()
+    def __init__(self, window_size: int = 1000):
+        self.window_size = window_size
+        self.request_history: deque = deque(maxlen=window_size)
+        self.hourly_stats: Dict[str, Dict] = defaultdict(dict)
         
-        # Counters
+        # Real-time counters
         self.total_requests = 0
-        self.exact_cache_hits = 0
-        self.semantic_cache_hits = 0
-        self.cache_misses = 0
-        
-        # Token tracking
-        self.total_tokens_big = 0
-        self.total_tokens_small = 0
+        self.cache_hits = 0
+        self.total_latency = 0
+        self.total_tokens_used = 0
         self.total_tokens_saved = 0
-        
-        # Latency tracking
-        self.total_latency_ms = 0
-        self.latency_samples = deque(maxlen=1000)
-        
-        # Model usage tracking
-        self.model_usage = defaultdict(int)
-        
-        # Error tracking
-        self.errors = deque(maxlen=100)
+        self.errors = 0
     
-    def record_request(
-        self,
-        cache_mode: str,
-        latency_ms: int,
-        tokens_big: int = 0,
-        tokens_small: int = 0,
-        saved_tokens: int = 0,
-        success: bool = True,
-        error: str = ""
-    ):
-        """Record metrics for a request."""
-        with self.lock:
-            # Create request metrics
-            request = RequestMetrics(
-                timestamp=time.time(),
-                cache_mode=cache_mode,
-                latency_ms=latency_ms,
-                tokens_big=tokens_big,
-                tokens_small=tokens_small,
-                saved_tokens=saved_tokens,
-                success=success,
-                error=error
-            )
-            
-            # Add to rolling window
-            self.rolling_metrics.add_request(request)
+    def log_request(self, metrics: RequestMetrics) -> None:
+        """Log metrics for a single request."""
+        try:
+            # Add to history
+            self.request_history.append(metrics)
             
             # Update counters
             self.total_requests += 1
-            self.total_latency_ms += latency_ms
-            self.total_tokens_big += tokens_big
-            self.total_tokens_small += tokens_small
-            self.total_tokens_saved += saved_tokens
+            if metrics.cache_mode in ['exact', 'semantic']:
+                self.cache_hits += 1
             
-            # Update cache counters
-            if cache_mode == "exact":
-                self.exact_cache_hits += 1
-            elif cache_mode == "semantic":
-                self.semantic_cache_hits += 1
-            else:
-                self.cache_misses += 1
+            self.total_latency += metrics.latency_ms
             
-            # Track latency
-            self.latency_samples.append(latency_ms)
+            tokens_used = (metrics.tokens_small_in + metrics.tokens_small_out + 
+                          metrics.tokens_big_in + metrics.tokens_big_out)
+            self.total_tokens_used += tokens_used
+            self.total_tokens_saved += metrics.saved_tokens_estimate
             
-            # Track errors
-            if not success and error:
-                self.errors.append({
-                    "timestamp": time.time(),
-                    "error": error,
-                    "cache_mode": cache_mode
-                })
+            if metrics.status == 'error':
+                self.errors += 1
             
-            # Log request
-            self._log_request(request)
-    
-    def record_cache_hit(self, cache_type: str):
-        """Record a cache hit."""
-        logger.info(f"Cache hit: {cache_type}")
-    
-    def record_cache_miss(self):
-        """Record a cache miss."""
-        logger.info("Cache miss")
-    
-    def _log_request(self, request: RequestMetrics):
-        """Log request metrics."""
-        logger.info(
-            f"Request: cache_mode={request.cache_mode}, "
-            f"latency_ms={request.latency_ms}, "
-            f"tokens_big={request.tokens_big}, "
-            f"tokens_small={request.tokens_small}, "
-            f"saved_tokens_estimate={request.saved_tokens}"
-        )
-    
-    def get_current_stats(self) -> Dict[str, Any]:
-        """Get current metrics statistics."""
-        with self.lock:
-            uptime_seconds = time.time() - self.start_time
-            
-            # Calculate rates
-            cache_hit_ratio = 0.0
-            avg_latency = 0.0
-            
-            if self.total_requests > 0:
-                total_cache_hits = self.exact_cache_hits + self.semantic_cache_hits
-                cache_hit_ratio = total_cache_hits / self.total_requests
-                avg_latency = self.total_latency_ms / self.total_requests
-            
-            # Get rolling window stats
-            rolling_stats = self.rolling_metrics.get_stats()
-            
-            return {
-                "uptime_seconds": uptime_seconds,
-                "total_requests": self.total_requests,
-                "cache_hit_ratio": cache_hit_ratio,
-                "exact_cache_hits": self.exact_cache_hits,
-                "semantic_cache_hits": self.semantic_cache_hits,
-                "cache_misses": self.cache_misses,
-                "avg_latency_ms": avg_latency,
-                "total_tokens_big": self.total_tokens_big,
-                "total_tokens_small": self.total_tokens_small,
-                "total_tokens_saved": self.total_tokens_saved,
-                "rolling_window": rolling_stats,
-                "recent_errors": list(self.errors)[-10:],  # Last 10 errors
-                "latency_p95": self._calculate_percentile(95) if self.latency_samples else 0,
-                "latency_p99": self._calculate_percentile(99) if self.latency_samples else 0
-            }
-    
-    def _calculate_percentile(self, percentile: int) -> float:
-        """Calculate latency percentile."""
-        if not self.latency_samples:
-            return 0.0
-        
-        sorted_samples = sorted(self.latency_samples)
-        index = int((percentile / 100.0) * len(sorted_samples))
-        index = min(index, len(sorted_samples) - 1)
-        
-        return float(sorted_samples[index])
-    
-    def get_cache_efficiency_metrics(self) -> Dict[str, Any]:
-        """Get cache efficiency specific metrics."""
-        with self.lock:
-            if self.total_requests == 0:
-                return {
-                    "cache_hit_ratio": 0.0,
-                    "tokens_saved_ratio": 0.0,
-                    "avg_tokens_per_request": 0.0,
-                    "efficiency_score": 0.0
+            # Update hourly stats
+            hour_key = datetime.fromisoformat(metrics.timestamp.replace('Z', '+00:00')).strftime('%Y-%m-%d-%H')
+            if hour_key not in self.hourly_stats:
+                self.hourly_stats[hour_key] = {
+                    'requests': 0,
+                    'cache_hits': 0,
+                    'total_latency': 0,
+                    'total_tokens': 0,
+                    'errors': 0
                 }
             
-            total_cache_hits = self.exact_cache_hits + self.semantic_cache_hits
-            cache_hit_ratio = total_cache_hits / self.total_requests
+            hour_stats = self.hourly_stats[hour_key]
+            hour_stats['requests'] += 1
+            if metrics.cache_mode in ['exact', 'semantic']:
+                hour_stats['cache_hits'] += 1
+            hour_stats['total_latency'] += metrics.latency_ms
+            hour_stats['total_tokens'] += tokens_used
+            if metrics.status == 'error':
+                hour_stats['errors'] += 1
             
-            total_tokens_used = self.total_tokens_big + self.total_tokens_small
-            tokens_saved_ratio = (
-                self.total_tokens_saved / max(total_tokens_used + self.total_tokens_saved, 1)
-            )
+            # Log JSON for external processing
+            self._log_json_metrics(metrics)
             
-            avg_tokens_per_request = total_tokens_used / self.total_requests
-            
-            # Efficiency score combines hit ratio and token savings
-            efficiency_score = (cache_hit_ratio * 0.6) + (tokens_saved_ratio * 0.4)
-            
-            return {
-                "cache_hit_ratio": cache_hit_ratio,
-                "tokens_saved_ratio": tokens_saved_ratio,
-                "avg_tokens_per_request": avg_tokens_per_request,
-                "efficiency_score": efficiency_score,
-                "total_tokens_saved": self.total_tokens_saved,
-                "semantic_hit_rate": (
-                    self.semantic_cache_hits / self.total_requests if self.total_requests > 0 else 0
-                ),
-                "exact_hit_rate": (
-                    self.exact_cache_hits / self.total_requests if self.total_requests > 0 else 0
-                )
-            }
+        except Exception as e:
+            logger.error(f"Failed to log metrics: {e}")
     
-    def get_admin_analytics_data(self) -> Dict[str, Any]:
-        """
-        Get metrics data formatted for the admin analytics dashboard.
-        This integrates with the existing AdminAnalytics component.
-        """
+    def _log_json_metrics(self, metrics: RequestMetrics) -> None:
+        """Log metrics as JSON for external processing."""
+        try:
+            # Create clean metrics dict for JSON logging
+            metrics_dict = asdict(metrics)
+            
+            # Truncate query for logging
+            if len(metrics_dict['query']) > 100:
+                metrics_dict['query'] = metrics_dict['query'][:100] + "..."
+            
+            logger.info(f"METRICS: {json.dumps(metrics_dict)}")
+            
+        except Exception as e:
+            logger.warning(f"Failed to log JSON metrics: {e}")
+    
+    def get_current_stats(self) -> AggregateMetrics:
+        """Get current aggregate statistics."""
+        if self.total_requests == 0:
+            return AggregateMetrics(
+                total_requests=0,
+                cache_hit_rate=0.0,
+                avg_latency_ms=0.0,
+                total_tokens_used=0,
+                total_tokens_saved=0,
+                avg_retrieved=0.0,
+                avg_reranked=0.0,
+                avg_quotes=0.0,
+                success_rate=0.0
+            )
+        
+        # Calculate averages from recent requests
+        recent_requests = list(self.request_history)
+        
+        if recent_requests:
+            avg_latency = sum(r.latency_ms for r in recent_requests) / len(recent_requests)
+            avg_retrieved = sum(r.retrieved for r in recent_requests) / len(recent_requests)
+            avg_reranked = sum(r.reranked for r in recent_requests) / len(recent_requests)
+            avg_quotes = sum(r.quotes for r in recent_requests) / len(recent_requests)
+            success_count = sum(1 for r in recent_requests if r.status == 'success')
+            success_rate = success_count / len(recent_requests)
+        else:
+            avg_latency = self.total_latency / self.total_requests
+            avg_retrieved = 0.0
+            avg_reranked = 0.0
+            avg_quotes = 0.0
+            success_rate = 1.0 - (self.errors / self.total_requests)
+        
+        return AggregateMetrics(
+            total_requests=self.total_requests,
+            cache_hit_rate=self.cache_hits / self.total_requests,
+            avg_latency_ms=avg_latency,
+            total_tokens_used=self.total_tokens_used,
+            total_tokens_saved=self.total_tokens_saved,
+            avg_retrieved=avg_retrieved,
+            avg_reranked=avg_reranked,
+            avg_quotes=avg_quotes,
+            success_rate=success_rate
+        )
+    
+    def get_hourly_breakdown(self, hours: int = 24) -> List[Dict[str, Any]]:
+        """Get hourly metrics breakdown."""
+        breakdown = []
+        
+        # Get last N hours
+        current_time = datetime.utcnow()
+        for i in range(hours):
+            hour_time = current_time - timedelta(hours=i)
+            hour_key = hour_time.strftime('%Y-%m-%d-%H')
+            
+            stats = self.hourly_stats.get(hour_key, {
+                'requests': 0,
+                'cache_hits': 0,
+                'total_latency': 0,
+                'total_tokens': 0,
+                'errors': 0
+            })
+            
+            # Calculate rates
+            cache_hit_rate = stats['cache_hits'] / stats['requests'] if stats['requests'] > 0 else 0
+            avg_latency = stats['total_latency'] / stats['requests'] if stats['requests'] > 0 else 0
+            error_rate = stats['errors'] / stats['requests'] if stats['requests'] > 0 else 0
+            
+            breakdown.append({
+                'hour': hour_key,
+                'timestamp': hour_time.isoformat() + 'Z',
+                'requests': stats['requests'],
+                'cache_hit_rate': round(cache_hit_rate, 3),
+                'avg_latency_ms': round(avg_latency, 1),
+                'total_tokens': stats['total_tokens'],
+                'error_rate': round(error_rate, 3)
+            })
+        
+        return list(reversed(breakdown))  # Most recent first
+    
+    def get_performance_summary(self) -> Dict[str, Any]:
+        """Get comprehensive performance summary."""
         current_stats = self.get_current_stats()
-        cache_efficiency = self.get_cache_efficiency_metrics()
+        
+        # Token efficiency
+        token_efficiency = 0.0
+        if self.total_tokens_used > 0:
+            token_efficiency = self.total_tokens_saved / (self.total_tokens_used + self.total_tokens_saved)
+        
+        # Recent performance (last 100 requests)
+        recent_requests = list(self.request_history)[-100:]
+        recent_cache_hits = sum(1 for r in recent_requests if r.cache_mode in ['exact', 'semantic'])
+        recent_cache_rate = recent_cache_hits / len(recent_requests) if recent_requests else 0
+        
+        # Latency percentiles
+        latencies = [r.latency_ms for r in recent_requests] if recent_requests else [0]
+        latencies.sort()
+        
+        p50_latency = latencies[len(latencies) // 2] if latencies else 0
+        p95_latency = latencies[int(len(latencies) * 0.95)] if latencies else 0
+        p99_latency = latencies[int(len(latencies) * 0.99)] if latencies else 0
         
         return {
-            "rag_pipeline": {
-                "available": True,
-                "summary": {
-                    "total_requests": current_stats["total_requests"],
-                    "cache_hit_ratio": cache_efficiency["cache_hit_ratio"],
-                    "avg_latency_ms": current_stats["avg_latency_ms"],
-                    "p95_latency_ms": current_stats["latency_p95"],
-                    "total_tokens_used": current_stats["total_tokens_big"] + current_stats["total_tokens_small"],
-                    "total_tokens_saved": current_stats["total_tokens_saved"],
-                    "efficiency_score": cache_efficiency["efficiency_score"]
-                },
-                "cache_performance": {
-                    "exact_hits": current_stats["exact_cache_hits"],
-                    "semantic_hits": current_stats["semantic_cache_hits"],
-                    "misses": current_stats["cache_misses"],
-                    "hit_ratio": cache_efficiency["cache_hit_ratio"],
-                    "semantic_hit_rate": cache_efficiency["semantic_hit_rate"],
-                    "exact_hit_rate": cache_efficiency["exact_hit_rate"]
-                },
-                "token_efficiency": {
-                    "big_model_tokens": current_stats["total_tokens_big"],
-                    "small_model_tokens": current_stats["total_tokens_small"],
-                    "tokens_saved": current_stats["total_tokens_saved"],
-                    "tokens_saved_ratio": cache_efficiency["tokens_saved_ratio"],
-                    "avg_tokens_per_request": cache_efficiency["avg_tokens_per_request"]
-                },
-                "performance": {
-                    "avg_latency_ms": current_stats["avg_latency_ms"],
-                    "p95_latency_ms": current_stats["latency_p95"],
-                    "p99_latency_ms": current_stats["latency_p99"],
-                    "uptime_seconds": current_stats["uptime_seconds"]
-                },
-                "recent_errors": current_stats["recent_errors"]
+            'overview': asdict(current_stats),
+            'efficiency': {
+                'token_efficiency': round(token_efficiency, 3),
+                'recent_cache_rate': round(recent_cache_rate, 3),
+                'cost_savings_estimate': self.total_tokens_saved * 0.00002  # Rough cost per token
+            },
+            'latency': {
+                'p50_ms': p50_latency,
+                'p95_ms': p95_latency,
+                'p99_ms': p99_latency,
+                'avg_ms': round(current_stats.avg_latency_ms, 1)
+            },
+            'quality': {
+                'success_rate': round(current_stats.success_rate, 3),
+                'avg_quotes_per_answer': round(current_stats.avg_quotes, 1),
+                'avg_sources_retrieved': round(current_stats.avg_retrieved, 1),
+                'avg_sources_reranked': round(current_stats.avg_reranked, 1)
             }
         }
     
-    def reset_metrics(self):
-        """Reset all metrics (for testing or admin purposes)."""
-        with self.lock:
-            self.rolling_metrics = RollingMetrics()
-            self.start_time = time.time()
-            
-            self.total_requests = 0
-            self.exact_cache_hits = 0
-            self.semantic_cache_hits = 0
-            self.cache_misses = 0
-            
-            self.total_tokens_big = 0
-            self.total_tokens_small = 0
-            self.total_tokens_saved = 0
-            
-            self.total_latency_ms = 0
-            self.latency_samples.clear()
-            
-            self.model_usage.clear()
-            self.errors.clear()
-            
-            logger.info("Metrics reset")
+    def reset_stats(self) -> None:
+        """Reset all statistics."""
+        self.request_history.clear()
+        self.hourly_stats.clear()
+        self.total_requests = 0
+        self.cache_hits = 0
+        self.total_latency = 0
+        self.total_tokens_used = 0
+        self.total_tokens_saved = 0
+        self.errors = 0
+        
+        logger.info("Metrics statistics reset")
 
+# Global metrics tracker instance
+metrics_tracker = MetricsTracker()
 
-# Global metrics instance
-metrics = MetricsCollector()
-
-
-
-
-
-
-
-
+def log_request_metrics(
+    query: str,
+    cache_mode: str,
+    latency_ms: int,
+    tokens_small_in: int = 0,
+    tokens_small_out: int = 0,
+    tokens_big_in: int = 0,
+    tokens_big_out: int = 0,
+    retrieved: int = 0,
+    reranked: int = 0,
+    quotes: int = 0,
+    saved_tokens_estimate: int = 0,
+    status: str = 'success',
+    error_message: Optional[str] = None
+) -> None:
+    """Convenience function to log request metrics."""
+    
+    metrics = RequestMetrics(
+        timestamp=datetime.utcnow().isoformat() + 'Z',
+        query=query,
+        cache_mode=cache_mode,
+        latency_ms=latency_ms,
+        tokens_small_in=tokens_small_in,
+        tokens_small_out=tokens_small_out,
+        tokens_big_in=tokens_big_in,
+        tokens_big_out=tokens_big_out,
+        retrieved=retrieved,
+        reranked=reranked,
+        quotes=quotes,
+        saved_tokens_estimate=saved_tokens_estimate,
+        status=status,
+        error_message=error_message
+    )
+    
+    metrics_tracker.log_request(metrics)

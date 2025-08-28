@@ -1,42 +1,47 @@
 """
-Utility functions for the RAG pipeline.
+Utility functions for the RAG application.
 """
 
-import re
 import hashlib
+import uuid
+import re
 import tiktoken
-import numpy as np
-from typing import List, Set, Dict, Any
-from sklearn.metrics.pairwise import cosine_similarity
+from typing import List, Dict, Any, Optional
+from datetime import datetime
+import logging
 
+logger = logging.getLogger(__name__)
 
-def normalize_query(q: str) -> str:
-    """
-    Normalize query for consistent caching.
-    Lowercase, collapse whitespace, strip punctuation; keep meaning.
-    """
+def get_token_count(text: str, model: str = "gpt-4o") -> int:
+    """Get token count for text using tiktoken."""
+    try:
+        encoding = tiktoken.encoding_for_model(model)
+        return len(encoding.encode(text))
+    except Exception as e:
+        logger.warning(f"Token counting failed: {e}, using character approximation")
+        return len(text) // 4  # Rough approximation
+
+def normalize_query(query: str) -> str:
+    """Normalize query for consistent caching."""
+    # Remove extra whitespace
+    normalized = re.sub(r'\s+', ' ', query.strip())
     # Convert to lowercase
-    normalized = q.lower()
-    
-    # Remove extra whitespace and normalize
-    normalized = re.sub(r'\s+', ' ', normalized.strip())
-    
-    # Remove some punctuation but keep meaningful characters
-    normalized = re.sub(r'[^\w\s\-\'\"?!.]', '', normalized)
-    
-    # Remove trailing punctuation that doesn't change meaning
+    normalized = normalized.lower()
+    # Remove common punctuation that doesn't affect meaning
     normalized = re.sub(r'[.!?]+$', '', normalized)
-    
     return normalized
 
+def generate_doc_id(source_url: str, title: str = "") -> str:
+    """Generate stable document ID from source URL and title."""
+    content = f"{source_url}#{title}".encode('utf-8')
+    return hashlib.sha256(content).hexdigest()[:16]
 
-def hash_string(s: str) -> str:
-    """Create a stable hash of a string."""
-    return hashlib.sha256(s.encode('utf-8')).hexdigest()
+def generate_chunk_id() -> str:
+    """Generate unique chunk ID."""
+    return str(uuid.uuid4())
 
-
-def jaccard_overlap(set1: Set[str], set2: Set[str]) -> float:
-    """Calculate Jaccard overlap coefficient between two sets."""
+def calculate_jaccard_similarity(set1: set, set2: set) -> float:
+    """Calculate Jaccard similarity between two sets."""
     if not set1 and not set2:
         return 1.0
     if not set1 or not set2:
@@ -46,133 +51,129 @@ def jaccard_overlap(set1: Set[str], set2: Set[str]) -> float:
     union = len(set1.union(set2))
     return intersection / union if union > 0 else 0.0
 
-
-def stable_hash_list(items: List[str]) -> str:
-    """Create a stable hash for a list of doc_ids."""
-    # Sort for consistency
-    sorted_items = sorted(items)
-    combined = '|'.join(sorted_items)
-    return hash_string(combined)
-
-
-def count_tokens(text: str, model: str = "gpt-4") -> int:
-    """Count tokens in text using tiktoken."""
-    try:
-        encoding = tiktoken.encoding_for_model(model)
-        return len(encoding.encode(text))
-    except Exception:
-        # Fallback: rough approximation
-        return len(text.split()) * 1.3
-
-
-def estimate_tokens_saved(original_tokens: int, cached_tokens: int) -> int:
-    """Estimate tokens saved by using cache instead of full pipeline."""
-    # Assume full pipeline would use ~2x tokens (retrieval + generation)
-    full_pipeline_estimate = original_tokens * 2
-    return max(0, full_pipeline_estimate - cached_tokens)
-
-
-def cosine_distance(vec1: np.ndarray, vec2: np.ndarray) -> float:
-    """Calculate cosine similarity between two vectors."""
-    if vec1.ndim == 1:
-        vec1 = vec1.reshape(1, -1)
-    if vec2.ndim == 1:
-        vec2 = vec2.reshape(1, -1)
+def extract_doc_ids_from_text(text: str) -> set:
+    """Extract potential document identifiers from text for similarity comparison."""
+    # Extract URLs, proper nouns, and key terms
+    urls = set(re.findall(r'https?://[^\s]+', text))
     
-    return cosine_similarity(vec1, vec2)[0][0]
+    # Extract capitalized words (potential proper nouns)
+    proper_nouns = set(re.findall(r'\b[A-Z][a-zA-Z]+\b', text))
+    
+    # Extract numbers (ratings, percentages, etc.)
+    numbers = set(re.findall(r'\b\d+(?:\.\d+)?%?\b', text))
+    
+    return urls.union(proper_nouns).union(numbers)
 
-
-def truncate_text(text: str, max_tokens: int, model: str = "gpt-4") -> str:
-    """Truncate text to fit within token budget."""
-    current_tokens = count_tokens(text, model)
-    if current_tokens <= max_tokens:
-        return text
+def chunk_text_markdown_aware(text: str, chunk_size: int = 700, overlap: int = 90) -> List[Dict[str, Any]]:
+    """
+    Split text into chunks with markdown awareness.
+    Returns list of chunks with metadata.
+    """
+    chunks = []
     
-    # Rough truncation based on token ratio
-    ratio = max_tokens / current_tokens
-    target_chars = int(len(text) * ratio * 0.9)  # 90% to be safe
+    # Split by major sections (headers)
+    sections = re.split(r'\n(?=#{1,3}\s)', text)
     
-    truncated = text[:target_chars]
+    current_chunk = ""
+    current_title = ""
+    current_section = ""
     
-    # Try to end at a sentence boundary
-    last_period = truncated.rfind('.')
-    last_newline = truncated.rfind('\n')
-    
-    if last_period > len(truncated) * 0.8:
-        truncated = truncated[:last_period + 1]
-    elif last_newline > len(truncated) * 0.8:
-        truncated = truncated[:last_newline]
-    
-    return truncated
-
-
-def extract_doc_ids_from_results(results: List[Dict[str, Any]]) -> List[str]:
-    """Extract unique doc_ids from search results."""
-    doc_ids = []
-    seen = set()
-    
-    for result in results:
-        doc_id = result.get('doc_id') or result.get('id', '')
-        if doc_id and doc_id not in seen:
-            doc_ids.append(doc_id)
-            seen.add(doc_id)
-    
-    return doc_ids
-
-
-def merge_and_deduplicate_quotes(quotes: List[Dict[str, Any]], max_tokens: int) -> List[Dict[str, Any]]:
-    """Merge and deduplicate quotes while staying within token budget."""
-    seen_texts = set()
-    merged = []
-    current_tokens = 0
-    
-    for quote in quotes:
-        text = quote.get('quote', '').strip()
-        if not text or text in seen_texts:
-            continue
+    for section in sections:
+        lines = section.split('\n')
         
-        quote_tokens = count_tokens(text)
-        if current_tokens + quote_tokens > max_tokens:
-            break
+        # Extract title and section from headers
+        if lines[0].startswith('#'):
+            header_line = lines[0]
+            if header_line.startswith('# '):
+                current_title = header_line[2:].strip()
+                current_section = ""
+            elif header_line.startswith('## ') or header_line.startswith('### '):
+                current_section = header_line.lstrip('# ').strip()
         
-        merged.append(quote)
-        seen_texts.add(text)
-        current_tokens += quote_tokens
+        section_text = section
+        
+        # If section is small enough, add to current chunk
+        if get_token_count(current_chunk + section_text) <= chunk_size:
+            current_chunk += "\n" + section_text if current_chunk else section_text
+        else:
+            # Save current chunk if it exists
+            if current_chunk.strip():
+                chunks.append({
+                    'text': current_chunk.strip(),
+                    'title': current_title,
+                    'section': current_section,
+                    'token_count': get_token_count(current_chunk)
+                })
+            
+            # Start new chunk with overlap
+            if overlap > 0 and chunks:
+                # Take last few sentences for overlap
+                sentences = current_chunk.split('. ')
+                overlap_text = '. '.join(sentences[-2:]) if len(sentences) > 1 else ""
+                current_chunk = overlap_text + "\n" + section_text if overlap_text else section_text
+            else:
+                current_chunk = section_text
     
-    return merged
-
-
-def format_citations(sources: List[Dict[str, str]]) -> List[Dict[str, Any]]:
-    """Format sources into citation format."""
-    citations = []
-    for i, source in enumerate(sources, 1):
-        citations.append({
-            "n": i,
-            "url": source.get("url", "")
+    # Add final chunk
+    if current_chunk.strip():
+        chunks.append({
+            'text': current_chunk.strip(),
+            'title': current_title,
+            'section': current_section,
+            'token_count': get_token_count(current_chunk)
         })
-    return citations
-
-
-def validate_and_clean_response(answer: str, max_length: int = 5000) -> str:
-    """Validate and clean the generated answer."""
-    if not answer or not answer.strip():
-        return "I don't have enough information to answer that question."
     
-    # Truncate if too long
-    if len(answer) > max_length:
-        answer = answer[:max_length].rsplit('.', 1)[0] + '.'
+    return chunks
+
+def sanitize_html(html: str) -> str:
+    """Sanitize HTML to allow only safe tags."""
+    from bs4 import BeautifulSoup
     
-    # Ensure proper formatting
-    answer = answer.strip()
+    allowed_tags = ['p', 'ul', 'ol', 'li', 'strong', 'em', 'a', 'br', 'h3']
+    allowed_attrs = {'a': ['href']}
     
-    return answer
+    soup = BeautifulSoup(html, 'html.parser')
+    
+    # Remove all tags not in allowed list
+    for tag in soup.find_all():
+        if tag.name not in allowed_tags:
+            tag.unwrap()
+        else:
+            # Remove attributes not in allowed list
+            allowed_tag_attrs = allowed_attrs.get(tag.name, [])
+            attrs_to_remove = [attr for attr in tag.attrs if attr not in allowed_tag_attrs]
+            for attr in attrs_to_remove:
+                del tag[attr]
+    
+    return str(soup)
 
+def format_timestamp() -> str:
+    """Get formatted timestamp for logging."""
+    return datetime.utcnow().isoformat() + "Z"
 
+def is_query_complex(query: str, word_threshold: int = 18) -> bool:
+    """Determine if query is complex enough to warrant rewriting."""
+    words = query.split()
+    
+    # Check word count
+    if len(words) > word_threshold:
+        return True
+    
+    # Check for complex patterns
+    complex_patterns = [
+        r'\b(how|why|what|when|where)\b.*\b(and|or|but)\b',  # Multiple questions
+        r'\b(compare|versus|vs\.?|difference)\b',  # Comparisons
+        r'\b(if|unless|provided|assuming)\b',  # Conditionals
+        r'[;,].*[;,]',  # Multiple clauses
+    ]
+    
+    for pattern in complex_patterns:
+        if re.search(pattern, query.lower()):
+            return True
+    
+    return False
 
-
-
-
-
-
-
-
+def merge_scores(vector_score: float, bm25_score: float, vector_weight: float = 0.65) -> float:
+    """Merge vector and BM25 scores with weighting."""
+    bm25_weight = 1.0 - vector_weight
+    return (vector_score * vector_weight) + (bm25_score * bm25_weight)

@@ -1,41 +1,36 @@
-# Render.com deployment configuration
 services:
   - type: web
-    name: veteran-ai-spa-with-analytics
+    name: rag-flask-backend
     env: python
-    plan: starter  # Upgrade to standard/pro for production
-    buildCommand: "pip install -r requirements.txt && npm install && npm run build"
-    startCommand: "python app.py"
+    plan: starter
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn -c gunicorn.conf.py wsgi:app
     envVars:
       - key: PYTHON_VERSION
-        value: 3.11
+        value: 3.11.0
       - key: OPENAI_API_KEY
-        sync: false  # Set this in Render dashboard
+        sync: false
       - key: PINECONE_API_KEY  
-        sync: false  # Set this in Render dashboard
-      - key: PINECONE_ENV
-        sync: false  # Set this in Render dashboard
+        sync: false
       - key: PINECONE_INDEX
-        sync: false  # Set this in Render dashboard
-      - key: EMBEDDING_MODEL
-        value: text-embedding-3-large  # Change based on your Pinecone index
+        value: veteran-rag
+      - key: PINECONE_NAMESPACE
+        value: production
+      - key: SECRET_KEY
+        generateValue: true
       - key: MODEL_BIG
         value: gpt-4o
       - key: MODEL_SMALL
         value: gpt-4o-mini
-      - key: CACHE_DB_PATH
-        value: /opt/render/project/data/cache.sqlite
-      - key: FAISS_PATH
-        value: /opt/render/project/data/query_cache.faiss
-      - key: SIM_THRESHOLD
-        value: "0.92"
-      - key: DOC_OVERLAP_MIN
-        value: "0.6"
-      - key: CACHE_EMBEDDING_MODEL
-        value: all-MiniLM-L6-v2
-    # Persistent disk for cache storage
-    disk:
-      name: rag-cache-disk
-      mountPath: /opt/render/project/data
-      sizeGB: 1
-    healthCheckPath: /
+      - key: EMBED_MODEL
+        value: text-embedding-3-small
+      - key: RETRIEVAL_TOP_K
+        value: 50
+      - key: RERANK_TOP_K
+        value: 8
+      - key: COMPRESS_BUDGET_TOKENS
+        value: 2200
+      - key: WORKERS
+        value: 2
+      - key: THREADS
+        value: 4
