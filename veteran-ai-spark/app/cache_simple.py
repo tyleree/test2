@@ -9,7 +9,7 @@ import numpy as np
 from typing import List, Optional, Dict, Any, Tuple
 from datetime import datetime
 
-from .settings import settings
+from .config import config
 from .utils import normalize_query, hash_string, stable_hash_list
 from .schemas import CacheEntry, TokenUsage
 
@@ -18,7 +18,7 @@ class SimpleSemanticCache:
     """Simplified semantic cache for testing without PyTorch dependencies."""
     
     def __init__(self):
-        self.db_path = settings.cache_db_path
+        self.db_path = config.cache_db_path
         self.lock = threading.Lock()
         self._init_db()
     

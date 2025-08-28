@@ -452,25 +452,40 @@ FRONTEND_BUILD_DIR = os.getenv(
     os.path.join(os.path.dirname(__file__), "frontend", "dist")
 )
 
-# Initialize Pinecone MCP Assistant
+# Initialize Pinecone connection
 try:
     pc = Pinecone(api_key=os.getenv("PINECONE_API_KEY"))
-    # Use your existing MCP assistant
-    assistant = pc.assistant.Assistant(assistant_name="vb")
-    app.config['PINECONE_ASSISTANT'] = assistant
-    print("✅ Pinecone MCP Assistant 'vb' connected successfully")
     
-    # Also try to get the index for additional functionality
+    # Try to get the index for direct queries
     try:
-        index = pc.Index(os.getenv("PINECONE_INDEX_NAME", "veterans-benefits-kb"))
+        index_name = os.getenv("PINECONE_INDEX_NAME", "veterans-benefits-kb")
+        index = pc.Index(index_name)
         app.config['PINECONE_INDEX'] = index
-        print(f"✅ Pinecone Index '{os.getenv('PINECONE_INDEX_NAME', 'veterans-benefits-kb')}' connected successfully")
+        print(f"✅ Pinecone Index '{index_name}' connected successfully")
+        
+        # Test the connection by getting index stats
+        stats = index.describe_index_stats()
+        print(f"📊 Index stats: {stats.total_vector_count} vectors, {stats.dimension} dimensions")
+        
     except Exception as e:
-        print(f"⚠️ Warning: Could not connect to Pinecone index: {e}")
+        print(f"❌ Error connecting to Pinecone index: {e}")
+        print(f"🔍 Attempted index name: {os.getenv('PINECONE_INDEX_NAME', 'veterans-benefits-kb')}")
         index = None
+    
+    # Try to initialize MCP assistant (optional, fallback to direct index queries)
+    assistant = None
+    try:
+        if hasattr(pc, 'assistant'):
+            assistant = pc.assistant.Assistant(assistant_name="vb")
+            app.config['PINECONE_ASSISTANT'] = assistant
+            print("✅ Pinecone MCP Assistant 'vb' connected successfully")
+        else:
+            print("ℹ️  MCP Assistant not available in this Pinecone SDK version, using direct index queries")
+    except Exception as e:
+        print(f"⚠️ MCP Assistant initialization failed: {e}, using direct index queries")
         
 except Exception as e:
-    print(f"❌ Error initializing Pinecone MCP Assistant: {e}")
+    print(f"❌ Error initializing Pinecone connection: {e}")
     assistant = None
     index = None
 
@@ -677,9 +692,49 @@ def process_mcp_response(mcp_response):
         return None, None, None
 
 
-def query_direct_pinecone(prompt, index):
+def query_new_rag_system(prompt, index):
     """
-    Query Pinecone index directly using OpenAI embeddings and GPT-4
+    NEW RAG SYSTEM: Query using medical term expansion and improved retrieval.
+    This replaces the old direct Pinecone approach with our enhanced system.
+    
+    Args:
+        prompt (str): User's question
+        index: Pinecone index object (kept for compatibility)
+        
+    Returns:
+        dict: Response with content, citations, and metadata
+    """
+    print(f"🔥 NEW RAG SYSTEM: Processing query: '{prompt[:50]}...'")
+    
+    try:
+        # Import medical term expansion
+        import sys
+        import os
+        sys.path.insert(0, os.path.dirname(__file__))
+        
+        from medical_terms import expand_medical_query
+        
+        # Apply medical term expansion
+        expanded_query = expand_medical_query(prompt)
+        
+        if expanded_query != prompt:
+            print(f"✅ Medical expansion applied: '{prompt}' -> '{expanded_query}'")
+        else:
+            print(f"ℹ️  No medical expansion needed for: '{prompt}'")
+        
+        # For now, use the old system but with expanded query
+        # This gives us the medical term expansion benefit immediately
+        return query_direct_pinecone_original(expanded_query, index)
+        
+    except Exception as e:
+        print(f"❌ NEW RAG SYSTEM ERROR: {e}")
+        # Fallback to original system if new system fails
+        print("🔄 Falling back to original system...")
+        return query_direct_pinecone_original(prompt, index)
+
+def query_direct_pinecone_original(prompt, index):
+    """
+    Original Pinecone query function (kept as fallback).
     
     Args:
         prompt (str): User's question
@@ -688,13 +743,25 @@ def query_direct_pinecone(prompt, index):
     Returns:
         dict: Response with content, citations, and metadata
     """
-    print(f"🔍 query_direct_pinecone called with prompt: '{prompt[:50]}...', index: {type(index)}")
+    print(f"🔍 query_direct_pinecone_original called with prompt: '{prompt[:50]}...', index: {type(index)}")
     
     try:
         from openai import OpenAI
         
-        # Initialize OpenAI client with proper v1.0+ syntax
-        client = OpenAI(api_key=OPENAI_API_KEY)
+        # Initialize OpenAI client with explicit timeout and max_retries
+        # Try different initialization methods to avoid the proxies issue
+        try:
+            client = OpenAI(
+                api_key=OPENAI_API_KEY,
+                timeout=60.0,
+                max_retries=3
+            )
+        except TypeError as e:
+            if 'proxies' in str(e):
+                print("🔄 Trying alternative OpenAI client initialization...")
+                client = OpenAI(api_key=OPENAI_API_KEY)
+            else:
+                raise
         
         print(f"🔍 Generating embedding for query: {prompt[:50]}...")
         
@@ -1542,7 +1609,7 @@ def ask():
         if index_ref and OPENAI_API_KEY:
             print(f"🚀 Attempting direct Pinecone + GPT-4 query for prompt: {prompt[:50]}...")
             print(f"🔍 Debug: index_ref type: {type(index_ref)}, OPENAI_API_KEY: {'[REDACTED]' if OPENAI_API_KEY else 'None'}")
-            direct_response = query_direct_pinecone(prompt, index_ref)
+            direct_response = query_new_rag_system(prompt, index_ref)
             print(f"🔍 Debug: direct_response type: {type(direct_response)}, content: {direct_response}")
             if direct_response and direct_response.get("success"):
                 provider_used = 'openai_direct'

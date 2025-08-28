@@ -11,7 +11,7 @@ from typing import List, Dict, Any, Optional
 from dataclasses import dataclass, asdict, field
 from contextlib import contextmanager
 
-from .settings import settings
+from .config import config
 
 logger = logging.getLogger(__name__)
 
@@ -44,7 +44,7 @@ class TimelineTracker:
     """Tracks all questions and responses in a comprehensive timeline."""
     
     def __init__(self, db_path: str = None):
-        self.db_path = db_path or settings.cache_db_path.replace('cache.sqlite', 'timeline.sqlite')
+        self.db_path = db_path or config.cache_db_path.replace('cache.sqlite', 'timeline.sqlite')
         self.init_db()
     
     def init_db(self):

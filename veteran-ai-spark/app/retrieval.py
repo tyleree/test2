@@ -339,3 +339,7 @@ class HybridRetriever:
             'namespace': config.pinecone_namespace,
             'retrieval_top_k': config.retrieval_top_k
         }
+
+
+# Global retriever instance
+retriever = HybridRetriever()

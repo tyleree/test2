@@ -9,7 +9,7 @@ from fastapi import FastAPI, HTTPException, Header, Depends, Query
 from fastapi.middleware.cors import CORSMiddleware
 import uvicorn
 
-from .settings import settings
+from .config import config
 from .schemas import (
     AskRequest, AnswerPayload, CacheStatsResponse, ClearCacheRequest, 
     ClearCacheResponse, HealthResponse, MetricsData
@@ -52,14 +52,14 @@ def verify_admin_token(
     token: str = Query(None)
 ) -> bool:
     """Verify admin token for protected endpoints. Accepts token via header or query parameter."""
-    if not settings.admin_token:
+    if not config.admin_token:
         # For development, allow access if no admin token is configured
         return True
     
     # Check both header and query parameter
     provided_token = x_admin_token or token
     
-    if provided_token != settings.admin_token:
+    if provided_token != config.admin_token:
         raise HTTPException(status_code=401, detail="Invalid admin token")
     
     return True
@@ -70,10 +70,10 @@ async def health_check():
     """Health check endpoint."""
     try:
         # Check if cache DB exists
-        cache_db_exists = os.path.exists(settings.cache_db_path)
+        cache_db_exists = os.path.exists(config.cache_db_path)
         
         # Check if FAISS index exists
-        faiss_index_exists = os.path.exists(settings.faiss_path)
+        faiss_index_exists = os.path.exists(config.faiss_path)
         
         return HealthResponse(
             status="ok",
@@ -443,10 +443,10 @@ async def internal_error_handler(request, exc):
 async def startup_event():
     """Initialize components on startup."""
     logger.info("Starting RAG Pipeline API...")
-    logger.info(f"Cache DB: {settings.cache_db_path}")
-    logger.info(f"FAISS Index: {settings.faiss_path}")
-    logger.info(f"Models: Big={settings.model_big}, Small={settings.model_small}")
-    logger.info(f"Similarity threshold: {settings.sim_threshold}")
+    logger.info(f"Cache DB: {config.cache_db_path}")
+    logger.info(f"FAISS Index: {config.faiss_path}")
+    logger.info(f"Models: Big={config.model_big}, Small={config.model_small}")
+    logger.info(f"Similarity threshold: {config.sim_threshold}")
     logger.info("RAG Pipeline API started successfully")
 
 

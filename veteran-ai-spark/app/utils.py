@@ -31,6 +31,23 @@ def normalize_query(query: str) -> str:
     normalized = re.sub(r'[.!?]+$', '', normalized)
     return normalized
 
+def hash_string(text: str) -> str:
+    """Generate a stable hash for a string."""
+    return hashlib.sha256(text.encode('utf-8')).hexdigest()
+
+def stable_hash_list(items: List[str]) -> str:
+    """Generate a stable hash for a list of strings."""
+    combined = '|'.join(sorted(items))
+    return hashlib.sha256(combined.encode('utf-8')).hexdigest()
+
+def count_tokens(text: str, model: str = "gpt-4o") -> int:
+    """Alias for get_token_count for compatibility."""
+    return get_token_count(text, model)
+
+def jaccard_overlap(set1: set, set2: set) -> float:
+    """Alias for calculate_jaccard_similarity for compatibility."""
+    return calculate_jaccard_similarity(set1, set2)
+
 def generate_doc_id(source_url: str, title: str = "") -> str:
     """Generate stable document ID from source URL and title."""
     content = f"{source_url}#{title}".encode('utf-8')
@@ -177,3 +194,16 @@ def merge_scores(vector_score: float, bm25_score: float, vector_weight: float = 
     """Merge vector and BM25 scores with weighting."""
     bm25_weight = 1.0 - vector_weight
     return (vector_score * vector_weight) + (bm25_score * bm25_weight)
+
+def estimate_tokens_saved(original_tokens: int, cache_lookup_cost: int = 50) -> int:
+    """Estimate tokens saved by using cache instead of full pipeline."""
+    return max(0, original_tokens - cache_lookup_cost)
+
+def extract_doc_ids_from_results(results: List[Dict[str, Any]]) -> List[str]:
+    """Extract document IDs from search results."""
+    doc_ids = []
+    for result in results:
+        doc_id = result.get('doc_id') or result.get('id')
+        if doc_id:
+            doc_ids.append(str(doc_id))
+    return doc_ids

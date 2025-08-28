@@ -51,7 +51,8 @@ class Settings(BaseSettings):
     @validator('cache_db_path', 'faiss_path')
     def ensure_data_dir(cls, v):
         """Ensure data directory exists for cache files."""
-        os.makedirs(os.path.dirname(v), exist_ok=True)
+        if v and os.path.dirname(v):
+            os.makedirs(os.path.dirname(v), exist_ok=True)
         return v
     
     class Config:

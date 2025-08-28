@@ -335,4 +335,7 @@ Replace [topic] with the relevant topic from the user's question.
             }
             
         except Exception as e:
-            return {'valid': False, 'error': str(e)}
+            return {'valid': False, 'error': str(e)} 
+ #   G l o b a l   a n s w e r   g e n e r a t o r   i n s t a n c e  
+ a n s w e r _ g e n e r a t o r   =   A n s w e r G e n e r a t o r ( )  
+ 

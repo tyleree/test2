@@ -12,7 +12,7 @@ import time
 import json
 from typing import Dict, Any
 
-from .settings import settings
+from .config import config
 from .schemas import AnswerPayload, TokenUsage, CompressedPack
 from .utils import normalize_query, hash_string, count_tokens, estimate_tokens_saved
 from .cache import cache
@@ -109,7 +109,7 @@ class RAGPipeline:
             
             # Iterate through hits by descending similarity
             for cache_id, similarity in semantic_hits:
-                if similarity >= settings.sim_threshold:
+                if similarity >= config.sim_threshold:
                     # Get cache entry
                     cached_entry = cache.get_cache_entry_by_id(cache_id)
                     if not cached_entry:
@@ -145,7 +145,7 @@ class RAGPipeline:
         """Execute the full RAG pipeline."""
         
         # Adjust compression budget for detail level
-        compress_budget = settings.compress_budget_tokens
+        compress_budget = config.compress_budget_tokens
         if detail_level == "more":
             compress_budget = int(compress_budget * 1.5)  # 50% more context
         
@@ -153,7 +153,7 @@ class RAGPipeline:
         logger.info("Step 1: Retrieving documents")
         retrieved_docs = retriever.retrieve_top_chunks(
             question, 
-            k=settings.retrieve_k,
+            k=config.retrieve_k,
             use_query_expansion=True
         )
         
@@ -165,7 +165,7 @@ class RAGPipeline:
         reranked_docs = reranker.rerank_documents(
             question, 
             retrieved_docs, 
-            top_k=settings.rerank_k
+            top_k=config.rerank_k
         )
         
         # Step 3: Compress context
@@ -186,8 +186,8 @@ class RAGPipeline:
         
         # Step 5: Create token usage object
         token_usage = TokenUsage(
-            model_big=settings.model_big,
-            model_small=settings.model_small,
+            model_big=config.model_big,
+            model_small=config.model_small,
             tokens_big=token_usage_info.get('total_tokens', 0),
             tokens_small=0,  # TODO: Track small model usage from compression
             total_tokens=token_usage_info.get('total_tokens', 0)
@@ -281,8 +281,8 @@ class RAGPipeline:
         latency_ms = int((time.time() - start_time) * 1000)
         
         token_usage = TokenUsage(
-            model_big=settings.model_big,
-            model_small=settings.model_small,
+            model_big=config.model_big,
+            model_small=config.model_small,
             tokens_big=0,
             tokens_small=0,
             total_tokens=0
@@ -301,8 +301,8 @@ class RAGPipeline:
         latency_ms = int((time.time() - start_time) * 1000)
         
         token_usage = TokenUsage(
-            model_big=settings.model_big,
-            model_small=settings.model_small,
+            model_big=config.model_big,
+            model_small=config.model_small,
             tokens_big=0,
             tokens_small=0,
             total_tokens=0
@@ -325,12 +325,12 @@ class RAGPipeline:
             "cache": cache_stats,
             "validation": validation_stats,
             "settings": {
-                "sim_threshold": settings.sim_threshold,
-                "doc_overlap_min": settings.doc_overlap_min,
-                "max_sources": settings.max_sources,
-                "retrieve_k": settings.retrieve_k,
-                "rerank_k": settings.rerank_k,
-                "compress_budget_tokens": settings.compress_budget_tokens
+                "sim_threshold": config.sim_threshold,
+                "doc_overlap_min": config.doc_overlap_min,
+                "max_sources": config.max_sources,
+                "retrieve_k": config.retrieve_k,
+                "rerank_k": config.rerank_k,
+                "compress_budget_tokens": config.compress_budget_tokens
             }
         }
     

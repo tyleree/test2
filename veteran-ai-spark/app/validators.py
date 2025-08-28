@@ -6,7 +6,7 @@ import logging
 from typing import List, Dict, Any, Optional
 from enum import Enum
 
-from .settings import settings
+from .config import config
 from .utils import jaccard_overlap, hash_string
 from .schemas import CacheEntry
 from .cache import cache
@@ -88,7 +88,7 @@ class CacheValidator:
         """
         try:
             # Get fresh top document IDs
-            fresh_doc_ids = retriever.get_fresh_top_docs(query, k=settings.retrieve_k)
+            fresh_doc_ids = retriever.get_fresh_top_docs(query, k=config.retrieve_k)
             
             if not fresh_doc_ids:
                 return False
@@ -99,9 +99,9 @@ class CacheValidator:
             
             overlap = jaccard_overlap(cached_set, fresh_set)
             
-            logger.debug(f"Document overlap: {overlap:.3f} (threshold: {settings.doc_overlap_min})")
+            logger.debug(f"Document overlap: {overlap:.3f} (threshold: {config.doc_overlap_min})")
             
-            return overlap >= settings.doc_overlap_min
+            return overlap >= config.doc_overlap_min
             
         except Exception as e:
             logger.error(f"Document overlap validation failed: {e}")
@@ -124,7 +124,7 @@ class CacheValidator:
                 return True  # No sources to validate
             
             # Get fresh results
-            fresh_results = retriever.retrieve_top_chunks(query, k=settings.retrieve_k)
+            fresh_results = retriever.retrieve_top_chunks(query, k=config.retrieve_k)
             fresh_doc_ids = set(result.get('doc_id', '') for result in fresh_results)
             
             # Check if cached sources are still in fresh results
@@ -182,7 +182,7 @@ class CacheValidator:
             Current version hash
         """
         # Start with global version salt
-        version_components = [settings.doc_version_salt]
+        version_components = [config.doc_version_salt]
         
         # TODO: Add individual document version hashes if available
         # This would require tracking document update timestamps

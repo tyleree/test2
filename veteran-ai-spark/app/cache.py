@@ -11,7 +11,7 @@ from datetime import datetime
 import faiss
 from sentence_transformers import SentenceTransformer
 
-from .settings import settings
+from .config import config
 from .utils import normalize_query, hash_string, stable_hash_list
 from .schemas import CacheEntry, TokenUsage
 
@@ -20,8 +20,8 @@ class SemanticCache:
     """Multi-layer semantic cache with SQLite backend and FAISS index."""
     
     def __init__(self):
-        self.db_path = settings.cache_db_path
-        self.faiss_path = settings.faiss_path
+        self.db_path = config.cache_db_path
+        self.faiss_path = config.faiss_path
         self.embedding_model = None
         self.faiss_index = None
         self.lock = threading.Lock()
@@ -99,7 +99,7 @@ class SemanticCache:
     def _load_embedding_model(self):
         """Load sentence transformer model for embeddings."""
         if self.embedding_model is None:
-            self.embedding_model = SentenceTransformer(settings.cache_embedding_model)
+            self.embedding_model = SentenceTransformer(getattr(config, "cache_embedding_model", "all-MiniLM-L6-v2"))
     
     def embed_query_for_cache(self, q: str) -> np.ndarray:
         """Generate embedding for query caching."""

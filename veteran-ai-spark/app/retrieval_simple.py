@@ -6,7 +6,7 @@ import logging
 from typing import List, Dict, Any, Optional
 import openai
 
-from .settings import settings
+from .config import config
 from .utils import extract_doc_ids_from_results, count_tokens
 
 logger = logging.getLogger(__name__)
@@ -22,7 +22,7 @@ class SimpleDocumentRetriever:
         """Generate embedding for query using OpenAI."""
         try:
             if self.openai_client is None:
-                self.openai_client = openai.OpenAI(api_key=settings.openai_api_key)
+                self.openai_client = openai.OpenAI(api_key=config.openai_api_key)
             
             response = self.openai_client.embeddings.create(
                 model="text-embedding-ada-002",
@@ -45,7 +45,7 @@ class SimpleDocumentRetriever:
         Simplified retrieval - returns mock documents for testing.
         """
         if k is None:
-            k = settings.retrieve_k
+            k = config.retrieve_k
         
         logger.info(f"Mock retrieval for query: {query[:100]}...")
         
@@ -67,7 +67,7 @@ class SimpleDocumentRetriever:
     def get_fresh_top_docs(self, query: str, k: int = None) -> List[str]:
         """Get fresh top document IDs for cache validation."""
         if k is None:
-            k = settings.retrieve_k
+            k = config.retrieve_k
         
         results = self.retrieve_top_chunks(query, k=k, use_query_expansion=False)
         return extract_doc_ids_from_results(results)

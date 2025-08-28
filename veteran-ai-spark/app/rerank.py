@@ -220,4 +220,8 @@ class CrossEncoderReranker:
                 }
                 for c in candidates[:5]  # Top 5 for debug
             ]
+
+
+# Global reranker instance
+reranker = CrossEncoderReranker()
         }

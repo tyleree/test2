@@ -11,6 +11,7 @@ from dotenv import load_dotenv
 # Load environment variables
 load_dotenv('env.txt')  # For compatibility with existing setup
 load_dotenv('.env')
+load_dotenv('config.env')
 
 class Config(BaseSettings):
     """Application configuration with validation."""
@@ -39,10 +40,19 @@ class Config(BaseSettings):
     quote_max_tokens: int = Field(120, env="QUOTE_MAX_TOKENS")
     
     # Cache Configuration
-    cache_db_path: str = Field("cache.db", env="CACHE_DB_PATH")
+    cache_db_path: str = Field("data/cache.sqlite", env="CACHE_DB_PATH")
+    faiss_path: str = Field("data/query_cache.faiss", env="FAISS_PATH")
+    sim_threshold: float = Field(0.92, env="SIM_THRESHOLD")
     semantic_threshold: float = Field(0.92, env="SEMANTIC_THRESHOLD")
     jaccard_threshold: float = Field(0.6, env="JACCARD_THRESHOLD")
-    doc_version_salt: str = Field("v1.0", env="DOC_VERSION_SALT")
+    doc_overlap_min: float = Field(0.6, env="DOC_OVERLAP_MIN")
+    doc_version_salt: str = Field("v1", env="DOC_VERSION_SALT")
+    max_sources: int = Field(6, env="MAX_SOURCES")
+    retrieve_k: int = Field(50, env="RETRIEVE_K")
+    rerank_k: int = Field(8, env="RERANK_K")
+    embedding_model: str = Field("text-embedding-3-large", env="EMBEDDING_MODEL")
+    pinecone_env: str = Field("us-west-2", env="PINECONE_ENV")
+    admin_token: str = Field("your-admin-token", env="ADMIN_TOKEN")
     
     # Evaluation
     eval_qas_path: str = Field("app/eval/qas.csv", env="EVAL_QAS_PATH")

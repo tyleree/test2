@@ -312,3 +312,7 @@ If no relevant quotes can be found, return:
                 for quote in result.quotes[:3]  # First 3 quotes for debug
             ]
         }
+
+
+# Global compressor instance
+compressor = QuoteCompressor()

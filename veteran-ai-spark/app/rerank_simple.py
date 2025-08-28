@@ -5,7 +5,7 @@ Simplified reranking module for testing without heavy dependencies.
 import logging
 from typing import List, Dict, Any
 
-from .settings import settings
+from .config import config
 
 logger = logging.getLogger(__name__)
 
@@ -26,7 +26,7 @@ class SimpleDocumentReranker:
         Simple reranking based on existing scores.
         """
         if top_k is None:
-            top_k = settings.rerank_k
+            top_k = config.rerank_k
         
         if not documents:
             return []
