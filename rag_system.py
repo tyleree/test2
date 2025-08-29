@@ -22,6 +22,9 @@ class SearchResult:
     source_url: str
     diagnostic_code: Optional[str] = None
     relevance_score: float = 0.0
+    cross_validation_score: float = 0.0
+    retrieval_method: str = "semantic"
+    confidence: float = 0.0
 
 class AdvancedRAGSystem:
     def __init__(self, pinecone_index, openai_client):
@@ -68,6 +71,19 @@ class AdvancedRAGSystem:
             'rating', 'percent', 'percentage', '10%', '20%', '30%', '40%', '50%', '60%', '70%', '80%', '90%', '100%',
             'disability', 'compensation', 'schedule', 'criteria', 'diagnostic code', 'CFR'
         ]
+
+    def classify_query_intent(self, query: str) -> str:
+        """
+        Classify the primary intent of the query: rating | eligibility | process | general
+        """
+        q = (query or "").lower()
+        if any(t in q for t in ['rating', 'percent', '%', 'disability rating', 'criteria']):
+            return 'rating'
+        if any(t in q for t in ['eligible', 'qualify', 'service connection', 'presumptive']):
+            return 'eligibility'
+        if any(t in q for t in ['how to', 'apply', 'claim', 'appeal', 'process', 'steps']):
+            return 'process'
+        return 'general'
 
     def spell_check_and_expand(self, query: str) -> Dict[str, Any]:
         """
@@ -164,71 +180,86 @@ class AdvancedRAGSystem:
         
         return vector
 
-    def hybrid_search(self, query_data: Dict[str, Any], top_k: int = 50) -> List[SearchResult]:
-        """
-        Perform hybrid search combining semantic similarity and keyword matching
-        """
-        results = []
-        
-        # Build comprehensive search query
-        search_terms = [query_data['corrected_query']]
-        search_terms.extend(query_data['expanded_terms'])
-        search_terms.extend(query_data['diagnostic_codes'])
-        
-        combined_query = ' '.join(search_terms)
-        print(f"🔍 Hybrid search query: '{combined_query[:100]}...'")
-        
-        # Generate embedding for semantic search
-        query_vector = self.generate_query_embedding(combined_query)
-        
-        try:
-            # Perform vector search
-            pinecone_results = self.index.query(
-                vector=query_vector,
-                top_k=top_k,
-                include_metadata=True,
-                namespace=self.namespace
+    def _convert_matches_to_results(self, matches, retrieval_method: str, query_data: Dict[str, Any]) -> List[SearchResult]:
+        results: List[SearchResult] = []
+        for match in (matches or []):
+            md = getattr(match, 'metadata', None)
+            if not md:
+                continue
+            text_content = md.get('text', '')
+            if not text_content:
+                continue
+            # Extract diagnostic code if present in text
+            diagnostic_code = None
+            for code in query_data.get('diagnostic_codes', []):
+                if code and code in text_content:
+                    diagnostic_code = code
+                    break
+            res = SearchResult(
+                chunk_id=match.id,
+                text=text_content,
+                heading=md.get('heading', 'Unknown Section'),
+                score=getattr(match, 'score', 0.0) or 0.0,
+                source_url=md.get('source_url', 'https://veteransbenefitskb.com'),
+                diagnostic_code=diagnostic_code,
+                retrieval_method=retrieval_method,
             )
-            
-            print(f"📊 Found {len(pinecone_results.matches)} vector matches")
-            
-            # Convert to SearchResult objects
-            for i, match in enumerate(pinecone_results.matches):
-                if not match.metadata:
-                    continue
-                    
-                text_content = match.metadata.get('text', '')
-                if not text_content:
-                    continue
-                
-                # Extract diagnostic code from text if present
-                diagnostic_code = None
-                for code in query_data['diagnostic_codes']:
-                    if code in text_content:
-                        diagnostic_code = code
-                        break
-                
-                result = SearchResult(
-                    chunk_id=match.id,
-                    text=text_content,
-                    heading=match.metadata.get('heading', 'Unknown Section'),
-                    score=match.score,
-                    source_url=match.metadata.get('source_url', 'https://veteransbenefitskb.com'),
-                    diagnostic_code=diagnostic_code
-                )
-                
-                # Boost score for exact diagnostic code matches
-                if diagnostic_code:
-                    result.score += 0.2
-                    print(f"🎯 Boosted score for diagnostic code {diagnostic_code}: {result.score:.4f}")
-                
-                results.append(result)
-        
-        except Exception as e:
-            print(f"❌ Hybrid search failed: {e}")
-            return []
-        
+            results.append(res)
         return results
+
+    def _semantic_search_pass(self, query_data: Dict[str, Any], top_k: int) -> List[SearchResult]:
+        search_terms = [query_data['corrected_query']]
+        search_terms.extend(query_data['expanded_terms'][:10])
+        combined_query = ' '.join(search_terms)
+        print(f"🔎 Pass: semantic_expanded → '{combined_query[:100]}...'")
+        vec = self.generate_query_embedding(combined_query)
+        try:
+            res = self.index.query(vector=vec, top_k=top_k, include_metadata=True, namespace=self.namespace)
+            return self._convert_matches_to_results(res.matches, 'semantic_expanded', query_data)
+        except Exception as e:
+            print(f"❌ Semantic pass failed: {e}")
+            return []
+
+    def _diagnostic_code_search_pass(self, query_data: Dict[str, Any], top_k: int) -> List[SearchResult]:
+        codes = query_data.get('diagnostic_codes', [])
+        if not codes:
+            return []
+        code_query = ' '.join(codes + ['diagnostic code', 'rating criteria'])
+        print(f"🎯 Pass: diagnostic_focused → '{code_query[:100]}...'")
+        vec = self.generate_query_embedding(code_query)
+        try:
+            res = self.index.query(vector=vec, top_k=top_k, include_metadata=True, namespace=self.namespace)
+            return self._convert_matches_to_results(res.matches, 'diagnostic_focused', query_data)
+        except Exception as e:
+            print(f"❌ Diagnostic pass failed: {e}")
+            return []
+
+    def _condition_search_pass(self, query_data: Dict[str, Any], top_k: int) -> List[SearchResult]:
+        cond_terms: List[str] = []
+        for cond in query_data.get('matched_conditions', []):
+            data = self.va_conditions.get(cond)
+            if data:
+                cond_terms.extend(data.get('synonyms', [])[:3])
+        if not cond_terms:
+            return []
+        cond_query = ' '.join(cond_terms + ['rating', 'criteria'])
+        print(f"🏥 Pass: condition_specific → '{cond_query[:100]}...'")
+        vec = self.generate_query_embedding(cond_query)
+        try:
+            res = self.index.query(vector=vec, top_k=top_k, include_metadata=True, namespace=self.namespace)
+            return self._convert_matches_to_results(res.matches, 'condition_specific', query_data)
+        except Exception as e:
+            print(f"❌ Condition pass failed: {e}")
+            return []
+
+    def multi_pass_retrieval(self, query_data: Dict[str, Any]) -> List[SearchResult]:
+        """Run multiple retrieval strategies and aggregate results."""
+        aggregated: List[SearchResult] = []
+        aggregated.extend(self._semantic_search_pass(query_data, top_k=30))
+        aggregated.extend(self._diagnostic_code_search_pass(query_data, top_k=20))
+        aggregated.extend(self._condition_search_pass(query_data, top_k=20))
+        print(f"📈 Multi-pass collected {len(aggregated)} candidates")
+        return aggregated
 
     def calculate_relevance_score(self, result: SearchResult, query_data: Dict[str, Any]) -> float:
         """
@@ -265,75 +296,66 @@ class AdvancedRAGSystem:
         
         return score
 
-    def rerank_results(self, results: List[SearchResult], query_data: Dict[str, Any]) -> List[SearchResult]:
-        """
-        Rerank results based on relevance scoring
-        """
-        print(f"🔄 Reranking {len(results)} results...")
-        
-        # Calculate relevance scores
-        for result in results:
-            result.relevance_score = self.calculate_relevance_score(result, query_data)
-        
-        # Sort by relevance score (descending)
-        reranked = sorted(results, key=lambda x: x.relevance_score, reverse=True)
-        
-        # Log top results
-        for i, result in enumerate(reranked[:10]):
-            print(f"Rank {i+1}: Score={result.relevance_score:.4f}, Heading='{result.heading[:50]}...'")
-        
-        return reranked
+    def _text_similarity(self, a: str, b: str) -> float:
+        return SequenceMatcher(None, (a or '').lower(), (b or '').lower()).ratio()
 
-    def search_with_fallback(self, query: str, max_results: int = 6) -> Tuple[List[SearchResult], Dict[str, Any]]:
-        """
-        Main search function with intelligent fallback
-        """
+    def advanced_relevance_scoring(self, results: List[SearchResult], query_data: Dict[str, Any]) -> List[SearchResult]:
+        """Compute enhanced relevance with cross-validation across methods and deduplicate."""
+        print(f"🧮 Scoring {len(results)} results (advanced)")
+        # First pass: base relevance
+        for r in results:
+            r.relevance_score = self.calculate_relevance_score(r, query_data)
+        # Cross-validation: how many other methods retrieve similar text
+        for i, r in enumerate(results):
+            seen_methods = set()
+            for j, o in enumerate(results):
+                if i == j:
+                    continue
+                if r.retrieval_method == o.retrieval_method:
+                    continue
+                if self._text_similarity(r.text, o.text) > 0.7:
+                    seen_methods.add(o.retrieval_method)
+            r.cross_validation_score = min(len(seen_methods) * 0.3, 1.0)
+            # Confidence mixes both
+            r.confidence = max(0.0, min(r.relevance_score * 0.7 + r.cross_validation_score * 0.3, 1.0))
+        # Deduplicate by chunk_id (keep best)
+        best_by_chunk: Dict[str, SearchResult] = {}
+        for r in results:
+            existing = best_by_chunk.get(r.chunk_id)
+            if not existing or (r.relevance_score * 0.6 + r.cross_validation_score * 0.4) > (existing.relevance_score * 0.6 + existing.cross_validation_score * 0.4):
+                best_by_chunk[r.chunk_id] = r
+        deduped = list(best_by_chunk.values())
+        # Sort by combined
+        ranked = sorted(deduped, key=lambda x: (x.relevance_score * 0.6 + x.cross_validation_score * 0.4), reverse=True)
+        for idx, r in enumerate(ranked[:10]):
+            print(f"🏆 {idx+1}: rel={r.relevance_score:.3f} cross={r.cross_validation_score:.3f} conf={r.confidence:.3f} method={r.retrieval_method}")
+        return ranked
+
+    def search_with_fallback(self, query: str, max_results: int = 12) -> Tuple[List[SearchResult], Dict[str, Any]]:
+        """Enhanced search: multi-pass retrieval + advanced scoring, larger result set."""
         print(f"🔍 Processing query: '{query}'")
-        
-        # Step 1: Spell check and expand query
         query_data = self.spell_check_and_expand(query)
-        print(f"✅ Expanded to: {query_data['expanded_terms'][:5]}...")
-        if query_data['diagnostic_codes']:
+        intent = self.classify_query_intent(query)
+        query_data['intent'] = intent
+        if query_data.get('diagnostic_codes'):
             print(f"🎯 Found diagnostic codes: {query_data['diagnostic_codes']}")
-        
-        # Step 2: Perform hybrid search
-        results = self.hybrid_search(query_data, top_k=50)
-        
-        if not results:
-            print("❌ No results from hybrid search")
+        # Multi-pass retrieval
+        candidates = self.multi_pass_retrieval(query_data)
+        if not candidates:
+            print("❌ No results from multi-pass retrieval")
             return [], query_data
-        
-        # Step 3: Rerank results
-        reranked_results = self.rerank_results(results, query_data)
-        
-        # Step 4: Apply score threshold and fallback
-        score_threshold = 0.2
-        good_results = [r for r in reranked_results if r.relevance_score >= score_threshold]
-        
-        if not good_results:
-            print(f"⚠️ No results above threshold {score_threshold}, trying keyword fallback...")
-            
-            # Fallback: keyword-heavy search
-            keyword_query = ' '.join([
-                query_data['corrected_query'],
-                ' '.join(query_data['diagnostic_codes']),
-                ' '.join(query_data['matched_conditions'])
-            ])
-            
-            fallback_data = {'corrected_query': keyword_query, 'expanded_terms': [], 'diagnostic_codes': query_data['diagnostic_codes'], 'matched_conditions': query_data['matched_conditions']}
-            fallback_results = self.hybrid_search(fallback_data, top_k=30)
-            fallback_reranked = self.rerank_results(fallback_results, fallback_data)
-            good_results = fallback_reranked[:max_results]
-        
-        # Step 5: Return top results
-        final_results = good_results[:max_results]
-        print(f"✅ Returning {len(final_results)} high-quality results")
-        
+        # Advanced scoring
+        ranked = self.advanced_relevance_scoring(candidates, query_data)
+        # Threshold and top-N
+        threshold = 0.25
+        filtered = [r for r in ranked if r.relevance_score >= threshold]
+        final_results = filtered[:max_results]
+        print(f"✅ Returning {len(final_results)} high-quality results (intent={intent})")
         return final_results, query_data
 
     def generate_answer(self, query: str, results: List[SearchResult]) -> Dict[str, Any]:
         """
-        Generate answer using GPT with high-quality context
+        Generate answer using GPT with high-quality, structured context
         """
         if not results:
             return {
@@ -344,48 +366,50 @@ class AdvancedRAGSystem:
                 "metadata": {"error": "no_results_found"}
             }
         
-        # Build context from top results
+        # Build richer, structured context from top results
         context_parts = []
         citations = []
         
         for i, result in enumerate(results):
-            context_parts.append(f"Section: {result.heading}\n{result.text}")
-            
+            context_parts.append(f"Section: {result.heading}\nConfidence: {result.confidence:.2f}\n{result.text}")
             citations.append({
-                'text': result.text[:300] + "..." if len(result.text) > 300 else result.text,
+                'text': result.text[:400] + "..." if len(result.text) > 400 else result.text,
                 'source_url': result.source_url,
                 'heading': result.heading,
                 'score': result.relevance_score,
                 'rank': i + 1,
-                'diagnostic_code': result.diagnostic_code
+                'diagnostic_code': result.diagnostic_code,
+                'method': result.retrieval_method
             })
         
         context_text = '\n\n'.join(context_parts)
         
         # Generate answer with GPT
         try:
-            prompt = f"""Based on the following VA disability rating information, please provide a comprehensive and accurate answer to the user's question.
+            prompt = f"""Based on the following comprehensive VA disability information, provide a detailed and well-structured answer to the veteran's question.
 
 Context from VA Rating Guidelines:
 {context_text}
 
 User Question: {query}
 
-Please provide a detailed answer that:
-1. Directly addresses the user's question
-2. Includes specific rating percentages and criteria when available
-3. Mentions relevant diagnostic codes if applicable
-4. Is formatted clearly for veterans seeking benefit information
+Please provide a comprehensive answer that:
+1. Uses clear headings and bullet points for organization
+2. Directly addresses the veteran's specific question
+3. Includes specific rating percentages and criteria when available
+4. Mentions relevant diagnostic codes if applicable
+5. Provides examples or typical scenarios when useful
+6. Aims for 1500-2000 tokens to be thorough and helpful
 
 Answer:"""
 
             response = self.openai_client.chat.completions.create(
                 model="gpt-4",
                 messages=[
-                    {"role": "system", "content": "You are a helpful assistant specializing in VA disability benefits and ratings. Provide accurate, detailed information based on the provided context."},
+                    {"role": "system", "content": "You are an expert VA disability benefits advisor. Provide comprehensive, well-structured answers with clear headings and detailed information. Be thorough and helpful to veterans seeking benefits information."},
                     {"role": "user", "content": prompt}
                 ],
-                max_tokens=800,
+                max_tokens=2000,
                 temperature=0.1
             )
             
