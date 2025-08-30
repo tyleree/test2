@@ -18,6 +18,7 @@ from .answer import AnswerGenerator
 from .cache import SemanticCache
 from .metrics import log_request_metrics, metrics_tracker
 from .utils import normalize_query, get_token_count
+from guard import CFG, select_and_gate, SYSTEM_GUARDED, build_user_prompt
 
 logger = logging.getLogger(__name__)
 
@@ -174,8 +175,49 @@ def ask():
         reranked_candidates = reranker.rerank(query, candidates)
         debug_state['last_rerank'] = reranker.get_debug_info(reranked_candidates)
         
-        # Compression
-        compression_result = compressor.compress(query, reranked_candidates)
+        # Build guard hits from reranked candidates
+        raw_hits = [
+            {
+                'text': rc.text,
+                'rel': float(getattr(rc, 'rel', 0.0)),
+                'cross': float(getattr(rc, 'cross', 0.0)),
+                'meta': {'url': rc.source_url}
+            }
+            for rc in reranked_candidates
+        ]
+
+        selected_hits, agg_conf = select_and_gate(raw_hits)
+
+        # If insufficient context, short-circuit with safe message
+        if (not selected_hits) or (agg_conf < CFG.MIN_CONF):
+            latency_ms = int((time.time() - start_time) * 1000)
+            log_request_metrics(
+                query=query,
+                cache_mode=cache_mode,
+                latency_ms=latency_ms,
+                retrieved=len(candidates),
+                reranked=len(reranked_candidates),
+                quotes=0,
+                status='insufficient_context'
+            )
+            return jsonify({
+                'status': 'insufficient_context',
+                'agg_conf': round(agg_conf, 3),
+                'message': CFG.SAFE_MSG,
+                'cache_mode': cache_mode,
+                'token_usage': {},
+                'latency_ms': latency_ms
+            }), 200
+
+        # Compression (use only selected hits' texts as quotes input)
+        # Map selected hits back to reranked candidates preserving URL and titles
+        filtered_candidates = []
+        selected_texts = {h['text'] for h in selected_hits}
+        for rc in reranked_candidates:
+            if rc.text in selected_texts:
+                filtered_candidates.append(rc)
+
+        compression_result = compressor.compress(query, filtered_candidates)
         debug_state['last_quotes'] = compressor.get_debug_info(compression_result)
         
         # Answer generation
@@ -220,7 +262,26 @@ def ask():
             'reason': 'No valid cache entry found'
         }
         
+        # Build guard evidence array (top selected with scores if available)
+        evidence = []
+        try:
+            # selected_hits and agg_conf exist if we didn't early return
+            evidence = [
+                {
+                    'sid': h.get('sid'),
+                    'url': h.get('meta', {}).get('url'),
+                    'rel': round(float(h.get('rel', 0.0)), 3),
+                    'cross': round(float(h.get('cross', 0.0)), 3),
+                    'final': round(float(h.get('final', 0.0)), 3)
+                }
+                for h in (selected_hits if 'selected_hits' in locals() else [])
+            ]
+        except Exception:
+            evidence = []
+
         return jsonify({
+            'status': 'ok',
+            'agg_conf': round(agg_conf, 3) if 'agg_conf' in locals() else None,
             'answer_plain': answer_result.answer_plain,
             'answer_html': answer_result.answer_html,
             'citations': [
@@ -231,6 +292,7 @@ def ask():
                 }
                 for citation in answer_result.citations
             ],
+            'evidence': evidence,
             'cache_mode': cache_mode,
             'token_usage': {
                 'compression': compression_result.total_tokens,

@@ -76,8 +76,8 @@ export const ChatBot = () => {
       handleSendMessage();
     }
   };
-  return <Card className="w-full max-w-3xl h-[80vh] md:max-w-4xl md:h-[85vh] bg-card/80 backdrop-blur-sm border-border/50 animate-fadeInUp animate-glow">
-      <div className="flex flex-col h-full">
+  return <Card className="w-full max-w-3xl h-[80vh] md:max-w-4xl md:h-[85vh] bg-card/80 backdrop-blur-sm border-border/50 animate-fadeInUp animate-glow overflow-hidden">
+      <div className="flex flex-col h-full overflow-hidden">
         {/* Header */}
         <div className="flex items-center gap-3 p-4 border-b border-border/50">
           <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center animate-float">
@@ -91,18 +91,27 @@ export const ChatBot = () => {
         </div>
 
         {/* Messages */}
-        <ScrollArea className="flex-1 p-4">
-          <div className="space-y-4">
+        <ScrollArea className="flex-1 p-4 overflow-hidden">
+          <div className="space-y-4 min-w-0">
             {messages.map(message => <div key={message.id} className={`flex gap-3 animate-fadeInUp ${message.isUser ? "flex-row-reverse" : "flex-row"}`}>
                 <div className={`w-8 h-8 rounded-full flex items-center justify-center ${message.isUser ? "bg-accent/20" : "bg-primary/20"}`}>
                   {message.isUser ? <User className="w-4 h-4 text-accent" /> : <Bot className="w-4 h-4 text-accent" />}
                 </div>
-                <div className={`max-w-[80%] p-3 rounded-lg ${message.isUser ? "bg-primary text-primary-foreground" : "bg-secondary text-secondary-foreground"}`}>
+                <div className={`max-w-[80%] min-w-0 p-3 rounded-lg ${message.isUser ? "bg-primary text-primary-foreground" : "bg-secondary text-secondary-foreground"}`}>
                   {message.isUser ? (
-                    <p className="text-sm whitespace-pre-wrap break-words">{message.content}</p>
+                    <p className="text-sm whitespace-pre-wrap break-words overflow-wrap-anywhere">{message.content}</p>
                   ) : (
-                    <div className="prose prose-sm dark:prose-invert max-w-none whitespace-pre-wrap break-words">
-                      <ReactMarkdown remarkPlugins={[remarkGfm]}>{message.content}</ReactMarkdown>
+                    <div className="prose prose-sm dark:prose-invert max-w-full whitespace-pre-wrap break-words overflow-wrap-anywhere">
+                      <ReactMarkdown 
+                        remarkPlugins={[remarkGfm]}
+                        components={{
+                          p: ({children}) => <p className="break-words overflow-wrap-anywhere">{children}</p>,
+                          div: ({children}) => <div className="break-words overflow-wrap-anywhere">{children}</div>,
+                          span: ({children}) => <span className="break-words overflow-wrap-anywhere">{children}</span>
+                        }}
+                      >
+                        {message.content}
+                      </ReactMarkdown>
                     </div>
                   )}
                 </div>

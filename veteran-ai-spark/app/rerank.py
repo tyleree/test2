@@ -30,6 +30,9 @@ class RerankedCandidate:
     bm25_score: float
     combined_score: float
     rerank_score: float
+    # Guard compatibility fields
+    rel: float = 0.0  # Normalized dense similarity [0,1]
+    cross: float = 0.0  # Normalized cross-encoder score [0,1]
     token_count: int
     rank: int
 
@@ -165,9 +168,18 @@ class CrossEncoderReranker:
         # Score with cross-encoder
         rerank_scores = self.score_candidates(query, unique_candidates)
         
+        # Normalize rerank scores to [0,1] for guard cross
+        try:
+            r_min = float(min(rerank_scores))
+            r_max = float(max(rerank_scores))
+            denom = (r_max - r_min) if (r_max - r_min) > 0 else 1.0
+            normalized_cross = [(float(s) - r_min) / denom for s in rerank_scores]
+        except Exception:
+            normalized_cross = [0.0 for _ in rerank_scores]
+
         # Create reranked candidates
         reranked = []
-        for candidate, rerank_score in zip(unique_candidates, rerank_scores):
+        for idx, (candidate, rerank_score) in enumerate(zip(unique_candidates, rerank_scores)):
             reranked_candidate = RerankedCandidate(
                 chunk_id=candidate.chunk_id,
                 doc_id=candidate.doc_id,
@@ -179,6 +191,8 @@ class CrossEncoderReranker:
                 bm25_score=candidate.bm25_score,
                 combined_score=candidate.combined_score,
                 rerank_score=float(rerank_score),
+                rel=getattr(candidate, 'rel', 0.0),
+                cross=float(normalized_cross[idx]) if idx < len(normalized_cross) else 0.0,
                 token_count=candidate.token_count,
                 rank=0  # Will be set below
             )

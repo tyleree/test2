@@ -37,6 +37,14 @@ class RetrievalCandidate:
     bm25_score: float = 0.0
     combined_score: float = 0.0
     token_count: int = 0
+    rel: float = 0.0  # Normalized dense similarity score [0,1]
+    cross: float = 0.0  # Cross-encoder score [0,1] - set during reranking
+    meta: Dict[str, Any] = None  # Metadata dict for guard compatibility
+    
+    def __post_init__(self):
+        """Initialize metadata dict."""
+        if self.meta is None:
+            self.meta = {'url': self.source_url}
 
 class HybridRetriever:
     """Hybrid retrieval system combining vector and BM25 search."""
@@ -288,6 +296,11 @@ class HybridRetriever:
                 norm_vector = candidate.vector_score / max_vector
                 norm_bm25 = candidate.bm25_score / max_bm25
                 candidate.combined_score = merge_scores(norm_vector, norm_bm25, vector_weight)
+                # Set normalized dense similarity as rel for guard compatibility
+                try:
+                    candidate.rel = float(norm_vector)
+                except Exception:
+                    candidate.rel = 0.0
         
         # Sort by combined score and deduplicate
         candidates.sort(key=lambda x: x.combined_score, reverse=True)
