@@ -184,11 +184,22 @@ class AdvancedRAGSystem:
 
     def generate_query_embedding(self, text: str) -> List[float]:
         """
-        Generate semantic dummy vector for query (matching thriving-walnut ingestion)
-        Since thriving-walnut was built with 1024-dim dummy vectors, we must use the same approach.
+        Generate real embeddings for query using OpenAI API (matching thriving-walnut reindexed data)
         """
-        print(f"🔧 Using semantic dummy vector (1024-dim) to match thriving-walnut index")
-        return self.generate_semantic_fallback_vector(text, dimension=1024)
+        try:
+            print(f"🔍 Generating real 1024D embedding for query: '{text[:50]}...'")
+            response = self.openai_client.embeddings.create(
+                model="text-embedding-3-large",
+                input=text,
+                dimensions=1024  # Match the thriving-walnut index dimension
+            )
+            embedding = response.data[0].embedding
+            print(f"✅ Generated real {len(embedding)}D embedding")
+            return embedding
+        except Exception as e:
+            print(f"⚠️ Failed to generate real embedding: {e}")
+            print(f"🔧 Falling back to semantic dummy vector (1024-dim)")
+            return self.generate_semantic_fallback_vector(text, dimension=1024)
 
     def generate_semantic_fallback_vector(self, text: str, dimension: int = 1024) -> List[float]:
         """
