@@ -449,6 +449,26 @@ class AdvancedRAGSystem:
         self._set_cached_results(query, final_results, query_data)
         return final_results, query_data
 
+    def _generate_fallback_summary(self, query: str, results: List[SearchResult]) -> str:
+        """Generate a structured fallback summary when OpenAI times out"""
+        if not results:
+            return "I found relevant information but couldn't generate a complete response due to a timeout. Please try rephrasing your question."
+        
+        summary_parts = [f"# VA Disability Information: {query.title()}\n"]
+        
+        for i, result in enumerate(results[:3], 1):
+            summary_parts.append(f"## Section {i}: {result.heading}")
+            if result.diagnostic_code:
+                summary_parts.append(f"**Diagnostic Code:** {result.diagnostic_code}")
+            
+            # Extract key information from text
+            text_snippet = result.text[:400] + "..." if len(result.text) > 400 else result.text
+            summary_parts.append(f"{text_snippet}\n")
+        
+        summary_parts.append("*Note: This is a summary due to processing timeout. For more detailed information, please try your question again.*")
+        
+        return "\n\n".join(summary_parts)
+
     def generate_answer(self, query: str, results: List[SearchResult]) -> Dict[str, Any]:
         """
         Generate answer using GPT with high-quality, structured context
@@ -480,33 +500,34 @@ class AdvancedRAGSystem:
         
         context_text = '\n\n'.join(context_parts)
         
-        # Generate answer with GPT
+        # Generate answer with GPT (with timeout handling)
         try:
-            prompt = f"""Based on the following comprehensive VA disability information, provide a detailed and well-structured answer to the veteran's question.
+            prompt = f"""Based on the following VA disability information, provide a clear and structured answer to the veteran's question.
 
 Context from VA Rating Guidelines:
 {context_text}
 
 User Question: {query}
 
-Please provide a comprehensive answer that:
+Please provide a well-organized answer that:
 1. Uses clear headings and bullet points for organization
 2. Directly addresses the veteran's specific question
 3. Includes specific rating percentages and criteria when available
 4. Mentions relevant diagnostic codes if applicable
-5. Provides examples or typical scenarios when useful
-6. Aims for 1500-2000 tokens to be thorough and helpful
+5. Provides practical examples when useful
+6. Aims for 800-1200 tokens to be comprehensive yet concise
 
 Answer:"""
 
             response = self.openai_client.chat.completions.create(
                 model="gpt-4",
                 messages=[
-                    {"role": "system", "content": "You are an expert VA disability benefits advisor. Provide comprehensive, well-structured answers with clear headings and detailed information. Be thorough and helpful to veterans seeking benefits information."},
+                    {"role": "system", "content": "You are an expert VA disability benefits advisor. Provide clear, well-structured answers with headings and detailed information. Be comprehensive but concise to help veterans efficiently."},
                     {"role": "user", "content": prompt}
                 ],
-                max_tokens=2000,
-                temperature=0.1
+                max_tokens=1200,
+                temperature=0.1,
+                timeout=25.0  # 25 second timeout to prevent worker timeout
             )
             
             answer = response.choices[0].message.content.strip()
@@ -526,6 +547,19 @@ Answer:"""
             
         except Exception as e:
             print(f"❌ Error generating answer: {e}")
+            
+            # Timeout fallback: provide structured summary from top results
+            if "timeout" in str(e).lower() or "timed out" in str(e).lower():
+                print("🔄 Timeout detected, providing fallback summary...")
+                fallback_content = self._generate_fallback_summary(query, results[:3])
+                return {
+                    "success": True,
+                    "content": fallback_content,
+                    "citations": citations[:3],
+                    "source": "advanced_rag_system_fallback",
+                    "metadata": {"fallback_reason": "timeout", "original_error": str(e)}
+                }
+            
             return {
                 "success": False,
                 "content": f"I found relevant information but encountered an error generating the response: {str(e)}",
