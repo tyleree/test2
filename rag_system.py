@@ -35,6 +35,10 @@ class AdvancedRAGSystem:
         self._result_cache: Dict[str, Dict[str, Any]] = {}
         self.cache_ttl_seconds: int = 300
         self.max_cache_entries: int = 500
+        # Embedding cache to halve API calls
+        self._embedding_cache: Dict[str, Dict[str, Any]] = {}
+        self.embedding_cache_ttl: int = 600  # 10 minutes
+        self.max_embedding_cache: int = 200
         
         # VA-specific diagnostic codes and synonyms
         self.va_conditions = {
@@ -103,6 +107,15 @@ class AdvancedRAGSystem:
         to_remove = len(self._result_cache) - self.max_cache_entries
         for k, _ in items[:to_remove]:
             self._result_cache.pop(k, None)
+
+    def _prune_embedding_cache(self) -> None:
+        if len(self._embedding_cache) <= self.max_embedding_cache:
+            return
+        # Evict oldest entries
+        items = sorted(self._embedding_cache.items(), key=lambda kv: kv[1].get('ts', 0.0))
+        to_remove = len(self._embedding_cache) - self.max_embedding_cache
+        for k, _ in items[:to_remove]:
+            self._embedding_cache.pop(k, None)
 
     def _get_cached_results(self, query: str) -> Optional[Tuple[List['SearchResult'], Dict[str, Any]]]:
         now = time.time()
@@ -184,8 +197,17 @@ class AdvancedRAGSystem:
 
     def generate_query_embedding(self, text: str) -> List[float]:
         """
-        Generate real embeddings for query using OpenAI API (matching thriving-walnut reindexed data)
+        Generate real embeddings with caching to halve API calls
         """
+        # Check embedding cache first
+        text_hash = hashlib.md5(text.encode()).hexdigest()
+        now = time.time()
+        
+        cached_entry = self._embedding_cache.get(text_hash)
+        if cached_entry and (now - cached_entry['ts'] <= self.embedding_cache_ttl):
+            print(f"⚡ Embedding cache hit for: '{text[:50]}...'")
+            return cached_entry['embedding']
+        
         try:
             print(f"🔍 Generating real 1024D embedding for query: '{text[:50]}...'")
             response = self.openai_client.embeddings.create(
@@ -195,6 +217,14 @@ class AdvancedRAGSystem:
             )
             embedding = response.data[0].embedding
             print(f"✅ Generated real {len(embedding)}D embedding")
+            
+            # Cache the embedding
+            self._embedding_cache[text_hash] = {
+                'ts': now,
+                'embedding': embedding
+            }
+            self._prune_embedding_cache()
+            
             return embedding
         except Exception as e:
             print(f"⚠️ Failed to generate real embedding: {e}")
@@ -342,21 +372,76 @@ class AdvancedRAGSystem:
             print(f"❌ Condition pass failed: {e}")
             return []
 
+    def _concurrent_vector_search(self, query_text: str, method: str, top_k: int, query_data: Dict[str, Any]) -> List[SearchResult]:
+        """Optimized concurrent vector search with include_values=False"""
+        try:
+            vec = self.generate_query_embedding(query_text)
+            res = self.index.query(
+                vector=vec, 
+                top_k=top_k, 
+                include_metadata=True, 
+                include_values=False,  # Optimization: don't return vectors
+                namespace=self.namespace
+            )
+            return self._convert_matches_to_results(res.matches, method, query_data)
+        except Exception as e:
+            print(f"❌ Concurrent {method} search failed: {e}")
+            return []
+
     def multi_pass_retrieval(self, query_data: Dict[str, Any]) -> List[SearchResult]:
-        """Run multiple retrieval strategies and aggregate results."""
-        intent = (query_data.get('intent') or 'general')
-        if intent == 'rating':
-            tk_sem, tk_diag, tk_cond = 28, 24, 18
-        elif intent == 'eligibility':
-            tk_sem, tk_diag, tk_cond = 32, 20, 18
-        elif intent == 'process':
-            tk_sem, tk_diag, tk_cond = 20, 12, 12
-        else:
-            tk_sem, tk_diag, tk_cond = 28, 20, 16
+        """Run 3 optimized concurrent retrieval passes with union ≤35"""
+        import concurrent.futures
+        
+        # Optimized: 3 passes, topK=12-15, union ≤35
+        top_k = 15
         aggregated: List[SearchResult] = []
-        aggregated.extend(self._semantic_search_pass(query_data, top_k=tk_sem))
-        aggregated.extend(self._diagnostic_code_search_pass(query_data, top_k=tk_diag))
-        aggregated.extend(self._condition_search_pass(query_data, top_k=tk_cond))
+        
+        # Prepare 3 concurrent searches
+        search_tasks = []
+        
+        # Pass 1: Semantic (always)
+        semantic_query = query_data['corrected_query'] + ' ' + ' '.join(query_data['expanded_terms'][:5])
+        search_tasks.append(('semantic', semantic_query))
+        
+        # Pass 2: Diagnostic (if codes available)
+        if query_data.get('diagnostic_codes'):
+            diag_query = ' '.join(query_data['diagnostic_codes'] + ['diagnostic code', 'rating criteria'])
+            search_tasks.append(('diagnostic', diag_query))
+        
+        # Pass 3: Condition-specific (if conditions matched)
+        if query_data.get('matched_conditions'):
+            cond_terms = []
+            for cond in query_data['matched_conditions'][:2]:  # Limit to 2 conditions
+                data = self.va_conditions.get(cond)
+                if data:
+                    cond_terms.extend(data.get('synonyms', [])[:2])
+            if cond_terms:
+                cond_query = ' '.join(cond_terms + ['rating', 'criteria'])
+                search_tasks.append(('condition', cond_query))
+        
+        print(f"🚀 Running {len(search_tasks)} concurrent searches (topK={top_k})")
+        
+        # Execute concurrent searches
+        with concurrent.futures.ThreadPoolExecutor(max_workers=3) as executor:
+            future_to_method = {}
+            for method, query_text in search_tasks:
+                future = executor.submit(self._concurrent_vector_search, query_text, method, top_k, query_data)
+                future_to_method[future] = method
+            
+            for future in concurrent.futures.as_completed(future_to_method):
+                method = future_to_method[future]
+                try:
+                    results = future.result()
+                    aggregated.extend(results)
+                    print(f"✅ {method} pass: {len(results)} results")
+                except Exception as e:
+                    print(f"❌ {method} pass failed: {e}")
+        
+        # Limit union to ≤35 for performance
+        if len(aggregated) > 35:
+            aggregated = sorted(aggregated, key=lambda x: x.score, reverse=True)[:35]
+            print(f"⚡ Limited union to 35 candidates")
+        
         print(f"📈 Multi-pass collected {len(aggregated)} candidates")
         return aggregated
 
