@@ -799,6 +799,48 @@ Answer:"""
         # Fallback to a simple context-based response
         return f"Based on the available information: {context[:500]}..."
 
+def generate_user_friendly_error(error_response: dict, user_query: str) -> str:
+    """Generate helpful, user-friendly error messages based on the error type and query"""
+    
+    # Check for specific error types
+    error_msg = error_response.get('error', '').lower() if error_response else ''
+    metadata = error_response.get('metadata', {}) if error_response else {}
+    
+    # No results found
+    if 'no_results_found' in str(metadata.get('error', '')):
+        # Check for common issues
+        query_lower = user_query.lower()
+        
+        # Check for acronyms
+        has_acronyms = any(word.isupper() and len(word) > 1 for word in user_query.split())
+        
+        if has_acronyms:
+            return "I couldn't find relevant information for your question. Please try rephrasing your question without acronyms (for example, use 'Post Traumatic Stress Disorder' instead of 'PTSD', or 'Traumatic Brain Injury' instead of 'TBI')."
+        
+        # Check for very short queries
+        if len(user_query.strip().split()) < 3:
+            return "I couldn't find relevant information for your question. Please try asking a more detailed question about your specific VA disability condition or benefit."
+        
+        # Check for non-VA related terms
+        va_terms = ['va', 'veteran', 'disability', 'rating', 'compensation', 'benefit', 'service', 'ptsd', 'tbi', 'claim', 'appeal']
+        has_va_terms = any(term in query_lower for term in va_terms)
+        
+        if not has_va_terms:
+            return "I couldn't find relevant information for your question. I specialize in VA disability benefits and ratings. Please ask about VA disability conditions, ratings, or benefits."
+        
+        return "I couldn't find relevant information for your question. Please try rephrasing with more specific details about your VA disability condition or benefit question."
+    
+    # Timeout errors
+    if 'timeout' in str(metadata.get('fallback_reason', '')):
+        return "I'm experiencing high demand right now and couldn't process your question in time. Please try asking your question again in a moment."
+    
+    # API or system errors
+    if 'api' in error_msg or 'openai' in error_msg:
+        return "I'm temporarily having trouble accessing my knowledge base. Please try your question again in a few moments."
+    
+    # Generic fallback
+    return "I'm having trouble processing your question right now. Please try rephrasing your question or ask about a specific VA disability condition with its diagnostic code (for example, 'PTSD 9411' or 'ulnar neuropathy 8515')."
+
 def query_advanced_rag_system(prompt, index):
     """
     THRIVING WALNUT SYSTEM: Query using semantic vectors and metadata search.
@@ -1896,8 +1938,10 @@ def ask():
                                 'provider': 'openai_direct_failed'
                             }
                         )
+                        # Generate user-friendly error message
+                        user_friendly_error = generate_user_friendly_error(direct_response, prompt)
                         return jsonify({
-                            "error": "Direct OpenAI + Pinecone query failed",
+                            "error": user_friendly_error,
                             "details": {
                                 "primary_method": "openai_direct",
                                 "fallbacks_disabled": True,
