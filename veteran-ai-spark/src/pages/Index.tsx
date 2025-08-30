@@ -70,7 +70,7 @@ const Index = () => {
               </Link>
             </Button>
             <Button asChild variant="outline" size="sm" className="text-muted-foreground hover:text-foreground">
-              <a href="/api/whitepaper" target="_blank" rel="noopener noreferrer">
+              <a href="/whitepaper.html" target="_blank" rel="noopener noreferrer">
                 <FileText className="h-4 w-4 mr-2" />
                 Technical Whitepaper
               </a>
