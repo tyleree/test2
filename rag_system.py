@@ -395,28 +395,52 @@ class AdvancedRAGSystem:
         
         return score
 
-    def _text_similarity(self, a: str, b: str) -> float:
-        return SequenceMatcher(None, (a or '').lower(), (b or '').lower()).ratio()
+    def _fast_text_similarity(self, a: str, b: str) -> float:
+        """Fast text similarity using simple token overlap instead of SequenceMatcher"""
+        if not a or not b:
+            return 0.0
+        # Use first 200 chars for speed
+        a_short = a[:200].lower()
+        b_short = b[:200].lower()
+        # Simple token overlap
+        tokens_a = set(a_short.split())
+        tokens_b = set(b_short.split())
+        if not tokens_a or not tokens_b:
+            return 0.0
+        intersection = len(tokens_a & tokens_b)
+        union = len(tokens_a | tokens_b)
+        return intersection / union if union > 0 else 0.0
 
     def advanced_relevance_scoring(self, results: List[SearchResult], query_data: Dict[str, Any]) -> List[SearchResult]:
-        """Compute enhanced relevance with cross-validation across methods and deduplicate."""
+        """Compute enhanced relevance with optimized cross-validation and early termination."""
         print(f"🧮 Scoring {len(results)} results (advanced)")
+        
+        # Limit to top candidates for performance (based on initial Pinecone scores)
+        if len(results) > 50:
+            results = sorted(results, key=lambda x: x.score, reverse=True)[:50]
+            print(f"⚡ Limited to top 50 candidates for performance")
+        
         # First pass: base relevance
         for r in results:
             r.relevance_score = self.calculate_relevance_score(r, query_data)
-        # Cross-validation: how many other methods retrieve similar text
+        
+        # Optimized cross-validation: only check top results against each other
         for i, r in enumerate(results):
             seen_methods = set()
-            for j, o in enumerate(results):
+            # Only check against top 20 other results for speed
+            check_limit = min(20, len(results))
+            for j in range(check_limit):
                 if i == j:
                     continue
+                o = results[j]
                 if r.retrieval_method == o.retrieval_method:
                     continue
-                if self._text_similarity(r.text, o.text) > 0.7:
+                # Use fast similarity check
+                if self._fast_text_similarity(r.text, o.text) > 0.4:  # Lower threshold for speed
                     seen_methods.add(o.retrieval_method)
             r.cross_validation_score = min(len(seen_methods) * 0.3, 1.0)
-            # Confidence mixes both
             r.confidence = max(0.0, min(r.relevance_score * 0.7 + r.cross_validation_score * 0.3, 1.0))
+        
         # Deduplicate by chunk_id (keep best)
         best_by_chunk: Dict[str, SearchResult] = {}
         for r in results:
@@ -424,7 +448,8 @@ class AdvancedRAGSystem:
             if not existing or (r.relevance_score * 0.6 + r.cross_validation_score * 0.4) > (existing.relevance_score * 0.6 + existing.cross_validation_score * 0.4):
                 best_by_chunk[r.chunk_id] = r
         deduped = list(best_by_chunk.values())
-        # Sort by combined
+        
+        # Sort by combined score
         ranked = sorted(deduped, key=lambda x: (x.relevance_score * 0.6 + x.cross_validation_score * 0.4), reverse=True)
         for idx, r in enumerate(ranked[:10]):
             print(f"🏆 {idx+1}: rel={r.relevance_score:.3f} cross={r.cross_validation_score:.3f} conf={r.confidence:.3f} method={r.retrieval_method}")
