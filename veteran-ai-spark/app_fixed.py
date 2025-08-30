@@ -151,6 +151,11 @@ def analytics_timeline():
         logger.error(f"Timeline error: {str(e)}")
         return {"error": str(e)}, 500
 
+@app.route("/api/test", methods=["GET"])
+def test_route():
+    """Test route to verify deployment."""
+    return jsonify({"message": "Test route working", "timestamp": "2024-12-19"})
+
 @app.route("/api/whitepaper", methods=["GET"])
 def whitepaper():
     """Serve the technical whitepaper."""
@@ -371,9 +376,10 @@ def analytics_page():
 @app.route('/<path:path>')
 def serve_spa_assets(path):
     """Serve SPA static assets."""
-    # Skip API routes
+    # Skip API routes - let them be handled by their specific routes
     if path.startswith('api/'):
-        return "API endpoint not found", 404
+        # If we get here, it means the API route doesn't exist
+        return jsonify({"error": "API endpoint not found"}), 404
     if not DIST_DIR:
         return "SPA not built. Run 'npm run build' in veteran-ai-spark/ first.", 404
     try:
