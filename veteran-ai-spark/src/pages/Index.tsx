@@ -2,7 +2,7 @@ import { TypingText } from "@/components/TypingText";
 import { ChatBot } from "@/components/ChatBot";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { Button } from "@/components/ui/button";
-import { BarChart3 } from "lucide-react";
+import { BarChart3, FileText } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 
@@ -60,14 +60,20 @@ const Index = () => {
           </div>
         </div>
 
-        {/* Stats Link */}
+        {/* Navigation Links */}
         <div className={`transition-all duration-1000 delay-500 ${showChat ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
-          <div className="flex justify-center mt-6">
+          <div className="flex justify-center gap-4 mt-6">
             <Button asChild variant="outline" size="sm" className="text-muted-foreground hover:text-foreground">
               <Link to="/stats">
                 <BarChart3 className="h-4 w-4 mr-2" />
                 View Statistics
               </Link>
+            </Button>
+            <Button asChild variant="outline" size="sm" className="text-muted-foreground hover:text-foreground">
+              <a href="/api/whitepaper" target="_blank" rel="noopener noreferrer">
+                <FileText className="h-4 w-4 mr-2" />
+                Technical Whitepaper
+              </a>
             </Button>
           </div>
         </div>
