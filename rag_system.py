@@ -31,6 +31,10 @@ class AdvancedRAGSystem:
         self.index = pinecone_index
         self.openai_client = openai_client
         self.namespace = "production"
+        # In-memory query result cache (normalized_query → {ts, results, query_data})
+        self._result_cache: Dict[str, Dict[str, Any]] = {}
+        self.cache_ttl_seconds: int = 300
+        self.max_cache_entries: int = 500
         
         # VA-specific diagnostic codes and synonyms
         self.va_conditions = {
@@ -84,6 +88,53 @@ class AdvancedRAGSystem:
         if any(t in q for t in ['how to', 'apply', 'claim', 'appeal', 'process', 'steps']):
             return 'process'
         return 'general'
+
+    # --------------------
+    # Caching Utilities
+    # --------------------
+    def _normalize_query(self, q: str) -> str:
+        return ' '.join((q or '').lower().split())
+
+    def _prune_cache(self) -> None:
+        if len(self._result_cache) <= self.max_cache_entries:
+            return
+        # Evict oldest entries
+        items = sorted(self._result_cache.items(), key=lambda kv: kv[1].get('ts', 0.0))
+        to_remove = len(self._result_cache) - self.max_cache_entries
+        for k, _ in items[:to_remove]:
+            self._result_cache.pop(k, None)
+
+    def _get_cached_results(self, query: str) -> Optional[Tuple[List['SearchResult'], Dict[str, Any]]]:
+        now = time.time()
+        nq = self._normalize_query(query)
+        entry = self._result_cache.get(nq)
+        if entry and (now - entry['ts'] <= self.cache_ttl_seconds):
+            return entry['results'], entry['query_data']
+        # Fuzzy match fallback
+        best_key = None
+        best_sim = 0.0
+        for k in list(self._result_cache.keys()):
+            e = self._result_cache.get(k)
+            if not e:
+                continue
+            if now - e['ts'] > self.cache_ttl_seconds:
+                continue
+            sim = SequenceMatcher(None, nq, k).ratio()
+            if sim > best_sim:
+                best_sim = sim
+                best_key = k
+        if best_key and best_sim >= 0.93:
+            e = self._result_cache[best_key]
+            return e['results'], e['query_data']
+        return None
+
+    def _set_cached_results(self, query: str, results: List['SearchResult'], query_data: Dict[str, Any]) -> None:
+        self._result_cache[self._normalize_query(query)] = {
+            'ts': time.time(),
+            'results': results,
+            'query_data': query_data,
+        }
+        self._prune_cache()
 
     def spell_check_and_expand(self, query: str) -> Dict[str, Any]:
         """
@@ -207,18 +258,46 @@ class AdvancedRAGSystem:
             results.append(res)
         return results
 
+    def _build_query_variants(self, query_data: Dict[str, Any]) -> List[Tuple[str, str]]:
+        """Return list of (variant_name, query_text) for diversified querying."""
+        base = query_data['corrected_query']
+        variants: List[Tuple[str, str]] = [('semantic:base', base)]
+        # Expanded
+        if query_data.get('expanded_terms'):
+            expanded = base + ' ' + ' '.join(query_data['expanded_terms'][:8])
+            variants.append(('semantic:expanded', expanded))
+        # Diagnostic focused
+        if query_data.get('diagnostic_codes'):
+            diag = ' '.join(query_data['diagnostic_codes'] + ['diagnostic code', 'rating criteria'])
+            variants.append(('semantic:diagnostic_terms', diag))
+        # Condition synonyms
+        cond_terms: List[str] = []
+        for cond in query_data.get('matched_conditions', []):
+            data = self.va_conditions.get(cond)
+            if data:
+                cond_terms.extend(data.get('synonyms', [])[:3])
+        if cond_terms:
+            cond_query = ' '.join(cond_terms + ['rating', 'criteria'])
+            variants.append(('semantic:condition_terms', cond_query))
+        # Rating terms emphasis
+        rating_q = base + ' ' + ' '.join(self.rating_terms[:6])
+        variants.append(('semantic:rating_terms', rating_q))
+        return variants
+
     def _semantic_search_pass(self, query_data: Dict[str, Any], top_k: int) -> List[SearchResult]:
-        search_terms = [query_data['corrected_query']]
-        search_terms.extend(query_data['expanded_terms'][:10])
-        combined_query = ' '.join(search_terms)
-        print(f"🔎 Pass: semantic_expanded → '{combined_query[:100]}...'")
-        vec = self.generate_query_embedding(combined_query)
-        try:
-            res = self.index.query(vector=vec, top_k=top_k, include_metadata=True, namespace=self.namespace)
-            return self._convert_matches_to_results(res.matches, 'semantic_expanded', query_data)
-        except Exception as e:
-            print(f"❌ Semantic pass failed: {e}")
-            return []
+        results: List[SearchResult] = []
+        variants = self._build_query_variants(query_data)
+        for name, q in variants:
+            print(f"🔎 Pass: {name} → '{q[:100]}...'")
+            vec = self.generate_query_embedding(q)
+            try:
+                res = self.index.query(vector=vec, top_k=top_k, include_metadata=True, namespace=self.namespace)
+                converted = self._convert_matches_to_results(res.matches, name, query_data)
+                results.extend(converted)
+            except Exception as e:
+                print(f"❌ Variant {name} failed: {e}")
+                continue
+        return results
 
     def _diagnostic_code_search_pass(self, query_data: Dict[str, Any], top_k: int) -> List[SearchResult]:
         codes = query_data.get('diagnostic_codes', [])
@@ -254,10 +333,19 @@ class AdvancedRAGSystem:
 
     def multi_pass_retrieval(self, query_data: Dict[str, Any]) -> List[SearchResult]:
         """Run multiple retrieval strategies and aggregate results."""
+        intent = (query_data.get('intent') or 'general')
+        if intent == 'rating':
+            tk_sem, tk_diag, tk_cond = 28, 24, 18
+        elif intent == 'eligibility':
+            tk_sem, tk_diag, tk_cond = 32, 20, 18
+        elif intent == 'process':
+            tk_sem, tk_diag, tk_cond = 20, 12, 12
+        else:
+            tk_sem, tk_diag, tk_cond = 28, 20, 16
         aggregated: List[SearchResult] = []
-        aggregated.extend(self._semantic_search_pass(query_data, top_k=30))
-        aggregated.extend(self._diagnostic_code_search_pass(query_data, top_k=20))
-        aggregated.extend(self._condition_search_pass(query_data, top_k=20))
+        aggregated.extend(self._semantic_search_pass(query_data, top_k=tk_sem))
+        aggregated.extend(self._diagnostic_code_search_pass(query_data, top_k=tk_diag))
+        aggregated.extend(self._condition_search_pass(query_data, top_k=tk_cond))
         print(f"📈 Multi-pass collected {len(aggregated)} candidates")
         return aggregated
 
@@ -334,6 +422,12 @@ class AdvancedRAGSystem:
     def search_with_fallback(self, query: str, max_results: int = 12) -> Tuple[List[SearchResult], Dict[str, Any]]:
         """Enhanced search: multi-pass retrieval + advanced scoring, larger result set."""
         print(f"🔍 Processing query: '{query}'")
+        # 1) Cache check
+        cached = self._get_cached_results(query)
+        if cached:
+            results_cached, qd_cached = cached
+            print(f"⚡ Cache hit → returning {len(results_cached[:max_results])} results")
+            return results_cached[:max_results], qd_cached
         query_data = self.spell_check_and_expand(query)
         intent = self.classify_query_intent(query)
         query_data['intent'] = intent
@@ -351,6 +445,8 @@ class AdvancedRAGSystem:
         filtered = [r for r in ranked if r.relevance_score >= threshold]
         final_results = filtered[:max_results]
         print(f"✅ Returning {len(final_results)} high-quality results (intent={intent})")
+        # 5) Cache set
+        self._set_cached_results(query, final_results, query_data)
         return final_results, query_data
 
     def generate_answer(self, query: str, results: List[SearchResult]) -> Dict[str, Any]:
