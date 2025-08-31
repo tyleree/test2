@@ -1,36 +1,10 @@
 services:
   - type: web
-    name: rag-flask-backend
-    env: python
+    name: veteran-ai-spark-frontend
+    env: node
     plan: starter
-    buildCommand: pip install -r requirements.txt
-    startCommand: gunicorn -c gunicorn.conf.py wsgi:app
+    buildCommand: npm install && npm run build
+    startCommand: npx serve -s dist -l 10000
     envVars:
-      - key: PYTHON_VERSION
-        value: 3.11.0
-      - key: OPENAI_API_KEY
-        sync: false
-      - key: PINECONE_API_KEY  
-        sync: false
-      - key: PINECONE_INDEX_NAME
-        value: thriving-walnut
-      - key: PINECONE_NAMESPACE
-        value: production
-      - key: SECRET_KEY
-        generateValue: true
-      - key: MODEL_BIG
-        value: gpt-4o
-      - key: MODEL_SMALL
-        value: gpt-4o-mini
-      - key: EMBED_MODEL
-        value: text-embedding-3-small
-      - key: RETRIEVAL_TOP_K
-        value: 50
-      - key: RERANK_TOP_K
-        value: 8
-      - key: COMPRESS_BUDGET_TOKENS
-        value: 2200
-      - key: WORKERS
-        value: 2
-      - key: THREADS
-        value: 4
+      - key: NODE_VERSION
+        value: 18.17.0
