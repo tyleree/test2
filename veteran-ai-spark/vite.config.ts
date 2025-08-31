@@ -51,9 +51,11 @@ export default defineConfig(({ mode }) => ({
     }),
   ].filter(Boolean),
   resolve: {
-    alias: {
-      "@": path.resolve(__dirname, "./src"),
-    },
+    alias: [
+      // Ensure Linux resolves extensionless alias used across UI components
+      { find: "@/lib/utils", replacement: path.resolve(__dirname, "./src/lib/utils.ts") },
+      { find: "@", replacement: path.resolve(__dirname, "./src") },
+    ],
   },
   build: {
     target: "es2018",
