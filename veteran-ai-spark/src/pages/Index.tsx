@@ -72,7 +72,7 @@ const Index = () => {
             <Button asChild variant="outline" size="sm" className="text-muted-foreground hover:text-foreground">
               <Link to="/whitepaper">
                 <FileText className="h-4 w-4 mr-2" />
-                Technical Whitepaper (LaTeX)
+                📄 Technical Whitepaper (LaTeX)
               </Link>
             </Button>
           </div>
