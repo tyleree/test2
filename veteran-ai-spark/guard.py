@@ -44,3 +44,4 @@ def build_user_prompt(q, selected):
         lines.append(f"[{h['sid']}] {url}\n{h['text']}\n")
     src="\n".join(lines) or "(none)"
     return f"Question:\n{q}\n\nSources:\n{src}\n\nAnswer with citations like [S1]. If not answerable, refuse."
+

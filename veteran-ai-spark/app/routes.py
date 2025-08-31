@@ -18,7 +18,6 @@ from .answer import AnswerGenerator
 from .cache import SemanticCache
 from .metrics import log_request_metrics, metrics_tracker
 from .utils import normalize_query, get_token_count
-from guard import CFG, select_and_gate, SYSTEM_GUARDED, build_user_prompt
 
 logger = logging.getLogger(__name__)
 
@@ -175,49 +174,8 @@ def ask():
         reranked_candidates = reranker.rerank(query, candidates)
         debug_state['last_rerank'] = reranker.get_debug_info(reranked_candidates)
         
-        # Build guard hits from reranked candidates
-        raw_hits = [
-            {
-                'text': rc.text,
-                'rel': float(getattr(rc, 'rel', 0.0)),
-                'cross': float(getattr(rc, 'cross', 0.0)),
-                'meta': {'url': rc.source_url}
-            }
-            for rc in reranked_candidates
-        ]
-
-        selected_hits, agg_conf = select_and_gate(raw_hits)
-
-        # If insufficient context, short-circuit with safe message
-        if (not selected_hits) or (agg_conf < CFG.MIN_CONF):
-            latency_ms = int((time.time() - start_time) * 1000)
-            log_request_metrics(
-                query=query,
-                cache_mode=cache_mode,
-                latency_ms=latency_ms,
-                retrieved=len(candidates),
-                reranked=len(reranked_candidates),
-                quotes=0,
-                status='insufficient_context'
-            )
-            return jsonify({
-                'status': 'insufficient_context',
-                'agg_conf': round(agg_conf, 3),
-                'message': CFG.SAFE_MSG,
-                'cache_mode': cache_mode,
-                'token_usage': {},
-                'latency_ms': latency_ms
-            }), 200
-
-        # Compression (use only selected hits' texts as quotes input)
-        # Map selected hits back to reranked candidates preserving URL and titles
-        filtered_candidates = []
-        selected_texts = {h['text'] for h in selected_hits}
-        for rc in reranked_candidates:
-            if rc.text in selected_texts:
-                filtered_candidates.append(rc)
-
-        compression_result = compressor.compress(query, filtered_candidates)
+        # Compression
+        compression_result = compressor.compress(query, reranked_candidates)
         debug_state['last_quotes'] = compressor.get_debug_info(compression_result)
         
         # Answer generation
@@ -262,26 +220,7 @@ def ask():
             'reason': 'No valid cache entry found'
         }
         
-        # Build guard evidence array (top selected with scores if available)
-        evidence = []
-        try:
-            # selected_hits and agg_conf exist if we didn't early return
-            evidence = [
-                {
-                    'sid': h.get('sid'),
-                    'url': h.get('meta', {}).get('url'),
-                    'rel': round(float(h.get('rel', 0.0)), 3),
-                    'cross': round(float(h.get('cross', 0.0)), 3),
-                    'final': round(float(h.get('final', 0.0)), 3)
-                }
-                for h in (selected_hits if 'selected_hits' in locals() else [])
-            ]
-        except Exception:
-            evidence = []
-
         return jsonify({
-            'status': 'ok',
-            'agg_conf': round(agg_conf, 3) if 'agg_conf' in locals() else None,
             'answer_plain': answer_result.answer_plain,
             'answer_html': answer_result.answer_html,
             'citations': [
@@ -292,7 +231,6 @@ def ask():
                 }
                 for citation in answer_result.citations
             ],
-            'evidence': evidence,
             'cache_mode': cache_mode,
             'token_usage': {
                 'compression': compression_result.total_tokens,
@@ -455,222 +393,6 @@ def clear_cache():
 def not_found(error):
     """Handle 404 errors."""
     return jsonify({'error': 'Endpoint not found'}), 404
-
-@api.route('/whitepaper', methods=['GET'])
-def whitepaper():
-    """Serve the technical whitepaper."""
-    try:
-        import markdown
-        import os
-        from flask import request
-        
-        # Check if LaTeX version is requested
-        format_type = request.args.get('format', 'html')
-        
-        if format_type == 'latex':
-            # Serve LaTeX source
-            latex_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'whitepaper.tex')
-            if not os.path.exists(latex_path):
-                return jsonify({'error': 'LaTeX whitepaper not found'}), 404
-            
-            with open(latex_path, 'r', encoding='utf-8') as f:
-                latex_content = f.read()
-            
-            return latex_content, 200, {
-                'Content-Type': 'text/plain; charset=utf-8',
-                'Content-Disposition': 'attachment; filename="veteran-ai-spark-whitepaper.tex"'
-            }
-        
-        # Default: serve HTML version
-        # Read the whitepaper markdown file
-        whitepaper_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'whitepaper.md')
-        
-        if not os.path.exists(whitepaper_path):
-            return jsonify({'error': 'Whitepaper not found'}), 404
-        
-        with open(whitepaper_path, 'r', encoding='utf-8') as f:
-            markdown_content = f.read()
-        
-        # Convert markdown to HTML
-        html_content = markdown.markdown(
-            markdown_content,
-            extensions=['tables', 'fenced_code', 'toc', 'codehilite'],
-            extension_configs={
-                'toc': {'title': 'Table of Contents'},
-                'codehilite': {'use_pygments': False}
-            }
-        )
-        
-        # Create a complete HTML page
-        html_page = f"""
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Technical Whitepaper - Veteran AI Spark RAG System</title>
-    <style>
-        body {{
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #fafafa;
-        }}
-        .container {{
-            background: white;
-            padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }}
-        h1 {{
-            color: #1a365d;
-            border-bottom: 3px solid #3182ce;
-            padding-bottom: 10px;
-        }}
-        h2 {{
-            color: #2d3748;
-            margin-top: 2em;
-            border-left: 4px solid #3182ce;
-            padding-left: 15px;
-        }}
-        h3 {{
-            color: #4a5568;
-            margin-top: 1.5em;
-        }}
-        code {{
-            background-color: #f7fafc;
-            padding: 2px 6px;
-            border-radius: 3px;
-            font-family: 'Monaco', 'Menlo', monospace;
-            font-size: 0.9em;
-        }}
-        pre {{
-            background-color: #f7fafc;
-            border: 1px solid #e2e8f0;
-            border-radius: 6px;
-            padding: 15px;
-            overflow-x: auto;
-            margin: 1em 0;
-        }}
-        pre code {{
-            background: none;
-            padding: 0;
-        }}
-        table {{
-            border-collapse: collapse;
-            width: 100%;
-            margin: 1em 0;
-        }}
-        th, td {{
-            border: 1px solid #e2e8f0;
-            padding: 12px;
-            text-align: left;
-        }}
-        th {{
-            background-color: #f7fafc;
-            font-weight: 600;
-        }}
-        .toc {{
-            background-color: #f7fafc;
-            border: 1px solid #e2e8f0;
-            border-radius: 6px;
-            padding: 20px;
-            margin: 20px 0;
-        }}
-        .toc ul {{
-            margin: 0;
-            padding-left: 20px;
-        }}
-        .math {{
-            font-family: 'Times New Roman', serif;
-            font-style: italic;
-        }}
-        .highlight {{
-            background-color: #fff3cd;
-            padding: 15px;
-            border-left: 4px solid #ffc107;
-            margin: 1em 0;
-        }}
-        .nav-header {{
-            background: #1a365d;
-            color: white;
-            padding: 15px 40px;
-            margin: -40px -40px 40px -40px;
-            border-radius: 8px 8px 0 0;
-        }}
-        .nav-header h1 {{
-            margin: 0;
-            color: white;
-            border: none;
-            padding: 0;
-        }}
-        .back-link {{
-            display: inline-block;
-            margin-top: 15px;
-            color: #3182ce;
-            text-decoration: none;
-            font-weight: 500;
-        }}
-        .back-link:hover {{
-            text-decoration: underline;
-        }}
-        @media (max-width: 768px) {{
-            body {{
-                padding: 10px;
-            }}
-            .container {{
-                padding: 20px;
-            }}
-            .nav-header {{
-                padding: 15px 20px;
-                margin: -20px -20px 20px -20px;
-            }}
-        }}
-    </style>
-</head>
-<body>
-    <div class="container">
-        <div class="nav-header">
-            <h1>Technical Whitepaper</h1>
-            <p style="margin: 0; opacity: 0.9;">Veteran AI Spark RAG System - Comprehensive Technical Documentation</p>
-        </div>
-        
-        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
-            <a href="/" class="back-link">← Back to Main Site</a>
-            <a href="/api/whitepaper?format=latex" class="back-link" download="veteran-ai-spark-whitepaper.tex">
-                📄 Download LaTeX Source
-            </a>
-        </div>
-        
-        {html_content}
-        
-        <hr style="margin: 40px 0; border: none; border-top: 1px solid #e2e8f0;">
-        <div style="text-align: center; color: #718096; font-size: 0.9em;">
-            <a href="/" class="back-link">← Return to Veteran AI Spark</a>
-            <span style="margin: 0 20px;">|</span>
-            <a href="/api/whitepaper?format=latex" class="back-link" download="veteran-ai-spark-whitepaper.tex">
-                📄 Download LaTeX Source
-            </a>
-        </div>
-    </div>
-</body>
-</html>
-        """
-        
-        return html_page, 200, {'Content-Type': 'text/html'}
-        
-    except ImportError:
-        # Fallback if markdown is not installed
-        return jsonify({
-            'error': 'Markdown processor not available',
-            'message': 'Please install python-markdown to view the whitepaper'
-        }), 500
-    except Exception as e:
-        logger.error(f"Error serving whitepaper: {e}")
-        return jsonify({'error': 'Failed to load whitepaper'}), 500
 
 @api.errorhandler(500)
 def internal_error(error):

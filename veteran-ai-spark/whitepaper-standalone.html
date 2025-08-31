@@ -3,166 +3,158 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LaTeX Source - Veteran AI Spark RAG System Whitepaper</title>
+    <title>Technical Whitepaper - Veteran AI Spark RAG System</title>
     <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
-            line-height: 1.4;
-            color: #2d3748;
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #f7fafc;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #e2e8f0;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            min-height: 100vh;
         }
         .container {
-            background: white;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            border: 1px solid #e2e8f0;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
         }
         .header {
-            background: linear-gradient(135deg, #1a365d 0%, #2d3748 100%);
+            background: linear-gradient(135deg, #1e40af 0%, #1e293b 100%);
             color: white;
-            padding: 20px 30px;
-            margin: -30px -30px 30px -30px;
-            border-radius: 8px 8px 0 0;
-            border-bottom: 3px solid #3182ce;
+            padding: 30px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
         }
         .header h1 {
-            margin: 0 0 10px 0;
-            font-size: 1.8em;
-            font-weight: 600;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
         }
         .header p {
-            margin: 0;
+            font-size: 1.2em;
             opacity: 0.9;
-            font-size: 1.1em;
         }
-        .nav-links {
+        .actions {
             display: flex;
-            justify-content: space-between;
-            align-items: center;
+            gap: 15px;
             margin-bottom: 20px;
-            padding: 15px;
-            background: #edf2f7;
-            border-radius: 6px;
-            border-left: 4px solid #3182ce;
+            flex-wrap: wrap;
         }
-        .nav-links a {
-            color: #3182ce;
-            text-decoration: none;
-            font-weight: 500;
-            padding: 8px 16px;
-            border-radius: 4px;
-            transition: all 0.2s;
-        }
-        .nav-links a:hover {
-            background: #3182ce;
+        .btn {
+            background: #3b82f6;
             color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 500;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+        }
+        .btn:hover {
+            background: #2563eb;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(59, 130, 246, 0.4);
+        }
+        .btn-secondary {
+            background: #64748b;
+        }
+        .btn-secondary:hover {
+            background: #475569;
+        }
+        .info-box {
+            background: rgba(59, 130, 246, 0.1);
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .info-box h3 {
+            color: #60a5fa;
+            margin-bottom: 10px;
+        }
+        .latex-container {
+            background: #0f172a;
+            border: 1px solid #334155;
+            border-radius: 8px;
+            position: relative;
+            overflow: hidden;
         }
         .latex-content {
-            background: #1a202c;
-            color: #e2e8f0;
             padding: 25px;
-            border-radius: 6px;
             overflow-x: auto;
-            font-size: 13px;
-            line-height: 1.5;
-            border: 1px solid #4a5568;
             max-height: 80vh;
             overflow-y: auto;
         }
         .latex-content pre {
-            margin: 0;
+            font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+            font-size: 13px;
+            line-height: 1.5;
             white-space: pre-wrap;
             word-wrap: break-word;
+            color: #e2e8f0;
         }
-        /* LaTeX syntax highlighting */
-        .command { color: #68d391; font-weight: bold; }
-        .environment { color: #90cdf4; font-weight: bold; }
-        .comment { color: #a0aec0; font-style: italic; }
-        .math { color: #fbb6ce; }
-        .string { color: #faf089; }
-        .keyword { color: #fc8181; font-weight: bold; }
-        
-        .copy-button {
+        .copy-btn-top {
             position: absolute;
-            top: 10px;
-            right: 10px;
-            background: #3182ce;
+            top: 15px;
+            right: 15px;
+            z-index: 10;
+        }
+        .toast {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #10b981;
             color: white;
-            border: none;
-            padding: 8px 12px;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 12px;
-            transition: background 0.2s;
+            padding: 12px 20px;
+            border-radius: 8px;
+            display: none;
+            z-index: 1000;
         }
-        .copy-button:hover {
-            background: #2c5282;
-        }
-        .latex-container {
-            position: relative;
-        }
-        .info-box {
-            background: #ebf8ff;
-            border: 1px solid #90cdf4;
-            border-radius: 6px;
-            padding: 15px;
-            margin-bottom: 20px;
-        }
-        .info-box h3 {
-            margin: 0 0 10px 0;
-            color: #2c5282;
-        }
-        .info-box p {
-            margin: 0;
-            color: #2d3748;
-        }
-        
         @media (max-width: 768px) {
-            body {
-                padding: 10px;
-            }
-            .container {
-                padding: 20px;
-            }
-            .header {
-                padding: 15px 20px;
-                margin: -20px -20px 20px -20px;
-            }
-            .nav-links {
-                flex-direction: column;
-                gap: 10px;
-            }
-            .latex-content {
-                font-size: 11px;
-                padding: 15px;
-            }
+            .container { padding: 10px; }
+            .header { padding: 20px; }
+            .header h1 { font-size: 2em; }
+            .actions { flex-direction: column; }
+            .latex-content { padding: 15px; font-size: 11px; }
         }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
-            <h1>📄 LaTeX Source Code</h1>
-            <p>Complete LaTeX source for the Veteran AI Spark RAG System Technical Whitepaper</p>
+            <h1>📄 Technical Whitepaper</h1>
+            <p>Complete LaTeX source for the Veteran AI Spark RAG System</p>
         </div>
         
-        <div class="nav-links">
-            <a href="/">← Back to Main Site</a>
-            <a href="#" onclick="downloadLatex()">💾 Download .tex File</a>
-            <a href="#" onclick="copyToClipboard()">📋 Copy to Clipboard</a>
+        <div class="actions">
+            <button class="btn" onclick="window.history.back()">
+                ← Back to Main Site
+            </button>
+            <button class="btn" onclick="copyToClipboard()">
+                📋 Copy LaTeX Source
+            </button>
+            <button class="btn" onclick="downloadLatex()">
+                💾 Download .tex File
+            </button>
         </div>
         
         <div class="info-box">
             <h3>🔧 Compilation Instructions</h3>
-            <p>To compile this LaTeX document, save as <code>whitepaper.tex</code> and run: <code>pdflatex whitepaper.tex</code> (may need to run twice for proper references)</p>
+            <p>Save as <code style="background: rgba(0,0,0,0.3); padding: 2px 6px; border-radius: 4px;">whitepaper.tex</code> and run: <code style="background: rgba(0,0,0,0.3); padding: 2px 6px; border-radius: 4px;">pdflatex whitepaper.tex</code> (may need to run twice for proper references)</p>
         </div>
         
         <div class="latex-container">
-            <button class="copy-button" onclick="copyToClipboard()">📋 Copy</button>
+            <button class="btn btn-secondary copy-btn-top" onclick="copyToClipboard()">
+                📋 Copy
+            </button>
             <div class="latex-content">
                 <pre id="latex-source">\\documentclass[11pt,a4paper]{article}
 \\usepackage[utf8]{inputenc}
@@ -639,29 +631,24 @@ This technical documentation serves as both a reference for the current implemen
             </div>
         </div>
         
-        <div style="text-align: center; margin-top: 30px; padding-top: 20px; border-top: 1px solid #e2e8f0;">
-            <div class="nav-links" style="justify-content: center;">
-                <a href="/">← Return to Veteran AI Spark</a>
-                <a href="#" onclick="downloadLatex()">💾 Download LaTeX File</a>
+        <div style="text-align: center; margin-top: 30px; padding-top: 20px; border-top: 1px solid #334155;">
+            <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+                <button class="btn" onclick="window.history.back()">← Return to Main Site</button>
+                <button class="btn" onclick="downloadLatex()">💾 Download LaTeX File</button>
             </div>
         </div>
     </div>
+    
+    <div id="toast" class="toast">✅ Copied to clipboard!</div>
     
     <script>
         function copyToClipboard() {
             const latexContent = document.getElementById('latex-source').textContent;
             navigator.clipboard.writeText(latexContent).then(function() {
-                const button = document.querySelector('.copy-button');
-                const originalText = button.textContent;
-                button.textContent = '✅ Copied!';
-                button.style.background = '#38a169';
-                setTimeout(() => {
-                    button.textContent = originalText;
-                    button.style.background = '#3182ce';
-                }, 2000);
+                showToast('✅ LaTeX source copied to clipboard!');
             }).catch(function(err) {
                 console.error('Could not copy text: ', err);
-                alert('Copy failed. Please select the text manually.');
+                showToast('❌ Copy failed. Please select the text manually.');
             });
         }
         
@@ -676,30 +663,18 @@ This technical documentation serves as both a reference for the current implemen
             a.click();
             document.body.removeChild(a);
             window.URL.revokeObjectURL(url);
+            
+            showToast('💾 LaTeX file downloaded!');
         }
         
-        // Add some basic syntax highlighting
-        function highlightLatex() {
-            const content = document.getElementById('latex-source');
-            let html = content.innerHTML;
-            
-            // Highlight LaTeX commands
-            html = html.replace(/\\([a-zA-Z]+)/g, '<span class="command">\\$1</span>');
-            
-            // Highlight environments
-            html = html.replace(/\\(begin|end)\{([^}]+)\}/g, '<span class="environment">\\$1{$2}</span>');
-            
-            // Highlight comments
-            html = html.replace(/^%.*$/gm, '<span class="comment">$&</span>');
-            
-            // Highlight math mode
-            html = html.replace(/\$([^$]+)\$/g, '<span class="math">$$1$</span>');
-            
-            content.innerHTML = html;
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            toast.textContent = message;
+            toast.style.display = 'block';
+            setTimeout(() => {
+                toast.style.display = 'none';
+            }, 3000);
         }
-        
-        // Apply syntax highlighting when page loads
-        document.addEventListener('DOMContentLoaded', highlightLatex);
     </script>
 </body>
 </html>
