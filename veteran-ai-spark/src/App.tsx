@@ -9,6 +9,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 // Lazy load route components
 const Index = lazy(() => import("./pages/Index"));
 const Stats = lazy(() => import("./pages/Stats"));
+const Whitepaper = lazy(() => import("./pages/Whitepaper"));
 const AdminAnalytics = lazy(() => import("./components/AdminAnalytics"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
@@ -34,6 +35,7 @@ const App = () => (
             <Routes>
               <Route path="/" element={<Index />} />
               <Route path="/stats" element={<Stats />} />
+              <Route path="/whitepaper" element={<Whitepaper />} />
               <Route path="/analytics" element={<AdminAnalytics />} />
               <Route path="/admin/analytics" element={<AdminAnalytics />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

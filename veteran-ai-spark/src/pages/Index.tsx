@@ -70,10 +70,10 @@ const Index = () => {
               </Link>
             </Button>
             <Button asChild variant="outline" size="sm" className="text-muted-foreground hover:text-foreground">
-              <a href="/whitepaper-latex.html" target="_blank" rel="noopener noreferrer">
+              <Link to="/whitepaper">
                 <FileText className="h-4 w-4 mr-2" />
                 Technical Whitepaper (LaTeX)
-              </a>
+              </Link>
             </Button>
           </div>
         </div>
