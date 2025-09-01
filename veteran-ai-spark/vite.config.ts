@@ -53,8 +53,8 @@ export default defineConfig(({ mode }) => ({
   ].filter(Boolean),
   resolve: {
     alias: [
-      // Prefer directory alias so extensionless imports resolve to index.ts
-      { find: "@/lib/utils", replacement: path.resolve(__dirname, "./src/lib/utils") },
+      // Map directly to file to avoid directory resolution issues in Linux builds
+      { find: "@/lib/utils", replacement: path.resolve(__dirname, "./src/lib/utils.ts") },
       { find: "@", replacement: path.resolve(__dirname, "./src") },
     ],
   },
