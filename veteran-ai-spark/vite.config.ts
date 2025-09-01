@@ -52,8 +52,8 @@ export default defineConfig(({ mode }) => ({
   ].filter(Boolean),
   resolve: {
     alias: [
-      // Ensure Linux resolves extensionless alias used across UI components
-      { find: "@/lib/utils", replacement: path.resolve(__dirname, "./src/lib/utils.ts") },
+      // Prefer directory alias so extensionless imports resolve to index.ts
+      { find: "@/lib/utils", replacement: path.resolve(__dirname, "./src/lib/utils") },
       { find: "@", replacement: path.resolve(__dirname, "./src") },
     ],
   },
