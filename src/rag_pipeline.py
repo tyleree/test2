@@ -42,10 +42,37 @@ from src.prompts import (
 
 # Configuration
 DEFAULT_CHAT_MODEL = "gpt-4.1-mini"
+PREMIUM_CHAT_MODEL = "gpt-4.1"  # More capable model for complex queries
 DEFAULT_TOP_K = 7
 DEFAULT_MIN_SCORE = 0.3
 CORPUS_PATH = "veteran-ai-spark/corpus/vbkb_restructured.json"
 EMBEDDINGS_CACHE_PATH = "data/embeddings_cache.json"
+
+# Model routing thresholds
+SIMPLE_QUERY_MAX_WORDS = 15  # Queries with fewer words are likely simple
+COMPLEX_CONTEXT_THRESHOLD = 3000  # Context chars above this suggests complexity
+COMPLEX_CHUNKS_THRESHOLD = 5  # More chunks retrieved suggests complex topic
+HIGH_SCORE_THRESHOLD = 0.7  # High similarity = likely simple FAQ match
+
+# Keywords that suggest complex queries needing the premium model
+COMPLEX_QUERY_INDICATORS = [
+    "compare", "comparison", "difference between", "versus", "vs",
+    "explain in detail", "comprehensive", "thoroughly",
+    "multiple conditions", "combined rating", "bilateral",
+    "secondary condition", "aggravation", "nexus",
+    "appeal", "higher level review", "board",
+    "tdiu", "individual unemployability",
+    "presumptive", "agent orange", "burn pit",
+    "effective date", "back pay", "retro",
+]
+
+# Keywords that suggest simple FAQ-style queries (use cheap model)
+SIMPLE_QUERY_INDICATORS = [
+    "what is", "how do i", "where can i", "when can i",
+    "how to file", "how to apply", "what forms",
+    "phone number", "address", "contact",
+    "how long", "how much", "what percent",
+]
 
 
 @dataclass
@@ -56,6 +83,7 @@ class RAGResponse:
     query_time_ms: float
     chunks_retrieved: int
     model_used: str
+    routing_reason: Optional[str] = None
     error: Optional[str] = None
     
     def to_dict(self) -> Dict[str, Any]:
@@ -65,9 +93,12 @@ class RAGResponse:
             "metadata": {
                 "query_time_ms": self.query_time_ms,
                 "chunks_retrieved": self.chunks_retrieved,
-                "model_used": self.model_used
+                "model_used": self.model_used,
+                "model_tier": "premium" if "4.1" in self.model_used and "mini" not in self.model_used else "standard"
             }
         }
+        if self.routing_reason:
+            result["metadata"]["routing_reason"] = self.routing_reason
         if self.error:
             result["error"] = self.error
         return result
@@ -185,6 +216,80 @@ class RAGPipeline:
             self.openai_client is not None
         )
     
+    def _classify_query_complexity(
+        self,
+        query: str,
+        chunks: List[Dict[str, Any]]
+    ) -> Tuple[str, str]:
+        """
+        Classify query complexity and select appropriate model.
+        
+        This implements smart model routing:
+        - Simple FAQ-style queries -> cheap model (gpt-4.1-mini)
+        - Complex queries needing precision -> premium model (gpt-4.1)
+        
+        Args:
+            query: User's question
+            chunks: Retrieved context chunks
+            
+        Returns:
+            Tuple of (selected_model, routing_reason)
+        """
+        query_lower = query.lower().strip()
+        word_count = len(query.split())
+        
+        # Calculate context size
+        total_context_chars = sum(len(c.get("text", "")) for c in chunks)
+        num_chunks = len(chunks)
+        avg_score = sum(c.get("score", 0) for c in chunks) / max(num_chunks, 1)
+        
+        # Check for complex query indicators
+        has_complex_indicators = any(
+            indicator in query_lower 
+            for indicator in COMPLEX_QUERY_INDICATORS
+        )
+        
+        # Check for simple query indicators
+        has_simple_indicators = any(
+            indicator in query_lower 
+            for indicator in SIMPLE_QUERY_INDICATORS
+        )
+        
+        # Decision logic for model routing
+        
+        # 1. Explicit complex indicators -> use premium model
+        if has_complex_indicators:
+            return PREMIUM_CHAT_MODEL, "complex_query_detected"
+        
+        # 2. Very high similarity score + simple indicators -> cheap model is fine
+        if avg_score > HIGH_SCORE_THRESHOLD and has_simple_indicators:
+            return DEFAULT_CHAT_MODEL, "high_confidence_simple_match"
+        
+        # 3. Short query + few chunks + high scores -> simple FAQ, use cheap model
+        if (word_count <= SIMPLE_QUERY_MAX_WORDS and 
+            num_chunks <= COMPLEX_CHUNKS_THRESHOLD and 
+            avg_score > 0.5):
+            return DEFAULT_CHAT_MODEL, "simple_faq_query"
+        
+        # 4. Large context retrieved -> might need better reasoning
+        if total_context_chars > COMPLEX_CONTEXT_THRESHOLD:
+            return PREMIUM_CHAT_MODEL, "large_context_needs_synthesis"
+        
+        # 5. Many chunks retrieved -> complex topic
+        if num_chunks > COMPLEX_CHUNKS_THRESHOLD:
+            return PREMIUM_CHAT_MODEL, "multi_source_complexity"
+        
+        # 6. Long query with multiple parts -> likely complex
+        if word_count > 25 or query.count("?") > 1 or " and " in query_lower:
+            return PREMIUM_CHAT_MODEL, "multi_part_query"
+        
+        # 7. Low confidence scores -> need better reasoning
+        if avg_score < 0.4:
+            return PREMIUM_CHAT_MODEL, "low_confidence_needs_reasoning"
+        
+        # Default: use cheap model for cost efficiency
+        return DEFAULT_CHAT_MODEL, "default_simple"
+    
     def _retrieve_context(self, query: str) -> Tuple[List[Dict[str, Any]], float]:
         """
         Retrieve relevant context chunks for a query.
@@ -224,8 +329,9 @@ class RAGPipeline:
         self,
         question: str,
         context_chunks: List[Dict[str, Any]],
-        conversation_history: Optional[List[Dict[str, str]]] = None
-    ) -> Tuple[str, float]:
+        conversation_history: Optional[List[Dict[str, str]]] = None,
+        model: Optional[str] = None
+    ) -> Tuple[str, float, str]:
         """
         Generate a response using OpenAI chat completion.
         
@@ -233,11 +339,15 @@ class RAGPipeline:
             question: User's question
             context_chunks: Retrieved context chunks
             conversation_history: Optional conversation history
+            model: Specific model to use (overrides default)
             
         Returns:
-            Tuple of (answer text, generation time in ms)
+            Tuple of (answer text, generation time in ms, model used)
         """
         start_time = time.time()
+        
+        # Use specified model or fall back to instance default
+        selected_model = model or self.chat_model
         
         # Build prompt
         messages = build_rag_prompt(
@@ -248,7 +358,7 @@ class RAGPipeline:
         
         # Call OpenAI
         response = self.openai_client.chat.completions.create(
-            model=self.chat_model,
+            model=selected_model,
             messages=messages,
             temperature=0.3,  # Lower temperature for more factual responses
             max_tokens=1500
@@ -257,19 +367,25 @@ class RAGPipeline:
         answer = response.choices[0].message.content
         elapsed_ms = (time.time() - start_time) * 1000
         
-        return answer, elapsed_ms
+        return answer, elapsed_ms, selected_model
     
     def ask(
         self,
         question: str,
-        conversation_history: Optional[List[Dict[str, str]]] = None
+        conversation_history: Optional[List[Dict[str, str]]] = None,
+        force_model: Optional[str] = None
     ) -> RAGResponse:
         """
         Ask a question and get an answer with sources.
         
+        Uses intelligent model routing to select the appropriate model:
+        - Simple FAQ-style queries -> cheap model (gpt-4.1-mini)
+        - Complex queries needing precision -> premium model (gpt-4.1)
+        
         Args:
             question: User's question
             conversation_history: Optional list of previous messages
+            force_model: Optional model override (bypasses routing)
             
         Returns:
             RAGResponse with answer, sources, and metadata
@@ -299,14 +415,24 @@ class RAGPipeline:
                     model_used=self.chat_model
                 )
             
-            # Step 2: Generate response
-            answer, generation_time = self._generate_response(
+            # Step 2: Model routing - select appropriate model based on query complexity
+            if force_model:
+                selected_model = force_model
+                routing_reason = "forced_override"
+            else:
+                selected_model, routing_reason = self._classify_query_complexity(question, chunks)
+            
+            print(f"[ROUTER] Model: {selected_model} (reason: {routing_reason})")
+            
+            # Step 3: Generate response with selected model
+            answer, generation_time, model_used = self._generate_response(
                 question,
                 chunks,
-                conversation_history
+                conversation_history,
+                model=selected_model
             )
             
-            # Step 3: Extract sources
+            # Step 4: Extract sources
             sources = extract_sources_from_chunks(chunks)
             
             total_time = (time.time() - total_start) * 1000
@@ -316,7 +442,8 @@ class RAGPipeline:
                 sources=sources,
                 query_time_ms=total_time,
                 chunks_retrieved=len(chunks),
-                model_used=self.chat_model
+                model_used=model_used,
+                routing_reason=routing_reason
             )
             
         except Exception as e:
