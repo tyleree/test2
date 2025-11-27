@@ -67,11 +67,11 @@ def load_embedding_cache(cache_path: str) -> Tuple[Optional[Dict[str, List[float
         corpus_hash = cache_data.get("corpus_hash")
         model = cache_data.get("model", "unknown")
         
-        print(f"\ud83d\udcc2 Loaded {len(embeddings)} cached embeddings (model: {model})")
+        print(f"[FILE] Loaded {len(embeddings)} cached embeddings (model: {model})")
         return embeddings, corpus_hash
     
     except Exception as e:
-        print(f"\u26a0\ufe0f Failed to load embedding cache: {e}")
+        print(f"[WARN] Failed to load embedding cache: {e}")
         return None, None
 
 
@@ -96,7 +96,7 @@ def save_embedding_cache(
     with open(path, 'w', encoding='utf-8') as f:
         json.dump(cache_data, f)
     
-    print(f"\ud83d\udcbe Saved {len(embeddings)} embeddings to cache")
+    print(f"[SAVE] Saved {len(embeddings)} embeddings to cache")
 
 
 def generate_embeddings_batch(
@@ -149,7 +149,7 @@ def generate_all_embeddings(
     total = len(texts)
     embeddings_dict: Dict[str, List[float]] = {}
     
-    print(f"\ud83d\ude80 Generating embeddings for {total} documents using {model}...")
+    print(f"[START] Generating embeddings for {total} documents using {model}...")
     
     for i in range(0, total, BATCH_SIZE):
         batch_ids = doc_ids[i:i + BATCH_SIZE]
@@ -170,10 +170,10 @@ def generate_all_embeddings(
                 time.sleep(RATE_LIMIT_DELAY)
                 
         except Exception as e:
-            print(f"\u274c Error generating embeddings for batch {i}-{i + BATCH_SIZE}: {e}")
+            print(f"[ERROR] Error generating embeddings for batch {i}-{i + BATCH_SIZE}: {e}")
             raise
     
-    print(f"\u2705 Generated {len(embeddings_dict)} embeddings")
+    print(f"[OK] Generated {len(embeddings_dict)} embeddings")
     return embeddings_dict
 
 
@@ -222,7 +222,7 @@ def get_or_create_embeddings(
         Dict mapping document IDs to embedding vectors
     """
     corpus_hash = compute_corpus_hash(documents)
-    print(f"\ud83d\udccb Corpus hash: {corpus_hash}")
+    print(f"[INFO] Corpus hash: {corpus_hash}")
     
     if not force_regenerate:
         cached_embeddings, cached_hash = load_embedding_cache(cache_path)
@@ -231,16 +231,16 @@ def get_or_create_embeddings(
             # Verify all documents have embeddings
             missing = set(documents.keys()) - set(cached_embeddings.keys())
             if not missing:
-                print("\u2705 Using cached embeddings (corpus unchanged)")
+                print("[OK] Using cached embeddings (corpus unchanged)")
                 return cached_embeddings
             else:
-                print(f"\u26a0\ufe0f Cache missing {len(missing)} documents, regenerating...")
+                print(f"[WARN] Cache missing {len(missing)} documents, regenerating...")
         elif cached_embeddings:
-            print("\u26a0\ufe0f Corpus changed since cache was created, regenerating...")
+            print("[WARN] Corpus changed since cache was created, regenerating...")
         else:
-            print("\ud83d\udcdd No embedding cache found, generating...")
+            print("[NOTE] No embedding cache found, generating...")
     else:
-        print("\ud83d\udd04 Force regenerating embeddings...")
+        print("[REFRESH] Force regenerating embeddings...")
     
     # Generate new embeddings
     embeddings = generate_all_embeddings(documents, model)

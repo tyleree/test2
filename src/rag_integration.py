@@ -24,17 +24,17 @@ def init_rag_system() -> bool:
     global _rag_pipeline, _initialized
     
     if _initialized:
-        print("\u2705 RAG system already initialized")
+        print("[OK] RAG system already initialized")
         return True
     
     try:
-        print("\ud83d\ude80 Initializing OpenAI-based RAG system...")
+        print("[START] Initializing OpenAI-based RAG system...")
         _rag_pipeline = initialize_rag_pipeline(force_regenerate=False)
         _initialized = True
-        print("\u2705 RAG system initialized successfully")
+        print("[OK] RAG system initialized successfully")
         return True
     except Exception as e:
-        print(f"\u274c RAG system initialization failed: {e}")
+        print(f"[ERROR] RAG system initialization failed: {e}")
         _initialized = False
         return False
 
@@ -108,7 +108,7 @@ def query_rag_system(prompt: str, history: list = None) -> Dict[str, Any]:
         }
         
     except Exception as e:
-        print(f"\u274c RAG query error: {e}")
+        print(f"[ERROR] RAG query error: {e}")
         return {
             "success": False,
             "content": "",

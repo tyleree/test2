@@ -113,7 +113,7 @@ class RAGPipeline:
         Returns:
             True if initialization was successful
         """
-        print("\ud83d\ude80 Initializing RAG Pipeline...")
+        print("[START] Initializing RAG Pipeline...")
         start_time = time.time()
         
         try:
@@ -122,7 +122,7 @@ class RAGPipeline:
             if not api_key:
                 raise ValueError("OPENAI_API_KEY environment variable not set")
             self.openai_client = OpenAI(api_key=api_key)
-            print("\u2705 OpenAI client initialized")
+            print("[OK] OpenAI client initialized")
             
             # Load corpus
             corpus_path = Path(self.corpus_path)
@@ -131,7 +131,7 @@ class RAGPipeline:
             
             with open(corpus_path, 'r', encoding='utf-8') as f:
                 corpus_data = json.load(f)
-            print(f"\ud83d\udcda Loaded {len(corpus_data)} chunks from corpus")
+            print(f"[LOAD] Loaded {len(corpus_data)} chunks from corpus")
             
             # Build documents dict for embeddings
             documents = {}
@@ -145,7 +145,7 @@ class RAGPipeline:
                         content = f"{topic}\n\n{content}"
                     documents[doc_id] = content
             
-            print(f"\ud83d\udcdd Prepared {len(documents)} documents for embedding")
+            print(f"[NOTE] Prepared {len(documents)} documents for embedding")
             
             # Get or create embeddings
             embeddings = get_or_create_embeddings(
@@ -163,7 +163,7 @@ class RAGPipeline:
             self._is_initialized = True
             
             elapsed = time.time() - start_time
-            print(f"\u2705 RAG Pipeline initialized in {elapsed:.2f}s")
+            print(f"[OK] RAG Pipeline initialized in {elapsed:.2f}s")
             print(f"   - Documents: {len(self.vector_store)}")
             print(f"   - Embedding model: {self.embedding_model}")
             print(f"   - Chat model: {self.chat_model}")
@@ -171,7 +171,7 @@ class RAGPipeline:
             return True
             
         except Exception as e:
-            print(f"\u274c RAG Pipeline initialization failed: {e}")
+            print(f"[ERROR] RAG Pipeline initialization failed: {e}")
             self._is_initialized = False
             raise
     
@@ -320,7 +320,7 @@ class RAGPipeline:
             )
             
         except Exception as e:
-            print(f"\u274c RAG Pipeline error: {e}")
+            print(f"[ERROR] RAG Pipeline error: {e}")
             return RAGResponse(
                 answer="I'm sorry, I encountered an error while processing your question. Please try again.",
                 sources=[],

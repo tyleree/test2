@@ -152,7 +152,7 @@ class InMemoryVectorStore:
             self.documents[doc_id] = doc
         
         self._is_indexed = False
-        print(f"\ud83d\udcda Loaded {len(self.documents)} documents from corpus")
+        print(f"[LOAD] Loaded {len(self.documents)} documents from corpus")
         return len(self.documents)
     
     def set_embeddings(self, embeddings: Dict[str, List[float]]) -> int:
@@ -172,7 +172,7 @@ class InMemoryVectorStore:
                 count += 1
         
         self._build_index()
-        print(f"\ud83d\udd22 Set embeddings for {count} documents")
+        print(f"[NUM] Set embeddings for {count} documents")
         return count
     
     def _build_index(self):
@@ -199,7 +199,7 @@ class InMemoryVectorStore:
         self._embeddings_matrix = self._embeddings_matrix / norms
         
         self._is_indexed = True
-        print(f"\ud83d\udcca Built index with {len(self._doc_ids)} vectors")
+        print(f"[CHART] Built index with {len(self._doc_ids)} vectors")
     
     def search(
         self, 
@@ -219,7 +219,7 @@ class InMemoryVectorStore:
             List of SearchResult objects sorted by similarity (highest first)
         """
         if not self._is_indexed or self._embeddings_matrix is None:
-            print("\u26a0\ufe0f Vector store not indexed. Call set_embeddings() first.")
+            print("[WARN] Vector store not indexed. Call set_embeddings() first.")
             return []
         
         # Normalize query vector
