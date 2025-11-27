@@ -2,7 +2,6 @@ from flask import Flask, render_template, request, jsonify, send_from_directory,
 from flask_limiter import Limiter
 from flask_limiter.util import get_remote_address
 from threading import Lock
-from pinecone import Pinecone
 import os
 from dotenv import load_dotenv
 import requests
@@ -12,6 +11,9 @@ from datetime import datetime
 import threading
 import uuid
 from time import perf_counter
+
+# New OpenAI-based RAG system (replaces Pinecone)
+from src.rag_integration import init_rag_system, query_rag_system, is_rag_ready
 
 # Load environment variables
 load_dotenv('env.txt')  # Using env.txt since .env is blocked
@@ -452,47 +454,20 @@ FRONTEND_BUILD_DIR = os.getenv(
     os.path.join(os.path.dirname(__file__), "frontend", "dist")
 )
 
-# Initialize Pinecone connection
+# Initialize OpenAI-based RAG system (replaces Pinecone)
 try:
-    pc = Pinecone(api_key=os.getenv("PINECONE_API_KEY"))
-    
-    # Try to get the index for direct queries
-    try:
-        # FORCE thriving-walnut index - override any environment variable
-        index_name = "thriving-walnut"  # os.getenv("PINECONE_INDEX_NAME", "thriving-walnut")
-        index = pc.Index(index_name)
-        app.config['PINECONE_INDEX'] = index
-        print(f"✅ Pinecone Index '{index_name}' connected successfully")
-        
-        # Test the connection by getting index stats
-        stats = index.describe_index_stats()
-        print(f"📊 Index stats: {stats.total_vector_count} vectors, {stats.dimension} dimensions")
-        
-    except Exception as e:
-        print(f"❌ Error connecting to Pinecone index: {e}")
-        print(f"🔍 FORCED index name: thriving-walnut (overriding env vars)")
-        index = None
-    
-    # Try to initialize MCP assistant (optional, fallback to direct index queries)
-    assistant = None
-    try:
-        if hasattr(pc, 'assistant'):
-            assistant = pc.assistant.Assistant(assistant_name="vb")
-            app.config['PINECONE_ASSISTANT'] = assistant
-            print("✅ Pinecone MCP Assistant 'vb' connected successfully")
-        else:
-            print("ℹ️  MCP Assistant not available in this Pinecone SDK version, using direct index queries")
-    except Exception as e:
-        print(f"⚠️ MCP Assistant initialization failed: {e}, using direct index queries")
-        
+    rag_initialized = init_rag_system()
+    if rag_initialized:
+        print("✅ OpenAI RAG system initialized successfully")
+    else:
+        print("⚠️ RAG system initialization returned False - will retry on first query")
 except Exception as e:
-    print(f"❌ Error initializing Pinecone connection: {e}")
-    assistant = None
-    index = None
+    print(f"⚠️ RAG system initialization deferred: {e}")
+    rag_initialized = False
 
-# MCP Server configuration (kept as fallback)
-MCP_SERVER_URL = "https://prod-1-data.ke.pinecone.io/mcp/assistants/vb"
-MCP_API_KEY = os.getenv("PINECONE_API_KEY")
+# Legacy variables for compatibility (no longer used but kept to avoid errors)
+assistant = None
+index = None
 
 # OpenAI configuration for direct queries
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
@@ -1888,25 +1863,21 @@ def ask():
         answer_content = None
         success_flag = 0
         
-        # Resolve Pinecone assistant/index from app config if available
-        assistant_ref = app.config.get('PINECONE_ASSISTANT') or assistant
-        index_ref = app.config.get('PINECONE_INDEX') or index
-        
-        # Try direct Pinecone query first (cost-effective, high-performance)
-        if index_ref and OPENAI_API_KEY:
-            print(f"🚀 Attempting direct Pinecone + GPT-4 query for prompt: {prompt[:50]}...")
-            print(f"🔍 Debug: index_ref type: {type(index_ref)}, OPENAI_API_KEY: {'[REDACTED]' if OPENAI_API_KEY else 'None'}")
-            direct_response = query_advanced_rag_system(prompt, index_ref)
-            print(f"🔍 Debug: direct_response type: {type(direct_response)}, content: {direct_response}")
-            if direct_response and direct_response.get("success"):
-                provider_used = 'openai_direct'
-                answer_content = direct_response["content"]
+        # Use new OpenAI-based RAG system
+        if OPENAI_API_KEY:
+            print(f"🚀 Querying OpenAI RAG system for prompt: {prompt[:50]}...")
+            rag_response = query_rag_system(prompt)
+            
+            if rag_response and rag_response.get("success"):
+                provider_used = 'openai_rag'
+                answer_content = rag_response["content"]
                 success_flag = 1
-                # Log chat question to analytics with token usage + performance
                 elapsed_ms = int((perf_counter() - start_time) * 1000)
+                
+                # Log chat question to analytics
                 log_chat_question(
-                    token_usage=direct_response.get("token_usage"),
-                    model_info=direct_response.get("metadata"),
+                    token_usage=rag_response.get("token_usage"),
+                    model_info=rag_response.get("metadata"),
                     extra_perf={
                         'response_ms': elapsed_ms,
                         'prompt_chars': len(prompt),
@@ -1915,53 +1886,38 @@ def ask():
                         'provider': provider_used
                     }
                 )
+                
                 return jsonify({
                     "success": True,
                     "content": answer_content,
-                    "citations": direct_response.get("citations", []),
-                    "source": direct_response["source"],
-                    "metadata": direct_response.get("metadata", {}),
+                    "citations": rag_response.get("citations", []),
+                    "source": rag_response.get("source", "openai_rag"),
+                    "metadata": rag_response.get("metadata", {}),
                     "ask_count": current_ask_count
                 })
             else:
-                if direct_response and not direct_response.get("success"):
-                    print(f"⚠️ Direct Pinecone query failed with error: {direct_response.get('error', 'Unknown error')}")
-                    if DISABLE_FALLBACKS:
-                        # Return the actual error details when fallbacks are disabled
-                        elapsed_ms = int((perf_counter() - start_time) * 1000)
-                        log_chat_question(
-                            extra_perf={
-                                'response_ms': elapsed_ms,
-                                'prompt_chars': len(prompt),
-                                'answer_chars': 0,
-                                'success': 0,
-                                'provider': 'openai_direct_failed'
-                            }
-                        )
-                        # Generate user-friendly error message
-                        user_friendly_error = generate_user_friendly_error(direct_response, prompt)
-                        return jsonify({
-                            "error": user_friendly_error,
-                            "details": {
-                                "primary_method": "openai_direct",
-                                "fallbacks_disabled": True,
-                                "index_available": bool(index_ref),
-                                "openai_key_available": bool(OPENAI_API_KEY),
-                                "actual_error": direct_response.get('error'),
-                                "error_type": direct_response.get('error_type'),
-                                "traceback": direct_response.get('traceback')
-                            }
-                        }), 500
-                else:
-                    print("⚠️ Direct Pinecone query returned None, falling back to MCP")
+                # RAG query failed
+                error_msg = rag_response.get('error', 'Unknown error') if rag_response else 'No response'
+                print(f"⚠️ RAG query failed: {error_msg}")
+                elapsed_ms = int((perf_counter() - start_time) * 1000)
+                log_chat_question(
+                    extra_perf={
+                        'response_ms': elapsed_ms,
+                        'prompt_chars': len(prompt),
+                        'answer_chars': 0,
+                        'success': 0,
+                        'provider': 'openai_rag_failed'
+                    }
+                )
+                return jsonify({
+                    "error": "I'm sorry, I encountered an error processing your question. Please try again.",
+                    "details": {
+                        "method": "openai_rag",
+                        "error": error_msg
+                    }
+                }), 500
         else:
-            if not index_ref:
-                print("⚠️ No Pinecone index available for direct query")
-            if not OPENAI_API_KEY:
-                print("⚠️ No OpenAI API key available for direct query")
-        
-        # Check if fallbacks are disabled
-        if DISABLE_FALLBACKS:
+            # No OpenAI API key - return error
             elapsed_ms = int((perf_counter() - start_time) * 1000)
             log_chat_question(
                 extra_perf={
@@ -1969,112 +1925,13 @@ def ask():
                     'prompt_chars': len(prompt),
                     'answer_chars': 0,
                     'success': 0,
-                    'provider': 'openai_direct_failed'
+                    'provider': 'no_api_key'
                 }
             )
             return jsonify({
-                "error": "Direct OpenAI + Pinecone query failed and fallbacks are disabled",
-                "details": {
-                    "primary_method": "openai_direct",
-                    "fallbacks_disabled": True,
-                    "index_available": bool(index_ref),
-                    "openai_key_available": bool(OPENAI_API_KEY)
-                }
-            }), 500
-        
-        # Fallback to MCP server (only if fallbacks enabled)
-        print(f"🔄 Falling back to MCP server for prompt: {prompt[:50]}...")
-        mcp_response = call_mcp_server(prompt)
-        if mcp_response and mcp_response.get("success"):
-            content, citations, metadata = process_mcp_response(mcp_response)
-            if content:
-                provider_used = 'pinecone_mcp'
-                answer_content = content
-                success_flag = 1
-                elapsed_ms = int((perf_counter() - start_time) * 1000)
-                # Extract token usage if present
-                token_usage = None
-                if metadata and isinstance(metadata, dict):
-                    usage = metadata.get('usage', {})
-                    if usage:
-                        token_usage = {'usage': usage, 'model': metadata.get('model'), 'provider': provider_used}
-                log_chat_question(
-                    token_usage=token_usage,
-                    model_info={'source': 'mcp_server', 'model': metadata.get('model') if metadata else None},
-                    extra_perf={
-                        'response_ms': elapsed_ms,
-                        'prompt_chars': len(prompt),
-                        'answer_chars': len(answer_content or ''),
-                        'success': success_flag,
-                        'provider': provider_used
-                    }
-                )
-                return jsonify({
-                    "success": True,
-                    "content": content,
-                    "citations": citations or [],
-                    "source": "mcp_server",
-                    "metadata": metadata,
-                    "ask_count": current_ask_count
-                })
-        else:
-            print(f"⚠️ MCP server failed: {mcp_response.get('error', 'Unknown error')}")
-        
-        # Final fallback to Pinecone SDK (only if fallbacks enabled)
-        if not DISABLE_FALLBACKS and assistant_ref:
-            print("🔄 Falling back to Pinecone SDK...")
-            try:
-                from pinecone_plugins.assistant.models.chat import Message
-                resp = assistant_ref.chat(
-                    messages=[Message(role="user", content=prompt)], 
-                    include_highlights=True
-                )
-                provider_used = 'pinecone_sdk'
-                answer_content = resp.message.content
-                success_flag = 1
-                elapsed_ms = int((perf_counter() - start_time) * 1000)
-                # Process citations as before
-                citations = []
-                try:
-                    if hasattr(resp, 'citations') and resp.citations:
-                        for citation in resp.citations:
-                            pass
-                except Exception:
-                    pass
-                # Log
-                log_chat_question(
-                    model_info={'source': 'pinecone_sdk', 'model': 'pinecone_assistant'},
-                    extra_perf={
-                        'response_ms': elapsed_ms,
-                        'prompt_chars': len(prompt),
-                        'answer_chars': len(answer_content or ''),
-                        'success': success_flag,
-                        'provider': provider_used
-                    }
-                )
-                return jsonify({
-                    "content": answer_content,
-                    "citations": citations,
-                    "source": "pinecone_sdk",
-                    "ask_count": current_ask_count,
-                    "debug_info": {
-                        "response_type": str(type(resp)),
-                        "has_citations": hasattr(resp, 'citations'),
-                        "citations_count": len(citations) if citations else 0
-                    }
-                })
-            except Exception as e:
-                print(f"Error with Pinecone SDK fallback: {e}")
-                return jsonify({"error": f"Both MCP server and Pinecone SDK failed: {str(e)}"}), 500
-        else:
-            return jsonify({
-                "error": "Neither MCP server nor Pinecone SDK available",
-                "details": {
-                    "mcp_api_key_configured": bool(MCP_API_KEY),
-                    "assistant_ready": bool(assistant_ref),
-                    "index_ready": bool(index_ref)
-                }
-            }), 500
+                "error": "Service temporarily unavailable. Please try again later.",
+                "details": {"reason": "API configuration issue"}
+            }), 503
         
     except Exception as e:
         print(f"Error in ask endpoint: {e}")
@@ -2084,10 +1941,8 @@ def ask():
 def health():
     return jsonify({
         "status": "healthy",
-        "pinecone_available": assistant is not None,
-        "index_available": index is not None,
-        "mcp_endpoint": MCP_SERVER_URL,
-        "mcp_api_key_configured": bool(MCP_API_KEY),
+        "rag_system_ready": is_rag_ready(),
+        "openai_key_configured": bool(OPENAI_API_KEY),
         "environment": os.getenv("FLASK_ENV", "production"),
         "endpoints": {
             "main": "/",
@@ -2095,11 +1950,7 @@ def health():
             "health": "/health",
             "metrics": "/metrics",
             "stats": "/stats",
-            "rate_limit_status": "/rate-limit-status",
-            "mcp_test": "/mcp/test",
-            "mcp_status": "/mcp/status",
-            "mcp_chat": "/mcp/chat",
-            "debug": "/debug"
+            "rate_limit_status": "/rate-limit-status"
         }
     })
 
