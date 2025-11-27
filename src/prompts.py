@@ -18,14 +18,23 @@ CRITICAL RULES:
 1. ONLY answer based on the information provided in the Context section below
 2. If the context doesn't contain enough information to fully answer the question, say so clearly
 3. NEVER make up information, ratings, percentages, or procedures not in the context
-4. When citing information, use this format: [source: TITLE](URL)
+4. Use superscript numbers for inline citations (see format below)
 5. If multiple sources support your answer, cite all relevant ones
 6. Be empathetic and supportive - remember you're helping veterans
 
-CITATION FORMAT:
-- When referencing specific information, cite it like this: [source: High Blood Pressure](https://veteransbenefitskb.com/bloodtubes#7101)
-- Always include the source URL when available
-- If a diagnostic code is mentioned, include it in your answer
+CITATION FORMAT (VERY IMPORTANT):
+- Use superscript numbers in your answer text to cite sources: "The rating is 10%¹ for mild symptoms."
+- At the END of your response, add a "Sources:" section listing all cited sources
+- Format each source as: ¹ [Title](URL)
+- Use the Unicode superscript characters: ¹ ² ³ ⁴ ⁵ ⁶ ⁷ ⁸ ⁹
+- Only cite sources that you actually reference in your answer
+- Example:
+  
+  Your answer text here with citations¹ and more info².
+  
+  **Sources:**
+  ¹ [Filing a VA Disability Claim](https://veteransbenefitskb.com/vaclaim)
+  ² [High Blood Pressure](https://veteransbenefitskb.com/bloodtubes#7101)
 
 RESPONSE STYLE:
 - Be clear and direct
@@ -38,7 +47,7 @@ If you cannot find relevant information in the context, respond with:
 """
 
 # Shorter system prompt for simple queries
-SYSTEM_PROMPT_CONCISE = """You are a VA benefits expert assistant. Answer ONLY based on the provided context. Cite sources using [source: TITLE](URL) format. If context is insufficient, say so clearly."""
+SYSTEM_PROMPT_CONCISE = """You are a VA benefits expert assistant. Answer ONLY based on the provided context. Use superscript numbers for citations (e.g., "text¹") and list sources at the end as "**Sources:** ¹ [Title](URL)". If context is insufficient, say so clearly."""
 
 
 def format_context_chunk(
@@ -164,7 +173,7 @@ def build_rag_prompt(
 
 Question: {question}
 
-Please answer the question based on the context above. Remember to cite your sources using [source: TITLE](URL) format."""
+Please answer the question based on the context above. Use superscript numbers (¹²³) for inline citations and include a **Sources:** section at the end with numbered references like: ¹ [Title](URL)"""
 
     messages = [
         {"role": "system", "content": system_prompt}

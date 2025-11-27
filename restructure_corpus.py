@@ -19,6 +19,38 @@ def extract_url_from_heading(heading: str) -> Optional[str]:
     return url_match.group(1) if url_match else None
 
 
+def extract_url_from_content(content: str) -> Optional[str]:
+    """Extract the most relevant veteransbenefitskb URL from content."""
+    # Find all veteransbenefitskb URLs in markdown links
+    urls = re.findall(r'https?://(?:www\.)?veteransbenefitskb\.com/[a-zA-Z0-9_#-]+', content)
+    
+    if not urls:
+        return None
+    
+    # Prioritize URLs with anchors (more specific)
+    urls_with_anchors = [u for u in urls if '#' in u]
+    if urls_with_anchors:
+        return urls_with_anchors[0]
+    
+    # Filter out generic/navigation URLs
+    skip_urls = [
+        'veteransbenefitskb.com/cart',
+        'veteransbenefitskb.com/mission',
+        'veteransbenefitskb.com/about',
+    ]
+    
+    for url in urls:
+        is_skip = False
+        for skip in skip_urls:
+            if skip in url:
+                is_skip = True
+                break
+        if not is_skip:
+            return url
+    
+    return urls[0] if urls else None
+
+
 def clean_content(content: str) -> str:
     """Clean up content by removing artifacts and normalizing formatting."""
     # Remove document header
@@ -275,108 +307,237 @@ def parse_chunk_comment(comment: str) -> dict:
     return {}
 
 
-def infer_base_url(heading: str) -> str:
-    """Infer the base URL for the content based on heading/topic."""
+def infer_base_url(heading: str, content: str = "") -> str:
+    """Infer the base URL for the content based on heading/topic and content."""
     heading_lower = heading.lower()
+    content_lower = content.lower() if content else ""
     
-    url_mapping = {
-        'blood pressure': 'https://veteransbenefitskb.com/bloodtubes',
-        'hypertension': 'https://veteransbenefitskb.com/bloodtubes',
-        'aneurysm': 'https://veteransbenefitskb.com/bloodtubes',
-        'peripheral': 'https://veteransbenefitskb.com/bloodtubes',
-        'buerger': 'https://veteransbenefitskb.com/bloodtubes',
-        'raynaud': 'https://veteransbenefitskb.com/bloodtubes',
-        'erythromelalgia': 'https://veteransbenefitskb.com/bloodtubes',
-        'varicose': 'https://veteransbenefitskb.com/bloodtubes',
-        'circulatory': 'https://veteransbenefitskb.com/bloodtubes',
-        'allergic swelling': 'https://veteransbenefitskb.com/bloodtubes',
-        'frostbite': 'https://veteransbenefitskb.com/bloodtubes',
-        'cold injury': 'https://veteransbenefitskb.com/bloodtubes',
-        'arteriovenous': 'https://veteransbenefitskb.com/bloodtubes',
-        'sarcoma': 'https://veteransbenefitskb.com/bloodtubes',
-        'dental': 'https://veteransbenefitskb.com/mouthsystem',
-        'oral': 'https://veteransbenefitskb.com/mouthsystem',
-        'jaw': 'https://veteransbenefitskb.com/mouthsystem',
-        'mandible': 'https://veteransbenefitskb.com/mouthsystem',
-        'maxilla': 'https://veteransbenefitskb.com/mouthsystem',
-        'teeth': 'https://veteransbenefitskb.com/mouthsystem',
-        'digestive': 'https://veteransbenefitskb.com/digsystem',
-        'liver': 'https://veteransbenefitskb.com/digsystem',
-        'hepatitis': 'https://veteransbenefitskb.com/digsystem',
-        'intestin': 'https://veteransbenefitskb.com/digsystem',
-        'bowel': 'https://veteransbenefitskb.com/digsystem',
-        'colon': 'https://veteransbenefitskb.com/digsystem',
-        'crohn': 'https://veteransbenefitskb.com/digsystem',
-        'stomach': 'https://veteransbenefitskb.com/digsystem',
-        'gastric': 'https://veteransbenefitskb.com/digsystem',
-        'esophag': 'https://veteransbenefitskb.com/digsystem',
-        'hernia': 'https://veteransbenefitskb.com/digsystem',
-        'hemorrhoid': 'https://veteransbenefitskb.com/digsystem',
-        'infectious': 'https://veteransbenefitskb.com/infect',
-        'cholera': 'https://veteransbenefitskb.com/infect',
-        'malaria': 'https://veteransbenefitskb.com/infect',
-        'leprosy': 'https://veteransbenefitskb.com/infect',
-        'typhus': 'https://veteransbenefitskb.com/infect',
-        'fever': 'https://veteransbenefitskb.com/infect',
-        'plague': 'https://veteransbenefitskb.com/infect',
-        'syphilis': 'https://veteransbenefitskb.com/infect',
-        'tuberculosis': 'https://veteransbenefitskb.com/infect',
-        'hiv': 'https://veteransbenefitskb.com/infect',
-        'immune': 'https://veteransbenefitskb.com/infect',
-        'mental': 'https://veteransbenefitskb.com/mental',
-        'ptsd': 'https://veteransbenefitskb.com/mental',
-        'anxiety': 'https://veteransbenefitskb.com/mental',
-        'depression': 'https://veteransbenefitskb.com/mental',
-        'respiratory': 'https://veteransbenefitskb.com/airsystem',
-        'lung': 'https://veteransbenefitskb.com/airsystem',
-        'asthma': 'https://veteransbenefitskb.com/airsystem',
-        'copd': 'https://veteransbenefitskb.com/airsystem',
-        'heart': 'https://veteransbenefitskb.com/heart',
-        'cardiac': 'https://veteransbenefitskb.com/heart',
-        'cardiovascular': 'https://veteransbenefitskb.com/heart',
-        'skin': 'https://veteransbenefitskb.com/skin',
-        'dermat': 'https://veteransbenefitskb.com/skin',
-        'scar': 'https://veteransbenefitskb.com/skin',
-        'eye': 'https://veteransbenefitskb.com/eyes',
-        'vision': 'https://veteransbenefitskb.com/eyes',
-        'visual': 'https://veteransbenefitskb.com/eyes',
-        'ear': 'https://veteransbenefitskb.com/ears',
-        'hearing': 'https://veteransbenefitskb.com/ears',
-        'tinnitus': 'https://veteransbenefitskb.com/ears',
-        'kidney': 'https://veteransbenefitskb.com/gensystem',
-        'bladder': 'https://veteransbenefitskb.com/gensystem',
-        'urinary': 'https://veteransbenefitskb.com/gensystem',
-        'genito': 'https://veteransbenefitskb.com/gensystem',
-        'prostate': 'https://veteransbenefitskb.com/gensystem',
-        'erectile': 'https://veteransbenefitskb.com/gensystem',
-        'nerve': 'https://veteransbenefitskb.com/nervesystem',
-        'neuro': 'https://veteransbenefitskb.com/nervesystem',
-        'brain': 'https://veteransbenefitskb.com/cns',
-        'tbi': 'https://veteransbenefitskb.com/TBI',
-        'endocrine': 'https://veteransbenefitskb.com/endsystem',
-        'thyroid': 'https://veteransbenefitskb.com/endsystem',
-        'diabetes': 'https://veteransbenefitskb.com/endsystem',
-        'musculoskeletal': 'https://veteransbenefitskb.com/msindex',
-        'spine': 'https://veteransbenefitskb.com/spine',
-        'back': 'https://veteransbenefitskb.com/spine',
-        'shoulder': 'https://veteransbenefitskb.com/shoulder',
-        'knee': 'https://veteransbenefitskb.com/knee',
-        'ankle': 'https://veteransbenefitskb.com/ankle',
-        'hip': 'https://veteransbenefitskb.com/hip',
-        'blood': 'https://veteransbenefitskb.com/blood',
-        'anemia': 'https://veteransbenefitskb.com/blood',
-        'female': 'https://veteransbenefitskb.com/femalesystem',
-        'gynec': 'https://veteransbenefitskb.com/femalesystem',
-        'will not rate': 'https://veteransbenefitskb.com/norate',
-        'misconduct': 'https://veteransbenefitskb.com/norate',
-        'personality disorder': 'https://veteransbenefitskb.com/norate',
-        'congenital': 'https://veteransbenefitskb.com/norate',
-        'substance abuse': 'https://veteransbenefitskb.com/norate',
-        'lab finding': 'https://veteransbenefitskb.com/norate',
-    }
+    # Comprehensive URL mapping - check heading FIRST (in order of specificity)
+    url_mapping = [
+        # Filing and Claims (high priority)
+        ('filing a va disability claim', 'https://veteransbenefitskb.com/vaclaim'),
+        ('filing a claim', 'https://veteransbenefitskb.com/vaclaim'),
+        ('filing a bdd', 'https://veteransbenefitskb.com/vaclaim'),
+        ('bdd claim', 'https://veteransbenefitskb.com/vaclaim'),
+        ('before filing', 'https://veteransbenefitskb.com/vaclaim'),
+        ('after submitting a claim', 'https://veteransbenefitskb.com/vaclaim'),
+        ('intent to file', 'https://veteransbenefitskb.com/vaclaim'),
+        ('successful claim', 'https://veteransbenefitskb.com/vaclaim'),
+        ('common errors when filing', 'https://veteransbenefitskb.com/vaclaim'),
+        ('bare minimum', 'https://veteransbenefitskb.com/vaclaim'),
+        ('claim type', 'https://veteransbenefitskb.com/claimtype'),
+        ('secondary condition', 'https://veteransbenefitskb.com/claimtype#secondary'),
+        
+        # Appeals
+        ('filing an appeal', 'https://veteransbenefitskb.com/appeals'),
+        ('appeal', 'https://veteransbenefitskb.com/appeals'),
+        ('supplemental claim', 'https://veteransbenefitskb.com/appeals#995'),
+        ('higher level review', 'https://veteransbenefitskb.com/appeals#hlr'),
+        ('board of veterans appeal', 'https://veteransbenefitskb.com/appeals#bva'),
+        ('cavc', 'https://veteransbenefitskb.com/appeals'),
+        ('court of appeals', 'https://veteransbenefitskb.com/appeals'),
+        
+        # C&P Exams
+        ('compensation and pension', 'https://veteransbenefitskb.com/cnp'),
+        ('c&p exam', 'https://veteransbenefitskb.com/cnp'),
+        ('c & p', 'https://veteransbenefitskb.com/cnp'),
+        
+        # Effective Dates & Time
+        ('effective date', 'https://veteransbenefitskb.com/time'),
+        ('stages of a claim', 'https://veteransbenefitskb.com/time'),
+        
+        # Ratings Index
+        ('rating schedule', 'https://veteransbenefitskb.com/ratingsindex'),
+        ('combined rating', 'https://veteransbenefitskb.com/combinedbenefits'),
+        
+        # Individual Unemployability
+        ('individual unemployability', 'https://veteransbenefitskb.com/IU'),
+        ('tdiu', 'https://veteransbenefitskb.com/IU'),
+        
+        # Temporary 100%
+        ('temporary 100', 'https://veteransbenefitskb.com/temp100'),
+        
+        # Blood/Cardiovascular
+        ('blood pressure', 'https://veteransbenefitskb.com/bloodtubes'),
+        ('hypertension', 'https://veteransbenefitskb.com/bloodtubes'),
+        ('aneurysm', 'https://veteransbenefitskb.com/bloodtubes'),
+        ('peripheral vascular', 'https://veteransbenefitskb.com/bloodtubes'),
+        ('buerger', 'https://veteransbenefitskb.com/bloodtubes'),
+        ('raynaud', 'https://veteransbenefitskb.com/bloodtubes'),
+        ('erythromelalgia', 'https://veteransbenefitskb.com/bloodtubes'),
+        ('varicose', 'https://veteransbenefitskb.com/bloodtubes'),
+        ('frostbite', 'https://veteransbenefitskb.com/bloodtubes'),
+        ('cold injury', 'https://veteransbenefitskb.com/bloodtubes'),
+        ('arteriovenous', 'https://veteransbenefitskb.com/bloodtubes'),
+        
+        # Heart
+        ('heart', 'https://veteransbenefitskb.com/heart'),
+        ('cardiac', 'https://veteransbenefitskb.com/heart'),
+        ('cardiovascular', 'https://veteransbenefitskb.com/heart'),
+        ('arrhythmia', 'https://veteransbenefitskb.com/heart'),
+        ('valve', 'https://veteransbenefitskb.com/heart'),
+        
+        # Dental/Mouth
+        ('dental', 'https://veteransbenefitskb.com/mouthsystem'),
+        ('oral', 'https://veteransbenefitskb.com/mouthsystem'),
+        ('jaw', 'https://veteransbenefitskb.com/mouthsystem'),
+        ('mandible', 'https://veteransbenefitskb.com/mouthsystem'),
+        ('maxilla', 'https://veteransbenefitskb.com/mouthsystem'),
+        ('teeth', 'https://veteransbenefitskb.com/mouthsystem'),
+        
+        # Digestive
+        ('digestive', 'https://veteransbenefitskb.com/digsystem'),
+        ('liver', 'https://veteransbenefitskb.com/digsystem'),
+        ('hepatitis', 'https://veteransbenefitskb.com/digsystem'),
+        ('intestin', 'https://veteransbenefitskb.com/digsystem'),
+        ('bowel', 'https://veteransbenefitskb.com/digsystem'),
+        ('colon', 'https://veteransbenefitskb.com/digsystem'),
+        ('crohn', 'https://veteransbenefitskb.com/digsystem'),
+        ('stomach', 'https://veteransbenefitskb.com/digsystem'),
+        ('gastric', 'https://veteransbenefitskb.com/digsystem'),
+        ('esophag', 'https://veteransbenefitskb.com/digsystem'),
+        ('hernia', 'https://veteransbenefitskb.com/digsystem'),
+        ('hemorrhoid', 'https://veteransbenefitskb.com/digsystem'),
+        ('gerd', 'https://veteransbenefitskb.com/digsystem'),
+        ('ibs', 'https://veteransbenefitskb.com/digsystem'),
+        
+        # Infectious
+        ('infectious', 'https://veteransbenefitskb.com/infect'),
+        ('malaria', 'https://veteransbenefitskb.com/infect'),
+        ('tuberculosis', 'https://veteransbenefitskb.com/infect'),
+        ('hiv', 'https://veteransbenefitskb.com/infect'),
+        
+        # Mental Health
+        ('mental', 'https://veteransbenefitskb.com/mental'),
+        ('ptsd', 'https://veteransbenefitskb.com/mental'),
+        ('anxiety', 'https://veteransbenefitskb.com/mental'),
+        ('depression', 'https://veteransbenefitskb.com/mental'),
+        ('bipolar', 'https://veteransbenefitskb.com/mental'),
+        ('schizophren', 'https://veteransbenefitskb.com/mental'),
+        ('mst', 'https://veteransbenefitskb.com/mental'),
+        ('military sexual trauma', 'https://veteransbenefitskb.com/mental'),
+        
+        # Respiratory
+        ('respiratory', 'https://veteransbenefitskb.com/airsystem'),
+        ('lung', 'https://veteransbenefitskb.com/airsystem'),
+        ('asthma', 'https://veteransbenefitskb.com/airsystem'),
+        ('copd', 'https://veteransbenefitskb.com/airsystem'),
+        ('sleep apnea', 'https://veteransbenefitskb.com/airsystem'),
+        ('rhinitis', 'https://veteransbenefitskb.com/airsystem'),
+        ('sinusitis', 'https://veteransbenefitskb.com/airsystem'),
+        
+        # Skin
+        ('skin', 'https://veteransbenefitskb.com/skin'),
+        ('dermat', 'https://veteransbenefitskb.com/skin'),
+        ('scar', 'https://veteransbenefitskb.com/skin'),
+        ('eczema', 'https://veteransbenefitskb.com/skin'),
+        ('psoriasis', 'https://veteransbenefitskb.com/skin'),
+        
+        # Eyes
+        ('eye', 'https://veteransbenefitskb.com/eyes'),
+        ('vision', 'https://veteransbenefitskb.com/eyes'),
+        ('visual', 'https://veteransbenefitskb.com/eyes'),
+        ('blind', 'https://veteransbenefitskb.com/eyes'),
+        
+        # Ears
+        ('ear', 'https://veteransbenefitskb.com/ears'),
+        ('hearing', 'https://veteransbenefitskb.com/ears'),
+        ('tinnitus', 'https://veteransbenefitskb.com/ears'),
+        
+        # Genitourinary
+        ('kidney', 'https://veteransbenefitskb.com/gensystem'),
+        ('bladder', 'https://veteransbenefitskb.com/gensystem'),
+        ('urinary', 'https://veteransbenefitskb.com/gensystem'),
+        ('genito', 'https://veteransbenefitskb.com/gensystem'),
+        ('prostate', 'https://veteransbenefitskb.com/gensystem'),
+        ('erectile', 'https://veteransbenefitskb.com/gensystem'),
+        
+        # Neurological
+        ('nerve', 'https://veteransbenefitskb.com/nervesystem'),
+        ('neuro', 'https://veteransbenefitskb.com/nervesystem'),
+        ('radiculopathy', 'https://veteransbenefitskb.com/nervesystem'),
+        ('neuropathy', 'https://veteransbenefitskb.com/nervesystem'),
+        ('sciatica', 'https://veteransbenefitskb.com/nervesystem'),
+        
+        # CNS/Brain
+        ('brain', 'https://veteransbenefitskb.com/cns'),
+        ('tbi', 'https://veteransbenefitskb.com/TBI'),
+        ('traumatic brain', 'https://veteransbenefitskb.com/TBI'),
+        ('concussion', 'https://veteransbenefitskb.com/TBI'),
+        
+        # Endocrine
+        ('endocrine', 'https://veteransbenefitskb.com/endsystem'),
+        ('thyroid', 'https://veteransbenefitskb.com/endsystem'),
+        ('diabetes', 'https://veteransbenefitskb.com/endsystem'),
+        
+        # Musculoskeletal
+        ('musculoskeletal', 'https://veteransbenefitskb.com/msindex'),
+        ('spine', 'https://veteransbenefitskb.com/spine'),
+        ('back', 'https://veteransbenefitskb.com/spine'),
+        ('lumbar', 'https://veteransbenefitskb.com/spine'),
+        ('cervical', 'https://veteransbenefitskb.com/spine'),
+        ('thoracic', 'https://veteransbenefitskb.com/spine'),
+        ('shoulder', 'https://veteransbenefitskb.com/shoulder'),
+        ('knee', 'https://veteransbenefitskb.com/knee'),
+        ('ankle', 'https://veteransbenefitskb.com/ankle'),
+        ('hip', 'https://veteransbenefitskb.com/hip'),
+        ('wrist', 'https://veteransbenefitskb.com/wrist'),
+        ('elbow', 'https://veteransbenefitskb.com/elbow'),
+        ('foot', 'https://veteransbenefitskb.com/foot'),
+        ('flat feet', 'https://veteransbenefitskb.com/foot'),
+        ('plantar', 'https://veteransbenefitskb.com/foot'),
+        
+        # Hemic/Blood
+        ('blood', 'https://veteransbenefitskb.com/blood'),
+        ('anemia', 'https://veteransbenefitskb.com/blood'),
+        ('leukemia', 'https://veteransbenefitskb.com/blood'),
+        ('lymphoma', 'https://veteransbenefitskb.com/blood'),
+        
+        # Female System
+        ('female', 'https://veteransbenefitskb.com/femalesystem'),
+        ('gynec', 'https://veteransbenefitskb.com/femalesystem'),
+        
+        # Nutritional
+        ('nutritional', 'https://veteransbenefitskb.com/nutritional'),
+        
+        # Will Not Rate
+        ('will not rate', 'https://veteransbenefitskb.com/norate'),
+        ('misconduct', 'https://veteransbenefitskb.com/norate'),
+        ('personality disorder', 'https://veteransbenefitskb.com/norate'),
+        ('congenital', 'https://veteransbenefitskb.com/norate'),
+        ('substance abuse', 'https://veteransbenefitskb.com/norate'),
+        ('lab finding', 'https://veteransbenefitskb.com/norate'),
+        
+        # Cancer
+        ('cancer', 'https://veteransbenefitskb.com/cancer'),
+        ('malignant', 'https://veteransbenefitskb.com/cancer'),
+        ('carcinoma', 'https://veteransbenefitskb.com/cancer'),
+        
+        # Gulf War / Presumptives
+        ('gulf war', 'https://veteransbenefitskb.com/gulfwar'),
+        ('presumptive', 'https://veteransbenefitskb.com/presumptives'),
+        ('agent orange', 'https://veteransbenefitskb.com/agentorange'),
+        ('burn pit', 'https://veteransbenefitskb.com/burnpit'),
+        ('pact act', 'https://veteransbenefitskb.com/pact'),
+    ]
     
-    for keyword, url in url_mapping.items():
+    # Check heading first (highest priority)
+    for keyword, url in url_mapping:
         if keyword in heading_lower:
+            return url
+    
+    # Then try to extract URL from content
+    if content:
+        extracted_url = extract_url_from_content(content)
+        if extracted_url and 'veteransbenefitskb.com/' in extracted_url:
+            # Make sure it's not just the homepage or navigation
+            path = extracted_url.split('veteransbenefitskb.com/')[-1]
+            if path and path not in ['', '#', 'cart', 'mission', 'about', '#ds', '#ee']:
+                return extracted_url
+    
+    # Check content for keywords as last resort
+    for keyword, url in url_mapping:
+        if keyword in content_lower:
             return url
     
     return 'https://veteransbenefitskb.com'
@@ -456,7 +617,7 @@ def restructure_corpus(input_path: str, output_path: str):
                     "topic": topic,
                     "type": chunk_type,
                     "original_heading": heading,
-                    "url": infer_base_url(heading),
+                    "url": infer_base_url(heading, raw_content),
                     "last_updated": datetime.now().strftime('%Y-%m-%d'),
                 }
                 
