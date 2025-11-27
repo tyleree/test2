@@ -1,617 +1,573 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Copy, Download, ArrowLeft, FileText } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Download, ArrowLeft, FileText, BookOpen } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
-
-const latexContent = `\\documentclass[11pt,a4paper]{article}
-\\usepackage[utf8]{inputenc}
-\\usepackage[T1]{fontenc}
-\\usepackage{amsmath}
-\\usepackage{amsfonts}
-\\usepackage{amssymb}
-\\usepackage{graphicx}
-\\usepackage{geometry}
-\\usepackage{hyperref}
-\\usepackage{booktabs}
-\\usepackage{listings}
-\\usepackage{xcolor}
-\\usepackage{fancyhdr}
-\\usepackage{titlesec}
-
-\\geometry{margin=1in}
-\\pagestyle{fancy}
-\\fancyhf{}
-\\fancyhead[L]{Veteran AI Spark RAG System}
-\\fancyhead[R]{\\thepage}
-\\fancyfoot[C]{Technical Whitepaper - December 2024}
-
-% Code listing style
-\\lstset{
-    basicstyle=\\ttfamily\\footnotesize,
-    backgroundcolor=\\color{gray!10},
-    frame=single,
-    breaklines=true,
-    captionpos=b
-}
-
-\\title{\\textbf{Technical Whitepaper: Veteran AI Spark RAG System}\\\\
-\\large Comprehensive Technical Documentation}
-\\author{Veteran AI Spark Development Team}
-\\date{December 2024}
-
-\\begin{document}
-
-\\maketitle
-
-\\tableofcontents
-\\newpage
-
-\\section{Executive Summary}
-
-The Veteran AI Spark system implements a sophisticated Retrieval-Augmented Generation (RAG) architecture designed specifically for veteran affairs information retrieval. This whitepaper provides comprehensive technical documentation of the system's architecture, mathematical formulations, parameter optimization strategies, and performance characteristics.
-
-The system achieves state-of-the-art performance through innovative approaches including multi-layer semantic caching, hybrid retrieval mechanisms, cross-encoder reranking, and confidence-based response gating.
-
-\\subsection{Key Innovations}
-
-\\begin{itemize}
-    \\item \\textbf{Multi-layer semantic caching} with 92\\% similarity threshold optimization
-    \\item \\textbf{Hybrid retrieval} combining dense vector search with BM25 sparse retrieval
-    \\item \\textbf{Cross-encoder reranking} with confidence-based gating
-    \\item \\textbf{Quote-only compression} for factual accuracy preservation
-    \\item \\textbf{Grounded response generation} with citation validation
-    \\item \\textbf{Guard system} preventing hallucination through confidence thresholds
-\\end{itemize}
-
-\\subsection{Performance Highlights}
-
-\\begin{itemize}
-    \\item \\textbf{Citation Accuracy}: 96\\% verifiable citations
-    \\item \\textbf{Cache Hit Rate}: 50\\% reducing average latency by 95\\%
-    \\item \\textbf{Cost Efficiency}: \\$0.027 per response through strategic model selection
-    \\item \\textbf{Response Time}: 50ms (cached) / 2.35s (uncached)
-\\end{itemize}
-
-\\section{System Architecture}
-
-\\subsection{High-Level Architecture}
-
-The Veteran AI Spark system implements a 6-stage RAG pipeline optimized for accuracy, performance, and cost-effectiveness:
-
-\\begin{center}
-\\texttt{Query → Retrieval → Reranking → Compression → Answer Generation → Response}\\\\
-\\texttt{↓}\\\\
-\\texttt{Multi-Layer Cache (Exact/Semantic)}
-\\end{center}
-
-Each stage is carefully optimized with specific parameters and thresholds derived through extensive empirical testing.
-
-\\subsection{Core Components}
-
-\\subsubsection{Hybrid Retrieval System}
-
-The retrieval system combines multiple search methodologies:
-
-\\begin{itemize}
-    \\item \\textbf{Dense Vector Search}: OpenAI \\texttt{text-embedding-3-small} (1536 dimensions)
-    \\item \\textbf{Sparse Retrieval}: BM25 with TF-IDF normalization
-    \\item \\textbf{Vector Database}: Pinecone with production namespace
-    \\item \\textbf{Score Fusion}: Weighted linear combination with optimized parameters
-\\end{itemize}
-
-\\subsubsection{Cross-Encoder Reranking}
-
-\\begin{itemize}
-    \\item \\textbf{Model}: \\texttt{cross-encoder/ms-marco-MiniLM-L-6-v2}
-    \\item \\textbf{Purpose}: Semantic relevance scoring for query-document pairs
-    \\item \\textbf{Deduplication}: TF-IDF cosine similarity with 0.85 threshold
-    \\item \\textbf{Ranking}: Top-K selection with relevance-based ordering
-\\end{itemize}
-
-\\subsubsection{Multi-Layer Caching System}
-
-\\begin{itemize}
-    \\item \\textbf{Exact Cache}: Redis-based exact query matching
-    \\item \\textbf{Semantic Cache}: Vector similarity with 92\\% threshold
-    \\item \\textbf{TTL}: 24-hour expiration for cache entries
-    \\item \\textbf{Hit Rate}: 50\\% average across production workloads
-\\end{itemize}
-
-\\section{Mathematical Formulations}
-
-\\subsection{Hybrid Retrieval Score Fusion}
-
-The system combines dense vector similarity and BM25 scores using weighted linear combination:
-
-\\begin{equation}
-S_{\\text{combined}} = \\alpha \\cdot S_{\\text{vector}} + \\beta \\cdot S_{\\text{bm25}}
-\\end{equation}
-
-where:
-\\begin{align}
-\\alpha &= 0.6 \\quad \\text{(vector weight, optimized for semantic relevance)}\\\\
-\\beta &= 0.4 \\quad \\text{(BM25 weight, optimized for exact term matching)}\\\\
-S_{\\text{vector}} &= \\text{normalized cosine similarity from vector search}\\\\
-S_{\\text{bm25}} &= \\text{normalized BM25 score}
-\\end{align}
-
-The normalization ensures both scores are in the range $[0,1]$:
-
-\\begin{equation}
-S_{\\text{norm}} = \\frac{S_{\\text{raw}} - S_{\\text{min}}}{S_{\\text{max}} - S_{\\text{min}}}
-\\end{equation}
-
-\\subsection{Cross-Encoder Reranking}
-
-The cross-encoder produces relevance scores that are normalized to $[0,1]$:
-
-\\begin{equation}
-S_{\\text{cross}} = \\frac{\\exp(z)}{\\exp(z) + 1}
-\\end{equation}
-
-where $z$ is the raw cross-encoder logit score.
-
-\\subsection{Guard System Scoring}
-
-The guard system implements a dual-scoring mechanism for confidence-based gating:
-
-\\begin{equation}
-S_{\\text{final}} = \\alpha_{\\text{guard}} \\cdot S_{\\text{rel}} + \\beta_{\\text{guard}} \\cdot S_{\\text{cross}}
-\\end{equation}
-
-where:
-\\begin{align}
-\\alpha_{\\text{guard}} &= 0.7 \\quad \\text{(weight for dense similarity)}\\\\
-\\beta_{\\text{guard}} &= 0.3 \\quad \\text{(weight for cross-encoder score)}\\\\
-S_{\\text{rel}} &= \\text{normalized vector similarity} \\in [0,1]\\\\
-S_{\\text{cross}} &= \\text{normalized cross-encoder score} \\in [0,1]
-\\end{align}
-
-\\subsection{Gating Logic}
-
-The gating system filters documents based on individual and aggregate confidence:
-
-\\begin{equation}
-\\text{Selected} = \\{h \\in \\text{hits} \\mid S_{\\text{final}}(h) \\geq \\theta_{\\text{min}}\\}
-\\end{equation}
-
-\\begin{equation}
-\\text{Confidence} = \\frac{1}{|\\text{Selected}|} \\sum_{h \\in \\text{Selected}} S_{\\text{final}}(h)
-\\end{equation}
-
-where:
-\\begin{align}
-\\theta_{\\text{min}} &= 0.28 \\quad \\text{(per-chunk confidence threshold)}\\\\
-\\theta_{\\text{conf}} &= 0.35 \\quad \\text{(aggregate confidence threshold)}
-\\end{align}
-
-\\subsection{Semantic Cache Similarity}
-
-The semantic cache uses cosine similarity with a high threshold:
-
-\\begin{equation}
-\\text{sim}(q_1, q_2) = \\frac{v_1 \\cdot v_2}{||v_1|| \\cdot ||v_2||} \\geq 0.92
-\\end{equation}
-
-where $v_1$ and $v_2$ are the embedding vectors for queries $q_1$ and $q_2$.
-
-\\section{Parameter Optimization}
-
-\\subsection{Retrieval Parameters}
-
-Through extensive A/B testing, the following parameters were optimized:
-
-\\begin{table}[h]
-\\centering
-\\begin{tabular}{@{}lcc@{}}
-\\toprule
-Parameter & Initial Value & Optimized Value \\\\
-\\midrule
-Vector Weight ($\\alpha$) & 0.5 & 0.6 \\\\
-BM25 Weight ($\\beta$) & 0.5 & 0.4 \\\\
-Top-K Retrieval & 10 & 15 \\\\
-Rerank Top-K & 5 & 8 \\\\
-\\bottomrule
-\\end{tabular}
-\\caption{Retrieval Parameter Optimization Results}
-\\end{table}
-
-\\subsection{Guard System Parameters}
-
-The guard system parameters were tuned for optimal precision-recall balance:
-
-\\begin{table}[h]
-\\centering
-\\begin{tabular}{@{}lcc@{}}
-\\toprule
-Parameter & Initial Value & Optimized Value \\\\
-\\midrule
-Guard Alpha ($\\alpha_{\\text{guard}}$) & 0.5 & 0.7 \\\\
-Guard Beta ($\\beta_{\\text{guard}}$) & 0.5 & 0.3 \\\\
-Min Final Threshold & 0.3 & 0.28 \\\\
-Min Confidence Threshold & 0.4 & 0.35 \\\\
-\\bottomrule
-\\end{tabular}
-\\caption{Guard System Parameter Optimization Results}
-\\end{table}
-
-\\subsection{Cache Parameters}
-
-Cache performance was optimized through threshold tuning:
-
-\\begin{table}[h]
-\\centering
-\\begin{tabular}{@{}lcc@{}}
-\\toprule
-Parameter & Initial Value & Optimized Value \\\\
-\\midrule
-Semantic Similarity Threshold & 0.85 & 0.92 \\\\
-Cache TTL (hours) & 12 & 24 \\\\
-Max Cache Size (entries) & 1000 & 5000 \\\\
-\\bottomrule
-\\end{tabular}
-\\caption{Cache Parameter Optimization Results}
-\\end{table}
-
-\\section{Performance Characteristics}
-
-\\subsection{Latency Analysis}
-
-The system's latency profile across different stages:
-
-\\begin{table}[h]
-\\centering
-\\begin{tabular}{@{}lcc@{}}
-\\toprule
-Stage & Latency (ms) & Percentage \\\\
-\\midrule
-Cache Lookup & 10 & 0.4\\% \\\\
-Embedding Generation & 50 & 2.1\\% \\\\
-Vector Search & 100 & 4.3\\% \\\\
-BM25 Search & 50 & 2.1\\% \\\\
-Cross-Encoder Reranking & 200 & 8.5\\% \\\\
-Compression (GPT-4o-mini) & 800 & 34.0\\% \\\\
-Answer Generation (GPT-4o) & 1200 & 51.1\\% \\\\
-\\midrule
-\\textbf{Total (cache miss)} & \\textbf{2350} & \\textbf{100\\%} \\\\
-\\textbf{Cache Hit} & \\textbf{50} & \\textbf{-} \\\\
-\\bottomrule
-\\end{tabular}
-\\caption{System Latency Breakdown}
-\\end{table}
-
-\\subsection{Quality Metrics}
-
-Comprehensive evaluation across multiple dimensions:
-
-\\begin{table}[h]
-\\centering
-\\begin{tabular}{@{}lcc@{}}
-\\toprule
-Metric & Score & Methodology \\\\
-\\midrule
-Citation Accuracy & 96\\% & Manual verification of 500 responses \\\\
-Factual Consistency & 91\\% & Automated fact-checking against sources \\\\
-Response Completeness & 88\\% & Coverage analysis of query aspects \\\\
-Relevance Score & 94\\% & Human evaluation (5-point scale) \\\\
-Hallucination Rate & 4\\% & Detection of unsupported claims \\\\
-\\bottomrule
-\\end{tabular}
-\\caption{Quality Evaluation Results}
-\\end{table}
-
-\\subsection{Cost Analysis}
-
-Per-response cost breakdown:
-
-\\begin{table}[h]
-\\centering
-\\begin{tabular}{@{}lcc@{}}
-\\toprule
-Component & Cost per Response & Percentage \\\\
-\\midrule
-Embedding Generation & \\$0.001 & 3.7\\% \\\\
-Vector Search (Pinecone) & \\$0.002 & 7.4\\% \\\\
-Compression (GPT-4o-mini) & \\$0.008 & 29.6\\% \\\\
-Generation (GPT-4o) & \\$0.016 & 59.3\\% \\\\
-\\midrule
-\\textbf{Total} & \\textbf{\\$0.027} & \\textbf{100\\%} \\\\
-\\bottomrule
-\\end{tabular}
-\\caption{Cost Analysis per Response}
-\\end{table}
-
-\\section{Technical Implementation Details}
-
-\\subsection{Model Specifications}
-
-\\begin{itemize}
-    \\item \\textbf{Compression Model}: GPT-4o-mini
-    \\begin{itemize}
-        \\item Input: \\$0.00015 per 1K tokens
-        \\item Output: \\$0.0006 per 1K tokens
-        \\item Context: 128K tokens
-        \\item Purpose: Source compression and quote extraction
-    \\end{itemize}
-    
-    \\item \\textbf{Generation Model}: GPT-4o
-    \\begin{itemize}
-        \\item Input: \\$0.005 per 1K tokens
-        \\item Output: \\$0.015 per 1K tokens
-        \\item Context: 128K tokens
-        \\item Purpose: Final answer generation with citations
-    \\end{itemize}
-    
-    \\item \\textbf{Embedding Model}: text-embedding-3-small
-    \\begin{itemize}
-        \\item Cost: \\$0.00002 per 1K tokens
-        \\item Dimensions: 1536
-        \\item Purpose: Query and document vectorization
-    \\end{itemize}
-    
-    \\item \\textbf{Reranking Model}: cross-encoder/ms-marco-MiniLM-L-6-v2
-    \\begin{itemize}
-        \\item Type: Sentence Transformers cross-encoder
-        \\item Parameters: 22.7M
-        \\item Purpose: Query-document relevance scoring
-    \\end{itemize}
-\\end{itemize}
-
-\\subsection{Infrastructure Components}
-
-\\begin{itemize}
-    \\item \\textbf{Vector Database}: Pinecone
-    \\begin{itemize}
-        \\item Index: 1536 dimensions
-        \\item Metric: Cosine similarity
-        \\item Namespace: Production environment
-        \\item Capacity: 100K+ documents
-    \\end{itemize}
-    
-    \\item \\textbf{Cache Layer}: Redis
-    \\begin{itemize}
-        \\item Memory: 1GB allocated
-        \\item Persistence: RDB snapshots
-        \\item Clustering: Single instance
-        \\item TTL: 24 hours
-    \\end{itemize}
-    
-    \\item \\textbf{Application Server}: Flask + Gunicorn
-    \\begin{itemize}
-        \\item Workers: 4 processes
-        \\item Threads: 2 per worker
-        \\item Memory: 2GB per worker
-        \\item Timeout: 120 seconds
-    \\end{itemize}
-\\end{itemize}
-
-\\subsection{Data Pipeline}
-
-The document processing pipeline:
-
-\\begin{enumerate}
-    \\item \\textbf{Document Ingestion}: PDF/HTML parsing with metadata extraction
-    \\item \\textbf{Text Chunking}: Semantic chunking with 512-token windows
-    \\item \\textbf{Embedding Generation}: Batch processing with rate limiting
-    \\item \\textbf{Vector Indexing}: Pinecone upsert with metadata
-    \\item \\textbf{BM25 Indexing}: Elasticsearch with custom analyzers
-\\end{enumerate}
-
-\\section{Security and Compliance}
-
-\\subsection{Data Security}
-
-\\begin{itemize}
-    \\item \\textbf{Encryption}: TLS 1.3 for all API communications
-    \\item \\textbf{API Keys}: Environment variable storage with rotation
-    \\item \\textbf{Access Control}: Rate limiting and IP whitelisting
-    \\item \\textbf{Data Retention}: 30-day cache expiration policy
-\\end{itemize}
-
-\\subsection{Privacy Considerations}
-
-\\begin{itemize}
-    \\item \\textbf{Query Logging}: Anonymized with PII removal
-    \\item \\textbf{Response Caching}: No personal information stored
-    \\item \\textbf{Third-party APIs}: Minimal data sharing with OpenAI
-    \\item \\textbf{Compliance}: GDPR-compliant data handling
-\\end{itemize}
-
-\\section{Monitoring and Observability}
-
-\\subsection{Key Metrics}
-
-\\begin{itemize}
-    \\item \\textbf{Response Time}: P50, P95, P99 latency tracking
-    \\item \\textbf{Cache Hit Rate}: Exact and semantic cache performance
-    \\item \\textbf{Error Rate}: 4xx/5xx response monitoring
-    \\item \\textbf{Cost Tracking}: Per-request cost analysis
-    \\item \\textbf{Quality Scores}: Automated relevance assessment
-\\end{itemize}
-
-\\subsection{Alerting}
-
-\\begin{itemize}
-    \\item \\textbf{Latency Alerts}: P95 > 5 seconds
-    \\item \\textbf{Error Rate Alerts}: > 5\\% error rate
-    \\item \\textbf{Cost Alerts}: Daily spend > \\$50
-    \\item \\textbf{Cache Performance}: Hit rate < 40\\%
-\\end{itemize}
-
-\\section{Future Optimizations}
-
-\\subsection{Short-term Improvements}
-
-\\begin{itemize}
-    \\item \\textbf{Model Upgrades}: GPT-4o-mini → GPT-4o for compression
-    \\item \\textbf{Cache Expansion}: Increase semantic cache to 10K entries
-    \\item \\textbf{Retrieval Tuning}: Dynamic parameter adjustment
-    \\item \\textbf{Response Streaming}: Real-time response generation
-\\end{itemize}
-
-\\subsection{Long-term Roadmap}
-
-\\begin{itemize}
-    \\item \\textbf{Custom Models}: Fine-tuned domain-specific embeddings
-    \\item \\textbf{Multi-modal RAG}: Image and document processing
-    \\item \\textbf{Federated Search}: Multiple knowledge base integration
-    \\item \\textbf{Adaptive Learning}: User feedback integration
-\\end{itemize}
-
-\\section{Conclusion}
-
-The Veteran AI Spark RAG system represents a state-of-the-art implementation of retrieval-augmented generation, specifically optimized for veteran affairs information retrieval. Through careful parameter tuning, mathematical optimization, and architectural design, the system achieves exceptional performance across multiple dimensions:
-
-\\begin{itemize}
-    \\item \\textbf{High Accuracy}: 96\\% citation accuracy with grounded responses
-    \\item \\textbf{Efficient Performance}: 50\\% cache hit rate reducing average latency by 95\\%
-    \\item \\textbf{Cost Optimization}: \\$0.027 per response through strategic model selection
-    \\item \\textbf{Robust Safety}: Confidence-based gating preventing hallucination
-    \\item \\textbf{Scalable Architecture}: Production-ready with comprehensive monitoring
-\\end{itemize}
-
-The system's innovative approaches to hybrid retrieval, cross-encoder reranking, and confidence-based gating establish new benchmarks for RAG system performance in specialized domains. The comprehensive mathematical formulations and empirical optimizations provide a solid foundation for future enhancements and adaptations.
-
-This technical documentation serves as both a reference for the current implementation and a blueprint for future RAG system development in similar domains requiring high accuracy, performance, and reliability.
-
-\\end{document}`;
 
 const Whitepaper = () => {
   const { toast } = useToast();
-  const [copied, setCopied] = useState(false);
+  const [showLatex, setShowLatex] = useState(false);
 
-  const copyToClipboard = async () => {
-    try {
-      await navigator.clipboard.writeText(latexContent);
-      setCopied(true);
-      toast({
-        title: "Copied!",
-        description: "LaTeX source code copied to clipboard",
-      });
-      setTimeout(() => setCopied(false), 2000);
-    } catch (err) {
-      toast({
-        title: "Copy failed",
-        description: "Please select and copy the text manually",
-        variant: "destructive",
-      });
-    }
-  };
-
-  const downloadLatex = () => {
-    const blob = new Blob([latexContent], { type: 'text/plain' });
-    const url = window.URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = 'veteran-ai-spark-whitepaper.tex';
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-    window.URL.revokeObjectURL(url);
-    
+  const downloadPDF = () => {
+    // Open the pre-rendered HTML version in a new tab for printing to PDF
+    window.open('/whitepaper-latex.html', '_blank');
     toast({
-      title: "Download started",
-      description: "LaTeX file is being downloaded",
+      title: "Opening printable version",
+      description: "Use your browser's Print function to save as PDF",
     });
   };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800">
-      <div className="container mx-auto px-4 py-8 max-w-7xl">
+      <div className="container mx-auto px-4 py-8 max-w-4xl">
         {/* Header */}
-        <div className="bg-gradient-to-r from-blue-900 to-slate-800 text-white p-6 rounded-t-lg shadow-lg">
-          <div className="flex items-center justify-between">
-            <div>
-              <h1 className="text-2xl font-bold flex items-center gap-2">
-                <FileText className="h-6 w-6" />
-                LaTeX Source Code
-              </h1>
-              <p className="text-blue-100 mt-1">
-                Complete LaTeX source for the Veteran AI Spark RAG System Technical Whitepaper
-              </p>
-            </div>
-            <Button
-              variant="ghost"
-              size="sm"
-              className="text-white hover:bg-white/10"
-              onClick={() => window.history.back()}
-            >
-              <ArrowLeft className="h-4 w-4 mr-2" />
-              Back
-            </Button>
-          </div>
+        <div className="flex items-center justify-between mb-8">
+          <Button
+            variant="ghost"
+            size="sm"
+            onClick={() => window.history.back()}
+          >
+            <ArrowLeft className="h-4 w-4 mr-2" />
+            Back
+          </Button>
+          <Button onClick={downloadPDF} size="sm">
+            <Download className="h-4 w-4 mr-2" />
+            Print / Save PDF
+          </Button>
         </div>
 
-        {/* Action Buttons */}
-        <div className="bg-slate-100 dark:bg-slate-800 p-4 flex flex-wrap gap-3 justify-between items-center border-x border-slate-200 dark:border-slate-700">
-          <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-3 flex-1 min-w-0">
-            <h3 className="font-semibold text-blue-900 dark:text-blue-100 text-sm mb-1">
-              🔧 Compilation Instructions
-            </h3>
-            <p className="text-blue-700 dark:text-blue-200 text-sm">
-              Save as <code className="bg-blue-100 dark:bg-blue-800 px-1 rounded">whitepaper.tex</code> and run: <code className="bg-blue-100 dark:bg-blue-800 px-1 rounded">pdflatex whitepaper.tex</code>
-            </p>
+        {/* Title Page */}
+        <Card className="mb-8 overflow-hidden">
+          <div className="bg-gradient-to-r from-blue-900 to-slate-800 text-white p-12 text-center">
+            <FileText className="h-16 w-16 mx-auto mb-6 opacity-80" />
+            <h1 className="text-3xl md:text-4xl font-bold mb-4">
+              Technical Whitepaper
+            </h1>
+            <h2 className="text-xl md:text-2xl font-light mb-6">
+              Veteran AI Spark RAG System
+            </h2>
+            <p className="text-blue-200 mb-2">Comprehensive Technical Documentation</p>
+            <p className="text-blue-300 text-sm">December 2024</p>
           </div>
-          
-          <div className="flex gap-2">
-            <Button
-              onClick={copyToClipboard}
-              variant="outline"
-              size="sm"
-              className="flex items-center gap-2"
-            >
-              <Copy className="h-4 w-4" />
-              {copied ? "Copied!" : "Copy"}
-            </Button>
-            <Button
-              onClick={downloadLatex}
-              variant="default"
-              size="sm"
-              className="flex items-center gap-2"
-            >
-              <Download className="h-4 w-4" />
-              Download .tex
-            </Button>
-          </div>
-        </div>
+        </Card>
 
-        {/* LaTeX Content */}
-        <div className="bg-slate-900 text-slate-100 p-6 rounded-b-lg shadow-lg border border-slate-200 dark:border-slate-700 relative">
-          <div className="absolute top-4 right-4">
-            <Button
-              onClick={copyToClipboard}
-              size="sm"
-              variant="secondary"
-              className="bg-slate-700 hover:bg-slate-600 text-slate-100"
-            >
-              <Copy className="h-3 w-3 mr-1" />
-              {copied ? "✓" : "Copy"}
-            </Button>
-          </div>
+        {/* Table of Contents */}
+        <Card className="mb-8">
+          <CardContent className="p-6">
+            <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
+              <BookOpen className="h-6 w-6" />
+              Table of Contents
+            </h2>
+            <nav className="space-y-2 text-sm">
+              <a href="#executive-summary" className="block text-blue-600 hover:underline">1. Executive Summary</a>
+              <a href="#architecture" className="block text-blue-600 hover:underline">2. System Architecture</a>
+              <a href="#mathematics" className="block text-blue-600 hover:underline">3. Mathematical Formulations</a>
+              <a href="#parameters" className="block text-blue-600 hover:underline">4. Parameter Optimization</a>
+              <a href="#performance" className="block text-blue-600 hover:underline">5. Performance Characteristics</a>
+              <a href="#implementation" className="block text-blue-600 hover:underline">6. Technical Implementation Details</a>
+              <a href="#security" className="block text-blue-600 hover:underline">7. Security and Compliance</a>
+              <a href="#monitoring" className="block text-blue-600 hover:underline">8. Monitoring and Observability</a>
+              <a href="#future" className="block text-blue-600 hover:underline">9. Future Optimizations</a>
+              <a href="#conclusion" className="block text-blue-600 hover:underline">10. Conclusion</a>
+            </nav>
+          </CardContent>
+        </Card>
+
+        {/* Content Sections */}
+        <div className="prose prose-slate dark:prose-invert max-w-none">
           
-          <pre className="text-sm leading-relaxed overflow-x-auto whitespace-pre-wrap font-mono max-h-[80vh] overflow-y-auto pr-20">
-            <code>{latexContent}</code>
-          </pre>
+          {/* Executive Summary */}
+          <section id="executive-summary" className="mb-12">
+            <Card>
+              <CardContent className="p-8">
+                <h2 className="text-2xl font-bold mb-4">1. Executive Summary</h2>
+                <p className="mb-4">
+                  The Veteran AI Spark system implements a sophisticated Retrieval-Augmented Generation (RAG) 
+                  architecture designed specifically for veteran affairs information retrieval. This whitepaper 
+                  provides comprehensive technical documentation of the system's architecture, mathematical 
+                  formulations, parameter optimization strategies, and performance characteristics.
+                </p>
+                <p className="mb-6">
+                  The system achieves state-of-the-art performance through innovative approaches including 
+                  multi-layer semantic caching, hybrid retrieval mechanisms, cross-encoder reranking, and 
+                  confidence-based response gating.
+                </p>
+                
+                <h3 className="text-xl font-semibold mb-3">Key Innovations</h3>
+                <ul className="list-disc pl-6 mb-6 space-y-1">
+                  <li><strong>Multi-layer semantic caching</strong> with 92% similarity threshold optimization</li>
+                  <li><strong>Hybrid retrieval</strong> combining dense vector search with BM25 sparse retrieval</li>
+                  <li><strong>Cross-encoder reranking</strong> with confidence-based gating</li>
+                  <li><strong>Quote-only compression</strong> for factual accuracy preservation</li>
+                  <li><strong>Grounded response generation</strong> with citation validation</li>
+                  <li><strong>Guard system</strong> preventing hallucination through confidence thresholds</li>
+                </ul>
+
+                <h3 className="text-xl font-semibold mb-3">Performance Highlights</h3>
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                  <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg text-center">
+                    <div className="text-2xl font-bold text-blue-600">96%</div>
+                    <div className="text-sm text-slate-600 dark:text-slate-400">Citation Accuracy</div>
+                  </div>
+                  <div className="bg-green-50 dark:bg-green-900/20 p-4 rounded-lg text-center">
+                    <div className="text-2xl font-bold text-green-600">50%</div>
+                    <div className="text-sm text-slate-600 dark:text-slate-400">Cache Hit Rate</div>
+                  </div>
+                  <div className="bg-purple-50 dark:bg-purple-900/20 p-4 rounded-lg text-center">
+                    <div className="text-2xl font-bold text-purple-600">$0.027</div>
+                    <div className="text-sm text-slate-600 dark:text-slate-400">Cost per Response</div>
+                  </div>
+                  <div className="bg-orange-50 dark:bg-orange-900/20 p-4 rounded-lg text-center">
+                    <div className="text-2xl font-bold text-orange-600">50ms</div>
+                    <div className="text-sm text-slate-600 dark:text-slate-400">Cached Response</div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </section>
+
+          {/* System Architecture */}
+          <section id="architecture" className="mb-12">
+            <Card>
+              <CardContent className="p-8">
+                <h2 className="text-2xl font-bold mb-4">2. System Architecture</h2>
+                
+                <h3 className="text-xl font-semibold mb-3">High-Level Architecture</h3>
+                <p className="mb-4">
+                  The Veteran AI Spark system implements a 6-stage RAG pipeline optimized for accuracy, 
+                  performance, and cost-effectiveness:
+                </p>
+                
+                <div className="bg-slate-100 dark:bg-slate-800 p-4 rounded-lg font-mono text-sm mb-6 text-center">
+                  Query → Retrieval → Reranking → Compression → Answer Generation → Response<br/>
+                  ↓<br/>
+                  Multi-Layer Cache (Exact/Semantic)
+                </div>
+
+                <h3 className="text-xl font-semibold mb-3">Core Components</h3>
+                
+                <h4 className="text-lg font-medium mb-2">Hybrid Retrieval System</h4>
+                <ul className="list-disc pl-6 mb-4 space-y-1">
+                  <li><strong>Dense Vector Search:</strong> OpenAI text-embedding-3-small (1536 dimensions)</li>
+                  <li><strong>Sparse Retrieval:</strong> BM25 with TF-IDF normalization</li>
+                  <li><strong>Vector Database:</strong> Pinecone with production namespace</li>
+                  <li><strong>Score Fusion:</strong> Weighted linear combination with optimized parameters</li>
+                </ul>
+
+                <h4 className="text-lg font-medium mb-2">Cross-Encoder Reranking</h4>
+                <ul className="list-disc pl-6 mb-4 space-y-1">
+                  <li><strong>Model:</strong> cross-encoder/ms-marco-MiniLM-L-6-v2</li>
+                  <li><strong>Purpose:</strong> Semantic relevance scoring for query-document pairs</li>
+                  <li><strong>Deduplication:</strong> TF-IDF cosine similarity with 0.85 threshold</li>
+                  <li><strong>Ranking:</strong> Top-K selection with relevance-based ordering</li>
+                </ul>
+
+                <h4 className="text-lg font-medium mb-2">Multi-Layer Caching System</h4>
+                <ul className="list-disc pl-6 space-y-1">
+                  <li><strong>Exact Cache:</strong> Redis-based exact query matching</li>
+                  <li><strong>Semantic Cache:</strong> Vector similarity with 92% threshold</li>
+                  <li><strong>TTL:</strong> 24-hour expiration for cache entries</li>
+                  <li><strong>Hit Rate:</strong> 50% average across production workloads</li>
+                </ul>
+              </CardContent>
+            </Card>
+          </section>
+
+          {/* Mathematical Formulations */}
+          <section id="mathematics" className="mb-12">
+            <Card>
+              <CardContent className="p-8">
+                <h2 className="text-2xl font-bold mb-4">3. Mathematical Formulations</h2>
+                
+                <h3 className="text-xl font-semibold mb-3">Hybrid Retrieval Score Fusion</h3>
+                <p className="mb-2">The system combines dense vector similarity and BM25 scores using weighted linear combination:</p>
+                <div className="bg-slate-100 dark:bg-slate-800 p-4 rounded-lg font-mono text-center mb-4">
+                  S<sub>combined</sub> = α · S<sub>vector</sub> + β · S<sub>bm25</sub>
+                </div>
+                <p className="mb-4">
+                  where α = 0.6 (vector weight) and β = 0.4 (BM25 weight)
+                </p>
+
+                <h3 className="text-xl font-semibold mb-3">Guard System Scoring</h3>
+                <p className="mb-2">The guard system implements a dual-scoring mechanism for confidence-based gating:</p>
+                <div className="bg-slate-100 dark:bg-slate-800 p-4 rounded-lg font-mono text-center mb-4">
+                  S<sub>final</sub> = α<sub>guard</sub> · S<sub>rel</sub> + β<sub>guard</sub> · S<sub>cross</sub>
+                </div>
+                <p className="mb-4">
+                  where α<sub>guard</sub> = 0.7 and β<sub>guard</sub> = 0.3
+                </p>
+
+                <h3 className="text-xl font-semibold mb-3">Semantic Cache Similarity</h3>
+                <p className="mb-2">The semantic cache uses cosine similarity with a high threshold:</p>
+                <div className="bg-slate-100 dark:bg-slate-800 p-4 rounded-lg font-mono text-center mb-4">
+                  sim(q₁, q₂) = (v₁ · v₂) / (||v₁|| · ||v₂||) ≥ 0.92
+                </div>
+              </CardContent>
+            </Card>
+          </section>
+
+          {/* Parameter Optimization */}
+          <section id="parameters" className="mb-12">
+            <Card>
+              <CardContent className="p-8">
+                <h2 className="text-2xl font-bold mb-4">4. Parameter Optimization</h2>
+                
+                <h3 className="text-xl font-semibold mb-3">Retrieval Parameters</h3>
+                <div className="overflow-x-auto mb-6">
+                  <table className="w-full border-collapse">
+                    <thead>
+                      <tr className="bg-slate-100 dark:bg-slate-800">
+                        <th className="border p-2 text-left">Parameter</th>
+                        <th className="border p-2 text-center">Initial Value</th>
+                        <th className="border p-2 text-center">Optimized Value</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr><td className="border p-2">Vector Weight (α)</td><td className="border p-2 text-center">0.5</td><td className="border p-2 text-center font-semibold">0.6</td></tr>
+                      <tr><td className="border p-2">BM25 Weight (β)</td><td className="border p-2 text-center">0.5</td><td className="border p-2 text-center font-semibold">0.4</td></tr>
+                      <tr><td className="border p-2">Top-K Retrieval</td><td className="border p-2 text-center">10</td><td className="border p-2 text-center font-semibold">15</td></tr>
+                      <tr><td className="border p-2">Rerank Top-K</td><td className="border p-2 text-center">5</td><td className="border p-2 text-center font-semibold">8</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <h3 className="text-xl font-semibold mb-3">Guard System Parameters</h3>
+                <div className="overflow-x-auto mb-6">
+                  <table className="w-full border-collapse">
+                    <thead>
+                      <tr className="bg-slate-100 dark:bg-slate-800">
+                        <th className="border p-2 text-left">Parameter</th>
+                        <th className="border p-2 text-center">Initial Value</th>
+                        <th className="border p-2 text-center">Optimized Value</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr><td className="border p-2">Guard Alpha</td><td className="border p-2 text-center">0.5</td><td className="border p-2 text-center font-semibold">0.7</td></tr>
+                      <tr><td className="border p-2">Guard Beta</td><td className="border p-2 text-center">0.5</td><td className="border p-2 text-center font-semibold">0.3</td></tr>
+                      <tr><td className="border p-2">Min Final Threshold</td><td className="border p-2 text-center">0.3</td><td className="border p-2 text-center font-semibold">0.28</td></tr>
+                      <tr><td className="border p-2">Min Confidence Threshold</td><td className="border p-2 text-center">0.4</td><td className="border p-2 text-center font-semibold">0.35</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <h3 className="text-xl font-semibold mb-3">Cache Parameters</h3>
+                <div className="overflow-x-auto">
+                  <table className="w-full border-collapse">
+                    <thead>
+                      <tr className="bg-slate-100 dark:bg-slate-800">
+                        <th className="border p-2 text-left">Parameter</th>
+                        <th className="border p-2 text-center">Initial Value</th>
+                        <th className="border p-2 text-center">Optimized Value</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr><td className="border p-2">Semantic Similarity Threshold</td><td className="border p-2 text-center">0.85</td><td className="border p-2 text-center font-semibold">0.92</td></tr>
+                      <tr><td className="border p-2">Cache TTL (hours)</td><td className="border p-2 text-center">12</td><td className="border p-2 text-center font-semibold">24</td></tr>
+                      <tr><td className="border p-2">Max Cache Size (entries)</td><td className="border p-2 text-center">1000</td><td className="border p-2 text-center font-semibold">5000</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+              </CardContent>
+            </Card>
+          </section>
+
+          {/* Performance Characteristics */}
+          <section id="performance" className="mb-12">
+            <Card>
+              <CardContent className="p-8">
+                <h2 className="text-2xl font-bold mb-4">5. Performance Characteristics</h2>
+                
+                <h3 className="text-xl font-semibold mb-3">Latency Analysis</h3>
+                <div className="overflow-x-auto mb-6">
+                  <table className="w-full border-collapse">
+                    <thead>
+                      <tr className="bg-slate-100 dark:bg-slate-800">
+                        <th className="border p-2 text-left">Stage</th>
+                        <th className="border p-2 text-center">Latency (ms)</th>
+                        <th className="border p-2 text-center">Percentage</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr><td className="border p-2">Cache Lookup</td><td className="border p-2 text-center">10</td><td className="border p-2 text-center">0.4%</td></tr>
+                      <tr><td className="border p-2">Embedding Generation</td><td className="border p-2 text-center">50</td><td className="border p-2 text-center">2.1%</td></tr>
+                      <tr><td className="border p-2">Vector Search</td><td className="border p-2 text-center">100</td><td className="border p-2 text-center">4.3%</td></tr>
+                      <tr><td className="border p-2">BM25 Search</td><td className="border p-2 text-center">50</td><td className="border p-2 text-center">2.1%</td></tr>
+                      <tr><td className="border p-2">Cross-Encoder Reranking</td><td className="border p-2 text-center">200</td><td className="border p-2 text-center">8.5%</td></tr>
+                      <tr><td className="border p-2">Compression (GPT-4o-mini)</td><td className="border p-2 text-center">800</td><td className="border p-2 text-center">34.0%</td></tr>
+                      <tr><td className="border p-2">Answer Generation (GPT-4o)</td><td className="border p-2 text-center">1200</td><td className="border p-2 text-center">51.1%</td></tr>
+                      <tr className="bg-blue-50 dark:bg-blue-900/20 font-semibold">
+                        <td className="border p-2">Total (cache miss)</td>
+                        <td className="border p-2 text-center">2350</td>
+                        <td className="border p-2 text-center">100%</td>
+                      </tr>
+                      <tr className="bg-green-50 dark:bg-green-900/20 font-semibold">
+                        <td className="border p-2">Cache Hit</td>
+                        <td className="border p-2 text-center">50</td>
+                        <td className="border p-2 text-center">-</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <h3 className="text-xl font-semibold mb-3">Quality Metrics</h3>
+                <div className="overflow-x-auto mb-6">
+                  <table className="w-full border-collapse">
+                    <thead>
+                      <tr className="bg-slate-100 dark:bg-slate-800">
+                        <th className="border p-2 text-left">Metric</th>
+                        <th className="border p-2 text-center">Score</th>
+                        <th className="border p-2 text-left">Methodology</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr><td className="border p-2">Citation Accuracy</td><td className="border p-2 text-center font-semibold text-green-600">96%</td><td className="border p-2">Manual verification of 500 responses</td></tr>
+                      <tr><td className="border p-2">Factual Consistency</td><td className="border p-2 text-center font-semibold text-green-600">91%</td><td className="border p-2">Automated fact-checking against sources</td></tr>
+                      <tr><td className="border p-2">Response Completeness</td><td className="border p-2 text-center font-semibold text-blue-600">88%</td><td className="border p-2">Coverage analysis of query aspects</td></tr>
+                      <tr><td className="border p-2">Relevance Score</td><td className="border p-2 text-center font-semibold text-green-600">94%</td><td className="border p-2">Human evaluation (5-point scale)</td></tr>
+                      <tr><td className="border p-2">Hallucination Rate</td><td className="border p-2 text-center font-semibold text-green-600">4%</td><td className="border p-2">Detection of unsupported claims</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <h3 className="text-xl font-semibold mb-3">Cost Analysis</h3>
+                <div className="overflow-x-auto">
+                  <table className="w-full border-collapse">
+                    <thead>
+                      <tr className="bg-slate-100 dark:bg-slate-800">
+                        <th className="border p-2 text-left">Component</th>
+                        <th className="border p-2 text-center">Cost per Response</th>
+                        <th className="border p-2 text-center">Percentage</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr><td className="border p-2">Embedding Generation</td><td className="border p-2 text-center">$0.001</td><td className="border p-2 text-center">3.7%</td></tr>
+                      <tr><td className="border p-2">Vector Search (Pinecone)</td><td className="border p-2 text-center">$0.002</td><td className="border p-2 text-center">7.4%</td></tr>
+                      <tr><td className="border p-2">Compression (GPT-4o-mini)</td><td className="border p-2 text-center">$0.008</td><td className="border p-2 text-center">29.6%</td></tr>
+                      <tr><td className="border p-2">Generation (GPT-4o)</td><td className="border p-2 text-center">$0.016</td><td className="border p-2 text-center">59.3%</td></tr>
+                      <tr className="bg-blue-50 dark:bg-blue-900/20 font-semibold">
+                        <td className="border p-2">Total</td>
+                        <td className="border p-2 text-center">$0.027</td>
+                        <td className="border p-2 text-center">100%</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </CardContent>
+            </Card>
+          </section>
+
+          {/* Technical Implementation */}
+          <section id="implementation" className="mb-12">
+            <Card>
+              <CardContent className="p-8">
+                <h2 className="text-2xl font-bold mb-4">6. Technical Implementation Details</h2>
+                
+                <h3 className="text-xl font-semibold mb-3">Model Specifications</h3>
+                <div className="space-y-4 mb-6">
+                  <div className="bg-slate-50 dark:bg-slate-800 p-4 rounded-lg">
+                    <h4 className="font-semibold mb-2">Compression Model: GPT-4o-mini</h4>
+                    <ul className="list-disc pl-6 text-sm space-y-1">
+                      <li>Input: $0.00015 per 1K tokens</li>
+                      <li>Output: $0.0006 per 1K tokens</li>
+                      <li>Context: 128K tokens</li>
+                      <li>Purpose: Source compression and quote extraction</li>
+                    </ul>
+                  </div>
+                  <div className="bg-slate-50 dark:bg-slate-800 p-4 rounded-lg">
+                    <h4 className="font-semibold mb-2">Generation Model: GPT-4o</h4>
+                    <ul className="list-disc pl-6 text-sm space-y-1">
+                      <li>Input: $0.005 per 1K tokens</li>
+                      <li>Output: $0.015 per 1K tokens</li>
+                      <li>Context: 128K tokens</li>
+                      <li>Purpose: Final answer generation with citations</li>
+                    </ul>
+                  </div>
+                  <div className="bg-slate-50 dark:bg-slate-800 p-4 rounded-lg">
+                    <h4 className="font-semibold mb-2">Embedding Model: text-embedding-3-small</h4>
+                    <ul className="list-disc pl-6 text-sm space-y-1">
+                      <li>Cost: $0.00002 per 1K tokens</li>
+                      <li>Dimensions: 1536</li>
+                      <li>Purpose: Query and document vectorization</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <h3 className="text-xl font-semibold mb-3">Infrastructure Components</h3>
+                <div className="grid md:grid-cols-2 gap-4">
+                  <div className="bg-slate-50 dark:bg-slate-800 p-4 rounded-lg">
+                    <h4 className="font-semibold mb-2">Vector Database: Pinecone</h4>
+                    <ul className="list-disc pl-6 text-sm space-y-1">
+                      <li>Index: 1536 dimensions</li>
+                      <li>Metric: Cosine similarity</li>
+                      <li>Capacity: 100K+ documents</li>
+                    </ul>
+                  </div>
+                  <div className="bg-slate-50 dark:bg-slate-800 p-4 rounded-lg">
+                    <h4 className="font-semibold mb-2">Cache Layer: Redis</h4>
+                    <ul className="list-disc pl-6 text-sm space-y-1">
+                      <li>Memory: 1GB allocated</li>
+                      <li>Persistence: RDB snapshots</li>
+                      <li>TTL: 24 hours</li>
+                    </ul>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </section>
+
+          {/* Security */}
+          <section id="security" className="mb-12">
+            <Card>
+              <CardContent className="p-8">
+                <h2 className="text-2xl font-bold mb-4">7. Security and Compliance</h2>
+                
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div>
+                    <h3 className="text-xl font-semibold mb-3">Data Security</h3>
+                    <ul className="list-disc pl-6 space-y-1">
+                      <li><strong>Encryption:</strong> TLS 1.3 for all API communications</li>
+                      <li><strong>API Keys:</strong> Environment variable storage with rotation</li>
+                      <li><strong>Access Control:</strong> Rate limiting and IP whitelisting</li>
+                      <li><strong>Data Retention:</strong> 30-day cache expiration policy</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold mb-3">Privacy Considerations</h3>
+                    <ul className="list-disc pl-6 space-y-1">
+                      <li><strong>Query Logging:</strong> Anonymized with PII removal</li>
+                      <li><strong>Response Caching:</strong> No personal information stored</li>
+                      <li><strong>Third-party APIs:</strong> Minimal data sharing with OpenAI</li>
+                      <li><strong>Compliance:</strong> GDPR-compliant data handling</li>
+                    </ul>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </section>
+
+          {/* Monitoring */}
+          <section id="monitoring" className="mb-12">
+            <Card>
+              <CardContent className="p-8">
+                <h2 className="text-2xl font-bold mb-4">8. Monitoring and Observability</h2>
+                
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div>
+                    <h3 className="text-xl font-semibold mb-3">Key Metrics</h3>
+                    <ul className="list-disc pl-6 space-y-1">
+                      <li>Response Time: P50, P95, P99 latency tracking</li>
+                      <li>Cache Hit Rate: Exact and semantic cache performance</li>
+                      <li>Error Rate: 4xx/5xx response monitoring</li>
+                      <li>Cost Tracking: Per-request cost analysis</li>
+                      <li>Quality Scores: Automated relevance assessment</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold mb-3">Alerting Thresholds</h3>
+                    <ul className="list-disc pl-6 space-y-1">
+                      <li>Latency Alerts: P95 &gt; 5 seconds</li>
+                      <li>Error Rate Alerts: &gt; 5% error rate</li>
+                      <li>Cost Alerts: Daily spend &gt; $50</li>
+                      <li>Cache Performance: Hit rate &lt; 40%</li>
+                    </ul>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </section>
+
+          {/* Future */}
+          <section id="future" className="mb-12">
+            <Card>
+              <CardContent className="p-8">
+                <h2 className="text-2xl font-bold mb-4">9. Future Optimizations</h2>
+                
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div>
+                    <h3 className="text-xl font-semibold mb-3">Short-term Improvements</h3>
+                    <ul className="list-disc pl-6 space-y-1">
+                      <li>Model Upgrades: GPT-4o-mini → GPT-4o for compression</li>
+                      <li>Cache Expansion: Increase semantic cache to 10K entries</li>
+                      <li>Retrieval Tuning: Dynamic parameter adjustment</li>
+                      <li>Response Streaming: Real-time response generation</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold mb-3">Long-term Roadmap</h3>
+                    <ul className="list-disc pl-6 space-y-1">
+                      <li>Custom Models: Fine-tuned domain-specific embeddings</li>
+                      <li>Multi-modal RAG: Image and document processing</li>
+                      <li>Federated Search: Multiple knowledge base integration</li>
+                      <li>Adaptive Learning: User feedback integration</li>
+                    </ul>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </section>
+
+          {/* Conclusion */}
+          <section id="conclusion" className="mb-12">
+            <Card>
+              <CardContent className="p-8">
+                <h2 className="text-2xl font-bold mb-4">10. Conclusion</h2>
+                
+                <p className="mb-6">
+                  The Veteran AI Spark RAG system represents a state-of-the-art implementation of 
+                  retrieval-augmented generation, specifically optimized for veteran affairs information 
+                  retrieval. Through careful parameter tuning, mathematical optimization, and architectural 
+                  design, the system achieves exceptional performance across multiple dimensions:
+                </p>
+
+                <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mb-6">
+                  <div className="bg-green-50 dark:bg-green-900/20 p-4 rounded-lg text-center">
+                    <div className="text-xl font-bold text-green-600">96%</div>
+                    <div className="text-xs text-slate-600 dark:text-slate-400">Citation Accuracy</div>
+                  </div>
+                  <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg text-center">
+                    <div className="text-xl font-bold text-blue-600">50%</div>
+                    <div className="text-xs text-slate-600 dark:text-slate-400">Cache Hit Rate</div>
+                  </div>
+                  <div className="bg-purple-50 dark:bg-purple-900/20 p-4 rounded-lg text-center">
+                    <div className="text-xl font-bold text-purple-600">$0.027</div>
+                    <div className="text-xs text-slate-600 dark:text-slate-400">Per Response</div>
+                  </div>
+                  <div className="bg-orange-50 dark:bg-orange-900/20 p-4 rounded-lg text-center">
+                    <div className="text-xl font-bold text-orange-600">4%</div>
+                    <div className="text-xs text-slate-600 dark:text-slate-400">Hallucination Rate</div>
+                  </div>
+                  <div className="bg-cyan-50 dark:bg-cyan-900/20 p-4 rounded-lg text-center">
+                    <div className="text-xl font-bold text-cyan-600">Scalable</div>
+                    <div className="text-xs text-slate-600 dark:text-slate-400">Architecture</div>
+                  </div>
+                </div>
+
+                <p className="text-slate-600 dark:text-slate-400 text-sm">
+                  The system's innovative approaches to hybrid retrieval, cross-encoder reranking, and 
+                  confidence-based gating establish new benchmarks for RAG system performance in specialized 
+                  domains. This technical documentation serves as both a reference for the current implementation 
+                  and a blueprint for future RAG system development in similar domains requiring high accuracy, 
+                  performance, and reliability.
+                </p>
+              </CardContent>
+            </Card>
+          </section>
+
         </div>
 
         {/* Footer */}
-        <div className="text-center mt-8 p-4 border-t border-slate-200 dark:border-slate-700">
-          <div className="flex justify-center gap-6 text-sm text-slate-600 dark:text-slate-400">
-            <Button
-              variant="ghost"
-              size="sm"
-              onClick={() => window.history.back()}
-              className="text-blue-600 hover:text-blue-800 dark:text-blue-400"
-            >
-              ← Return to Main Site
+        <div className="text-center mt-12 p-6 border-t border-slate-200 dark:border-slate-700">
+          <p className="text-slate-500 dark:text-slate-400 text-sm mb-4">
+            Veteran AI Spark RAG System - Technical Whitepaper - December 2024
+          </p>
+          <div className="flex justify-center gap-4">
+            <Button variant="outline" size="sm" onClick={() => window.history.back()}>
+              <ArrowLeft className="h-4 w-4 mr-2" />
+              Return to Main Site
             </Button>
-            <Button
-              variant="ghost"
-              size="sm"
-              onClick={downloadLatex}
-              className="text-blue-600 hover:text-blue-800 dark:text-blue-400"
-            >
-              📄 Download LaTeX File
+            <Button size="sm" onClick={downloadPDF}>
+              <Download className="h-4 w-4 mr-2" />
+              Print / Save PDF
             </Button>
           </div>
         </div>
@@ -621,6 +577,3 @@ const Whitepaper = () => {
 };
 
 export default Whitepaper;
-
-
-
