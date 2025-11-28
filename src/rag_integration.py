@@ -3,11 +3,23 @@ RAG Integration Module
 
 This module provides a drop-in replacement for the Pinecone-based RAG system.
 It integrates the new OpenAI-only RAG pipeline with the existing Flask app.
+
+Features:
+- Response caching (exact + semantic)
+- Streaming responses via Server-Sent Events
+- Cache metrics endpoint
 """
 
 import os
-from typing import Dict, Any, Optional
-from src.rag_pipeline import RAGPipeline, get_rag_pipeline, initialize_rag_pipeline
+import json
+from typing import Dict, Any, Optional, Generator
+from src.rag_pipeline import (
+    RAGPipeline, 
+    get_rag_pipeline, 
+    initialize_rag_pipeline,
+    StreamChunk,
+    get_cache_metrics as pipeline_get_cache_metrics
+)
 
 # Global RAG pipeline instance
 _rag_pipeline: Optional[RAGPipeline] = None
@@ -141,3 +153,68 @@ def is_rag_ready() -> bool:
     """Check if the RAG system is ready for queries."""
     global _rag_pipeline, _initialized
     return _initialized and _rag_pipeline is not None and _rag_pipeline.is_ready
+
+
+def query_rag_system_streaming(prompt: str, history: list = None) -> Generator[str, None, None]:
+    """
+    Query the RAG system with streaming response.
+    
+    Yields Server-Sent Event formatted strings for each chunk.
+    
+    Args:
+        prompt: User's question
+        history: Optional conversation history
+        
+    Yields:
+        SSE-formatted strings (data: {...}\n\n)
+    """
+    global _rag_pipeline, _initialized
+    
+    # Auto-initialize if needed
+    if not _initialized or _rag_pipeline is None:
+        if not init_rag_system():
+            yield f"data: {json.dumps({'error': 'RAG system not initialized', 'done': True})}\n\n"
+            return
+    
+    try:
+        for chunk in _rag_pipeline.ask_streaming(prompt, history):
+            if chunk.error:
+                yield f"data: {json.dumps({'error': chunk.error, 'done': True})}\n\n"
+                return
+            
+            if chunk.is_final:
+                # Send final chunk with metadata and sources
+                final_data = {
+                    "done": True,
+                    "sources": chunk.sources or [],
+                    "metadata": chunk.metadata or {}
+                }
+                yield f"data: {json.dumps(final_data)}\n\n"
+            else:
+                # Send content chunk
+                yield f"data: {json.dumps({'content': chunk.content, 'done': False})}\n\n"
+    
+    except Exception as e:
+        print(f"[ERROR] RAG streaming error: {e}")
+        yield f"data: {json.dumps({'error': str(e), 'done': True})}\n\n"
+
+
+def get_cache_metrics() -> Dict[str, Any]:
+    """Get response cache metrics."""
+    global _rag_pipeline
+    
+    if _rag_pipeline is None:
+        return {"status": "not_initialized"}
+    
+    return _rag_pipeline.get_cache_metrics()
+
+
+def clear_response_cache() -> bool:
+    """Clear the response cache."""
+    global _rag_pipeline
+    
+    if _rag_pipeline is None:
+        return False
+    
+    _rag_pipeline.clear_cache()
+    return True

@@ -13,7 +13,14 @@ import uuid
 from time import perf_counter
 
 # New OpenAI-based RAG system (replaces Pinecone)
-from src.rag_integration import init_rag_system, query_rag_system, is_rag_ready
+from src.rag_integration import (
+    init_rag_system, 
+    query_rag_system, 
+    query_rag_system_streaming,
+    is_rag_ready,
+    get_cache_metrics,
+    clear_response_cache
+)
 
 # Load environment variables
 load_dotenv('env.txt')  # Using env.txt since .env is blocked
@@ -1936,6 +1943,89 @@ def ask():
     except Exception as e:
         print(f"Error in ask endpoint: {e}")
         return jsonify({"error": str(e)}), 500
+
+
+@app.route("/ask/stream", methods=["POST"])
+@limiter.limit(lambda: get_rate_limit_for_ip(get_remote_address()))
+def ask_stream():
+    """
+    Streaming endpoint for RAG queries using Server-Sent Events.
+    
+    Returns tokens as they are generated for better UX.
+    Cache hits return the full response immediately.
+    
+    Request body: {"prompt": "your question"}
+    Response: text/event-stream with SSE-formatted chunks
+    """
+    from flask import Response, stream_with_context
+    
+    try:
+        client_ip = get_remote_address()
+        prompt = request.json.get("prompt", "")
+        if not prompt:
+            return jsonify({"error": "No prompt provided"}), 400
+        
+        # Check for suspicious activity
+        suspicious, reason = is_suspicious_request(client_ip, prompt)
+        if suspicious:
+            print(f"[WARN] Suspicious streaming request from {client_ip}: {reason}")
+            return jsonify({
+                "error": "Rate limit exceeded",
+                "retry_after": 300,
+            }), 429
+        
+        # Increment ask counter
+        with stats_lock:
+            stats = app.config['STATS']
+            stats['ask_count'] += 1
+            save_stats(stats)
+            app.config['STATS'] = stats
+        
+        def generate():
+            """Generator for SSE stream."""
+            try:
+                for chunk in query_rag_system_streaming(prompt):
+                    yield chunk
+            except Exception as e:
+                import json
+                yield f"data: {json.dumps({'error': str(e), 'done': True})}\n\n"
+        
+        return Response(
+            stream_with_context(generate()),
+            mimetype='text/event-stream',
+            headers={
+                'Cache-Control': 'no-cache',
+                'Connection': 'keep-alive',
+                'X-Accel-Buffering': 'no'
+            }
+        )
+        
+    except Exception as e:
+        print(f"Error in streaming endpoint: {e}")
+        return jsonify({"error": str(e)}), 500
+
+
+@app.route("/cache/metrics")
+def cache_metrics():
+    """Get response cache metrics."""
+    return jsonify(get_cache_metrics())
+
+
+@app.route("/cache/clear", methods=["POST"])
+def cache_clear():
+    """Clear the response cache (admin only)."""
+    admin_token = request.headers.get("X-Admin-Token")
+    expected_token = os.getenv("ADMIN_TOKEN")
+    
+    if expected_token and admin_token != expected_token:
+        return jsonify({"error": "Unauthorized"}), 401
+    
+    success = clear_response_cache()
+    return jsonify({
+        "success": success,
+        "message": "Cache cleared" if success else "Failed to clear cache"
+    })
+
 
 @app.route("/health")
 def health():

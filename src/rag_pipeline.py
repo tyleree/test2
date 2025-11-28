@@ -5,12 +5,18 @@ This module implements the complete RAG (Retrieval-Augmented Generation) pipelin
 using OpenAI for both embeddings and chat completions, with an in-memory vector store.
 
 Flow:
-1. User Query -> Query Preprocessing
-2. Query -> OpenAI Embedding
+1. User Query -> Check Response Cache (exact + semantic)
+2. Cache Miss -> Query Embedding (with embedding cache)
 3. Embedding -> Vector Store Search (Top-K chunks)
-4. Chunks -> Prompt Building (with citations)
-5. Prompt -> OpenAI Chat Completion
-6. Response -> Answer + Sources
+4. Chunks -> Model Routing (simple vs complex)
+5. Prompt -> OpenAI Chat Completion (streaming supported)
+6. Response -> Cache + Return
+
+Features:
+- Response caching (exact + semantic) for <50ms cache hits
+- Streaming responses for better UX
+- Intelligent model routing for cost optimization
+- File-backed embedding cache with compression
 
 This replaces the Pinecone-based rag_system.py with a self-contained solution.
 """
@@ -18,7 +24,7 @@ This replaces the Pinecone-based rag_system.py with a self-contained solution.
 import os
 import json
 import time
-from typing import List, Dict, Any, Optional, Tuple
+from typing import List, Dict, Any, Optional, Tuple, Generator, Iterator
 from dataclasses import dataclass
 from pathlib import Path
 from openai import OpenAI
@@ -38,6 +44,12 @@ from src.prompts import (
     build_rag_prompt,
     extract_sources_from_chunks,
     build_query_expansion_prompt
+)
+from src.response_cache import (
+    get_response_cache,
+    get_cached_response,
+    cache_response,
+    ResponseCache
 )
 
 # Configuration
@@ -84,6 +96,7 @@ class RAGResponse:
     chunks_retrieved: int
     model_used: str
     routing_reason: Optional[str] = None
+    cache_hit: Optional[str] = None  # "exact", "semantic", or None
     error: Optional[str] = None
     
     def to_dict(self) -> Dict[str, Any]:
@@ -99,9 +112,21 @@ class RAGResponse:
         }
         if self.routing_reason:
             result["metadata"]["routing_reason"] = self.routing_reason
+        if self.cache_hit:
+            result["metadata"]["cache_hit"] = self.cache_hit
         if self.error:
             result["error"] = self.error
         return result
+
+
+@dataclass
+class StreamChunk:
+    """A chunk of streaming response."""
+    content: str
+    is_final: bool = False
+    sources: Optional[List[Dict[str, Any]]] = None
+    metadata: Optional[Dict[str, Any]] = None
+    error: Optional[str] = None
 
 
 class RAGPipeline:
@@ -121,7 +146,8 @@ class RAGPipeline:
         embedding_model: str = DEFAULT_EMBEDDING_MODEL,
         chat_model: str = DEFAULT_CHAT_MODEL,
         top_k: int = DEFAULT_TOP_K,
-        min_score: float = DEFAULT_MIN_SCORE
+        min_score: float = DEFAULT_MIN_SCORE,
+        enable_response_cache: bool = True
     ):
         self.corpus_path = corpus_path
         self.embeddings_cache_path = embeddings_cache_path
@@ -129,9 +155,11 @@ class RAGPipeline:
         self.chat_model = chat_model
         self.top_k = top_k
         self.min_score = min_score
+        self.enable_response_cache = enable_response_cache
         
         self.vector_store: Optional[InMemoryVectorStore] = None
         self.openai_client: Optional[OpenAI] = None
+        self.response_cache: Optional[ResponseCache] = None
         self._is_initialized = False
     
     def initialize(self, force_regenerate_embeddings: bool = False) -> bool:
@@ -191,6 +219,11 @@ class RAGPipeline:
             self.vector_store.load_corpus(self.corpus_path)
             self.vector_store.set_embeddings(embeddings)
             
+            # Initialize response cache
+            if self.enable_response_cache:
+                self.response_cache = get_response_cache()
+                print(f"[OK] Response cache initialized")
+            
             self._is_initialized = True
             
             elapsed = time.time() - start_time
@@ -198,6 +231,7 @@ class RAGPipeline:
             print(f"   - Documents: {len(self.vector_store)}")
             print(f"   - Embedding model: {self.embedding_model}")
             print(f"   - Chat model: {self.chat_model}")
+            print(f"   - Response caching: {'enabled' if self.enable_response_cache else 'disabled'}")
             
             return True
             
@@ -369,6 +403,176 @@ class RAGPipeline:
         
         return answer, elapsed_ms, selected_model
     
+    def _generate_response_streaming(
+        self,
+        question: str,
+        context_chunks: List[Dict[str, Any]],
+        conversation_history: Optional[List[Dict[str, str]]] = None,
+        model: Optional[str] = None
+    ) -> Generator[str, None, str]:
+        """
+        Generate a streaming response using OpenAI chat completion.
+        
+        Args:
+            question: User's question
+            context_chunks: Retrieved context chunks
+            conversation_history: Optional conversation history
+            model: Specific model to use (overrides default)
+            
+        Yields:
+            Token strings as they arrive
+            
+        Returns:
+            Complete response text
+        """
+        # Use specified model or fall back to instance default
+        selected_model = model or self.chat_model
+        
+        # Build prompt
+        messages = build_rag_prompt(
+            question,
+            context_chunks,
+            conversation_history
+        )
+        
+        # Call OpenAI with streaming
+        stream = self.openai_client.chat.completions.create(
+            model=selected_model,
+            messages=messages,
+            temperature=0.3,
+            max_tokens=1500,
+            stream=True
+        )
+        
+        # Collect full response while streaming
+        full_response = []
+        for chunk in stream:
+            if chunk.choices[0].delta.content:
+                token = chunk.choices[0].delta.content
+                full_response.append(token)
+                yield token
+        
+        return "".join(full_response)
+    
+    def ask_streaming(
+        self,
+        question: str,
+        conversation_history: Optional[List[Dict[str, str]]] = None,
+        force_model: Optional[str] = None
+    ) -> Generator[StreamChunk, None, None]:
+        """
+        Ask a question and stream the response.
+        
+        Uses intelligent model routing and response caching.
+        If cache hit, yields complete response immediately.
+        Otherwise, streams tokens as they arrive from the LLM.
+        
+        Args:
+            question: User's question
+            conversation_history: Optional list of previous messages
+            force_model: Optional model override (bypasses routing)
+            
+        Yields:
+            StreamChunk objects with content and metadata
+        """
+        if not self.is_ready:
+            yield StreamChunk(
+                content="",
+                is_final=True,
+                error="RAG pipeline not initialized. Please try again later."
+            )
+            return
+        
+        total_start = time.time()
+        
+        try:
+            # Generate query embedding for cache lookup and retrieval
+            query_embedding = embed_query_cached(question, self.embedding_model)
+            
+            # Check response cache first
+            if self.response_cache and self.enable_response_cache:
+                cached = self.response_cache.get(question, query_embedding)
+                if cached:
+                    response_text, sources, model_used, cache_type = cached
+                    # Return cached response immediately
+                    yield StreamChunk(
+                        content=response_text,
+                        is_final=True,
+                        sources=sources,
+                        metadata={
+                            "query_time_ms": (time.time() - total_start) * 1000,
+                            "cache_hit": cache_type,
+                            "model_used": model_used
+                        }
+                    )
+                    return
+            
+            # Cache miss - proceed with retrieval
+            chunks, retrieval_time = self._retrieve_context(question)
+            
+            if not chunks:
+                yield StreamChunk(
+                    content="I couldn't find any relevant information in my knowledge base to answer your question. Please try rephrasing your question or ask about a specific VA benefit or condition.",
+                    is_final=True,
+                    sources=[],
+                    metadata={"query_time_ms": (time.time() - total_start) * 1000}
+                )
+                return
+            
+            # Model routing
+            if force_model:
+                selected_model = force_model
+                routing_reason = "forced_override"
+            else:
+                selected_model, routing_reason = self._classify_query_complexity(question, chunks)
+            
+            print(f"[ROUTER] Model: {selected_model} (reason: {routing_reason})")
+            
+            # Extract sources early so we can include them
+            sources = extract_sources_from_chunks(chunks)
+            
+            # Stream the response
+            response_tokens = []
+            for token in self._generate_response_streaming(
+                question, chunks, conversation_history, model=selected_model
+            ):
+                response_tokens.append(token)
+                yield StreamChunk(content=token, is_final=False)
+            
+            full_response = "".join(response_tokens)
+            total_time = (time.time() - total_start) * 1000
+            
+            # Cache the response
+            if self.response_cache and self.enable_response_cache:
+                self.response_cache.set(
+                    question,
+                    full_response,
+                    sources,
+                    selected_model,
+                    query_embedding
+                )
+            
+            # Send final chunk with metadata
+            yield StreamChunk(
+                content="",
+                is_final=True,
+                sources=sources,
+                metadata={
+                    "query_time_ms": total_time,
+                    "chunks_retrieved": len(chunks),
+                    "model_used": selected_model,
+                    "routing_reason": routing_reason
+                }
+            )
+            
+        except Exception as e:
+            print(f"[ERROR] RAG Pipeline streaming error: {e}")
+            yield StreamChunk(
+                content="",
+                is_final=True,
+                error=str(e)
+            )
+    
     def ask(
         self,
         question: str,
@@ -403,7 +607,24 @@ class RAGPipeline:
         total_start = time.time()
         
         try:
-            # Step 1: Retrieve context
+            # Step 0: Generate query embedding for cache lookup
+            query_embedding = embed_query_cached(question, self.embedding_model)
+            
+            # Step 1: Check response cache
+            if self.response_cache and self.enable_response_cache:
+                cached = self.response_cache.get(question, query_embedding)
+                if cached:
+                    response_text, sources, model_used, cache_type = cached
+                    return RAGResponse(
+                        answer=response_text,
+                        sources=sources,
+                        query_time_ms=(time.time() - total_start) * 1000,
+                        chunks_retrieved=0,  # From cache, no retrieval
+                        model_used=model_used,
+                        cache_hit=cache_type
+                    )
+            
+            # Step 2: Retrieve context (cache miss)
             chunks, retrieval_time = self._retrieve_context(question)
             
             if not chunks:
@@ -415,7 +636,7 @@ class RAGPipeline:
                     model_used=self.chat_model
                 )
             
-            # Step 2: Model routing - select appropriate model based on query complexity
+            # Step 3: Model routing - select appropriate model based on query complexity
             if force_model:
                 selected_model = force_model
                 routing_reason = "forced_override"
@@ -424,7 +645,7 @@ class RAGPipeline:
             
             print(f"[ROUTER] Model: {selected_model} (reason: {routing_reason})")
             
-            # Step 3: Generate response with selected model
+            # Step 4: Generate response with selected model
             answer, generation_time, model_used = self._generate_response(
                 question,
                 chunks,
@@ -432,10 +653,20 @@ class RAGPipeline:
                 model=selected_model
             )
             
-            # Step 4: Extract sources
+            # Step 5: Extract sources
             sources = extract_sources_from_chunks(chunks)
             
             total_time = (time.time() - total_start) * 1000
+            
+            # Step 6: Cache the response
+            if self.response_cache and self.enable_response_cache:
+                self.response_cache.set(
+                    question,
+                    answer,
+                    sources,
+                    model_used,
+                    query_embedding
+                )
             
             return RAGResponse(
                 answer=answer,
@@ -479,6 +710,18 @@ class RAGPipeline:
             "text": doc.text,
             "metadata": doc.metadata
         }
+    
+    def get_cache_metrics(self) -> Dict[str, Any]:
+        """Get response cache metrics."""
+        if self.response_cache:
+            return self.response_cache.get_metrics()
+        return {"caching": "disabled"}
+    
+    def clear_cache(self) -> None:
+        """Clear the response cache."""
+        if self.response_cache:
+            self.response_cache.clear()
+            print("[CACHE] Response cache cleared")
 
 
 # Global pipeline instance
@@ -525,3 +768,35 @@ def ask_question(
     
     response = pipeline.ask(question, history)
     return response.to_dict()
+
+
+def ask_question_streaming(
+    question: str,
+    history: Optional[List[Dict[str, str]]] = None
+) -> Generator[StreamChunk, None, None]:
+    """
+    Convenience function to stream a response using the global pipeline.
+    
+    Args:
+        question: User's question
+        history: Optional conversation history
+        
+    Yields:
+        StreamChunk objects with content and metadata
+    """
+    pipeline = get_rag_pipeline()
+    if not pipeline.is_ready:
+        yield StreamChunk(
+            content="",
+            is_final=True,
+            error="RAG system not initialized"
+        )
+        return
+    
+    yield from pipeline.ask_streaming(question, history)
+
+
+def get_cache_metrics() -> Dict[str, Any]:
+    """Get response cache metrics from the global pipeline."""
+    pipeline = get_rag_pipeline()
+    return pipeline.get_cache_metrics()
