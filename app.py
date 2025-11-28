@@ -330,6 +330,54 @@ def init_db():
 if DATABASE_AVAILABLE:
     init_db()
 
+# One-time analytics reset (triggered by RESET_ANALYTICS=true env var)
+def reset_analytics_data():
+    """Reset all analytics data for a clean start."""
+    if os.getenv("RESET_ANALYTICS", "").lower() != "true":
+        return
+    
+    print("🔄 RESET_ANALYTICS=true detected - clearing all analytics data...")
+    
+    # Reset file-based stats
+    from datetime import datetime
+    clean_stats = {
+        'ask_count': 0,
+        'visit_count': 0,
+        'unique_visitors': set(),
+        'visitor_locations': {},
+        'first_visit': datetime.now().isoformat(),
+        'last_updated': datetime.now().isoformat()
+    }
+    save_stats(clean_stats)
+    app.config['STATS'] = clean_stats
+    print("   ✅ File stats reset (ask_count=0, visit_count=0, locations cleared)")
+    
+    # Reset database tables
+    if DATABASE_AVAILABLE:
+        try:
+            from sqlalchemy import text
+            session = SessionLocal()
+            
+            # Clear events table
+            result = session.execute(text("DELETE FROM events"))
+            events_count = result.rowcount
+            
+            # Clear legacy_stats table
+            result = session.execute(text("DELETE FROM legacy_stats"))
+            legacy_count = result.rowcount
+            
+            session.commit()
+            session.close()
+            
+            print(f"   ✅ Database reset (events: {events_count} deleted, legacy_stats: {legacy_count} deleted)")
+        except Exception as e:
+            print(f"   ⚠️ Database reset error: {e}")
+    
+    print("🎉 Analytics data reset complete! Remove RESET_ANALYTICS env var to prevent re-reset.")
+
+# Run reset if triggered
+reset_analytics_data()
+
 def client_ip(request):
     """Helper to get client IP respecting X-Forwarded-For"""
     xf = request.headers.get("X-Forwarded-For", "")
