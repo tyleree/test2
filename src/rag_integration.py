@@ -110,12 +110,22 @@ def query_rag_system(prompt: str, history: list = None) -> Dict[str, Any]:
             "metadata": {
                 "model": response.model_used,
                 "query_time_ms": response.query_time_ms,
-                "chunks_retrieved": response.chunks_retrieved
+                "chunks_retrieved": response.chunks_retrieved,
+                "cache_hit": response.cache_hit  # "exact", "semantic", "database", or None
             },
             "error": response.error,
             "token_usage": {
                 "provider": "openai",
                 "model": response.model_used
+            },
+            # Include question data for analytics
+            "question_data": {
+                "question": prompt,
+                "answer": response.answer,
+                "cache_hit": response.cache_hit or "miss",
+                "sources": citations,
+                "chunks_retrieved": response.chunks_retrieved,
+                "model_used": response.model_used
             }
         }
         

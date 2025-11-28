@@ -430,12 +430,21 @@ def close_session(exc):
             db.rollback()
         db.close()
 
-def log_chat_question(token_usage=None, model_info=None, extra_perf=None):
-    """Log a chat question event to analytics with token usage tracking"""
+def log_chat_question(token_usage=None, model_info=None, extra_perf=None, question_data=None):
+    """Log a chat question event to analytics with token usage tracking
+    
+    Args:
+        token_usage: Token usage info from OpenAI
+        model_info: Model metadata
+        extra_perf: Performance metrics (response_ms, prompt_chars, etc.)
+        question_data: Dict with question text, answer, cache_hit, sources, etc.
+    """
     if not DATABASE_AVAILABLE or not hasattr(g, 'db') or g.db is None:
         return
     
     try:
+        import json
+        
         # Extract token usage information
         openai_prompt_tokens = None
         openai_completion_tokens = None
@@ -476,6 +485,22 @@ def log_chat_question(token_usage=None, model_info=None, extra_perf=None):
             # Allow provider override from perf payload
             api_provider = extra_perf.get('provider') or api_provider
         
+        # Build meta JSON with question details
+        meta_dict = {}
+        if question_data and isinstance(question_data, dict):
+            meta_dict = {
+                'question': question_data.get('question', ''),
+                'answer': question_data.get('answer', ''),
+                'cache_hit': question_data.get('cache_hit', 'miss'),  # 'exact', 'semantic', 'database', or 'miss'
+                'semantic_similarity': question_data.get('semantic_similarity'),
+                'sources': question_data.get('sources', []),
+                'citations_count': len(question_data.get('sources', [])),
+                'chunks_retrieved': question_data.get('chunks_retrieved', 0),
+                'model_used': question_data.get('model_used', model_used),
+            }
+        
+        meta_json = json.dumps(meta_dict) if meta_dict else None
+        
         ev = Event(
             type='chat_question',
             path=request.path,
@@ -491,15 +516,17 @@ def log_chat_question(token_usage=None, model_info=None, extra_perf=None):
             response_ms=response_ms,
             prompt_chars=prompt_chars,
             answer_chars=answer_chars,
-            success=success_val
+            success=success_val,
+            meta=meta_json
         )
         g.db.add(ev)
         g.db.commit()
         
-        print(f"📊 Logged chat question: provider={api_provider}, ms={response_ms}, prompt_chars={prompt_chars}, answer_chars={answer_chars}, tokens={openai_total_tokens}")
+        cache_info = question_data.get('cache_hit', 'miss') if question_data else 'unknown'
+        print(f"[ANALYTICS] Logged chat: cache={cache_info}, ms={response_ms}, tokens={openai_total_tokens}")
         
     except Exception as e:
-        print(f"⚠️ Failed to log chat question: {e}")
+        print(f"[WARN] Failed to log chat question: {e}")
         if g.db:
             g.db.rollback()
 
@@ -1939,7 +1966,15 @@ def ask():
                         'answer_chars': len(answer_content or ''),
                         'success': success_flag,
                         'provider': provider_used
-                    }
+                    },
+                    question_data=rag_response.get("question_data", {
+                        'question': prompt,
+                        'answer': answer_content,
+                        'cache_hit': rag_response.get("metadata", {}).get("cache_hit", "miss"),
+                        'sources': rag_response.get("citations", []),
+                        'chunks_retrieved': rag_response.get("metadata", {}).get("chunks_retrieved", 0),
+                        'model_used': rag_response.get("metadata", {}).get("model")
+                    })
                 )
                 
                 return jsonify({
@@ -1962,6 +1997,13 @@ def ask():
                         'answer_chars': 0,
                         'success': 0,
                         'provider': 'openai_rag_failed'
+                    },
+                    question_data={
+                        'question': prompt,
+                        'answer': f'Error: {error_msg}',
+                        'cache_hit': 'miss',
+                        'sources': [],
+                        'chunks_retrieved': 0
                     }
                 )
                 return jsonify({
@@ -1981,6 +2023,13 @@ def ask():
                     'answer_chars': 0,
                     'success': 0,
                     'provider': 'no_api_key'
+                },
+                question_data={
+                    'question': prompt,
+                    'answer': 'Error: No API key configured',
+                    'cache_hit': 'miss',
+                    'sources': [],
+                    'chunks_retrieved': 0
                 }
             )
             return jsonify({
