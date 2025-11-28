@@ -644,6 +644,145 @@ def stats():
         print(f"❌ Analytics stats query failed: {e}")
         return jsonify({"error": "query failed", "details": str(e)}), 500
 
+
+@bp.get("/api/analytics/timeline")
+def timeline():
+    """Get question timeline with cache performance and token usage"""
+    if not hasattr(g, 'db') or g.db is None:
+        return jsonify({"error": "database not available"}), 503
+    
+    db = g.db
+    
+    try:
+        limit = min(int(request.args.get("limit", 50)), 100)
+        offset = int(request.args.get("offset", 0))
+        cache_mode = request.args.get("cache_mode")  # 'exact_hit', 'semantic_hit', 'miss'
+    except Exception:
+        limit, offset, cache_mode = 50, 0, None
+    
+    try:
+        # Build query with optional cache_mode filter
+        query = """
+            SELECT 
+                id,
+                ts as timestamp,
+                COALESCE(meta::json->>'question', path) as question,
+                COALESCE(meta::json->>'question_hash', '') as question_hash,
+                COALESCE(meta::json->>'cache_hit', 'miss') as cache_mode,
+                COALESCE((meta::json->>'semantic_similarity')::float, 0) as semantic_similarity,
+                COALESCE(LEFT(meta::json->>'answer', 200), '') as answer_preview,
+                COALESCE((meta::json->>'citations_count')::int, 0) as citations_count,
+                COALESCE(meta::json->'token_usage', '{}') as token_usage,
+                COALESCE(response_ms, 0) as latency_ms,
+                COALESCE((meta::json->>'retrieved_docs')::int, 0) as retrieved_docs,
+                COALESCE((meta::json->>'compressed_tokens')::int, 0) as compressed_tokens,
+                COALESCE((meta::json->>'final_tokens')::int, 0) as final_tokens,
+                COALESCE(ip, 'unknown') as user_ip,
+                COALESCE(meta::json->>'error', '') as error_message,
+                ts as created_at
+            FROM events 
+            WHERE type = 'chat_question'
+        """
+        
+        params = {"limit": limit, "offset": offset}
+        
+        if cache_mode and cache_mode != 'all':
+            query += " AND COALESCE(meta::json->>'cache_hit', 'miss') = :cache_mode"
+            params["cache_mode"] = cache_mode
+        
+        query += " ORDER BY ts DESC LIMIT :limit OFFSET :offset"
+        
+        entries = db.execute(text(query), params).mappings().all()
+        
+        # Get stats for the last 24 hours
+        stats_query = """
+            SELECT 
+                COUNT(*) as total_questions,
+                SUM(CASE WHEN COALESCE(meta::json->>'cache_hit', 'miss') = 'exact' THEN 1 ELSE 0 END) as exact_hits,
+                SUM(CASE WHEN COALESCE(meta::json->>'cache_hit', 'miss') = 'semantic' THEN 1 ELSE 0 END) as semantic_hits,
+                SUM(CASE WHEN COALESCE(meta::json->>'cache_hit', 'miss') = 'miss' THEN 1 ELSE 0 END) as cache_misses,
+                AVG(COALESCE(response_ms, 0)) as avg_latency,
+                SUM(COALESCE(openai_total_tokens, 0)) as total_tokens_used,
+                AVG(COALESCE((meta::json->>'semantic_similarity')::float, 0)) as avg_similarity
+            FROM events 
+            WHERE type = 'chat_question' 
+            AND ts >= NOW() - INTERVAL '24 hours'
+        """
+        
+        stats_result = db.execute(text(stats_query)).mappings().one()
+        
+        total_q = stats_result['total_questions'] or 0
+        exact_h = stats_result['exact_hits'] or 0
+        semantic_h = stats_result['semantic_hits'] or 0
+        
+        cache_hit_rate = ((exact_h + semantic_h) / total_q * 100) if total_q > 0 else 0
+        
+        # Hourly breakdown for the last 24 hours
+        hourly_query = """
+            SELECT 
+                TO_CHAR(DATE_TRUNC('hour', ts), 'HH24:00') as hour,
+                COUNT(*) as questions,
+                SUM(CASE WHEN COALESCE(meta::json->>'cache_hit', 'miss') != 'miss' THEN 1 ELSE 0 END) as hits
+            FROM events 
+            WHERE type = 'chat_question' 
+            AND ts >= NOW() - INTERVAL '24 hours'
+            GROUP BY DATE_TRUNC('hour', ts)
+            ORDER BY DATE_TRUNC('hour', ts)
+        """
+        
+        hourly = db.execute(text(hourly_query)).mappings().all()
+        
+        # Format entries for response
+        formatted_entries = []
+        for entry in entries:
+            formatted_entry = {
+                "id": entry['id'],
+                "timestamp": entry['timestamp'].isoformat() if entry['timestamp'] else None,
+                "question": entry['question'] or "",
+                "question_hash": entry['question_hash'] or "",
+                "cache_mode": entry['cache_mode'] or "miss",
+                "semantic_similarity": float(entry['semantic_similarity'] or 0),
+                "answer_preview": entry['answer_preview'] or "",
+                "citations_count": int(entry['citations_count'] or 0),
+                "token_usage": entry['token_usage'] if isinstance(entry['token_usage'], dict) else {},
+                "latency_ms": int(entry['latency_ms'] or 0),
+                "retrieved_docs": int(entry['retrieved_docs'] or 0),
+                "compressed_tokens": int(entry['compressed_tokens'] or 0),
+                "final_tokens": int(entry['final_tokens'] or 0),
+                "user_ip": entry['user_ip'] or "unknown",
+                "error_message": entry['error_message'] or "",
+                "created_at": entry['created_at'].isoformat() if entry['created_at'] else None
+            }
+            formatted_entries.append(formatted_entry)
+        
+        return jsonify({
+            "status": "ok",
+            "entries": formatted_entries,
+            "stats": {
+                "total_questions": int(stats_result['total_questions'] or 0),
+                "exact_hits": int(exact_h),
+                "semantic_hits": int(semantic_h),
+                "cache_misses": int(stats_result['cache_misses'] or 0),
+                "cache_hit_rate": round(cache_hit_rate, 1),
+                "avg_latency": round(float(stats_result['avg_latency'] or 0), 1),
+                "total_tokens_used": int(stats_result['total_tokens_used'] or 0),
+                "avg_similarity": round(float(stats_result['avg_similarity'] or 0), 3),
+                "hourly_breakdown": [dict(h) for h in hourly]
+            },
+            "pagination": {
+                "limit": limit,
+                "offset": offset,
+                "total_returned": len(formatted_entries)
+            }
+        })
+        
+    except Exception as e:
+        print(f"❌ Timeline query failed: {e}")
+        import traceback
+        traceback.print_exc()
+        return jsonify({"error": "query failed", "details": str(e)}), 500
+
+
 @bp.get("/admin/analytics")
 def admin_page():
     """Admin analytics dashboard - serve React SPA"""
