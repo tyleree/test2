@@ -50,3 +50,26 @@ class LegacyStats(Base):
     value = Column(Text)  # JSON string for complex values
     updated_at = Column(DateTime(timezone=True), server_default=func.now())
 
+
+class CachedResponse(Base):
+    """
+    Persistent response cache for RAG queries.
+    Stores both exact-match and semantic cache entries.
+    """
+    __tablename__ = "cached_responses"
+    
+    id = Column(Integer, primary_key=True)
+    query_hash = Column(String(64), unique=True, index=True)  # SHA256 hash of normalized query
+    query_text = Column(Text, nullable=False)                  # Original query for debugging
+    response = Column(Text, nullable=False)                    # Cached response text
+    sources_json = Column(Text)                                # JSON array of source documents
+    model_used = Column(String(64))                           # Model that generated response
+    embedding_compressed = Column(Text)                        # Compressed embedding (hex string)
+    created_at = Column(DateTime(timezone=True), server_default=func.now())
+    expires_at = Column(DateTime(timezone=True), index=True)  # TTL expiration
+    hit_count = Column(Integer, default=0)                    # Cache hit counter
+    last_hit_at = Column(DateTime(timezone=True))             # Last access time
+    
+# Index for efficient expiration queries
+Index("idx_cached_responses_expires", CachedResponse.expires_at)
+Index("idx_cached_responses_hits", CachedResponse.hit_count.desc())
