@@ -19,9 +19,13 @@ env.txt
 *.swo
 
 # Build artifacts
-dist/
+/dist/
+veteran-ai-spark/dist/
 build/
 *.egg-info/
+
+# Keep frontend/dist (deployed build)
+!frontend/dist/
 
 # Large cache files (embeddings are ~36MB)
 data/embeddings_cache.json
