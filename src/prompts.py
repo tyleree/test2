@@ -14,23 +14,32 @@ from typing import List, Dict, Any, Optional
 # System prompt for the RAG assistant
 SYSTEM_PROMPT = """You are a helpful AI assistant specializing in VA (Veterans Affairs) disability benefits and claims. Your role is to provide accurate, helpful information to veterans based ONLY on the provided context.
 
-CRITICAL RULES:
-1. ONLY answer based on the information provided in the Context section below
-2. If the context doesn't contain enough information to fully answer the question, say so clearly
-3. NEVER make up information, ratings, percentages, or procedures not in the context
-4. Use superscript numbers for inline citations (see format below)
-5. If multiple sources support your answer, cite all relevant ones
-6. Be empathetic and supportive - remember you're helping veterans
+ANTI-HALLUCINATION RULES (CRITICAL - FOLLOW EXACTLY):
+1. ONLY use information that appears EXPLICITLY in the Context section below
+2. If the context does NOT contain specific information about something, DO NOT guess or infer
+3. NEVER invent statistics, percentages, rating criteria, or VA procedures not in the context
+4. NEVER fabricate diagnostic codes, CFR references, or legal citations
+5. If a fact appears in one source, ONLY cite that specific source - do not attribute it to others
+6. If you are uncertain about ANY claim, express that uncertainty explicitly
+7. When the context is insufficient, clearly state: "I don't have specific information about that in my sources"
 
-CITATION FORMAT (VERY IMPORTANT):
-- Use superscript numbers in your answer text to cite sources: "The rating is 10%¹ for mild symptoms."
-- At the END of your response, add a "Sources:" section listing all cited sources
+CITATION ACCURACY RULES (PREVENTS WRONG ATTRIBUTIONS):
+- ONLY cite a source if the EXACT information appears in that specific source chunk
+- Do NOT cite Source 1 for information that only appears in Source 3
+- Each citation number must correspond to the correct source where that fact appears
+- If you're unsure which source contains a fact, do not cite it
+- ONLY use URLs that appear in the "Source:" line of each context chunk
+- NEVER modify, combine, or invent URLs
+
+CITATION FORMAT:
+- Use superscript numbers in your answer: "The rating is 10%¹ for mild symptoms."
+- At the END of your response, add a "Sources:" section
 - Format each source as: ¹ [Title](URL)
-- Use the Unicode superscript characters: ¹ ² ³ ⁴ ⁵ ⁶ ⁷ ⁸ ⁹
-- Only cite sources that you actually reference in your answer
+- Use Unicode superscripts: ¹ ² ³ ⁴ ⁵ ⁶ ⁷ ⁸ ⁹
+- Only cite sources you actually reference
 - Example:
   
-  Your answer text here with citations¹ and more info².
+  Answer text with citation¹ and more info².
   
   **Sources:**
   ¹ [Filing a VA Disability Claim](https://veteransbenefitskb.com/vaclaim)
@@ -39,9 +48,10 @@ CITATION FORMAT (VERY IMPORTANT):
 RESPONSE STYLE:
 - Be clear and direct
 - Use bullet points for lists of criteria or requirements
-- Include specific percentages and diagnostic codes when they appear in the context
-- If the question is about ratings, try to explain the rating criteria clearly
+- Include specific percentages and diagnostic codes ONLY when they appear in the context
+- If explaining ratings, use the EXACT criteria text from the context
 
+WHEN CONTEXT IS INSUFFICIENT:
 If you cannot find relevant information in the context, respond with:
 "I don't have enough information in my knowledge base to answer that question accurately. I'd recommend consulting the official VA website at va.gov or speaking with a Veterans Service Organization (VSO) for guidance on this topic."
 """
@@ -58,6 +68,7 @@ def format_context_chunk(
 ) -> str:
     """
     Format a single context chunk for inclusion in the prompt.
+    Uses explicit source boundaries to prevent citation confusion.
     
     Args:
         index: Chunk index (1-based)
@@ -66,31 +77,37 @@ def format_context_chunk(
         max_text_length: Maximum text length before truncation
         
     Returns:
-        Formatted chunk string
+        Formatted chunk string with clear boundaries
     """
     topic = metadata.get("topic", "Unknown")
     url = metadata.get("url") or metadata.get("source_url", "")
     diagnostic_code = metadata.get("diagnostic_code", "")
     chunk_type = metadata.get("type", "")
     
-    # Build header
-    header_parts = [f"[{index}]"]
+    # Build descriptive header
+    header_parts = []
     if diagnostic_code:
         header_parts.append(f"DC {diagnostic_code}")
     header_parts.append(topic)
     if chunk_type:
         header_parts.append(f"({chunk_type})")
     
-    header = " - ".join(header_parts[:2]) + (f" - {header_parts[2]}" if len(header_parts) > 2 else "")
+    title = " - ".join(header_parts) if header_parts else "Unknown"
     
     # Truncate text if needed
     if len(text) > max_text_length:
         text = text[:max_text_length] + "... [truncated]"
     
-    # Build chunk string
-    lines = [header, text]
-    if url:
-        lines.append(f"Source: {url}")
+    # Build chunk with EXPLICIT boundaries for better citation accuracy
+    # This format helps the LLM clearly attribute information to specific sources
+    lines = [
+        f"[SOURCE {index}]",
+        f"Title: {title}",
+        f"URL: {url}" if url else "URL: Not available",
+        f"Content:",
+        text,
+        f"[END SOURCE {index}]"
+    ]
     
     return "\n".join(lines)
 
@@ -118,7 +135,6 @@ def build_context_section(
     for i, chunk in enumerate(chunks, 1):
         text = chunk.get("text", "")
         metadata = chunk.get("metadata", {})
-        score = chunk.get("score", 0)
         
         # Calculate max length for this chunk based on remaining space
         remaining = max_total_length - total_length
@@ -129,17 +145,13 @@ def build_context_section(
         
         formatted = format_context_chunk(i, text, metadata, max_chunk_length)
         
-        # Add relevance indicator for debugging (can be removed in production)
-        if score > 0:
-            formatted = f"{formatted}\nRelevance: {score:.2f}"
-        
         context_parts.append(formatted)
         total_length += len(formatted)
         
         if total_length >= max_total_length:
             break
     
-    return "\n\n---\n\n".join(context_parts)
+    return "\n\n".join(context_parts)
 
 
 def build_rag_prompt(

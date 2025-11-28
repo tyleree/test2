@@ -51,14 +51,30 @@ from src.response_cache import (
     cache_response,
     ResponseCache
 )
+from src.url_validator import (
+    initialize_url_validator,
+    validate_sources,
+    sanitize_response_urls,
+    is_valid_url,
+    get_whitelist_stats
+)
+from src.citation_verifier import (
+    verify_citations,
+    get_verification_summary,
+    VerificationResult
+)
 
 # Configuration
 DEFAULT_CHAT_MODEL = "gpt-4.1-mini"
 PREMIUM_CHAT_MODEL = "gpt-4.1"  # More capable model for complex queries
 DEFAULT_TOP_K = 7
-DEFAULT_MIN_SCORE = 0.3
+DEFAULT_MIN_SCORE = 0.45  # Increased from 0.3 - reject low-relevance chunks
 CORPUS_PATH = "veteran-ai-spark/corpus/vbkb_restructured.json"
 EMBEDDINGS_CACHE_PATH = "data/embeddings_cache.json"
+
+# Relevance thresholds for hallucination prevention
+WEAK_RETRIEVAL_THRESHOLD = 0.55  # Log warning if best chunk is below this
+VERY_WEAK_THRESHOLD = 0.45  # Consider adding "I'm not sure" prefix if below this
 
 # Model routing thresholds
 SIMPLE_QUERY_MAX_WORDS = 15  # Queries with fewer words are likely simple
@@ -98,6 +114,8 @@ class RAGResponse:
     routing_reason: Optional[str] = None
     cache_hit: Optional[str] = None  # "exact", "semantic", or None
     error: Optional[str] = None
+    weak_retrieval: bool = False  # True if best chunk score was below threshold
+    citation_verification: Optional[Dict[str, Any]] = None  # Citation verification results
     
     def to_dict(self) -> Dict[str, Any]:
         result = {
@@ -114,6 +132,10 @@ class RAGResponse:
             result["metadata"]["routing_reason"] = self.routing_reason
         if self.cache_hit:
             result["metadata"]["cache_hit"] = self.cache_hit
+        if self.weak_retrieval:
+            result["metadata"]["weak_retrieval"] = True
+        if self.citation_verification:
+            result["metadata"]["citation_verification"] = self.citation_verification
         if self.error:
             result["error"] = self.error
         return result
@@ -224,6 +246,11 @@ class RAGPipeline:
                 self.response_cache = get_response_cache()
                 print(f"[OK] Response cache initialized")
             
+            # Initialize URL validator with corpus URLs
+            initialize_url_validator(self.corpus_path)
+            whitelist_stats = get_whitelist_stats()
+            print(f"[OK] URL validator initialized with {whitelist_stats['total_urls']} known URLs")
+            
             self._is_initialized = True
             
             elapsed = time.time() - start_time
@@ -232,6 +259,7 @@ class RAGPipeline:
             print(f"   - Embedding model: {self.embedding_model}")
             print(f"   - Chat model: {self.chat_model}")
             print(f"   - Response caching: {'enabled' if self.enable_response_cache else 'disabled'}")
+            print(f"   - URL validation: enabled ({whitelist_stats['unique_base_urls']} base URLs)")
             
             return True
             
@@ -324,15 +352,15 @@ class RAGPipeline:
         # Default: use cheap model for cost efficiency
         return DEFAULT_CHAT_MODEL, "default_simple"
     
-    def _retrieve_context(self, query: str) -> Tuple[List[Dict[str, Any]], float]:
+    def _retrieve_context(self, query: str) -> Tuple[List[Dict[str, Any]], float, bool]:
         """
-        Retrieve relevant context chunks for a query.
+        Retrieve relevant context chunks for a query with hallucination prevention.
         
         Args:
             query: User's question
             
         Returns:
-            Tuple of (chunks list, retrieval time in ms)
+            Tuple of (chunks list, retrieval time in ms, weak_retrieval flag)
         """
         start_time = time.time()
         
@@ -356,8 +384,21 @@ class RAGPipeline:
                 "score": result.score
             })
         
+        # Check for weak retrieval (hallucination risk)
+        weak_retrieval = False
+        if chunks:
+            best_score = chunks[0]["score"]
+            if best_score < WEAK_RETRIEVAL_THRESHOLD:
+                print(f"[WARN] Weak retrieval for query: '{query[:80]}...' (best_score={best_score:.3f})")
+                weak_retrieval = True
+                if best_score < VERY_WEAK_THRESHOLD:
+                    print(f"[WARN] Very weak retrieval - high hallucination risk!")
+        else:
+            print(f"[WARN] No chunks found for query: '{query[:80]}...'")
+            weak_retrieval = True
+        
         elapsed_ms = (time.time() - start_time) * 1000
-        return chunks, elapsed_ms
+        return chunks, elapsed_ms, weak_retrieval
     
     def _generate_response(
         self,
@@ -508,14 +549,14 @@ class RAGPipeline:
                     return
             
             # Cache miss - proceed with retrieval
-            chunks, retrieval_time = self._retrieve_context(question)
+            chunks, retrieval_time, weak_retrieval = self._retrieve_context(question)
             
             if not chunks:
                 yield StreamChunk(
                     content="I couldn't find any relevant information in my knowledge base to answer your question. Please try rephrasing your question or ask about a specific VA benefit or condition.",
                     is_final=True,
                     sources=[],
-                    metadata={"query_time_ms": (time.time() - total_start) * 1000}
+                    metadata={"query_time_ms": (time.time() - total_start) * 1000, "weak_retrieval": True}
                 )
                 return
             
@@ -528,8 +569,9 @@ class RAGPipeline:
             
             print(f"[ROUTER] Model: {selected_model} (reason: {routing_reason})")
             
-            # Extract sources early so we can include them
+            # Extract and validate sources
             sources = extract_sources_from_chunks(chunks)
+            sources = validate_sources(sources)  # URL validation
             
             # Stream the response
             response_tokens = []
@@ -625,7 +667,7 @@ class RAGPipeline:
                     )
             
             # Step 2: Retrieve context (cache miss)
-            chunks, retrieval_time = self._retrieve_context(question)
+            chunks, retrieval_time, weak_retrieval = self._retrieve_context(question)
             
             if not chunks:
                 return RAGResponse(
@@ -633,8 +675,13 @@ class RAGPipeline:
                     sources=[],
                     query_time_ms=(time.time() - total_start) * 1000,
                     chunks_retrieved=0,
-                    model_used=self.chat_model
+                    model_used=self.chat_model,
+                    routing_reason="no_context"
                 )
+            
+            # Flag weak retrievals for monitoring
+            if weak_retrieval:
+                print(f"[HALLUCINATION_RISK] Proceeding with weak retrieval - best score below {WEAK_RETRIEVAL_THRESHOLD}")
             
             # Step 3: Model routing - select appropriate model based on query complexity
             if force_model:
@@ -653,12 +700,22 @@ class RAGPipeline:
                 model=selected_model
             )
             
-            # Step 5: Extract sources
+            # Step 5: Extract and validate sources
             sources = extract_sources_from_chunks(chunks)
+            sources = validate_sources(sources)  # URL validation
+            
+            # Step 6: Verify citations (hallucination detection)
+            verification_result = verify_citations(answer, chunks)
+            verification_summary = get_verification_summary(verification_result)
+            
+            if verification_result.suspicious_citations > 0:
+                print(f"[CITATION_CHECK] {verification_result.suspicious_citations} suspicious citations detected")
+                for issue in verification_result.overall_issues:
+                    print(f"  - {issue}")
             
             total_time = (time.time() - total_start) * 1000
             
-            # Step 6: Cache the response
+            # Step 7: Cache the response
             if self.response_cache and self.enable_response_cache:
                 self.response_cache.set(
                     question,
@@ -674,7 +731,9 @@ class RAGPipeline:
                 query_time_ms=total_time,
                 chunks_retrieved=len(chunks),
                 model_used=model_used,
-                routing_reason=routing_reason
+                routing_reason=routing_reason,
+                weak_retrieval=weak_retrieval,
+                citation_verification=verification_summary
             )
             
         except Exception as e:

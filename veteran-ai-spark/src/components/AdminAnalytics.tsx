@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Input } from "@/components/ui/input";
-import { ArrowLeft, RefreshCw, Users, MessageSquare, Eye, TrendingUp, Globe, BarChart3, Calendar, Link, Cpu, Zap, Clock, Hash, CheckCircle, XCircle, AlertCircle, MapPin, Activity, Database, Shield, Lock, Download, Trash2 } from "lucide-react";
+import { ArrowLeft, RefreshCw, Users, MessageSquare, Eye, TrendingUp, Globe, BarChart3, Calendar, Link, Cpu, Zap, Clock, Hash, CheckCircle, XCircle, AlertCircle, MapPin, Activity, Database, Shield, Lock, Download, Trash2, AlertTriangle } from "lucide-react";
 import { Link as RouterLink, useSearchParams } from "react-router-dom";
 import { useToast } from "@/hooks/use-toast";
 import USHeatMap from "@/components/USHeatMap";
@@ -1067,6 +1067,10 @@ const AdminAnalytics = () => {
                 <Calendar className="h-4 w-4" />
                 <span className="hidden sm:inline">Timeline</span>
               </TabsTrigger>
+              <TabsTrigger value="flagged" className="flex items-center gap-2">
+                <AlertTriangle className="h-4 w-4" />
+                <span className="hidden sm:inline">Flagged</span>
+              </TabsTrigger>
             </TabsList>
 
             <TabsContent value="overview" className="space-y-6">
@@ -1728,6 +1732,108 @@ const AdminAnalytics = () => {
               </Card>
 
               <TimelineView />
+            </TabsContent>
+
+            {/* Flagged Responses Tab - Hallucination Detection */}
+            <TabsContent value="flagged" className="space-y-6">
+              <Card className="bg-slate-800/50 border-slate-700">
+                <CardHeader>
+                  <CardTitle className="flex items-center space-x-2 text-orange-500">
+                    <AlertTriangle className="h-5 w-5" />
+                    <span>Flagged Responses</span>
+                  </CardTitle>
+                  <CardDescription>
+                    Responses flagged for potential hallucinations, weak retrieval, or suspicious citations.
+                    Review these entries to improve corpus quality and RAG accuracy.
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <div className="space-y-4">
+                    {/* Alert Cards */}
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                      <Card className="bg-red-900/20 border-red-700">
+                        <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+                          <CardTitle className="text-sm font-medium text-red-400">Weak Retrievals</CardTitle>
+                          <AlertTriangle className="h-4 w-4 text-red-500" />
+                        </CardHeader>
+                        <CardContent>
+                          <div className="text-2xl font-bold text-red-500">--</div>
+                          <p className="text-xs text-red-400/70">Best chunk score &lt; 0.55</p>
+                        </CardContent>
+                      </Card>
+
+                      <Card className="bg-yellow-900/20 border-yellow-700">
+                        <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+                          <CardTitle className="text-sm font-medium text-yellow-400">Suspicious Citations</CardTitle>
+                          <AlertCircle className="h-4 w-4 text-yellow-500" />
+                        </CardHeader>
+                        <CardContent>
+                          <div className="text-2xl font-bold text-yellow-500">--</div>
+                          <p className="text-xs text-yellow-400/70">Citation verification failed</p>
+                        </CardContent>
+                      </Card>
+
+                      <Card className="bg-orange-900/20 border-orange-700">
+                        <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+                          <CardTitle className="text-sm font-medium text-orange-400">Invalid URLs</CardTitle>
+                          <Link className="h-4 w-4 text-orange-500" />
+                        </CardHeader>
+                        <CardContent>
+                          <div className="text-2xl font-bold text-orange-500">--</div>
+                          <p className="text-xs text-orange-400/70">URLs not in whitelist</p>
+                        </CardContent>
+                      </Card>
+                    </div>
+
+                    {/* Info Box */}
+                    <Card className="bg-slate-700/30 border-slate-600">
+                      <CardContent className="pt-6">
+                        <div className="flex items-start gap-4">
+                          <Shield className="h-8 w-8 text-orange-500 flex-shrink-0" />
+                          <div>
+                            <h4 className="font-semibold text-orange-500 mb-2">Hallucination Prevention System</h4>
+                            <p className="text-sm text-gray-300 mb-3">
+                              The RAG pipeline now includes multiple layers of hallucination detection:
+                            </p>
+                            <ul className="text-sm text-gray-400 space-y-2">
+                              <li className="flex items-center gap-2">
+                                <CheckCircle className="h-4 w-4 text-green-500" />
+                                <span><strong>Relevance Threshold:</strong> Chunks below 0.45 similarity are rejected</span>
+                              </li>
+                              <li className="flex items-center gap-2">
+                                <CheckCircle className="h-4 w-4 text-green-500" />
+                                <span><strong>URL Validation:</strong> All source URLs verified against whitelist</span>
+                              </li>
+                              <li className="flex items-center gap-2">
+                                <CheckCircle className="h-4 w-4 text-green-500" />
+                                <span><strong>Citation Verification:</strong> Claims cross-checked with source chunks</span>
+                              </li>
+                              <li className="flex items-center gap-2">
+                                <CheckCircle className="h-4 w-4 text-green-500" />
+                                <span><strong>Explicit Boundaries:</strong> Context chunks clearly delimited for LLM</span>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </CardContent>
+                    </Card>
+
+                    {/* Placeholder for flagged entries table */}
+                    <Card className="bg-slate-700/30 border-slate-600">
+                      <CardHeader>
+                        <CardTitle className="text-sm text-gray-300">Recent Flagged Entries</CardTitle>
+                      </CardHeader>
+                      <CardContent>
+                        <div className="text-center py-8 text-gray-400">
+                          <AlertTriangle className="h-12 w-12 mx-auto mb-4 text-gray-500" />
+                          <p>Flagged response logging is now active.</p>
+                          <p className="text-sm mt-2">Responses with weak retrieval or citation issues will appear here.</p>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </div>
+                </CardContent>
+              </Card>
             </TabsContent>
           </Tabs>
         )}

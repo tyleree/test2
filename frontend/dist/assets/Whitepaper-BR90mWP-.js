@@ -1,1 +1,0 @@
-import{r as t,k as e}from"./vendor-D6rFdvLY.js";const r=()=>(t.useEffect(()=>{window.location.href="/whitepaper.pdf"},[]),e.jsx("div",{className:"min-h-screen flex items-center justify-center bg-slate-100",children:e.jsx("p",{className:"text-slate-600",children:"Loading whitepaper..."})}));export{r as default};
