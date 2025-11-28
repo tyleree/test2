@@ -671,6 +671,7 @@ def timeline():
                 COALESCE(meta::json->>'cache_hit', 'miss') as cache_mode,
                 COALESCE((meta::json->>'semantic_similarity')::float, 0) as semantic_similarity,
                 COALESCE(LEFT(meta::json->>'answer', 200), '') as answer_preview,
+                COALESCE(meta::json->>'answer', '') as full_answer,
                 COALESCE((meta::json->>'citations_count')::int, 0) as citations_count,
                 COALESCE(meta::json->'token_usage', '{}') as token_usage,
                 COALESCE(response_ms, 0) as latency_ms,
@@ -743,6 +744,7 @@ def timeline():
                 "cache_mode": entry['cache_mode'] or "miss",
                 "semantic_similarity": float(entry['semantic_similarity'] or 0),
                 "answer_preview": entry['answer_preview'] or "",
+                "full_answer": entry['full_answer'] or "",
                 "citations_count": int(entry['citations_count'] or 0),
                 "token_usage": entry['token_usage'] if isinstance(entry['token_usage'], dict) else {},
                 "latency_ms": int(entry['latency_ms'] or 0),
@@ -781,6 +783,42 @@ def timeline():
         import traceback
         traceback.print_exc()
         return jsonify({"error": "query failed", "details": str(e)}), 500
+
+
+@bp.delete("/api/analytics/timeline/<int:event_id>")
+def delete_timeline_event(event_id: int):
+    """Delete a specific question/event from the timeline"""
+    if not _admin_ok():
+        return jsonify({"error": "admin token required"}), 401
+    
+    if not hasattr(g, 'db') or g.db is None:
+        return jsonify({"error": "database not available"}), 503
+    
+    db = g.db
+    
+    try:
+        # First verify the event exists and is a chat_question
+        result = db.execute(text("""
+            SELECT id FROM events 
+            WHERE id = :event_id AND type = 'chat_question'
+        """), {"event_id": event_id}).mappings().first()
+        
+        if not result:
+            return jsonify({"error": "Event not found"}), 404
+        
+        # Delete the event
+        db.execute(text("""
+            DELETE FROM events WHERE id = :event_id
+        """), {"event_id": event_id})
+        db.commit()
+        
+        print(f"🗑️ Deleted event {event_id}")
+        return jsonify({"success": True, "deleted_id": event_id})
+        
+    except Exception as e:
+        print(f"❌ Delete event failed: {e}")
+        db.rollback()
+        return jsonify({"error": "delete failed", "details": str(e)}), 500
 
 
 @bp.get("/admin/analytics")

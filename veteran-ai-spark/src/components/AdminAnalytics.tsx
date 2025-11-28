@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Input } from "@/components/ui/input";
-import { ArrowLeft, RefreshCw, Users, MessageSquare, Eye, TrendingUp, Globe, BarChart3, Calendar, Link, Cpu, Zap, Clock, Hash, CheckCircle, XCircle, AlertCircle, MapPin, Activity, Database, Shield, Lock } from "lucide-react";
+import { ArrowLeft, RefreshCw, Users, MessageSquare, Eye, TrendingUp, Globe, BarChart3, Calendar, Link, Cpu, Zap, Clock, Hash, CheckCircle, XCircle, AlertCircle, MapPin, Activity, Database, Shield, Lock, Download, Trash2 } from "lucide-react";
 import { Link as RouterLink, useSearchParams } from "react-router-dom";
 import { useToast } from "@/hooks/use-toast";
 import USHeatMap from "@/components/USHeatMap";
@@ -18,6 +18,7 @@ interface TimelineEntry {
   cache_mode: string;
   semantic_similarity?: number;
   answer_preview: string;
+  full_answer?: string;
   citations_count: number;
   token_usage: {
     model_big?: string;
@@ -152,24 +153,24 @@ const TimelineView = () => {
       {/* Timeline Stats */}
       {timelineData?.stats && (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-          <Card>
+          <Card className="bg-slate-800/50 border-slate-700">
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
               <CardTitle className="text-sm font-medium">Total Questions</CardTitle>
-              <MessageSquare className="h-4 w-4 text-muted-foreground" />
+              <MessageSquare className="h-4 w-4 text-orange-500" />
             </CardHeader>
             <CardContent>
-              <div className="text-2xl font-bold">{timelineData.stats.total_questions}</div>
+              <div className="text-2xl font-bold text-orange-500">{timelineData.stats.total_questions}</div>
               <p className="text-xs text-muted-foreground">Last 24 hours</p>
             </CardContent>
           </Card>
 
-          <Card>
+          <Card className="bg-slate-800/50 border-slate-700">
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
               <CardTitle className="text-sm font-medium">Cache Hit Rate</CardTitle>
-              <Zap className="h-4 w-4 text-muted-foreground" />
+              <Zap className="h-4 w-4 text-orange-500" />
             </CardHeader>
             <CardContent>
-              <div className="text-2xl font-bold text-green-600">
+              <div className="text-2xl font-bold text-orange-500">
                 {timelineData.stats.cache_hit_rate?.toFixed(1) || 0}%
               </div>
               <p className="text-xs text-muted-foreground">
@@ -178,26 +179,26 @@ const TimelineView = () => {
             </CardContent>
           </Card>
 
-          <Card>
+          <Card className="bg-slate-800/50 border-slate-700">
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
               <CardTitle className="text-sm font-medium">Avg Latency</CardTitle>
-              <Clock className="h-4 w-4 text-muted-foreground" />
+              <Clock className="h-4 w-4 text-orange-500" />
             </CardHeader>
             <CardContent>
-              <div className="text-2xl font-bold text-blue-600">
+              <div className="text-2xl font-bold text-orange-500">
                 {Math.round(timelineData.stats.avg_latency || 0)}ms
               </div>
               <p className="text-xs text-muted-foreground">Response time</p>
             </CardContent>
           </Card>
 
-          <Card>
+          <Card className="bg-slate-800/50 border-slate-700">
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
               <CardTitle className="text-sm font-medium">Tokens Used</CardTitle>
-              <Hash className="h-4 w-4 text-muted-foreground" />
+              <Hash className="h-4 w-4 text-orange-500" />
             </CardHeader>
             <CardContent>
-              <div className="text-2xl font-bold text-purple-600">
+              <div className="text-2xl font-bold text-orange-500">
                 {formatTokens(timelineData.stats.total_tokens_used)}
               </div>
               <p className="text-xs text-muted-foreground">Total consumption</p>
@@ -337,50 +338,142 @@ const TimelineView = () => {
         </CardContent>
       </Card>
 
-      {/* Question Details Modal/Dialog would go here */}
+      {/* Question Details Modal/Dialog */}
       {selectedQuestion && (
-        <Card className="mt-4">
-          <CardHeader>
-            <CardTitle>Question Details</CardTitle>
-            <Button
-              variant="ghost"
-              size="sm"
-              onClick={() => setSelectedQuestion(null)}
-              className="absolute top-4 right-4"
-            >
-              ✕
-            </Button>
+        <Card className="mt-4 bg-slate-700/50 border-slate-600">
+          <CardHeader className="relative">
+            <div className="flex items-center justify-between">
+              <CardTitle className="text-orange-500">Question Details</CardTitle>
+              <div className="flex items-center gap-2">
+                <Button
+                  variant="outline"
+                  size="sm"
+                  onClick={() => {
+                    const data = {
+                      question: selectedQuestion.question,
+                      answer: selectedQuestion.full_answer || selectedQuestion.answer_preview,
+                      cache_mode: selectedQuestion.cache_mode,
+                      latency_ms: selectedQuestion.latency_ms,
+                      token_usage: selectedQuestion.token_usage,
+                      citations_count: selectedQuestion.citations_count,
+                      timestamp: selectedQuestion.timestamp,
+                      user_ip: selectedQuestion.user_ip
+                    };
+                    const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+                    const url = URL.createObjectURL(blob);
+                    const a = document.createElement('a');
+                    a.href = url;
+                    a.download = `question-${selectedQuestion.id}.json`;
+                    a.click();
+                    URL.revokeObjectURL(url);
+                    toast({
+                      title: "Downloaded",
+                      description: "Question data exported successfully"
+                    });
+                  }}
+                  className="border-orange-500/50 text-orange-500 hover:bg-orange-500/10"
+                >
+                  <Download className="h-4 w-4 mr-1" />
+                  Download
+                </Button>
+                <Button
+                  variant="outline"
+                  size="sm"
+                  onClick={async () => {
+                    if (!window.confirm('Are you sure you want to delete this question data?')) return;
+                    try {
+                      const response = await fetch(`/api/analytics/timeline/${selectedQuestion.id}`, {
+                        method: 'DELETE',
+                        headers: {
+                          'X-Admin-Token': new URLSearchParams(window.location.search).get('token') || ''
+                        }
+                      });
+                      if (response.ok) {
+                        toast({
+                          title: "Deleted",
+                          description: "Question data deleted successfully"
+                        });
+                        setSelectedQuestion(null);
+                        fetchTimeline(filter === 'all' ? undefined : filter);
+                      } else {
+                        throw new Error('Delete failed');
+                      }
+                    } catch (error) {
+                      toast({
+                        title: "Error",
+                        description: "Failed to delete question data",
+                        variant: "destructive"
+                      });
+                    }
+                  }}
+                  className="border-red-500/50 text-red-500 hover:bg-red-500/10"
+                >
+                  <Trash2 className="h-4 w-4 mr-1" />
+                  Delete
+                </Button>
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  onClick={() => setSelectedQuestion(null)}
+                  className="text-slate-400 hover:text-white"
+                >
+                  ✕
+                </Button>
+              </div>
+            </div>
           </CardHeader>
           <CardContent className="space-y-4">
-            <div>
-              <label className="font-medium">Question:</label>
-              <p className="mt-1">{selectedQuestion.question}</p>
+            <div className="bg-slate-800/50 rounded-lg p-4">
+              <label className="font-medium text-orange-500 block mb-2">Question:</label>
+              <p className="text-white">{selectedQuestion.question}</p>
             </div>
-            <div>
-              <label className="font-medium">Answer Preview:</label>
-              <p className="mt-1 text-sm text-muted-foreground">{selectedQuestion.answer_preview}</p>
+            <div className="bg-slate-800/50 rounded-lg p-4">
+              <label className="font-medium text-orange-500 block mb-2">Full Answer:</label>
+              <p className="text-slate-300 whitespace-pre-wrap max-h-96 overflow-y-auto">
+                {selectedQuestion.full_answer || selectedQuestion.answer_preview || 'No answer available'}
+              </p>
             </div>
-            <div className="grid grid-cols-2 gap-4">
-              <div>
-                <label className="font-medium">Cache Mode:</label>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              <div className="bg-slate-800/50 rounded-lg p-3">
+                <label className="font-medium text-orange-500 text-sm block mb-1">Cache Mode</label>
                 <div className="mt-1">{getCacheModeBadge(selectedQuestion.cache_mode)}</div>
               </div>
-              <div>
-                <label className="font-medium">Latency:</label>
-                <p className="mt-1">{selectedQuestion.latency_ms}ms</p>
+              <div className="bg-slate-800/50 rounded-lg p-3">
+                <label className="font-medium text-orange-500 text-sm block mb-1">Latency</label>
+                <p className="text-white font-semibold">{selectedQuestion.latency_ms}ms</p>
+              </div>
+              <div className="bg-slate-800/50 rounded-lg p-3">
+                <label className="font-medium text-orange-500 text-sm block mb-1">Citations</label>
+                <p className="text-white font-semibold">{selectedQuestion.citations_count}</p>
+              </div>
+              <div className="bg-slate-800/50 rounded-lg p-3">
+                <label className="font-medium text-orange-500 text-sm block mb-1">User IP</label>
+                <p className="text-white font-mono text-sm">{selectedQuestion.user_ip}</p>
               </div>
             </div>
-            <div>
-              <label className="font-medium">Token Usage:</label>
-              <div className="mt-1 text-sm space-y-1">
-                <div>Total: {formatTokens(selectedQuestion.token_usage?.total_tokens || 0)}</div>
+            <div className="bg-slate-800/50 rounded-lg p-4">
+              <label className="font-medium text-orange-500 block mb-2">Token Usage:</label>
+              <div className="grid grid-cols-3 gap-4 text-sm">
+                <div>
+                  <span className="text-slate-400">Total:</span>
+                  <span className="text-white ml-2 font-semibold">{formatTokens(selectedQuestion.token_usage?.total_tokens || 0)}</span>
+                </div>
                 {selectedQuestion.token_usage?.tokens_big && (
-                  <div>Big Model: {formatTokens(selectedQuestion.token_usage.tokens_big)}</div>
+                  <div>
+                    <span className="text-slate-400">Big Model:</span>
+                    <span className="text-white ml-2 font-semibold">{formatTokens(selectedQuestion.token_usage.tokens_big)}</span>
+                  </div>
                 )}
                 {selectedQuestion.token_usage?.tokens_small && (
-                  <div>Small Model: {formatTokens(selectedQuestion.token_usage.tokens_small)}</div>
+                  <div>
+                    <span className="text-slate-400">Small Model:</span>
+                    <span className="text-white ml-2 font-semibold">{formatTokens(selectedQuestion.token_usage.tokens_small)}</span>
+                  </div>
                 )}
               </div>
+            </div>
+            <div className="text-xs text-slate-500">
+              Timestamp: {formatTimestamp(selectedQuestion.timestamp)} | ID: {selectedQuestion.id}
             </div>
           </CardContent>
         </Card>
