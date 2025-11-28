@@ -416,6 +416,22 @@ def infer_base_url(heading: str, content: str = "") -> str:
         ('schizophren', 'https://veteransbenefitskb.com/mental'),
         ('mst', 'https://veteransbenefitskb.com/mental'),
         ('military sexual trauma', 'https://veteransbenefitskb.com/mental'),
+        # Mental health rating criteria (key phrases from VA rating schedule)
+        ('occupational and social impairment', 'https://veteransbenefitskb.com/mental'),
+        ('flattened affect', 'https://veteransbenefitskb.com/mental'),
+        ('panic attacks', 'https://veteransbenefitskb.com/mental'),
+        ('impaired judgment', 'https://veteransbenefitskb.com/mental'),
+        ('impaired abstract thinking', 'https://veteransbenefitskb.com/mental'),
+        ('disturbances of motivation and mood', 'https://veteransbenefitskb.com/mental'),
+        ('suicidal ideation', 'https://veteransbenefitskb.com/mental'),
+        ('obsessional rituals', 'https://veteransbenefitskb.com/mental'),
+        ('spatial disorientation', 'https://veteransbenefitskb.com/mental'),
+        ('persistent delusions', 'https://veteransbenefitskb.com/mental'),
+        ('gross impairment', 'https://veteransbenefitskb.com/mental'),
+        ('intermittent inability to perform', 'https://veteransbenefitskb.com/mental'),
+        ('reduced reliability and productivity', 'https://veteransbenefitskb.com/mental'),
+        ('total occupational and social', 'https://veteransbenefitskb.com/mental'),
+        ('deficiencies in most areas', 'https://veteransbenefitskb.com/mental'),
         
         # Respiratory
         ('respiratory', 'https://veteransbenefitskb.com/airsystem'),
@@ -526,19 +542,20 @@ def infer_base_url(heading: str, content: str = "") -> str:
         if keyword in heading_lower:
             return url
     
-    # Then try to extract URL from content
+    # Check content for keywords BEFORE extracting URLs
+    # This prevents internal links (like fiduciary in mental health content) from being used as source
+    for keyword, url in url_mapping:
+        if keyword in content_lower:
+            return url
+    
+    # Only extract URL from content if no keyword matches (last resort)
     if content:
         extracted_url = extract_url_from_content(content)
         if extracted_url and 'veteransbenefitskb.com/' in extracted_url:
             # Make sure it's not just the homepage or navigation
             path = extracted_url.split('veteransbenefitskb.com/')[-1]
-            if path and path not in ['', '#', 'cart', 'mission', 'about', '#ds', '#ee']:
+            if path and path not in ['', '#', 'cart', 'mission', 'about', '#ds', '#ee', 'fiduciary']:
                 return extracted_url
-    
-    # Check content for keywords as last resort
-    for keyword, url in url_mapping:
-        if keyword in content_lower:
-            return url
     
     return 'https://veteransbenefitskb.com'
 
