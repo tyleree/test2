@@ -1,15 +1,14 @@
-import { useEffect, useState, Suspense, lazy } from "react";
+import { useEffect, useState, Suspense } from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
-import { ArrowLeft, RefreshCw, Users, MessageSquare, Eye, TrendingUp, Globe, BarChart3, Calendar, Link, Cpu, Zap, Clock, Hash, CheckCircle, XCircle, AlertCircle } from "lucide-react";
+import { Input } from "@/components/ui/input";
+import { ArrowLeft, RefreshCw, Users, MessageSquare, Eye, TrendingUp, Globe, BarChart3, Calendar, Link, Cpu, Zap, Clock, Hash, CheckCircle, XCircle, AlertCircle, MapPin, Activity, Database, Shield, Lock } from "lucide-react";
 import { Link as RouterLink, useSearchParams } from "react-router-dom";
 import { useToast } from "@/hooks/use-toast";
-
-// USHeatMap removed due to CSP issues in production
-// const USHeatMap = lazy(() => import("@/components/USHeatMap"));
+import USHeatMap from "@/components/USHeatMap";
 
 interface TimelineEntry {
   id: number;
@@ -390,6 +389,293 @@ const TimelineView = () => {
   );
 };
 
+// Cache Metrics Tab Component
+interface CacheMetrics {
+  exact_hits: number;
+  exact_misses: number;
+  semantic_hits: number;
+  semantic_misses: number;
+  db_hits: number;
+  db_writes: number;
+  db_errors: number;
+  total_hits: number;
+  hit_rate: string;
+  memory_cache_size: number;
+  semantic_cache_size: number;
+  database_cache_size: number;
+  database_available: boolean;
+  max_memory_entries: number;
+  max_db_entries: number;
+  ttl_hours: number;
+}
+
+const CacheMetricsTab = ({ adminToken }: { adminToken: string | null }) => {
+  const [cacheMetrics, setCacheMetrics] = useState<CacheMetrics | null>(null);
+  const [loading, setLoading] = useState(true);
+  const { toast } = useToast();
+
+  const fetchCacheMetrics = async () => {
+    try {
+      const response = await fetch('/cache/metrics', {
+        headers: adminToken ? { 'X-Admin-Token': adminToken } : {}
+      });
+      if (response.ok) {
+        const data = await response.json();
+        setCacheMetrics(data);
+      }
+    } catch (error) {
+      console.error('Failed to fetch cache metrics:', error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const handleClearCache = async () => {
+    if (!adminToken) {
+      toast({ title: "Error", description: "Admin token required", variant: "destructive" });
+      return;
+    }
+    
+    try {
+      const response = await fetch('/cache/clear', {
+        method: 'POST',
+        headers: { 'X-Admin-Token': adminToken }
+      });
+      
+      if (response.ok) {
+        toast({ title: "Success", description: "Cache cleared successfully" });
+        fetchCacheMetrics();
+      } else {
+        toast({ title: "Error", description: "Failed to clear cache", variant: "destructive" });
+      }
+    } catch (error) {
+      toast({ title: "Error", description: "Failed to clear cache", variant: "destructive" });
+    }
+  };
+
+  useEffect(() => {
+    fetchCacheMetrics();
+    const interval = setInterval(fetchCacheMetrics, 30000);
+    return () => clearInterval(interval);
+  }, []);
+
+  if (loading) {
+    return (
+      <TabsContent value="cache" className="space-y-6">
+        <div className="flex items-center justify-center py-8">
+          <RefreshCw className="h-6 w-6 animate-spin mr-2" />
+          Loading cache metrics...
+        </div>
+      </TabsContent>
+    );
+  }
+
+  return (
+    <TabsContent value="cache" className="space-y-6">
+      {/* Cache Overview Cards */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <Card>
+          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+            <CardTitle className="text-sm font-medium">Cache Hit Rate</CardTitle>
+            <Zap className="h-4 w-4 text-muted-foreground" />
+          </CardHeader>
+          <CardContent>
+            <div className="text-2xl font-bold text-green-600">
+              {cacheMetrics?.hit_rate || '0%'}
+            </div>
+            <p className="text-xs text-muted-foreground">
+              {cacheMetrics?.total_hits || 0} total hits
+            </p>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+            <CardTitle className="text-sm font-medium">Exact Hits</CardTitle>
+            <CheckCircle className="h-4 w-4 text-muted-foreground" />
+          </CardHeader>
+          <CardContent>
+            <div className="text-2xl font-bold text-blue-600">
+              {cacheMetrics?.exact_hits || 0}
+            </div>
+            <p className="text-xs text-muted-foreground">
+              {cacheMetrics?.exact_misses || 0} misses
+            </p>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+            <CardTitle className="text-sm font-medium">Semantic Hits</CardTitle>
+            <Activity className="h-4 w-4 text-muted-foreground" />
+          </CardHeader>
+          <CardContent>
+            <div className="text-2xl font-bold text-purple-600">
+              {cacheMetrics?.semantic_hits || 0}
+            </div>
+            <p className="text-xs text-muted-foreground">
+              {cacheMetrics?.semantic_misses || 0} misses
+            </p>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+            <CardTitle className="text-sm font-medium">Database Hits</CardTitle>
+            <Database className="h-4 w-4 text-muted-foreground" />
+          </CardHeader>
+          <CardContent>
+            <div className="text-2xl font-bold text-orange-600">
+              {cacheMetrics?.db_hits || 0}
+            </div>
+            <p className="text-xs text-muted-foreground">
+              {cacheMetrics?.db_writes || 0} writes, {cacheMetrics?.db_errors || 0} errors
+            </p>
+          </CardContent>
+        </Card>
+      </div>
+
+      {/* Cache Storage Details */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <Card>
+          <CardHeader>
+            <CardTitle className="flex items-center space-x-2">
+              <Database className="h-5 w-5" />
+              <span>Cache Storage</span>
+            </CardTitle>
+            <CardDescription>Memory and database cache utilization</CardDescription>
+          </CardHeader>
+          <CardContent className="space-y-4">
+            <div className="space-y-3">
+              <div className="flex justify-between items-center">
+                <span className="font-medium">Memory Cache (L1)</span>
+                <Badge variant="outline">
+                  {cacheMetrics?.memory_cache_size || 0} / {cacheMetrics?.max_memory_entries || 1000} entries
+                </Badge>
+              </div>
+              <div className="w-full bg-muted rounded-full h-2">
+                <div 
+                  className="bg-blue-600 h-2 rounded-full transition-all" 
+                  style={{ width: `${Math.min(((cacheMetrics?.memory_cache_size || 0) / (cacheMetrics?.max_memory_entries || 1000)) * 100, 100)}%` }}
+                />
+              </div>
+            </div>
+
+            <div className="space-y-3">
+              <div className="flex justify-between items-center">
+                <span className="font-medium">Semantic Entries</span>
+                <Badge variant="outline">
+                  {cacheMetrics?.semantic_cache_size || 0} entries
+                </Badge>
+              </div>
+              <div className="w-full bg-muted rounded-full h-2">
+                <div 
+                  className="bg-purple-600 h-2 rounded-full transition-all" 
+                  style={{ width: `${Math.min(((cacheMetrics?.semantic_cache_size || 0) / (cacheMetrics?.max_memory_entries || 1000)) * 100, 100)}%` }}
+                />
+              </div>
+            </div>
+
+            <div className="space-y-3">
+              <div className="flex justify-between items-center">
+                <span className="font-medium">Database Cache (L2)</span>
+                <Badge variant={cacheMetrics?.database_available ? "default" : "secondary"}>
+                  {cacheMetrics?.database_available ? `${cacheMetrics?.database_cache_size || 0} entries` : 'Unavailable'}
+                </Badge>
+              </div>
+              {cacheMetrics?.database_available && (
+                <div className="w-full bg-muted rounded-full h-2">
+                  <div 
+                    className="bg-green-600 h-2 rounded-full transition-all" 
+                    style={{ width: `${Math.min(((cacheMetrics?.database_cache_size || 0) / (cacheMetrics?.max_db_entries || 10000)) * 100, 100)}%` }}
+                  />
+                </div>
+              )}
+            </div>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader>
+            <CardTitle className="flex items-center space-x-2">
+              <Clock className="h-5 w-5" />
+              <span>Cache Configuration</span>
+            </CardTitle>
+            <CardDescription>Current cache settings and actions</CardDescription>
+          </CardHeader>
+          <CardContent className="space-y-4">
+            <div className="flex justify-between items-center">
+              <span className="font-medium">TTL (Time to Live)</span>
+              <Badge variant="outline">{cacheMetrics?.ttl_hours || 24} hours</Badge>
+            </div>
+            <div className="flex justify-between items-center">
+              <span className="font-medium">Max Memory Entries</span>
+              <Badge variant="outline">{cacheMetrics?.max_memory_entries || 1000}</Badge>
+            </div>
+            <div className="flex justify-between items-center">
+              <span className="font-medium">Max Database Entries</span>
+              <Badge variant="outline">{cacheMetrics?.max_db_entries || 10000}</Badge>
+            </div>
+            <div className="flex justify-between items-center">
+              <span className="font-medium">Database Available</span>
+              <Badge variant={cacheMetrics?.database_available ? "default" : "destructive"}>
+                {cacheMetrics?.database_available ? 'Yes' : 'No'}
+              </Badge>
+            </div>
+            
+            <div className="pt-4 border-t">
+              <Button 
+                variant="destructive" 
+                className="w-full"
+                onClick={handleClearCache}
+              >
+                <XCircle className="h-4 w-4 mr-2" />
+                Clear All Caches
+              </Button>
+              <p className="text-xs text-muted-foreground mt-2 text-center">
+                This will clear both memory and database caches
+              </p>
+            </div>
+          </CardContent>
+        </Card>
+      </div>
+
+      {/* Cache Performance Insights */}
+      <Card>
+        <CardHeader>
+          <CardTitle>Cache Performance Insights</CardTitle>
+          <CardDescription>Understanding your cache efficiency</CardDescription>
+        </CardHeader>
+        <CardContent>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div className="text-center p-4 bg-muted rounded-lg">
+              <div className="text-2xl font-bold text-primary">
+                {cacheMetrics?.exact_hits || 0}
+              </div>
+              <p className="text-sm text-muted-foreground">Exact Query Matches</p>
+              <p className="text-xs text-muted-foreground mt-1">Fastest response time</p>
+            </div>
+            <div className="text-center p-4 bg-muted rounded-lg">
+              <div className="text-2xl font-bold text-primary">
+                {cacheMetrics?.semantic_hits || 0}
+              </div>
+              <p className="text-sm text-muted-foreground">Semantic Matches</p>
+              <p className="text-xs text-muted-foreground mt-1">Similar question detection</p>
+            </div>
+            <div className="text-center p-4 bg-muted rounded-lg">
+              <div className="text-2xl font-bold text-primary">
+                {cacheMetrics?.db_hits || 0}
+              </div>
+              <p className="text-sm text-muted-foreground">Database Cache Hits</p>
+              <p className="text-xs text-muted-foreground mt-1">Persisted responses</p>
+            </div>
+          </div>
+        </CardContent>
+      </Card>
+    </TabsContent>
+  );
+};
+
 interface AnalyticsData {
   totals: {
     pageviews: number;
@@ -541,24 +827,37 @@ const AdminAnalytics = () => {
 
   if (!isAuthenticated) {
     return (
-      <div className="min-h-screen flex flex-col items-center justify-center bg-background">
-        <div className="text-center space-y-4 max-w-md">
-          <h1 className="text-3xl font-bold text-destructive">🔒 Admin Access Required</h1>
-          <p className="text-muted-foreground">
-            This page requires a valid admin token. Please contact the administrator for access.
-          </p>
-          <p className="text-sm text-muted-foreground">
-            Access URL format: <code>/admin/analytics?token=YOUR_TOKEN</code>
-          </p>
-          <div className="mt-6">
-            <Button asChild variant="outline">
-              <RouterLink to="/">
-                <ArrowLeft className="h-4 w-4 mr-2" />
-                Back to Home
-              </RouterLink>
-            </Button>
-          </div>
-        </div>
+      <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+        <Card className="w-full max-w-md mx-4 border-slate-700 bg-slate-800/50 backdrop-blur">
+          <CardHeader className="text-center space-y-4">
+            <div className="mx-auto w-16 h-16 bg-gradient-to-br from-amber-500 to-orange-600 rounded-full flex items-center justify-center">
+              <Shield className="h-8 w-8 text-white" />
+            </div>
+            <CardTitle className="text-2xl text-white">Admin Access Required</CardTitle>
+            <CardDescription className="text-slate-400">
+              This dashboard requires authentication to access sensitive analytics data.
+            </CardDescription>
+          </CardHeader>
+          <CardContent className="space-y-6">
+            <div className="space-y-2">
+              <div className="flex items-center gap-2 text-sm text-slate-400">
+                <Lock className="h-4 w-4" />
+                <span>Access URL format:</span>
+              </div>
+              <code className="block p-3 bg-slate-900/50 rounded-lg text-amber-400 text-sm font-mono">
+                /admin/analytics?token=YOUR_TOKEN
+              </code>
+            </div>
+            <div className="pt-4 border-t border-slate-700">
+              <Button asChild variant="outline" className="w-full border-slate-600 hover:bg-slate-700">
+                <RouterLink to="/">
+                  <ArrowLeft className="h-4 w-4 mr-2" />
+                  Back to Home
+                </RouterLink>
+              </Button>
+            </div>
+          </CardContent>
+        </Card>
       </div>
     );
   }
@@ -598,55 +897,83 @@ const AdminAnalytics = () => {
   }
 
   return (
-    <div className="min-h-screen bg-background py-8 px-4">
-      <div className="max-w-7xl mx-auto">
-        {/* Header */}
-        <div className="flex items-center justify-between mb-8">
-          <div className="flex items-center space-x-4">
-            <Button asChild variant="ghost">
+    <div className="min-h-screen bg-gradient-to-b from-slate-50 to-slate-100 dark:from-slate-950 dark:to-slate-900">
+      {/* Top Navigation Bar */}
+      <div className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+        <div className="max-w-7xl mx-auto flex h-16 items-center justify-between px-4">
+          <div className="flex items-center gap-4">
+            <Button asChild variant="ghost" size="sm">
               <RouterLink to="/">
                 <ArrowLeft className="h-4 w-4 mr-2" />
                 Home
               </RouterLink>
             </Button>
-            <div>
-              <h1 className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-accent to-primary">
-                📊 Admin Analytics
-              </h1>
-              <p className="text-muted-foreground">Comprehensive site analytics and insights</p>
+            <div className="hidden md:flex items-center gap-2 pl-4 border-l">
+              <div className="h-8 w-8 rounded-lg bg-gradient-to-br from-amber-500 to-orange-600 flex items-center justify-center">
+                <BarChart3 className="h-4 w-4 text-white" />
+              </div>
+              <div>
+                <h1 className="text-lg font-semibold">Admin Analytics</h1>
+                <p className="text-xs text-muted-foreground">Veterans Benefits AI</p>
+              </div>
             </div>
           </div>
           
-          <div className="flex items-center space-x-2">
+          <div className="flex items-center gap-3">
             <select
               value={days}
               onChange={(e) => setDays(Number(e.target.value))}
-              className="px-3 py-2 border rounded-md bg-background"
+              className="h-9 px-3 text-sm border rounded-md bg-background focus:outline-none focus:ring-2 focus:ring-ring"
             >
               <option value={7}>Last 7 days</option>
               <option value={30}>Last 30 days</option>
               <option value={90}>Last 90 days</option>
               <option value={365}>Last year</option>
             </select>
-            <Button onClick={handleRefresh} variant="outline" disabled={loading}>
-              <RefreshCw className={`h-4 w-4 mr-2 ${loading ? 'animate-spin' : ''}`} />
-              Refresh
+            <Button onClick={handleRefresh} variant="outline" size="sm" disabled={loading}>
+              <RefreshCw className={`h-4 w-4 ${loading ? 'animate-spin' : ''}`} />
             </Button>
-            <Badge variant="secondary">
-              Admin Access
+            <Badge className="bg-gradient-to-r from-amber-500 to-orange-600 text-white border-0">
+              <Shield className="h-3 w-3 mr-1" />
+              Admin
             </Badge>
           </div>
         </div>
+      </div>
+
+      <div className="max-w-7xl mx-auto py-8 px-4">
 
         {analytics && (
           <Tabs defaultValue="overview" className="space-y-6">
-            <TabsList className="grid w-full grid-cols-6">
-              <TabsTrigger value="overview">Overview</TabsTrigger>
-              <TabsTrigger value="locations">Locations</TabsTrigger>
-              <TabsTrigger value="traffic">Traffic</TabsTrigger>
-              <TabsTrigger value="tokens">Tokens</TabsTrigger>
-              <TabsTrigger value="performance">Performance</TabsTrigger>
-              <TabsTrigger value="timeline">Timeline</TabsTrigger>
+            <TabsList className="grid w-full grid-cols-7 h-12">
+              <TabsTrigger value="overview" className="flex items-center gap-2">
+                <BarChart3 className="h-4 w-4" />
+                <span className="hidden sm:inline">Overview</span>
+              </TabsTrigger>
+              <TabsTrigger value="locations" className="flex items-center gap-2">
+                <MapPin className="h-4 w-4" />
+                <span className="hidden sm:inline">Locations</span>
+              </TabsTrigger>
+              <TabsTrigger value="traffic" className="flex items-center gap-2">
+                <Activity className="h-4 w-4" />
+                <span className="hidden sm:inline">Traffic</span>
+              </TabsTrigger>
+              <TabsTrigger value="tokens" className="flex items-center gap-2">
+                <Zap className="h-4 w-4" />
+                <span className="hidden sm:inline">Tokens</span>
+              </TabsTrigger>
+              <TabsTrigger value="performance" className="flex items-center gap-2">
+                <TrendingUp className="h-4 w-4" />
+                <span className="hidden sm:inline">Performance</span>
+              </TabsTrigger>
+              <TabsTrigger value="cache" className="flex items-center gap-2">
+                <Database className="h-4 w-4" />
+                <span className="hidden sm:inline">Cache</span>
+              </TabsTrigger>
+              <TabsTrigger value="timeline" className="flex items-center gap-2">
+                <Calendar className="h-4 w-4" />
+                <span className="hidden sm:inline">Timeline</span>
+              </TabsTrigger>
             </TabsList>
 
             <TabsContent value="overview" className="space-y-6">
@@ -1250,6 +1577,8 @@ const AdminAnalytics = () => {
               ) : null}
             </TabsContent>
 
+            <CacheMetricsTab adminToken={adminToken} />
+
             <TabsContent value="timeline" className="space-y-6">
               <Card>
                 <CardHeader>
@@ -1304,9 +1633,7 @@ const AdminAnalytics = () => {
                   </Table>
                 </CardContent>
               </Card>
-            </TabsContent>
 
-            <TabsContent value="timeline" className="space-y-6">
               <TimelineView />
             </TabsContent>
           </Tabs>
