@@ -208,40 +208,48 @@ const TimelineView = () => {
       )}
 
       {/* Filters */}
-      <Card>
+      <Card className="bg-gray-800/50 border-gray-700">
         <CardHeader>
-          <CardTitle>Question Timeline</CardTitle>
-          <CardDescription>
+          <CardTitle className="text-gray-200">Question Timeline</CardTitle>
+          <CardDescription className="text-gray-400">
             Comprehensive view of all questions, cache performance, and token usage
           </CardDescription>
         </CardHeader>
         <CardContent>
           <div className="flex gap-2 mb-4">
             <Button
-              variant={filter === 'all' ? 'default' : 'outline'}
               size="sm"
               onClick={() => setFilter('all')}
+              className={filter === 'all' 
+                ? 'bg-orange-600 hover:bg-orange-700 text-white' 
+                : 'bg-gray-700 hover:bg-gray-600 text-gray-300 border border-gray-600'}
             >
               All Questions
             </Button>
             <Button
-              variant={filter === 'exact_hit' ? 'default' : 'outline'}
               size="sm"
               onClick={() => setFilter('exact_hit')}
+              className={filter === 'exact_hit' 
+                ? 'bg-orange-600 hover:bg-orange-700 text-white' 
+                : 'bg-gray-700 hover:bg-gray-600 text-gray-300 border border-gray-600'}
             >
               Exact Hits
             </Button>
             <Button
-              variant={filter === 'semantic_hit' ? 'default' : 'outline'}
               size="sm"
               onClick={() => setFilter('semantic_hit')}
+              className={filter === 'semantic_hit' 
+                ? 'bg-orange-600 hover:bg-orange-700 text-white' 
+                : 'bg-gray-700 hover:bg-gray-600 text-gray-300 border border-gray-600'}
             >
               Semantic Hits
             </Button>
             <Button
-              variant={filter === 'miss' ? 'default' : 'outline'}
               size="sm"
               onClick={() => setFilter('miss')}
+              className={filter === 'miss' 
+                ? 'bg-orange-600 hover:bg-orange-700 text-white' 
+                : 'bg-gray-700 hover:bg-gray-600 text-gray-300 border border-gray-600'}
             >
               Cache Misses
             </Button>
@@ -567,61 +575,61 @@ const CacheMetricsTab = ({ adminToken }: { adminToken: string | null }) => {
     <TabsContent value="cache" className="space-y-6">
       {/* Cache Overview Cards */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <Card>
+        <Card className="bg-gray-800/50 border-gray-700">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">Cache Hit Rate</CardTitle>
-            <Zap className="h-4 w-4 text-muted-foreground" />
+            <CardTitle className="text-sm font-medium text-gray-300">Cache Hit Rate</CardTitle>
+            <Zap className="h-4 w-4 text-orange-500" />
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold text-green-600">
+            <div className="text-2xl font-bold text-orange-500">
               {cacheMetrics?.hit_rate || '0%'}
             </div>
-            <p className="text-xs text-muted-foreground">
+            <p className="text-xs text-gray-400">
               {cacheMetrics?.total_hits || 0} total hits
             </p>
           </CardContent>
         </Card>
 
-        <Card>
+        <Card className="bg-gray-800/50 border-gray-700">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">Exact Hits</CardTitle>
-            <CheckCircle className="h-4 w-4 text-muted-foreground" />
+            <CardTitle className="text-sm font-medium text-gray-300">Exact Hits</CardTitle>
+            <CheckCircle className="h-4 w-4 text-orange-500" />
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold text-blue-600">
+            <div className="text-2xl font-bold text-orange-500">
               {cacheMetrics?.exact_hits || 0}
             </div>
-            <p className="text-xs text-muted-foreground">
+            <p className="text-xs text-gray-400">
               {cacheMetrics?.exact_misses || 0} misses
             </p>
           </CardContent>
         </Card>
 
-        <Card>
+        <Card className="bg-gray-800/50 border-gray-700">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">Semantic Hits</CardTitle>
-            <Activity className="h-4 w-4 text-muted-foreground" />
+            <CardTitle className="text-sm font-medium text-gray-300">Semantic Hits</CardTitle>
+            <Activity className="h-4 w-4 text-orange-500" />
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold text-purple-600">
+            <div className="text-2xl font-bold text-orange-500">
               {cacheMetrics?.semantic_hits || 0}
             </div>
-            <p className="text-xs text-muted-foreground">
+            <p className="text-xs text-gray-400">
               {cacheMetrics?.semantic_misses || 0} misses
             </p>
           </CardContent>
         </Card>
 
-        <Card>
+        <Card className="bg-gray-800/50 border-gray-700">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">Database Hits</CardTitle>
-            <Database className="h-4 w-4 text-muted-foreground" />
+            <CardTitle className="text-sm font-medium text-gray-300">Database Hits</CardTitle>
+            <Database className="h-4 w-4 text-orange-500" />
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold text-orange-600">
+            <div className="text-2xl font-bold text-orange-500">
               {cacheMetrics?.db_hits || 0}
             </div>
-            <p className="text-xs text-muted-foreground">
+            <p className="text-xs text-gray-400">
               {cacheMetrics?.db_writes || 0} writes, {cacheMetrics?.db_errors || 0} errors
             </p>
           </CardContent>
@@ -630,25 +638,25 @@ const CacheMetricsTab = ({ adminToken }: { adminToken: string | null }) => {
 
       {/* Cache Storage Details */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        <Card>
+        <Card className="bg-gray-800/50 border-gray-700">
           <CardHeader>
-            <CardTitle className="flex items-center space-x-2">
-              <Database className="h-5 w-5" />
+            <CardTitle className="flex items-center space-x-2 text-gray-200">
+              <Database className="h-5 w-5 text-orange-500" />
               <span>Cache Storage</span>
             </CardTitle>
-            <CardDescription>Memory and database cache utilization</CardDescription>
+            <CardDescription className="text-gray-400">Memory and database cache utilization</CardDescription>
           </CardHeader>
           <CardContent className="space-y-4">
             <div className="space-y-3">
               <div className="flex justify-between items-center">
-                <span className="font-medium">Memory Cache (L1)</span>
-                <Badge variant="outline">
+                <span className="font-medium text-gray-300">Memory Cache (L1)</span>
+                <Badge className="bg-gray-700 text-orange-500 border-gray-600">
                   {cacheMetrics?.memory_cache_size || 0} / {cacheMetrics?.max_memory_entries || 1000} entries
                 </Badge>
               </div>
-              <div className="w-full bg-muted rounded-full h-2">
+              <div className="w-full bg-gray-700 rounded-full h-2">
                 <div 
-                  className="bg-blue-600 h-2 rounded-full transition-all" 
+                  className="bg-orange-500 h-2 rounded-full transition-all" 
                   style={{ width: `${Math.min(((cacheMetrics?.memory_cache_size || 0) / (cacheMetrics?.max_memory_entries || 1000)) * 100, 100)}%` }}
                 />
               </div>
@@ -656,14 +664,14 @@ const CacheMetricsTab = ({ adminToken }: { adminToken: string | null }) => {
 
             <div className="space-y-3">
               <div className="flex justify-between items-center">
-                <span className="font-medium">Semantic Entries</span>
-                <Badge variant="outline">
+                <span className="font-medium text-gray-300">Semantic Entries</span>
+                <Badge className="bg-gray-700 text-orange-500 border-gray-600">
                   {cacheMetrics?.semantic_cache_size || 0} entries
                 </Badge>
               </div>
-              <div className="w-full bg-muted rounded-full h-2">
+              <div className="w-full bg-gray-700 rounded-full h-2">
                 <div 
-                  className="bg-purple-600 h-2 rounded-full transition-all" 
+                  className="bg-orange-400 h-2 rounded-full transition-all" 
                   style={{ width: `${Math.min(((cacheMetrics?.semantic_cache_size || 0) / (cacheMetrics?.max_memory_entries || 1000)) * 100, 100)}%` }}
                 />
               </div>
@@ -671,15 +679,17 @@ const CacheMetricsTab = ({ adminToken }: { adminToken: string | null }) => {
 
             <div className="space-y-3">
               <div className="flex justify-between items-center">
-                <span className="font-medium">Database Cache (L2)</span>
-                <Badge variant={cacheMetrics?.database_available ? "default" : "secondary"}>
+                <span className="font-medium text-gray-300">Database Cache (L2)</span>
+                <Badge className={cacheMetrics?.database_available 
+                  ? "bg-orange-600 text-white" 
+                  : "bg-gray-700 text-gray-400 border-gray-600"}>
                   {cacheMetrics?.database_available ? `${cacheMetrics?.database_cache_size || 0} entries` : 'Unavailable'}
                 </Badge>
               </div>
               {cacheMetrics?.database_available && (
-                <div className="w-full bg-muted rounded-full h-2">
+                <div className="w-full bg-gray-700 rounded-full h-2">
                   <div 
-                    className="bg-green-600 h-2 rounded-full transition-all" 
+                    className="bg-orange-600 h-2 rounded-full transition-all" 
                     style={{ width: `${Math.min(((cacheMetrics?.database_cache_size || 0) / (cacheMetrics?.max_db_entries || 10000)) * 100, 100)}%` }}
                   />
                 </div>
@@ -688,44 +698,45 @@ const CacheMetricsTab = ({ adminToken }: { adminToken: string | null }) => {
           </CardContent>
         </Card>
 
-        <Card>
+        <Card className="bg-gray-800/50 border-gray-700">
           <CardHeader>
-            <CardTitle className="flex items-center space-x-2">
-              <Clock className="h-5 w-5" />
+            <CardTitle className="flex items-center space-x-2 text-gray-200">
+              <Clock className="h-5 w-5 text-orange-500" />
               <span>Cache Configuration</span>
             </CardTitle>
-            <CardDescription>Current cache settings and actions</CardDescription>
+            <CardDescription className="text-gray-400">Current cache settings and actions</CardDescription>
           </CardHeader>
           <CardContent className="space-y-4">
             <div className="flex justify-between items-center">
-              <span className="font-medium">TTL (Time to Live)</span>
-              <Badge variant="outline">{cacheMetrics?.ttl_hours || 24} hours</Badge>
+              <span className="font-medium text-gray-300">TTL (Time to Live)</span>
+              <Badge className="bg-gray-700 text-orange-500 border-gray-600">{cacheMetrics?.ttl_hours || 24} hours</Badge>
             </div>
             <div className="flex justify-between items-center">
-              <span className="font-medium">Max Memory Entries</span>
-              <Badge variant="outline">{cacheMetrics?.max_memory_entries || 1000}</Badge>
+              <span className="font-medium text-gray-300">Max Memory Entries</span>
+              <Badge className="bg-gray-700 text-orange-500 border-gray-600">{cacheMetrics?.max_memory_entries || 1000}</Badge>
             </div>
             <div className="flex justify-between items-center">
-              <span className="font-medium">Max Database Entries</span>
-              <Badge variant="outline">{cacheMetrics?.max_db_entries || 10000}</Badge>
+              <span className="font-medium text-gray-300">Max Database Entries</span>
+              <Badge className="bg-gray-700 text-orange-500 border-gray-600">{cacheMetrics?.max_db_entries || 10000}</Badge>
             </div>
             <div className="flex justify-between items-center">
-              <span className="font-medium">Database Available</span>
-              <Badge variant={cacheMetrics?.database_available ? "default" : "destructive"}>
+              <span className="font-medium text-gray-300">Database Available</span>
+              <Badge className={cacheMetrics?.database_available 
+                ? "bg-orange-600 text-white" 
+                : "bg-red-900 text-red-200"}>
                 {cacheMetrics?.database_available ? 'Yes' : 'No'}
               </Badge>
             </div>
             
-            <div className="pt-4 border-t">
+            <div className="pt-4 border-t border-gray-700">
               <Button 
-                variant="destructive" 
-                className="w-full"
+                className="w-full bg-red-900 hover:bg-red-800 text-red-200"
                 onClick={handleClearCache}
               >
                 <XCircle className="h-4 w-4 mr-2" />
                 Clear All Caches
               </Button>
-              <p className="text-xs text-muted-foreground mt-2 text-center">
+              <p className="text-xs text-gray-500 mt-2 text-center">
                 This will clear both memory and database caches
               </p>
             </div>
@@ -734,33 +745,33 @@ const CacheMetricsTab = ({ adminToken }: { adminToken: string | null }) => {
       </div>
 
       {/* Cache Performance Insights */}
-      <Card>
+      <Card className="bg-gray-800/50 border-gray-700">
         <CardHeader>
-          <CardTitle>Cache Performance Insights</CardTitle>
-          <CardDescription>Understanding your cache efficiency</CardDescription>
+          <CardTitle className="text-gray-200">Cache Performance Insights</CardTitle>
+          <CardDescription className="text-gray-400">Understanding your cache efficiency</CardDescription>
         </CardHeader>
         <CardContent>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div className="text-center p-4 bg-muted rounded-lg">
-              <div className="text-2xl font-bold text-primary">
+            <div className="text-center p-4 bg-gray-700/50 rounded-lg">
+              <div className="text-2xl font-bold text-orange-500">
                 {cacheMetrics?.exact_hits || 0}
               </div>
-              <p className="text-sm text-muted-foreground">Exact Query Matches</p>
-              <p className="text-xs text-muted-foreground mt-1">Fastest response time</p>
+              <p className="text-sm text-gray-300">Exact Query Matches</p>
+              <p className="text-xs text-gray-500 mt-1">Fastest response time</p>
             </div>
-            <div className="text-center p-4 bg-muted rounded-lg">
-              <div className="text-2xl font-bold text-primary">
+            <div className="text-center p-4 bg-gray-700/50 rounded-lg">
+              <div className="text-2xl font-bold text-orange-500">
                 {cacheMetrics?.semantic_hits || 0}
               </div>
-              <p className="text-sm text-muted-foreground">Semantic Matches</p>
-              <p className="text-xs text-muted-foreground mt-1">Similar question detection</p>
+              <p className="text-sm text-gray-300">Semantic Matches</p>
+              <p className="text-xs text-gray-500 mt-1">Similar question detection</p>
             </div>
-            <div className="text-center p-4 bg-muted rounded-lg">
-              <div className="text-2xl font-bold text-primary">
+            <div className="text-center p-4 bg-gray-700/50 rounded-lg">
+              <div className="text-2xl font-bold text-orange-500">
                 {cacheMetrics?.db_hits || 0}
               </div>
-              <p className="text-sm text-muted-foreground">Database Cache Hits</p>
-              <p className="text-xs text-muted-foreground mt-1">Persisted responses</p>
+              <p className="text-sm text-gray-300">Database Cache Hits</p>
+              <p className="text-xs text-gray-500 mt-1">Persisted responses</p>
             </div>
           </div>
         </CardContent>
@@ -990,24 +1001,24 @@ const AdminAnalytics = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-slate-50 to-slate-100 dark:from-slate-950 dark:to-slate-900">
+    <div className="min-h-screen bg-gradient-to-b from-gray-950 via-gray-900 to-black text-gray-100">
       {/* Top Navigation Bar */}
-      <div className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+      <div className="sticky top-0 z-50 w-full border-b border-gray-800 bg-gray-950/95 backdrop-blur">
         <div className="max-w-7xl mx-auto flex h-16 items-center justify-between px-4">
           <div className="flex items-center gap-4">
-            <Button asChild variant="ghost" size="sm">
+            <Button asChild variant="ghost" size="sm" className="bg-gray-800 hover:bg-gray-700 text-gray-200 border-gray-700">
               <RouterLink to="/">
                 <ArrowLeft className="h-4 w-4 mr-2" />
                 Home
               </RouterLink>
             </Button>
-            <div className="hidden md:flex items-center gap-2 pl-4 border-l">
-              <div className="h-8 w-8 rounded-lg bg-gradient-to-br from-amber-500 to-orange-600 flex items-center justify-center">
+            <div className="hidden md:flex items-center gap-2 pl-4 border-l border-gray-700">
+              <div className="h-8 w-8 rounded-lg bg-gradient-to-br from-orange-500 to-orange-600 flex items-center justify-center">
                 <BarChart3 className="h-4 w-4 text-white" />
               </div>
               <div>
-                <h1 className="text-lg font-semibold">Admin Analytics</h1>
-                <p className="text-xs text-muted-foreground">Veterans Benefits AI</p>
+                <h1 className="text-lg font-semibold text-white">Admin Analytics</h1>
+                <p className="text-xs text-gray-400">Veterans Benefits AI</p>
               </div>
             </div>
           </div>
@@ -1016,17 +1027,17 @@ const AdminAnalytics = () => {
             <select
               value={days}
               onChange={(e) => setDays(Number(e.target.value))}
-              className="h-9 px-3 text-sm border rounded-md bg-background focus:outline-none focus:ring-2 focus:ring-ring"
+              className="h-9 px-3 text-sm border border-gray-700 rounded-md bg-gray-800 text-gray-200 focus:outline-none focus:ring-2 focus:ring-orange-500"
             >
               <option value={7}>Last 7 days</option>
               <option value={30}>Last 30 days</option>
               <option value={90}>Last 90 days</option>
               <option value={365}>Last year</option>
             </select>
-            <Button onClick={handleRefresh} variant="outline" size="sm" disabled={loading}>
+            <Button onClick={handleRefresh} size="sm" disabled={loading} className="bg-gray-800 hover:bg-gray-700 text-gray-200 border border-gray-700">
               <RefreshCw className={`h-4 w-4 ${loading ? 'animate-spin' : ''}`} />
             </Button>
-            <Badge className="bg-gradient-to-r from-amber-500 to-orange-600 text-white border-0">
+            <Badge className="bg-orange-600 text-white border-0">
               <Shield className="h-3 w-3 mr-1" />
               Admin
             </Badge>
@@ -1038,36 +1049,36 @@ const AdminAnalytics = () => {
 
         {analytics && (
           <Tabs defaultValue="overview" className="space-y-6">
-            <TabsList className="grid w-full grid-cols-7 h-12">
-              <TabsTrigger value="overview" className="flex items-center gap-2">
+            <TabsList className="grid w-full grid-cols-8 h-12 bg-gray-800 border border-gray-700">
+              <TabsTrigger value="overview" className="flex items-center gap-2 data-[state=active]:bg-gray-700 data-[state=active]:text-orange-500">
                 <BarChart3 className="h-4 w-4" />
                 <span className="hidden sm:inline">Overview</span>
               </TabsTrigger>
-              <TabsTrigger value="locations" className="flex items-center gap-2">
+              <TabsTrigger value="locations" className="flex items-center gap-2 data-[state=active]:bg-gray-700 data-[state=active]:text-orange-500">
                 <MapPin className="h-4 w-4" />
                 <span className="hidden sm:inline">Locations</span>
               </TabsTrigger>
-              <TabsTrigger value="traffic" className="flex items-center gap-2">
+              <TabsTrigger value="traffic" className="flex items-center gap-2 data-[state=active]:bg-gray-700 data-[state=active]:text-orange-500">
                 <Activity className="h-4 w-4" />
                 <span className="hidden sm:inline">Traffic</span>
               </TabsTrigger>
-              <TabsTrigger value="tokens" className="flex items-center gap-2">
+              <TabsTrigger value="tokens" className="flex items-center gap-2 data-[state=active]:bg-gray-700 data-[state=active]:text-orange-500">
                 <Zap className="h-4 w-4" />
                 <span className="hidden sm:inline">Tokens</span>
               </TabsTrigger>
-              <TabsTrigger value="performance" className="flex items-center gap-2">
+              <TabsTrigger value="performance" className="flex items-center gap-2 data-[state=active]:bg-gray-700 data-[state=active]:text-orange-500">
                 <TrendingUp className="h-4 w-4" />
                 <span className="hidden sm:inline">Performance</span>
               </TabsTrigger>
-              <TabsTrigger value="cache" className="flex items-center gap-2">
+              <TabsTrigger value="cache" className="flex items-center gap-2 data-[state=active]:bg-gray-700 data-[state=active]:text-orange-500">
                 <Database className="h-4 w-4" />
                 <span className="hidden sm:inline">Cache</span>
               </TabsTrigger>
-              <TabsTrigger value="timeline" className="flex items-center gap-2">
+              <TabsTrigger value="timeline" className="flex items-center gap-2 data-[state=active]:bg-gray-700 data-[state=active]:text-orange-500">
                 <Calendar className="h-4 w-4" />
                 <span className="hidden sm:inline">Timeline</span>
               </TabsTrigger>
-              <TabsTrigger value="flagged" className="flex items-center gap-2">
+              <TabsTrigger value="flagged" className="flex items-center gap-2 data-[state=active]:bg-gray-700 data-[state=active]:text-orange-500">
                 <AlertTriangle className="h-4 w-4" />
                 <span className="hidden sm:inline">Flagged</span>
               </TabsTrigger>
@@ -1076,61 +1087,61 @@ const AdminAnalytics = () => {
             <TabsContent value="overview" className="space-y-6">
               {/* Key Metrics */}
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <Card>
+                <Card className="bg-gray-800/50 border-gray-700">
                   <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                    <CardTitle className="text-sm font-medium">Total Pageviews</CardTitle>
-                    <Eye className="h-4 w-4 text-muted-foreground" />
+                    <CardTitle className="text-sm font-medium text-gray-300">Total Pageviews</CardTitle>
+                    <Eye className="h-4 w-4 text-orange-500" />
                   </CardHeader>
                   <CardContent>
-                    <div className="text-2xl font-bold text-green-600">
+                    <div className="text-2xl font-bold text-orange-500">
                       {formatNumber(analytics.totals.pageviews)}
                     </div>
-                    <p className="text-xs text-muted-foreground">
+                    <p className="text-xs text-gray-400">
                       All-time page views
                     </p>
                   </CardContent>
                 </Card>
 
-                <Card>
+                <Card className="bg-gray-800/50 border-gray-700">
                   <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                    <CardTitle className="text-sm font-medium">Unique Visitors</CardTitle>
-                    <Users className="h-4 w-4 text-muted-foreground" />
+                    <CardTitle className="text-sm font-medium text-gray-300">Unique Visitors</CardTitle>
+                    <Users className="h-4 w-4 text-orange-500" />
                   </CardHeader>
                   <CardContent>
-                    <div className="text-2xl font-bold text-purple-600">
+                    <div className="text-2xl font-bold text-orange-500">
                       {formatNumber(analytics.totals.uniques)}
                     </div>
-                    <p className="text-xs text-muted-foreground">
+                    <p className="text-xs text-gray-400">
                       Individual users tracked
                     </p>
                   </CardContent>
                 </Card>
 
-                <Card>
+                <Card className="bg-gray-800/50 border-gray-700">
                   <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                    <CardTitle className="text-sm font-medium">Chat Questions</CardTitle>
-                    <MessageSquare className="h-4 w-4 text-muted-foreground" />
+                    <CardTitle className="text-sm font-medium text-gray-300">Chat Questions</CardTitle>
+                    <MessageSquare className="h-4 w-4 text-orange-500" />
                   </CardHeader>
                   <CardContent>
-                    <div className="text-2xl font-bold text-blue-600">
+                    <div className="text-2xl font-bold text-orange-500">
                       {formatNumber(analytics.totals.chat_questions)}
                     </div>
-                    <p className="text-xs text-muted-foreground">
+                    <p className="text-xs text-gray-400">
                       AI questions processed
                     </p>
                   </CardContent>
                 </Card>
 
-                <Card>
+                <Card className="bg-gray-800/50 border-gray-700">
                   <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                    <CardTitle className="text-sm font-medium">Engagement Rate</CardTitle>
-                    <TrendingUp className="h-4 w-4 text-muted-foreground" />
+                    <CardTitle className="text-sm font-medium text-gray-300">Engagement Rate</CardTitle>
+                    <TrendingUp className="h-4 w-4 text-orange-500" />
                   </CardHeader>
                   <CardContent>
-                    <div className="text-2xl font-bold text-orange-600">
+                    <div className="text-2xl font-bold text-orange-500">
                       {analytics.service_info.engagement_rate.toFixed(1)}%
                     </div>
-                    <p className="text-xs text-muted-foreground">
+                    <p className="text-xs text-gray-400">
                       Questions per visit
                     </p>
                   </CardContent>
@@ -1139,66 +1150,66 @@ const AdminAnalytics = () => {
 
               {/* Service Information */}
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                <Card>
+                <Card className="bg-gray-800/50 border-gray-700">
                   <CardHeader>
-                    <CardTitle>Service Performance</CardTitle>
-                    <CardDescription>Key performance indicators</CardDescription>
+                    <CardTitle className="text-gray-200">Service Performance</CardTitle>
+                    <CardDescription className="text-gray-400">Key performance indicators</CardDescription>
                   </CardHeader>
                   <CardContent className="space-y-4">
                     <div className="flex justify-between items-center">
-                      <span className="font-medium">Questions per User:</span>
-                      <Badge variant="outline">
+                      <span className="font-medium text-gray-300">Questions per User:</span>
+                      <Badge className="bg-gray-700 text-orange-500 border-gray-600">
                         {analytics.service_info.questions_per_user.toFixed(2)}
                       </Badge>
                     </div>
                     <div className="flex justify-between items-center">
-                      <span className="font-medium">Total Locations Tracked:</span>
-                      <Badge variant="outline">
+                      <span className="font-medium text-gray-300">Total Locations Tracked:</span>
+                      <Badge className="bg-gray-700 text-orange-500 border-gray-600">
                         {formatNumber(analytics.visitor_locations.total_tracked)}
                       </Badge>
                     </div>
                     <div className="flex justify-between items-center">
-                      <span className="font-medium">Service Started:</span>
-                      <span className="text-sm text-muted-foreground">
+                      <span className="font-medium text-gray-300">Service Started:</span>
+                      <span className="text-sm text-gray-400">
                         {formatDate(analytics.service_info.first_visit)}
                       </span>
                     </div>
                     <div className="flex justify-between items-center">
-                      <span className="font-medium">Last Updated:</span>
-                      <span className="text-sm text-muted-foreground">
+                      <span className="font-medium text-gray-300">Last Updated:</span>
+                      <span className="text-sm text-gray-400">
                         {formatDate(analytics.service_info.last_updated)}
                       </span>
                     </div>
                   </CardContent>
                 </Card>
 
-                <Card>
+                <Card className="bg-gray-800/50 border-gray-700">
                   <CardHeader>
-                    <CardTitle>Geographic Distribution</CardTitle>
-                    <CardDescription>Visitor location breakdown</CardDescription>
+                    <CardTitle className="text-gray-200">Geographic Distribution</CardTitle>
+                    <CardDescription className="text-gray-400">Visitor location breakdown</CardDescription>
                   </CardHeader>
                   <CardContent className="space-y-4">
                     <div className="flex justify-between items-center">
-                      <span className="font-medium">US States:</span>
-                      <Badge variant="default">
+                      <span className="font-medium text-gray-300">US States:</span>
+                      <Badge className="bg-orange-600 text-white">
                         {Object.keys(analytics.visitor_locations.us_states).length} states
                       </Badge>
                     </div>
                     <div className="flex justify-between items-center">
-                      <span className="font-medium">International:</span>
-                      <Badge variant="secondary">
+                      <span className="font-medium text-gray-300">International:</span>
+                      <Badge className="bg-gray-700 text-gray-300 border-gray-600">
                         {formatNumber(analytics.visitor_locations.international)} visitors
                       </Badge>
                     </div>
                     <div className="flex justify-between items-center">
-                      <span className="font-medium">Local/Development:</span>
-                      <Badge variant="outline">
+                      <span className="font-medium text-gray-300">Local/Development:</span>
+                      <Badge className="bg-gray-700 text-gray-300 border-gray-600">
                         {formatNumber(analytics.visitor_locations.local)} visits
                       </Badge>
                     </div>
                     <div className="flex justify-between items-center">
-                      <span className="font-medium">Unknown Location:</span>
-                      <Badge variant="outline">
+                      <span className="font-medium text-gray-300">Unknown Location:</span>
+                      <Badge className="bg-gray-700 text-gray-300 border-gray-600">
                         {formatNumber(analytics.visitor_locations.unknown)} visits
                       </Badge>
                     </div>
@@ -1317,66 +1328,66 @@ const AdminAnalytics = () => {
             </TabsContent>
 
             <TabsContent value="tokens" className="space-y-6">
-              {analytics.token_usage.available ? (
+              {analytics.token_usage?.available ? (
                 <>
                   {/* Token Usage Overview */}
-                  {analytics.token_usage.summary && (
+                  {analytics.token_usage?.summary && (
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                      <Card>
+                      <Card className="bg-gray-800/50 border-gray-700">
                         <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                          <CardTitle className="text-sm font-medium">Total Tokens</CardTitle>
-                          <Zap className="h-4 w-4 text-muted-foreground" />
+                          <CardTitle className="text-sm font-medium text-gray-300">Total Tokens</CardTitle>
+                          <Zap className="h-4 w-4 text-orange-500" />
                         </CardHeader>
                         <CardContent>
-                          <div className="text-2xl font-bold text-yellow-600">
-                            {formatNumber(analytics.token_usage.summary.total_tokens)}
+                          <div className="text-2xl font-bold text-orange-500">
+                            {formatNumber(analytics.token_usage.summary.total_tokens || 0)}
                           </div>
-                          <p className="text-xs text-muted-foreground">
-                            Over {analytics.token_usage.summary.queries_with_tokens} queries
+                          <p className="text-xs text-gray-400">
+                            Over {analytics.token_usage.summary.queries_with_tokens || 0} queries
                           </p>
                         </CardContent>
                       </Card>
 
-                      <Card>
+                      <Card className="bg-gray-800/50 border-gray-700">
                         <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                          <CardTitle className="text-sm font-medium">Avg per Query</CardTitle>
-                          <Cpu className="h-4 w-4 text-muted-foreground" />
+                          <CardTitle className="text-sm font-medium text-gray-300">Avg per Query</CardTitle>
+                          <Cpu className="h-4 w-4 text-orange-500" />
                         </CardHeader>
                         <CardContent>
-                          <div className="text-2xl font-bold text-blue-600">
+                          <div className="text-2xl font-bold text-orange-500">
                             {Math.round(analytics.token_usage.summary.avg_tokens_per_query || 0)}
                           </div>
-                          <p className="text-xs text-muted-foreground">
+                          <p className="text-xs text-gray-400">
                             Tokens per question
                           </p>
                         </CardContent>
                       </Card>
 
-                      <Card>
+                      <Card className="bg-gray-800/50 border-gray-700">
                         <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                          <CardTitle className="text-sm font-medium">Prompt Tokens</CardTitle>
-                          <MessageSquare className="h-4 w-4 text-muted-foreground" />
+                          <CardTitle className="text-sm font-medium text-gray-300">Prompt Tokens</CardTitle>
+                          <MessageSquare className="h-4 w-4 text-orange-500" />
                         </CardHeader>
                         <CardContent>
-                          <div className="text-2xl font-bold text-green-600">
-                            {formatNumber(analytics.token_usage.summary.total_prompt_tokens)}
+                          <div className="text-2xl font-bold text-orange-500">
+                            {formatNumber(analytics.token_usage.summary.total_prompt_tokens || 0)}
                           </div>
-                          <p className="text-xs text-muted-foreground">
+                          <p className="text-xs text-gray-400">
                             Input processing
                           </p>
                         </CardContent>
                       </Card>
 
-                      <Card>
+                      <Card className="bg-gray-800/50 border-gray-700">
                         <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                          <CardTitle className="text-sm font-medium">Completion Tokens</CardTitle>
-                          <Eye className="h-4 w-4 text-muted-foreground" />
+                          <CardTitle className="text-sm font-medium text-gray-300">Completion Tokens</CardTitle>
+                          <Eye className="h-4 w-4 text-orange-500" />
                         </CardHeader>
                         <CardContent>
-                          <div className="text-2xl font-bold text-purple-600">
-                            {formatNumber(analytics.token_usage.summary.total_completion_tokens)}
+                          <div className="text-2xl font-bold text-orange-500">
+                            {formatNumber(analytics.token_usage.summary.total_completion_tokens || 0)}
                           </div>
-                          <p className="text-xs text-muted-foreground">
+                          <p className="text-xs text-gray-400">
                             Response generation
                           </p>
                         </CardContent>
@@ -1386,44 +1397,44 @@ const AdminAnalytics = () => {
 
                   <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                     {/* Model Breakdown */}
-                    {analytics.token_usage.model_breakdown && analytics.token_usage.model_breakdown.length > 0 && (
-                      <Card>
+                    {analytics.token_usage?.model_breakdown && analytics.token_usage.model_breakdown.length > 0 && (
+                      <Card className="bg-gray-800/50 border-gray-700">
                         <CardHeader>
-                          <CardTitle className="flex items-center space-x-2">
-                            <Cpu className="h-5 w-5" />
+                          <CardTitle className="flex items-center space-x-2 text-gray-200">
+                            <Cpu className="h-5 w-5 text-orange-500" />
                             <span>Model Usage</span>
                           </CardTitle>
-                          <CardDescription>Token consumption by AI model</CardDescription>
+                          <CardDescription className="text-gray-400">Token consumption by AI model</CardDescription>
                         </CardHeader>
                         <CardContent>
                           <Table>
                             <TableHeader>
-                              <TableRow>
-                                <TableHead>Model</TableHead>
-                                <TableHead>Provider</TableHead>
-                                <TableHead className="text-right">Uses</TableHead>
-                                <TableHead className="text-right">Total Tokens</TableHead>
-                                <TableHead className="text-right">Avg</TableHead>
+                              <TableRow className="border-gray-700">
+                                <TableHead className="text-gray-400">Model</TableHead>
+                                <TableHead className="text-gray-400">Provider</TableHead>
+                                <TableHead className="text-right text-gray-400">Uses</TableHead>
+                                <TableHead className="text-right text-gray-400">Total Tokens</TableHead>
+                                <TableHead className="text-right text-gray-400">Avg</TableHead>
                               </TableRow>
                             </TableHeader>
                             <TableBody>
-                              {analytics.token_usage.model_breakdown.map((model, index) => (
-                                <TableRow key={index}>
-                                  <TableCell className="font-medium">
+                              {analytics.token_usage.model_breakdown.map((model: any, index: number) => (
+                                <TableRow key={index} className="border-gray-700">
+                                  <TableCell className="font-medium text-gray-300">
                                     {model.model_used || 'Unknown'}
                                   </TableCell>
                                   <TableCell>
-                                    <Badge variant="outline">
+                                    <Badge className="bg-gray-700 text-gray-300 border-gray-600">
                                       {model.api_provider || 'Unknown'}
                                     </Badge>
                                   </TableCell>
-                                  <TableCell className="text-right">
+                                  <TableCell className="text-right text-gray-300">
                                     {formatNumber(model.usage_count)}
                                   </TableCell>
-                                  <TableCell className="text-right">
+                                  <TableCell className="text-right text-orange-500">
                                     {formatNumber(model.total_tokens || 0)}
                                   </TableCell>
-                                  <TableCell className="text-right">
+                                  <TableCell className="text-right text-gray-300">
                                     {Math.round(model.avg_tokens || 0)}
                                   </TableCell>
                                 </TableRow>
@@ -1435,41 +1446,41 @@ const AdminAnalytics = () => {
                     )}
 
                     {/* Daily Token Usage */}
-                    {analytics.token_usage.daily_usage && analytics.token_usage.daily_usage.length > 0 && (
-                      <Card>
+                    {analytics.token_usage?.daily_usage && analytics.token_usage.daily_usage.length > 0 && (
+                      <Card className="bg-gray-800/50 border-gray-700">
                         <CardHeader>
-                          <CardTitle className="flex items-center space-x-2">
-                            <Calendar className="h-5 w-5" />
+                          <CardTitle className="flex items-center space-x-2 text-gray-200">
+                            <Calendar className="h-5 w-5 text-orange-500" />
                             <span>Daily Token Usage</span>
                           </CardTitle>
-                          <CardDescription>Token consumption over time (last {days} days)</CardDescription>
+                          <CardDescription className="text-gray-400">Token consumption over time (last {days} days)</CardDescription>
                         </CardHeader>
                         <CardContent>
                           <Table>
                             <TableHeader>
-                              <TableRow>
-                                <TableHead>Date</TableHead>
-                                <TableHead className="text-right">Queries</TableHead>
-                                <TableHead className="text-right">Total Tokens</TableHead>
-                                <TableHead className="text-right">Avg</TableHead>
+                              <TableRow className="border-gray-700">
+                                <TableHead className="text-gray-400">Date</TableHead>
+                                <TableHead className="text-right text-gray-400">Queries</TableHead>
+                                <TableHead className="text-right text-gray-400">Total Tokens</TableHead>
+                                <TableHead className="text-right text-gray-400">Avg</TableHead>
                               </TableRow>
                             </TableHeader>
                             <TableBody>
-                              {analytics.token_usage.daily_usage.slice(0, 10).map((day, index) => (
-                                <TableRow key={index}>
-                                  <TableCell className="font-medium">
+                              {analytics.token_usage.daily_usage.slice(0, 10).map((day: any, index: number) => (
+                                <TableRow key={index} className="border-gray-700">
+                                  <TableCell className="font-medium text-gray-300">
                                     {new Date(day.day).toLocaleDateString('en-US', {
                                       month: 'short',
                                       day: 'numeric'
                                     })}
                                   </TableCell>
-                                  <TableCell className="text-right">
+                                  <TableCell className="text-right text-gray-300">
                                     {formatNumber(day.queries)}
                                   </TableCell>
-                                  <TableCell className="text-right">
+                                  <TableCell className="text-right text-orange-500">
                                     {formatNumber(day.daily_tokens)}
                                   </TableCell>
-                                  <TableCell className="text-right">
+                                  <TableCell className="text-right text-gray-300">
                                     {Math.round(day.avg_tokens || 0)}
                                   </TableCell>
                                 </TableRow>
@@ -1482,31 +1493,31 @@ const AdminAnalytics = () => {
                   </div>
 
                   {/* Token Usage Summary */}
-                  {analytics.token_usage.summary && (
-                    <Card>
+                  {analytics.token_usage?.summary && (
+                    <Card className="bg-gray-800/50 border-gray-700">
                       <CardHeader>
-                        <CardTitle>Token Usage Insights</CardTitle>
-                        <CardDescription>AI resource consumption analysis</CardDescription>
+                        <CardTitle className="text-gray-200">Token Usage Insights</CardTitle>
+                        <CardDescription className="text-gray-400">AI resource consumption analysis</CardDescription>
                       </CardHeader>
                       <CardContent className="space-y-4">
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                          <div className="text-center p-4 bg-muted rounded-lg">
-                            <div className="text-2xl font-bold text-primary">
-                              {analytics.token_usage.summary.unique_models}
+                          <div className="text-center p-4 bg-gray-700/50 rounded-lg">
+                            <div className="text-2xl font-bold text-orange-500">
+                              {analytics.token_usage.summary.unique_models || 0}
                             </div>
-                            <p className="text-sm text-muted-foreground">AI Models Used</p>
+                            <p className="text-sm text-gray-400">AI Models Used</p>
                           </div>
-                          <div className="text-center p-4 bg-muted rounded-lg">
-                            <div className="text-2xl font-bold text-primary">
-                              {analytics.token_usage.summary.unique_providers}
+                          <div className="text-center p-4 bg-gray-700/50 rounded-lg">
+                            <div className="text-2xl font-bold text-orange-500">
+                              {analytics.token_usage.summary.unique_providers || 0}
                             </div>
-                            <p className="text-sm text-muted-foreground">API Providers</p>
+                            <p className="text-sm text-gray-400">API Providers</p>
                           </div>
-                          <div className="text-center p-4 bg-muted rounded-lg">
-                            <div className="text-2xl font-bold text-primary">
-                              {((analytics.token_usage.summary.total_completion_tokens / Math.max(analytics.token_usage.summary.total_tokens, 1)) * 100).toFixed(1)}%
+                          <div className="text-center p-4 bg-gray-700/50 rounded-lg">
+                            <div className="text-2xl font-bold text-orange-500">
+                              {((analytics.token_usage.summary.total_completion_tokens || 0) / Math.max(analytics.token_usage.summary.total_tokens || 1, 1) * 100).toFixed(1)}%
                             </div>
-                            <p className="text-sm text-muted-foreground">Response Ratio</p>
+                            <p className="text-sm text-gray-400">Response Ratio</p>
                           </div>
                         </div>
                       </CardContent>
@@ -1514,22 +1525,22 @@ const AdminAnalytics = () => {
                   )}
                 </>
               ) : (
-                <Card>
+                <Card className="bg-gray-800/50 border-gray-700">
                   <CardHeader>
-                    <CardTitle className="flex items-center space-x-2">
-                      <Zap className="h-5 w-5" />
+                    <CardTitle className="flex items-center space-x-2 text-gray-200">
+                      <Zap className="h-5 w-5 text-orange-500" />
                       <span>Token Usage Tracking</span>
                     </CardTitle>
-                    <CardDescription>AI token consumption analytics</CardDescription>
+                    <CardDescription className="text-gray-400">AI token consumption analytics</CardDescription>
                   </CardHeader>
                   <CardContent>
                     <div className="text-center py-8">
-                      <Zap className="h-12 w-12 mx-auto text-muted-foreground mb-4" />
-                      <p className="text-lg font-medium text-muted-foreground mb-2">
+                      <Zap className="h-12 w-12 mx-auto text-gray-500 mb-4" />
+                      <p className="text-lg font-medium text-gray-300 mb-2">
                         Token Tracking Not Available
                       </p>
-                      <p className="text-sm text-muted-foreground">
-                        {analytics.token_usage.message || analytics.token_usage.error || 'Token usage tracking is being set up. Check back shortly.'}
+                      <p className="text-sm text-gray-400">
+                        {analytics.token_usage?.message || analytics.token_usage?.error || 'Token usage tracking is being set up. Check back shortly.'}
                       </p>
                     </div>
                   </CardContent>
@@ -1839,7 +1850,7 @@ const AdminAnalytics = () => {
         )}
 
         {/* Footer */}
-        <div className="text-center mt-12 text-muted-foreground">
+        <div className="text-center mt-12 text-gray-500">
           <p>Veterans Benefits AI - Admin Analytics Dashboard</p>
           <p className="text-sm mt-1">
             Data refreshes automatically every minute • Last updated: {analytics?.service_info.last_updated ? formatDate(analytics.service_info.last_updated) : 'Unknown'}

@@ -632,6 +632,149 @@ Hallucination Rate & 3.2\% & Multi-layer detection \\
 \end{figure}
 
 \newpage
+\section{Vector Store Performance Benchmarks}
+
+To evaluate production-ready alternatives to in-memory vector search, we benchmarked PostgreSQL with pgvector extension using HNSW (Hierarchical Navigable Small World) indexes. These benchmarks inform architectural decisions for scaling beyond single-node deployments.
+
+\subsection{Benchmark Configuration}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{@{}ll@{}}
+\toprule
+Parameter & Value \\
+\midrule
+Database & PostgreSQL 16 (Render.com) \\
+Extension & pgvector 0.8.1 \\
+Dataset & 1,052 real corpus embeddings \\
+Embedding Dimensions & 1,536 (OpenAI text-embedding-3-small) \\
+Index Configurations & No index, HNSW m=16, HNSW m=24 \\
+Query Count & 100 single + 500 batch + 200 concurrent \\
+Concurrent Threads & 4 \\
+\bottomrule
+\end{tabular}
+\caption{pgvector Benchmark Configuration}
+\end{table}
+
+\subsection{Latency Results}
+
+\begin{figure}[h]
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+    width=12cm,
+    height=7cm,
+    xlabel={Configuration},
+    ylabel={Latency (ms)},
+    ybar,
+    bar width=0.6cm,
+    ymin=0,
+    ymax=350,
+    symbolic x coords={No Index, HNSW m=16, HNSW m=24},
+    xtick=data,
+    legend pos=north west,
+    legend style={font=\small},
+    nodes near coords,
+    nodes near coords style={font=\tiny},
+    title={Single Query Latency by Configuration}
+]
+\addplot[fill=green!60] coordinates {
+    (No Index, 91.6) (HNSW m=16, 48.2) (HNSW m=24, 93.7)
+};
+\addplot[fill=orange!60] coordinates {
+    (No Index, 130.3) (HNSW m=16, 59.7) (HNSW m=24, 197.5)
+};
+\addplot[fill=red!60] coordinates {
+    (No Index, 195.3) (HNSW m=16, 95.9) (HNSW m=24, 302.5)
+};
+\legend{Median, P95, P99}
+\end{axis}
+\end{tikzpicture}
+\caption{Query Latency Comparison: HNSW m=16 achieves 47\% lower median latency}
+\end{figure}
+
+\subsection{Throughput Results}
+
+\begin{figure}[h]
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+    width=10cm,
+    height=6cm,
+    xlabel={Configuration},
+    ylabel={Queries per Second (QPS)},
+    ybar,
+    bar width=1.2cm,
+    ymin=0,
+    ymax=55,
+    symbolic x coords={No Index, HNSW m=16, HNSW m=24},
+    xtick=data,
+    nodes near coords,
+    nodes near coords align={vertical},
+    title={Concurrent Query Throughput (4 threads)}
+]
+\addplot[fill=blue!60] coordinates {
+    (No Index, 9.6) (HNSW m=16, 44.7) (HNSW m=24, 8.6)
+};
+\end{axis}
+\end{tikzpicture}
+\caption{Throughput Comparison: HNSW m=16 delivers 4.6x higher QPS}
+\end{figure}
+
+\subsection{Index Build Performance}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Configuration & Build Time & Parameters & Storage Overhead \\
+\midrule
+No Index & 0.0s & - & Baseline \\
+HNSW m=16 & 3.32s & ef\_construction=64 & +15\% \\
+HNSW m=24 & 6.42s & ef\_construction=128 & +25\% \\
+\bottomrule
+\end{tabular}
+\caption{HNSW Index Build Performance}
+\end{table}
+
+\subsection{Key Findings}
+
+\begin{enumerate}
+    \item \textbf{HNSW m=16 is optimal} for datasets around 1,000 vectors:
+    \begin{itemize}
+        \item 47\% lower median latency (48.2ms vs 91.6ms)
+        \item 4.6x higher throughput (44.7 QPS vs 9.6 QPS)
+        \item Fast index build time (3.32s)
+    \end{itemize}
+    
+    \item \textbf{Higher m values are counterproductive} at this scale:
+    \begin{itemize}
+        \item HNSW m=24 performs worse than no index
+        \item Graph traversal overhead exceeds sequential scan cost
+        \item Only beneficial for datasets $>$10,000 vectors
+    \end{itemize}
+    
+    \item \textbf{Concurrent performance dramatically improves}:
+    \begin{itemize}
+        \item Sequential scan: 383ms median (concurrent)
+        \item HNSW m=16: 52ms median (concurrent)
+        \item 7.4x latency improvement under load
+    \end{itemize}
+\end{enumerate}
+
+\subsection{Architecture Recommendation}
+
+Based on these benchmarks, the system architecture includes a hybrid approach:
+
+\begin{itemize}
+    \item \textbf{Current (1K vectors)}: In-memory vector store with file-backed cache
+    \item \textbf{Scale Path (10K+ vectors)}: PostgreSQL + pgvector with HNSW m=16
+    \item \textbf{Response Caching}: PostgreSQL for exact and semantic cache hits
+\end{itemize}
+
+The in-memory approach remains optimal for the current corpus size, providing 15ms search latency versus 48ms with pgvector. However, pgvector provides a clear migration path when the corpus exceeds memory constraints.
+
+\newpage
 \section{Corpus and Knowledge Base}
 
 \subsection{Document Processing}
