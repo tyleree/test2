@@ -116,7 +116,8 @@ def query_rag_system(prompt: str, history: list = None) -> Dict[str, Any]:
             "error": response.error,
             "token_usage": {
                 "provider": "openai",
-                "model": response.model_used
+                "model": response.model_used,
+                "usage": response.token_usage  # Actual token counts from OpenAI API
             },
             # Include question data for analytics
             "question_data": {

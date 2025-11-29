@@ -116,6 +116,7 @@ class RAGResponse:
     error: Optional[str] = None
     weak_retrieval: bool = False  # True if best chunk score was below threshold
     citation_verification: Optional[Dict[str, Any]] = None  # Citation verification results
+    token_usage: Optional[Dict[str, int]] = None  # Token usage from OpenAI API
     
     def to_dict(self) -> Dict[str, Any]:
         result = {
@@ -136,6 +137,8 @@ class RAGResponse:
             result["metadata"]["weak_retrieval"] = True
         if self.citation_verification:
             result["metadata"]["citation_verification"] = self.citation_verification
+        if self.token_usage:
+            result["metadata"]["token_usage"] = self.token_usage
         if self.error:
             result["error"] = self.error
         return result
@@ -406,7 +409,7 @@ class RAGPipeline:
         context_chunks: List[Dict[str, Any]],
         conversation_history: Optional[List[Dict[str, str]]] = None,
         model: Optional[str] = None
-    ) -> Tuple[str, float, str]:
+    ) -> Tuple[str, float, str, Dict[str, int]]:
         """
         Generate a response using OpenAI chat completion.
         
@@ -417,7 +420,7 @@ class RAGPipeline:
             model: Specific model to use (overrides default)
             
         Returns:
-            Tuple of (answer text, generation time in ms, model used)
+            Tuple of (answer text, generation time in ms, model used, token usage dict)
         """
         start_time = time.time()
         
@@ -442,7 +445,14 @@ class RAGPipeline:
         answer = response.choices[0].message.content
         elapsed_ms = (time.time() - start_time) * 1000
         
-        return answer, elapsed_ms, selected_model
+        # Capture token usage from OpenAI response
+        token_usage = {
+            "prompt_tokens": response.usage.prompt_tokens,
+            "completion_tokens": response.usage.completion_tokens,
+            "total_tokens": response.usage.total_tokens
+        }
+        
+        return answer, elapsed_ms, selected_model, token_usage
     
     def _generate_response_streaming(
         self,
@@ -693,7 +703,7 @@ class RAGPipeline:
             print(f"[ROUTER] Model: {selected_model} (reason: {routing_reason})")
             
             # Step 4: Generate response with selected model
-            answer, generation_time, model_used = self._generate_response(
+            answer, generation_time, model_used, token_usage = self._generate_response(
                 question,
                 chunks,
                 conversation_history,
@@ -733,7 +743,8 @@ class RAGPipeline:
                 model_used=model_used,
                 routing_reason=routing_reason,
                 weak_retrieval=weak_retrieval,
-                citation_verification=verification_summary
+                citation_verification=verification_summary,
+                token_usage=token_usage
             )
             
         except Exception as e:
