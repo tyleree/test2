@@ -107,27 +107,35 @@ const TimelineView = () => {
 
   const getCacheModeIcon = (mode: string) => {
     switch (mode) {
+      case 'exact':
       case 'exact_hit':
-        return <CheckCircle className="h-4 w-4 text-green-600" />;
+        return <CheckCircle className="h-4 w-4 text-green-500" />;
+      case 'semantic':
       case 'semantic_hit':
-        return <CheckCircle className="h-4 w-4 text-blue-600" />;
+        return <CheckCircle className="h-4 w-4 text-blue-500" />;
+      case 'database':
+        return <CheckCircle className="h-4 w-4 text-purple-500" />;
       case 'miss':
-        return <XCircle className="h-4 w-4 text-red-600" />;
+        return <XCircle className="h-4 w-4 text-red-500" />;
       default:
-        return <AlertCircle className="h-4 w-4 text-gray-600" />;
+        return <AlertCircle className="h-4 w-4 text-gray-500" />;
     }
   };
 
   const getCacheModeBadge = (mode: string) => {
     switch (mode) {
+      case 'exact':
       case 'exact_hit':
-        return <Badge variant="default" className="bg-green-100 text-green-800">Exact Hit</Badge>;
+        return <Badge className="bg-green-900/50 text-green-400 border-green-700">Exact Hit</Badge>;
+      case 'semantic':
       case 'semantic_hit':
-        return <Badge variant="default" className="bg-blue-100 text-blue-800">Semantic Hit</Badge>;
+        return <Badge className="bg-blue-900/50 text-blue-400 border-blue-700">Semantic Hit</Badge>;
+      case 'database':
+        return <Badge className="bg-purple-900/50 text-purple-400 border-purple-700">DB Hit</Badge>;
       case 'miss':
-        return <Badge variant="destructive">Cache Miss</Badge>;
+        return <Badge className="bg-red-900/50 text-red-400 border-red-700">Cache Miss</Badge>;
       default:
-        return <Badge variant="secondary">Unknown</Badge>;
+        return <Badge className="bg-gray-700 text-gray-400 border-gray-600">Unknown</Badge>;
     }
   };
 
