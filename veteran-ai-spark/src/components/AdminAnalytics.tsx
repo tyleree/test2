@@ -115,6 +115,8 @@ const TimelineView = () => {
         return <CheckCircle className="h-4 w-4 text-blue-500" />;
       case 'database':
         return <CheckCircle className="h-4 w-4 text-purple-500" />;
+      case 'topic':
+        return <CheckCircle className="h-4 w-4 text-cyan-500" />;
       case 'miss':
         return <XCircle className="h-4 w-4 text-red-500" />;
       default:
@@ -132,6 +134,8 @@ const TimelineView = () => {
         return <Badge className="bg-blue-900/50 text-blue-400 border-blue-700">Semantic Hit</Badge>;
       case 'database':
         return <Badge className="bg-purple-900/50 text-purple-400 border-purple-700">DB Hit</Badge>;
+      case 'topic':
+        return <Badge className="bg-cyan-900/50 text-cyan-400 border-cyan-700">Topic Hit</Badge>;
       case 'miss':
         return <Badge className="bg-red-900/50 text-red-400 border-red-700">Cache Miss</Badge>;
       default:
@@ -427,14 +431,14 @@ const TimelineView = () => {
                   <Trash2 className="h-4 w-4 mr-1" />
                   Delete
                 </Button>
-                <Button
-                  variant="ghost"
-                  size="sm"
-                  onClick={() => setSelectedQuestion(null)}
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={() => setSelectedQuestion(null)}
                   className="text-slate-400 hover:text-white"
-                >
-                  ✕
-                </Button>
+            >
+              ✕
+            </Button>
               </div>
             </div>
           </CardHeader>
@@ -461,7 +465,7 @@ const TimelineView = () => {
               <div className="bg-slate-800/50 rounded-lg p-3">
                 <label className="font-medium text-orange-500 text-sm block mb-1">Citations</label>
                 <p className="text-white font-semibold">{selectedQuestion.citations_count}</p>
-              </div>
+            </div>
               <div className="bg-slate-800/50 rounded-lg p-3">
                 <label className="font-medium text-orange-500 text-sm block mb-1">User IP</label>
                 <p className="text-white font-mono text-sm">{selectedQuestion.user_ip}</p>
@@ -470,7 +474,7 @@ const TimelineView = () => {
             <div className="bg-slate-800/50 rounded-lg p-4">
               <label className="font-medium text-orange-500 block mb-2">Token Usage:</label>
               <div className="grid grid-cols-3 gap-4 text-sm">
-                <div>
+            <div>
                   <span className="text-slate-400">Total:</span>
                   <span className="text-white ml-2 font-semibold">{formatTokens(selectedQuestion.token_usage?.total_tokens || 0)}</span>
                 </div>
@@ -507,6 +511,7 @@ interface CacheMetrics {
   db_hits: number;
   db_writes: number;
   db_errors: number;
+  topic_hits: number;  // New: topic graph hits
   total_hits: number;
   hit_rate: string;
   memory_cache_size: number;
@@ -962,12 +967,12 @@ const AdminAnalytics = () => {
             </div>
             <div className="pt-4 border-t border-slate-700">
               <Button asChild variant="outline" className="w-full border-slate-600 hover:bg-slate-700">
-                <RouterLink to="/">
-                  <ArrowLeft className="h-4 w-4 mr-2" />
-                  Back to Home
-                </RouterLink>
-              </Button>
-            </div>
+              <RouterLink to="/">
+                <ArrowLeft className="h-4 w-4 mr-2" />
+                Back to Home
+              </RouterLink>
+            </Button>
+          </div>
           </CardContent>
         </Card>
       </div>
@@ -1024,7 +1029,7 @@ const AdminAnalytics = () => {
               <div className="h-8 w-8 rounded-lg bg-gradient-to-br from-orange-500 to-orange-600 flex items-center justify-center">
                 <BarChart3 className="h-4 w-4 text-white" />
               </div>
-              <div>
+            <div>
                 <h1 className="text-lg font-semibold text-white">Admin Analytics</h1>
                 <p className="text-xs text-gray-400">Veterans Benefits AI</p>
               </div>
@@ -1050,8 +1055,8 @@ const AdminAnalytics = () => {
               Admin
             </Badge>
           </div>
+          </div>
         </div>
-      </div>
 
       <div className="max-w-7xl mx-auto py-8 px-4">
 

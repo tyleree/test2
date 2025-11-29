@@ -530,6 +530,21 @@ def log_chat_question(token_usage=None, model_info=None, extra_perf=None, questi
         print(f"[DEBUG] Event committed successfully: id={ev.id}, cache={cache_info}")
         print(f"[ANALYTICS] Logged chat: cache={cache_info}, ms={response_ms}, tokens={openai_total_tokens}")
         
+        # Classify and link question to topics (for topic-based cache lookups)
+        # Only do this for original answers, not cached ones
+        if question_data and cache_info == 'miss':
+            try:
+                from src.topic_graph import get_topic_graph
+                question_text = question_data.get('question', '')
+                if question_text and ev.id:
+                    graph = get_topic_graph()
+                    topic_ids = graph.classify_question(question_text)
+                    if topic_ids:
+                        graph.link_question_to_topics(ev.id, topic_ids)
+                        print(f"[TOPIC_GRAPH] Linked event {ev.id} to topics: {topic_ids}")
+            except Exception as topic_error:
+                print(f"[TOPIC_GRAPH] Failed to link topics: {topic_error}")
+        
     except Exception as e:
         print(f"[WARN] Failed to log chat question: {e}")
         if g.db:
@@ -546,15 +561,15 @@ try:
     rag_initialized = init_rag_system()
     if rag_initialized:
         print("✅ OpenAI RAG system initialized successfully")
-    else:
+        else:
         print("⚠️ RAG system initialization returned False - will retry on first query")
-except Exception as e:
+    except Exception as e:
     print(f"⚠️ RAG system initialization deferred: {e}")
     rag_initialized = False
-
+        
 # Legacy variables for compatibility (no longer used but kept to avoid errors)
-assistant = None
-index = None
+    assistant = None
+    index = None
 
 # OpenAI configuration for direct queries
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
@@ -1999,13 +2014,13 @@ def ask():
                 # RAG query failed
                 error_msg = rag_response.get('error', 'Unknown error') if rag_response else 'No response'
                 print(f"⚠️ RAG query failed: {error_msg}")
-                elapsed_ms = int((perf_counter() - start_time) * 1000)
-                log_chat_question(
-                    extra_perf={
-                        'response_ms': elapsed_ms,
-                        'prompt_chars': len(prompt),
-                        'answer_chars': 0,
-                        'success': 0,
+                        elapsed_ms = int((perf_counter() - start_time) * 1000)
+                        log_chat_question(
+                            extra_perf={
+                                'response_ms': elapsed_ms,
+                                'prompt_chars': len(prompt),
+                                'answer_chars': 0,
+                                'success': 0,
                         'provider': 'openai_rag_failed'
                     },
                     question_data={
@@ -2016,14 +2031,14 @@ def ask():
                         'chunks_retrieved': 0
                     }
                 )
-                return jsonify({
+                        return jsonify({
                     "error": "I'm sorry, I encountered an error processing your question. Please try again.",
-                    "details": {
+                            "details": {
                         "method": "openai_rag",
                         "error": error_msg
-                    }
-                }), 500
-        else:
+                            }
+                        }), 500
+                else:
             # No OpenAI API key - return error
             elapsed_ms = int((perf_counter() - start_time) * 1000)
             log_chat_question(
@@ -2076,7 +2091,7 @@ def ask_stream():
         suspicious, reason = is_suspicious_request(client_ip, prompt)
         if suspicious:
             print(f"[WARN] Suspicious streaming request from {client_ip}: {reason}")
-            return jsonify({
+                return jsonify({
                 "error": "Rate limit exceeded",
                 "retry_after": 300,
             }), 429

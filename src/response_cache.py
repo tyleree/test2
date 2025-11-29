@@ -78,10 +78,11 @@ class CacheMetrics:
     db_hits: int = 0
     db_writes: int = 0
     db_errors: int = 0
+    topic_hits: int = 0  # New: topic graph hits
     
     @property
     def total_hits(self) -> int:
-        return self.exact_hits + self.semantic_hits + self.db_hits
+        return self.exact_hits + self.semantic_hits + self.db_hits + self.topic_hits
     
     @property
     def total_requests(self) -> int:
@@ -102,6 +103,7 @@ class CacheMetrics:
             "db_hits": self.db_hits,
             "db_writes": self.db_writes,
             "db_errors": self.db_errors,
+            "topic_hits": self.topic_hits,
             "total_hits": self.total_hits,
             "hit_rate": f"{self.hit_rate:.2%}"
         }
@@ -371,6 +373,39 @@ class ResponseCache:
         finally:
             session.close()
     
+    def _check_topic_graph(self, query: str) -> Optional[Tuple[str, List[Dict[str, Any]], str]]:
+        """
+        Check topic graph for similar cached answers (L3 lookup).
+        
+        Uses the question-topic graph for smart cache lookups.
+        Returns (response, sources, model_used) or None.
+        """
+        if not DB_AVAILABLE:
+            return None
+        
+        try:
+            from src.topic_graph import get_topic_graph
+            
+            graph = get_topic_graph()
+            topic_ids = graph.classify_question(query)
+            
+            if not topic_ids:
+                return None
+            
+            # Find cached answers from questions with same topics
+            results = graph.find_similar_by_topic(topic_ids, limit=1)
+            
+            if results:
+                best = results[0]
+                print(f"[CACHE] L3 topic hit: {query[:50]}... (matched topic IDs: {topic_ids})")
+                return (best['response'], best['sources'], best['model_used'])
+            
+            return None
+            
+        except Exception as e:
+            print(f"[CACHE] Topic graph lookup error: {e}")
+            return None
+    
     def _check_database(self, key: str) -> Optional[CacheEntry]:
         """Check PostgreSQL for a cache entry (L2 lookup)."""
         if not DB_AVAILABLE:
@@ -498,6 +533,13 @@ class ResponseCache:
             
             print(f"[CACHE] L2 database hit: {query[:50]}...")
             return (db_entry.response, db_entry.sources, db_entry.model_used, "database")
+        
+        # L3: Check topic graph (finds answers from similar-topic questions)
+        topic_result = self._check_topic_graph(query)
+        if topic_result:
+            response, sources, model_used = topic_result
+            self.metrics.topic_hits += 1
+            return (response, sources, model_used, "topic")
         
         return None
     
