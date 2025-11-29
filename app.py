@@ -439,7 +439,11 @@ def log_chat_question(token_usage=None, model_info=None, extra_perf=None, questi
         extra_perf: Performance metrics (response_ms, prompt_chars, etc.)
         question_data: Dict with question text, answer, cache_hit, sources, etc.
     """
+    cache_hit = question_data.get('cache_hit', 'unknown') if question_data else 'no_data'
+    print(f"[DEBUG] log_chat_question called: cache_hit={cache_hit}")
+    
     if not DATABASE_AVAILABLE or not hasattr(g, 'db') or g.db is None:
+        print(f"[DEBUG] Skipping log - DB_AVAILABLE={DATABASE_AVAILABLE}, has_db={hasattr(g, 'db')}, db_none={g.db is None if hasattr(g, 'db') else 'N/A'}")
         return
     
     try:
@@ -523,6 +527,7 @@ def log_chat_question(token_usage=None, model_info=None, extra_perf=None, questi
         g.db.commit()
         
         cache_info = question_data.get('cache_hit', 'miss') if question_data else 'unknown'
+        print(f"[DEBUG] Event committed successfully: id={ev.id}, cache={cache_info}")
         print(f"[ANALYTICS] Logged chat: cache={cache_info}, ms={response_ms}, tokens={openai_total_tokens}")
         
     except Exception as e:
@@ -1955,6 +1960,11 @@ def ask():
                 answer_content = rag_response["content"]
                 success_flag = 1
                 elapsed_ms = int((perf_counter() - start_time) * 1000)
+                
+                # Debug: Log cache hit status
+                cache_status = rag_response.get("metadata", {}).get("cache_hit", "unknown")
+                question_data_cache = rag_response.get("question_data", {}).get("cache_hit", "unknown")
+                print(f"[DEBUG] About to log: cache_status={cache_status}, question_data_cache={question_data_cache}, elapsed_ms={elapsed_ms}")
                 
                 # Log chat question to analytics
                 log_chat_question(
