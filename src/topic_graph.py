@@ -48,6 +48,58 @@ class TopicGraph:
         self._initialized = False
         self._db_available = False
     
+    def _create_tables(self, session) -> None:
+        """Create the topic graph tables and seed data."""
+        from sqlalchemy import text
+        
+        # Create topics table
+        session.execute(text("""
+            CREATE TABLE IF NOT EXISTS topics (
+                id SERIAL PRIMARY KEY,
+                slug VARCHAR(50) UNIQUE NOT NULL,
+                name VARCHAR(100) NOT NULL,
+                keywords TEXT[] NOT NULL DEFAULT '{}',
+                created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
+            )
+        """))
+        
+        # Create index
+        session.execute(text("""
+            CREATE INDEX IF NOT EXISTS idx_topics_slug ON topics(slug)
+        """))
+        
+        # Create question_topics table (edges)
+        session.execute(text("""
+            CREATE TABLE IF NOT EXISTS question_topics (
+                question_id INTEGER REFERENCES events(id) ON DELETE CASCADE,
+                topic_id INTEGER REFERENCES topics(id) ON DELETE CASCADE,
+                confidence FLOAT DEFAULT 1.0,
+                created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
+                PRIMARY KEY (question_id, topic_id)
+            )
+        """))
+        
+        # Create index for fast topic-based lookups
+        session.execute(text("""
+            CREATE INDEX IF NOT EXISTS idx_question_topics_topic ON question_topics(topic_id)
+        """))
+        
+        # Seed initial topics for veterans benefits
+        session.execute(text("""
+            INSERT INTO topics (slug, name, keywords) VALUES
+            ('disability_ratings', 'Disability Ratings', ARRAY['disability rating', 'va rating', 'service-connected', 'compensation', 'disability claim', 'rating decision', 'combined rating']),
+            ('healthcare', 'Healthcare Benefits', ARRAY['healthcare', 'medical', 'va hospital', 'health care', 'doctor', 'treatment', 'prescription', 'mental health', 'ptsd']),
+            ('education', 'Education Benefits', ARRAY['gi bill', 'education', 'college', 'tuition', 'school', 'vocational', 'training', 'vre', 'voc rehab']),
+            ('home_loans', 'Home Loans', ARRAY['va loan', 'home loan', 'mortgage', 'housing', 'coe', 'certificate of eligibility', 'funding fee']),
+            ('pension', 'Pension & Aid', ARRAY['pension', 'aid and attendance', 'housebound', 'survivors pension', 'death pension']),
+            ('burial', 'Burial & Memorial', ARRAY['burial', 'cemetery', 'memorial', 'headstone', 'grave marker', 'funeral', 'interment']),
+            ('dependents', 'Dependent Benefits', ARRAY['dependent', 'spouse', 'child', 'family', 'champva', 'dea', 'chapter 35']),
+            ('appeals', 'Appeals & Claims', ARRAY['appeal', 'decision review', 'higher level', 'supplemental claim', 'board of veterans appeals', 'bva', 'denied claim'])
+            ON CONFLICT (slug) DO NOTHING
+        """))
+        
+        print("[TOPIC_GRAPH] Created tables and seeded topics")
+    
     def initialize(self) -> bool:
         """
         Initialize the topic graph from database.
@@ -74,7 +126,7 @@ class TopicGraph:
             try:
                 from sqlalchemy import text
                 
-                # Check if topics table exists
+                # Check if topics table exists, create if not
                 exists = session.execute(text("""
                     SELECT EXISTS (
                         SELECT FROM information_schema.tables 
@@ -83,8 +135,9 @@ class TopicGraph:
                 """)).scalar()
                 
                 if not exists:
-                    print("[TOPIC_GRAPH] Topics table not found - run scripts/topic_graph_setup.sql")
-                    return False
+                    print("[TOPIC_GRAPH] Topics table not found - creating...")
+                    self._create_tables(session)
+                    session.commit()
                 
                 # Load all topics into memory
                 rows = session.execute(text("""
