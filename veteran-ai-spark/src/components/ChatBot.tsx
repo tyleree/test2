@@ -107,7 +107,17 @@ export const ChatBot = () => {
                         components={{
                           p: ({children}) => <p className="break-words overflow-wrap-anywhere">{children}</p>,
                           div: ({children}) => <div className="break-words overflow-wrap-anywhere">{children}</div>,
-                          span: ({children}) => <span className="break-words overflow-wrap-anywhere">{children}</span>
+                          span: ({children}) => <span className="break-words overflow-wrap-anywhere">{children}</span>,
+                          a: ({href, children}) => (
+                            <a 
+                              href={href} 
+                              target="_blank" 
+                              rel="noopener noreferrer"
+                              className="text-accent hover:underline"
+                            >
+                              {children}
+                            </a>
+                          )
                         }}
                       >
                         {message.content}

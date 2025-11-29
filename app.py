@@ -530,20 +530,40 @@ def log_chat_question(token_usage=None, model_info=None, extra_perf=None, questi
         print(f"[DEBUG] Event committed successfully: id={ev.id}, cache={cache_info}")
         print(f"[ANALYTICS] Logged chat: cache={cache_info}, ms={response_ms}, tokens={openai_total_tokens}")
         
-        # Classify and link question to topics (for topic-based cache lookups)
-        # Only do this for original answers, not cached ones
+        # Build knowledge graph: classify topics, extract entities, link sources
+        # Only do this for original answers, not cached ones (for hallucination prevention)
         if question_data and cache_info == 'miss':
             try:
-                from src.topic_graph import get_topic_graph
+                from src.topic_graph import classify_and_link, link_sources
                 question_text = question_data.get('question', '')
+                
                 if question_text and ev.id:
-                    graph = get_topic_graph()
-                    topic_ids = graph.classify_question(question_text)
-                    if topic_ids:
-                        graph.link_question_to_topics(ev.id, topic_ids)
-                        print(f"[TOPIC_GRAPH] Linked event {ev.id} to topics: {topic_ids}")
+                    # 1. Classify into topics AND extract entities (single call)
+                    topic_ids, entities = classify_and_link(ev.id, question_text)
+                    
+                    topic_info = f"topics={topic_ids}" if topic_ids else "no topics"
+                    entity_info = f"entities={[e.value for e in entities]}" if entities else "no entities"
+                    print(f"[TOPIC_GRAPH] Linked event {ev.id}: {topic_info}, {entity_info}")
+                    
+                    # 2. Link source chunks used in the answer (for source verification)
+                    sources = question_data.get('sources', [])
+                    if sources:
+                        source_ids = []
+                        relevance_scores = []
+                        for src in sources:
+                            if isinstance(src, dict):
+                                # Extract entry_id from source dict
+                                source_id = src.get('entry_id') or src.get('id') or src.get('url', '')
+                                if source_id:
+                                    source_ids.append(str(source_id))
+                                    relevance_scores.append(src.get('score', 1.0))
+                        
+                        if source_ids:
+                            link_sources(ev.id, source_ids, relevance_scores)
+                            print(f"[TOPIC_GRAPH] Linked event {ev.id} to {len(source_ids)} sources")
+                            
             except Exception as topic_error:
-                print(f"[TOPIC_GRAPH] Failed to link topics: {topic_error}")
+                print(f"[TOPIC_GRAPH] Knowledge graph linking failed: {topic_error}")
         
     except Exception as e:
         print(f"[WARN] Failed to log chat question: {e}")

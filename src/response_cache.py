@@ -377,7 +377,10 @@ class ResponseCache:
         """
         Check topic graph for similar cached answers (L3 lookup).
         
-        Uses the question-topic graph for smart cache lookups.
+        Uses the enhanced question-topic-entity graph for smart cache lookups.
+        Prioritizes entity matches (DC codes, forms) for higher precision,
+        then falls back to topic matches.
+        
         Returns (response, sources, model_used) or None.
         """
         if not DB_AVAILABLE:
@@ -387,17 +390,30 @@ class ResponseCache:
             from src.topic_graph import get_topic_graph
             
             graph = get_topic_graph()
+            
+            # Classify into topics
             topic_ids = graph.classify_question(query)
             
-            if not topic_ids:
+            # Extract entities (DC codes, forms, conditions)
+            entities = graph.extract_entities(query)
+            
+            # Need at least one signal to proceed
+            if not topic_ids and not entities:
                 return None
             
-            # Find cached answers from questions with same topics
-            results = graph.find_similar_by_topic(topic_ids, limit=1)
+            # Enhanced multi-join lookup: entities first (most specific), then topics
+            results = graph.find_similar_enhanced(
+                topic_ids=topic_ids,
+                entities=entities,
+                limit=1,
+                prefer_verified=True
+            )
             
             if results:
                 best = results[0]
-                print(f"[CACHE] L3 topic hit: {query[:50]}... (matched topic IDs: {topic_ids})")
+                match_type = best.get('match_type', 'topic')
+                entity_info = f", entities: {[e.value for e in entities]}" if entities else ""
+                print(f"[CACHE] L3 {match_type} hit: {query[:40]}... (topics: {topic_ids}{entity_info})")
                 return (best['response'], best['sources'], best['model_used'])
             
             return None
