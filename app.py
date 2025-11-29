@@ -459,7 +459,7 @@ def log_chat_question(token_usage=None, model_info=None, extra_perf=None, questi
         
         if token_usage and isinstance(token_usage, dict):
             # OpenAI token usage
-            if 'usage' in token_usage:
+            if 'usage' in token_usage and token_usage['usage'] is not None:
                 usage = token_usage['usage']
                 openai_prompt_tokens = usage.get('prompt_tokens')
                 openai_completion_tokens = usage.get('completion_tokens')
