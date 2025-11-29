@@ -581,15 +581,15 @@ try:
     rag_initialized = init_rag_system()
     if rag_initialized:
         print("✅ OpenAI RAG system initialized successfully")
-        else:
+    else:
         print("⚠️ RAG system initialization returned False - will retry on first query")
-    except Exception as e:
+except Exception as e:
     print(f"⚠️ RAG system initialization deferred: {e}")
     rag_initialized = False
-        
+
 # Legacy variables for compatibility (no longer used but kept to avoid errors)
-    assistant = None
-    index = None
+assistant = None
+index = None
 
 # OpenAI configuration for direct queries
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
@@ -2034,13 +2034,13 @@ def ask():
                 # RAG query failed
                 error_msg = rag_response.get('error', 'Unknown error') if rag_response else 'No response'
                 print(f"⚠️ RAG query failed: {error_msg}")
-                        elapsed_ms = int((perf_counter() - start_time) * 1000)
-                        log_chat_question(
-                            extra_perf={
-                                'response_ms': elapsed_ms,
-                                'prompt_chars': len(prompt),
-                                'answer_chars': 0,
-                                'success': 0,
+                elapsed_ms = int((perf_counter() - start_time) * 1000)
+                log_chat_question(
+                    extra_perf={
+                        'response_ms': elapsed_ms,
+                        'prompt_chars': len(prompt),
+                        'answer_chars': 0,
+                        'success': 0,
                         'provider': 'openai_rag_failed'
                     },
                     question_data={
@@ -2051,14 +2051,14 @@ def ask():
                         'chunks_retrieved': 0
                     }
                 )
-                        return jsonify({
+                return jsonify({
                     "error": "I'm sorry, I encountered an error processing your question. Please try again.",
-                            "details": {
+                    "details": {
                         "method": "openai_rag",
                         "error": error_msg
-                            }
-                        }), 500
-                else:
+                    }
+                }), 500
+        else:
             # No OpenAI API key - return error
             elapsed_ms = int((perf_counter() - start_time) * 1000)
             log_chat_question(
@@ -2111,7 +2111,7 @@ def ask_stream():
         suspicious, reason = is_suspicious_request(client_ip, prompt)
         if suspicious:
             print(f"[WARN] Suspicious streaming request from {client_ip}: {reason}")
-                return jsonify({
+            return jsonify({
                 "error": "Rate limit exceeded",
                 "retry_after": 300,
             }), 429
