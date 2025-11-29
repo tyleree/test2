@@ -256,32 +256,32 @@ const TimelineView = () => {
           </div>
 
           {/* Timeline Table */}
-          <div className="rounded-md border">
+          <div className="rounded-md border border-gray-700">
             <Table>
               <TableHeader>
-                <TableRow>
-                  <TableHead>Timestamp</TableHead>
-                  <TableHead>Question</TableHead>
-                  <TableHead>Cache Mode</TableHead>
-                  <TableHead>Similarity</TableHead>
-                  <TableHead>Latency</TableHead>
-                  <TableHead>Tokens</TableHead>
-                  <TableHead>Citations</TableHead>
-                  <TableHead>Actions</TableHead>
+                <TableRow className="border-gray-700">
+                  <TableHead className="text-gray-400">Timestamp</TableHead>
+                  <TableHead className="text-gray-400">Question</TableHead>
+                  <TableHead className="text-gray-400">Cache Mode</TableHead>
+                  <TableHead className="text-gray-400">Similarity</TableHead>
+                  <TableHead className="text-gray-400">Latency</TableHead>
+                  <TableHead className="text-gray-400">Tokens</TableHead>
+                  <TableHead className="text-gray-400">Citations</TableHead>
+                  <TableHead className="text-gray-400">Actions</TableHead>
                 </TableRow>
               </TableHeader>
               <TableBody>
                 {timelineData?.entries?.map((entry) => (
-                  <TableRow key={entry.id}>
-                    <TableCell className="text-sm">
+                  <TableRow key={entry.id} className="border-gray-700">
+                    <TableCell className="text-sm text-gray-300">
                       {formatTimestamp(entry.timestamp)}
                     </TableCell>
                     <TableCell className="max-w-md">
-                      <div className="truncate" title={entry.question}>
+                      <div className="truncate text-gray-300" title={entry.question}>
                         {entry.question}
                       </div>
                       {entry.answer_preview && (
-                        <div className="text-xs text-muted-foreground mt-1 truncate">
+                        <div className="text-xs text-gray-500 mt-1 truncate">
                           {entry.answer_preview}
                         </div>
                       )}
@@ -294,40 +294,40 @@ const TimelineView = () => {
                     </TableCell>
                     <TableCell>
                       {entry.semantic_similarity ? (
-                        <Badge variant="outline">
+                        <Badge className="bg-gray-700 text-orange-500 border-gray-600">
                           {(entry.semantic_similarity * 100).toFixed(1)}%
                         </Badge>
                       ) : (
-                        <span className="text-muted-foreground">-</span>
+                        <span className="text-gray-500">-</span>
                       )}
                     </TableCell>
                     <TableCell>
-                      <Badge variant="outline" className="text-xs">
+                      <Badge className="bg-gray-700 text-orange-500 border-gray-600 text-xs">
                         {entry.latency_ms}ms
                       </Badge>
                     </TableCell>
                     <TableCell>
                       <div className="text-sm">
-                        <div className="font-medium">
+                        <div className="font-medium text-orange-500">
                           {formatTokens(entry.token_usage?.total_tokens || 0)}
                         </div>
                         {entry.token_usage?.tokens_big && (
-                          <div className="text-xs text-muted-foreground">
+                          <div className="text-xs text-gray-500">
                             Big: {formatTokens(entry.token_usage.tokens_big)}
                           </div>
                         )}
                       </div>
                     </TableCell>
                     <TableCell>
-                      <Badge variant="outline">
+                      <Badge className="bg-gray-700 text-orange-500 border-gray-600">
                         {entry.citations_count}
                       </Badge>
                     </TableCell>
                     <TableCell>
                       <Button
-                        variant="ghost"
                         size="sm"
                         onClick={() => setSelectedQuestion(entry)}
+                        className="bg-gray-700 hover:bg-gray-600 text-gray-300"
                       >
                         <Eye className="h-4 w-4" />
                       </Button>
@@ -339,7 +339,7 @@ const TimelineView = () => {
           </div>
 
           {(!timelineData?.entries || timelineData.entries.length === 0) && (
-            <div className="text-center py-8 text-muted-foreground">
+            <div className="text-center py-8 text-gray-500">
               No questions found for the selected filter.
             </div>
           )}
@@ -1219,20 +1219,20 @@ const AdminAnalytics = () => {
             </TabsContent>
 
             <TabsContent value="locations" className="space-y-6">
-              <Card>
+              <Card className="bg-gray-800/50 border-gray-700">
                 <CardHeader>
-                  <CardTitle className="flex items-center space-x-2">
-                    <Globe className="h-5 w-5" />
+                  <CardTitle className="flex items-center space-x-2 text-gray-200">
+                    <Globe className="h-5 w-5 text-orange-500" />
                     <span>Visitor Locations Heat Map</span>
                   </CardTitle>
-                  <CardDescription>
+                  <CardDescription className="text-gray-400">
                     Geographic distribution of website visitors across the United States
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
                   <Suspense fallback={
                     <div className="flex items-center justify-center h-64">
-                      <div className="text-muted-foreground">Loading map...</div>
+                      <div className="text-gray-500">Loading map...</div>
                     </div>
                   }>
                     <USHeatMap />
@@ -1244,36 +1244,36 @@ const AdminAnalytics = () => {
             <TabsContent value="traffic" className="space-y-6">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                 {/* Top Pages */}
-                <Card>
+                <Card className="bg-gray-800/50 border-gray-700">
                   <CardHeader>
-                    <CardTitle className="flex items-center space-x-2">
-                      <BarChart3 className="h-5 w-5" />
+                    <CardTitle className="flex items-center space-x-2 text-gray-200">
+                      <BarChart3 className="h-5 w-5 text-orange-500" />
                       <span>Top Pages</span>
                     </CardTitle>
-                    <CardDescription>Most visited pages (last {days} days)</CardDescription>
+                    <CardDescription className="text-gray-400">Most visited pages (last {days} days)</CardDescription>
                   </CardHeader>
                   <CardContent>
                     <Table>
                       <TableHeader>
-                        <TableRow>
-                          <TableHead>Page</TableHead>
-                          <TableHead className="text-right">Views</TableHead>
+                        <TableRow className="border-gray-700">
+                          <TableHead className="text-gray-400">Page</TableHead>
+                          <TableHead className="text-right text-gray-400">Views</TableHead>
                         </TableRow>
                       </TableHeader>
                       <TableBody>
                         {analytics.top_pages.length === 0 ? (
-                          <TableRow>
-                            <TableCell colSpan={2} className="text-center text-muted-foreground">
+                          <TableRow className="border-gray-700">
+                            <TableCell colSpan={2} className="text-center text-gray-500">
                               No page data available
                             </TableCell>
                           </TableRow>
                         ) : (
                           analytics.top_pages.map((page, index) => (
-                            <TableRow key={index}>
-                              <TableCell className="font-medium">
+                            <TableRow key={index} className="border-gray-700">
+                              <TableCell className="font-medium text-gray-300">
                                 {page.path || '(homepage)'}
                               </TableCell>
-                              <TableCell className="text-right">
+                              <TableCell className="text-right text-orange-500">
                                 {formatNumber(page.pageviews)}
                               </TableCell>
                             </TableRow>
@@ -1285,36 +1285,36 @@ const AdminAnalytics = () => {
                 </Card>
 
                 {/* Top Referrers */}
-                <Card>
+                <Card className="bg-gray-800/50 border-gray-700">
                   <CardHeader>
-                    <CardTitle className="flex items-center space-x-2">
-                      <Link className="h-5 w-5" />
+                    <CardTitle className="flex items-center space-x-2 text-gray-200">
+                      <Link className="h-5 w-5 text-orange-500" />
                       <span>Top Referrers</span>
                     </CardTitle>
-                    <CardDescription>Traffic sources (last {days} days)</CardDescription>
+                    <CardDescription className="text-gray-400">Traffic sources (last {days} days)</CardDescription>
                   </CardHeader>
                   <CardContent>
                     <Table>
                       <TableHeader>
-                        <TableRow>
-                          <TableHead>Referrer</TableHead>
-                          <TableHead className="text-right">Visits</TableHead>
+                        <TableRow className="border-gray-700">
+                          <TableHead className="text-gray-400">Referrer</TableHead>
+                          <TableHead className="text-right text-gray-400">Visits</TableHead>
                         </TableRow>
                       </TableHeader>
                       <TableBody>
                         {analytics.top_referrers.length === 0 ? (
-                          <TableRow>
-                            <TableCell colSpan={2} className="text-center text-muted-foreground">
+                          <TableRow className="border-gray-700">
+                            <TableCell colSpan={2} className="text-center text-gray-500">
                               No referrer data available
                             </TableCell>
                           </TableRow>
                         ) : (
                           analytics.top_referrers.map((referrer, index) => (
-                            <TableRow key={index}>
-                              <TableCell className="font-medium">
+                            <TableRow key={index} className="border-gray-700">
+                              <TableCell className="font-medium text-gray-300">
                                 {referrer.referrer === '(direct)' ? 'Direct Traffic' : referrer.referrer}
                               </TableCell>
-                              <TableCell className="text-right">
+                              <TableCell className="text-right text-orange-500">
                                 {formatNumber(referrer.visits)}
                               </TableCell>
                             </TableRow>
@@ -1554,55 +1554,55 @@ const AdminAnalytics = () => {
                   <>
                     {analytics.performance.summary && (
                       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                        <Card>
+                        <Card className="bg-gray-800/50 border-gray-700">
                           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                            <CardTitle className="text-sm font-medium">Avg Response Time</CardTitle>
-                            <TrendingUp className="h-4 w-4 text-muted-foreground" />
+                            <CardTitle className="text-sm font-medium text-gray-300">Avg Response Time</CardTitle>
+                            <TrendingUp className="h-4 w-4 text-orange-500" />
                           </CardHeader>
                           <CardContent>
-                            <div className="text-2xl font-bold text-blue-600">
+                            <div className="text-2xl font-bold text-orange-500">
                               {Math.round(analytics.performance.summary.avg_ms || 0)} ms
                             </div>
-                            <p className="text-xs text-muted-foreground">Average over last {days} days</p>
+                            <p className="text-xs text-gray-400">Average over last {days} days</p>
                           </CardContent>
                         </Card>
 
-                        <Card>
+                        <Card className="bg-gray-800/50 border-gray-700">
                           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                            <CardTitle className="text-sm font-medium">p95 Response Time</CardTitle>
-                            <TrendingUp className="h-4 w-4 text-muted-foreground" />
+                            <CardTitle className="text-sm font-medium text-gray-300">p95 Response Time</CardTitle>
+                            <TrendingUp className="h-4 w-4 text-orange-500" />
                           </CardHeader>
                           <CardContent>
-                            <div className="text-2xl font-bold text-orange-600">
+                            <div className="text-2xl font-bold text-orange-500">
                               {Math.round(analytics.performance.summary.p95_ms || 0)} ms
                             </div>
-                            <p className="text-xs text-muted-foreground">95th percentile</p>
+                            <p className="text-xs text-gray-400">95th percentile</p>
                           </CardContent>
                         </Card>
 
-                        <Card>
+                        <Card className="bg-gray-800/50 border-gray-700">
                           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                            <CardTitle className="text-sm font-medium">Success Rate</CardTitle>
-                            <TrendingUp className="h-4 w-4 text-muted-foreground" />
+                            <CardTitle className="text-sm font-medium text-gray-300">Success Rate</CardTitle>
+                            <TrendingUp className="h-4 w-4 text-orange-500" />
                           </CardHeader>
                           <CardContent>
-                            <div className="text-2xl font-bold text-green-600">
+                            <div className="text-2xl font-bold text-orange-500">
                               {((analytics.performance.summary.success_rate || 0) * 100).toFixed(1)}%
                             </div>
-                            <p className="text-xs text-muted-foreground">Successful responses</p>
+                            <p className="text-xs text-gray-400">Successful responses</p>
                           </CardContent>
                         </Card>
 
-                        <Card>
+                        <Card className="bg-gray-800/50 border-gray-700">
                           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                            <CardTitle className="text-sm font-medium">Avg Answer Size</CardTitle>
-                            <BarChart3 className="h-4 w-4 text-muted-foreground" />
+                            <CardTitle className="text-sm font-medium text-gray-300">Avg Answer Size</CardTitle>
+                            <BarChart3 className="h-4 w-4 text-orange-500" />
                           </CardHeader>
                           <CardContent>
-                            <div className="text-2xl font-bold text-purple-600">
+                            <div className="text-2xl font-bold text-orange-500">
                               {Math.round(analytics.performance.summary.avg_answer_chars || 0)} chars
                             </div>
-                            <p className="text-xs text-muted-foreground">Response length</p>
+                            <p className="text-xs text-gray-400">Response length</p>
                           </CardContent>
                         </Card>
                       </div>
@@ -1610,30 +1610,30 @@ const AdminAnalytics = () => {
 
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                       {analytics.performance.by_provider && analytics.performance.by_provider.length > 0 && (
-                        <Card>
+                        <Card className="bg-gray-800/50 border-gray-700">
                           <CardHeader>
-                            <CardTitle>Performance by Provider</CardTitle>
-                            <CardDescription>Comparative performance metrics</CardDescription>
+                            <CardTitle className="text-gray-200">Performance by Provider</CardTitle>
+                            <CardDescription className="text-gray-400">Comparative performance metrics</CardDescription>
                           </CardHeader>
                           <CardContent>
                             <Table>
                               <TableHeader>
-                                <TableRow>
-                                  <TableHead>Provider</TableHead>
-                                  <TableHead className="text-right">Avg ms</TableHead>
-                                  <TableHead className="text-right">p95 ms</TableHead>
-                                  <TableHead className="text-right">Success</TableHead>
-                                  <TableHead className="text-right">Queries</TableHead>
+                                <TableRow className="border-gray-700">
+                                  <TableHead className="text-gray-400">Provider</TableHead>
+                                  <TableHead className="text-right text-gray-400">Avg ms</TableHead>
+                                  <TableHead className="text-right text-gray-400">p95 ms</TableHead>
+                                  <TableHead className="text-right text-gray-400">Success</TableHead>
+                                  <TableHead className="text-right text-gray-400">Queries</TableHead>
                                 </TableRow>
                               </TableHeader>
                               <TableBody>
                                 {analytics.performance.by_provider.map((row: any, idx: number) => (
-                                  <TableRow key={idx}>
-                                    <TableCell className="font-medium">{row.provider}</TableCell>
-                                    <TableCell className="text-right">{Math.round(row.avg_ms || 0)}</TableCell>
-                                    <TableCell className="text-right">{Math.round(row.p95_ms || 0)}</TableCell>
-                                    <TableCell className="text-right">{((row.success_rate || 0) * 100).toFixed(1)}%</TableCell>
-                                    <TableCell className="text-right">{row.queries}</TableCell>
+                                  <TableRow key={idx} className="border-gray-700">
+                                    <TableCell className="font-medium text-gray-300">{row.provider}</TableCell>
+                                    <TableCell className="text-right text-orange-500">{Math.round(row.avg_ms || 0)}</TableCell>
+                                    <TableCell className="text-right text-orange-500">{Math.round(row.p95_ms || 0)}</TableCell>
+                                    <TableCell className="text-right text-gray-300">{((row.success_rate || 0) * 100).toFixed(1)}%</TableCell>
+                                    <TableCell className="text-right text-gray-300">{row.queries}</TableCell>
                                   </TableRow>
                                 ))}
                               </TableBody>
@@ -1643,28 +1643,28 @@ const AdminAnalytics = () => {
                       )}
 
                       {analytics.performance.daily && analytics.performance.daily.length > 0 && (
-                        <Card>
+                        <Card className="bg-gray-800/50 border-gray-700">
                           <CardHeader>
-                            <CardTitle>Daily Performance</CardTitle>
-                            <CardDescription>Average and p95 response times</CardDescription>
+                            <CardTitle className="text-gray-200">Daily Performance</CardTitle>
+                            <CardDescription className="text-gray-400">Average and p95 response times</CardDescription>
                           </CardHeader>
                           <CardContent>
                             <Table>
                               <TableHeader>
-                                <TableRow>
-                                  <TableHead>Date</TableHead>
-                                  <TableHead className="text-right">Avg ms</TableHead>
-                                  <TableHead className="text-right">p95 ms</TableHead>
-                                  <TableHead className="text-right">Queries</TableHead>
+                                <TableRow className="border-gray-700">
+                                  <TableHead className="text-gray-400">Date</TableHead>
+                                  <TableHead className="text-right text-gray-400">Avg ms</TableHead>
+                                  <TableHead className="text-right text-gray-400">p95 ms</TableHead>
+                                  <TableHead className="text-right text-gray-400">Queries</TableHead>
                                 </TableRow>
                               </TableHeader>
                               <TableBody>
                                 {analytics.performance.daily.slice(0, 10).map((d: any, idx: number) => (
-                                  <TableRow key={idx}>
-                                    <TableCell className="font-medium">{new Date(d.day).toLocaleDateString('en-US', {month:'short', day:'numeric'})}</TableCell>
-                                    <TableCell className="text-right">{Math.round(d.avg_ms || 0)}</TableCell>
-                                    <TableCell className="text-right">{Math.round(d.p95_ms || 0)}</TableCell>
-                                    <TableCell className="text-right">{d.queries}</TableCell>
+                                  <TableRow key={idx} className="border-gray-700">
+                                    <TableCell className="font-medium text-gray-300">{new Date(d.day).toLocaleDateString('en-US', {month:'short', day:'numeric'})}</TableCell>
+                                    <TableCell className="text-right text-orange-500">{Math.round(d.avg_ms || 0)}</TableCell>
+                                    <TableCell className="text-right text-orange-500">{Math.round(d.p95_ms || 0)}</TableCell>
+                                    <TableCell className="text-right text-gray-300">{d.queries}</TableCell>
                                   </TableRow>
                                 ))}
                               </TableBody>
@@ -1675,10 +1675,10 @@ const AdminAnalytics = () => {
                     </div>
                   </>
                 ) : (
-                  <Card>
+                  <Card className="bg-gray-800/50 border-gray-700">
                     <CardHeader>
-                      <CardTitle>Performance Analytics</CardTitle>
-                      <CardDescription>{analytics.performance.message || analytics.performance.error || 'Performance data not yet available.'}</CardDescription>
+                      <CardTitle className="text-gray-200">Performance Analytics</CardTitle>
+                      <CardDescription className="text-gray-400">{analytics.performance.message || analytics.performance.error || 'Performance data not yet available.'}</CardDescription>
                     </CardHeader>
                   </Card>
                 )
@@ -1688,50 +1688,50 @@ const AdminAnalytics = () => {
             <CacheMetricsTab adminToken={adminToken} />
 
             <TabsContent value="timeline" className="space-y-6">
-              <Card>
+              <Card className="bg-gray-800/50 border-gray-700">
                 <CardHeader>
-                  <CardTitle className="flex items-center space-x-2">
-                    <Calendar className="h-5 w-5" />
+                  <CardTitle className="flex items-center space-x-2 text-gray-200">
+                    <Calendar className="h-5 w-5 text-orange-500" />
                     <span>Daily Activity Timeline</span>
                   </CardTitle>
-                  <CardDescription>
+                  <CardDescription className="text-gray-400">
                     Daily breakdown of pageviews, unique visitors, and chat questions (last {days} days)
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
                   <Table>
                     <TableHeader>
-                      <TableRow>
-                        <TableHead>Date</TableHead>
-                        <TableHead className="text-right">Pageviews</TableHead>
-                        <TableHead className="text-right">Unique Visitors</TableHead>
-                        <TableHead className="text-right">Chat Questions</TableHead>
+                      <TableRow className="border-gray-700">
+                        <TableHead className="text-gray-400">Date</TableHead>
+                        <TableHead className="text-right text-gray-400">Pageviews</TableHead>
+                        <TableHead className="text-right text-gray-400">Unique Visitors</TableHead>
+                        <TableHead className="text-right text-gray-400">Chat Questions</TableHead>
                       </TableRow>
                     </TableHeader>
                     <TableBody>
                       {analytics.by_day.length === 0 ? (
-                        <TableRow>
-                          <TableCell colSpan={4} className="text-center text-muted-foreground">
+                        <TableRow className="border-gray-700">
+                          <TableCell colSpan={4} className="text-center text-gray-500">
                             No daily data available for the selected period
                           </TableCell>
                         </TableRow>
                       ) : (
                         analytics.by_day.map((day, index) => (
-                          <TableRow key={index}>
-                            <TableCell className="font-medium">
+                          <TableRow key={index} className="border-gray-700">
+                            <TableCell className="font-medium text-gray-300">
                               {new Date(day.day).toLocaleDateString('en-US', {
                                 month: 'short',
                                 day: 'numeric',
                                 year: 'numeric'
                               })}
                             </TableCell>
-                            <TableCell className="text-right">
+                            <TableCell className="text-right text-orange-500">
                               {formatNumber(day.pageviews)}
                             </TableCell>
-                            <TableCell className="text-right">
+                            <TableCell className="text-right text-orange-500">
                               {formatNumber(day.uniques)}
                             </TableCell>
-                            <TableCell className="text-right">
+                            <TableCell className="text-right text-orange-500">
                               {formatNumber(day.chat_questions)}
                             </TableCell>
                           </TableRow>
