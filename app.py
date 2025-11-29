@@ -2,7 +2,6 @@ from flask import Flask, render_template, request, jsonify, send_from_directory,
 from flask_limiter import Limiter
 from flask_limiter.util import get_remote_address
 from threading import Lock
-from pinecone import Pinecone
 import os
 from dotenv import load_dotenv
 import requests
@@ -12,6 +11,16 @@ from datetime import datetime
 import threading
 import uuid
 from time import perf_counter
+
+# New OpenAI-based RAG system (replaces Pinecone)
+from src.rag_integration import (
+    init_rag_system, 
+    query_rag_system, 
+    query_rag_system_streaming,
+    is_rag_ready,
+    get_cache_metrics,
+    clear_response_cache
+)
 
 # Load environment variables
 load_dotenv('env.txt')  # Using env.txt since .env is blocked
@@ -321,6 +330,54 @@ def init_db():
 if DATABASE_AVAILABLE:
     init_db()
 
+# One-time analytics reset (triggered by RESET_ANALYTICS=true env var)
+def reset_analytics_data():
+    """Reset all analytics data for a clean start."""
+    if os.getenv("RESET_ANALYTICS", "").lower() != "true":
+        return
+    
+    print("🔄 RESET_ANALYTICS=true detected - clearing all analytics data...")
+    
+    # Reset file-based stats
+    from datetime import datetime
+    clean_stats = {
+        'ask_count': 0,
+        'visit_count': 0,
+        'unique_visitors': set(),
+        'visitor_locations': {},
+        'first_visit': datetime.now().isoformat(),
+        'last_updated': datetime.now().isoformat()
+    }
+    save_stats(clean_stats)
+    app.config['STATS'] = clean_stats
+    print("   ✅ File stats reset (ask_count=0, visit_count=0, locations cleared)")
+    
+    # Reset database tables
+    if DATABASE_AVAILABLE:
+        try:
+            from sqlalchemy import text
+            session = SessionLocal()
+            
+            # Clear events table
+            result = session.execute(text("DELETE FROM events"))
+            events_count = result.rowcount
+            
+            # Clear legacy_stats table
+            result = session.execute(text("DELETE FROM legacy_stats"))
+            legacy_count = result.rowcount
+            
+            session.commit()
+            session.close()
+            
+            print(f"   ✅ Database reset (events: {events_count} deleted, legacy_stats: {legacy_count} deleted)")
+        except Exception as e:
+            print(f"   ⚠️ Database reset error: {e}")
+    
+    print("🎉 Analytics data reset complete! Remove RESET_ANALYTICS env var to prevent re-reset.")
+
+# Run reset if triggered
+reset_analytics_data()
+
 def client_ip(request):
     """Helper to get client IP respecting X-Forwarded-For"""
     xf = request.headers.get("X-Forwarded-For", "")
@@ -373,12 +430,25 @@ def close_session(exc):
             db.rollback()
         db.close()
 
-def log_chat_question(token_usage=None, model_info=None, extra_perf=None):
-    """Log a chat question event to analytics with token usage tracking"""
+def log_chat_question(token_usage=None, model_info=None, extra_perf=None, question_data=None):
+    """Log a chat question event to analytics with token usage tracking
+    
+    Args:
+        token_usage: Token usage info from OpenAI
+        model_info: Model metadata
+        extra_perf: Performance metrics (response_ms, prompt_chars, etc.)
+        question_data: Dict with question text, answer, cache_hit, sources, etc.
+    """
+    cache_hit = question_data.get('cache_hit', 'unknown') if question_data else 'no_data'
+    print(f"[DEBUG] log_chat_question called: cache_hit={cache_hit}")
+    
     if not DATABASE_AVAILABLE or not hasattr(g, 'db') or g.db is None:
+        print(f"[DEBUG] Skipping log - DB_AVAILABLE={DATABASE_AVAILABLE}, has_db={hasattr(g, 'db')}, db_none={g.db is None if hasattr(g, 'db') else 'N/A'}")
         return
     
     try:
+        import json
+        
         # Extract token usage information
         openai_prompt_tokens = None
         openai_completion_tokens = None
@@ -389,7 +459,7 @@ def log_chat_question(token_usage=None, model_info=None, extra_perf=None):
         
         if token_usage and isinstance(token_usage, dict):
             # OpenAI token usage
-            if 'usage' in token_usage:
+            if 'usage' in token_usage and token_usage['usage'] is not None:
                 usage = token_usage['usage']
                 openai_prompt_tokens = usage.get('prompt_tokens')
                 openai_completion_tokens = usage.get('completion_tokens')
@@ -419,6 +489,22 @@ def log_chat_question(token_usage=None, model_info=None, extra_perf=None):
             # Allow provider override from perf payload
             api_provider = extra_perf.get('provider') or api_provider
         
+        # Build meta JSON with question details
+        meta_dict = {}
+        if question_data and isinstance(question_data, dict):
+            meta_dict = {
+                'question': question_data.get('question', ''),
+                'answer': question_data.get('answer', ''),
+                'cache_hit': question_data.get('cache_hit', 'miss'),  # 'exact', 'semantic', 'database', or 'miss'
+                'semantic_similarity': question_data.get('semantic_similarity'),
+                'sources': question_data.get('sources', []),
+                'citations_count': len(question_data.get('sources', [])),
+                'chunks_retrieved': question_data.get('chunks_retrieved', 0),
+                'model_used': question_data.get('model_used', model_used),
+            }
+        
+        meta_json = json.dumps(meta_dict) if meta_dict else None
+        
         ev = Event(
             type='chat_question',
             path=request.path,
@@ -434,15 +520,53 @@ def log_chat_question(token_usage=None, model_info=None, extra_perf=None):
             response_ms=response_ms,
             prompt_chars=prompt_chars,
             answer_chars=answer_chars,
-            success=success_val
+            success=success_val,
+            meta=meta_json
         )
         g.db.add(ev)
         g.db.commit()
         
-        print(f"📊 Logged chat question: provider={api_provider}, ms={response_ms}, prompt_chars={prompt_chars}, answer_chars={answer_chars}, tokens={openai_total_tokens}")
+        cache_info = question_data.get('cache_hit', 'miss') if question_data else 'unknown'
+        print(f"[DEBUG] Event committed successfully: id={ev.id}, cache={cache_info}")
+        print(f"[ANALYTICS] Logged chat: cache={cache_info}, ms={response_ms}, tokens={openai_total_tokens}")
+        
+        # Build knowledge graph: classify topics, extract entities, link sources
+        # Only do this for original answers, not cached ones (for hallucination prevention)
+        if question_data and cache_info == 'miss':
+            try:
+                from src.topic_graph import classify_and_link, link_sources
+                question_text = question_data.get('question', '')
+                
+                if question_text and ev.id:
+                    # 1. Classify into topics AND extract entities (single call)
+                    topic_ids, entities = classify_and_link(ev.id, question_text)
+                    
+                    topic_info = f"topics={topic_ids}" if topic_ids else "no topics"
+                    entity_info = f"entities={[e.value for e in entities]}" if entities else "no entities"
+                    print(f"[TOPIC_GRAPH] Linked event {ev.id}: {topic_info}, {entity_info}")
+                    
+                    # 2. Link source chunks used in the answer (for source verification)
+                    sources = question_data.get('sources', [])
+                    if sources:
+                        source_ids = []
+                        relevance_scores = []
+                        for src in sources:
+                            if isinstance(src, dict):
+                                # Extract entry_id from source dict
+                                source_id = src.get('entry_id') or src.get('id') or src.get('url', '')
+                                if source_id:
+                                    source_ids.append(str(source_id))
+                                    relevance_scores.append(src.get('score', 1.0))
+                        
+                        if source_ids:
+                            link_sources(ev.id, source_ids, relevance_scores)
+                            print(f"[TOPIC_GRAPH] Linked event {ev.id} to {len(source_ids)} sources")
+                            
+            except Exception as topic_error:
+                print(f"[TOPIC_GRAPH] Knowledge graph linking failed: {topic_error}")
         
     except Exception as e:
-        print(f"⚠️ Failed to log chat question: {e}")
+        print(f"[WARN] Failed to log chat question: {e}")
         if g.db:
             g.db.rollback()
 
@@ -452,47 +576,20 @@ FRONTEND_BUILD_DIR = os.getenv(
     os.path.join(os.path.dirname(__file__), "frontend", "dist")
 )
 
-# Initialize Pinecone connection
+# Initialize OpenAI-based RAG system (replaces Pinecone)
 try:
-    pc = Pinecone(api_key=os.getenv("PINECONE_API_KEY"))
-    
-    # Try to get the index for direct queries
-    try:
-        # FORCE thriving-walnut index - override any environment variable
-        index_name = "thriving-walnut"  # os.getenv("PINECONE_INDEX_NAME", "thriving-walnut")
-        index = pc.Index(index_name)
-        app.config['PINECONE_INDEX'] = index
-        print(f"✅ Pinecone Index '{index_name}' connected successfully")
-        
-        # Test the connection by getting index stats
-        stats = index.describe_index_stats()
-        print(f"📊 Index stats: {stats.total_vector_count} vectors, {stats.dimension} dimensions")
-        
-    except Exception as e:
-        print(f"❌ Error connecting to Pinecone index: {e}")
-        print(f"🔍 FORCED index name: thriving-walnut (overriding env vars)")
-        index = None
-    
-    # Try to initialize MCP assistant (optional, fallback to direct index queries)
-    assistant = None
-    try:
-        if hasattr(pc, 'assistant'):
-            assistant = pc.assistant.Assistant(assistant_name="vb")
-            app.config['PINECONE_ASSISTANT'] = assistant
-            print("✅ Pinecone MCP Assistant 'vb' connected successfully")
-        else:
-            print("ℹ️  MCP Assistant not available in this Pinecone SDK version, using direct index queries")
-    except Exception as e:
-        print(f"⚠️ MCP Assistant initialization failed: {e}, using direct index queries")
-        
+    rag_initialized = init_rag_system()
+    if rag_initialized:
+        print("✅ OpenAI RAG system initialized successfully")
+    else:
+        print("⚠️ RAG system initialization returned False - will retry on first query")
 except Exception as e:
-    print(f"❌ Error initializing Pinecone connection: {e}")
-    assistant = None
-    index = None
+    print(f"⚠️ RAG system initialization deferred: {e}")
+    rag_initialized = False
 
-# MCP Server configuration (kept as fallback)
-MCP_SERVER_URL = "https://prod-1-data.ke.pinecone.io/mcp/assistants/vb"
-MCP_API_KEY = os.getenv("PINECONE_API_KEY")
+# Legacy variables for compatibility (no longer used but kept to avoid errors)
+assistant = None
+index = None
 
 # OpenAI configuration for direct queries
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
@@ -1888,80 +1985,81 @@ def ask():
         answer_content = None
         success_flag = 0
         
-        # Resolve Pinecone assistant/index from app config if available
-        assistant_ref = app.config.get('PINECONE_ASSISTANT') or assistant
-        index_ref = app.config.get('PINECONE_INDEX') or index
-        
-        # Try direct Pinecone query first (cost-effective, high-performance)
-        if index_ref and OPENAI_API_KEY:
-            print(f"🚀 Attempting direct Pinecone + GPT-4 query for prompt: {prompt[:50]}...")
-            print(f"🔍 Debug: index_ref type: {type(index_ref)}, OPENAI_API_KEY: {'[REDACTED]' if OPENAI_API_KEY else 'None'}")
-            direct_response = query_advanced_rag_system(prompt, index_ref)
-            print(f"🔍 Debug: direct_response type: {type(direct_response)}, content: {direct_response}")
-            if direct_response and direct_response.get("success"):
-                provider_used = 'openai_direct'
-                answer_content = direct_response["content"]
+        # Use new OpenAI-based RAG system
+        if OPENAI_API_KEY:
+            print(f"🚀 Querying OpenAI RAG system for prompt: {prompt[:50]}...")
+            rag_response = query_rag_system(prompt)
+            
+            if rag_response and rag_response.get("success"):
+                provider_used = 'openai_rag'
+                answer_content = rag_response["content"]
                 success_flag = 1
-                # Log chat question to analytics with token usage + performance
                 elapsed_ms = int((perf_counter() - start_time) * 1000)
+                
+                # Debug: Log cache hit status
+                cache_status = rag_response.get("metadata", {}).get("cache_hit", "unknown")
+                question_data_cache = rag_response.get("question_data", {}).get("cache_hit", "unknown")
+                print(f"[DEBUG] About to log: cache_status={cache_status}, question_data_cache={question_data_cache}, elapsed_ms={elapsed_ms}")
+                
+                # Log chat question to analytics
                 log_chat_question(
-                    token_usage=direct_response.get("token_usage"),
-                    model_info=direct_response.get("metadata"),
+                    token_usage=rag_response.get("token_usage"),
+                    model_info=rag_response.get("metadata"),
                     extra_perf={
                         'response_ms': elapsed_ms,
                         'prompt_chars': len(prompt),
                         'answer_chars': len(answer_content or ''),
                         'success': success_flag,
                         'provider': provider_used
-                    }
+                    },
+                    question_data=rag_response.get("question_data", {
+                        'question': prompt,
+                        'answer': answer_content,
+                        'cache_hit': rag_response.get("metadata", {}).get("cache_hit", "miss"),
+                        'sources': rag_response.get("citations", []),
+                        'chunks_retrieved': rag_response.get("metadata", {}).get("chunks_retrieved", 0),
+                        'model_used': rag_response.get("metadata", {}).get("model")
+                    })
                 )
+                
                 return jsonify({
                     "success": True,
                     "content": answer_content,
-                    "citations": direct_response.get("citations", []),
-                    "source": direct_response["source"],
-                    "metadata": direct_response.get("metadata", {}),
+                    "citations": rag_response.get("citations", []),
+                    "source": rag_response.get("source", "openai_rag"),
+                    "metadata": rag_response.get("metadata", {}),
                     "ask_count": current_ask_count
                 })
             else:
-                if direct_response and not direct_response.get("success"):
-                    print(f"⚠️ Direct Pinecone query failed with error: {direct_response.get('error', 'Unknown error')}")
-                    if DISABLE_FALLBACKS:
-                        # Return the actual error details when fallbacks are disabled
-                        elapsed_ms = int((perf_counter() - start_time) * 1000)
-                        log_chat_question(
-                            extra_perf={
-                                'response_ms': elapsed_ms,
-                                'prompt_chars': len(prompt),
-                                'answer_chars': 0,
-                                'success': 0,
-                                'provider': 'openai_direct_failed'
-                            }
-                        )
-                        # Generate user-friendly error message
-                        user_friendly_error = generate_user_friendly_error(direct_response, prompt)
-                        return jsonify({
-                            "error": user_friendly_error,
-                            "details": {
-                                "primary_method": "openai_direct",
-                                "fallbacks_disabled": True,
-                                "index_available": bool(index_ref),
-                                "openai_key_available": bool(OPENAI_API_KEY),
-                                "actual_error": direct_response.get('error'),
-                                "error_type": direct_response.get('error_type'),
-                                "traceback": direct_response.get('traceback')
-                            }
-                        }), 500
-                else:
-                    print("⚠️ Direct Pinecone query returned None, falling back to MCP")
+                # RAG query failed
+                error_msg = rag_response.get('error', 'Unknown error') if rag_response else 'No response'
+                print(f"⚠️ RAG query failed: {error_msg}")
+                elapsed_ms = int((perf_counter() - start_time) * 1000)
+                log_chat_question(
+                    extra_perf={
+                        'response_ms': elapsed_ms,
+                        'prompt_chars': len(prompt),
+                        'answer_chars': 0,
+                        'success': 0,
+                        'provider': 'openai_rag_failed'
+                    },
+                    question_data={
+                        'question': prompt,
+                        'answer': f'Error: {error_msg}',
+                        'cache_hit': 'miss',
+                        'sources': [],
+                        'chunks_retrieved': 0
+                    }
+                )
+                return jsonify({
+                    "error": "I'm sorry, I encountered an error processing your question. Please try again.",
+                    "details": {
+                        "method": "openai_rag",
+                        "error": error_msg
+                    }
+                }), 500
         else:
-            if not index_ref:
-                print("⚠️ No Pinecone index available for direct query")
-            if not OPENAI_API_KEY:
-                print("⚠️ No OpenAI API key available for direct query")
-        
-        # Check if fallbacks are disabled
-        if DISABLE_FALLBACKS:
+            # No OpenAI API key - return error
             elapsed_ms = int((perf_counter() - start_time) * 1000)
             log_chat_question(
                 extra_perf={
@@ -1969,125 +2067,114 @@ def ask():
                     'prompt_chars': len(prompt),
                     'answer_chars': 0,
                     'success': 0,
-                    'provider': 'openai_direct_failed'
+                    'provider': 'no_api_key'
+                },
+                question_data={
+                    'question': prompt,
+                    'answer': 'Error: No API key configured',
+                    'cache_hit': 'miss',
+                    'sources': [],
+                    'chunks_retrieved': 0
                 }
             )
             return jsonify({
-                "error": "Direct OpenAI + Pinecone query failed and fallbacks are disabled",
-                "details": {
-                    "primary_method": "openai_direct",
-                    "fallbacks_disabled": True,
-                    "index_available": bool(index_ref),
-                    "openai_key_available": bool(OPENAI_API_KEY)
-                }
-            }), 500
-        
-        # Fallback to MCP server (only if fallbacks enabled)
-        print(f"🔄 Falling back to MCP server for prompt: {prompt[:50]}...")
-        mcp_response = call_mcp_server(prompt)
-        if mcp_response and mcp_response.get("success"):
-            content, citations, metadata = process_mcp_response(mcp_response)
-            if content:
-                provider_used = 'pinecone_mcp'
-                answer_content = content
-                success_flag = 1
-                elapsed_ms = int((perf_counter() - start_time) * 1000)
-                # Extract token usage if present
-                token_usage = None
-                if metadata and isinstance(metadata, dict):
-                    usage = metadata.get('usage', {})
-                    if usage:
-                        token_usage = {'usage': usage, 'model': metadata.get('model'), 'provider': provider_used}
-                log_chat_question(
-                    token_usage=token_usage,
-                    model_info={'source': 'mcp_server', 'model': metadata.get('model') if metadata else None},
-                    extra_perf={
-                        'response_ms': elapsed_ms,
-                        'prompt_chars': len(prompt),
-                        'answer_chars': len(answer_content or ''),
-                        'success': success_flag,
-                        'provider': provider_used
-                    }
-                )
-                return jsonify({
-                    "success": True,
-                    "content": content,
-                    "citations": citations or [],
-                    "source": "mcp_server",
-                    "metadata": metadata,
-                    "ask_count": current_ask_count
-                })
-        else:
-            print(f"⚠️ MCP server failed: {mcp_response.get('error', 'Unknown error')}")
-        
-        # Final fallback to Pinecone SDK (only if fallbacks enabled)
-        if not DISABLE_FALLBACKS and assistant_ref:
-            print("🔄 Falling back to Pinecone SDK...")
-            try:
-                from pinecone_plugins.assistant.models.chat import Message
-                resp = assistant_ref.chat(
-                    messages=[Message(role="user", content=prompt)], 
-                    include_highlights=True
-                )
-                provider_used = 'pinecone_sdk'
-                answer_content = resp.message.content
-                success_flag = 1
-                elapsed_ms = int((perf_counter() - start_time) * 1000)
-                # Process citations as before
-                citations = []
-                try:
-                    if hasattr(resp, 'citations') and resp.citations:
-                        for citation in resp.citations:
-                            pass
-                except Exception:
-                    pass
-                # Log
-                log_chat_question(
-                    model_info={'source': 'pinecone_sdk', 'model': 'pinecone_assistant'},
-                    extra_perf={
-                        'response_ms': elapsed_ms,
-                        'prompt_chars': len(prompt),
-                        'answer_chars': len(answer_content or ''),
-                        'success': success_flag,
-                        'provider': provider_used
-                    }
-                )
-                return jsonify({
-                    "content": answer_content,
-                    "citations": citations,
-                    "source": "pinecone_sdk",
-                    "ask_count": current_ask_count,
-                    "debug_info": {
-                        "response_type": str(type(resp)),
-                        "has_citations": hasattr(resp, 'citations'),
-                        "citations_count": len(citations) if citations else 0
-                    }
-                })
-            except Exception as e:
-                print(f"Error with Pinecone SDK fallback: {e}")
-                return jsonify({"error": f"Both MCP server and Pinecone SDK failed: {str(e)}"}), 500
-        else:
-            return jsonify({
-                "error": "Neither MCP server nor Pinecone SDK available",
-                "details": {
-                    "mcp_api_key_configured": bool(MCP_API_KEY),
-                    "assistant_ready": bool(assistant_ref),
-                    "index_ready": bool(index_ref)
-                }
-            }), 500
+                "error": "Service temporarily unavailable. Please try again later.",
+                "details": {"reason": "API configuration issue"}
+            }), 503
         
     except Exception as e:
         print(f"Error in ask endpoint: {e}")
         return jsonify({"error": str(e)}), 500
 
+
+@app.route("/ask/stream", methods=["POST"])
+@limiter.limit(lambda: get_rate_limit_for_ip(get_remote_address()))
+def ask_stream():
+    """
+    Streaming endpoint for RAG queries using Server-Sent Events.
+    
+    Returns tokens as they are generated for better UX.
+    Cache hits return the full response immediately.
+    
+    Request body: {"prompt": "your question"}
+    Response: text/event-stream with SSE-formatted chunks
+    """
+    from flask import Response, stream_with_context
+    
+    try:
+        client_ip = get_remote_address()
+        prompt = request.json.get("prompt", "")
+        if not prompt:
+            return jsonify({"error": "No prompt provided"}), 400
+        
+        # Check for suspicious activity
+        suspicious, reason = is_suspicious_request(client_ip, prompt)
+        if suspicious:
+            print(f"[WARN] Suspicious streaming request from {client_ip}: {reason}")
+            return jsonify({
+                "error": "Rate limit exceeded",
+                "retry_after": 300,
+            }), 429
+        
+        # Increment ask counter
+        with stats_lock:
+            stats = app.config['STATS']
+            stats['ask_count'] += 1
+            save_stats(stats)
+            app.config['STATS'] = stats
+        
+        def generate():
+            """Generator for SSE stream."""
+            try:
+                for chunk in query_rag_system_streaming(prompt):
+                    yield chunk
+            except Exception as e:
+                import json
+                yield f"data: {json.dumps({'error': str(e), 'done': True})}\n\n"
+        
+        return Response(
+            stream_with_context(generate()),
+            mimetype='text/event-stream',
+            headers={
+                'Cache-Control': 'no-cache',
+                'Connection': 'keep-alive',
+                'X-Accel-Buffering': 'no'
+            }
+        )
+        
+    except Exception as e:
+        print(f"Error in streaming endpoint: {e}")
+        return jsonify({"error": str(e)}), 500
+
+
+@app.route("/cache/metrics")
+def cache_metrics():
+    """Get response cache metrics."""
+    return jsonify(get_cache_metrics())
+
+
+@app.route("/cache/clear", methods=["POST"])
+def cache_clear():
+    """Clear the response cache (admin only)."""
+    admin_token = request.headers.get("X-Admin-Token")
+    expected_token = os.getenv("ADMIN_TOKEN")
+    
+    if expected_token and admin_token != expected_token:
+        return jsonify({"error": "Unauthorized"}), 401
+    
+    success = clear_response_cache()
+    return jsonify({
+        "success": success,
+        "message": "Cache cleared" if success else "Failed to clear cache"
+    })
+
+
 @app.route("/health")
 def health():
     return jsonify({
         "status": "healthy",
-        "pinecone_available": assistant is not None,
-        "index_available": index is not None,
-        "mcp_endpoint": MCP_SERVER_URL,
-        "mcp_api_key_configured": bool(MCP_API_KEY),
+        "rag_system_ready": is_rag_ready(),
+        "openai_key_configured": bool(OPENAI_API_KEY),
         "environment": os.getenv("FLASK_ENV", "production"),
         "endpoints": {
             "main": "/",
@@ -2095,11 +2182,7 @@ def health():
             "health": "/health",
             "metrics": "/metrics",
             "stats": "/stats",
-            "rate_limit_status": "/rate-limit-status",
-            "mcp_test": "/mcp/test",
-            "mcp_status": "/mcp/status",
-            "mcp_chat": "/mcp/chat",
-            "debug": "/debug"
+            "rate_limit_status": "/rate-limit-status"
         }
     })
 
@@ -2317,93 +2400,8 @@ def populate_sample_locations():
 
 @app.route("/stats")
 def stats_page():
-    """Redirect to admin analytics - stats functionality has been moved there"""
-    from flask import redirect, url_for, request
-    
-    # Get admin token from environment or generate a notice
-    admin_token = os.environ.get("ADMIN_TOKEN", "")
-    
-    if admin_token:
-        # Redirect to admin analytics with token
-        return redirect(f"/admin/analytics?token={admin_token}")
-    else:
-        # Show notice that admin token is required
-        return f"""
-        <!DOCTYPE html>
-        <html lang="en">
-        <head>
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Stats Moved - Veterans Benefits AI</title>
-            <style>
-                body {{
-                    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-                    background: #f8f9fa;
-                    margin: 0;
-                    padding: 40px 20px;
-                    text-align: center;
-                }}
-                .container {{
-                    max-width: 600px;
-                    margin: 0 auto;
-                    background: white;
-                    padding: 40px;
-                    border-radius: 12px;
-                    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-                }}
-                .icon {{ font-size: 48px; margin-bottom: 20px; }}
-                .title {{ color: #2c3e50; margin-bottom: 20px; }}
-                .message {{ color: #6c757d; margin-bottom: 30px; line-height: 1.6; }}
-                .btn {{
-                    display: inline-block;
-                    background: #007bff;
-                    color: white;
-                    padding: 12px 24px;
-                    text-decoration: none;
-                    border-radius: 6px;
-                    margin: 10px;
-                    transition: background 0.3s;
-                }}
-                .btn:hover {{ background: #0056b3; }}
-                .btn-secondary {{
-                    background: #6c757d;
-                }}
-                .btn-secondary:hover {{ background: #545b62; }}
-            </style>
-        </head>
-        <body>
-            <div class="container">
-                <div class="icon">📊</div>
-                <h1 class="title">Statistics Have Moved!</h1>
-                <div class="message">
-                    <p>The statistics page has been upgraded and moved to the admin analytics dashboard.</p>
-                    <p>This new dashboard includes:</p>
-                    <ul style="text-align: left; max-width: 400px; margin: 0 auto;">
-                        <li>📈 Comprehensive analytics</li>
-                        <li>🗺️ Interactive location heat maps</li>
-                        <li>📊 Daily activity timelines</li>
-                        <li>🔍 Traffic source analysis</li>
-                        <li>👥 User engagement metrics</li>
-                    </ul>
-                </div>
-                <div>
-                    <a href="/admin/analytics" class="btn">
-                        🔒 Access Admin Analytics
-                    </a>
-                    <a href="/" class="btn btn-secondary">
-                        ← Back to Home
-                    </a>
-                </div>
-                <div style="margin-top: 30px; font-size: 14px; color: #6c757d;">
-                    <p><strong>Note:</strong> Admin analytics requires a valid admin token.</p>
-                    <p>Contact the administrator for access credentials.</p>
-                </div>
-            </div>
-        </body>
-        </html>
-        """
-    
-    # Fallback: Try to serve the SPA (for backward compatibility during transition)
+    """Serve React SPA for stats page - React Router handles the /stats route"""
+    # Try to serve the React SPA first (primary behavior)
     try:
         index_path = os.path.join(FRONTEND_BUILD_DIR, "index.html")
         if os.path.exists(index_path):

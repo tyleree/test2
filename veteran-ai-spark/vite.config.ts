@@ -15,7 +15,8 @@ export default defineConfig(({ mode }) => ({
     react(),
     mode === 'development' &&
     componentTagger(),
-    VitePWA({
+    // Only enable PWA when explicitly requested to avoid Linux build issues
+    (process.env.ENABLE_PWA === 'true') && VitePWA({
       registerType: "autoUpdate",
       workbox: { 
         globPatterns: ["**/*.{js,css,html,svg,png,woff2}"],

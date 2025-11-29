@@ -1,0 +1,4 @@
+config_name,index_type,dataset_size,index_build_time_sec,single_median_ms,single_p95_ms,single_p99_ms,batch_median_ms,batch_p95_ms,batch_p99_ms,concurrent_qps,concurrent_median_ms,concurrent_p95_ms
+none_benchmark,none,1052,0.000,91.617,130.339,195.280,93.391,189.489,290.133,9.6,382.962,793.393
+hnsw_m16_benchmark,hnsw_m16,1052,3.325,48.245,59.705,95.934,48.997,67.060,137.715,44.7,52.066,109.112
+hnsw_m24_benchmark,hnsw_m24,1052,6.424,93.731,197.530,302.480,93.146,186.923,302.845,8.6,397.306,796.114
