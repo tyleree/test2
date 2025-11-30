@@ -112,7 +112,8 @@ class RAGResponse:
     chunks_retrieved: int
     model_used: str
     routing_reason: Optional[str] = None
-    cache_hit: Optional[str] = None  # "exact", "semantic", or None
+    cache_hit: Optional[str] = None  # "exact", "semantic", "database", "topic", or None
+    semantic_similarity: Optional[float] = None  # Similarity score for cache hits (0-1)
     error: Optional[str] = None
     weak_retrieval: bool = False  # True if best chunk score was below threshold
     citation_verification: Optional[Dict[str, Any]] = None  # Citation verification results
@@ -133,6 +134,8 @@ class RAGResponse:
             result["metadata"]["routing_reason"] = self.routing_reason
         if self.cache_hit:
             result["metadata"]["cache_hit"] = self.cache_hit
+        if self.semantic_similarity is not None:
+            result["metadata"]["semantic_similarity"] = self.semantic_similarity
         if self.weak_retrieval:
             result["metadata"]["weak_retrieval"] = True
         if self.citation_verification:
@@ -544,7 +547,7 @@ class RAGPipeline:
             if self.response_cache and self.enable_response_cache:
                 cached = self.response_cache.get(question, query_embedding)
                 if cached:
-                    response_text, sources, model_used, cache_type = cached
+                    response_text, sources, model_used, cache_type, similarity = cached
                     # Return cached response immediately
                     yield StreamChunk(
                         content=response_text,
@@ -553,7 +556,8 @@ class RAGPipeline:
                         metadata={
                             "query_time_ms": (time.time() - total_start) * 1000,
                             "cache_hit": cache_type,
-                            "model_used": model_used
+                            "model_used": model_used,
+                            "semantic_similarity": similarity
                         }
                     )
                     return
@@ -666,14 +670,15 @@ class RAGPipeline:
             if self.response_cache and self.enable_response_cache:
                 cached = self.response_cache.get(question, query_embedding)
                 if cached:
-                    response_text, sources, model_used, cache_type = cached
+                    response_text, sources, model_used, cache_type, similarity = cached
                     return RAGResponse(
                         answer=response_text,
                         sources=sources,
                         query_time_ms=(time.time() - total_start) * 1000,
                         chunks_retrieved=0,  # From cache, no retrieval
                         model_used=model_used,
-                        cache_hit=cache_type
+                        cache_hit=cache_type,
+                        semantic_similarity=similarity  # Include similarity score
                     )
             
             # Step 2: Retrieve context (cache miss)

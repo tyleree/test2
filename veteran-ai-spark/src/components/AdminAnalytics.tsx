@@ -21,10 +21,8 @@ interface TimelineEntry {
   full_answer?: string;
   citations_count: number;
   token_usage: {
-    model_big?: string;
-    model_small?: string;
-    tokens_big?: number;
-    tokens_small?: number;
+    prompt_tokens?: number;
+    completion_tokens?: number;
     total_tokens?: number;
   };
   latency_ms: number;
@@ -320,13 +318,19 @@ const TimelineView = () => {
                     </TableCell>
                     <TableCell>
                       <div className="text-sm">
-                        <div className="font-medium text-orange-500">
-                          {formatTokens(entry.token_usage?.total_tokens || 0)}
+                        {entry.token_usage?.total_tokens ? (
+                          <>
+                            <div className="font-medium text-orange-500">
+                              {formatTokens(entry.token_usage.total_tokens)}
                         </div>
-                        {entry.token_usage?.tokens_big && (
-                          <div className="text-xs text-gray-500">
-                            Big: {formatTokens(entry.token_usage.tokens_big)}
+                            {entry.token_usage?.prompt_tokens && (
+                              <div className="text-xs text-gray-500">
+                                P: {formatTokens(entry.token_usage.prompt_tokens)} / C: {formatTokens(entry.token_usage.completion_tokens || 0)}
                           </div>
+                            )}
+                          </>
+                        ) : (
+                          <span className="text-gray-500">-</span>
                         )}
                       </div>
                     </TableCell>
@@ -473,24 +477,32 @@ const TimelineView = () => {
             </div>
             <div className="bg-slate-800/50 rounded-lg p-4">
               <label className="font-medium text-orange-500 block mb-2">Token Usage:</label>
-              <div className="grid grid-cols-3 gap-4 text-sm">
-            <div>
-                  <span className="text-slate-400">Total:</span>
-                  <span className="text-white ml-2 font-semibold">{formatTokens(selectedQuestion.token_usage?.total_tokens || 0)}</span>
+              {selectedQuestion.token_usage?.total_tokens ? (
+                <div className="grid grid-cols-3 gap-4 text-sm">
+                  <div>
+                    <span className="text-slate-400">Total:</span>
+                    <span className="text-white ml-2 font-semibold">{formatTokens(selectedQuestion.token_usage.total_tokens)}</span>
+                  </div>
+                  {selectedQuestion.token_usage?.prompt_tokens && (
+                    <div>
+                      <span className="text-slate-400">Prompt:</span>
+                      <span className="text-white ml-2 font-semibold">{formatTokens(selectedQuestion.token_usage.prompt_tokens)}</span>
+                    </div>
+                  )}
+                  {selectedQuestion.token_usage?.completion_tokens && (
+                    <div>
+                      <span className="text-slate-400">Completion:</span>
+                      <span className="text-white ml-2 font-semibold">{formatTokens(selectedQuestion.token_usage.completion_tokens)}</span>
+                    </div>
+                  )}
                 </div>
-                {selectedQuestion.token_usage?.tokens_big && (
-                  <div>
-                    <span className="text-slate-400">Big Model:</span>
-                    <span className="text-white ml-2 font-semibold">{formatTokens(selectedQuestion.token_usage.tokens_big)}</span>
-                  </div>
-                )}
-                {selectedQuestion.token_usage?.tokens_small && (
-                  <div>
-                    <span className="text-slate-400">Small Model:</span>
-                    <span className="text-white ml-2 font-semibold">{formatTokens(selectedQuestion.token_usage.tokens_small)}</span>
-                  </div>
-                )}
-              </div>
+              ) : (
+                <div className="text-sm text-slate-400">
+                  {selectedQuestion.cache_mode && selectedQuestion.cache_mode !== 'miss' 
+                    ? 'No tokens used (cache hit)' 
+                    : 'Token data not available'}
+                </div>
+              )}
             </div>
             <div className="text-xs text-slate-500">
               Timestamp: {formatTimestamp(selectedQuestion.timestamp)} | ID: {selectedQuestion.id}

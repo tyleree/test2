@@ -488,7 +488,7 @@ class ResponseCache:
         self,
         query: str,
         query_embedding: Optional[List[float]] = None
-    ) -> Optional[Tuple[str, List[Dict[str, Any]], str, str]]:
+    ) -> Optional[Tuple[str, List[Dict[str, Any]], str, str, Optional[float]]]:
         """
         Get a cached response.
         
@@ -497,7 +497,8 @@ class ResponseCache:
             query_embedding: Optional query embedding for semantic matching
             
         Returns:
-            Tuple of (response, sources, model_used, cache_type) or None
+            Tuple of (response, sources, model_used, cache_type, semantic_similarity) or None
+            semantic_similarity is only set for semantic cache hits
         """
         key = query_hash(query)
         
@@ -509,7 +510,7 @@ class ResponseCache:
                     entry.hit_count += 1
                     self.metrics.exact_hits += 1
                     print(f"[CACHE] L1 exact hit: {query[:50]}...")
-                    return (entry.response, entry.sources, entry.model_used, "exact")
+                    return (entry.response, entry.sources, entry.model_used, "exact", 1.0)  # Exact = 100%
                 else:
                     del self.memory_cache[key]
             
@@ -533,7 +534,7 @@ class ResponseCache:
                     best_match.hit_count += 1
                     self.metrics.semantic_hits += 1
                     print(f"[CACHE] L1 semantic hit (score={best_score:.3f}): {query[:50]}...")
-                    return (best_match.response, best_match.sources, best_match.model_used, "semantic")
+                    return (best_match.response, best_match.sources, best_match.model_used, "semantic", best_score)
                 
                 self.metrics.semantic_misses += 1
         
@@ -548,14 +549,14 @@ class ResponseCache:
                 self._evict_memory_if_needed()
             
             print(f"[CACHE] L2 database hit: {query[:50]}...")
-            return (db_entry.response, db_entry.sources, db_entry.model_used, "database")
+            return (db_entry.response, db_entry.sources, db_entry.model_used, "database", 1.0)  # DB exact = 100%
         
         # L3: Check topic graph (finds answers from similar-topic questions)
         topic_result = self._check_topic_graph(query)
         if topic_result:
             response, sources, model_used = topic_result
             self.metrics.topic_hits += 1
-            return (response, sources, model_used, "topic")
+            return (response, sources, model_used, "topic", None)  # Topic doesn't have embedding similarity
         
         return None
     
@@ -704,7 +705,11 @@ def cache_response(
 def get_cached_response(
     query: str,
     query_embedding: Optional[List[float]] = None
-) -> Optional[Tuple[str, List[Dict[str, Any]], str, str]]:
-    """Convenience function to get a cached response."""
+) -> Optional[Tuple[str, List[Dict[str, Any]], str, str, Optional[float]]]:
+    """Convenience function to get a cached response.
+    
+    Returns:
+        Tuple of (response, sources, model_used, cache_type, semantic_similarity) or None
+    """
     cache = get_response_cache()
     return cache.get(query, query_embedding)

@@ -492,15 +492,26 @@ def log_chat_question(token_usage=None, model_info=None, extra_perf=None, questi
         # Build meta JSON with question details
         meta_dict = {}
         if question_data and isinstance(question_data, dict):
+            sources = question_data.get('sources', [])
+            # Ensure sources is a list
+            if not isinstance(sources, list):
+                sources = []
+            
             meta_dict = {
                 'question': question_data.get('question', ''),
                 'answer': question_data.get('answer', ''),
-                'cache_hit': question_data.get('cache_hit', 'miss'),  # 'exact', 'semantic', 'database', or 'miss'
-                'semantic_similarity': question_data.get('semantic_similarity'),
-                'sources': question_data.get('sources', []),
-                'citations_count': len(question_data.get('sources', [])),
+                'cache_hit': question_data.get('cache_hit', 'miss'),  # 'exact', 'semantic', 'database', 'topic', or 'miss'
+                'semantic_similarity': question_data.get('semantic_similarity'),  # 0-1 score for cache hits
+                'sources': sources,
+                'citations_count': len(sources),  # Count of source citations
                 'chunks_retrieved': question_data.get('chunks_retrieved', 0),
                 'model_used': question_data.get('model_used', model_used),
+                # Token usage info (from OpenAI API, will be None for cache hits)
+                'token_usage': {
+                    'prompt_tokens': openai_prompt_tokens,
+                    'completion_tokens': openai_completion_tokens,
+                    'total_tokens': openai_total_tokens
+                } if openai_total_tokens else None
             }
         
         meta_json = json.dumps(meta_dict) if meta_dict else None

@@ -111,7 +111,8 @@ def query_rag_system(prompt: str, history: list = None) -> Dict[str, Any]:
                 "model": response.model_used,
                 "query_time_ms": response.query_time_ms,
                 "chunks_retrieved": response.chunks_retrieved,
-                "cache_hit": response.cache_hit  # "exact", "semantic", "database", or None
+                "cache_hit": response.cache_hit,  # "exact", "semantic", "database", "topic", or None
+                "semantic_similarity": response.semantic_similarity  # Similarity score (0-1) for cache hits
             },
             "error": response.error,
             "token_usage": {
@@ -124,6 +125,7 @@ def query_rag_system(prompt: str, history: list = None) -> Dict[str, Any]:
                 "question": prompt,
                 "answer": response.answer,
                 "cache_hit": response.cache_hit or "miss",
+                "semantic_similarity": response.semantic_similarity,  # Include in analytics
                 "sources": citations,
                 "chunks_retrieved": response.chunks_retrieved,
                 "model_used": response.model_used
