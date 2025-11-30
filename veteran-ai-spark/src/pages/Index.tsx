@@ -1,20 +1,11 @@
 import { TypingText } from "@/components/TypingText";
 import { ChatBot } from "@/components/ChatBot";
 import { ThemeToggle } from "@/components/ThemeToggle";
-import { Button } from "@/components/ui/button";
-import { BarChart3, FileText, Lock, Unlock } from "lucide-react";
-import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { useAuth } from "@/contexts/AuthContext";
 
 const Index = () => {
   const [showSubtitle, setShowSubtitle] = useState(false);
   const [showChat, setShowChat] = useState(false);
-  const [showTokenInput, setShowTokenInput] = useState(false);
-  const [tokenInput, setTokenInput] = useState("");
-  const [tokenError, setTokenError] = useState(false);
-  
-  const { isUnlocked, unlock } = useAuth();
 
   useEffect(() => {
     // Show subtitle after main title finishes typing
@@ -33,62 +24,10 @@ const Index = () => {
     };
   }, []);
 
-  const handleTokenSubmit = () => {
-    if (unlock(tokenInput)) {
-      setShowTokenInput(false);
-      setTokenError(false);
-      setTokenInput("");
-    } else {
-      setTokenError(true);
-      setTokenInput("");
-    }
-  };
-
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-background relative overflow-x-hidden">
       {/* Theme Toggle */}
       <ThemeToggle />
-      
-      {/* Admin unlock button - small and subtle in corner */}
-      <div className="absolute top-4 left-4 z-20">
-        {!isUnlocked && !showTokenInput && (
-          <Button 
-            variant="ghost" 
-            size="icon" 
-            className="opacity-20 hover:opacity-100 transition-opacity"
-            onClick={() => setShowTokenInput(true)}
-            title="Admin Access"
-          >
-            <Lock className="h-4 w-4" />
-          </Button>
-        )}
-        
-        {showTokenInput && (
-          <div className="flex items-center gap-2 bg-background/90 backdrop-blur p-2 rounded-lg border shadow-lg">
-            <input
-              type="password"
-              value={tokenInput}
-              onChange={(e) => setTokenInput(e.target.value)}
-              onKeyDown={(e) => e.key === "Enter" && handleTokenSubmit()}
-              placeholder="Enter token..."
-              className={`w-32 px-2 py-1 text-sm border rounded bg-background ${tokenError ? 'border-red-500' : 'border-input'}`}
-              autoFocus
-            />
-            <Button size="sm" onClick={handleTokenSubmit}>
-              <Unlock className="h-3 w-3" />
-            </Button>
-            <Button size="sm" variant="ghost" onClick={() => { setShowTokenInput(false); setTokenError(false); setTokenInput(""); }}>
-              ✕
-            </Button>
-          </div>
-        )}
-        
-        {isUnlocked && (
-          <span className="text-xs text-green-500 flex items-center gap-1">
-            <Unlock className="h-3 w-3" /> Admin
-          </span>
-        )}
-      </div>
 
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -119,25 +58,6 @@ const Index = () => {
           </div>
         </div>
 
-        {/* Navigation Links - Only show when unlocked */}
-        {isUnlocked && (
-          <div className={`transition-all duration-1000 delay-500 ${showChat ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
-            <div className="flex justify-center gap-4 mt-6">
-              <Button asChild variant="outline" size="sm" className="text-muted-foreground hover:text-foreground">
-                <Link to="/stats">
-                  <BarChart3 className="h-4 w-4 mr-2" />
-                  View Statistics
-                </Link>
-              </Button>
-              <Button asChild variant="outline" size="sm" className="text-muted-foreground hover:text-foreground">
-                <Link to="/whitepaper">
-                  <FileText className="h-4 w-4 mr-2" />
-                  📄 Technical Whitepaper (LaTeX)
-                </Link>
-              </Button>
-            </div>
-          </div>
-        )}
       </div>
 
       {/* Subtle grid pattern overlay */}
