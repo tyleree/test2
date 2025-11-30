@@ -320,3 +320,193 @@ def get_verification_summary(result: VerificationResult) -> Dict[str, Any]:
         "overall_issues": result.overall_issues
     }
 
+
+# =============================================================================
+# OPTION 7: Number/Percentage Verification (Zero Tokens)
+# =============================================================================
+
+def verify_numbers_in_response(response: str, chunks: List[Dict[str, Any]]) -> Dict[str, Any]:
+    """
+    Verify that numbers and percentages in the response actually appear in source chunks.
+    This catches common hallucinations like invented statistics or rating percentages.
+    
+    Args:
+        response: The LLM response text
+        chunks: List of source chunks used to generate the response
+        
+    Returns:
+        Dict with verification results:
+        - hallucinated_percentages: List of percentages not in sources
+        - hallucinated_numbers: List of suspicious numbers not in sources
+        - dc_codes_verified: Whether DC codes in response match sources
+        - is_clean: True if no hallucinated numbers detected
+    """
+    # Combine all chunk text for searching
+    chunk_text = " ".join(c.get("text", "") for c in chunks)
+    chunk_text_lower = chunk_text.lower()
+    
+    # Extract percentages from response (e.g., "30%", "10 percent")
+    response_percentages = set(re.findall(r'\b(\d+)%', response))
+    response_percentages.update(re.findall(r'\b(\d+)\s*percent', response.lower()))
+    
+    # Extract percentages from chunks
+    chunk_percentages = set(re.findall(r'\b(\d+)%', chunk_text))
+    chunk_percentages.update(re.findall(r'\b(\d+)\s*percent', chunk_text_lower))
+    
+    # Find hallucinated percentages (in response but not in chunks)
+    hallucinated_pct = response_percentages - chunk_percentages
+    
+    # VA-specific: Check diagnostic codes (7xxx format)
+    response_dc_codes = set(re.findall(r'\b(7\d{3})\b', response))
+    chunk_dc_codes = set(re.findall(r'\b(7\d{3})\b', chunk_text))
+    hallucinated_dc = response_dc_codes - chunk_dc_codes
+    
+    # Check for suspiciously specific numbers that might be hallucinated
+    # Focus on numbers that look like ratings or criteria (common hallucination targets)
+    suspicious_patterns = [
+        r'\b(\d+)\s*(?:days?|months?|years?)\b',  # Time periods
+        r'\$\s*(\d+(?:,\d{3})*(?:\.\d{2})?)',  # Dollar amounts
+    ]
+    
+    hallucinated_specifics = []
+    for pattern in suspicious_patterns:
+        response_matches = set(re.findall(pattern, response, re.IGNORECASE))
+        chunk_matches = set(re.findall(pattern, chunk_text, re.IGNORECASE))
+        hallucinated_specifics.extend(response_matches - chunk_matches)
+    
+    is_clean = (len(hallucinated_pct) == 0 and 
+                len(hallucinated_dc) == 0 and 
+                len(hallucinated_specifics) == 0)
+    
+    result = {
+        "hallucinated_percentages": list(hallucinated_pct),
+        "hallucinated_dc_codes": list(hallucinated_dc),
+        "hallucinated_specifics": hallucinated_specifics[:5],  # Limit to avoid noise
+        "is_clean": is_clean,
+        "issues": []
+    }
+    
+    # Build issues list for logging
+    if hallucinated_pct:
+        result["issues"].append(f"Percentages not in sources: {', '.join(f'{p}%' for p in hallucinated_pct)}")
+    if hallucinated_dc:
+        result["issues"].append(f"DC codes not in sources: {', '.join(hallucinated_dc)}")
+    if hallucinated_specifics:
+        result["issues"].append(f"Suspicious numbers: {', '.join(str(s) for s in hallucinated_specifics[:3])}")
+    
+    return result
+
+
+# =============================================================================
+# OPTION 3: Clean Hallucinated Citations (Zero Tokens)
+# =============================================================================
+
+def clean_hallucinated_citations(response: str, max_valid_citation: int) -> str:
+    """
+    Remove citations from the response that reference non-existent sources.
+    This is a post-processing step that costs zero tokens.
+    
+    Args:
+        response: The LLM response text
+        max_valid_citation: Maximum valid citation number (len(chunks))
+        
+    Returns:
+        Cleaned response with invalid citations removed
+    """
+    cleaned = response
+    
+    # Remove superscript citations beyond valid range
+    for i in range(max_valid_citation + 1, 20):  # Check up to 20
+        superscript = NUM_TO_SUPERSCRIPT.get(i, '')
+        if superscript and superscript in cleaned:
+            print(f"[CITATION_CLEANUP] Removing hallucinated citation {superscript} (source {i} doesn't exist)")
+            cleaned = cleaned.replace(superscript, '')
+    
+    # Remove [N] style citations beyond valid range
+    def replace_bracket_citation(match):
+        num = int(match.group(1))
+        if num > max_valid_citation or num < 1:
+            print(f"[CITATION_CLEANUP] Removing hallucinated citation [{num}]")
+            return ''
+        return match.group(0)
+    
+    cleaned = re.sub(r'\[(\d+)\]', replace_bracket_citation, cleaned)
+    
+    # Clean up Sources section - remove lines citing non-existent sources
+    lines = cleaned.split('\n')
+    cleaned_lines = []
+    in_sources_section = False
+    
+    for line in lines:
+        # Detect sources section
+        if any(marker in line for marker in ['**Sources:**', 'Sources:', '**References:**']):
+            in_sources_section = True
+            cleaned_lines.append(line)
+            continue
+        
+        if in_sources_section:
+            # Check if this line cites a valid source
+            # Match superscript or number at start of line
+            source_match = re.match(r'^([¹²³⁴⁵⁶⁷⁸⁹⁰]+|\d+[\.\)])', line.strip())
+            if source_match:
+                num_str = source_match.group(1).rstrip('.)')
+                # Convert superscript to number
+                if num_str in SUPERSCRIPT_MAP:
+                    num = SUPERSCRIPT_MAP[num_str]
+                else:
+                    try:
+                        num = int(num_str)
+                    except ValueError:
+                        num = 0
+                
+                if num > max_valid_citation or num < 1:
+                    print(f"[CITATION_CLEANUP] Removing source line for non-existent citation {num}")
+                    continue  # Skip this line
+        
+        cleaned_lines.append(line)
+    
+    return '\n'.join(cleaned_lines)
+
+
+def sanitize_response(
+    response: str, 
+    chunks: List[Dict[str, Any]],
+    remove_hallucinated_numbers: bool = False
+) -> Tuple[str, Dict[str, Any]]:
+    """
+    Full response sanitization: verify and clean citations and numbers.
+    
+    Args:
+        response: The LLM response text
+        chunks: Source chunks used
+        remove_hallucinated_numbers: If True, add warnings for hallucinated numbers
+        
+    Returns:
+        Tuple of (cleaned_response, sanitization_report)
+    """
+    max_citation = len(chunks)
+    
+    # Step 1: Clean hallucinated citations
+    cleaned = clean_hallucinated_citations(response, max_citation)
+    
+    # Step 2: Verify numbers
+    number_check = verify_numbers_in_response(cleaned, chunks)
+    
+    # Step 3: Add warning prefix if hallucinated numbers detected
+    if remove_hallucinated_numbers and not number_check["is_clean"]:
+        issues = number_check["issues"]
+        if issues:
+            warning = "⚠️ **Note:** Some specific numbers in this response could not be verified against my sources. Please verify key statistics with official VA documentation.\n\n"
+            # Only add warning if not already present
+            if "could not be verified" not in cleaned:
+                cleaned = warning + cleaned
+    
+    report = {
+        "citations_cleaned": response != cleaned,
+        "number_verification": number_check,
+        "original_length": len(response),
+        "cleaned_length": len(cleaned)
+    }
+    
+    return cleaned, report
+

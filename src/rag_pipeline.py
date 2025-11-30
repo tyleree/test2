@@ -61,7 +61,9 @@ from src.url_validator import (
 from src.citation_verifier import (
     verify_citations,
     get_verification_summary,
-    VerificationResult
+    VerificationResult,
+    sanitize_response,
+    verify_numbers_in_response
 )
 
 # Configuration
@@ -697,9 +699,30 @@ class RAGPipeline:
                     routing_reason="no_context"
                 )
             
-            # Flag weak retrievals for monitoring
+            # HALLUCINATION PREVENTION: Refuse to answer if retrieval is too weak
+            # This prevents the LLM from hallucinating when context is poor
+            best_score = chunks[0]["score"] if chunks else 0
+            if best_score < VERY_WEAK_THRESHOLD:
+                print(f"[HALLUCINATION_BLOCKED] Refusing to answer - best retrieval score {best_score:.3f} < {VERY_WEAK_THRESHOLD}")
+                return RAGResponse(
+                    answer="I don't have reliable information about that specific topic in my knowledge base. "
+                           "My sources may not cover this area well enough to give you an accurate answer.\n\n"
+                           "**Suggestions:**\n"
+                           "- Try rephrasing your question with different terms\n"
+                           "- Check the official VA website at [va.gov](https://www.va.gov)\n"
+                           "- Contact a Veterans Service Organization (VSO) for personalized guidance",
+                    sources=[],
+                    query_time_ms=(time.time() - total_start) * 1000,
+                    chunks_retrieved=len(chunks),
+                    model_used=self.chat_model,
+                    routing_reason="retrieval_too_weak",
+                    retrieval_score=best_score,
+                    weak_retrieval=True
+                )
+            
+            # Flag weak (but not critically weak) retrievals for monitoring
             if weak_retrieval:
-                print(f"[HALLUCINATION_RISK] Proceeding with weak retrieval - best score below {WEAK_RETRIEVAL_THRESHOLD}")
+                print(f"[HALLUCINATION_RISK] Proceeding with weak retrieval - best score {best_score:.3f} below {WEAK_RETRIEVAL_THRESHOLD}")
             
             # Step 3: Model routing - select appropriate model based on query complexity
             if force_model:
@@ -731,13 +754,30 @@ class RAGPipeline:
                 for issue in verification_result.overall_issues:
                     print(f"  - {issue}")
             
+            # Step 6b: Sanitize response - remove hallucinated citations and verify numbers
+            # This is a zero-token post-processing step
+            answer, sanitization_report = sanitize_response(
+                answer, 
+                chunks, 
+                remove_hallucinated_numbers=weak_retrieval  # Add warning if retrieval was weak
+            )
+            
+            if sanitization_report["citations_cleaned"]:
+                print(f"[SANITIZATION] Cleaned hallucinated citations from response")
+            
+            number_issues = sanitization_report["number_verification"]["issues"]
+            if number_issues:
+                print(f"[NUMBER_CHECK] Potential hallucinated numbers detected:")
+                for issue in number_issues:
+                    print(f"  - {issue}")
+            
             total_time = (time.time() - total_start) * 1000
             
-            # Step 7: Cache the response
+            # Step 7: Cache the SANITIZED response (don't cache hallucinations)
             if self.response_cache and self.enable_response_cache:
                 self.response_cache.set(
                     question,
-                    answer,
+                    answer,  # Cache the cleaned answer
                     sources,
                     model_used,
                     query_embedding
