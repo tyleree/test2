@@ -23,7 +23,7 @@ import hashlib
 import threading
 from typing import Dict, Any, Optional, Tuple, List
 from dataclasses import dataclass, field
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 import re
 
 # Configuration
@@ -336,7 +336,7 @@ class ResponseCache:
         try:
             from sqlalchemy import text
             
-            expires_at = datetime.utcnow() + timedelta(seconds=ttl)
+            expires_at = datetime.now(timezone.utc) + timedelta(seconds=ttl)
             sources_json = json.dumps(sources) if sources else None
             embedding_compressed = compress_embedding(embedding) if embedding else None
             

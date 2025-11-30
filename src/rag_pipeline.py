@@ -18,7 +18,7 @@ Features:
 - Intelligent model routing for cost optimization
 - File-backed embedding cache with compression
 
-This replaces the Pinecone-based rag_system.py with a self-contained solution.
+
 """
 
 import os
