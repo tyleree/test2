@@ -15,4 +15,4 @@ Base = declarative_base()
 
 # For development/testing when no database is available
 if not engine:
-    print("⚠️ No DATABASE_URL provided - running in development mode")
+    print(" No DATABASE_URL provided - running in development mode")

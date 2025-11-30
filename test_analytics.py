@@ -72,11 +72,11 @@ def test_analytics_endpoints():
         if response.status_code == 200:
             content = response.text
             if "window.analyticsTrack" in content and "window.analyticsChatHit" in content:
-                print("   ✅ Analytics functions found in script")
+                print("    Analytics functions found in script")
             else:
-                print("   ❌ Missing analytics functions")
+                print("    Missing analytics functions")
     except Exception as e:
-        print(f"   Analytics.js: ❌ FAILED - {e}")
+        print(f"   Analytics.js:  FAILED - {e}")
     
     # Test 5: Admin dashboard (without token)
     print("\n5. Testing admin dashboard...")
@@ -88,11 +88,11 @@ def test_analytics_endpoints():
         else:
             print(f"   ⚠️ Expected 401, got {response.status_code}")
     except Exception as e:
-        print(f"   Admin dashboard: ❌ FAILED - {e}")
+        print(f"   Admin dashboard:  FAILED - {e}")
     
     print("\n" + "=" * 50)
     print("🏁 Analytics test completed!")
-    print("\n📋 Next steps:")
+    print("\n Next steps:")
     print("1. Set DATABASE_URL to enable full analytics functionality")
     print("2. Set ADMIN_TOKEN to access the dashboard")
     print("3. Deploy to Render with PostgreSQL database")

@@ -5,6 +5,8 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { AuthProvider } from "@/contexts/AuthContext";
+import { ProtectedRoute } from "@/components/ProtectedRoute";
 
 // Lazy load route components
 const Index = lazy(() => import("./pages/Index"));
@@ -24,25 +26,43 @@ const App = () => (
       disableTransitionOnChange
     >
       <TooltipProvider>
-        <Toaster />
-        <Sonner />
-        <BrowserRouter>
-          <Suspense fallback={
-            <div className="min-h-screen flex items-center justify-center">
-              <div className="text-lg">Loading...</div>
-            </div>
-          }>
-            <Routes>
-              <Route path="/" element={<Index />} />
-              <Route path="/stats" element={<Stats />} />
-              <Route path="/whitepaper" element={<Whitepaper />} />
-              <Route path="/analytics" element={<AdminAnalytics />} />
-              <Route path="/admin/analytics" element={<AdminAnalytics />} />
-              {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-              <Route path="*" element={<NotFound />} />
-            </Routes>
-          </Suspense>
-        </BrowserRouter>
+        <AuthProvider>
+          <Toaster />
+          <Sonner />
+          <BrowserRouter>
+            <Suspense fallback={
+              <div className="min-h-screen flex items-center justify-center">
+                <div className="text-lg">Loading...</div>
+              </div>
+            }>
+              <Routes>
+                <Route path="/" element={<Index />} />
+                <Route path="/stats" element={
+                  <ProtectedRoute>
+                    <Stats />
+                  </ProtectedRoute>
+                } />
+                <Route path="/whitepaper" element={
+                  <ProtectedRoute>
+                    <Whitepaper />
+                  </ProtectedRoute>
+                } />
+                <Route path="/analytics" element={
+                  <ProtectedRoute>
+                    <AdminAnalytics />
+                  </ProtectedRoute>
+                } />
+                <Route path="/admin/analytics" element={
+                  <ProtectedRoute>
+                    <AdminAnalytics />
+                  </ProtectedRoute>
+                } />
+                {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+                <Route path="*" element={<NotFound />} />
+              </Routes>
+            </Suspense>
+          </BrowserRouter>
+        </AuthProvider>
       </TooltipProvider>
     </ThemeProvider>
   </QueryClientProvider>

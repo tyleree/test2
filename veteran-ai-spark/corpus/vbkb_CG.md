@@ -14,21 +14,21 @@ Blood pressure readings are composed of two components; the top number (systolic
 
 - In order to be properly diagnosed with hypertension the Veteran must have blood pressure readings taken two or more times on _at least_ three different days.
 
-- Veterans who have [Hypertensive heart disease](https://veteransbenefitskb.com/heart#7007)  **CAN** receive a separate rating for hypertension.
+- Veterans who have [Hypertensive heart disease](https://www.veteransbenefitskb.com/heart#7007)  **CAN** receive a separate rating for hypertension.
 
-- Veterans who have hypertension due to aortic insufficiency _or_ [Hyperthyroidism](https://veteransbenefitskb.com/endsystem#7900)  will **NOT** receive a separate rating for hypertension.
+- Veterans who have hypertension due to aortic insufficiency _or_ [Hyperthyroidism](https://www.veteransbenefitskb.com/endsystem#7900)  will **NOT** receive a separate rating for hypertension.
 
 **PRESUMPTIVE CONDITION:**
 
-- If diagnosed within a [Year](https://veteransbenefitskb.com/time)  of separation **AND** the severity was _at least_ 10% within that time;
+- If diagnosed within a [Year](https://www.veteransbenefitskb.com/time)  of separation **AND** the severity was _at least_ 10% within that time;
 
-- If exposed to [Agent Orange](https://veteransbenefitskb.com/agentorange)  or
+- If exposed to [Agent Orange](https://www.veteransbenefitskb.com/agentorange)  or
 
 - If you were a [POW](https://www.veteransbenefitskb.com/pow)  and the severity was _at least_ 10% at some point.
 
 **QUASI PRESUMPTIVE SERVICE-CONNECTION:**
 
-- Hypertension developing in a Veteran who has a service-connected [Amputation](https://veteransbenefitskb.com/msindex)  of one leg _at or above the knee_ **OR** service-connected amputations of _both_ legs _at or above the ankles_ are entitled to quasi presumptive service-connection.
+- Hypertension developing in a Veteran who has a service-connected [Amputation](https://www.veteransbenefitskb.com/msindex)  of one leg _at or above the knee_ **OR** service-connected amputations of _both_ legs _at or above the ankles_ are entitled to quasi presumptive service-connection.
 
 | Rating | Description |
 | --- | --- |
@@ -45,7 +45,7 @@ Blood pressure readings are composed of two components; the top number (systolic
 
 ### Quasi Secondary Presumptives
 
-- This condition has quasi presumptive secondary conditions click [HERE](https://veteransbenefitskb.com/arteriosclerotic)  to learn more.
+- This condition has quasi presumptive secondary conditions click [HERE](https://www.veteransbenefitskb.com/arteriosclerotic)  to learn more.
 
 * * *
 
@@ -55,11 +55,11 @@ Blood pressure readings are composed of two components; the top number (systolic
 
 ### Other Common Secondaries
 
-- [Erectile dysfunction](https://veteransbenefitskb.com/gensystem#7522)
+- [Erectile dysfunction](https://www.veteransbenefitskb.com/gensystem#7522)
 
-- [Peripheral artery disease](https://veteransbenefitskb.com/bloodtubes#7114)
+- [Peripheral artery disease](https://www.veteransbenefitskb.com/bloodtubes#7114)
 
-- [Retinopathy](https://veteransbenefitskb.com/eyes#6006)
+- [Retinopathy](https://www.veteransbenefitskb.com/eyes#6006)
 
 [Return to top](https://www.veteransbenefitskb.com/bloodtubes#top)
 
@@ -73,7 +73,7 @@ Aneurysm is located in the aortic artery.
 
 | Rating | Description |
 | --- | --- |
-| ?% | Rated based on residuals; Commonly under [Peripheral arterial disease.](https://veteransbenefitskb.com/bloodtubes#7114)  |
+| ?% | Rated based on residuals; Commonly under [Peripheral arterial disease.](https://www.veteransbenefitskb.com/bloodtubes#7114)  |
 | 100% | 6 months following release from hospital. |
 | 100% | If 5cm or larger in diameter; **OR** if symptomatic (causes pain or hemorrhaging); **OR** requires surgery. |
 
@@ -93,7 +93,7 @@ Any other large artery that is not the aortic.
 
 | Rating | Description |
 | --- | --- |
-| ?% | Residuals rated under [Peripheral arterial disease.](https://veteransbenefitskb.com/bloodtubes#7114)  |
+| ?% | Residuals rated under [Peripheral arterial disease.](https://www.veteransbenefitskb.com/bloodtubes#7114)  |
 | 100% | 6 months following release from hospital. |
 | 100% | Suffering from symptoms; **OR** from time a physician recommends surgery. |
 
@@ -107,7 +107,7 @@ Any other large artery that is not the aortic.
 
 NOTE:
 
-- If there are symptoms then they will be rated on how they affect the Veteran. For example, if it causes pain that results in [Limitation of motion](https://veteransbenefitskb.com/msindex)  The Veteran will be rated under the applicable rating schedule for the limitation of motion.
+- If there are symptoms then they will be rated on how they affect the Veteran. For example, if it causes pain that results in [Limitation of motion](https://www.veteransbenefitskb.com/msindex)  The Veteran will be rated under the applicable rating schedule for the limitation of motion.
 
 | Rating | Description |
 | --- | --- |
@@ -127,7 +127,7 @@ This schedule utilizes the [Ankle/bracial index](https://www.mayoclinic.org/test
 
 **PRESUMPTIVE CONDITION:**
 
-- If diagnosed within a [Year](https://veteransbenefitskb.com/time)  of separation **AND** the severity warranted _at least_ a 10% evaluation within that time.
+- If diagnosed within a [Year](https://www.veteransbenefitskb.com/time)  of separation **AND** the severity warranted _at least_ a 10% evaluation within that time.
 
 **PYRAMIDING NOTE:**
 
@@ -154,11 +154,11 @@ When the blood vessels in the hands or feet become blocked. Resulting in reduced
 
 **IMPORTANT NOTE:**
 
-- If a **LEG** is affected by this disease then it will be rated under the [Peripheral vascular disease](https://veteransbenefitskb.com/bloodtubes#7114)  schedule.
+- If a **LEG** is affected by this disease then it will be rated under the [Peripheral vascular disease](https://www.veteransbenefitskb.com/bloodtubes#7114)  schedule.
 
 **PRESUMPTIVE CONDITION:**
 
-- If diagnosed within a [Year](https://veteransbenefitskb.com/time)  of separation **AND** the severity warranted _at least_ a 10% evaluation within that time.
+- If diagnosed within a [Year](https://www.veteransbenefitskb.com/time)  of separation **AND** the severity warranted _at least_ a 10% evaluation within that time.
 
 **PYRAMIDING NOTE:**
 
@@ -187,7 +187,7 @@ Smaller arteries that supply blood to the skin constrict excessively in response
 
 **PRESUMPTIVE CONDITION:**
 
-- If diagnosed within a [Year](https://veteransbenefitskb.com/time)  of separation **AND** the severity warranted _at least_ a 10% evaluation within that time.
+- If diagnosed within a [Year](https://www.veteransbenefitskb.com/time)  of separation **AND** the severity warranted _at least_ a 10% evaluation within that time.
 
 NOTE:
 
@@ -280,9 +280,9 @@ Gnarled, enlarged veins, most commonly appearing in the legs and feet.
 
 **PYRAMIDING NOTE:**
 
-- If the Veteran has multiple limbs that are affected, **EACH** limb will receive their own ratings which will also each receive the [Bilateral factor](https://veteransbenefitskb.com/vamath#bilateral)  if applicable.
+- If the Veteran has multiple limbs that are affected, **EACH** limb will receive their own ratings which will also each receive the [Bilateral factor](https://www.veteransbenefitskb.com/vamath#bilateral)  if applicable.
 
-Rated under [Circulatory disturbances](https://veteransbenefitskb.com/bloodtubes#7121)
+Rated under [Circulatory disturbances](https://www.veteransbenefitskb.com/bloodtubes#7121)
 
 * * *
 
@@ -296,7 +296,7 @@ Lasting symptoms of various vein conditions.
 
 **PYRAMIDING NOTE:**
 
-- If the Veteran has multiple limbs that are affected, **EACH** limb will receive their own ratings which will also each receive the [Bilateral factor](https://veteransbenefitskb.com/vamath#bilateral)  if applicable.
+- If the Veteran has multiple limbs that are affected, **EACH** limb will receive their own ratings which will also each receive the [Bilateral factor](https://www.veteransbenefitskb.com/vamath#bilateral)  if applicable.
 
 | Rating | Description |
 | --- | --- |
@@ -340,15 +340,15 @@ When persistent cold causes permanent damage to the arteries, nerves, or veins.
 - Example: If 2 fingers are affected on the left hand at 10% and 20% severity and 1 finger on the right hand is at a 10% severity. Then for rating purposes the left hand would rate 20% and the right hand would rate 10%.
 - If the Veteran develops other conditions outside of the below rated symptoms, the Veteran **CAN** get separate ratings for them. This includes but is not limited to things such as:
 
-- [Amputations](https://veteransbenefitskb.com/msindex)
+- [Amputations](https://www.veteransbenefitskb.com/msindex)
 
 - Cancers
 
 - [Nephropathy](https://veteransbenefitskb.comnervesystem/)
 
-- [Muscle atrophy](https://veteransbenefitskb.com/msindex)
+- [Muscle atrophy](https://www.veteransbenefitskb.com/msindex)
 
-- [Raynaud's phenomenon](https://veteransbenefitskb.com/bloodtubes#7117)
+- [Raynaud's phenomenon](https://www.veteransbenefitskb.com/bloodtubes#7117)
 
 **PRESUMPTIVE CONDITION:**
 
@@ -389,7 +389,7 @@ When there is a opening that connects arteries and veins.
 
 **PRESUMPTIVE CONDITION:**
 
-- If exposed to [Agent Orange](https://veteransbenefitskb.com/agentorange)
+- If exposed to [Agent Orange](https://www.veteransbenefitskb.com/agentorange)
 
 | Rating | Description |
 | --- | --- |
@@ -405,9 +405,9 @@ When there is a opening that connects arteries and veins.
 
 ## **Disability Benefits Questionnaire (DBQs)**
 
-To get an idea of how a [C&P exam](https://veteransbenefitskb.com/cnp)  will be conducted it is recommended that the Veteran look at the applicable DBQ.
+To get an idea of how a [C&P exam](https://www.veteransbenefitskb.com/cnp)  will be conducted it is recommended that the Veteran look at the applicable DBQ.
 
-Veteran's may ask a physician to complete a DBQ on their behalf to submit with their claim. For more information on DBQs click [HERE](https://veteransbenefitskb.com/dbq)
+Veteran's may ask a physician to complete a DBQ on their behalf to submit with their claim. For more information on DBQs click [HERE](https://www.veteransbenefitskb.com/dbq)
 
 - [Artery and Veins](https://www.benefits.va.gov/compensation/docs/Artery_and_Vein.pdf)
 
@@ -421,7 +421,7 @@ Veteran's may ask a physician to complete a DBQ on their behalf to submit with t
 
 ## **Having Trouble Finding Your Condition?**
 
-- Click [HERE](https://veteransbenefitskb.com/master)  to view the Master Condition List.
+- Click [HERE](https://www.veteransbenefitskb.com/master)  to view the Master Condition List.
 
 [Return to top](https://www.veteransbenefitskb.com/bloodtubes#top)
 
@@ -447,14 +447,14 @@ Veteran's may ask a physician to complete a DBQ on their behalf to submit with t
 
 |     |     |
 | --- | --- |
-| \> Cariovascular System\> Arteries & Veins\> Blood\> Heart | \> [Conditions that the VA will **NOT** Rate](https://veteransbenefitskb.com/norate)  |
-| \> [Dental and Oral](https://veteransbenefitskb.com/mouthsystem)  | \> [Digestive System](https://veteransbenefitskb.com/digsystem)  |
-| \> [Endocrine System](https://veteransbenefitskb.com/endsystem)  | \> [Female Reproductive System](https://veteransbenefitskb.com/femalesystem)  |
-| \> [Genitourinary System](https://veteransbenefitskb.com/gensystem)  | \> Hematologic and Lymphatic Systems\> Blood\> Breasts |
-| \> [Infectious Diseases and Immune Disorders](https://veteransbenefitskb.com/infect)  | \> [Mental Disorders](https://veteransbenefitskb.com/mental)  |
+| \> Cariovascular System\> Arteries & Veins\> Blood\> Heart | \> [Conditions that the VA will **NOT** Rate](https://www.veteransbenefitskb.com/norate)  |
+| \> [Dental and Oral](https://www.veteransbenefitskb.com/mouthsystem)  | \> [Digestive System](https://www.veteransbenefitskb.com/digsystem)  |
+| \> [Endocrine System](https://www.veteransbenefitskb.com/endsystem)  | \> [Female Reproductive System](https://www.veteransbenefitskb.com/femalesystem)  |
+| \> [Genitourinary System](https://www.veteransbenefitskb.com/gensystem)  | \> Hematologic and Lymphatic Systems\> Blood\> Breasts |
+| \> [Infectious Diseases and Immune Disorders](https://www.veteransbenefitskb.com/infect)  | \> [Mental Disorders](https://www.veteransbenefitskb.com/mental)  |
 | \> Musculoskeletal System\> Ankle\> Elbow & Forearm\> Foot\> Hand\> Hip & Thigh\> Knee & Lower Leg\> Ribs\> Skull\> Shoulder & Arm\> Spine\> Wrist\> Cancers and Tumors\> Diseases\> Face\> Forearm and Hand\> Hernias\> Lower Leg and Foot\> Buttock, Hip, and Thigh\> Shoulder, and Upper Arm\> Torso and Neck | \> Nervous System\> Cranial Nerves\> Central Nervous System\> Lower Back and Legs\> Upper Back and Arms\> Traumatic Brain Injuries |
-| \> [Nutritional Deficiencies](https://veteransbenefitskb.com/nutritional)  | \> [Respiratory System](https://veteransbenefitskb.com/airsystem)  |
-| \> Senses\> Ears\> Eyes\> Taste/Smell | \> [Skin](https://veteransbenefitskb.com/skin)  |
+| \> [Nutritional Deficiencies](https://www.veteransbenefitskb.com/nutritional)  | \> [Respiratory System](https://www.veteransbenefitskb.com/airsystem)  |
+| \> Senses\> Ears\> Eyes\> Taste/Smell | \> [Skin](https://www.veteransbenefitskb.com/skin)  |
 
 <!-- Chunk 21/1206 | Heading: [Rating Schedule Index Navigation](https://www.veteransbenefitskb.com/ratingsindex) | Words: 165 -->
 
@@ -520,35 +520,35 @@ Open Menu
 
 Featured
 
-[\> Master Condition List](https://veteransbenefitskb.com/master)
+[\> Master Condition List](https://www.veteransbenefitskb.com/master)
 
-[\> Federal Benefits List by Combined Ratings](https://veteransbenefitskb.com/combinedbenefits)
+[\> Federal Benefits List by Combined Ratings](https://www.veteransbenefitskb.com/combinedbenefits)
 
-[\> Insider Insight into VBA Claim Processing](https://veteransbenefitskb.com/insight)
+[\> Insider Insight into VBA Claim Processing](https://www.veteransbenefitskb.com/insight)
 
-[\> Rating Schedule Index](https://veteransbenefitskb.com/ratingsindex)
+[\> Rating Schedule Index](https://www.veteransbenefitskb.com/ratingsindex)
 
-[\> Filing a VA Disability Claim](https://veteransbenefitskb.com/vaclaim)
+[\> Filing a VA Disability Claim](https://www.veteransbenefitskb.com/vaclaim)
 
-[\> Filing an Appeal](https://veteransbenefitskb.com/appeals)
+[\> Filing an Appeal](https://www.veteransbenefitskb.com/appeals)
 
 * * *
 
 [Categories](https://www.veteransbenefitskb.com/norate)
 
-\> [Death/Survivor Benefits](https://veteransbenefitskb.com/#ds)
+\> [Death/Survivor Benefits](https://www.veteransbenefitskb.com/#ds)
 
-\> [Education & Employment](https://veteransbenefitskb.com/#ee)
+\> [Education & Employment](https://www.veteransbenefitskb.com/#ee)
 
-\> [Health care](https://veteransbenefitskb.com/#healthcare)
+\> [Health care](https://www.veteransbenefitskb.com/#healthcare)
 
-\> [Housing](https://veteransbenefitskb.com/#housing)
+\> [Housing](https://www.veteransbenefitskb.com/#housing)
 
-\> [Miscellaneous](https://veteransbenefitskb.com/#misc)
+\> [Miscellaneous](https://www.veteransbenefitskb.com/#misc)
 
-\> [VA Disability Compensation](https://veteransbenefitskb.com/#va)
+\> [VA Disability Compensation](https://www.veteransbenefitskb.com/#va)
 
-\> [VA](https://veteransbenefitskb.com/#pension)  [Pension](https://veteransbenefitskb.com/#pension)
+\> [VA](https://www.veteransbenefitskb.com/#pension)  [Pension](https://www.veteransbenefitskb.com/#pension)
 
 There are various situations/conditions that the VA will **NOT** rate.
 
@@ -588,9 +588,9 @@ So yes, while being an asshole may negatively impact your ability to hold a job;
 
 **EXCEPTIONS:**
 
-- Because of this, the VA does **NOT** consider these disorders as diseases or injuries for compensation purposes, except when they are the result of another service-connected disability such as a [Traumatic](https://veteransbenefitskb.com/TBI)  [Brain Injury (TBI)](https://www.reddit.com/r/VeteransBenefits/wiki/TBI)  and
+- Because of this, the VA does **NOT** consider these disorders as diseases or injuries for compensation purposes, except when they are the result of another service-connected disability such as a [Traumatic](https://www.veteransbenefitskb.com/TBI)  [Brain Injury (TBI)](https://www.reddit.com/r/VeteransBenefits/wiki/TBI)  and
 
-- If the condition got worse due to your service or a service-connected condition ( [Aggravated](https://veteransbenefitskb.com/agg)  it **CAN** be rated.
+- If the condition got worse due to your service or a service-connected condition ( [Aggravated](https://www.veteransbenefitskb.com/agg)  it **CAN** be rated.
 
 NOTE:
 
@@ -620,9 +620,9 @@ Examples include but are not limited to:
 
 - If the condition manifests _during_ your service after the time period medical science has determined it should have developed. It **CAN** be rated.
 
-- If the condition got worse due to your service or a service-connected condition ( [Aggravated](https://veteransbenefitskb.com/agg)  it **CAN** be rated.
+- If the condition got worse due to your service or a service-connected condition ( [Aggravated](https://www.veteransbenefitskb.com/agg)  it **CAN** be rated.
 
-- Active Duty service members who serve for at least 8 years **(APPLIES TO DoD** [**Medboards**](https://veteransbenefitskb.com/medboard)  **ONLY!)**.
+- Active Duty service members who serve for at least 8 years **(APPLIES TO DoD** [**Medboards**](https://www.veteransbenefitskb.com/medboard)  **ONLY!)**.
 
 [Return to top](https://www.veteransbenefitskb.com/norate#top)
 
@@ -644,10 +644,10 @@ Examples include but are not limited to:
 
 **EXCEPTIONS:**
 
-- If the substance abuse is [Secondary](https://veteransbenefitskb.com/claimtype)  to something like [PTSD](https://veteransbenefitskb.com/mental)  it _can_ be rated; and
+- If the substance abuse is [Secondary](https://www.veteransbenefitskb.com/claimtype)  to something like [PTSD](https://www.veteransbenefitskb.com/mental)  it _can_ be rated; and
 
-- Click [HERE](https://veteransbenefitskb.com/adt)  for more information.
-- [Anorexia or bulimia](https://veteransbenefitskb.com/mental)  **CAN** be service-connected.
+- Click [HERE](https://www.veteransbenefitskb.com/adt)  for more information.
+- [Anorexia or bulimia](https://www.veteransbenefitskb.com/mental)  **CAN** be service-connected.
 
 **IMPORTANT NOTE:**
 
@@ -681,7 +681,7 @@ However, it is best practice to simply claim the disability directly.
 
 ### For Example:
 
-You have low testosterone which has been linked as the cause of your erectile dysfunction. You would claim the erectile dysfunction and state it is caused by your low testosterone via (link to service). So possibly as due to [TERA](https://veteransbenefitskb.com/toxic)  exposures for instance.
+You have low testosterone which has been linked as the cause of your erectile dysfunction. You would claim the erectile dysfunction and state it is caused by your low testosterone via (link to service). So possibly as due to [TERA](https://www.veteransbenefitskb.com/toxic)  exposures for instance.
 
 [Return to top](https://www.veteransbenefitskb.com/norate#top)
 
@@ -691,9 +691,9 @@ You have low testosterone which has been linked as the cause of your erectile dy
 
 ## **See Also**
 
-- [Discharge Upgrade](https://veteransbenefitskb.com/upgrade)
+- [Discharge Upgrade](https://www.veteransbenefitskb.com/upgrade)
 
-- [Secondary Conditions Due to Alcohol, Drugs, or Tobacco](https://veteransbenefitskb.com/adt)
+- [Secondary Conditions Due to Alcohol, Drugs, or Tobacco](https://www.veteransbenefitskb.com/adt)
 
 [Return to top](https://www.veteransbenefitskb.com/norate#top)
 
@@ -735,14 +735,14 @@ You have low testosterone which has been linked as the cause of your erectile dy
 
 |     |     |
 | --- | --- |
-| \> Cariovascular System\> Arteries & Veins\> Blood\> Heart | \> [Conditions that the VA will **NOT** Rate](https://veteransbenefitskb.com/norate)  |
-| \> [Dental and Oral](https://veteransbenefitskb.com/mouthsystem)  | \> [Digestive System](https://veteransbenefitskb.com/digsystem)  |
-| \> [Endocrine System](https://veteransbenefitskb.com/endsystem)  | \> [Female Reproductive System](https://veteransbenefitskb.com/femalesystem)  |
-| \> [Genitourinary System](https://veteransbenefitskb.com/gensystem)  | \> Hematologic and Lymphatic Systems\> Blood\> Breasts |
-| \> [Infectious Diseases and Immune Disorders](https://veteransbenefitskb.com/infect)  | \> [Mental Disorders](https://veteransbenefitskb.com/mental)  |
+| \> Cariovascular System\> Arteries & Veins\> Blood\> Heart | \> [Conditions that the VA will **NOT** Rate](https://www.veteransbenefitskb.com/norate)  |
+| \> [Dental and Oral](https://www.veteransbenefitskb.com/mouthsystem)  | \> [Digestive System](https://www.veteransbenefitskb.com/digsystem)  |
+| \> [Endocrine System](https://www.veteransbenefitskb.com/endsystem)  | \> [Female Reproductive System](https://www.veteransbenefitskb.com/femalesystem)  |
+| \> [Genitourinary System](https://www.veteransbenefitskb.com/gensystem)  | \> Hematologic and Lymphatic Systems\> Blood\> Breasts |
+| \> [Infectious Diseases and Immune Disorders](https://www.veteransbenefitskb.com/infect)  | \> [Mental Disorders](https://www.veteransbenefitskb.com/mental)  |
 | \> Musculoskeletal System\> Ankle\> Elbow & Forearm\> Foot\> Hand\> Hip & Thigh\> Knee & Lower Leg\> Ribs\> Skull\> Shoulder & Arm\> Spine\> Wrist\> Cancers and Tumors\> Diseases\> Face\> Forearm and Hand\> Hernias\> Lower Leg and Foot\> Buttock, Hip, and Thigh\> Shoulder, and Upper Arm\> Torso and Neck | \> Nervous System\> Cranial Nerves\> Central Nervous System\> Lower Back and Legs\> Upper Back and Arms\> Traumatic Brain Injuries |
-| \> [Nutritional Deficiencies](https://veteransbenefitskb.com/nutritional)  | \> [Respiratory System](https://veteransbenefitskb.com/airsystem)  |
-| \> Senses\> Ears\> Eyes\> Taste/Smell | \> [Skin](https://veteransbenefitskb.com/skin)  |
+| \> [Nutritional Deficiencies](https://www.veteransbenefitskb.com/nutritional)  | \> [Respiratory System](https://www.veteransbenefitskb.com/airsystem)  |
+| \> Senses\> Ears\> Eyes\> Taste/Smell | \> [Skin](https://www.veteransbenefitskb.com/skin)  |
 
 <!-- Chunk 33/1206 | Heading: [Rating Schedule Index Navigation](https://www.veteransbenefitskb.com/ratingsindex) | Words: 165 -->
 
@@ -808,43 +808,43 @@ Open Menu
 
 Featured
 
-[\> Master Condition List](https://veteransbenefitskb.com/master)
+[\> Master Condition List](https://www.veteransbenefitskb.com/master)
 
-[\> Federal Benefits List by Combined Ratings](https://veteransbenefitskb.com/combinedbenefits)
+[\> Federal Benefits List by Combined Ratings](https://www.veteransbenefitskb.com/combinedbenefits)
 
-[\> Insider Insight into VBA Claim Processing](https://veteransbenefitskb.com/insight)
+[\> Insider Insight into VBA Claim Processing](https://www.veteransbenefitskb.com/insight)
 
-[\> Rating Schedule Index](https://veteransbenefitskb.com/ratingsindex)
+[\> Rating Schedule Index](https://www.veteransbenefitskb.com/ratingsindex)
 
-[\> Filing a VA Disability Claim](https://veteransbenefitskb.com/vaclaim)
+[\> Filing a VA Disability Claim](https://www.veteransbenefitskb.com/vaclaim)
 
-[\> Filing an Appeal](https://veteransbenefitskb.com/appeals)
+[\> Filing an Appeal](https://www.veteransbenefitskb.com/appeals)
 
 * * *
 
 [Categories](https://www.veteransbenefitskb.com/mouthsystem)
 
-> [Death/Survivor Benefits](https://veteransbenefitskb.com/#ds)
+> [Death/Survivor Benefits](https://www.veteransbenefitskb.com/#ds)
 
-\> [Education &](https://veteransbenefitskb.com/#ee)  [Employment](https://veteransbenefitskb.com/#ee)
+\> [Education &](https://www.veteransbenefitskb.com/#ee)  [Employment](https://www.veteransbenefitskb.com/#ee)
 
-\> [Health care](https://veteransbenefitskb.com/#healthcare)
+\> [Health care](https://www.veteransbenefitskb.com/#healthcare)
 
-\> [Housing](https://veteransbenefitskb.com/#housing)
+\> [Housing](https://www.veteransbenefitskb.com/#housing)
 
-\> [Miscellaneous](https://veteransbenefitskb.com/#misc)
+\> [Miscellaneous](https://www.veteransbenefitskb.com/#misc)
 
-\> [VA Disability Compensation](https://veteransbenefitskb.com/#va)
+\> [VA Disability Compensation](https://www.veteransbenefitskb.com/#va)
 
-\> [VA Pension](https://veteransbenefitskb.com/#pension)
+\> [VA Pension](https://www.veteransbenefitskb.com/#pension)
 
 This schedule is for physical and mechanical issues of the mouth and teeth. So things such as loss of bone, inability to chew, etc.
 
 **IMPORTANT NOTES:**
 
-- Veterans who are service-connected for any dental or oral conditions are entitled to [Dental health care](https://veteransbenefitskb.com/dental)  through the VA.
+- Veterans who are service-connected for any dental or oral conditions are entitled to [Dental health care](https://www.veteransbenefitskb.com/dental)  through the VA.
 
-- For the purposes of Range of Motion (ROM), the examiner/rater are **REQUIRED** to consider flair ups in your conditions. Meaning, if you do not happen to have an [Examination](https://veteransbenefitskb.com/cnp)  on your worst day, the examiner is required to reasonably estimate your impairment on your worst day! The rater is required to use this estimate, unless your ROM is somehow noted as being worse during ROM testing during the exam. In any event, the rater is to use the most impaired ROM measurements noted by the examiner!
+- For the purposes of Range of Motion (ROM), the examiner/rater are **REQUIRED** to consider flair ups in your conditions. Meaning, if you do not happen to have an [Examination](https://www.veteransbenefitskb.com/cnp)  on your worst day, the examiner is required to reasonably estimate your impairment on your worst day! The rater is required to use this estimate, unless your ROM is somehow noted as being worse during ROM testing during the exam. In any event, the rater is to use the most impaired ROM measurements noted by the examiner!
 
 * * *
 
@@ -856,17 +856,17 @@ This schedule is for physical and mechanical issues of the mouth and teeth. So t
 
 Here are a list of common secondary issues that are associated with dental and oral conditions:
 
-- [Loss of the ability to speak](https://veteransbenefitskb.com/airsystem#6519)
+- [Loss of the ability to speak](https://www.veteransbenefitskb.com/airsystem#6519)
 
-- [Loss of smell](https://veteransbenefitskb.com/tastesmell#6275)
+- [Loss of smell](https://www.veteransbenefitskb.com/tastesmell#6275)
 
-- [Loss of taste](https://veteransbenefitskb.com/tastesmell#6276)
+- [Loss of taste](https://www.veteransbenefitskb.com/tastesmell#6276)
 
-- [Nerve damage](https://veteransbenefitskb.com/cranialnerves)
+- [Nerve damage](https://www.veteransbenefitskb.com/cranialnerves)
 
-- [Respiratory problems](https://veteransbenefitskb.com/airsystem)  and
+- [Respiratory problems](https://www.veteransbenefitskb.com/airsystem)  and
 
-- [Scars and Disfigurement Involving the Head, Face, or Neck](https://veteransbenefitskb.com/skin#7800)
+- [Scars and Disfigurement Involving the Head, Face, or Neck](https://www.veteransbenefitskb.com/skin#7800)
 
 <!-- Chunk 37/1206 | Heading: Common Secondary Conditions | Words: 52 -->
 
@@ -1108,11 +1108,11 @@ NOTES:
 
 **PYRAMIDING NOTE:**
 
-- If the Veteran already has a rating for the [Upper](https://veteransbenefitskb.com/mouthsystem#9914)  or [Lower](https://veteransbenefitskb.com/mouthsystem#9902)  jaw (not including [TMD](https://veteransbenefitskb.com/mouthsystem#9905)  they **CANNOT** get a rating for loss of teeth.
+- If the Veteran already has a rating for the [Upper](https://www.veteransbenefitskb.com/mouthsystem#9914)  or [Lower](https://www.veteransbenefitskb.com/mouthsystem#9902)  jaw (not including [TMD](https://www.veteransbenefitskb.com/mouthsystem#9905)  they **CANNOT** get a rating for loss of teeth.
 
 **IMPORTANT NOTES:**
 
-- Missing teeth **CAN** be service-connected **FOR** [**DENTAL CARE**](https://veteransbenefitskb.com/dental)  if one the following conditions are meet:
+- Missing teeth **CAN** be service-connected **FOR** [**DENTAL CARE**](https://www.veteransbenefitskb.com/dental)  if one the following conditions are meet:
 
 - Loss of teeth **MUST** be the result of trauma _or_ disease (besides brief periods of gum disease)! So, loosing them due to old age will **NOT** count here;
 
@@ -1149,10 +1149,10 @@ NOTES:
 
 **IMPORTANT NOTES:**
 
-- Do **NOT** submit a [Disability claim](https://veteransbenefitskb.com/vaclaim)  for cavities! The proper action is to talk to your VAMC dental clinic and ask them about getting care (stating you meet one of the following criteria). They will then initiate a 'claim' to establish service-connection for dental care. For more information click [HERE](https://www.knowva.ebenefits.va.gov/system/templates/selfservice/va_ssnew/help/customer/locale/en-US/portal/554400000001018/content/554400000173836/M21-1-Part-XIII-Subpart-i-Chapter-4-Section-B-Processing-Dental-Claims)
+- Do **NOT** submit a [Disability claim](https://www.veteransbenefitskb.com/vaclaim)  for cavities! The proper action is to talk to your VAMC dental clinic and ask them about getting care (stating you meet one of the following criteria). They will then initiate a 'claim' to establish service-connection for dental care. For more information click [HERE](https://www.knowva.ebenefits.va.gov/system/templates/selfservice/va_ssnew/help/customer/locale/en-US/portal/554400000001018/content/554400000173836/M21-1-Part-XIII-Subpart-i-Chapter-4-Section-B-Processing-Dental-Claims)
 
 - While the law states you can get service-connection... it isn't actually handled by the VBA. As cavities can **NEVER** be a service-conditioned for disability compensation.
-- Teeth with cavities _can_ **_ONLY_** be service-connected **FOR** [**DENTAL CARE**](https://veteransbenefitskb.com/dental)  if one the following conditions are meet:
+- Teeth with cavities _can_ **_ONLY_** be service-connected **FOR** [**DENTAL CARE**](https://www.veteransbenefitskb.com/dental)  if one the following conditions are meet:
 
 - Teeth were **NORMAL** when entering service and were filled **after 180 days** of _active_ service; _or_
 
@@ -1178,7 +1178,7 @@ NOTES:
 
 - Do **NOT** submit a claim for bruxism! The proper action is to talk to your VAMC dental clinic and ask them about getting care. They will then initiate a 'claim' to establish service connection for dental care. For more information click [HERE](https://www.knowva.ebenefits.va.gov/system/templates/selfservice/va_ssnew/help/customer/locale/en-US/portal/554400000001018/content/554400000173836/M21-1-Part-XIII-Subpart-i-Chapter-4-Section-B-Processing-Dental-Claims)
 
-- Instead of filing a claim for bruxism, you may be better served filing a claim for [TMJ](https://veteransbenefitskb.com/mouthsystem#9905)  So you might file TMJ secondary to [PTSD](https://veteransbenefitskb.com/mental#9411)  for example.
+- Instead of filing a claim for bruxism, you may be better served filing a claim for [TMJ](https://www.veteransbenefitskb.com/mouthsystem#9905)  So you might file TMJ secondary to [PTSD](https://www.veteransbenefitskb.com/mental#9411)  for example.
 
 | Rating | Description |
 | --- | --- |
@@ -1208,7 +1208,7 @@ NOTES:
 
 Tumors in and of themselves are **NOT** compensational.
 
-However, the Veteran can get a rating for how the tumor(s) affect the Veteran _or_ if there were any residuals from their removal such as [Scars](https://veteransbenefitskb.com/skin#7800)
+However, the Veteran can get a rating for how the tumor(s) affect the Veteran _or_ if there were any residuals from their removal such as [Scars](https://www.veteransbenefitskb.com/skin#7800)
 
 [Return to top](https://www.veteransbenefitskb.com/mouthsystem#top)
 
@@ -1218,9 +1218,9 @@ However, the Veteran can get a rating for how the tumor(s) affect the Veteran _o
 
 ## **Disability Benefits Questionnaire (DBQs)**
 
-To get an idea of how a [C&P exam](https://veteransbenefitskb.com/cnp)  will be conducted it is recommended that the Veteran look at the applicable DBQ.
+To get an idea of how a [C&P exam](https://www.veteransbenefitskb.com/cnp)  will be conducted it is recommended that the Veteran look at the applicable DBQ.
 
-Veteran's may ask a physician to complete a DBQ on their behalf to submit with their claim. For more information on DBQs click [HERE](https://veteransbenefitskb.com/dbq)
+Veteran's may ask a physician to complete a DBQ on their behalf to submit with their claim. For more information on DBQs click [HERE](https://www.veteransbenefitskb.com/dbq)
 
 - [Oral and Dental](https://www.benefits.va.gov/compensation/docs/Oral_and_Dental.pdf)
 
@@ -1232,7 +1232,7 @@ Veteran's may ask a physician to complete a DBQ on their behalf to submit with t
 
 ## **Having Trouble Finding Your Condition?**
 
-- Click [HERE](https://veteransbenefitskb.com/master)  to view the Master Condition List.
+- Click [HERE](https://www.veteransbenefitskb.com/master)  to view the Master Condition List.
 
 [Return to top](https://www.veteransbenefitskb.com/mouthsystem#top)
 
@@ -1260,14 +1260,14 @@ Veteran's may ask a physician to complete a DBQ on their behalf to submit with t
 
 |     |     |
 | --- | --- |
-| \> Cariovascular System\> Arteries & Veins\> Blood\> Heart | \> [Conditions that the VA will **NOT** Rate](https://veteransbenefitskb.com/norate)  |
-| \> [Dental and Oral](https://veteransbenefitskb.com/mouthsystem)  | \> [Digestive System](https://veteransbenefitskb.com/digsystem)  |
-| \> [Endocrine System](https://veteransbenefitskb.com/endsystem)  | \> [Female Reproductive System](https://veteransbenefitskb.com/femalesystem)  |
-| \> [Genitourinary System](https://veteransbenefitskb.com/gensystem)  | \> Hematologic and Lymphatic Systems\> Blood\> Breasts |
-| \> [Infectious Diseases and Immune Disorders](https://veteransbenefitskb.com/infect)  | \> [Mental Disorders](https://veteransbenefitskb.com/mental)  |
+| \> Cariovascular System\> Arteries & Veins\> Blood\> Heart | \> [Conditions that the VA will **NOT** Rate](https://www.veteransbenefitskb.com/norate)  |
+| \> [Dental and Oral](https://www.veteransbenefitskb.com/mouthsystem)  | \> [Digestive System](https://www.veteransbenefitskb.com/digsystem)  |
+| \> [Endocrine System](https://www.veteransbenefitskb.com/endsystem)  | \> [Female Reproductive System](https://www.veteransbenefitskb.com/femalesystem)  |
+| \> [Genitourinary System](https://www.veteransbenefitskb.com/gensystem)  | \> Hematologic and Lymphatic Systems\> Blood\> Breasts |
+| \> [Infectious Diseases and Immune Disorders](https://www.veteransbenefitskb.com/infect)  | \> [Mental Disorders](https://www.veteransbenefitskb.com/mental)  |
 | \> Musculoskeletal System\> Ankle\> Elbow & Forearm\> Foot\> Hand\> Hip & Thigh\> Knee & Lower Leg\> Ribs\> Skull\> Shoulder & Arm\> Spine\> Wrist\> Cancers and Tumors\> Diseases\> Face\> Forearm and Hand\> Hernias\> Lower Leg and Foot\> Buttock, Hip, and Thigh\> Shoulder, and Upper Arm\> Torso and Neck | \> Nervous System\> Cranial Nerves\> Central Nervous System\> Lower Back and Legs\> Upper Back and Arms\> Traumatic Brain Injuries |
-| \> [Nutritional Deficiencies](https://veteransbenefitskb.com/nutritional)  | \> [Respiratory System](https://veteransbenefitskb.com/airsystem)  |
-| \> Senses\> Ears\> Eyes\> Taste/Smell | \> [Skin](https://veteransbenefitskb.com/skin)  |
+| \> [Nutritional Deficiencies](https://www.veteransbenefitskb.com/nutritional)  | \> [Respiratory System](https://www.veteransbenefitskb.com/airsystem)  |
+| \> Senses\> Ears\> Eyes\> Taste/Smell | \> [Skin](https://www.veteransbenefitskb.com/skin)  |
 
 <!-- Chunk 58/1206 | Heading: [Rating Schedule Index Navigation](https://www.veteransbenefitskb.com/ratingsindex) | Words: 165 -->
 
@@ -1333,35 +1333,35 @@ Open Menu
 
 Featured
 
-[\> Master Condition List](https://veteransbenefitskb.com/master)
+[\> Master Condition List](https://www.veteransbenefitskb.com/master)
 
-[\> Federal Benefits List by Combined Ratings](https://veteransbenefitskb.com/combinedbenefits)
+[\> Federal Benefits List by Combined Ratings](https://www.veteransbenefitskb.com/combinedbenefits)
 
-[\> Insider Insight into VBA Claim Processing](https://veteransbenefitskb.com/insight)
+[\> Insider Insight into VBA Claim Processing](https://www.veteransbenefitskb.com/insight)
 
-[\> Rating Schedule Index](https://veteransbenefitskb.com/ratingsindex)
+[\> Rating Schedule Index](https://www.veteransbenefitskb.com/ratingsindex)
 
-[\> Filing a VA Disability Claim](https://veteransbenefitskb.com/vaclaim)
+[\> Filing a VA Disability Claim](https://www.veteransbenefitskb.com/vaclaim)
 
-[\> Filing an Appeal](https://veteransbenefitskb.com/appeals)
+[\> Filing an Appeal](https://www.veteransbenefitskb.com/appeals)
 
 * * *
 
 [Categories](https://www.veteransbenefitskb.com/digsystem)
 
-> [Death/Survivor Benefits](https://veteransbenefitskb.com/#ds)
+> [Death/Survivor Benefits](https://www.veteransbenefitskb.com/#ds)
 
-\> [Education &](https://veteransbenefitskb.com/#ee)  [Employment](https://veteransbenefitskb.com/#ee)
+\> [Education &](https://www.veteransbenefitskb.com/#ee)  [Employment](https://www.veteransbenefitskb.com/#ee)
 
-\> [Health care](https://veteransbenefitskb.com/#healthcare)
+\> [Health care](https://www.veteransbenefitskb.com/#healthcare)
 
-\> [Housing](https://veteransbenefitskb.com/#housing)
+\> [Housing](https://www.veteransbenefitskb.com/#housing)
 
-\> [Miscellaneous](https://veteransbenefitskb.com/#misc)
+\> [Miscellaneous](https://www.veteransbenefitskb.com/#misc)
 
-\> [VA Disability Compensation](https://veteransbenefitskb.com/#va)
+\> [VA Disability Compensation](https://www.veteransbenefitskb.com/#va)
 
-\> [VA Pension](https://veteransbenefitskb.com/#pension)
+\> [VA Pension](https://www.veteransbenefitskb.com/#pension)
 
 From the mouth to the anus, itâ€™s a journey quite famous.
 
@@ -1369,7 +1369,7 @@ From the mouth to the anus, itâ€™s a journey quite famous.
 
 - Functional gastrointestinal disorders to include abdominal pain, bloating, constipation, indigestion, difficulty swallowing, or vomiting it exposed to [Gulf environmental hazards](https://sunflower-brass-pcgs.squarespace.com/gulfill)  and the condition is considered a MUCMI.
 
-- MUCMIs associated with undiagnosed gastrointestinal issues are evaluated under the [IBS](https://veteransbenefitskb.com/digsystem#7319)  schedule _or_ [Gastrointestinal dysmotility syndrome](https://veteransbenefitskb.com/digsystem#7356)  whichever provides the higher evaluation.
+- MUCMIs associated with undiagnosed gastrointestinal issues are evaluated under the [IBS](https://www.veteransbenefitskb.com/digsystem#7319)  schedule _or_ [Gastrointestinal dysmotility syndrome](https://www.veteransbenefitskb.com/digsystem#7356)  whichever provides the higher evaluation.
 
 - Gastroesophageal reflux disease (GERD) is **NOT** considered to be a functional disorder!
 
@@ -1402,7 +1402,7 @@ From the mouth to the anus, itâ€™s a journey quite famous.
 
 ### Examples
 
-- You were rated for GERD with IBS at 30% with **BOTH** conditions having a severity worth a rating of 30% each (if they could have been rated separated under the old schedule). If you filed a claim for increase for IBS the VA would look at the IBS based upon the _current schedule_; if the IBS rated 0% on the _current schedule,_ VA would leave things as they were - so long as you would still rate at least 30% under the old schedule (or had other [Protections](https://veteransbenefitskb.com/ratingsindex#protection)
+- You were rated for GERD with IBS at 30% with **BOTH** conditions having a severity worth a rating of 30% each (if they could have been rated separated under the old schedule). If you filed a claim for increase for IBS the VA would look at the IBS based upon the _current schedule_; if the IBS rated 0% on the _current schedule,_ VA would leave things as they were - so long as you would still rate at least 30% under the old schedule (or had other [Protections](https://www.veteransbenefitskb.com/ratingsindex#protection)
 
 - If the IBS instead rated 10% on the current _schedule_; the VA would keep the GERD at 30% and award a separate evaluation for the IBS at 10%!
 
@@ -1462,11 +1462,11 @@ From the mouth to the anus, itâ€™s a journey quite famous.
 
 ### 7200 Soft Tissue Injury of the Mouth (Other than Tongue or Lips)
 
-Rated as [Disfigurement of the face, head, or neck](https://veteransbenefitskb.com/skin#7800)  [Painful/unstable scar(s)](https://veteransbenefitskb.com/skin#7804)  **_and/or_** [Impairment of eating](https://veteransbenefitskb.com/mouthsystem#9905)
+Rated as [Disfigurement of the face, head, or neck](https://www.veteransbenefitskb.com/skin#7800)  [Painful/unstable scar(s)](https://www.veteransbenefitskb.com/skin#7804)  **_and/or_** [Impairment of eating](https://www.veteransbenefitskb.com/mouthsystem#9905)
 
 NOTE:
 
-- Conditions such as the [Loss of teeth](https://veteransbenefitskb.com/mouthsystem#9913)  [Loss of the palate](https://veteransbenefitskb.com/mouthsystem#9911)  and jaw are rated under the [Dental schedule](https://veteransbenefitskb.com/mouthsystem)
+- Conditions such as the [Loss of teeth](https://www.veteransbenefitskb.com/mouthsystem#9913)  [Loss of the palate](https://www.veteransbenefitskb.com/mouthsystem#9911)  and jaw are rated under the [Dental schedule](https://www.veteransbenefitskb.com/mouthsystem)
 
 * * *
 
@@ -1476,7 +1476,7 @@ NOTE:
 
 ### 7201 Lips, Injuries of
 
-Rated as [Disfigurement of the face, head, or neck](https://veteransbenefitskb.com/skin#7800)  **_and/or_** [Painful/unstable scar(s)](https://veteransbenefitskb.com/skin#7804)
+Rated as [Disfigurement of the face, head, or neck](https://www.veteransbenefitskb.com/skin#7800)  **_and/or_** [Painful/unstable scar(s)](https://www.veteransbenefitskb.com/skin#7804)
 
 * * *
 
@@ -1508,9 +1508,9 @@ NOTE:
 
 Speech impairment rated as either:
 
-- [Complete organic aphonia](https://veteransbenefitskb.com/airsystem#6519)  or
+- [Complete organic aphonia](https://www.veteransbenefitskb.com/airsystem#6519)  or
 
-- [Laryngitis, chronic](https://veteransbenefitskb.com/airsystem#6516)
+- [Laryngitis, chronic](https://www.veteransbenefitskb.com/airsystem#6516)
 
 * * *
 
@@ -1552,7 +1552,7 @@ This diagnostic code applies, but is **NOT** limited to:
 
 **PYRAMIDING NOTE:**
 
-- **CANNOT** be rated separately from [Gastroesophageal Reflux Disease (GERD)](https://veteransbenefitskb.com/digsystem#7206)
+- **CANNOT** be rated separately from [Gastroesophageal Reflux Disease (GERD)](https://www.veteransbenefitskb.com/digsystem#7206)
 
 **IMPORTANT NOTES (APPLIED ONLY TO EVALUATIONS USING STRICTURES AS A BASIS):**
 
@@ -1611,7 +1611,7 @@ This diagnostic code applies, but is **NOT** limited to:
 
 - Impairment of the esophagus caused by systemic conditions such as myasthenia gravis, scleroderma, and other neurologic conditions.
 
-Rated as [Difficulty swallowing](https://veteransbenefitskb.com/digsystem#7203)
+Rated as [Difficulty swallowing](https://www.veteransbenefitskb.com/digsystem#7203)
 
 * * *
 
@@ -1631,7 +1631,7 @@ This diagnostic code applies, but is **NOT** limited to:
 
 - Pharyngo-esophageal diverticulum (Zenker's diverticulum).
 
-Rated as [Difficulty swallowing](https://veteransbenefitskb.com/digsystem#7203)
+Rated as [Difficulty swallowing](https://www.veteransbenefitskb.com/digsystem#7203)
 
 * * *
 
@@ -1645,7 +1645,7 @@ When your stomach contents leak out and burn your food pipe.
 
 **PYRAMIDING NOTE:**
 
-- **CANNOT** be rated separately from [Difficulty swallowing](https://veteransbenefitskb.com/digsystem#7203)
+- **CANNOT** be rated separately from [Difficulty swallowing](https://www.veteransbenefitskb.com/digsystem#7203)
 
 **IMPORTANT NOTES (APPLIED ONLY TO EVALUATIONS USING STRICTURES AS A BASIS):**
 
@@ -1686,13 +1686,13 @@ Precancerous condition due to changes in the cellular structure of your food tub
 
 **IMPORTANT NOTES:**
 
-- If difficulty of swallowing is present then this condition is rated as [Difficulty swallowing](https://veteransbenefitskb.com/digsystem#7203)  _instead_ of this schedule.
+- If difficulty of swallowing is present then this condition is rated as [Difficulty swallowing](https://www.veteransbenefitskb.com/digsystem#7203)  _instead_ of this schedule.
 
 - **MUST** be diagnosed by pathologic testing.
 
 NOTE:
 
-- If this condition is fixed via surgery, radio frequency ablation, or other treatment, the esophagus residuals are rated as [Difficulty swallowing](https://veteransbenefitskb.com/digsystem#7203)
+- If this condition is fixed via surgery, radio frequency ablation, or other treatment, the esophagus residuals are rated as [Difficulty swallowing](https://www.veteransbenefitskb.com/digsystem#7203)
 
 | Rating | Description |
 | --- | --- |
@@ -1719,7 +1719,7 @@ This diagnostic code applies to:
 
 - Zollinger-Ellison syndrome.
 
-Rated as [Peptic ulcer disease](https://veteransbenefitskb.com/digsystem#7304)
+Rated as [Peptic ulcer disease](https://www.veteransbenefitskb.com/digsystem#7304)
 
 * * *
 
@@ -1731,7 +1731,7 @@ Rated as [Peptic ulcer disease](https://veteransbenefitskb.com/digsystem#7304)
 
 When the stomach becomes abnormally narrowed.
 
-Rated as [Chronic complications of upper gastrointestinal surgery](https://veteransbenefitskb.com/digsystem#7303)  _or_ [Peptic ulcer disease](https://veteransbenefitskb.com/digsystem#7304)  whichever is the predominant disability.
+Rated as [Chronic complications of upper gastrointestinal surgery](https://www.veteransbenefitskb.com/digsystem#7303)  _or_ [Peptic ulcer disease](https://www.veteransbenefitskb.com/digsystem#7304)  whichever is the predominant disability.
 
 * * *
 
@@ -1741,7 +1741,7 @@ Rated as [Chronic complications of upper gastrointestinal surgery](https://veter
 
 ### 7308 Removal of Stomach, Full/Partial (Gastrectomy)
 
-Rated as [Chronic complications of upper gastrointestinal surgery](https://veteransbenefitskb.com/digsystem#7303)
+Rated as [Chronic complications of upper gastrointestinal surgery](https://www.veteransbenefitskb.com/digsystem#7303)
 
 * * *
 
@@ -1757,9 +1757,9 @@ Rated as [Chronic complications of upper gastrointestinal surgery](https://veter
 
 **RATER NOTES:**
 
-- Rate post-operative residuals not addressed by this diagnostic code under [Chronic complications of upper gastrointestinal surgery](https://veteransbenefitskb.com/digsystem#7303)
+- Rate post-operative residuals not addressed by this diagnostic code under [Chronic complications of upper gastrointestinal surgery](https://www.veteransbenefitskb.com/digsystem#7303)
 
-- If secondary service-connection is granted for [Peptic ulcer disease](https://veteransbenefitskb.com/digsystem#7304)  due to the vagotomy; the **MINIMUM** evaluation for the ulcer is 20%!
+- If secondary service-connection is granted for [Peptic ulcer disease](https://www.veteransbenefitskb.com/digsystem#7304)  due to the vagotomy; the **MINIMUM** evaluation for the ulcer is 20%!
 
 | Rating | Description |
 | --- | --- |
@@ -1775,7 +1775,7 @@ Rated as [Chronic complications of upper gastrointestinal surgery](https://veter
 
 ## **The Pancreas**
 
-Pulls double duty as a gland that is involved in both the [Endocrine system](https://veteransbenefitskb.com/EndSystem)  and the digestive system.
+Pulls double duty as a gland that is involved in both the [Endocrine system](https://www.veteransbenefitskb.com/EndSystem)  and the digestive system.
 
 For the digestive system, the pancreas makes important enzymes that help the small intestines absorb nutrients.
 
@@ -1812,7 +1812,7 @@ For the digestive system, the pancreas makes important enzymes that help the sma
 | Rating | Description |
 | --- | --- |
 | 30% | Minimum evaluation after getting transplant. |
-| 100% | For duration of hospitalization for the transplant. 100% continues for 1 year after release from hospital. Afterwards there will be a **MANDATORY** [Reevaluation and the condition will be rated on residuals.](https://veteransbenefitskb.com/cnp)  |
+| 100% | For duration of hospitalization for the transplant. 100% continues for 1 year after release from hospital. Afterwards there will be a **MANDATORY** [Reevaluation and the condition will be rated on residuals.](https://www.veteransbenefitskb.com/cnp)  |
 
 * * *
 
@@ -1824,15 +1824,15 @@ For the digestive system, the pancreas makes important enzymes that help the sma
 
 Can alternatively be rated based on residuals:
 
-- [Chronic complications of upper gastrointestinal surgery](https://veteransbenefitskb.com/digsystem#7303)
+- [Chronic complications of upper gastrointestinal surgery](https://www.veteransbenefitskb.com/digsystem#7303)
 
-- [Irritable bowel syndrome](https://veteransbenefitskb.com/digsystem#7319)
+- [Irritable bowel syndrome](https://www.veteransbenefitskb.com/digsystem#7319)
 
-- [Crohn's disease](https://veteransbenefitskb.com/digsystem#7326)
+- [Crohn's disease](https://www.veteransbenefitskb.com/digsystem#7326)
 
-- [Removal of part/all the large intestine](https://veteransbenefitskb.com/digsystem#7328)  or
+- [Removal of part/all the large intestine](https://www.veteransbenefitskb.com/digsystem#7328)  or
 
-- [Pancreatitis](https://veteransbenefitskb.com/digsystem#7347)  whichever is the predominant disability.
+- [Pancreatitis](https://www.veteransbenefitskb.com/digsystem#7347)  whichever is the predominant disability.
 
 **PYRAMIDING NOTES:**
 
@@ -1876,7 +1876,7 @@ This diagnostic code applies, but is **NOT** limited to:
 
 NOTE:
 
-- Primary sclerosing cholangitis is rated as [Chronic Liver Disease (Without Cirrhosis)](https://veteransbenefitskb.com/digsystem#7345)
+- Primary sclerosing cholangitis is rated as [Chronic Liver Disease (Without Cirrhosis)](https://www.veteransbenefitskb.com/digsystem#7345)
 
 | Rating | Description |
 | --- | --- |
@@ -1896,9 +1896,9 @@ When the gallbladder continually produces gallstones.
 
 **PRESUMPTIVE CONDITION:**
 
-- If diagnosed within a [Year](https://veteransbenefitskb.com/time)  of separation **AND** the condition rates _at least_ 10%.
+- If diagnosed within a [Year](https://www.veteransbenefitskb.com/time)  of separation **AND** the condition rates _at least_ 10%.
 
-Rated as [Chronic gallbladder inflammation](https://veteransbenefitskb.com/digsystem#7314)
+Rated as [Chronic gallbladder inflammation](https://www.veteransbenefitskb.com/digsystem#7314)
 
 * * *
 
@@ -1908,11 +1908,11 @@ Rated as [Chronic gallbladder inflammation](https://veteransbenefitskb.com/digsy
 
 ### 7317 Injury to the Gallbladder
 
-- Rated as [Peritoneal adhesions](https://veteransbenefitskb.com/digsystem#7301)  [Chronic cholecystitis](https://veteransbenefitskb.com/digsystem#7314)  _or_ [Removal of the gallbladder](https://veteransbenefitskb.com/digsystem#7318)  depending on the predominant disability.
+- Rated as [Peritoneal adhesions](https://www.veteransbenefitskb.com/digsystem#7301)  [Chronic cholecystitis](https://www.veteransbenefitskb.com/digsystem#7314)  _or_ [Removal of the gallbladder](https://www.veteransbenefitskb.com/digsystem#7318)  depending on the predominant disability.
 
 **RATER NOTE:**
 
-- When rating gallbladder injuries analogous to [Peritoneum adhesions](https://veteransbenefitskb.com/digsystem#7301)  a finding of adhesions is **NOT** necessary.
+- When rating gallbladder injuries analogous to [Peritoneum adhesions](https://www.veteransbenefitskb.com/digsystem#7301)  a finding of adhesions is **NOT** necessary.
 
 * * *
 
@@ -1954,7 +1954,7 @@ Late-stage liver disease.
 
 **PRESUMPTIVE CONDITION:**
 
-- If diagnosed within a [Year](https://veteransbenefitskb.com/time)  of separation **AND** the severity warranted _at least_ a 10% evaluation within that time; or
+- If diagnosed within a [Year](https://www.veteransbenefitskb.com/time)  of separation **AND** the severity warranted _at least_ a 10% evaluation within that time; or
 
 - [POW](https://www.veteransbenefitskb.com/pow)  for at least 30 days **AND** the severity warranted _at least_ a 10% evaluation at any time.
 
@@ -1996,7 +1996,7 @@ This diagnostic code applies, but is **NOT** limited to:
 
 - Wilson's disease
 
-However, this does **NOT** include [Hepatitis C](https://veteransbenefitskb.com/digsystem#7354)  which has its own diagnostic code.
+However, this does **NOT** include [Hepatitis C](https://www.veteransbenefitskb.com/digsystem#7354)  which has its own diagnostic code.
 
 **IMPORTANT NOTES:**
 
@@ -2012,7 +2012,7 @@ Here are some examples of risk factors:
 
 | Risk Factors | Location of Evidence |
 | --- | --- |
-| Acupuncture | Referral from doctor or [Buddy statement](https://veteransbenefitskb.com/buddy)  |
+| Acupuncture | Referral from doctor or [Buddy statement](https://www.veteransbenefitskb.com/buddy)  |
 | Blood transfusion ( **BEFORE** 1975) | Hospital records |
 | Exposure to blood | Usually those with health care MOSs |
 | Hemodialysis ( **BEFORE** 1992) | Hospital records |
@@ -2022,14 +2022,14 @@ Here are some examples of risk factors:
 | Intravenous drug use | Being enrolled in drug treatment programs |
 | Organ transplant ( **BEFORE** 1992) | Hospital records |
 | Piercings | Comparing entrance and exit physical exams |
-| Sharing toothbrushes/razors | [Buddy statement](https://veteransbenefitskb.com/buddy)  |
+| Sharing toothbrushes/razors | [Buddy statement](https://www.veteransbenefitskb.com/buddy)  |
 | Tattoos | Comparing entrance and exit physical exams |
 
 **RATER NOTES:**
 
-- For Veterans whose physicians _recommend_ **BOTH** parenteral antiviral therapy **AND** parenteral immunomodulatory drugs, _but_ such treatments are **NOT** safe for the Veteran, rate under the [Cirrhosis of the liver](https://veteransbenefitskb.com/digsystem#7312)  schedule criteria.
+- For Veterans whose physicians _recommend_ **BOTH** parenteral antiviral therapy **AND** parenteral immunomodulatory drugs, _but_ such treatments are **NOT** safe for the Veteran, rate under the [Cirrhosis of the liver](https://www.veteransbenefitskb.com/digsystem#7312)  schedule criteria.
 
-- If the Veteran was service-connected for hepatitis B **AFTER** October 31, 1990 and the grant was _based on drug use_ \- do **NOT** grant any increase claims for this condition! Further, if the condition is not protected by the [10 year rule](https://veteransbenefitskb.com/ratingsindex#protection)  propose severing service-connection!
+- If the Veteran was service-connected for hepatitis B **AFTER** October 31, 1990 and the grant was _based on drug use_ \- do **NOT** grant any increase claims for this condition! Further, if the condition is not protected by the [10 year rule](https://www.veteransbenefitskb.com/ratingsindex#protection)  propose severing service-connection!
 
 **_SPECIAL RATER NOTES:_**
 
@@ -2045,7 +2045,7 @@ In the case of hepatitis C conditions rated under this schedule:
 | 20% | _At least 1_ of the following: (1) intermittent fatigue, (2) malaise, (3) anorexia, (4) hepatomegaly, _or_ (5) pruritus. |
 | 40% | Continuous medication **WITH** minor weight loss **AND** _at least 2_ of the following: (1) daily fatigue, (2) malaise, (3) anorexia, (4) hepatomegaly, (5) pruritus, _or_ (6) arthralgia. |
 | 60% | Continuous medication **WITH** substantial weight loss **AND** _at least 2_ of the following: (1) daily fatigue, (2) malaise, (3) anorexia, (4) hepatomegaly, (5) pruritus, _or_ (6) arthralgia. |
-| 100% | For the duration of use of **BOTH** parenteral antiviral therapy (direct antiviral agents), **AND** parenteral immunomodulatory therapy (interferon and other); **CONTINUED** for _6 months_ following end of treatment. Afterwards there will be a **MANDATORY** [Reevaluation and the condition will be rated on residuals.](https://veteransbenefitskb.com/cnp)  |
+| 100% | For the duration of use of **BOTH** parenteral antiviral therapy (direct antiviral agents), **AND** parenteral immunomodulatory therapy (interferon and other); **CONTINUED** for _6 months_ following end of treatment. Afterwards there will be a **MANDATORY** [Reevaluation and the condition will be rated on residuals.](https://www.veteransbenefitskb.com/cnp)  |
 
 * * *
 
@@ -2073,7 +2073,7 @@ Here are some examples of risk factors:
 
 | Risk Factors | Location of Evidence |
 | --- | --- |
-| Acupuncture | Referral from doctor or [Buddy statement](https://veteransbenefitskb.com/buddy)  |
+| Acupuncture | Referral from doctor or [Buddy statement](https://www.veteransbenefitskb.com/buddy)  |
 | Blood transfusion ( **BEFORE** 1975) | Hospital records |
 | Exposure to blood | Usually those with health care MOSs |
 | Hemodialysis ( **BEFORE** 1992) | Hospital records |
@@ -2083,14 +2083,14 @@ Here are some examples of risk factors:
 | Intravenous drug use | Being enrolled in drug treatment programs |
 | Organ transplant ( **BEFORE** 1992) | Hospital records |
 | Piercings | Comparing entrance and exit physical exams |
-| Sharing toothbrushes/razors | [Buddy statement](https://veteransbenefitskb.com/buddy)  |
+| Sharing toothbrushes/razors | [Buddy statement](https://www.veteransbenefitskb.com/buddy)  |
 | Tattoos | Comparing entrance and exit physical exams |
 
-- Rated under [Chronic Liver Disease (Without Cirrhosis)](https://veteransbenefitskb.com/digsystem#7345)
+- Rated under [Chronic Liver Disease (Without Cirrhosis)](https://www.veteransbenefitskb.com/digsystem#7345)
 
 **RATER NOTES:**
 
-- If the Veteran was service-connected **AFTER** October 31, 1990 and the grant was _based on drug use_ \- do **NOT** grant any increase claims for this condition! Further, if the condition is not protected by the [10 year rule](https://veteransbenefitskb.com/ratingsindex#protection)  propose severing service-connection!
+- If the Veteran was service-connected **AFTER** October 31, 1990 and the grant was _based on drug use_ \- do **NOT** grant any increase claims for this condition! Further, if the condition is not protected by the [10 year rule](https://www.veteransbenefitskb.com/ratingsindex#protection)  propose severing service-connection!
 
 * * *
 
@@ -2108,11 +2108,11 @@ Common causes of liver injury include:
 
 - Physical trauma;
 
-- [Toxic substances](https://veteransbenefitskb.com/toxic)  and
+- [Toxic substances](https://www.veteransbenefitskb.com/toxic)  and
 
 - Viral infections.
 
-Rated under [Peritoneal adhesions](https://veteransbenefitskb.com/digsystem#7301)  [Cirrhosis of the liver](https://veteransbenefitskb.com/digsystem#7312)  _and/or_ as [Chronic liver disease without cirrhosis](https://veteransbenefitskb.com/digsystem#7345)
+Rated under [Peritoneal adhesions](https://www.veteransbenefitskb.com/digsystem#7301)  [Cirrhosis of the liver](https://www.veteransbenefitskb.com/digsystem#7312)  _and/or_ as [Chronic liver disease without cirrhosis](https://www.veteransbenefitskb.com/digsystem#7345)
 
 * * *
 
@@ -2134,7 +2134,7 @@ This diagnostic code applies, but is **NOT** limited to abscesses caused by:
 
 | Rating | Description |
 | --- | --- |
-| 100% | For _6 months_ after **INITIAL** diagnosis. Afterwards there will be a **MANDATORY** [Reevaluation and the condition will be rated on residuals.](https://veteransbenefitskb.com/cnp)  |
+| 100% | For _6 months_ after **INITIAL** diagnosis. Afterwards there will be a **MANDATORY** [Reevaluation and the condition will be rated on residuals.](https://www.veteransbenefitskb.com/cnp)  |
 
 * * *
 
@@ -2152,7 +2152,7 @@ This diagnostic code applies, but is **NOT** limited to abscesses caused by:
 | --- | --- |
 | 30% | Minimum evaluation after getting transplant. |
 | 60% | Eligible and awaiting transplant surgery. |
-| 100% | For duration of hospitalization for the transplant. 100% continues for _1 year_ after release from hospital. Afterwards there will be a **MANDATORY** [Reevaluation and the condition will be rated on residuals.](https://veteransbenefitskb.com/cnp)  |
+| 100% | For duration of hospitalization for the transplant. 100% continues for _1 year_ after release from hospital. Afterwards there will be a **MANDATORY** [Reevaluation and the condition will be rated on residuals.](https://www.veteransbenefitskb.com/cnp)  |
 
 * * *
 
@@ -2202,7 +2202,7 @@ Symptoms include:
 
 **_SPECIAL NOTE:_**
 
-- [Gulf War medically unexplained chronic multisymptom illness](https://veteransbenefitskb.com/gulfill/)  associated undiagnosed gastrointestinal issues are evaluated under this schedule _or_ [Gastrointestinal dysmotility syndrome](https://veteransbenefitskb.com/digsystem#7356)  whichever provides the higher evaluation.
+- [Gulf War medically unexplained chronic multisymptom illness](https://www.veteransbenefitskb.com/gulfill/)  associated undiagnosed gastrointestinal issues are evaluated under this schedule _or_ [Gastrointestinal dysmotility syndrome](https://www.veteransbenefitskb.com/digsystem#7356)  whichever provides the higher evaluation.
 
 | Rating | Description |
 | --- | --- |
@@ -2232,7 +2232,7 @@ Symptoms include:
 
 Causes inflammation and ulcers (sores) in your digestive tract.
 
-- Rated as [Crohn's disease](https://veteransbenefitskb.com/digsystem#7326)
+- Rated as [Crohn's disease](https://www.veteransbenefitskb.com/digsystem#7326)
 
 * * *
 
@@ -2256,7 +2256,7 @@ Symptoms include:
 
 - Stomach pain
 
-Rated as [Irritable bowel syndrome](https://veteransbenefitskb.com/digsystem#7319)  _or_ [Crohn's disease or undifferentiated form of inflammatory bowel disease](https://veteransbenefitskb.com/digsystem#7326)  whichever is the predominant disability.
+Rated as [Irritable bowel syndrome](https://www.veteransbenefitskb.com/digsystem#7319)  _or_ [Crohn's disease or undifferentiated form of inflammatory bowel disease](https://www.veteransbenefitskb.com/digsystem#7326)  whichever is the predominant disability.
 
 * * *
 
@@ -2272,7 +2272,7 @@ Constant swelling and irritation of the digestive track. May involve small bowel
 
 - Condition **MUST** be diagnosed by endoscopy _or_ radiologic studies.
 
-- Following colectomy/colostomy with persistent _or_ recurrent symptoms, condition will be rated under this schedule _or_ [Removal of part/all the large intestine](https://veteransbenefitskb.com/digsystem#7329)  whichever provides the highest rating.
+- Following colectomy/colostomy with persistent _or_ recurrent symptoms, condition will be rated under this schedule _or_ [Removal of part/all the large intestine](https://www.veteransbenefitskb.com/digsystem#7329)  whichever provides the highest rating.
 
 | Rating | Description |
 | --- | --- |
@@ -2303,7 +2303,7 @@ Symptoms include:
 
 **IMPORTANT NOTE:**
 
-- Following colectomy/colostomy with persistent _or_ recurrent symptoms, condition will be rated under this schedule _or_ [Removal of part/all the large intestine](https://veteransbenefitskb.com/digsystem#7329)  whichever provides the highest rating.
+- Following colectomy/colostomy with persistent _or_ recurrent symptoms, condition will be rated under this schedule _or_ [Removal of part/all the large intestine](https://www.veteransbenefitskb.com/digsystem#7329)  whichever provides the highest rating.
 
 | Rating | Description |
 | --- | --- |
@@ -2325,7 +2325,7 @@ Intolerance of gluten.
 
 - **MUST** be diagnosed by serum antibody test _or_ endoscopy **WITH** biopsy.
 
-- Condition will be rated under this schedule _or_ [Removal of part/all the small intestine](https://veteransbenefitskb.com/digsystem#7328)  whichever provides the highest rating.
+- Condition will be rated under this schedule _or_ [Removal of part/all the small intestine](https://www.veteransbenefitskb.com/digsystem#7328)  whichever provides the highest rating.
 
 | Rating | Description |
 | --- | --- |
@@ -2345,7 +2345,7 @@ When the muscles of your intestines have difficulties working correctly.
 
 **_SPECIAL NOTE:_**
 
-- [Gulf War medically unexplained chronic multisymptom illness](https://veteransbenefitskb.com/gulfill)  associated undiagnosed gastrointestinal issues are evaluated under this schedule _or_ [Irritable bowel syndrome](https://veteransbenefitskb.com/digsystem#7319)  whichever provides the higher evaluation.
+- [Gulf War medically unexplained chronic multisymptom illness](https://www.veteransbenefitskb.com/gulfill)  associated undiagnosed gastrointestinal issues are evaluated under this schedule _or_ [Irritable bowel syndrome](https://www.veteransbenefitskb.com/digsystem#7319)  whichever provides the higher evaluation.
 
 | Rating | Description |
 | --- | --- |
@@ -2392,7 +2392,7 @@ This diagnostic code applies, but is **NOT** limited to:
 
 **RATER NOTE:**
 
-- If short bowel syndrome results in high output syndrome, to include high-output stoma, consider assigning a higher evaluation under [Removal of part/all the large intestine](https://veteransbenefitskb.com/digsystem#7329)
+- If short bowel syndrome results in high output syndrome, to include high-output stoma, consider assigning a higher evaluation under [Removal of part/all the large intestine](https://www.veteransbenefitskb.com/digsystem#7329)
 
 | Rating | Description |
 | --- | --- |
@@ -2440,7 +2440,7 @@ The inability to hold or release poop at an appropriate time **AND** place.
 
 **_SPECIAL NOTE:_**
 
-- If there is **ANY** loss of sphincter control **AND** the Veteran has [Both legs amputated or completely paralyed](https://veteransbenefitskb.com/msindex)  the rating will be 100%.
+- If there is **ANY** loss of sphincter control **AND** the Veteran has [Both legs amputated or completely paralyed](https://www.veteransbenefitskb.com/msindex)  the rating will be 100%.
 
 | Rating | Description |
 | --- | --- |
@@ -2489,14 +2489,14 @@ When the rectum slips out of place.
 
 **_SPECIAL NOTE:_**
 
-- If impairment of bowel control is the predominant disability, then condition will be rated under diagnostic code [Incontinence](https://veteransbenefitskb.com/digsystem#7332)  instead.
+- If impairment of bowel control is the predominant disability, then condition will be rated under diagnostic code [Incontinence](https://www.veteransbenefitskb.com/digsystem#7332)  instead.
 
 | Rating | Description |
 | --- | --- |
 | 10% | Prolapse will come and go randomly but is **NOT** repairable. |
 | 30% | Manually reducible prolapse that only occurs during times during bowel movements, exertion, _or_ while doing the Valsalva maneuver. |
 | 50% | Manually reducible prolapse that occurs during times _other than_ during bowel movements, exertion, _or_ while doing the Valsalva maneuver. |
-| 100% | For 2 months following repair of prolapse. Afterwards there will be a **MANDATORY** [Reevaluation and the condition will be rated on residuals.](https://veteransbenefitskb.com/cnp)  |
+| 100% | For 2 months following repair of prolapse. Afterwards there will be a **MANDATORY** [Reevaluation and the condition will be rated on residuals.](https://www.veteransbenefitskb.com/cnp)  |
 | 100% | Persistent prolapse that does **NOT** reduce. |
 
 * * *
@@ -2592,7 +2592,7 @@ This diagnostic code includes operations performed on the esophagus, stomach, pa
 
 NOTE:
 
-- If the surgery was the **REMOVAL** of a part of the small you will be rated under [Removal of part/all the small intestine](https://veteransbenefitskb.com/digsystem#7328)  **NOT** this schedule.
+- If the surgery was the **REMOVAL** of a part of the small you will be rated under [Removal of part/all the small intestine](https://www.veteransbenefitskb.com/digsystem#7328)  **NOT** this schedule.
 
 | Rating | Description |
 | --- | --- |
@@ -2610,17 +2610,17 @@ NOTE:
 
 #### Common Secondary Conditions
 
-- [Residual scar(s)](https://veteransbenefitskb.com/skin#7802)
+- [Residual scar(s)](https://www.veteransbenefitskb.com/skin#7802)
 
 Pancreatic surgery often result in a vitamin or mineral deficiency (e.g., B12, iron, calcium, or fat-soluble vitamins). Which can lead to:
 
-- [Avitaminosis](https://veteransbenefitskb.com/infect#6313)  Vitamin A, B, C or D deficiencies;
+- [Avitaminosis](https://www.veteransbenefitskb.com/infect#6313)  Vitamin A, B, C or D deficiencies;
 
-- [Keratitis or keratomalacia](https://veteransbenefitskb.com/eyes#6001)  due to Vitamin A deficiency;
+- [Keratitis or keratomalacia](https://www.veteransbenefitskb.com/eyes#6001)  due to Vitamin A deficiency;
 
-- [Neuropathy](https://veteransbenefitskb.com/nervsystem)  due to Vitamin E deficiency; and
+- [Neuropathy](https://www.veteransbenefitskb.com/nervsystem)  due to Vitamin E deficiency; and
 
-- [Prolonged clotting](https://veteransbenefitskb.com/blood#7705)  due to Vitamin K deficiency.
+- [Prolonged clotting](https://www.veteransbenefitskb.com/blood#7705)  due to Vitamin K deficiency.
 
 * * *
 
@@ -2674,13 +2674,13 @@ Ulcer in the stomach.
 
 **PRESUMPTIVE CONDITION:**
 
-- If diagnosed within a [Year](https://veteransbenefitskb.com/time)  of separation **AND** the severity warranted _at least_ a 10% evaluation within that time; or
+- If diagnosed within a [Year](https://www.veteransbenefitskb.com/time)  of separation **AND** the severity warranted _at least_ a 10% evaluation within that time; or
 
 - [POW](https://www.veteransbenefitskb.com/pow)  for _at least_ 30 days **AND** the severity warranted _at least_ a 10% evaluation at any time.
 
 **_SPECIAL NOTE:_**
 
-- If the ulcer is secondary to [Removal of the Vegus Nerve, partial or full (Vagotomy)](https://veteransbenefitskb.com/digsystem#7348)  the _minimum_ evaluation is 20%.
+- If the ulcer is secondary to [Removal of the Vegus Nerve, partial or full (Vagotomy)](https://www.veteransbenefitskb.com/digsystem#7348)  the _minimum_ evaluation is 20%.
 
 | Rating | Description |
 | --- | --- |
@@ -2688,7 +2688,7 @@ Ulcer in the stomach.
 | 20% | Episodes of abdominal pain, nausea, _or_ vomiting, that: last for _at least_ 3 days in a row; occur _3 times or less_ in the past 12 months; **AND** are managed by daily prescribed medication. |
 | 40% | Episodes of abdominal pain, nausea, _or_ vomiting, that: last for _at least_ 3 days in a row; occur _4 or more times_ in the past 12 months; **AND** are managed by daily prescribed medication. |
 | 60% | Continuous abdominal pain with intermittent vomiting, recurrent hematemesis (vomiting blood) _or_ melena (tarry stools); **AND** cases of anemia which require hospitalization _at least once_ in the past 12 months. |
-| 100% | Duration of _3 months_ following surgery for perforation or hemorrhage. Afterwards there will be a **MANDATORY** [Reevaluation and the condition will be rated on residuals.](https://veteransbenefitskb.com/cnp)  |
+| 100% | Duration of _3 months_ following surgery for perforation or hemorrhage. Afterwards there will be a **MANDATORY** [Reevaluation and the condition will be rated on residuals.](https://www.veteransbenefitskb.com/cnp)  |
 
 [Return to top](https://www.veteransbenefitskb.com/digsystem#top)
 
@@ -2711,7 +2711,7 @@ Ulcer in the stomach.
 
 **RATER NOTE:**
 
-- If Service Treatment Records (STRs) note inguinal hernia, service-connection is warranted without a medical opinion. **UNLESS**, there is medical evidence dated before service _or_ other sufficient medical evidence to determine that an [Aggravation](https://veteransbenefitskb.com/agg)  medical opinion is _required_. The return of the hernia during service is **NOT** alone enough evidence to indicate aggravation has occurred. You **NEED** that opinion!
+- If Service Treatment Records (STRs) note inguinal hernia, service-connection is warranted without a medical opinion. **UNLESS**, there is medical evidence dated before service _or_ other sufficient medical evidence to determine that an [Aggravation](https://www.veteransbenefitskb.com/agg)  medical opinion is _required_. The return of the hernia during service is **NOT** alone enough evidence to indicate aggravation has occurred. You **NEED** that opinion!
 
 NOTE:
 
@@ -2734,7 +2734,7 @@ NOTE:
 
 Hernia in the diaphragm that allows the organs in the abdomen to move up into the chest cavity.
 
-Rated as [Difficulty swallowing](https://veteransbenefitskb.com/digsystem#7203)
+Rated as [Difficulty swallowing](https://www.veteransbenefitskb.com/digsystem#7203)
 
 * * *
 
@@ -2746,7 +2746,7 @@ Rated as [Difficulty swallowing](https://veteransbenefitskb.com/digsystem#7203)
 
 ## **Muscle Hernias**
 
-For information on muscle hernias click [HERE](https://veteransbenefitskb.com/MuscleHernia)
+For information on muscle hernias click [HERE](https://www.veteransbenefitskb.com/MuscleHernia)
 
 [Return to top](https://www.veteransbenefitskb.com/digsystem#top)
 
@@ -2758,7 +2758,7 @@ For information on muscle hernias click [HERE](https://veteransbenefitskb.com/Mu
 
 **PRESUMPTIVE CONDITION:**
 
-- If exposed to [Burn pits](https://veteransbenefitskb.com/burnpits)
+- If exposed to [Burn pits](https://www.veteransbenefitskb.com/burnpits)
 
 - If diagnosed with _liver cancer_ and exposed to [Camp Lejeune](https://www.veteransbenefitskb.com/lejeune)
 
@@ -2800,9 +2800,9 @@ However, if the Veteran suffers residual symptoms due to the presence of the tum
 
 ## **Disability Benefits Questionnaire (DBQs)**
 
-To get an idea of how a [C&P exam](https://veteransbenefitskb.com/cnp)  will be conducted it is recommended that the Veteran look at the applicable DBQ.
+To get an idea of how a [C&P exam](https://www.veteransbenefitskb.com/cnp)  will be conducted it is recommended that the Veteran look at the applicable DBQ.
 
-Veteran's may ask a physician to complete a DBQ on their behalf to submit with their claim. For more information on DBQs click [HERE](https://veteransbenefitskb.com/dbq)
+Veteran's may ask a physician to complete a DBQ on their behalf to submit with their claim. For more information on DBQs click [HERE](https://www.veteransbenefitskb.com/dbq)
 
 - [Esophageal Disorders](https://www.benefits.va.gov/compensation/docs/esophageal-disorders.pdf)
 
@@ -2832,7 +2832,7 @@ Veteran's may ask a physician to complete a DBQ on their behalf to submit with t
 
 ## **Having Trouble Finding Your Condition?**
 
-- Click [HERE](https://veteransbenefitskb.com/master)  to view the Master Condition List.
+- Click [HERE](https://www.veteransbenefitskb.com/master)  to view the Master Condition List.
 
 [Return to top](https://www.veteransbenefitskb.com/digsystem#top)
 
@@ -2868,14 +2868,14 @@ Veteran's may ask a physician to complete a DBQ on their behalf to submit with t
 
 |     |     |
 | --- | --- |
-| \> Cariovascular System\> Arteries & Veins\> Blood\> Heart | \> [Conditions that the VA will **NOT** Rate](https://veteransbenefitskb.com/norate)  |
-| \> [Dental and Oral](https://veteransbenefitskb.com/mouthsystem)  | \> [Digestive System](https://veteransbenefitskb.com/digsystem)  |
-| \> [Endocrine System](https://veteransbenefitskb.com/endsystem)  | \> [Female Reproductive System](https://veteransbenefitskb.com/femalesystem)  |
-| \> [Genitourinary System](https://veteransbenefitskb.com/gensystem)  | \> Hematologic and Lymphatic Systems\> Blood\> Breasts |
-| \> [Infectious Diseases and Immune Disorders](https://veteransbenefitskb.com/infect)  | \> [Mental Disorders](https://veteransbenefitskb.com/mental)  |
+| \> Cariovascular System\> Arteries & Veins\> Blood\> Heart | \> [Conditions that the VA will **NOT** Rate](https://www.veteransbenefitskb.com/norate)  |
+| \> [Dental and Oral](https://www.veteransbenefitskb.com/mouthsystem)  | \> [Digestive System](https://www.veteransbenefitskb.com/digsystem)  |
+| \> [Endocrine System](https://www.veteransbenefitskb.com/endsystem)  | \> [Female Reproductive System](https://www.veteransbenefitskb.com/femalesystem)  |
+| \> [Genitourinary System](https://www.veteransbenefitskb.com/gensystem)  | \> Hematologic and Lymphatic Systems\> Blood\> Breasts |
+| \> [Infectious Diseases and Immune Disorders](https://www.veteransbenefitskb.com/infect)  | \> [Mental Disorders](https://www.veteransbenefitskb.com/mental)  |
 | \> Musculoskeletal System\> Ankle\> Elbow & Forearm\> Foot\> Hand\> Hip & Thigh\> Knee & Lower Leg\> Ribs\> Skull\> Shoulder & Arm\> Spine\> Wrist\> Cancers and Tumors\> Diseases\> Face\> Forearm and Hand\> Hernias\> Lower Leg and Foot\> Buttock, Hip, and Thigh\> Shoulder, and Upper Arm\> Torso and Neck | \> Nervous System\> Cranial Nerves\> Central Nervous System\> Lower Back and Legs\> Upper Back and Arms\> Traumatic Brain Injuries |
-| \> [Nutritional Deficiencies](https://veteransbenefitskb.com/nutritional)  | \> [Respiratory System](https://veteransbenefitskb.com/airsystem)  |
-| \> Senses\> Ears\> Eyes\> Taste/Smell | \> [Skin](https://veteransbenefitskb.com/skin)  |
+| \> [Nutritional Deficiencies](https://www.veteransbenefitskb.com/nutritional)  | \> [Respiratory System](https://www.veteransbenefitskb.com/airsystem)  |
+| \> Senses\> Ears\> Eyes\> Taste/Smell | \> [Skin](https://www.veteransbenefitskb.com/skin)  |
 
 <!-- Chunk 130/1206 | Heading: [Rating Schedule Index Navigation](https://www.veteransbenefitskb.com/ratingsindex) | Words: 165 -->
 
@@ -2941,35 +2941,35 @@ Open Menu
 
 Featured
 
-[\> Master Condition List](https://veteransbenefitskb.com/master)
+[\> Master Condition List](https://www.veteransbenefitskb.com/master)
 
-[\> Federal Benefits List by Combined Ratings](https://veteransbenefitskb.com/combinedbenefits)
+[\> Federal Benefits List by Combined Ratings](https://www.veteransbenefitskb.com/combinedbenefits)
 
-[\> Insider Insight into VBA Claim Processing](https://veteransbenefitskb.com/insight)
+[\> Insider Insight into VBA Claim Processing](https://www.veteransbenefitskb.com/insight)
 
-[\> Rating Schedule Index](https://veteransbenefitskb.com/ratingsindex)
+[\> Rating Schedule Index](https://www.veteransbenefitskb.com/ratingsindex)
 
-[\> Filing a VA Disability Claim](https://veteransbenefitskb.com/vaclaim)
+[\> Filing a VA Disability Claim](https://www.veteransbenefitskb.com/vaclaim)
 
-[\> Filing an Appeal](https://veteransbenefitskb.com/appeals)
+[\> Filing an Appeal](https://www.veteransbenefitskb.com/appeals)
 
 * * *
 
 [Categories](https://www.veteransbenefitskb.com/endsystem)
 
-> [Death/Survivor Benefits](https://veteransbenefitskb.com/#ds)
+> [Death/Survivor Benefits](https://www.veteransbenefitskb.com/#ds)
 
-\> [Education &](https://veteransbenefitskb.com/#ee)  [Employment](https://veteransbenefitskb.com/#ee)
+\> [Education &](https://www.veteransbenefitskb.com/#ee)  [Employment](https://www.veteransbenefitskb.com/#ee)
 
-\> [Health care](https://veteransbenefitskb.com/#healthcare)
+\> [Health care](https://www.veteransbenefitskb.com/#healthcare)
 
-\> [Housing](https://veteransbenefitskb.com/#housing)
+\> [Housing](https://www.veteransbenefitskb.com/#housing)
 
-\> [Miscellaneous](https://veteransbenefitskb.com/#misc)
+\> [Miscellaneous](https://www.veteransbenefitskb.com/#misc)
 
-\> [VA Disability Compensation](https://veteransbenefitskb.com/#va)
+\> [VA Disability Compensation](https://www.veteransbenefitskb.com/#va)
 
-\> [VA Pension](https://veteransbenefitskb.com/#pension)
+\> [VA Pension](https://www.veteransbenefitskb.com/#pension)
 
 Contains a bunch of organs that make hormones to regulate various bodily functions.
 
@@ -2983,9 +2983,9 @@ Contains a bunch of organs that make hormones to regulate various bodily functio
 
 **PRESUMPTIVE CONDITION:**
 
-- If diagnosed within a [Year](https://veteransbenefitskb.com/time)  of separation **AND** the severity warranted _at least_ a 10% evaluation within that time.
+- If diagnosed within a [Year](https://www.veteransbenefitskb.com/time)  of separation **AND** the severity warranted _at least_ a 10% evaluation within that time.
 
-- Diagnosed with a hormone deficiencies due to damage to the [Pituitary gland](https://veteransbenefitskb.com/endsystem#7916)  or the hypothalamus [Secondary to a moderate or severe TBI](https://www.veteransbenefitskb.com/tbi#presumptive)
+- Diagnosed with a hormone deficiencies due to damage to the [Pituitary gland](https://www.veteransbenefitskb.com/endsystem#7916)  or the hypothalamus [Secondary to a moderate or severe TBI](https://www.veteransbenefitskb.com/tbi#presumptive)
 
 * * *
 
@@ -3009,9 +3009,9 @@ Contains a bunch of organs that make hormones to regulate various bodily functio
 
 **PRESUMPTIVE CONDITION:**
 
-- If diagnosed within a [Year](https://veteransbenefitskb.com/time)  of separation **AND** the severity warranted _at least_ a 10% evaluation within that time; _or_
+- If diagnosed within a [Year](https://www.veteransbenefitskb.com/time)  of separation **AND** the severity warranted _at least_ a 10% evaluation within that time; _or_
 
-- If exposed to [Agent Orange](https://veteransbenefitskb.com/agentorange)  **AND** the severity _ever_ warranted _at least_ a 10% evaluation.
+- If exposed to [Agent Orange](https://www.veteransbenefitskb.com/agentorange)  **AND** the severity _ever_ warranted _at least_ a 10% evaluation.
 
 Definition:
 
@@ -3043,23 +3043,23 @@ Definition:
 
 - If the secondary condition(s) rates 0% then it will **NOT** get a separate rating! It will be displayed as: Diabetes Type II with X, Y, etc. That said, you will **STILL** be service-connected for the condition(s)!
 
-- [Erectile dysfunction](https://veteransbenefitskb.com/gensystem#7522)
+- [Erectile dysfunction](https://www.veteransbenefitskb.com/gensystem#7522)
 
-- [Eye issues](https://veteransbenefitskb.com/eyes)  \- retinopathy, blindness, cataracts, glaucoma
+- [Eye issues](https://www.veteransbenefitskb.com/eyes)  \- retinopathy, blindness, cataracts, glaucoma
 
-- [Heart conditions](https://veteransbenefitskb.com/heart)  \- coronary artery disease, heart attack, atherosclerosis
+- [Heart conditions](https://www.veteransbenefitskb.com/heart)  \- coronary artery disease, heart attack, atherosclerosis
 
-- [High blood pressure](https://veteransbenefitskb.com/bloodtubes#7101)
+- [High blood pressure](https://www.veteransbenefitskb.com/bloodtubes#7101)
 
-- [Kidney issues](https://veteransbenefitskb.com/gensystem#7541)  \- nephropathy
+- [Kidney issues](https://www.veteransbenefitskb.com/gensystem#7541)  \- nephropathy
 
-- [Mental disorders](https://veteransbenefitskb.com/mental#9434)  \- dementia, depression
+- [Mental disorders](https://www.veteransbenefitskb.com/mental#9434)  \- dementia, depression
 
-- [Nerve issues](https://veteransbenefitskb.com/nervesystem)  \- neuropathy
+- [Nerve issues](https://www.veteransbenefitskb.com/nervesystem)  \- neuropathy
 
-- [Skin ulcer](https://veteransbenefitskb.com/skin)
+- [Skin ulcer](https://www.veteransbenefitskb.com/skin)
 
-- [Stroke](https://veteransbenefitskb.com/cns#8008)
+- [Stroke](https://www.veteransbenefitskb.com/cns#8008)
 
 [Return to top](https://www.veteransbenefitskb.com/endsystem#top)
 
@@ -3083,11 +3083,11 @@ Thyroid produces too many hormones.
 
 #### Common Secondary Conditions
 
-- [Double Vision](https://veteransbenefitskb.com/eyes#6090)
+- [Double Vision](https://www.veteransbenefitskb.com/eyes#6090)
 
-- [Hyperthyroid heart disease](https://veteransbenefitskb.com/heart#7008)
+- [Hyperthyroid heart disease](https://www.veteransbenefitskb.com/heart#7008)
 
-- [Vision problems](https://veteransbenefitskb.com/eyes)
+- [Vision problems](https://www.veteransbenefitskb.com/eyes)
 
 * * *
 
@@ -3111,15 +3111,15 @@ When the condition causes the thyroid to enlarge (tumors, nodules, swelling, etc
 
 #### Common Secondary Conditions
 
-- [Difficulty swallowing](https://veteransbenefitskb.com/digsystem#7203)
+- [Difficulty swallowing](https://www.veteransbenefitskb.com/digsystem#7203)
 
-- [Disfigurement of the neck](https://veteransbenefitskb.com/skin#7800)
+- [Disfigurement of the neck](https://www.veteransbenefitskb.com/skin#7800)
 
-- [Double Vision](https://veteransbenefitskb.com/eyes#6090)
+- [Double Vision](https://www.veteransbenefitskb.com/eyes#6090)
 
-- [Hyperthyroid heart disease](https://veteransbenefitskb.com/heart#7008)
+- [Hyperthyroid heart disease](https://www.veteransbenefitskb.com/heart#7008)
 
-- [Vision problems](https://veteransbenefitskb.com/eyes)
+- [Vision problems](https://www.veteransbenefitskb.com/eyes)
 
 * * *
 
@@ -3131,7 +3131,7 @@ When the condition causes the thyroid to enlarge (tumors, nodules, swelling, etc
 
 When the condition causes the thyroid to enlarge (tumors, nodules, swelling, etc.) **AND** does **NOT** make the thyroid produce too many hormones (hyperthyroidism).
 
-If the swelling causes [Disfigurement of the neck](https://veteransbenefitskb.com/skin#7800)  or if it puts [Too much pressure on the esophagus, making it hard to swallow](https://veteransbenefitskb.com/digsystem#7203)  The Veteran may get individual ratings for those conditions.
+If the swelling causes [Disfigurement of the neck](https://www.veteransbenefitskb.com/skin#7800)  or if it puts [Too much pressure on the esophagus, making it hard to swallow](https://www.veteransbenefitskb.com/digsystem#7203)  The Veteran may get individual ratings for those conditions.
 
 <!-- Chunk 140/1206 | Heading: 7902 Nontoxic Thyroid Enlargement | Words: 60 -->
 
@@ -3143,7 +3143,7 @@ Thyroid produces too few hormones.
 
 **PRESUMPTIVE CONDITION:**
 
-- If exposed to [Agent Orange](https://veteransbenefitskb.com/agentorange)
+- If exposed to [Agent Orange](https://www.veteransbenefitskb.com/agentorange)
 
 Myxedema - Symptoms include:
 
@@ -3184,11 +3184,11 @@ Myxedema - Symptoms include:
 
 #### Common secondary conditions
 
-- [Eye conditions](https://veteransbenefitskb.com/eyes)  \- such as blurred or double vision
+- [Eye conditions](https://www.veteransbenefitskb.com/eyes)  \- such as blurred or double vision
 
-- [Digestive conditions](https://veteransbenefitskb.com/digsystem)
+- [Digestive conditions](https://www.veteransbenefitskb.com/digsystem)
 
-- [Mental disorders](https://veteransbenefitskb.com/mental)
+- [Mental disorders](https://www.veteransbenefitskb.com/mental)
 
 <!-- Chunk 142/1206 | Heading: Common secondary conditions | Words: 20 -->
 
@@ -3200,7 +3200,7 @@ Thyroid gland becomes irritated and swells.
 
 NOTE:
 
-- If it causes [Hyperthyroidism](https://veteransbenefitskb.com/endsystem#7900)  or [Hypothyroidism](https://veteransbenefitskb.com/endsystem#7903)  it will be rated under those schedules.
+- If it causes [Hyperthyroidism](https://www.veteransbenefitskb.com/endsystem#7900)  or [Hypothyroidism](https://www.veteransbenefitskb.com/endsystem#7903)  it will be rated under those schedules.
 
 * * *
 
@@ -3243,17 +3243,17 @@ Hypercalcemia - too much calcium in the blood. For the purposes of the VA the Ve
 
 #### Common Secondary Conditions
 
-- [Decreased renal function](https://veteransbenefitskb.com/gensystem#7530)
+- [Decreased renal function](https://www.veteransbenefitskb.com/gensystem#7530)
 
-- [Digestive conditions](https://veteransbenefitskb.com/digsystem)
+- [Digestive conditions](https://www.veteransbenefitskb.com/digsystem)
 
-- [Bone fractures](https://veteransbenefitskb.com/msindex)
+- [Bone fractures](https://www.veteransbenefitskb.com/msindex)
 
-- [Heart issues](https://veteransbenefitskb.com/heart)
+- [Heart issues](https://www.veteransbenefitskb.com/heart)
 
-- [Kidney stones](https://veteransbenefitskb.com/gensystem#7508)
+- [Kidney stones](https://www.veteransbenefitskb.com/gensystem#7508)
 
-- [Vision problems](https://veteransbenefitskb.com/eyes)
+- [Vision problems](https://www.veteransbenefitskb.com/eyes)
 
 * * *
 
@@ -3277,13 +3277,13 @@ Parathyroid produces too few hormones.
 
 #### Common Secondary Conditions
 
-- [Cataracts](https://veteransbenefitskb.com/eyes#6027)
+- [Cataracts](https://www.veteransbenefitskb.com/eyes#6027)
 
-- [Congestive heart failure](https://veteransbenefitskb.com/heart#7005)
+- [Congestive heart failure](https://www.veteransbenefitskb.com/heart#7005)
 
-- [Decreased renal function](https://veteransbenefitskb.com/gensystem#7530)
+- [Decreased renal function](https://www.veteransbenefitskb.com/gensystem#7530)
 
-- [Kidney stones](https://veteransbenefitskb.com/gensystem#7508)
+- [Kidney stones](https://www.veteransbenefitskb.com/gensystem#7508)
 
 [Return to top](https://www.veteransbenefitskb.com/endsystem#top)
 
@@ -3329,17 +3329,17 @@ When there is too much cortisol in the body.
 
 #### Common Secondary Conditions
 
-- [Bone fractures](https://veteransbenefitskb.com/msindex)
+- [Bone fractures](https://www.veteransbenefitskb.com/msindex)
 
-- [Diabetes mellitus](https://veteransbenefitskb.com/endsystem#7913)
+- [Diabetes mellitus](https://www.veteransbenefitskb.com/endsystem#7913)
 
-- [Erectile dysfunction](https://veteransbenefitskb.com/gensystem#7522)
+- [Erectile dysfunction](https://www.veteransbenefitskb.com/gensystem#7522)
 
-- [Headaches](https://veteransbenefitskb.com/cns#8100)
+- [Headaches](https://www.veteransbenefitskb.com/cns#8100)
 
-- [High blood pressure](https://veteransbenefitskb.com/bloodtubes#7101)
+- [High blood pressure](https://www.veteransbenefitskb.com/bloodtubes#7101)
 
-- [Mental disorders](https://veteransbenefitskb.com/mental#9434)
+- [Mental disorders](https://www.veteransbenefitskb.com/mental#9434)
 
 <!-- Chunk 150/1206 | Heading: Common Secondary Conditions | Words: 22 -->
 
@@ -3366,7 +3366,7 @@ Adrenal glands not producing enough steroid hormones.
 
 **IMPORTANT NOTES:**
 
-- If caused by a tuberculosis infection "Tuberculous Addison's Disease". The [Tuberculous](https://veteransbenefitskb.com/airsystem#6732)  schedule will be used instead. Once that schedule has been exhausted, the Veteran will be rated on any residuals. Which, if the Addison's disease is still present the Veteran may then be rated under this schedule.
+- If caused by a tuberculosis infection "Tuberculous Addison's Disease". The [Tuberculous](https://www.veteransbenefitskb.com/airsystem#6732)  schedule will be used instead. Once that schedule has been exhausted, the Veteran will be rated on any residuals. Which, if the Addison's disease is still present the Veteran may then be rated under this schedule.
 
 - An Addison's â€œcrisisâ€ is when: arteries and veins in the limbs collapse and blood can no longer circulate throughout the limbs. This is causes extremely low blood pressure and severe shock. Other symptoms can include nausea, vomiting, anorexia, dehydration, severe weakness, pain in the stomach, legs, and back, fever, and reduced brain functioning which can lead to coma and even death.
 
@@ -3392,7 +3392,7 @@ When a condition affects multiple glands of the endocrine system at the same tim
 
 Rated based upon the main symptoms the condition causes:
 
-- So, [Diabetes mellitus](https://veteransbenefitskb.com/endsystem#7913)  [Hyperthyroidism](https://veteransbenefitskb.com/endsystem#7900)  [Hypothyroidism](https://veteransbenefitskb.com/endsystem#7903)  [Hypoparathyroidism](https://veteransbenefitskb.com/endsystem#7905)  etc.
+- So, [Diabetes mellitus](https://www.veteransbenefitskb.com/endsystem#7913)  [Hyperthyroidism](https://www.veteransbenefitskb.com/endsystem#7900)  [Hypothyroidism](https://www.veteransbenefitskb.com/endsystem#7903)  [Hypoparathyroidism](https://www.veteransbenefitskb.com/endsystem#7905)  etc.
 
 <!-- Chunk 153/1206 | Heading: 7912 Polyglandular Syndrome (Multiple Endocrine Neoplasia, Autoimmune Polyglandular Syndrome) | Words: 41 -->
 
@@ -3402,7 +3402,7 @@ Rated based upon the main symptoms the condition causes:
 
 **PRESUMPTIVE CONDITION:**
 
-- Thyroid cancer: if exposed to [Burn pits](https://veteransbenefitskb.com/burnpits)  or [Ionizing radiation](https://www.veteransbenefitskb.com/ionizing)
+- Thyroid cancer: if exposed to [Burn pits](https://www.veteransbenefitskb.com/burnpits)  or [Ionizing radiation](https://www.veteransbenefitskb.com/ionizing)
 
 - Pancreas cancer: if exposed to ionizing radiation.
 
@@ -3434,7 +3434,7 @@ However, if the Veteran suffers residual symptoms due to the presence of the tum
 
 When the pituitary gland produces too many hormones because of a _tumor or cancer_.
 
-It is rated under the appropriate [Tumor or cancer](https://veteransbenefitskb.com/endsystem#7903)  schedules - whichever is the reason for the overproduction.
+It is rated under the appropriate [Tumor or cancer](https://www.veteransbenefitskb.com/endsystem#7903)  schedules - whichever is the reason for the overproduction.
 
 * * *
 
@@ -3446,7 +3446,7 @@ It is rated under the appropriate [Tumor or cancer](https://veteransbenefitskb.c
 
 When the adrenal glands produce too many aldosterone hormones because of a _tumor or cancer_.
 
-It is rated under the appropriate [Tumor or cancer](https://veteransbenefitskb.com/endsystem#7903)  schedules - whichever is the reason for the overproduction.
+It is rated under the appropriate [Tumor or cancer](https://www.veteransbenefitskb.com/endsystem#7903)  schedules - whichever is the reason for the overproduction.
 
 * * *
 
@@ -3458,7 +3458,7 @@ It is rated under the appropriate [Tumor or cancer](https://veteransbenefitskb.c
 
 When the adrenal glands produce too many noradrenaline and adrenaline hormones because of a _tumor or cancer_.
 
-It is rated under the appropriate [Tumor or cancer](https://veteransbenefitskb.com/endsystem#7903)  schedules - whichever is the reason for the overproduction.
+It is rated under the appropriate [Tumor or cancer](https://www.veteransbenefitskb.com/endsystem#7903)  schedules - whichever is the reason for the overproduction.
 
 * * *
 
@@ -3470,9 +3470,9 @@ It is rated under the appropriate [Tumor or cancer](https://veteransbenefitskb.c
 
 When the C-cells that produce calcitonin in the thyroid grow abnormally into a cancer.
 
-- If it is treated with antineoplastic therapy/chemotherapy, it is rated as [Cancer](https://veteransbenefitskb.com/endsystem#7914)
+- If it is treated with antineoplastic therapy/chemotherapy, it is rated as [Cancer](https://www.veteransbenefitskb.com/endsystem#7914)
 
-- If surgery is performed _and_ antineoplastic therapy/chemotherapy is **NOT** required, then it is rated as [Hypothyroidism](https://veteransbenefitskb.com/endsystem#7903)
+- If surgery is performed _and_ antineoplastic therapy/chemotherapy is **NOT** required, then it is rated as [Hypothyroidism](https://www.veteransbenefitskb.com/endsystem#7903)
 
 [Return to top](https://www.veteransbenefitskb.com/endsystem#top)
 
@@ -3482,9 +3482,9 @@ When the C-cells that produce calcitonin in the thyroid grow abnormally into a c
 
 ## **Disability Benefits Questionnaire (DBQs)**
 
-To get an idea of how a [C&P exam](https://veteransbenefitskb.com/cnp)  will be conducted it is recommended that the Veteran look at the applicable DBQ.
+To get an idea of how a [C&P exam](https://www.veteransbenefitskb.com/cnp)  will be conducted it is recommended that the Veteran look at the applicable DBQ.
 
-Veteran's may ask a physician to complete a DBQ on their behalf to submit with their claim. For more information on DBQs click [HERE](https://veteransbenefitskb.com/dbq)
+Veteran's may ask a physician to complete a DBQ on their behalf to submit with their claim. For more information on DBQs click [HERE](https://www.veteransbenefitskb.com/dbq)
 
 - [Diabetes Mellitus](https://www.benefits.va.gov/compensation/docs/Diabetes_Mellitus.pdf)
 
@@ -3500,7 +3500,7 @@ Veteran's may ask a physician to complete a DBQ on their behalf to submit with t
 
 ## **Having Trouble Finding Your Condition?**
 
-- Click [HERE](https://veteransbenefitskb.com/master)  to view the Master Condition List.
+- Click [HERE](https://www.veteransbenefitskb.com/master)  to view the Master Condition List.
 
 [Return to top](https://www.veteransbenefitskb.com/endsystem#top)
 
@@ -3524,14 +3524,14 @@ Veteran's may ask a physician to complete a DBQ on their behalf to submit with t
 
 |     |     |
 | --- | --- |
-| \> Cariovascular System\> Arteries & Veins\> Blood\> Heart | \> [Conditions that the VA will **NOT** Rate](https://veteransbenefitskb.com/norate)  |
-| \> [Dental and Oral](https://veteransbenefitskb.com/mouthsystem)  | \> [Digestive System](https://veteransbenefitskb.com/digsystem)  |
-| \> [Endocrine System](https://veteransbenefitskb.com/endsystem)  | \> [Female Reproductive System](https://veteransbenefitskb.com/femalesystem)  |
-| \> [Genitourinary System](https://veteransbenefitskb.com/gensystem)  | \> Hematologic and Lymphatic Systems\> Blood\> Breasts |
-| \> [Infectious Diseases and Immune Disorders](https://veteransbenefitskb.com/infect)  | \> [Mental Disorders](https://veteransbenefitskb.com/mental)  |
+| \> Cariovascular System\> Arteries & Veins\> Blood\> Heart | \> [Conditions that the VA will **NOT** Rate](https://www.veteransbenefitskb.com/norate)  |
+| \> [Dental and Oral](https://www.veteransbenefitskb.com/mouthsystem)  | \> [Digestive System](https://www.veteransbenefitskb.com/digsystem)  |
+| \> [Endocrine System](https://www.veteransbenefitskb.com/endsystem)  | \> [Female Reproductive System](https://www.veteransbenefitskb.com/femalesystem)  |
+| \> [Genitourinary System](https://www.veteransbenefitskb.com/gensystem)  | \> Hematologic and Lymphatic Systems\> Blood\> Breasts |
+| \> [Infectious Diseases and Immune Disorders](https://www.veteransbenefitskb.com/infect)  | \> [Mental Disorders](https://www.veteransbenefitskb.com/mental)  |
 | \> Musculoskeletal System\> Ankle\> Elbow & Forearm\> Foot\> Hand\> Hip & Thigh\> Knee & Lower Leg\> Ribs\> Skull\> Shoulder & Arm\> Spine\> Wrist\> Cancers and Tumors\> Diseases\> Face\> Forearm and Hand\> Hernias\> Lower Leg and Foot\> Buttock, Hip, and Thigh\> Shoulder, and Upper Arm\> Torso and Neck | \> Nervous System\> Cranial Nerves\> Central Nervous System\> Lower Back and Legs\> Upper Back and Arms\> Traumatic Brain Injuries |
-| \> [Nutritional Deficiencies](https://veteransbenefitskb.com/nutritional)  | \> [Respiratory System](https://veteransbenefitskb.com/airsystem)  |
-| \> Senses\> Ears\> Eyes\> Taste/Smell | \> [Skin](https://veteransbenefitskb.com/skin)  |
+| \> [Nutritional Deficiencies](https://www.veteransbenefitskb.com/nutritional)  | \> [Respiratory System](https://www.veteransbenefitskb.com/airsystem)  |
+| \> Senses\> Ears\> Eyes\> Taste/Smell | \> [Skin](https://www.veteransbenefitskb.com/skin)  |
 
 <!-- Chunk 163/1206 | Heading: [Rating Schedule Index Navigation](https://www.veteransbenefitskb.com/ratingsindex) | Words: 165 -->
 
@@ -3597,17 +3597,17 @@ Open Menu
 
 Featured
 
-[\> Master Condition List](https://veteransbenefitskb.com/master)
+[\> Master Condition List](https://www.veteransbenefitskb.com/master)
 
-[\> Federal Benefits List by Combined Ratings](https://veteransbenefitskb.com/combinedbenefits)
+[\> Federal Benefits List by Combined Ratings](https://www.veteransbenefitskb.com/combinedbenefits)
 
-[\> Insider Insight into VBA Claim Processing](https://veteransbenefitskb.com/insight)
+[\> Insider Insight into VBA Claim Processing](https://www.veteransbenefitskb.com/insight)
 
-[\> Rating Schedule Index](https://veteransbenefitskb.com/ratingsindex)
+[\> Rating Schedule Index](https://www.veteransbenefitskb.com/ratingsindex)
 
-[\> Filing a VA Disability Claim](https://veteransbenefitskb.com/vaclaim)
+[\> Filing a VA Disability Claim](https://www.veteransbenefitskb.com/vaclaim)
 
-[\> Filing an Appeal](https://veteransbenefitskb.com/appeals)
+[\> Filing an Appeal](https://www.veteransbenefitskb.com/appeals)
 
 * * *
 
@@ -3619,7 +3619,7 @@ Breasts, cancers & tumors, endometriosis, fallopian tubes, fistulas, ovaries, ut
 
 - Natural menopause, primary amenorrhea, pregnancy, and childbirth are **NOT** disabilities for VA disability purposes.
 
-- Also do **NOT** [Claim](https://veteransbenefitskb.com/vaclaim)  things which went away after the birth such as:
+- Also do **NOT** [Claim](https://www.veteransbenefitskb.com/vaclaim)  things which went away after the birth such as:
 
 - Anemia;
 
@@ -3636,19 +3636,19 @@ Breasts, cancers & tumors, endometriosis, fallopian tubes, fistulas, ovaries, ut
 - Urinary tract infections.
 - Chronic residuals of medical or surgical complications of pregnancy **_CAN_** be disabilities for VA disability purposes!
 
-> [Death/Survivor Benefits](https://veteransbenefitskb.com/#ds)
+> [Death/Survivor Benefits](https://www.veteransbenefitskb.com/#ds)
 
-\> [Education &](https://veteransbenefitskb.com/#ee)  [Employment](https://veteransbenefitskb.com/#ee)
+\> [Education &](https://www.veteransbenefitskb.com/#ee)  [Employment](https://www.veteransbenefitskb.com/#ee)
 
-\> [Health care](https://veteransbenefitskb.com/#healthcare)
+\> [Health care](https://www.veteransbenefitskb.com/#healthcare)
 
-\> [Housing](https://veteransbenefitskb.com/#housing)
+\> [Housing](https://www.veteransbenefitskb.com/#housing)
 
-\> [Miscellaneous](https://veteransbenefitskb.com/#misc)
+\> [Miscellaneous](https://www.veteransbenefitskb.com/#misc)
 
-\> [VA Disability Compensation](https://veteransbenefitskb.com/#va)
+\> [VA Disability Compensation](https://www.veteransbenefitskb.com/#va)
 
-\> [VA Pension](https://veteransbenefitskb.com/#pension)
+\> [VA Pension](https://www.veteransbenefitskb.com/#pension)
 
 <!-- Chunk 166/1206 | Heading: Rating Schedule for the Female Reproductive System | Words: 156 -->
 
@@ -3656,7 +3656,7 @@ Breasts, cancers & tumors, endometriosis, fallopian tubes, fistulas, ovaries, ut
 
 ### 7617 Complete Removal of the Uterus **AND** both Ovaries
 
-Veteran is entitled to [SMC K](https://veteransbenefitskb.com/smc#k)
+Veteran is entitled to [SMC K](https://www.veteransbenefitskb.com/smc#k)
 
 | Rating | Description |
 | --- | --- |
@@ -3671,7 +3671,7 @@ Veteran is entitled to [SMC K](https://veteransbenefitskb.com/smc#k)
 
 ### 7618 Removal of the Uterus
 
-Veteran is entitled to [SMC K](https://veteransbenefitskb.com/smc#k)
+Veteran is entitled to [SMC K](https://www.veteransbenefitskb.com/smc#k)
 
 | Rating | Description |
 | --- | --- |
@@ -3694,7 +3694,7 @@ Veteran is entitled to [SMC K](https://veteransbenefitskb.com/smc#k)
 
 \*If the Veteran's remaining ovary is nonfunctional they will be paid at the 30% rate.
 
-\*\*Veteran is entitled to [SMC K](https://veteransbenefitskb.com/smc#k)
+\*\*Veteran is entitled to [SMC K](https://www.veteransbenefitskb.com/smc#k)
 
 <!-- Chunk 169/1206 | Heading: 7619 Removal of the Ovary | Words: 72 -->
 
@@ -3702,7 +3702,7 @@ Veteran is entitled to [SMC K](https://veteransbenefitskb.com/smc#k)
 
 ### 7620 Ovaries are Nonfunctional (But **NOT** Removed)
 
-Veteran is entitled to [SMC K](https://veteransbenefitskb.com/smc#k)
+Veteran is entitled to [SMC K](https://www.veteransbenefitskb.com/smc#k)
 
 * * *
 
@@ -3766,7 +3766,7 @@ Pelvic organs include:
 
 **PYRAMIDING NOTES:**
 
-- If the displacement causes [Secondary conditions](https://veteransbenefitskb.com/claimtype#secondary)  involving the [Digestive](https://veteransbenefitskb.com/digsystem)  [Genitourinary](https://veteransbenefitskb.com/gensystem)  and/or [Skin](https://veteransbenefitskb.com/skin)  symptoms:
+- If the displacement causes [Secondary conditions](https://www.veteransbenefitskb.com/claimtype#secondary)  involving the [Digestive](https://www.veteransbenefitskb.com/digsystem)  [Genitourinary](https://www.veteransbenefitskb.com/gensystem)  and/or [Skin](https://www.veteransbenefitskb.com/skin)  symptoms:
 
 - Those secondaries **WILL** each get their own individual ratings.
 - If the displacement is caused by removal of reproductive organs, the VA **CANNOT** grant a separate evaluation for the displacement of any remaining pelvic organs.
@@ -3872,13 +3872,13 @@ The following body parts are all rated identically:
 
 Also fall under this schedule and include:
 
-- [Secondary](https://veteransbenefitskb.com/claimtype#secondary)  amenorrhea; and
+- [Secondary](https://www.veteransbenefitskb.com/claimtype#secondary)  amenorrhea; and
 
 - Secondary dysmenorrhea.
 
 **IMPORTANT NOTE:**
 
-- [Direct](https://veteransbenefitskb.com/claimtype)  or [Aggravated](https://veteransbenefitskb.com/agg)  service-connection **CANNOT** be granted for these disorders of menstruation!
+- [Direct](https://www.veteransbenefitskb.com/claimtype)  or [Aggravated](https://www.veteransbenefitskb.com/agg)  service-connection **CANNOT** be granted for these disorders of menstruation!
 
 [Return to top](https://www.veteransbenefitskb.com/femalesystem#top)
 
@@ -3896,7 +3896,7 @@ This would look something like: residual (residual condition) of cervical dyspla
 
 **IMPORTANT NOTE:**
 
-- If there is a medical opinion that your in-service cervical dysplasia went on to cause your [Cervical cancer](https://veteransbenefitskb.com/femalesystem#7627)  Then that cancer can be service-connected!
+- If there is a medical opinion that your in-service cervical dysplasia went on to cause your [Cervical cancer](https://www.veteransbenefitskb.com/femalesystem#7627)  Then that cancer can be service-connected!
 
 [Return to top](https://www.veteransbenefitskb.com/femalesystem#top)
 
@@ -3908,7 +3908,7 @@ This would look something like: residual (residual condition) of cervical dyspla
 
 **PRESUMPTIVE CONDITION:**
 
-- If exposed to [Burn pits](https://veteransbenefitskb.com/burnpits)
+- If exposed to [Burn pits](https://www.veteransbenefitskb.com/burnpits)
 
 - If diagnosed with _ovary cancer_ and exposed to [Ionizing radiation](https://www.veteransbenefitskb.com/ionizing)
 
@@ -3931,9 +3931,9 @@ This would look something like: residual (residual condition) of cervical dyspla
 
 Tumors are in and of themselves a non-compensational (0% rating).
 
-However, if the tumor or its removal causes [Secondary conditions](https://veteransbenefitskb.com/claimtype#secondary)  those can be rated.
+However, if the tumor or its removal causes [Secondary conditions](https://www.veteransbenefitskb.com/claimtype#secondary)  those can be rated.
 
-Such as [Lymphedema](https://veteransbenefitskb.com/bloodtubes#7121)  or [Scaring](https://veteransbenefitskb.com/skin#7802)
+Such as [Lymphedema](https://www.veteransbenefitskb.com/bloodtubes#7121)  or [Scaring](https://www.veteransbenefitskb.com/skin#7802)
 
 [Return to top](https://www.veteransbenefitskb.com/femalesystem#top)
 
@@ -3949,9 +3949,9 @@ This condition itself **CANNOT** be service-connected _unless_:
 
 2. Fibrocystic breast changes _with_ associated atypical hyperplasia.
 
-If the first case is meet then you will be rated under [Scars](https://veteransbenefitskb.com/skin#7208)  and if applicable, [Breast surgery](https://veteransbenefitskb.com/femalesystem#7626)
+If the first case is meet then you will be rated under [Scars](https://www.veteransbenefitskb.com/skin#7208)  and if applicable, [Breast surgery](https://www.veteransbenefitskb.com/femalesystem#7626)
 
-If the second case is meet then you will be rated under [Breast cancer](https://veteransbenefitskb.com/femalesystem#7630)
+If the second case is meet then you will be rated under [Breast cancer](https://www.veteransbenefitskb.com/femalesystem#7630)
 
 * * *
 
@@ -3965,11 +3965,11 @@ Can be caused by weight gain or hormonal changes.
 
 This condition may be rated under the the following schedules:
 
-- [Breast surgery](https://veteransbenefitskb.com/femalesystem#7626)
+- [Breast surgery](https://www.veteransbenefitskb.com/femalesystem#7626)
 
-- [Scars](https://veteransbenefitskb.com/skin#7208)  _or_
+- [Scars](https://www.veteransbenefitskb.com/skin#7208)  _or_
 
-- [Tumors of the breasts](https://veteransbenefitskb.com/femalesystem#7631)
+- [Tumors of the breasts](https://www.veteransbenefitskb.com/femalesystem#7631)
 
 **IMPORTANT NOTE:**
 
@@ -3999,11 +3999,11 @@ Definitions:
 
 - If a breast reduction is done _purely_ for cosmetic purposes then the Veteran **CANNOT** get service-connection. However, if a reduction is done to lessen say back or neck pain (during service) it can be service-connected!
 
-- \*Female Veterans _may_ be entitled to [SMC K](https://veteransbenefitskb.com/smc#k)
+- \*Female Veterans _may_ be entitled to [SMC K](https://www.veteransbenefitskb.com/smc#k)
 
 **PYRAMIDING NOTE:**
 
-- You **CAN** get a rating under this schedule as well as a rating for any [Scars](https://veteransbenefitskb.com/skin#7208)
+- You **CAN** get a rating under this schedule as well as a rating for any [Scars](https://www.veteransbenefitskb.com/skin#7208)
 
 | One Breast Rating | Both Breasts Rating | Description |
 | --- | --- | --- |
@@ -4022,7 +4022,7 @@ Definitions:
 
 **PRESUMPTIVE CONDITION:**
 
-- If exposed to [Burn pits](https://veteransbenefitskb.com/burnpits)  or
+- If exposed to [Burn pits](https://www.veteransbenefitskb.com/burnpits)  or
 
 - If exposed to [Ionizing radiation](https://www.veteransbenefitskb.com/ionizing)
 
@@ -4045,9 +4045,9 @@ Definitions:
 
 Tumors are in and of themselves a non-compensational (0% rating).
 
-However, if the tumor or its removal causes [Secondary conditions](https://veteransbenefitskb.com/claimtype#secondary)  those can be rated.
+However, if the tumor or its removal causes [Secondary conditions](https://www.veteransbenefitskb.com/claimtype#secondary)  those can be rated.
 
-Such as [Muscle loss](https://veteransbenefitskb.com/msindex)  [Nerve damage](https://veteransbenefitskb.com/nervesystem)  or [Scaring](https://veteransbenefitskb.com/skin#7802)
+Such as [Muscle loss](https://www.veteransbenefitskb.com/msindex)  [Nerve damage](https://www.veteransbenefitskb.com/nervesystem)  or [Scaring](https://www.veteransbenefitskb.com/skin#7802)
 
 [Return to top](https://www.veteransbenefitskb.com/femalesystem#top)
 
@@ -4057,9 +4057,9 @@ Such as [Muscle loss](https://veteransbenefitskb.com/msindex)  [Nerve damage](ht
 
 ## **Disability Benefits Questionnaire (DBQs)**
 
-To get an idea of how a [C&P exam](https://veteransbenefitskb.com/cnp)  will be conducted it is recommended that the Veteran look at the applicable DBQ.
+To get an idea of how a [C&P exam](https://www.veteransbenefitskb.com/cnp)  will be conducted it is recommended that the Veteran look at the applicable DBQ.
 
-Veteran's may ask a physician to complete a DBQ on their behalf to submit with their claim. For more information on DBQs click [HERE](https://veteransbenefitskb.com/dbq)
+Veteran's may ask a physician to complete a DBQ on their behalf to submit with their claim. For more information on DBQs click [HERE](https://www.veteransbenefitskb.com/dbq)
 
 - [Breast Conditions](https://www.benefits.va.gov/compensation/docs/Breast_Conditions.pdf)
 
@@ -4073,7 +4073,7 @@ Veteran's may ask a physician to complete a DBQ on their behalf to submit with t
 
 ## **Having Trouble Finding Your Condition?**
 
-- Click [HERE](https://veteransbenefitskb.com/master)  to view the Master Condition List.
+- Click [HERE](https://www.veteransbenefitskb.com/master)  to view the Master Condition List.
 
 [Return to top](https://www.veteransbenefitskb.com/femalesystem#top)
 
@@ -4101,14 +4101,14 @@ Veteran's may ask a physician to complete a DBQ on their behalf to submit with t
 
 |     |     |
 | --- | --- |
-| \> Cariovascular System\> Arteries & Veins\> Blood\> Heart | \> [Conditions that the VA will **NOT** Rate](https://veteransbenefitskb.com/norate)  |
-| \> [Dental and Oral](https://veteransbenefitskb.com/mouthsystem)  | \> [Digestive System](https://veteransbenefitskb.com/digsystem)  |
-| \> [Endocrine System](https://veteransbenefitskb.com/endsystem)  | \> [Female Reproductive System](https://veteransbenefitskb.com/femalesystem)  |
-| \> [Genitourinary System](https://veteransbenefitskb.com/gensystem)  | \> Hematologic and Lymphatic Systems\> Blood\> Breasts |
-| \> [Infectious Diseases and Immune Disorders](https://veteransbenefitskb.com/infect)  | \> [Mental Disorders](https://veteransbenefitskb.com/mental)  |
+| \> Cariovascular System\> Arteries & Veins\> Blood\> Heart | \> [Conditions that the VA will **NOT** Rate](https://www.veteransbenefitskb.com/norate)  |
+| \> [Dental and Oral](https://www.veteransbenefitskb.com/mouthsystem)  | \> [Digestive System](https://www.veteransbenefitskb.com/digsystem)  |
+| \> [Endocrine System](https://www.veteransbenefitskb.com/endsystem)  | \> [Female Reproductive System](https://www.veteransbenefitskb.com/femalesystem)  |
+| \> [Genitourinary System](https://www.veteransbenefitskb.com/gensystem)  | \> Hematologic and Lymphatic Systems\> Blood\> Breasts |
+| \> [Infectious Diseases and Immune Disorders](https://www.veteransbenefitskb.com/infect)  | \> [Mental Disorders](https://www.veteransbenefitskb.com/mental)  |
 | \> Musculoskeletal System\> Ankle\> Elbow & Forearm\> Foot\> Hand\> Hip & Thigh\> Knee & Lower Leg\> Ribs\> Skull\> Shoulder & Arm\> Spine\> Wrist\> Cancers and Tumors\> Diseases\> Face\> Forearm and Hand\> Hernias\> Lower Leg and Foot\> Buttock, Hip, and Thigh\> Shoulder, and Upper Arm\> Torso and Neck | \> Nervous System\> Cranial Nerves\> Central Nervous System\> Lower Back and Legs\> Upper Back and Arms\> Traumatic Brain Injuries |
-| \> [Nutritional Deficiencies](https://veteransbenefitskb.com/nutritional)  | \> [Respiratory System](https://veteransbenefitskb.com/airsystem)  |
-| \> Senses\> Ears\> Eyes\> Taste/Smell | \> [Skin](https://veteransbenefitskb.com/skin)  |
+| \> [Nutritional Deficiencies](https://www.veteransbenefitskb.com/nutritional)  | \> [Respiratory System](https://www.veteransbenefitskb.com/airsystem)  |
+| \> Senses\> Ears\> Eyes\> Taste/Smell | \> [Skin](https://www.veteransbenefitskb.com/skin)  |
 
 <!-- Chunk 189/1206 | Heading: [Rating Schedule Index Navigation](https://www.veteransbenefitskb.com/ratingsindex) | Words: 165 -->
 
@@ -4174,35 +4174,35 @@ Open Menu
 
 Featured
 
-[\> Master Condition List](https://veteransbenefitskb.com/master)
+[\> Master Condition List](https://www.veteransbenefitskb.com/master)
 
-[\> Federal Benefits List by Combined Ratings](https://veteransbenefitskb.com/combinedbenefits)
+[\> Federal Benefits List by Combined Ratings](https://www.veteransbenefitskb.com/combinedbenefits)
 
-[\> Insider Insight into VBA Claim Processing](https://veteransbenefitskb.com/insight)
+[\> Insider Insight into VBA Claim Processing](https://www.veteransbenefitskb.com/insight)
 
-[\> Rating Schedule Index](https://veteransbenefitskb.com/ratingsindex)
+[\> Rating Schedule Index](https://www.veteransbenefitskb.com/ratingsindex)
 
-[\> Filing a VA Disability Claim](https://veteransbenefitskb.com/vaclaim)
+[\> Filing a VA Disability Claim](https://www.veteransbenefitskb.com/vaclaim)
 
-[\> Filing an Appeal](https://veteransbenefitskb.com/appeals)
+[\> Filing an Appeal](https://www.veteransbenefitskb.com/appeals)
 
 * * *
 
 [Categories](https://www.veteransbenefitskb.com/gensystem)
 
-> [Death/Survivor Benefits](https://veteransbenefitskb.com/#ds)
+> [Death/Survivor Benefits](https://www.veteransbenefitskb.com/#ds)
 
-\> [Education &](https://veteransbenefitskb.com/#ee)  [Employment](https://veteransbenefitskb.com/#ee)
+\> [Education &](https://www.veteransbenefitskb.com/#ee)  [Employment](https://www.veteransbenefitskb.com/#ee)
 
-\> [Health care](https://veteransbenefitskb.com/#healthcare)
+\> [Health care](https://www.veteransbenefitskb.com/#healthcare)
 
-\> [Housing](https://veteransbenefitskb.com/#housing)
+\> [Housing](https://www.veteransbenefitskb.com/#housing)
 
-\> [Miscellaneous](https://veteransbenefitskb.com/#misc)
+\> [Miscellaneous](https://www.veteransbenefitskb.com/#misc)
 
-\> [VA Disability Compensation](https://veteransbenefitskb.com/#va)
+\> [VA Disability Compensation](https://www.veteransbenefitskb.com/#va)
 
-\> [VA Pension](https://veteransbenefitskb.com/#pension)
+\> [VA Pension](https://www.veteransbenefitskb.com/#pension)
 
 The parts of the body that remove _liquid_ waste from the body. This also includes the male sex organs.
 
@@ -4251,17 +4251,17 @@ The following conditions may also be known broadly as _Nephropathy_. Which are c
 
 - Renal artery stenosis
 
-- Renal Involvement (due to [Diabetes mellitus](https://veteransbenefitskb.com/endsystem#7913)  [Sickle cell anemia](https://veteransbenefitskb.com/blood#7714)  [Systemic lupus erythematosus](https://veteransbenefitskb.com/infect#6350)  [Vasculitis](https://veteransbenefitskb.com/bloodtubes#7114)  or other systemic disease processes)
+- Renal Involvement (due to [Diabetes mellitus](https://www.veteransbenefitskb.com/endsystem#7913)  [Sickle cell anemia](https://www.veteransbenefitskb.com/blood#7714)  [Systemic lupus erythematosus](https://www.veteransbenefitskb.com/infect#6350)  [Vasculitis](https://www.veteransbenefitskb.com/bloodtubes#7114)  or other systemic disease processes)
 
 - Toxic nephropathy
 
 **IMPORTANT NOTE:**
 
-- Conditions can be rated under this schedule **OR** under the [Urinary Rating System](https://veteransbenefitskb.com/gensystem#urinary)  whichever will provide the highest rating!
+- Conditions can be rated under this schedule **OR** under the [Urinary Rating System](https://www.veteransbenefitskb.com/gensystem#urinary)  whichever will provide the highest rating!
 
 **PRESUMPTIVE CONDITION:**
 
-- If diagnosed within a [Year](https://veteransbenefitskb.com/time)  of separation **AND** the severity warranted _at least_ a 10% evaluation within that time.
+- If diagnosed within a [Year](https://www.veteransbenefitskb.com/time)  of separation **AND** the severity warranted _at least_ a 10% evaluation within that time.
 
 * * *
 
@@ -4278,7 +4278,7 @@ The following conditions may also be known broadly as _Nephropathy_. Which are c
 - Three consecutive months does **NOT** mean continuous - readings that are confirmed at least once every month!
 
 - It means abnormal finding with another repeated abnormal finding 3 _or_ more months later during a 12-month period.
-- If there is evidence to suggest a chronic condition exists **BUT** there is only one abnormal reading of record a rater **CAN** grant an increase. However, an [At once examination](https://veteransbenefitskb.com/cnp)  3 months into the future **MUST** be established!
+- If there is evidence to suggest a chronic condition exists **BUT** there is only one abnormal reading of record a rater **CAN** grant an increase. However, an [At once examination](https://www.veteransbenefitskb.com/cnp)  3 months into the future **MUST** be established!
 
 - GFR, estimated GFR (eGFR), and creatinine-based approximations of GFR will be accepted for evaluation purposes under this section when determined to be appropriate and calculated by a medical professional.
 
@@ -4300,7 +4300,7 @@ The following conditions may also be known broadly as _Nephropathy_. Which are c
 
 | Rating | Description |
 | --- | --- |
-| ?% | If still experiencing [Kidney failure and it rates higher than the minimum; Veteran gets the higher of the 2 ratings.](https://veteransbenefitskb.com/gensystem#renal)  |
+| ?% | If still experiencing [Kidney failure and it rates higher than the minimum; Veteran gets the higher of the 2 ratings.](https://www.veteransbenefitskb.com/gensystem#renal)  |
 | 30% | Minimum rating. |
 
 * * *
@@ -4313,7 +4313,7 @@ The following conditions may also be known broadly as _Nephropathy_. Which are c
 
 | Rating | Description |
 | --- | --- |
-| ?% | If still experiencing [Kidney failure and it rates higher than the minimum; Veteran gets the higher of the 2 ratings.](https://veteransbenefitskb.com/gensystem#renal)  |
+| ?% | If still experiencing [Kidney failure and it rates higher than the minimum; Veteran gets the higher of the 2 ratings.](https://www.veteransbenefitskb.com/gensystem#renal)  |
 | 30% | Minimum rating. |
 | 100% | For 1 year following the surgery. |
 
@@ -4327,11 +4327,11 @@ The following conditions may also be known broadly as _Nephropathy_. Which are c
 
 Swelling of the kidney.
 
-- Rated under [Kidney failure](https://veteransbenefitskb.com/gensystem#renal)
+- Rated under [Kidney failure](https://www.veteransbenefitskb.com/gensystem#renal)
 
 **PYRAMIDING NOTES:**
 
-- As nephritis is often connected to [Heart diseases](https://veteransbenefitskb.com/heart)  (this _does_ include [Hypertension](https://veteransbenefitskb.com/bloodtubes#7101)  If the Veteran has both and they can be determined to be caused by the same general condition. Then the Veteran will only receive a _singular_ rating for either the nephritis _or_ the heart disease - whichever is higher.
+- As nephritis is often connected to [Heart diseases](https://www.veteransbenefitskb.com/heart)  (this _does_ include [Hypertension](https://www.veteransbenefitskb.com/bloodtubes#7101)  If the Veteran has both and they can be determined to be caused by the same general condition. Then the Veteran will only receive a _singular_ rating for either the nephritis _or_ the heart disease - whichever is higher.
 
 - **EXCEPTIONS** to receiving the singular ratings for the heart and kidneys:
 
@@ -4341,7 +4341,7 @@ Swelling of the kidney.
 
 **PRESUMPTIVE CONDITION:**
 
-- If diagnosed within a [Year](https://veteransbenefitskb.com/time)  of separation **AND** the severity warranted _at least_ a 10% evaluation within that time.
+- If diagnosed within a [Year](https://www.veteransbenefitskb.com/time)  of separation **AND** the severity warranted _at least_ a 10% evaluation within that time.
 
 **RATER NOTES:**
 
@@ -4359,7 +4359,7 @@ Damage done by high blood pressure.
 
 **PYRAMIDING NOTE:**
 
-- As this condition is a symptom of [High blood pressure](https://veteransbenefitskb.com/bloodtubes#7101)  or [Heart disease](https://www.reddit.com/r/VeteransBenefits/wiki/heart)  The Veteran can only receive a _singular_ rating under [Kidney failure](https://veteransbenefitskb.com/gensystem#renal)  high blood pressure, _or_ heart disease; Whichever is highest.
+- As this condition is a symptom of [High blood pressure](https://www.veteransbenefitskb.com/bloodtubes#7101)  or [Heart disease](https://www.reddit.com/r/VeteransBenefits/wiki/heart)  The Veteran can only receive a _singular_ rating under [Kidney failure](https://www.veteransbenefitskb.com/gensystem#renal)  high blood pressure, _or_ heart disease; Whichever is highest.
 
 **IMPORTANT NOTES:**
 
@@ -4372,7 +4372,7 @@ Damage done by high blood pressure.
 
 **QUASI PRESUMPTIVE SERVICE-CONNECTION:**
 
-- Veteran who is service-connected for [Hypertension](https://veteransbenefitskb.com/bloodtubes#7101)  \- [Arteriosclerotic manifestations due to hypertension](https://sunflower-brass-pcgs.squarespace.com/arteriosclerotic)
+- Veteran who is service-connected for [Hypertension](https://www.veteransbenefitskb.com/bloodtubes#7101)  \- [Arteriosclerotic manifestations due to hypertension](https://sunflower-brass-pcgs.squarespace.com/arteriosclerotic)
 
 * * *
 
@@ -4386,7 +4386,7 @@ Damage done by high blood pressure.
 
 | Rating | Description |
 | --- | --- |
-| ?% | If experiencing [Kidney failure and it rates higher than the minimum; Veteran gets the higher of the 2 ratings.](https://veteransbenefitskb.com/gensystem#renal)  |
+| ?% | If experiencing [Kidney failure and it rates higher than the minimum; Veteran gets the higher of the 2 ratings.](https://www.veteransbenefitskb.com/gensystem#renal)  |
 | 20% | Minimum rating (if there are obvious symptoms). |
 
 * * *
@@ -4397,7 +4397,7 @@ Damage done by high blood pressure.
 
 ### 7504 Kidney Infection (Pyelonephritis)
 
-Can be rated under [Kidney failure](https://veteransbenefitskb.com/gensystem#renal)  or [Urinary tract infection](https://veteransbenefitskb.com/gensystem#uti)  The Veteran will get a _singular_ rating under whichever schedule provides the highest rating.
+Can be rated under [Kidney failure](https://www.veteransbenefitskb.com/gensystem#renal)  or [Urinary tract infection](https://www.veteransbenefitskb.com/gensystem#uti)  The Veteran will get a _singular_ rating under whichever schedule provides the highest rating.
 
 <!-- Chunk 199/1206 | Heading: 7504 Kidney Infection (Pyelonephritis) | Words: 29 -->
 
@@ -4407,9 +4407,9 @@ Can be rated under [Kidney failure](https://veteransbenefitskb.com/gensystem#ren
 
 **PRESUMPTIVE CONDITION:**
 
-- If diagnosed within a [Year](https://veteransbenefitskb.com/time)  of separation **AND** the severity warranted _at least_ a 10% evaluation within that time.
+- If diagnosed within a [Year](https://www.veteransbenefitskb.com/time)  of separation **AND** the severity warranted _at least_ a 10% evaluation within that time.
 
-Will be rated under [H](https://veteransbenefitskb.com/gensystem#7509)  [ydronephrosis](https://www.reddit.com/r/VeteransBenefits/wiki/gentsystem/#wiki_hydronephrosis)  _unless_ the Veteran meets the following criteria:
+Will be rated under [H](https://www.veteransbenefitskb.com/gensystem#7509)  [ydronephrosis](https://www.reddit.com/r/VeteransBenefits/wiki/gentsystem/#wiki_hydronephrosis)  _unless_ the Veteran meets the following criteria:
 
 * * *
 
@@ -4451,7 +4451,7 @@ Excess fluid in a kidney due to a backup of urine.
 | 10% | Occasional kidney stones, does not result in infection or need for catheter. |
 | 20% | Frequent kidney stones, requires catheter drainage. |
 | 30% | Frequent kidney stones, with infection (pyonephrosis), and kidney function is impaired. |
-| ?% | If severe kidney impairment is present, condition will be rated under [Kidney failure instead (if it provides a higher rating).](https://veteransbenefitskb.com/gensystem#renal)  |
+| ?% | If severe kidney impairment is present, condition will be rated under [Kidney failure instead (if it provides a higher rating).](https://www.veteransbenefitskb.com/gensystem#renal)  |
 
 Definition:
 
@@ -4465,7 +4465,7 @@ Definition:
 
 ### 7511 Ureter Stricture
 
-- Will be rated under [H](https://veteransbenefitskb.com/gensystem#7509)  [ydronephrosis](https://www.reddit.com/r/VeteransBenefits/wiki/gentsystem/#wiki_hydronephrosis)  _unless_ the Veteran meets the following criteria:
+- Will be rated under [H](https://www.veteransbenefitskb.com/gensystem#7509)  [ydronephrosis](https://www.reddit.com/r/VeteransBenefits/wiki/gentsystem/#wiki_hydronephrosis)  _unless_ the Veteran meets the following criteria:
 
 | Rating | Description |
 | --- | --- |
@@ -4556,7 +4556,7 @@ This usually boils down to conditions that cause loss of bladder control resulti
 
 **RATER NOTE:**
 
-- When a catheter is used _primarily_ as a tool to _retain urine_ then the Veteran should be rated under the [Obstructed urination schedule](https://veteransbenefitskb.com/gensystem#obstructed)  and **NOT** this one. Unless, this schedule better captures the predominant disability.
+- When a catheter is used _primarily_ as a tool to _retain urine_ then the Veteran should be rated under the [Obstructed urination schedule](https://www.veteransbenefitskb.com/gensystem#obstructed)  and **NOT** this one. Unless, this schedule better captures the predominant disability.
 
 [Return to top](https://www.veteransbenefitskb.com/gensystem#top)
 
@@ -4568,7 +4568,7 @@ This usually boils down to conditions that cause loss of bladder control resulti
 
 Inflammation of the bladder, most often due to infections.
 
-- Rated under the [Urinary rating system](https://veteransbenefitskb.com/gensystem#urinary)
+- Rated under the [Urinary rating system](https://www.veteransbenefitskb.com/gensystem#urinary)
 
 * * *
 
@@ -4580,9 +4580,9 @@ Inflammation of the bladder, most often due to infections.
 
 **PRESUMPTIVE CONDITION:**
 
-- If diagnosed within a [Year](https://veteransbenefitskb.com/time)  of separation **AND** the severity warranted _at least_ a 10% evaluation within that time.
+- If diagnosed within a [Year](https://www.veteransbenefitskb.com/time)  of separation **AND** the severity warranted _at least_ a 10% evaluation within that time.
 
-Rated under the [Urinary rating system](https://veteransbenefitskb.com/gensystem#urinary)
+Rated under the [Urinary rating system](https://www.veteransbenefitskb.com/gensystem#urinary)
 
 * * *
 
@@ -4594,7 +4594,7 @@ Rated under the [Urinary rating system](https://veteransbenefitskb.com/gensystem
 
 An abnormal passageway that connects the bladder to other areas of the body that would not normally connect.
 
-- If symptoms are mostly associated with a UTI, it is rated under the [Urinary tract infection schedule](https://veteransbenefitskb.com/gensystem#uti)  Otherwise it is rated under the [Urinary rating system](https://veteransbenefitskb.com/gensystem#urinary)
+- If symptoms are mostly associated with a UTI, it is rated under the [Urinary tract infection schedule](https://www.veteransbenefitskb.com/gensystem#uti)  Otherwise it is rated under the [Urinary rating system](https://www.veteransbenefitskb.com/gensystem#urinary)
 
 | Rating | Description |
 | --- | --- |
@@ -4612,7 +4612,7 @@ Propane and propane accessories!
 
 When the passageway through the urethra becomes narrowed.
 
-- Rated under the [Urinary rating system](https://veteransbenefitskb.com/gensystem#urinary)
+- Rated under the [Urinary rating system](https://www.veteransbenefitskb.com/gensystem#urinary)
 
 * * *
 
@@ -4626,7 +4626,7 @@ An abnormal passageway from the urethra to other areas of the body that would no
 
 | Rating | Description |
 | --- | --- |
-| ?% | Rated under the [Urinary rating system, unless there are multiple fistulas.](https://veteransbenefitskb.com/gensystem#urinary)  |
+| ?% | Rated under the [Urinary rating system, unless there are multiple fistulas.](https://www.veteransbenefitskb.com/gensystem#urinary)  |
 | 100% | If there are multiple fistulas. |
 
 * * *
@@ -4639,7 +4639,7 @@ An abnormal passageway from the urethra to other areas of the body that would no
 
 Loss of bladder control due to nerve or brain.
 
-- Rated under the [Urinary rating system](https://veteransbenefitskb.com/gensystem#urinary)
+- Rated under the [Urinary rating system](https://www.veteransbenefitskb.com/gensystem#urinary)
 
 * * *
 
@@ -4651,9 +4651,9 @@ Loss of bladder control due to nerve or brain.
 
 When the bladder develops pouches within its walls.
 
-- Rated under the [Urinary tract infection schedule](https://veteransbenefitskb.com/gensystem#uti)  **OR**
+- Rated under the [Urinary tract infection schedule](https://www.veteransbenefitskb.com/gensystem#uti)  **OR**
 
-- Rated under the [Urinary rating system](https://veteransbenefitskb.com/gensystem#urinary)  Whichever best covers the symptoms.
+- Rated under the [Urinary rating system](https://www.veteransbenefitskb.com/gensystem#urinary)  Whichever best covers the symptoms.
 
 [Return to top](https://www.veteransbenefitskb.com/gensystem#top)
 
@@ -4680,7 +4680,7 @@ Definitions:
 
 NOTE:
 
-- UTIs can cause kidney issues. If so, the Veteran can be rated under [Kidney failure](https://veteransbenefitskb.com/gensystem#renal)  instead, _if_ it would produce a higher rating.
+- UTIs can cause kidney issues. If so, the Veteran can be rated under [Kidney failure](https://www.veteransbenefitskb.com/gensystem#renal)  instead, _if_ it would produce a higher rating.
 
 * * *
 
@@ -4692,7 +4692,7 @@ NOTE:
 
 A puss-filled pocket in the kidney.
 
-- Rated under the [Urinary tract infection schedule](https://veteransbenefitskb.com/gensystem#uri)
+- Rated under the [Urinary tract infection schedule](https://www.veteransbenefitskb.com/gensystem#uri)
 
 * * *
 
@@ -4704,9 +4704,9 @@ A puss-filled pocket in the kidney.
 
 Inflammation of the tube at the back of the testicle.
 
-- Rated under the [Urinary tract infection schedule](https://veteransbenefitskb.com/gensystem#uti)  **OR**
+- Rated under the [Urinary tract infection schedule](https://www.veteransbenefitskb.com/gensystem#uti)  **OR**
 
-- Rated under [Nonpulmonary tuberculosis](https://veteransbenefitskb.com/infect#nonpulmonary)  if caused by tuberculosis.
+- Rated under [Nonpulmonary tuberculosis](https://www.veteransbenefitskb.com/infect#nonpulmonary)  if caused by tuberculosis.
 
 NOTE:
 
@@ -4720,9 +4720,9 @@ NOTE:
 
 ### 7527 Prostate Gland Conditions - Injuries, Infections, Enlargement (Hypertrophy), or after Surgery Residuals
 
-- Rated under the [Urinary tract infection schedule](https://veteransbenefitskb.com/gensystem#uti)  **OR**
+- Rated under the [Urinary tract infection schedule](https://www.veteransbenefitskb.com/gensystem#uti)  **OR**
 
-- Rated under the [Urinary rating system](https://veteransbenefitskb.com/gensystem#urinary)  Whichever best covers the symptoms
+- Rated under the [Urinary rating system](https://www.veteransbenefitskb.com/gensystem#urinary)  Whichever best covers the symptoms
 
 * * *
 
@@ -4732,11 +4732,11 @@ NOTE:
 
 #### Common Secondaries
 
-- [SMC K](https://veteransbenefitskb.com/smc#k)
+- [SMC K](https://www.veteransbenefitskb.com/smc#k)
 
 - Retrograde ejaculation can result from some types of BPH treatment, especially transurethral resection of the prostate (TURP).
 
-- [Erectile dysfunction (ED)](https://veteransbenefitskb.com/gensystem#7522)  as a result of treatment or if hormone therapy.
+- [Erectile dysfunction (ED)](https://www.veteransbenefitskb.com/gensystem#7522)  as a result of treatment or if hormone therapy.
 
 [Return to top](https://www.veteransbenefitskb.com/gensystem#top)
 
@@ -4746,7 +4746,7 @@ NOTE:
 
 ### 7505 Tuberculosis of the Kidney
 
-- Rated as [Nonpulmonary tuberculosis](https://veteransbenefitskb.com/infect#nonpulmonary)
+- Rated as [Nonpulmonary tuberculosis](https://www.veteransbenefitskb.com/infect#nonpulmonary)
 
 [Return to top](https://www.veteransbenefitskb.com/gensystem#top)
 
@@ -4760,7 +4760,7 @@ The wounds you don't brag about.
 
 **IMPORTANT NOTE:**
 
-- Veterans with these conditions are likely entitled to [SMC K](https://veteransbenefitskb.com/smc#k)
+- Veterans with these conditions are likely entitled to [SMC K](https://www.veteransbenefitskb.com/smc#k)
 
 * * *
 
@@ -4770,7 +4770,7 @@ The wounds you don't brag about.
 
 ### 7520/7521 Loss of the Penis (Penis Deformity)
 
-Can be rated under the [Urinary rating system](https://veteransbenefitskb.com/gensystem#urinary)  instead of this schedule, _if_ it produces a higher rating.
+Can be rated under the [Urinary rating system](https://www.veteransbenefitskb.com/gensystem#urinary)  instead of this schedule, _if_ it produces a higher rating.
 
 | Rating | Description |
 | --- | --- |
@@ -4787,9 +4787,9 @@ Can be rated under the [Urinary rating system](https://veteransbenefitskb.com/ge
 
 **IMPORTANT NOTES:**
 
-- The ability to sometimes achieve an erection or impregnate someone does **NOT** prevent you from getting service-connection **OR** [SMC K](https://veteransbenefitskb.com/smc#k)
+- The ability to sometimes achieve an erection or impregnate someone does **NOT** prevent you from getting service-connection **OR** [SMC K](https://www.veteransbenefitskb.com/smc#k)
 
-- If ED is the result of [Diabetes mellitus](https://veteransbenefitskb.com/endsystem#7913)  you won't get a separate rating ED. Administratively, it will look like: diabetes type II with erectile dysfunction. That said, you **ARE** still entitled to SMC K.
+- If ED is the result of [Diabetes mellitus](https://www.veteransbenefitskb.com/endsystem#7913)  you won't get a separate rating ED. Administratively, it will look like: diabetes type II with erectile dysfunction. That said, you **ARE** still entitled to SMC K.
 
 | Rating | Description |
 | --- | --- |
@@ -4849,7 +4849,7 @@ Scrotum varicose veins/Fluid sack around your sack.
 
 ### 7528 Cancer (Malignant Neoplasms)
 
-The VA will conduct regular [Reevaluations](https://veteransbenefitskb.com/cnp)  every **6 months** (unless otherwise stated) to determine if your cancer is still active. **UNLESS**, there is medical evidence that your cancer is terminal. In which case, the VA will consider the cancer to be permanent and your 100% rating will continue till death.
+The VA will conduct regular [Reevaluations](https://www.veteransbenefitskb.com/cnp)  every **6 months** (unless otherwise stated) to determine if your cancer is still active. **UNLESS**, there is medical evidence that your cancer is terminal. In which case, the VA will consider the cancer to be permanent and your 100% rating will continue till death.
 
 **IMPORTANT NOTES:**
 
@@ -4863,7 +4863,7 @@ The VA will conduct regular [Reevaluations](https://veteransbenefitskb.com/cnp) 
 
 **PRESUMPTIVE CONDITION:**
 
-- Bladder and prostate cancers if exposed to [Agent Orange](https://veteransbenefitskb.com/agentorange)  or [Burn Pits](https://veteransbenefitskb.com/burnpits)
+- Bladder and prostate cancers if exposed to [Agent Orange](https://www.veteransbenefitskb.com/agentorange)  or [Burn Pits](https://www.veteransbenefitskb.com/burnpits)
 
 - Reproductive cancers if exposed to burn pits.
 
@@ -4887,11 +4887,11 @@ The VA will conduct regular [Reevaluations](https://veteransbenefitskb.com/cnp) 
 
 | Type of Treatment | Common Secondaries | RATER NOTES: |
 | --- | --- | --- |
-| Chemotherapy | Varies. | Rate residuals based upon the impacted [Body system(s).](https://veteransbenefitskb.com/ratingsindex)  |
-| Cryotherapy (cryosurgery or cryoablation) | [Erectile Dysfunction and](https://veteransbenefitskb.com/gensystem#7522)  [Urinary incontinence](https://veteransbenefitskb.com/gensystem#urinary)  | Grant [SMC K as needed.](https://veteransbenefitskb.com/smc#k)  |
-| Hormone therapy | [Erectile Dysfunction](https://veteransbenefitskb.com/gensystem#7522)  | If the [Testicles are removed, award the appropriate ratings.](https://veteransbenefitskb.com/gensystem#7524)  |
-| Radical prostatectomy | [Erectile Dysfunction,](https://veteransbenefitskb.com/gensystem#7522)  [Scars, and](https://veteransbenefitskb.com/skin#7802)  [Urinary incontinence](https://veteransbenefitskb.com/gensystem#urinary)  | Grant [SMC K in **ALL CASES**!](https://veteransbenefitskb.com/smc#k)  |
-| Radiation | [Bowel problems,](https://veteransbenefitskb.com/digsystem#7332)  [Erectile Dysfunction and](https://veteransbenefitskb.com/gensystem#7522)  [Urinary incontinence](https://veteransbenefitskb.com/gensystem#urinary)  | Low dose radiation (LDR) treatment is designed to last a year, as such do **NOT** assign a [Reevaluation till 6 months _after_ this year of treatment ends!](https://veteransbenefitskb.com/cnp)  |
+| Chemotherapy | Varies. | Rate residuals based upon the impacted [Body system(s).](https://www.veteransbenefitskb.com/ratingsindex)  |
+| Cryotherapy (cryosurgery or cryoablation) | [Erectile Dysfunction and](https://www.veteransbenefitskb.com/gensystem#7522)  [Urinary incontinence](https://www.veteransbenefitskb.com/gensystem#urinary)  | Grant [SMC K as needed.](https://www.veteransbenefitskb.com/smc#k)  |
+| Hormone therapy | [Erectile Dysfunction](https://www.veteransbenefitskb.com/gensystem#7522)  | If the [Testicles are removed, award the appropriate ratings.](https://www.veteransbenefitskb.com/gensystem#7524)  |
+| Radical prostatectomy | [Erectile Dysfunction,](https://www.veteransbenefitskb.com/gensystem#7522)  [Scars, and](https://www.veteransbenefitskb.com/skin#7802)  [Urinary incontinence](https://www.veteransbenefitskb.com/gensystem#urinary)  | Grant [SMC K in **ALL CASES**!](https://www.veteransbenefitskb.com/smc#k)  |
+| Radiation | [Bowel problems,](https://www.veteransbenefitskb.com/digsystem#7332)  [Erectile Dysfunction and](https://www.veteransbenefitskb.com/gensystem#7522)  [Urinary incontinence](https://www.veteransbenefitskb.com/gensystem#urinary)  | Low dose radiation (LDR) treatment is designed to last a year, as such do **NOT** assign a [Reevaluation till 6 months _after_ this year of treatment ends!](https://www.veteransbenefitskb.com/cnp)  |
 | Watchful waiting (conservative management, observation, or surveillance) | None. | While cancer is active the 100% rating will continue. |
 
 * * *
@@ -4902,9 +4902,9 @@ The VA will conduct regular [Reevaluations](https://veteransbenefitskb.com/cnp) 
 
 ### 7529 Tumor (Benign Neoplasm)
 
-- Can be rated under [Kidney failure](https://veteransbenefitskb.com/gensystem#renal)  _or_
+- Can be rated under [Kidney failure](https://www.veteransbenefitskb.com/gensystem#renal)  _or_
 
-- Under the [Urinary rating system](https://veteransbenefitskb.com/gensystem#urinary)
+- Under the [Urinary rating system](https://www.veteransbenefitskb.com/gensystem#urinary)
 
 Depending which better captures the Veteran's impairment.
 
@@ -4916,9 +4916,9 @@ Depending which better captures the Veteran's impairment.
 
 ## **Disability Benefits Questionnaire (DBQs)**
 
-To get an idea of how a [C&P exam](https://veteransbenefitskb.com/cnp)  will be conducted it is recommended that the Veteran look at the applicable DBQ.
+To get an idea of how a [C&P exam](https://www.veteransbenefitskb.com/cnp)  will be conducted it is recommended that the Veteran look at the applicable DBQ.
 
-Veterans may ask a physician to complete a DBQ on their behalf to submit with their claim. For more information on DBQs click [HERE](https://veteransbenefitskb.com/dbq)
+Veterans may ask a physician to complete a DBQ on their behalf to submit with their claim. For more information on DBQs click [HERE](https://www.veteransbenefitskb.com/dbq)
 
 - [Kidney Conditions](https://www.benefits.va.gov/compensation/docs/kidney.pdf)
 
@@ -4936,7 +4936,7 @@ Veterans may ask a physician to complete a DBQ on their behalf to submit with th
 
 ## **Having Trouble Finding Your Condition?**
 
-- Click [HERE](https://veteransbenefitskb.com/master)  to view the Master Condition List.
+- Click [HERE](https://www.veteransbenefitskb.com/master)  to view the Master Condition List.
 
 [Return to top](https://www.veteransbenefitskb.com/gensystem#top)
 
@@ -4964,14 +4964,14 @@ Veterans may ask a physician to complete a DBQ on their behalf to submit with th
 
 |     |     |
 | --- | --- |
-| \> Cariovascular System\> Arteries & Veins\> Blood\> Heart | \> [Conditions that the VA will **NOT** Rate](https://veteransbenefitskb.com/norate)  |
-| \> [Dental and Oral](https://veteransbenefitskb.com/mouthsystem)  | \> [Digestive System](https://veteransbenefitskb.com/digsystem)  |
-| \> [Endocrine System](https://veteransbenefitskb.com/endsystem)  | \> [Female Reproductive System](https://veteransbenefitskb.com/femalesystem)  |
-| \> [Genitourinary System](https://veteransbenefitskb.com/gensystem)  | \> Hematologic and Lymphatic Systems\> Blood\> Breasts |
-| \> [Infectious Diseases and Immune Disorders](https://veteransbenefitskb.com/infect)  | \> [Mental Disorders](https://veteransbenefitskb.com/mental)  |
+| \> Cariovascular System\> Arteries & Veins\> Blood\> Heart | \> [Conditions that the VA will **NOT** Rate](https://www.veteransbenefitskb.com/norate)  |
+| \> [Dental and Oral](https://www.veteransbenefitskb.com/mouthsystem)  | \> [Digestive System](https://www.veteransbenefitskb.com/digsystem)  |
+| \> [Endocrine System](https://www.veteransbenefitskb.com/endsystem)  | \> [Female Reproductive System](https://www.veteransbenefitskb.com/femalesystem)  |
+| \> [Genitourinary System](https://www.veteransbenefitskb.com/gensystem)  | \> Hematologic and Lymphatic Systems\> Blood\> Breasts |
+| \> [Infectious Diseases and Immune Disorders](https://www.veteransbenefitskb.com/infect)  | \> [Mental Disorders](https://www.veteransbenefitskb.com/mental)  |
 | \> Musculoskeletal System\> Ankle\> Elbow & Forearm\> Foot\> Hand\> Hip & Thigh\> Knee & Lower Leg\> Ribs\> Skull\> Shoulder & Arm\> Spine\> Wrist\> Cancers and Tumors\> Diseases\> Face\> Forearm and Hand\> Hernias\> Lower Leg and Foot\> Buttock, Hip, and Thigh\> Shoulder, and Upper Arm\> Torso and Neck | \> Nervous System\> Cranial Nerves\> Central Nervous System\> Lower Back and Legs\> Upper Back and Arms\> Traumatic Brain Injuries |
-| \> [Nutritional Deficiencies](https://veteransbenefitskb.com/nutritional)  | \> [Respiratory System](https://veteransbenefitskb.com/airsystem)  |
-| \> Senses\> Ears\> Eyes\> Taste/Smell | \> [Skin](https://veteransbenefitskb.com/skin)  |
+| \> [Nutritional Deficiencies](https://www.veteransbenefitskb.com/nutritional)  | \> [Respiratory System](https://www.veteransbenefitskb.com/airsystem)  |
+| \> Senses\> Ears\> Eyes\> Taste/Smell | \> [Skin](https://www.veteransbenefitskb.com/skin)  |
 
 <!-- Chunk 232/1206 | Heading: [Rating Schedule Index Navigation](https://www.veteransbenefitskb.com/ratingsindex) | Words: 165 -->
 
@@ -5037,35 +5037,35 @@ Open Menu
 
 Featured
 
-[\> Master Condition List](https://veteransbenefitskb.com/master)
+[\> Master Condition List](https://www.veteransbenefitskb.com/master)
 
-[\> Federal Benefits List by Combined Ratings](https://veteransbenefitskb.com/combinedbenefits)
+[\> Federal Benefits List by Combined Ratings](https://www.veteransbenefitskb.com/combinedbenefits)
 
-[\> Insider Insight into VBA Claim Processing](https://veteransbenefitskb.com/insight)
+[\> Insider Insight into VBA Claim Processing](https://www.veteransbenefitskb.com/insight)
 
-[\> Rating Schedule Index](https://veteransbenefitskb.com/ratingsindex)
+[\> Rating Schedule Index](https://www.veteransbenefitskb.com/ratingsindex)
 
-[\> Filing a VA Disability Claim](https://veteransbenefitskb.com/vaclaim)
+[\> Filing a VA Disability Claim](https://www.veteransbenefitskb.com/vaclaim)
 
-[\> Filing an Appeal](https://veteransbenefitskb.com/appeals)
+[\> Filing an Appeal](https://www.veteransbenefitskb.com/appeals)
 
 * * *
 
 [Categories](https://www.veteransbenefitskb.com/infect)
 
-> [Death/Survivor Benefits](https://veteransbenefitskb.com/#ds)
+> [Death/Survivor Benefits](https://www.veteransbenefitskb.com/#ds)
 
-\> [Education &](https://veteransbenefitskb.com/#ee)  [Employment](https://veteransbenefitskb.com/#ee)
+\> [Education &](https://www.veteransbenefitskb.com/#ee)  [Employment](https://www.veteransbenefitskb.com/#ee)
 
-\> [Health care](https://veteransbenefitskb.com/#healthcare)
+\> [Health care](https://www.veteransbenefitskb.com/#healthcare)
 
-\> [Housing](https://veteransbenefitskb.com/#housing)
+\> [Housing](https://www.veteransbenefitskb.com/#housing)
 
-\> [Miscellaneous](https://veteransbenefitskb.com/#misc)
+\> [Miscellaneous](https://www.veteransbenefitskb.com/#misc)
 
-\> [VA Disability Compensation](https://veteransbenefitskb.com/#va)
+\> [VA Disability Compensation](https://www.veteransbenefitskb.com/#va)
 
-\> [VA Pension](https://veteransbenefitskb.com/#pension)
+\> [VA Pension](https://www.veteransbenefitskb.com/#pension)
 
 Diseases you can catch from wildlife as well as from other humans. Plus disorders that compromise the immune system.
 
@@ -5073,7 +5073,7 @@ The vast majority of these conditions are rated at 100% while the condition is _
 
 **IMPORTANT NOTE:**
 
-- For some strange reason, not every condition in this schedule is given a specific duration before a mandatory [Reevaluation](https://veteransbenefitskb.com/cnp)  must take place. **HOWEVER**, you _should_ expect the VA to set a reevaluation up within 6 months or a year of when the condition was last established as active.
+- For some strange reason, not every condition in this schedule is given a specific duration before a mandatory [Reevaluation](https://www.veteransbenefitskb.com/cnp)  must take place. **HOWEVER**, you _should_ expect the VA to set a reevaluation up within 6 months or a year of when the condition was last established as active.
 
 * * *
 
@@ -5087,7 +5087,7 @@ Infection of the small intestine by some strains of the bacterium _Vibrio choler
 
 **PRESUMPTIVE CONDITION:**
 
-- If diagnosed with _cholera_ within a year of separation **AND** had [Tropical service](https://veteransbenefitskb.com/tropical)
+- If diagnosed with _cholera_ within a year of separation **AND** had [Tropical service](https://www.veteransbenefitskb.com/tropical)
 
 | Rating | Description |
 | --- | --- |
@@ -5100,11 +5100,11 @@ Infection of the small intestine by some strains of the bacterium _Vibrio choler
 
 #### Common Residuals
 
-- [Kidney damage](https://veteransbenefitskb.com/gensystem#7530)
+- [Kidney damage](https://www.veteransbenefitskb.com/gensystem#7530)
 
-- [Musculoskeletal conditions](https://veteransbenefitskb.com/msindex)
+- [Musculoskeletal conditions](https://www.veteransbenefitskb.com/msindex)
 
-- [Skin damage](https://veteransbenefitskb.com/skin)
+- [Skin damage](https://www.veteransbenefitskb.com/skin)
 
 * * *
 
@@ -5118,7 +5118,7 @@ Parasitic disease.
 
 **PRESUMPTIVE CONDITION:**
 
-- If diagnosed with _leishmaniasis_ or _kala-azar_ within a year of separation **AND** had [Tropical service](https://veteransbenefitskb.com/tropical)
+- If diagnosed with _leishmaniasis_ or _kala-azar_ within a year of separation **AND** had [Tropical service](https://www.veteransbenefitskb.com/tropical)
 
 - If diagnosed with _visceral leishmaniasis_ **AND** exposed to [Gulf environmental hazards](https://www.veteransbenefitskb.com/gulfill)
 
@@ -5134,9 +5134,9 @@ Parasitic disease.
 
 #### Common Residuals
 
-- [Bone marrow disease](https://veteransbenefitskb.com/blood#7716)
+- [Bone marrow disease](https://www.veteransbenefitskb.com/blood#7716)
 
-- [Liver damage](https://veteransbenefitskb.com/digsystem#7311)
+- [Liver damage](https://www.veteransbenefitskb.com/digsystem#7311)
 
 * * *
 
@@ -5152,7 +5152,7 @@ Has an established incubation period of 5 or more years.
 
 **PRESUMPTIVE CONDITION:**
 
-- This condition is [Presumptive](https://veteransbenefitskb.com/time)  if it is diagnosed within **3 years** of separation.
+- This condition is [Presumptive](https://www.veteransbenefitskb.com/time)  if it is diagnosed within **3 years** of separation.
 
 | Rating | Description |
 | --- | --- |
@@ -5170,7 +5170,7 @@ Parasitic disease that infects red blood cells.
 
 **PRESUMPTIVE CONDITION:**
 
-- If diagnosed within a year of separation **AND** had [Tropical service](https://veteransbenefitskb.com/tropical)  or
+- If diagnosed within a year of separation **AND** had [Tropical service](https://www.veteransbenefitskb.com/tropical)  or
 
 - If diagnosed within a year of separation **AND** exposed to [Gulf environmental hazards](https://www.veteransbenefitskb.com/gulfill)
 
@@ -5185,11 +5185,11 @@ Parasitic disease that infects red blood cells.
 
 #### Common Residuals
 
-- [Liver damage](https://veteransbenefitskb.com/digsystem#7311)
+- [Liver damage](https://www.veteransbenefitskb.com/digsystem#7311)
 
-- [Nerve damage](https://veteransbenefitskb.com/nervesystem)
+- [Nerve damage](https://www.veteransbenefitskb.com/nervesystem)
 
-- [Spleen damage](https://veteransbenefitskb.com/blood#7707)
+- [Spleen damage](https://www.veteransbenefitskb.com/blood#7707)
 
 * * *
 
@@ -5203,7 +5203,7 @@ Parasitic disease that infects the lymphatic system, including the lymph nodes.
 
 **PRESUMPTIVE CONDITION:**
 
-- If diagnosed within a year of separation **AND** had [Tropical service](https://veteransbenefitskb.com/tropical)
+- If diagnosed within a year of separation **AND** had [Tropical service](https://www.veteransbenefitskb.com/tropical)
 
 | Rating | Description |
 | --- | --- |
@@ -5216,13 +5216,13 @@ Parasitic disease that infects the lymphatic system, including the lymph nodes.
 
 #### Common Residuals
 
-- [Epididymitis](https://veteransbenefitskb.com/gensystem#7525)
+- [Epididymitis](https://www.veteransbenefitskb.com/gensystem#7525)
 
-- [Lymphangitis](https://veteransbenefitskb.com/bloodtubes#7121)
+- [Lymphangitis](https://www.veteransbenefitskb.com/bloodtubes#7121)
 
-- [Lymphatic obstruction](https://veteransbenefitskb.com/bloodtubes#7114)
+- [Lymphatic obstruction](https://www.veteransbenefitskb.com/bloodtubes#7114)
 
-- [Lymphedema affecting extremities, genitals, and/or breasts](https://veteransbenefitskb.com/bloodtubes#7121)
+- [Lymphedema affecting extremities, genitals, and/or breasts](https://www.veteransbenefitskb.com/bloodtubes#7121)
 
 * * *
 
@@ -5236,7 +5236,7 @@ Disease caused by the bacteria of the genus Bartonella.
 
 **PRESUMPTIVE CONDITION:**
 
-- If diagnosed with _oroya fever_ within a year of separation **AND** had [Tropical service](https://veteransbenefitskb.com/tropical)
+- If diagnosed with _oroya fever_ within a year of separation **AND** had [Tropical service](https://www.veteransbenefitskb.com/tropical)
 
 Can cause many other diseases such as:
 
@@ -5263,11 +5263,11 @@ Can cause many other diseases such as:
 
 #### Common Residuals
 
-- [Endocarditis](https://veteransbenefitskb.com/heart#7001)
+- [Endocarditis](https://www.veteransbenefitskb.com/heart#7001)
 
-- [Neurological conditions](https://veteransbenefitskb.com/nervesystem)
+- [Neurological conditions](https://www.veteransbenefitskb.com/nervesystem)
 
-- [Skin damage](https://veteransbenefitskb.com/skin)
+- [Skin damage](https://www.veteransbenefitskb.com/skin)
 
 * * *
 
@@ -5281,7 +5281,7 @@ A rare but serious bacterial infection.
 
 **PRESUMPTIVE CONDITION:**
 
-- If diagnosed within a year of separation **AND** had [Tropical service](https://veteransbenefitskb.com/tropical)
+- If diagnosed within a year of separation **AND** had [Tropical service](https://www.veteransbenefitskb.com/tropical)
 
 | Rating | Description |
 | --- | --- |
@@ -5294,9 +5294,9 @@ A rare but serious bacterial infection.
 
 #### Common Residuals
 
-- [Amputations](https://veteransbenefitskb.com/msindex)
+- [Amputations](https://www.veteransbenefitskb.com/msindex)
 
-- [Nerve conditions](https://veteransbenefitskb.com/nervesystem)
+- [Nerve conditions](https://www.veteransbenefitskb.com/nervesystem)
 
 * * *
 
@@ -5319,13 +5319,13 @@ Recurring fever disease caused by several species of the bacteria _Spirochete bo
 
 #### Common Residuals
 
-- [Eye conditions](https://veteransbenefitskb.com/eyes)  \- [iritis](https://veteransbenefitskb.com/eyes#6003)  [uveitis](https://veteransbenefitskb.com/eyes#6000)
+- [Eye conditions](https://www.veteransbenefitskb.com/eyes)  \- [iritis](https://www.veteransbenefitskb.com/eyes#6003)  [uveitis](https://www.veteransbenefitskb.com/eyes#6000)
 
-- [Liver damage](https://veteransbenefitskb.com/digsystem#7311)
+- [Liver damage](https://www.veteransbenefitskb.com/digsystem#7311)
 
-- [Nerve damage](https://veteransbenefitskb.com/nervesystem)
+- [Nerve damage](https://www.veteransbenefitskb.com/nervesystem)
 
-- [Spleen damage](https://veteransbenefitskb.com/blood#7707)
+- [Spleen damage](https://www.veteransbenefitskb.com/blood#7707)
 
 * * *
 
@@ -5352,19 +5352,19 @@ A bacterial infection usually spread by sexual contact.
 
 **PRESUMPTIVE CONDITION:**
 
-- If diagnosed with _pinta_ or _yaws_ within a year of separation **AND** had [Tropical service](https://veteransbenefitskb.com/tropical)
+- If diagnosed with _pinta_ or _yaws_ within a year of separation **AND** had [Tropical service](https://www.veteransbenefitskb.com/tropical)
 
 Commonly rated under the following schedules:
 
-- [Cerebrospinal Syphilis](https://veteransbenefitskb.com/cns#8013)
+- [Cerebrospinal Syphilis](https://www.veteransbenefitskb.com/cns#8013)
 
-- [Dementia due to central nervous system syphilis](https://veteransbenefitskb.com/mental#9301)
+- [Dementia due to central nervous system syphilis](https://www.veteransbenefitskb.com/mental#9301)
 
-- [Meningovascular Syphilis](https://veteransbenefitskb.com/cns#8014)
+- [Meningovascular Syphilis](https://www.veteransbenefitskb.com/cns#8014)
 
-- [Syphilitic heart disease](https://veteransbenefitskb.com/heart#7004)  or
+- [Syphilitic heart disease](https://www.veteransbenefitskb.com/heart#7004)  or
 
-- [Tabes Dorsalis](https://veteransbenefitskb.com/cns#8015)
+- [Tabes Dorsalis](https://www.veteransbenefitskb.com/cns#8015)
 
 Otherwise the condition is rated based upon residuals.
 
@@ -5374,13 +5374,13 @@ Otherwise the condition is rated based upon residuals.
 
 #### Common Residuals:
 
-- [Damage of the eyes](https://veteransbenefitskb.com/eyes)
+- [Damage of the eyes](https://www.veteransbenefitskb.com/eyes)
 
-- [Internal ear damage](https://veteransbenefitskb.com/ears)
+- [Internal ear damage](https://www.veteransbenefitskb.com/ears)
 
-- [Heart damage](https://veteransbenefitskb.com/heart)
+- [Heart damage](https://www.veteransbenefitskb.com/heart)
 
-- [Nerve damage](https://veteransbenefitskb.com/nervesystem)
+- [Nerve damage](https://www.veteransbenefitskb.com/nervesystem)
 
 * * *
 
@@ -5403,19 +5403,19 @@ A bacterium within the same family that causes tuberculosis. But this bacterium 
 
 #### Common Residuals
 
-- [Central nervous system conditions](https://veteransbenefitskb.com/cns)
+- [Central nervous system conditions](https://www.veteransbenefitskb.com/cns)
 
-- [Digestive conditions](https://veteransbenefitskb.com/digsystem)
+- [Digestive conditions](https://www.veteransbenefitskb.com/digsystem)
 
-- [Eye conditions](https://veteransbenefitskb.com/eyes)
+- [Eye conditions](https://www.veteransbenefitskb.com/eyes)
 
-- [Genitourinary conditions](https://veteransbenefitskb.com/gensystem)
+- [Genitourinary conditions](https://www.veteransbenefitskb.com/gensystem)
 
-- [Musculoskeletal issues](https://veteransbenefitskb.com/msindex)
+- [Musculoskeletal issues](https://www.veteransbenefitskb.com/msindex)
 
-- [Respiratory issues](https://veteransbenefitskb.com/airsystem)
+- [Respiratory issues](https://www.veteransbenefitskb.com/airsystem)
 
-- [Skin conditions](https://veteransbenefitskb.com/skin)
+- [Skin conditions](https://www.veteransbenefitskb.com/skin)
 
 * * *
 
@@ -5446,13 +5446,13 @@ Bacterial infection.
 
 #### Common Residuals
 
-- [Liver issues](https://veteransbenefitskb.com/digsystem#7311)
+- [Liver issues](https://www.veteransbenefitskb.com/digsystem#7311)
 
-- [Meningitis](https://veteransbenefitskb.com/cns#8019)
+- [Meningitis](https://www.veteransbenefitskb.com/cns#8019)
 
-- [Musculoskeletal issues](https://veteransbenefitskb.com/msindex)
+- [Musculoskeletal issues](https://www.veteransbenefitskb.com/msindex)
 
-- [Spleen issues](https://veteransbenefitskb.com/blood#7707)
+- [Spleen issues](https://www.veteransbenefitskb.com/blood#7707)
 
 * * *
 
@@ -5493,13 +5493,13 @@ This includes diseases such as:
 
 #### Common Residuals
 
-- [Bone marrow conditions](https://veteransbenefitskb.com/blood#7716)
+- [Bone marrow conditions](https://www.veteransbenefitskb.com/blood#7716)
 
-- [Central nervous system conditions](https://veteransbenefitskb.com/cns)
+- [Central nervous system conditions](https://www.veteransbenefitskb.com/cns)
 
-- [Skin damage](https://veteransbenefitskb.com/skin)
+- [Skin damage](https://www.veteransbenefitskb.com/skin)
 
-- [Spleen damage](https://veteransbenefitskb.com/blood#7707)
+- [Spleen damage](https://www.veteransbenefitskb.com/blood#7707)
 
 * * *
 
@@ -5522,11 +5522,11 @@ Disease caused by the bacterium _Burkholderia pseudomallei_.
 
 #### Common Residuals
 
-- [Arthritis](https://veteransbenefitskb.com/msdiseases#5002)
+- [Arthritis](https://www.veteransbenefitskb.com/msdiseases#5002)
 
-- [Lung lesions](https://veteransbenefitskb.com/airsystem#6820)
+- [Lung lesions](https://www.veteransbenefitskb.com/airsystem#6820)
 
-- [Meningitis](https://veteransbenefitskb.com/cns#8019)
+- [Meningitis](https://www.veteransbenefitskb.com/cns#8019)
 
 * * *
 
@@ -5549,19 +5549,19 @@ Disease caused by the bacterium _Borrelia_.
 
 #### Common Residuals
 
-- [Arthritis](https://veteransbenefitskb.com/msdiseases#5002)
+- [Arthritis](https://www.veteransbenefitskb.com/msdiseases#5002)
 
-- [Bell's palsy](https://veteransbenefitskb.com/cns#8005)
+- [Bell's palsy](https://www.veteransbenefitskb.com/cns#8005)
 
-- [Chronic fatigue](https://veteransbenefitskb.com/infect#6354)
+- [Chronic fatigue](https://www.veteransbenefitskb.com/infect#6354)
 
-- [Cognitive dysfunction](https://veteransbenefitskb.com/mental#9301)
+- [Cognitive dysfunction](https://www.veteransbenefitskb.com/mental#9301)
 
-- [Heart damage](https://veteransbenefitskb.com/heart)
+- [Heart damage](https://www.veteransbenefitskb.com/heart)
 
-- [Radiculopathy](https://veteransbenefitskb.com/nervesystem)
+- [Radiculopathy](https://www.veteransbenefitskb.com/nervesystem)
 
-- [Vision problems](https://veteransbenefitskb.com/eyes)
+- [Vision problems](https://www.veteransbenefitskb.com/eyes)
 
 * * *
 
@@ -5594,7 +5594,7 @@ Disease caused by parasitic flatworms called _schistosome_.
 
 **PRESUMPTIVE CONDITION:**
 
-- If diagnosed with _schistosomiasis_ within a year of separation **AND** had [Tropical service](https://veteransbenefitskb.com/tropical)
+- If diagnosed with _schistosomiasis_ within a year of separation **AND** had [Tropical service](https://www.veteransbenefitskb.com/tropical)
 
 | Rating | Description |
 | --- | --- |
@@ -5606,15 +5606,15 @@ Disease caused by parasitic flatworms called _schistosome_.
 
 #### Common Residuals
 
-- [Central nervous system damage](https://veteransbenefitskb.com/cns)
+- [Central nervous system damage](https://www.veteransbenefitskb.com/cns)
 
-- [Female genital tract issues](https://veteransbenefitskb.com/femalesystem)
+- [Female genital tract issues](https://www.veteransbenefitskb.com/femalesystem)
 
-- [Genitourinary issues](https://veteransbenefitskb.com/gensystem)
+- [Genitourinary issues](https://www.veteransbenefitskb.com/gensystem)
 
-- [Intestinal system issues](https://veteransbenefitskb.com/digsystem#7319)
+- [Intestinal system issues](https://www.veteransbenefitskb.com/digsystem#7319)
 
-- [Liver conditions](https://veteransbenefitskb.com/digsystem#7311)
+- [Liver conditions](https://www.veteransbenefitskb.com/digsystem#7311)
 
 * * *
 
@@ -5628,7 +5628,7 @@ Any of a group of infectious diseases that interfere with the blood's ability to
 
 **PRESUMPTIVE CONDITION:**
 
-- If diagnosed with _yellow fever_ within a year of separation **AND** had [Tropical service](https://veteransbenefitskb.com/tropical)
+- If diagnosed with _yellow fever_ within a year of separation **AND** had [Tropical service](https://www.veteransbenefitskb.com/tropical)
 
 | Rating | Description |
 | --- | --- |
@@ -5641,11 +5641,11 @@ Any of a group of infectious diseases that interfere with the blood's ability to
 
 #### Common Residuals
 
-- [Central nervous system damage](https://veteransbenefitskb.com/cns)
+- [Central nervous system damage](https://www.veteransbenefitskb.com/cns)
 
-- [Kidney conditions](https://veteransbenefitskb.com/gensystem#7530)
+- [Kidney conditions](https://www.veteransbenefitskb.com/gensystem#7530)
 
-- [Liver conditions](https://veteransbenefitskb.com/digsystem#7311)
+- [Liver conditions](https://www.veteransbenefitskb.com/digsystem#7311)
 
 * * *
 
@@ -5672,11 +5672,11 @@ Disease caused by bacteria of the genus Campylobacter.
 
 #### Common Residuals
 
-- [Arthritis](https://veteransbenefitskb.com/msdiseases#5002)
+- [Arthritis](https://www.veteransbenefitskb.com/msdiseases#5002)
 
-- [Eye conditions](https://veteransbenefitskb.com/eyes)
+- [Eye conditions](https://www.veteransbenefitskb.com/eyes)
 
-- [Guillan-Barre Syndrome](https://veteransbenefitskb.com/cns#8011)
+- [Guillan-Barre Syndrome](https://www.veteransbenefitskb.com/cns#8011)
 
 * * *
 
@@ -5703,15 +5703,15 @@ An infection caused by the bacterium _Coxiella burnetii_.
 
 #### Common Residuals
 
-- [Artery/Vein conditions](https://veteransbenefitskb.com/bloodtubes)
+- [Artery/Vein conditions](https://www.veteransbenefitskb.com/bloodtubes)
 
-- [Chronic fatigue](https://veteransbenefitskb.com/infect#6354)
+- [Chronic fatigue](https://www.veteransbenefitskb.com/infect#6354)
 
-- [Chronic hepatitis](https://veteransbenefitskb.com/digsystem#7345)
+- [Chronic hepatitis](https://www.veteransbenefitskb.com/digsystem#7345)
 
-- [Endocarditis](https://veteransbenefitskb.com/heart#7001)
+- [Endocarditis](https://www.veteransbenefitskb.com/heart#7001)
 
-- [Osteomyelitis](https://veteransbenefitskb.com/msdiseases#5000)
+- [Osteomyelitis](https://www.veteransbenefitskb.com/msdiseases#5000)
 
 * * *
 
@@ -5755,9 +5755,9 @@ Caused by _Shigella_ bacteria.
 
 #### Common Residuals
 
-- [Arthritis](https://veteransbenefitskb.com/msdiseases#5002)
+- [Arthritis](https://www.veteransbenefitskb.com/msdiseases#5002)
 
-- [Kidney damage](https://veteransbenefitskb.com/gensystem#7530)
+- [Kidney damage](https://www.veteransbenefitskb.com/gensystem#7530)
 
 * * *
 
@@ -5784,9 +5784,9 @@ West Nile virus (WNV) is the leading cause of mosquito-borne disease in the cont
 
 #### Common Residuals
 
-- [Mental disorders](https://veteransbenefitskb.com/mental)
+- [Mental disorders](https://www.veteransbenefitskb.com/mental)
 
-- [Musculoskeletal issues](https://veteransbenefitskb.com/msindex)
+- [Musculoskeletal issues](https://www.veteransbenefitskb.com/msindex)
 
 * * *
 
@@ -5800,13 +5800,13 @@ Catchall for any unnamed parasitic diseases.
 
 **PRESUMPTIVE CONDITIONS:**
 
-- If diagnosed with _amebiasis_ within a year of separation **AND** had [Tropical service](https://veteransbenefitskb.com/tropical)
+- If diagnosed with _amebiasis_ within a year of separation **AND** had [Tropical service](https://www.veteransbenefitskb.com/tropical)
 
-- If diagnosed with _dracontiasis_ within 14 months of separation **AND** had [Tropical service](https://veteransbenefitskb.com/tropical)
+- If diagnosed with _dracontiasis_ within 14 months of separation **AND** had [Tropical service](https://www.veteransbenefitskb.com/tropical)
 
-- If diagnosed with _loiasis_ within 3 years of separation **AND** had [Tropical service](https://veteransbenefitskb.com/tropical)
+- If diagnosed with _loiasis_ within 3 years of separation **AND** had [Tropical service](https://www.veteransbenefitskb.com/tropical)
 
-- If diagnosed with _onchocerciasis_ within 4 years of separation **AND** had [Tropical service](https://veteransbenefitskb.com/tropical)
+- If diagnosed with _onchocerciasis_ within 4 years of separation **AND** had [Tropical service](https://www.veteransbenefitskb.com/tropical)
 
 - If diagnosed with _helminthiasis_ **AND** were a [POW](https://www.veteransbenefitskb.com/pow)  for _at least_ 30 days.
 
@@ -5831,11 +5831,11 @@ There are essentially two forms of TB:
 
 NOTE:
 
-- There are two schedules to rate pulmonary TB. The difference being those rated before _or_ after August 19, 1968. However, the old schedule will **NOT** be referenced as any Veterans who were rated under that old schedule will have had their ratings considered [Protected](https://veteransbenefitskb.com/ratingsindex#protection)  long ago.
+- There are two schedules to rate pulmonary TB. The difference being those rated before _or_ after August 19, 1968. However, the old schedule will **NOT** be referenced as any Veterans who were rated under that old schedule will have had their ratings considered [Protected](https://www.veteransbenefitskb.com/ratingsindex#protection)  long ago.
 
 **PRESUMPTIVE CONDITION:**
 
-- If diagnosed within 3 [Years](https://veteransbenefitskb.com/time)  of separation.
+- If diagnosed within 3 [Years](https://www.veteransbenefitskb.com/time)  of separation.
 
 - If diagnosed with _mycobacterium tuberculosis_ **AND** exposed to [Gulf environmental hazards](https://www.veteransbenefitskb.com/gulfill)
 
@@ -5868,19 +5868,19 @@ NOTE:
 
 #### Common Residuals
 
-- [Central nervous system conditions](https://veteransbenefitskb.com/cns)
+- [Central nervous system conditions](https://www.veteransbenefitskb.com/cns)
 
-- [Digestive conditions](https://veteransbenefitskb.com/digsystem)
+- [Digestive conditions](https://www.veteransbenefitskb.com/digsystem)
 
-- [Eye conditions](https://veteransbenefitskb.com/eyes)
+- [Eye conditions](https://www.veteransbenefitskb.com/eyes)
 
-- [Genitourinary conditions](https://veteransbenefitskb.com/gensystem)
+- [Genitourinary conditions](https://www.veteransbenefitskb.com/gensystem)
 
-- [Musculoskeletal issues](https://veteransbenefitskb.com/msindex)
+- [Musculoskeletal issues](https://www.veteransbenefitskb.com/msindex)
 
-- [Respiratory issues](https://veteransbenefitskb.com/airsystem)
+- [Respiratory issues](https://www.veteransbenefitskb.com/airsystem)
 
-- [Skin conditions](https://veteransbenefitskb.com/skin)
+- [Skin conditions](https://www.veteransbenefitskb.com/skin)
 
 * * *
 
@@ -5908,7 +5908,7 @@ Swelling of the lungs due to liquid build up between the layers of the lining of
 
 Note:
 
-- Active pulmonary tuberculosis will be considered [Permanently and totally](https://veteransbenefitskb.com/pnt)  disabling for [Non-service-connected pension](https://veteransbenefitskb.com/pension)  purposes in _one_ of the following circumstances:
+- Active pulmonary tuberculosis will be considered [Permanently and totally](https://www.veteransbenefitskb.com/pnt)  disabling for [Non-service-connected pension](https://www.veteransbenefitskb.com/pension)  purposes in _one_ of the following circumstances:
 
 - Associated with active tuberculosis involving other than the respiratory system;
 
@@ -5936,11 +5936,11 @@ Note:
 
 **NOTE:**
 
-- If a [Rib was removed](https://veteransbenefitskb.com/ribs#5297)  (thoracoplasty) the rib may be rated separately.
+- If a [Rib was removed](https://www.veteransbenefitskb.com/ribs#5297)  (thoracoplasty) the rib may be rated separately.
 
 | Rating | Description |
 | --- | --- |
-| ?% | Residuals are rated under the [General Respiratory Rating Schedule or](https://veteransbenefitskb.com/airsystem#general)  [Interstitial Lung Schedule \- whichever is most appropriate.](https://veteransbenefitskb.com/airsystem#interstitial)  |
+| ?% | Residuals are rated under the [General Respiratory Rating Schedule or](https://www.veteransbenefitskb.com/airsystem#general)  [Interstitial Lung Schedule \- whichever is most appropriate.](https://www.veteransbenefitskb.com/airsystem#interstitial)  |
 
 * * *
 
@@ -5968,15 +5968,15 @@ An inflammatory disease caused when the immune system attacks its own healthy ti
 
 **IMPORTANT NOTE:**
 
-- This schedule is for lupus that attacks tissues within the body **NOT** the [Skin](https://veteransbenefitskb.com/skin#7809)
+- This schedule is for lupus that attacks tissues within the body **NOT** the [Skin](https://www.veteransbenefitskb.com/skin#7809)
 
 **PRESUMPTIVE CONDITION:**
 
-- If diagnosed within a [Year](https://veteransbenefitskb.com/time)  of separation **AND** the severity warranted _at least_ a 10% evaluation within that time.
+- If diagnosed within a [Year](https://www.veteransbenefitskb.com/time)  of separation **AND** the severity warranted _at least_ a 10% evaluation within that time.
 
 **PYRAMIDING NOTES:**
 
-- You **CANNOT** get separate ratings for lupus that affects the [Skin](https://veteransbenefitskb.com/skin#7809)  and for lupus that affects tissues within the body. If the Veteran suffers from both, they will get the higher of the two ratings.
+- You **CANNOT** get separate ratings for lupus that affects the [Skin](https://www.veteransbenefitskb.com/skin#7809)  and for lupus that affects tissues within the body. If the Veteran suffers from both, they will get the higher of the two ratings.
 
 - If the Veteran can get a higher rating based upon residual symptoms of conditions that develop secondary to the lupus. The Veteran **CANNOT** get a rating for lupus.
 
@@ -6002,7 +6002,7 @@ Virus that attacks the body's immune system. If HIV is not treated, it can lead 
 
 **PYRAMIDING NOTE:**
 
-- [Mental illnesses](https://veteransbenefitskb.com/mental)  [Central nervous system manifestations](https://veteransbenefitskb.com/cns)  opportunistic infections, and tumors **MAY** be rated separately if a higher overall rating results, provided the disability symptoms do **NOT** overlap with the rating criteria below.
+- [Mental illnesses](https://www.veteransbenefitskb.com/mental)  [Central nervous system manifestations](https://www.veteransbenefitskb.com/cns)  opportunistic infections, and tumors **MAY** be rated separately if a higher overall rating results, provided the disability symptoms do **NOT** overlap with the rating criteria below.
 
 | Rating | Description |
 | --- | --- |
@@ -6170,9 +6170,9 @@ A disorder characterized by extreme fatigue or tiredness that doesn't go away wi
 
 ## **Disability Benefits Questionnaire (DBQs)**
 
-To get an idea of how a [C&P exam](https://veteransbenefitskb.com/cnp)  will be conducted it is recommended that the Veteran look at the applicable DBQ.
+To get an idea of how a [C&P exam](https://www.veteransbenefitskb.com/cnp)  will be conducted it is recommended that the Veteran look at the applicable DBQ.
 
-Veterans may ask a physician to complete a DBQ on their behalf to submit with their claim. For more information on DBQs click [HERE](https://veteransbenefitskb.com/dbq)
+Veterans may ask a physician to complete a DBQ on their behalf to submit with their claim. For more information on DBQs click [HERE](https://www.veteransbenefitskb.com/dbq)
 
 - [Chronic Fatigue Syndrome](https://www.benefits.va.gov/compensation/docs/Chronic_Fatigue_Syndrome.pdf)
 
@@ -6194,7 +6194,7 @@ Veterans may ask a physician to complete a DBQ on their behalf to submit with th
 
 ## **Having Trouble Finding Your Condition?**
 
-- Click [HERE](https://veteransbenefitskb.com/master)  to view the Master Condition List.
+- Click [HERE](https://www.veteransbenefitskb.com/master)  to view the Master Condition List.
 
 [Return to top](https://www.veteransbenefitskb.com/infect#top)
 
@@ -6226,14 +6226,14 @@ Veterans may ask a physician to complete a DBQ on their behalf to submit with th
 
 |     |     |
 | --- | --- |
-| \> Cariovascular System\> Arteries & Veins\> Blood\> Heart | \> [Conditions that the VA will **NOT** Rate](https://veteransbenefitskb.com/norate)  |
-| \> [Dental and Oral](https://veteransbenefitskb.com/mouthsystem)  | \> [Digestive System](https://veteransbenefitskb.com/digsystem)  |
-| \> [Endocrine System](https://veteransbenefitskb.com/endsystem)  | \> [Female Reproductive System](https://veteransbenefitskb.com/femalesystem)  |
-| \> [Genitourinary System](https://veteransbenefitskb.com/gensystem)  | \> Hematologic and Lymphatic Systems\> Blood\> Breasts |
-| \> [Infectious Diseases and Immune Disorders](https://veteransbenefitskb.com/infect)  | \> [Mental Disorders](https://veteransbenefitskb.com/mental)  |
+| \> Cariovascular System\> Arteries & Veins\> Blood\> Heart | \> [Conditions that the VA will **NOT** Rate](https://www.veteransbenefitskb.com/norate)  |
+| \> [Dental and Oral](https://www.veteransbenefitskb.com/mouthsystem)  | \> [Digestive System](https://www.veteransbenefitskb.com/digsystem)  |
+| \> [Endocrine System](https://www.veteransbenefitskb.com/endsystem)  | \> [Female Reproductive System](https://www.veteransbenefitskb.com/femalesystem)  |
+| \> [Genitourinary System](https://www.veteransbenefitskb.com/gensystem)  | \> Hematologic and Lymphatic Systems\> Blood\> Breasts |
+| \> [Infectious Diseases and Immune Disorders](https://www.veteransbenefitskb.com/infect)  | \> [Mental Disorders](https://www.veteransbenefitskb.com/mental)  |
 | \> Musculoskeletal System\> Ankle\> Elbow & Forearm\> Foot\> Hand\> Hip & Thigh\> Knee & Lower Leg\> Ribs\> Skull\> Shoulder & Arm\> Spine\> Wrist\> Cancers and Tumors\> Diseases\> Face\> Forearm and Hand\> Hernias\> Lower Leg and Foot\> Buttock, Hip, and Thigh\> Shoulder, and Upper Arm\> Torso and Neck | \> Nervous System\> Cranial Nerves\> Central Nervous System\> Lower Back and Legs\> Upper Back and Arms\> Traumatic Brain Injuries |
-| \> [Nutritional Deficiencies](https://veteransbenefitskb.com/nutritional)  | \> [Respiratory System](https://veteransbenefitskb.com/airsystem)  |
-| \> Senses\> Ears\> Eyes\> Taste/Smell | \> [Skin](https://veteransbenefitskb.com/skin)  |
+| \> [Nutritional Deficiencies](https://www.veteransbenefitskb.com/nutritional)  | \> [Respiratory System](https://www.veteransbenefitskb.com/airsystem)  |
+| \> Senses\> Ears\> Eyes\> Taste/Smell | \> [Skin](https://www.veteransbenefitskb.com/skin)  |
 
 <!-- Chunk 293/1206 | Heading: [Rating Schedule Index Navigation](https://www.veteransbenefitskb.com/ratingsindex) | Words: 165 -->
 
@@ -6299,43 +6299,43 @@ Open Menu
 
 Featured
 
-[\> Master Condition List](https://veteransbenefitskb.com/master)
+[\> Master Condition List](https://www.veteransbenefitskb.com/master)
 
-[\> Federal Benefits List by Combined Ratings](https://veteransbenefitskb.com/combinedbenefits)
+[\> Federal Benefits List by Combined Ratings](https://www.veteransbenefitskb.com/combinedbenefits)
 
-[\> Insider Insight into VBA Claim Processing](https://veteransbenefitskb.com/insight)
+[\> Insider Insight into VBA Claim Processing](https://www.veteransbenefitskb.com/insight)
 
-[\> Rating Schedule Index](https://veteransbenefitskb.com/ratingsindex)
+[\> Rating Schedule Index](https://www.veteransbenefitskb.com/ratingsindex)
 
-[\> Filing a VA Disability Claim](https://veteransbenefitskb.com/vaclaim)
+[\> Filing a VA Disability Claim](https://www.veteransbenefitskb.com/vaclaim)
 
-[\> Filing an Appeal](https://veteransbenefitskb.com/appeals)
+[\> Filing an Appeal](https://www.veteransbenefitskb.com/appeals)
 
 * * *
 
 [Categories](https://www.veteransbenefitskb.com/mental)
 
-> [Death/Survivor Benefits](https://veteransbenefitskb.com/#ds)
+> [Death/Survivor Benefits](https://www.veteransbenefitskb.com/#ds)
 
-\> [Education &](https://veteransbenefitskb.com/#ee)  [Employment](https://veteransbenefitskb.com/#ee)
+\> [Education &](https://www.veteransbenefitskb.com/#ee)  [Employment](https://www.veteransbenefitskb.com/#ee)
 
-\> [Health care](https://veteransbenefitskb.com/#healthcare)
+\> [Health care](https://www.veteransbenefitskb.com/#healthcare)
 
-\> [Housing](https://veteransbenefitskb.com/#housing)
+\> [Housing](https://www.veteransbenefitskb.com/#housing)
 
-\> [Miscellaneous](https://veteransbenefitskb.com/#misc)
+\> [Miscellaneous](https://www.veteransbenefitskb.com/#misc)
 
-\> [VA Disability Compensation](https://veteransbenefitskb.com/#va)
+\> [VA Disability Compensation](https://www.veteransbenefitskb.com/#va)
 
-\> [VA Pension](https://veteransbenefitskb.com/#pension)
+\> [VA Pension](https://www.veteransbenefitskb.com/#pension)
 
 For those Veterans suffering from within themselves.
 
 **IMPORTANT NOTES:**
 
-- It is critical that you be 100% brutally honest with your [C&P](https://veteransbenefitskb.com/cnp)  examiner! Do **NOT** leave anything on the table. This isn't the time to keep things in or try to save face.
+- It is critical that you be 100% brutally honest with your [C&P](https://www.veteransbenefitskb.com/cnp)  examiner! Do **NOT** leave anything on the table. This isn't the time to keep things in or try to save face.
 
-- That said, do **NOT** exaggerate or fabricate things! Your examiner isn't [Stupid](https://veteransbenefitskb.com/exinsight)
+- That said, do **NOT** exaggerate or fabricate things! Your examiner isn't [Stupid](https://www.veteransbenefitskb.com/exinsight)
 
 **PYRAMIDING NOTES:**
 
@@ -6371,7 +6371,7 @@ To speak with a Combat Veteran about your military experiences or any issues you
 
 ## **Presumptive Conditions**
 
-- Diagnosed with [_Psychosis_](https://veteransbenefitskb.com/psych#psychosis)  within a [Year](https://veteransbenefitskb.com/time)  of separation **AND** the severity warranted _at least_ a 10% evaluation within that time.
+- Diagnosed with [_Psychosis_](https://www.veteransbenefitskb.com/psych#psychosis)  within a [Year](https://www.veteransbenefitskb.com/time)  of separation **AND** the severity warranted _at least_ a 10% evaluation within that time.
 
 - Diagnosed with _psychosis_, _depression_, or _anxiety (of some form)_ **AND** was a [POW](https://www.veteransbenefitskb.com/pow)  **AND** the severity would have rated _at least_ 10% at some point.
 
@@ -6381,7 +6381,7 @@ To speak with a Combat Veteran about your military experiences or any issues you
 
 - Experience _abnormal weight loss_, _neuropsychological signs or symptoms_, or _sleep disturbances_ if exposed to [Gulf environmental hazards](https://sunflower-brass-pcgs.squarespace.com/gulfill)  and the condition is considered a MUCMI.
 
-- Click [HERE](https://veteransbenefitskb.com/psych)  to learn about mental conditions subjective to presumptive connection **FOR HEALTH CARE PURPOSES ONLY**.
+- Click [HERE](https://www.veteransbenefitskb.com/psych)  to learn about mental conditions subjective to presumptive connection **FOR HEALTH CARE PURPOSES ONLY**.
 
 [Return to top](https://www.veteransbenefitskb.com/mental#top)
 
@@ -6457,7 +6457,7 @@ Intellectual and Personality Disorders are generally considered to be something 
 
 Because of this, the VA does **NOT** consider these disorders as diseases or injuries for compensation purposes.
 
-**UNLESS**, they are the result of another service-connected disability such as a [Traumatic Brain Injury (TBI)](https://veteransbenefitskb.com/tbi)  **OR** your service made your disorder measurably worse than when you joined service ( [Aggravated](https://veteransbenefitskb.com/agg)
+**UNLESS**, they are the result of another service-connected disability such as a [Traumatic Brain Injury (TBI)](https://www.veteransbenefitskb.com/tbi)  **OR** your service made your disorder measurably worse than when you joined service ( [Aggravated](https://www.veteransbenefitskb.com/agg)
 
 **IMPORTANT NOTE:**
 
@@ -6503,7 +6503,7 @@ Intellectual and personality disorders include but are not limited to:
 
 ## **Remaining Mental Disorders**
 
-The following types and named disorders are explicitly recognized by the VA as being rateable. If your mental disorder is _not_ listed, it will likely be rated [Analogously](https://veteransbenefitskb.com/diagnosticcodes#analog)  This includes sleeping disorders such as insomnia.
+The following types and named disorders are explicitly recognized by the VA as being rateable. If your mental disorder is _not_ listed, it will likely be rated [Analogously](https://www.veteransbenefitskb.com/diagnosticcodes#analog)  This includes sleeping disorders such as insomnia.
 
 Speaking of insomnia...
 
@@ -6511,7 +6511,7 @@ Speaking of insomnia...
 
 - Insomnia is generally considered a symptom of another disability due to coexisting physical or mental conditions.
 
-- For example: major depressive disorder, pain, or another sleep disorder like [Sleep apnea](https://veteransbenefitskb.com/airsystem#6847)
+- For example: major depressive disorder, pain, or another sleep disorder like [Sleep apnea](https://www.veteransbenefitskb.com/airsystem#6847)
 
 Service-connection **CAN** be established for insomnia in the absence of a known or established underlying cause **IF** there is:
 
@@ -6519,11 +6519,11 @@ Service-connection **CAN** be established for insomnia in the absence of a known
 
 - A current diagnosis of primary insomnia; and
 
-- A [Nexus](https://veteransbenefitskb.com/imo)  establishing primary insomnia is connected to the event in service, and the condition is **NOT** associated with any other disease or injury.
+- A [Nexus](https://www.veteransbenefitskb.com/imo)  establishing primary insomnia is connected to the event in service, and the condition is **NOT** associated with any other disease or injury.
 
 **_EXCEPTION to the RULES_**
 
-- Only the [Board of Veterans Appeals (BVA)](https://veteransbenefitskb.com/appeals#bva)  and higher courts have the ability to grant secondary service-connection for insomnia!
+- Only the [Board of Veterans Appeals (BVA)](https://www.veteransbenefitskb.com/appeals#bva)  and higher courts have the ability to grant secondary service-connection for insomnia!
 
 * * *
 
@@ -6673,7 +6673,7 @@ Know that a Veteran who is diagnosed with depression or anxiety for example. Can
 
 **IMPORTANT NOTE:**
 
-- When [Filing](https://veteransbenefitskb.com/)  for PTSD the following form is generally **REQUIRED**:
+- When [Filing](https://www.veteransbenefitskb.com/)  for PTSD the following form is generally **REQUIRED**:
 
 - Supporting Statements for Service-connection for PTSD [VA Form 21-0781](http://www.vba.va.gov/pubs/forms/VBA-21-0781-ARE.pdf)
 
@@ -6691,21 +6691,21 @@ Ultimately, a Veteran's rating is based upon the rating percentage that most clo
 
 This includes:
 
-- [C&P Examiner's Report](https://veteransbenefitskb.com/)
+- [C&P Examiner's Report](https://www.veteransbenefitskb.com/)
 
-- [DBQ](https://veteransbenefitskb.com/)
+- [DBQ](https://www.veteransbenefitskb.com/)
 
-- [Nexus Letters](https://veteransbenefitskb.com/)
+- [Nexus Letters](https://www.veteransbenefitskb.com/)
 
-- [Buddy Letters](https://veteransbenefitskb.com/)  [VA Form 21-10210](https://www.vba.va.gov/pubs/forms/VBA-21-10210-ARE.pdf)
+- [Buddy Letters](https://www.veteransbenefitskb.com/)  [VA Form 21-10210](https://www.vba.va.gov/pubs/forms/VBA-21-10210-ARE.pdf)
 
-- [Personal Statements](https://veteransbenefitskb.com/)  [VA Form 21-4138](https://www.va.gov/vaforms/form_detail.asp?FormNo=21-4138)
+- [Personal Statements](https://www.veteransbenefitskb.com/)  [VA Form 21-4138](https://www.va.gov/vaforms/form_detail.asp?FormNo=21-4138)
 
 - Supporting Statements for Service Connection for PTSD [VA Form 21-0781](https://www.vba.va.gov/pubs/forms/VBA-21-0781-ARE.pdf)
 
 - Private/VA Treatment Notes
 
-- [Vet Center](https://veteransbenefitskb.com/)  Notes (you **MUST** give the VBA [Written permission](https://www.vba.va.gov/pubs/forms/vba-21-4142-are.pdf)  to access these notes!)
+- [Vet Center](https://www.veteransbenefitskb.com/)  Notes (you **MUST** give the VBA [Written permission](https://www.vba.va.gov/pubs/forms/vba-21-4142-are.pdf)  to access these notes!)
 
 Do know that just because you may have a few symptoms in areas that are attributed to higher rating percentages, it does **NOT** mean you will be awarded that higher percentage. Your rating will be based upon the _totality_ of your symptoms and evidence before the rater.
 
@@ -6841,7 +6841,7 @@ Veteran has a current mental health diagnosis.
 
 - Difficulty understanding complex directions;
 
-- Difficulty thinking logically and may often make poor judgments. Veteran may require a [Fiduciary](https://veteransbenefitskb.com/fiduciary)  to handle their money;
+- Difficulty thinking logically and may often make poor judgments. Veteran may require a [Fiduciary](https://www.veteransbenefitskb.com/fiduciary)  to handle their money;
 
 - Regularly drifts into unrelated tangents when communicating with someone;
 
@@ -6857,7 +6857,7 @@ Veteran has a current mental health diagnosis.
 
 **SPECIAL RATING NOTE:**
 
-- Veterans who were _separated from_ service due to PTSD will receive at _minimum_ a rating of 50%. Which will then be [Reevaluated](https://veteransbenefitskb.com/cnp)  within 6 months. At which point, it may be lowered if appropriate.
+- Veterans who were _separated from_ service due to PTSD will receive at _minimum_ a rating of 50%. Which will then be [Reevaluated](https://www.veteransbenefitskb.com/cnp)  within 6 months. At which point, it may be lowered if appropriate.
 
 * * *
 
@@ -6947,23 +6947,23 @@ Veteran has a current mental health diagnosis.
 
 ---
 
-## **Common** [**Secondary Conditions**](https://veteransbenefitskb.com/claimtype\#secondary)
+## **Common** [**Secondary Conditions**](https://www.veteransbenefitskb.com/claimtype\#secondary)
 
 If your mental disorder and/or the medications used to treat it cause secondary disabilities. Those additional disabilities may be service-connected. Further, if those secondary disabilities spawn further disabilities those may also be service-connected.
 
-Veterans should at a minimum have a proper diagnosis before filing a claim. Depending upon the medical evidence available, Veteran's age, weight, other conditions, etc. A Veteran may need an [IMO](https://veteransbenefitskb.com/imo)  to have a decent chance of getting service-connection. This is particularly the case for sleep apnea.
+Veterans should at a minimum have a proper diagnosis before filing a claim. Depending upon the medical evidence available, Veteran's age, weight, other conditions, etc. A Veteran may need an [IMO](https://www.veteransbenefitskb.com/imo)  to have a decent chance of getting service-connection. This is particularly the case for sleep apnea.
 
-- [Erectile Dysfunction (ED)](https://veteransbenefitskb.com/gensystem#7522)  / [Female Sexual Arousal Disorder (FSAD)](https://veteransbenefitskb.com/femalesystem#7632)
+- [Erectile Dysfunction (ED)](https://www.veteransbenefitskb.com/gensystem#7522)  / [Female Sexual Arousal Disorder (FSAD)](https://www.veteransbenefitskb.com/femalesystem#7632)
 
-- Maximum rating is 0% rating. However, it will entitle the Veteran to [SMC K](https://veteransbenefitskb.com/smc#k)  which will add around $110 a month to their monthly disability compensation.
+- Maximum rating is 0% rating. However, it will entitle the Veteran to [SMC K](https://www.veteransbenefitskb.com/smc#k)  which will add around $110 a month to their monthly disability compensation.
 
-- [Irritable Bowel Syndrome (IBS)](https://veteransbenefitskb.com/digsystem#7319)
+- [Irritable Bowel Syndrome (IBS)](https://www.veteransbenefitskb.com/digsystem#7319)
 
-- [Gastroesophageal reflux disease (GERD)](https://veteransbenefitskb.com/digsystem#7206)
+- [Gastroesophageal reflux disease (GERD)](https://www.veteransbenefitskb.com/digsystem#7206)
 
-- [Sleep Apnea (SA)](https://veteransbenefitskb.com/airsystem#6847)
+- [Sleep Apnea (SA)](https://www.veteransbenefitskb.com/airsystem#6847)
 
-- [Temporomandibular Disorder (TMD, Temporomandibular Joint Dysfunction, TMJ Syndrome, TMJ)](https://veteransbenefitskb.com/mouthsystem#9905)
+- [Temporomandibular Disorder (TMD, Temporomandibular Joint Dysfunction, TMJ Syndrome, TMJ)](https://www.veteransbenefitskb.com/mouthsystem#9905)
 
 **IMPORTANT NOTE:**
 
@@ -6973,11 +6973,11 @@ NOTE:
 
 - Veterans who self medicated with illegal substances and/or alcohol **MAY** be able to get service-connected for conditions that developed from those abuses.
 
-- For more information click [HERE](https://veteransbenefitskb.com/adt)
+- For more information click [HERE](https://www.veteransbenefitskb.com/adt)
 
 [Return to top](https://www.veteransbenefitskb.com/mental#top)
 
-<!-- Chunk 318/1206 | Heading: Common [Secondary Conditions](https://veteransbenefitskb.com/claimtype\#secondary) | Words: 205 -->
+<!-- Chunk 318/1206 | Heading: Common [Secondary Conditions](https://www.veteransbenefitskb.com/claimtype\#secondary) | Words: 205 -->
 
 ---
 
@@ -7042,9 +7042,9 @@ Here is a list of evidence that the VA will go through in order to help verify a
 
 - After action reports (AARs);
 
-- [Buddy Letters](https://veteransbenefitskb.com/buddy)  [VA Form 21-10210](https://www.vba.va.gov/pubs/forms/VBA-21-10210-ARE.pdf)
+- [Buddy Letters](https://www.veteransbenefitskb.com/buddy)  [VA Form 21-10210](https://www.vba.va.gov/pubs/forms/VBA-21-10210-ARE.pdf)
 
-- [Combat awards, badges, decorations](https://veteransbenefitskb.com/combatvet)  on the Veteran's DD-214;
+- [Combat awards, badges, decorations](https://www.veteransbenefitskb.com/combatvet)  on the Veteran's DD-214;
 
 - Command chronologies and war diaries;
 
@@ -7054,7 +7054,7 @@ Here is a list of evidence that the VA will go through in order to help verify a
 
 - Former prisoner of war;
 
-- [Personal Statements](https://veteransbenefitskb.com/personal)  [VA Form 21-4138](https://www.va.gov/vaforms/form_detail.asp?FormNo=21-4138)
+- [Personal Statements](https://www.veteransbenefitskb.com/personal)  [VA Form 21-4138](https://www.va.gov/vaforms/form_detail.asp?FormNo=21-4138)
 
 - Police or insurance reports;
 
@@ -7094,9 +7094,9 @@ At a **MINIMUM** you **MUST** provide the following with your statements:
 
 - Description of event(s).
 
-\*Not required if you have an in-service diagnosis of PTSD _or_ have a [Combat award, badges, or decorations](https://veteransbenefitskb.com/combatvet)  on your DD-214.
+\*Not required if you have an in-service diagnosis of PTSD _or_ have a [Combat award, badges, or decorations](https://www.veteransbenefitskb.com/combatvet)  on your DD-214.
 
-- For those whose stressor(s) are related to _secret squirrel_ stuff click [HERE](https://veteransbenefitskb.com/secret)  for additional information to submit with your claim.
+- For those whose stressor(s) are related to _secret squirrel_ stuff click [HERE](https://www.veteransbenefitskb.com/secret)  for additional information to submit with your claim.
 
 **RATER NOTE:**
 
@@ -7170,11 +7170,11 @@ Because of this wiggle, if you feel you should rate higher you _should_ consider
 
 ## **Hospitalizations (Temporary 100%)**
 
-Veterans who are [Hospitalized](https://veteransbenefitskb.com/ratingsindex#29)  at a VA hospital or at an approved hospital for 22 or more continuous days due to a service-connected rating will be paid at the **100% rate**, going back to the day that they were admitted in the hospital.
+Veterans who are [Hospitalized](https://www.veteransbenefitskb.com/ratingsindex#29)  at a VA hospital or at an approved hospital for 22 or more continuous days due to a service-connected rating will be paid at the **100% rate**, going back to the day that they were admitted in the hospital.
 
 This 100% rating will be paid to the end of the month that the Veteran was discharged in\*.
 
-\*Unless the hospitalization lasted at least six months due to mental health. In such case, the Veteran will continue to receive the 100% rating for 6 months. At which point the Veteran will receive a [Reevaluation](https://veteransbenefitskb.com/cnp)  to determine their current level of disability.
+\*Unless the hospitalization lasted at least six months due to mental health. In such case, the Veteran will continue to receive the 100% rating for 6 months. At which point the Veteran will receive a [Reevaluation](https://www.veteransbenefitskb.com/cnp)  to determine their current level of disability.
 
 - For more information click [HERE](https://www.veteransbenefitskb.com/ratingsindex#29)
 
@@ -7190,9 +7190,9 @@ You do **NOT** need service-connection to get mental health treatment through th
 
 Do know you **NEVER** owe any co-pays for receiving any in or outpatient care used to treat mental health disorders.
 
-- For more information on VA Health Care click [HERE](https://veteransbenefitskb.com/healthcare)
+- For more information on VA Health Care click [HERE](https://www.veteransbenefitskb.com/healthcare)
 
-If you do not want to go directly through the VA for care you may qualify to use [Vet Centers](https://veteransbenefitskb.com/vetcenter)
+If you do not want to go directly through the VA for care you may qualify to use [Vet Centers](https://www.veteransbenefitskb.com/vetcenter)
 
 [Return to top](https://www.veteransbenefitskb.com/mental#top)
 
@@ -7204,7 +7204,7 @@ If you do not want to go directly through the VA for care you may qualify to use
 
 If you received an Other than Honorable discharge and have a mental health diagnosis you should apply to have your character of discharge updated.
 
-- Click [HERE](https://veteransbenefitskb.com/upgrade)  to learn more.
+- Click [HERE](https://www.veteransbenefitskb.com/upgrade)  to learn more.
 
 [Return to top](https://www.veteransbenefitskb.com/mental#top)
 
@@ -7220,7 +7220,7 @@ If you received an Other than Honorable discharge and have a mental health diagn
 
 - Generally, if they do decide you should be reduced, it will be by a degree of disability IE 70 to 50%. Instead of 70 to 30%.
 
-- It is recommended if you do ever receive a proposal for reduction that you **quickly** request a [Hearing](https://veteransbenefitskb.com/reduction)
+- It is recommended if you do ever receive a proposal for reduction that you **quickly** request a [Hearing](https://www.veteransbenefitskb.com/reduction)
 
 - #### Will my VA doctor snitch on me if I start improving?
 
@@ -7234,7 +7234,7 @@ If you received an Other than Honorable discharge and have a mental health diagn
 
 - #### I experienced a sexual assault/rape while I was AD but I never reported it. Can I still file a claim for PTSD?
 
-- Yes, if you experienced MST during service. You may still file a claim if you never reported it. It is not at all uncommon for service members to suffer in silence. These claims will rely heavily on any evidence you can supply, such as any mental health treatment/therapy sessions, buddy statements from friends and family, etc. Do know, that even if your claim is denied, it does **NOT** mean the rater does not believe you! You might be missing a piece of the claims puzzle. As such, be sure to read your decision letter fully. It will explain what you need to do to win your claim during an [Appeal](https://veteransbenefitskb.com/)
+- Yes, if you experienced MST during service. You may still file a claim if you never reported it. It is not at all uncommon for service members to suffer in silence. These claims will rely heavily on any evidence you can supply, such as any mental health treatment/therapy sessions, buddy statements from friends and family, etc. Do know, that even if your claim is denied, it does **NOT** mean the rater does not believe you! You might be missing a piece of the claims puzzle. As such, be sure to read your decision letter fully. It will explain what you need to do to win your claim during an [Appeal](https://www.veteransbenefitskb.com/)
 
 - #### I filed a claim for sleep disturbances/insomnia but my claim lumped with my other mental condition. Why?
 
@@ -7242,7 +7242,7 @@ If you received an Other than Honorable discharge and have a mental health diagn
 
 - #### Can I be rated 100% if I currently have a job?
 
-- Maybe... it will be very fact specific. Factors such as; are you full/part time, length of employment, type of employment, and is it in a [Sheltered environment](https://veteransbenefitskb.com/tdiu#sheltered)  etc.
+- Maybe... it will be very fact specific. Factors such as; are you full/part time, length of employment, type of employment, and is it in a [Sheltered environment](https://www.veteransbenefitskb.com/tdiu#sheltered)  etc.
 
 - #### Can I work if I have a 100% for mental health?
 
@@ -7254,7 +7254,7 @@ If you received an Other than Honorable discharge and have a mental health diagn
 
 - #### What do I do if the VA has found I cannot handle my money?
 
-- The VA will assign you a fiduciary to handle your money. For more information click [HERE](https://veteransbenefitskb.com/)
+- The VA will assign you a fiduciary to handle your money. For more information click [HERE](https://www.veteransbenefitskb.com/)
 
 - #### Does having a rating for mental health make me ineligible for a security clearance?
 
@@ -7278,9 +7278,9 @@ If you received an Other than Honorable discharge and have a mental health diagn
 
 ## **Disability Benefits Questionnaire (DBQs)**
 
-To get an idea of how a [C&P exam](https://veteransbenefitskb.com/cnp)  will be conducted it is recommended that the Veteran look at the applicable DBQ.
+To get an idea of how a [C&P exam](https://www.veteransbenefitskb.com/cnp)  will be conducted it is recommended that the Veteran look at the applicable DBQ.
 
-Veteran's may ask a licensed _psychiatrist_ or _psychologist_ to complete a DBQ on their behalf to submit with their claim. For more information on DBQs click [HERE](https://veteransbenefitskb.com/dbq)
+Veteran's may ask a licensed _psychiatrist_ or _psychologist_ to complete a DBQ on their behalf to submit with their claim. For more information on DBQs click [HERE](https://www.veteransbenefitskb.com/dbq)
 
 - [Eating Disorders](https://www.benefits.va.gov/compensation/docs/Eating_Disorders.pdf)
 
@@ -7296,7 +7296,7 @@ Veteran's may ask a licensed _psychiatrist_ or _psychologist_ to complete a DBQ 
 
 ## **Having Trouble Finding Your Condition?**
 
-- Click [HERE](https://veteransbenefitskb.com/master)  to view the Master Condition List.
+- Click [HERE](https://www.veteransbenefitskb.com/master)  to view the Master Condition List.
 
 [Return to top](https://www.veteransbenefitskb.com/mental#top)
 
@@ -7340,14 +7340,14 @@ Veteran's may ask a licensed _psychiatrist_ or _psychologist_ to complete a DBQ 
 
 |     |     |
 | --- | --- |
-| \> Cariovascular System\> Arteries & Veins\> Blood\> Heart | \> [Conditions that the VA will **NOT** Rate](https://veteransbenefitskb.com/norate)  |
-| \> [Dental and Oral](https://veteransbenefitskb.com/mouthsystem)  | \> [Digestive System](https://veteransbenefitskb.com/digsystem)  |
-| \> [Endocrine System](https://veteransbenefitskb.com/endsystem)  | \> [Female Reproductive System](https://veteransbenefitskb.com/femalesystem)  |
-| \> [Genitourinary System](https://veteransbenefitskb.com/gensystem)  | \> Hematologic and Lymphatic Systems\> Blood\> Breasts |
-| \> [Infectious Diseases and Immune Disorders](https://veteransbenefitskb.com/infect)  | \> [Mental Disorders](https://veteransbenefitskb.com/mental)  |
+| \> Cariovascular System\> Arteries & Veins\> Blood\> Heart | \> [Conditions that the VA will **NOT** Rate](https://www.veteransbenefitskb.com/norate)  |
+| \> [Dental and Oral](https://www.veteransbenefitskb.com/mouthsystem)  | \> [Digestive System](https://www.veteransbenefitskb.com/digsystem)  |
+| \> [Endocrine System](https://www.veteransbenefitskb.com/endsystem)  | \> [Female Reproductive System](https://www.veteransbenefitskb.com/femalesystem)  |
+| \> [Genitourinary System](https://www.veteransbenefitskb.com/gensystem)  | \> Hematologic and Lymphatic Systems\> Blood\> Breasts |
+| \> [Infectious Diseases and Immune Disorders](https://www.veteransbenefitskb.com/infect)  | \> [Mental Disorders](https://www.veteransbenefitskb.com/mental)  |
 | \> Musculoskeletal System\> Ankle\> Elbow & Forearm\> Foot\> Hand\> Hip & Thigh\> Knee & Lower Leg\> Ribs\> Skull\> Shoulder & Arm\> Spine\> Wrist\> Cancers and Tumors\> Diseases\> Face\> Forearm and Hand\> Hernias\> Lower Leg and Foot\> Buttock, Hip, and Thigh\> Shoulder, and Upper Arm\> Torso and Neck | \> Nervous System\> Cranial Nerves\> Central Nervous System\> Lower Back and Legs\> Upper Back and Arms\> Traumatic Brain Injuries |
-| \> [Nutritional Deficiencies](https://veteransbenefitskb.com/nutritional)  | \> [Respiratory System](https://veteransbenefitskb.com/airsystem)  |
-| \> Senses\> Ears\> Eyes\> Taste/Smell | \> [Skin](https://veteransbenefitskb.com/skin)  |
+| \> [Nutritional Deficiencies](https://www.veteransbenefitskb.com/nutritional)  | \> [Respiratory System](https://www.veteransbenefitskb.com/airsystem)  |
+| \> Senses\> Ears\> Eyes\> Taste/Smell | \> [Skin](https://www.veteransbenefitskb.com/skin)  |
 
 <!-- Chunk 330/1206 | Heading: [Rating Schedule Index Navigation](https://www.veteransbenefitskb.com/ratingsindex) | Words: 165 -->
 
@@ -7413,39 +7413,39 @@ Open Menu
 
 Featured
 
-[\> Master Condition List](https://veteransbenefitskb.com/master)
+[\> Master Condition List](https://www.veteransbenefitskb.com/master)
 
-[\> Federal Benefits List by Combined Ratings](https://veteransbenefitskb.com/combinedbenefits)
+[\> Federal Benefits List by Combined Ratings](https://www.veteransbenefitskb.com/combinedbenefits)
 
-[\> Insider Insight into VBA Claim Processing](https://veteransbenefitskb.com/insight)
+[\> Insider Insight into VBA Claim Processing](https://www.veteransbenefitskb.com/insight)
 
-[\> Rating Schedule Index](https://veteransbenefitskb.com/ratingsindex)
+[\> Rating Schedule Index](https://www.veteransbenefitskb.com/ratingsindex)
 
-[\> Filing a VA Disability Claim](https://veteransbenefitskb.com/vaclaim)
+[\> Filing a VA Disability Claim](https://www.veteransbenefitskb.com/vaclaim)
 
-[\> Filing an Appeal](https://veteransbenefitskb.com/appeals)
+[\> Filing an Appeal](https://www.veteransbenefitskb.com/appeals)
 
 * * *
 
 [Categories](https://www.veteransbenefitskb.com/ankle)
 
-> [Death/Survivor Benefits](https://veteransbenefitskb.com/#ds)
+> [Death/Survivor Benefits](https://www.veteransbenefitskb.com/#ds)
 
-\> [Education &](https://veteransbenefitskb.com/#ee)  [Employment](https://veteransbenefitskb.com/#ee)
+\> [Education &](https://www.veteransbenefitskb.com/#ee)  [Employment](https://www.veteransbenefitskb.com/#ee)
 
-\> [Health care](https://veteransbenefitskb.com/#healthcare)
+\> [Health care](https://www.veteransbenefitskb.com/#healthcare)
 
-\> [Housing](https://veteransbenefitskb.com/#housing)
+\> [Housing](https://www.veteransbenefitskb.com/#housing)
 
-\> [Miscellaneous](https://veteransbenefitskb.com/#misc)
+\> [Miscellaneous](https://www.veteransbenefitskb.com/#misc)
 
-\> [VA Disability Compensation](https://veteransbenefitskb.com/#va)
+\> [VA Disability Compensation](https://www.veteransbenefitskb.com/#va)
 
-\> [VA Pension](https://veteransbenefitskb.com/#pension)
+\> [VA Pension](https://www.veteransbenefitskb.com/#pension)
 
 **IMPORTANT NOTE:**
 
-- For the purposes of Range of Motion (ROM), the examiner/rater are **REQUIRED** to consider flair ups in your conditions. Meaning, if you do not happen to have an [Examination](https://veteransbenefitskb.com/cnp)  on your worst day, the examiner is required to reasonably estimate your impairment on your worst day! The rater is required to use this estimate, unless your ROM is somehow noted as being worse during ROM testing during the exam. In any event, the rater is to use the most impaired ROM measurements noted by the examiner!
+- For the purposes of Range of Motion (ROM), the examiner/rater are **REQUIRED** to consider flair ups in your conditions. Meaning, if you do not happen to have an [Examination](https://www.veteransbenefitskb.com/cnp)  on your worst day, the examiner is required to reasonably estimate your impairment on your worst day! The rater is required to use this estimate, unless your ROM is somehow noted as being worse during ROM testing during the exam. In any event, the rater is to use the most impaired ROM measurements noted by the examiner!
 
 * * *
 
@@ -7455,7 +7455,7 @@ Featured
 
 ## **Amputation Rule**
 
-- Veterans **CANNOT** have a total [Combined](https://veteransbenefitskb.com/vamath)  rating of over 40% for ratings involving the ankle _and_ [Foot](https://veteransbenefitskb.com/foot)  on the same leg.
+- Veterans **CANNOT** have a total [Combined](https://www.veteransbenefitskb.com/vamath)  rating of over 40% for ratings involving the ankle _and_ [Foot](https://www.veteransbenefitskb.com/foot)  on the same leg.
 
 * * *
 
@@ -7465,7 +7465,7 @@ Featured
 
 ## **5165 Amputation**
 
-Veteran is entitled to [Special Monthly Compensation](https://veteransbenefitskb.com/smc)
+Veteran is entitled to [Special Monthly Compensation](https://www.veteransbenefitskb.com/smc)
 
 | Rating | Degree of Amputation |
 | --- | --- |
@@ -7592,7 +7592,7 @@ When the joint is frozen in place. It can be frozen in a 'favorable' or 'unfavor
 
 ### Ankle Instability
 
-Not mentioned in the rating schedule. However, the VA can [Analogously](https://veteransbenefitskb.com/diagnoticcodes#analog)  rate the instability under the code for limitations of range of motion.
+Not mentioned in the rating schedule. However, the VA can [Analogously](https://www.veteransbenefitskb.com/diagnoticcodes#analog)  rate the instability under the code for limitations of range of motion.
 
 **PYRAMIDING NOTE:**
 
@@ -7650,7 +7650,7 @@ The Veteran will **NOT** receive an additional rating if they fit the criteria o
 
 When a Veteran's arthritis does not warrant a rating based upon ROM or other miscellaneous situations. The Veteran's condition will be rated under degenerative arthritis.
 
-- For an explanation of arthritis ratings click [HERE](https://veteransbenefitskb.com/msdiseases#5002)
+- For an explanation of arthritis ratings click [HERE](https://www.veteransbenefitskb.com/msdiseases#5002)
 
 [Return to top](https://www.veteransbenefitskb.com/ankle#top)
 
@@ -7660,9 +7660,9 @@ When a Veteran's arthritis does not warrant a rating based upon ROM or other mis
 
 ## **Disability Benefits Questionnaire (DBQs)**
 
-To get an idea of how a [C&P exam](https://veteransbenefitskb.com/cnp)  will be conducted it is recommended that the Veteran look at the applicable DBQ.
+To get an idea of how a [C&P exam](https://www.veteransbenefitskb.com/cnp)  will be conducted it is recommended that the Veteran look at the applicable DBQ.
 
-Veteran's may ask a physician to complete a DBQ on their behalf to submit with their claim. For more information on DBQs click [HERE](https://veteransbenefitskb.com/dbq)
+Veteran's may ask a physician to complete a DBQ on their behalf to submit with their claim. For more information on DBQs click [HERE](https://www.veteransbenefitskb.com/dbq)
 
 - [Ankle](https://www.benefits.va.gov/compensation/docs/ankle.pdf)
 
@@ -7674,7 +7674,7 @@ Veteran's may ask a physician to complete a DBQ on their behalf to submit with t
 
 ## **Having Trouble Finding Your Condition?**
 
-- Click [HERE](https://veteransbenefitskb.com/master)  to view the Master Condition List.
+- Click [HERE](https://www.veteransbenefitskb.com/master)  to view the Master Condition List.
 
 [Return to top](https://www.veteransbenefitskb.com/ankle#top)
 
@@ -7704,14 +7704,14 @@ Veteran's may ask a physician to complete a DBQ on their behalf to submit with t
 
 |     |     |
 | --- | --- |
-| \> Cariovascular System\> Arteries & Veins\> Blood\> Heart | \> [Conditions that the VA will **NOT** Rate](https://veteransbenefitskb.com/norate)  |
-| \> [Dental and Oral](https://veteransbenefitskb.com/mouthsystem)  | \> [Digestive System](https://veteransbenefitskb.com/digsystem)  |
-| \> [Endocrine System](https://veteransbenefitskb.com/endsystem)  | \> [Female Reproductive System](https://veteransbenefitskb.com/femalesystem)  |
-| \> [Genitourinary System](https://veteransbenefitskb.com/gensystem)  | \> Hematologic and Lymphatic Systems\> Blood\> Breasts |
-| \> [Infectious Diseases and Immune Disorders](https://veteransbenefitskb.com/infect)  | \> [Mental Disorders](https://veteransbenefitskb.com/mental)  |
+| \> Cariovascular System\> Arteries & Veins\> Blood\> Heart | \> [Conditions that the VA will **NOT** Rate](https://www.veteransbenefitskb.com/norate)  |
+| \> [Dental and Oral](https://www.veteransbenefitskb.com/mouthsystem)  | \> [Digestive System](https://www.veteransbenefitskb.com/digsystem)  |
+| \> [Endocrine System](https://www.veteransbenefitskb.com/endsystem)  | \> [Female Reproductive System](https://www.veteransbenefitskb.com/femalesystem)  |
+| \> [Genitourinary System](https://www.veteransbenefitskb.com/gensystem)  | \> Hematologic and Lymphatic Systems\> Blood\> Breasts |
+| \> [Infectious Diseases and Immune Disorders](https://www.veteransbenefitskb.com/infect)  | \> [Mental Disorders](https://www.veteransbenefitskb.com/mental)  |
 | \> Musculoskeletal System\> Ankle\> Elbow & Forearm\> Foot\> Hand\> Hip & Thigh\> Knee & Lower Leg\> Ribs\> Skull\> Shoulder & Arm\> Spine\> Wrist\> Cancers and Tumors\> Diseases\> Face\> Forearm and Hand\> Hernias\> Lower Leg and Foot\> Buttock, Hip, and Thigh\> Shoulder, and Upper Arm\> Torso and Neck | \> Nervous System\> Cranial Nerves\> Central Nervous System\> Lower Back and Legs\> Upper Back and Arms\> Traumatic Brain Injuries |
-| \> [Nutritional Deficiencies](https://veteransbenefitskb.com/nutritional)  | \> [Respiratory System](https://veteransbenefitskb.com/airsystem)  |
-| \> Senses\> Ears\> Eyes\> Taste/Smell | \> [Skin](https://veteransbenefitskb.com/skin)  |
+| \> [Nutritional Deficiencies](https://www.veteransbenefitskb.com/nutritional)  | \> [Respiratory System](https://www.veteransbenefitskb.com/airsystem)  |
+| \> Senses\> Ears\> Eyes\> Taste/Smell | \> [Skin](https://www.veteransbenefitskb.com/skin)  |
 
 <!-- Chunk 348/1206 | Heading: [Rating Schedule Index Navigation](https://www.veteransbenefitskb.com/ratingsindex) | Words: 165 -->
 
@@ -7777,39 +7777,39 @@ Open Menu
 
 Featured
 
-[\> Master Condition List](https://veteransbenefitskb.com/master)
+[\> Master Condition List](https://www.veteransbenefitskb.com/master)
 
-[\> Federal Benefits List by Combined Ratings](https://veteransbenefitskb.com/combinedbenefits)
+[\> Federal Benefits List by Combined Ratings](https://www.veteransbenefitskb.com/combinedbenefits)
 
-[\> Insider Insight into VBA Claim Processing](https://veteransbenefitskb.com/insight)
+[\> Insider Insight into VBA Claim Processing](https://www.veteransbenefitskb.com/insight)
 
-[\> Rating Schedule Index](https://veteransbenefitskb.com/ratingsindex)
+[\> Rating Schedule Index](https://www.veteransbenefitskb.com/ratingsindex)
 
-[\> Filing a VA Disability Claim](https://veteransbenefitskb.com/vaclaim)
+[\> Filing a VA Disability Claim](https://www.veteransbenefitskb.com/vaclaim)
 
-[\> Filing an Appeal](https://veteransbenefitskb.com/appeals)
+[\> Filing an Appeal](https://www.veteransbenefitskb.com/appeals)
 
 * * *
 
 [Categories](https://www.veteransbenefitskb.com/elbowforearm)
 
-> [Death/Survivor Benefits](https://veteransbenefitskb.com/#ds)
+> [Death/Survivor Benefits](https://www.veteransbenefitskb.com/#ds)
 
-\> [Education &](https://veteransbenefitskb.com/#ee)  [Employment](https://veteransbenefitskb.com/#ee)
+\> [Education &](https://www.veteransbenefitskb.com/#ee)  [Employment](https://www.veteransbenefitskb.com/#ee)
 
-\> [Health care](https://veteransbenefitskb.com/#healthcare)
+\> [Health care](https://www.veteransbenefitskb.com/#healthcare)
 
-\> [Housing](https://veteransbenefitskb.com/#housing)
+\> [Housing](https://www.veteransbenefitskb.com/#housing)
 
-\> [Miscellaneous](https://veteransbenefitskb.com/#misc)
+\> [Miscellaneous](https://www.veteransbenefitskb.com/#misc)
 
-\> [VA Disability Compensation](https://veteransbenefitskb.com/#va)
+\> [VA Disability Compensation](https://www.veteransbenefitskb.com/#va)
 
-\> [VA Pension](https://veteransbenefitskb.com/#pension)
+\> [VA Pension](https://www.veteransbenefitskb.com/#pension)
 
 **IMPORTANT NOTE:**
 
-- For the purposes of Range of Motion (ROM), the examiner/rater are **REQUIRED** to consider flair ups in your conditions. Meaning, if you do not happen to have an [Examination](https://veteransbenefitskb.com/cnp)  on your worst day, the examiner is required to reasonably estimate your impairment on your worst day! The rater is required to use this estimate, unless your ROM is somehow noted as being worse during ROM testing during the exam. In any event, the rater is to use the most impaired ROM measurements noted by the examiner!
+- For the purposes of Range of Motion (ROM), the examiner/rater are **REQUIRED** to consider flair ups in your conditions. Meaning, if you do not happen to have an [Examination](https://www.veteransbenefitskb.com/cnp)  on your worst day, the examiner is required to reasonably estimate your impairment on your worst day! The rater is required to use this estimate, unless your ROM is somehow noted as being worse during ROM testing during the exam. In any event, the rater is to use the most impaired ROM measurements noted by the examiner!
 
 * * *
 
@@ -7819,7 +7819,7 @@ Featured
 
 ## **Amputation Rule**
 
-Veterans **CANNOT** have a total [Combined](https://veteransbenefitskb.com/vamath)  rating of over 80% for musculoskeletal conditions for their _dominant_ forearm down or 70% for their _non-dominant_ forearm down.
+Veterans **CANNOT** have a total [Combined](https://www.veteransbenefitskb.com/vamath)  rating of over 80% for musculoskeletal conditions for their _dominant_ forearm down or 70% for their _non-dominant_ forearm down.
 
 **IMPORTANT NOTE:**
 
@@ -7831,7 +7831,7 @@ Veterans **CANNOT** have a total [Combined](https://veteransbenefitskb.com/vamat
 
 ## **5123/5124 Amputation**
 
-Veteran is entitled to [Special Monthly Compensation](https://veteransbenefitskb.com/smc)
+Veteran is entitled to [Special Monthly Compensation](https://www.veteransbenefitskb.com/smc)
 
 | Dominant Rating | Non-Dominant Rating | Degree of Amputation |
 | --- | --- | --- |
@@ -8080,7 +8080,7 @@ The bone within the forearm that is on the _same_ side as the thumb. These ratin
 
 When a Veteran's arthritis does not warrant a rating based upon ROM or other miscellaneous situations. The Veteran's condition will be rated under degenerative arthritis.
 
-- For an explanation of arthritis ratings click [HERE](https://veteransbenefitskb.com/msdiseases#5002)
+- For an explanation of arthritis ratings click [HERE](https://www.veteransbenefitskb.com/msdiseases#5002)
 
 * * *
 
@@ -8106,9 +8106,9 @@ When a Veteran's arthritis does not warrant a rating based upon ROM or other mis
 
 ## **Disability Benefits Questionnaire (DBQs)**
 
-To get an idea of how a [C&P exam](https://veteransbenefitskb.com/cnp)  will be conducted it is recommended that the Veteran look at the applicable DBQ.
+To get an idea of how a [C&P exam](https://www.veteransbenefitskb.com/cnp)  will be conducted it is recommended that the Veteran look at the applicable DBQ.
 
-Veteran's may ask a physician to complete a DBQ on their behalf to submit with their claim. For more information on DBQs click [HERE](https://veteransbenefitskb.com/dbq)
+Veteran's may ask a physician to complete a DBQ on their behalf to submit with their claim. For more information on DBQs click [HERE](https://www.veteransbenefitskb.com/dbq)
 
 - [Elbow and Forearm](https://www.benefits.va.gov/compensation/docs/Elbow_and_Forearm.pdf)
 
@@ -8120,7 +8120,7 @@ Veteran's may ask a physician to complete a DBQ on their behalf to submit with t
 
 ## **Having Trouble Finding Your Condition?**
 
-- Click [HERE](https://veteransbenefitskb.com/master)  to view the Master Condition List.
+- Click [HERE](https://www.veteransbenefitskb.com/master)  to view the Master Condition List.
 
 [Return to top](https://www.veteransbenefitskb.com/elbowforearm#top)
 
@@ -8152,14 +8152,14 @@ Veteran's may ask a physician to complete a DBQ on their behalf to submit with t
 
 |     |     |
 | --- | --- |
-| \> Cariovascular System\> Arteries & Veins\> Blood\> Heart | \> [Conditions that the VA will **NOT** Rate](https://veteransbenefitskb.com/norate)  |
-| \> [Dental and Oral](https://veteransbenefitskb.com/mouthsystem)  | \> [Digestive System](https://veteransbenefitskb.com/digsystem)  |
-| \> [Endocrine System](https://veteransbenefitskb.com/endsystem)  | \> [Female Reproductive System](https://veteransbenefitskb.com/femalesystem)  |
-| \> [Genitourinary System](https://veteransbenefitskb.com/gensystem)  | \> Hematologic and Lymphatic Systems\> Blood\> Breasts |
-| \> [Infectious Diseases and Immune Disorders](https://veteransbenefitskb.com/infect)  | \> [Mental Disorders](https://veteransbenefitskb.com/mental)  |
+| \> Cariovascular System\> Arteries & Veins\> Blood\> Heart | \> [Conditions that the VA will **NOT** Rate](https://www.veteransbenefitskb.com/norate)  |
+| \> [Dental and Oral](https://www.veteransbenefitskb.com/mouthsystem)  | \> [Digestive System](https://www.veteransbenefitskb.com/digsystem)  |
+| \> [Endocrine System](https://www.veteransbenefitskb.com/endsystem)  | \> [Female Reproductive System](https://www.veteransbenefitskb.com/femalesystem)  |
+| \> [Genitourinary System](https://www.veteransbenefitskb.com/gensystem)  | \> Hematologic and Lymphatic Systems\> Blood\> Breasts |
+| \> [Infectious Diseases and Immune Disorders](https://www.veteransbenefitskb.com/infect)  | \> [Mental Disorders](https://www.veteransbenefitskb.com/mental)  |
 | \> Musculoskeletal System\> Ankle\> Elbow & Forearm\> Foot\> Hand\> Hip & Thigh\> Knee & Lower Leg\> Ribs\> Skull\> Shoulder & Arm\> Spine\> Wrist\> Cancers and Tumors\> Diseases\> Face\> Forearm and Hand\> Hernias\> Lower Leg and Foot\> Buttock, Hip, and Thigh\> Shoulder, and Upper Arm\> Torso and Neck | \> Nervous System\> Cranial Nerves\> Central Nervous System\> Lower Back and Legs\> Upper Back and Arms\> Traumatic Brain Injuries |
-| \> [Nutritional Deficiencies](https://veteransbenefitskb.com/nutritional)  | \> [Respiratory System](https://veteransbenefitskb.com/airsystem)  |
-| \> Senses\> Ears\> Eyes\> Taste/Smell | \> [Skin](https://veteransbenefitskb.com/skin)  |
+| \> [Nutritional Deficiencies](https://www.veteransbenefitskb.com/nutritional)  | \> [Respiratory System](https://www.veteransbenefitskb.com/airsystem)  |
+| \> Senses\> Ears\> Eyes\> Taste/Smell | \> [Skin](https://www.veteransbenefitskb.com/skin)  |
 
 <!-- Chunk 371/1206 | Heading: [Rating Schedule Index Navigation](https://www.veteransbenefitskb.com/ratingsindex) | Words: 165 -->
 
@@ -8225,35 +8225,35 @@ Open Menu
 
 Featured
 
-[\> Master Condition List](https://veteransbenefitskb.com/master)
+[\> Master Condition List](https://www.veteransbenefitskb.com/master)
 
-[\> Federal Benefits List by Combined Ratings](https://veteransbenefitskb.com/combinedbenefits)
+[\> Federal Benefits List by Combined Ratings](https://www.veteransbenefitskb.com/combinedbenefits)
 
-[\> Insider Insight into VBA Claim Processing](https://veteransbenefitskb.com/insight)
+[\> Insider Insight into VBA Claim Processing](https://www.veteransbenefitskb.com/insight)
 
-[\> Rating Schedule Index](https://veteransbenefitskb.com/ratingsindex)
+[\> Rating Schedule Index](https://www.veteransbenefitskb.com/ratingsindex)
 
-[\> Filing a VA Disability Claim](https://veteransbenefitskb.com/vaclaim)
+[\> Filing a VA Disability Claim](https://www.veteransbenefitskb.com/vaclaim)
 
-[\> Filing an Appeal](https://veteransbenefitskb.com/appeals)
+[\> Filing an Appeal](https://www.veteransbenefitskb.com/appeals)
 
 * * *
 
 [Categories](https://www.veteransbenefitskb.com/msindex)
 
-> [Death/Survivor Benefits](https://veteransbenefitskb.com/#ds)
+> [Death/Survivor Benefits](https://www.veteransbenefitskb.com/#ds)
 
-\> [Education &](https://veteransbenefitskb.com/#ee)  [Employment](https://veteransbenefitskb.com/#ee)
+\> [Education &](https://www.veteransbenefitskb.com/#ee)  [Employment](https://www.veteransbenefitskb.com/#ee)
 
-\> [Health care](https://veteransbenefitskb.com/#healthcare)
+\> [Health care](https://www.veteransbenefitskb.com/#healthcare)
 
-\> [Housing](https://veteransbenefitskb.com/#housing)
+\> [Housing](https://www.veteransbenefitskb.com/#housing)
 
-\> [Miscellaneous](https://veteransbenefitskb.com/#misc)
+\> [Miscellaneous](https://www.veteransbenefitskb.com/#misc)
 
-\> [VA Disability Compensation](https://veteransbenefitskb.com/#va)
+\> [VA Disability Compensation](https://www.veteransbenefitskb.com/#va)
 
-\> [VA Pension](https://veteransbenefitskb.com/#pension)
+\> [VA Pension](https://www.veteransbenefitskb.com/#pension)
 
 The most voluminous of all the systems in the rating schedule.
 
@@ -8271,27 +8271,27 @@ The most voluminous of all the systems in the rating schedule.
 
 The majority of the ratings within are based upon the Veteran's limitation of range of motion (ROM).
 
-- [The Ankle](https://veteransbenefitskb.com/ankle)
+- [The Ankle](https://www.veteransbenefitskb.com/ankle)
 
-- [The Elbow & Forearm](https://veteransbenefitskb.com/elbowforearm)
+- [The Elbow & Forearm](https://www.veteransbenefitskb.com/elbowforearm)
 
-- [The Foot](https://veteransbenefitskb.com/foot)
+- [The Foot](https://www.veteransbenefitskb.com/foot)
 
-- [The Hand](https://veteransbenefitskb.com/hand)
+- [The Hand](https://www.veteransbenefitskb.com/hand)
 
-- [The Hip & Thigh](https://veteransbenefitskb.com/hipthigh)
+- [The Hip & Thigh](https://www.veteransbenefitskb.com/hipthigh)
 
-- [The Knee & Lower Leg](https://veteransbenefitskb.com/kneeleg)
+- [The Knee & Lower Leg](https://www.veteransbenefitskb.com/kneeleg)
 
-- [The Ribs](https://veteransbenefitskb.com/ribs)
+- [The Ribs](https://www.veteransbenefitskb.com/ribs)
 
-- [The Skull](https://veteransbenefitskb.com/skull)
+- [The Skull](https://www.veteransbenefitskb.com/skull)
 
-- [The Shoulder & Arm](https://veteransbenefitskb.com/shoulderarm)
+- [The Shoulder & Arm](https://www.veteransbenefitskb.com/shoulderarm)
 
-- [The Spine](https://veteransbenefitskb.com/spine)
+- [The Spine](https://www.veteransbenefitskb.com/spine)
 
-- [The Wrist](https://veteransbenefitskb.com/wrist)
+- [The Wrist](https://www.veteransbenefitskb.com/wrist)
 
 <!-- Chunk 375/1206 | Heading: Ratings Involving The Bones, Tendons, and Joints | Words: 112 -->
 
@@ -8301,7 +8301,7 @@ The majority of the ratings within are based upon the Veteran's limitation of ra
 
 Cancers are largely rated on an active or not basis. Tumors are rated by their effect of their placement.
 
-- [Cancers and Tumors](https://veteransbenefitskb.com/mscancer)
+- [Cancers and Tumors](https://www.veteransbenefitskb.com/mscancer)
 
 [Return to top](https://www.veteransbenefitskb.com/msindex#top)
 
@@ -8313,7 +8313,7 @@ Cancers are largely rated on an active or not basis. Tumors are rated by their e
 
 Diseases include: Arthritis, bursitis, caisson disease, compartment syndrome, enosynovitis, fibromyalgia, gout, osteomalacia, ostemyelitis, osteoporosis, rhabdomyolysis, synovitis, and tuberculosis.
 
-- [Diseases](https://veteransbenefitskb.com/msdiseases)
+- [Diseases](https://www.veteransbenefitskb.com/msdiseases)
 
 [Return to top](https://www.veteransbenefitskb.com/msindex#top)
 
@@ -8325,19 +8325,19 @@ Diseases include: Arthritis, bursitis, caisson disease, compartment syndrome, en
 
 Theses ratings are based upon the severity of injury to the muscle itself. Most Veterans are **NOT** rated under this schedule.
 
-- [The Face](https://veteransbenefitskb.com/facemuscles)
+- [The Face](https://www.veteransbenefitskb.com/facemuscles)
 
-- [The Forearm and Hand](https://veteransbenefitskb.com/fhmuscles)
+- [The Forearm and Hand](https://www.veteransbenefitskb.com/fhmuscles)
 
-- [Hernias](https://veteransbenefitskb.com/musclehernia)
+- [Hernias](https://www.veteransbenefitskb.com/musclehernia)
 
-- [The Lower Leg and Foot](https://veteransbenefitskb.com/llfootmuscles)
+- [The Lower Leg and Foot](https://www.veteransbenefitskb.com/llfootmuscles)
 
-- [The Buttock, Hip, and Thigh](https://veteransbenefitskb.com/bhtmuscles)
+- [The Buttock, Hip, and Thigh](https://www.veteransbenefitskb.com/bhtmuscles)
 
-- [The Shoulder, and Upper Arm](https://veteransbenefitskb.com/shmuscles)
+- [The Shoulder, and Upper Arm](https://www.veteransbenefitskb.com/shmuscles)
 
-- [The Torso and Neck](https://veteransbenefitskb.com/tnmuscles)
+- [The Torso and Neck](https://www.veteransbenefitskb.com/tnmuscles)
 
 [Return to top](https://www.veteransbenefitskb.com/msindex#top)
 
@@ -8349,14 +8349,14 @@ Theses ratings are based upon the severity of injury to the muscle itself. Most 
 
 |     |     |
 | --- | --- |
-| \> Cariovascular System\> Arteries & Veins\> Blood\> Heart | \> [Conditions that the VA will **NOT** Rate](https://veteransbenefitskb.com/norate)  |
-| \> [Dental and Oral](https://veteransbenefitskb.com/mouthsystem)  | \> [Digestive System](https://veteransbenefitskb.com/digsystem)  |
-| \> [Endocrine System](https://veteransbenefitskb.com/endsystem)  | \> [Female Reproductive System](https://veteransbenefitskb.com/femalesystem)  |
-| \> [Genitourinary System](https://veteransbenefitskb.com/gensystem)  | \> Hematologic and Lymphatic Systems\> Blood\> Breasts |
-| \> [Infectious Diseases and Immune Disorders](https://veteransbenefitskb.com/infect)  | \> [Mental Disorders](https://veteransbenefitskb.com/mental)  |
+| \> Cariovascular System\> Arteries & Veins\> Blood\> Heart | \> [Conditions that the VA will **NOT** Rate](https://www.veteransbenefitskb.com/norate)  |
+| \> [Dental and Oral](https://www.veteransbenefitskb.com/mouthsystem)  | \> [Digestive System](https://www.veteransbenefitskb.com/digsystem)  |
+| \> [Endocrine System](https://www.veteransbenefitskb.com/endsystem)  | \> [Female Reproductive System](https://www.veteransbenefitskb.com/femalesystem)  |
+| \> [Genitourinary System](https://www.veteransbenefitskb.com/gensystem)  | \> Hematologic and Lymphatic Systems\> Blood\> Breasts |
+| \> [Infectious Diseases and Immune Disorders](https://www.veteransbenefitskb.com/infect)  | \> [Mental Disorders](https://www.veteransbenefitskb.com/mental)  |
 | \> Musculoskeletal System\> Ankle\> Elbow & Forearm\> Foot\> Hand\> Hip & Thigh\> Knee & Lower Leg\> Ribs\> Skull\> Shoulder & Arm\> Spine\> Wrist\> Cancers and Tumors\> Diseases\> Face\> Forearm and Hand\> Hernias\> Lower Leg and Foot\> Buttock, Hip, and Thigh\> Shoulder, and Upper Arm\> Torso and Neck | \> Nervous System\> Cranial Nerves\> Central Nervous System\> Lower Back and Legs\> Upper Back and Arms\> Traumatic Brain Injuries |
-| \> [Nutritional Deficiencies](https://veteransbenefitskb.com/nutritional)  | \> [Respiratory System](https://veteransbenefitskb.com/airsystem)  |
-| \> Senses\> Ears\> Eyes\> Taste/Smell | \> [Skin](https://veteransbenefitskb.com/skin)  |
+| \> [Nutritional Deficiencies](https://www.veteransbenefitskb.com/nutritional)  | \> [Respiratory System](https://www.veteransbenefitskb.com/airsystem)  |
+| \> Senses\> Ears\> Eyes\> Taste/Smell | \> [Skin](https://www.veteransbenefitskb.com/skin)  |
 
 <!-- Chunk 379/1206 | Heading: [Rating Schedule Index Navigation](https://www.veteransbenefitskb.com/ratingsindex) | Words: 165 -->
 
@@ -8422,45 +8422,45 @@ Open Menu
 
 Featured
 
-[\> Master Condition List](https://veteransbenefitskb.com/master)
+[\> Master Condition List](https://www.veteransbenefitskb.com/master)
 
-[\> Federal Benefits List by Combined Ratings](https://veteransbenefitskb.com/combinedbenefits)
+[\> Federal Benefits List by Combined Ratings](https://www.veteransbenefitskb.com/combinedbenefits)
 
-[\> Insider Insight into VBA Claim Processing](https://veteransbenefitskb.com/insight)
+[\> Insider Insight into VBA Claim Processing](https://www.veteransbenefitskb.com/insight)
 
-[\> Rating Schedule Index](https://veteransbenefitskb.com/ratingsindex)
+[\> Rating Schedule Index](https://www.veteransbenefitskb.com/ratingsindex)
 
-[\> Filing a VA Disability Claim](https://veteransbenefitskb.com/vaclaim)
+[\> Filing a VA Disability Claim](https://www.veteransbenefitskb.com/vaclaim)
 
-[\> Filing an Appeal](https://veteransbenefitskb.com/appeals)
+[\> Filing an Appeal](https://www.veteransbenefitskb.com/appeals)
 
 * * *
 
 [Categories](https://www.veteransbenefitskb.com/hand)
 
-> [Death/Survivor Benefits](https://veteransbenefitskb.com/#ds)
+> [Death/Survivor Benefits](https://www.veteransbenefitskb.com/#ds)
 
-\> [Education &](https://veteransbenefitskb.com/#ee)  [Employment](https://veteransbenefitskb.com/#ee)
+\> [Education &](https://www.veteransbenefitskb.com/#ee)  [Employment](https://www.veteransbenefitskb.com/#ee)
 
-\> [Health care](https://veteransbenefitskb.com/#healthcare)
+\> [Health care](https://www.veteransbenefitskb.com/#healthcare)
 
-\> [Housing](https://veteransbenefitskb.com/#housing)
+\> [Housing](https://www.veteransbenefitskb.com/#housing)
 
-\> [Miscellaneous](https://veteransbenefitskb.com/#misc)
+\> [Miscellaneous](https://www.veteransbenefitskb.com/#misc)
 
-\> [VA Disability Compensation](https://veteransbenefitskb.com/#va)
+\> [VA Disability Compensation](https://www.veteransbenefitskb.com/#va)
 
-\> [VA Pension](https://veteransbenefitskb.com/#pension)
+\> [VA Pension](https://www.veteransbenefitskb.com/#pension)
 
 This schedule can get a little complicated. So please carefully examine the tables.
 
 **IMPORTANT NOTE:**
 
-- For the purposes of Range of Motion (ROM), the examiner/rater are **REQUIRED** to consider flair ups in your conditions. Meaning, if you do not happen to have an [Examination](https://veteransbenefitskb.com/cnp)  on your worst day, the examiner is required to reasonably estimate your impairment on your worst day! The rater is required to use this estimate, unless your ROM is somehow noted as being worse during ROM testing during the exam. In any event, the rater is to use the most impaired ROM measurements noted by the examiner!
+- For the purposes of Range of Motion (ROM), the examiner/rater are **REQUIRED** to consider flair ups in your conditions. Meaning, if you do not happen to have an [Examination](https://www.veteransbenefitskb.com/cnp)  on your worst day, the examiner is required to reasonably estimate your impairment on your worst day! The rater is required to use this estimate, unless your ROM is somehow noted as being worse during ROM testing during the exam. In any event, the rater is to use the most impaired ROM measurements noted by the examiner!
 
 **AMPUTATION RULE**
 
-- Veteran **CANNOT** be rated higher for disabilities of a hand that would [Combine](https://veteransbenefitskb.com/vamath)  to be more than a Veteran who has had an amputation of their hand.
+- Veteran **CANNOT** be rated higher for disabilities of a hand that would [Combine](https://www.veteransbenefitskb.com/vamath)  to be more than a Veteran who has had an amputation of their hand.
 
 - Which would be 70% for the dominant hand and 60% for the non-dominant hand.
 
@@ -8640,7 +8640,7 @@ When a Veteran has had a single finger (wholly or partially) amputated.
 
 - Fingers must be from the same hand. You **CANNOT** add fingers from your other hand!
 
-- If one of the four fingers amputated is the thumb. The Veteran is entitled to [Special Monthly Compensation](https://veteransbenefitskb.com/smc#k)
+- If one of the four fingers amputated is the thumb. The Veteran is entitled to [Special Monthly Compensation](https://www.veteransbenefitskb.com/smc#k)
 
 * * *
 
@@ -8677,7 +8677,7 @@ When a Veteran has had a single finger (wholly or partially) amputated.
 
 - Fingers must be from the same hand. You **CANNOT** add fingers from your other hand!
 
-- The Veteran is entitled to [Special Monthly Compensation](https://veteransbenefitskb.com/smc#k)
+- The Veteran is entitled to [Special Monthly Compensation](https://www.veteransbenefitskb.com/smc#k)
 
 * * *
 
@@ -8880,11 +8880,11 @@ NOTE:
 
 **IMPORTANT NOTE:**
 
-- The Veteran is entitled to [Special Monthly Compensation](https://veteransbenefitskb.com/smc#k)
+- The Veteran is entitled to [Special Monthly Compensation](https://www.veteransbenefitskb.com/smc#k)
 
 **PYRAMIDING NOTE:**
 
-- If loss of use is caused by a nerve condition the Veteran will receive a single rating under this schedule _or_ under the appropriate [Nerve schedule](https://veteransbenefitskb.com/upnerves)  whichever gives the higher rating.
+- If loss of use is caused by a nerve condition the Veteran will receive a single rating under this schedule _or_ under the appropriate [Nerve schedule](https://www.veteransbenefitskb.com/upnerves)  whichever gives the higher rating.
 
 | Both Hands Rating | Dominant Hand Rating | Non-Dominant Hand Rating |
 | --- | --- | --- |
@@ -8992,7 +8992,7 @@ The only motion the VA cares about with the thumb is how close the thumb can com
 
 When a Veteran's arthritis does not warrant a rating based upon ROM or other miscellaneous situations. The Veteran's condition will be rated under degenerative arthritis.
 
-- For an explanation of arthritis ratings click [HERE](https://veteransbenefitskb.com/msdiseases)
+- For an explanation of arthritis ratings click [HERE](https://www.veteransbenefitskb.com/msdiseases)
 
 [Return to top](https://www.veteransbenefitskb.com/hand#top)
 
@@ -9002,9 +9002,9 @@ When a Veteran's arthritis does not warrant a rating based upon ROM or other mis
 
 ## **Disability Benefits Questionnaire (DBQs)**
 
-To get an idea of how a [C&P exam](https://veteransbenefitskb.com/cnp)  will be conducted it is recommended that the Veteran look at the applicable DBQ.
+To get an idea of how a [C&P exam](https://www.veteransbenefitskb.com/cnp)  will be conducted it is recommended that the Veteran look at the applicable DBQ.
 
-Veteran's may ask a physician to complete a DBQ on their behalf to submit with their claim. For more information on DBQs click [HERE](https://veteransbenefitskb.com/dbq)
+Veteran's may ask a physician to complete a DBQ on their behalf to submit with their claim. For more information on DBQs click [HERE](https://www.veteransbenefitskb.com/dbq)
 
 - [Hand & Fingers](https://www.benefits.va.gov/compensation/docs/Hand_and_Finger.pdf)
 
@@ -9016,7 +9016,7 @@ Veteran's may ask a physician to complete a DBQ on their behalf to submit with t
 
 ## **Having Trouble Finding Your Condition?**
 
-- Click [HERE](https://veteransbenefitskb.com/master)  to view the Master Condition List.
+- Click [HERE](https://www.veteransbenefitskb.com/master)  to view the Master Condition List.
 
 [Return to top](https://www.veteransbenefitskb.com/hand#top)
 
@@ -9050,14 +9050,14 @@ Veteran's may ask a physician to complete a DBQ on their behalf to submit with t
 
 |     |     |
 | --- | --- |
-| \> Cariovascular System\> Arteries & Veins\> Blood\> Heart | \> [Conditions that the VA will **NOT** Rate](https://veteransbenefitskb.com/norate)  |
-| \> [Dental and Oral](https://veteransbenefitskb.com/mouthsystem)  | \> [Digestive System](https://veteransbenefitskb.com/digsystem)  |
-| \> [Endocrine System](https://veteransbenefitskb.com/endsystem)  | \> [Female Reproductive System](https://veteransbenefitskb.com/femalesystem)  |
-| \> [Genitourinary System](https://veteransbenefitskb.com/gensystem)  | \> Hematologic and Lymphatic Systems\> Blood\> Breasts |
-| \> [Infectious Diseases and Immune Disorders](https://veteransbenefitskb.com/infect)  | \> [Mental Disorders](https://veteransbenefitskb.com/mental)  |
+| \> Cariovascular System\> Arteries & Veins\> Blood\> Heart | \> [Conditions that the VA will **NOT** Rate](https://www.veteransbenefitskb.com/norate)  |
+| \> [Dental and Oral](https://www.veteransbenefitskb.com/mouthsystem)  | \> [Digestive System](https://www.veteransbenefitskb.com/digsystem)  |
+| \> [Endocrine System](https://www.veteransbenefitskb.com/endsystem)  | \> [Female Reproductive System](https://www.veteransbenefitskb.com/femalesystem)  |
+| \> [Genitourinary System](https://www.veteransbenefitskb.com/gensystem)  | \> Hematologic and Lymphatic Systems\> Blood\> Breasts |
+| \> [Infectious Diseases and Immune Disorders](https://www.veteransbenefitskb.com/infect)  | \> [Mental Disorders](https://www.veteransbenefitskb.com/mental)  |
 | \> Musculoskeletal System\> Ankle\> Elbow & Forearm\> Foot\> Hand\> Hip & Thigh\> Knee & Lower Leg\> Ribs\> Skull\> Shoulder & Arm\> Spine\> Wrist\> Cancers and Tumors\> Diseases\> Face\> Forearm and Hand\> Hernias\> Lower Leg and Foot\> Buttock, Hip, and Thigh\> Shoulder, and Upper Arm\> Torso and Neck | \> Nervous System\> Cranial Nerves\> Central Nervous System\> Lower Back and Legs\> Upper Back and Arms\> Traumatic Brain Injuries |
-| \> [Nutritional Deficiencies](https://veteransbenefitskb.com/nutritional)  | \> [Respiratory System](https://veteransbenefitskb.com/airsystem)  |
-| \> Senses\> Ears\> Eyes\> Taste/Smell | \> [Skin](https://veteransbenefitskb.com/skin)  |
+| \> [Nutritional Deficiencies](https://www.veteransbenefitskb.com/nutritional)  | \> [Respiratory System](https://www.veteransbenefitskb.com/airsystem)  |
+| \> Senses\> Ears\> Eyes\> Taste/Smell | \> [Skin](https://www.veteransbenefitskb.com/skin)  |
 
 <!-- Chunk 406/1206 | Heading: [Rating Schedule Index Navigation](https://www.veteransbenefitskb.com/ratingsindex) | Words: 165 -->
 
@@ -9123,39 +9123,39 @@ Open Menu
 
 Featured
 
-[\> Master Condition List](https://veteransbenefitskb.com/master)
+[\> Master Condition List](https://www.veteransbenefitskb.com/master)
 
-[\> Federal Benefits List by Combined Ratings](https://veteransbenefitskb.com/combinedbenefits)
+[\> Federal Benefits List by Combined Ratings](https://www.veteransbenefitskb.com/combinedbenefits)
 
-[\> Insider Insight into VBA Claim Processing](https://veteransbenefitskb.com/insight)
+[\> Insider Insight into VBA Claim Processing](https://www.veteransbenefitskb.com/insight)
 
-[\> Rating Schedule Index](https://veteransbenefitskb.com/ratingsindex)
+[\> Rating Schedule Index](https://www.veteransbenefitskb.com/ratingsindex)
 
-[\> Filing a VA Disability Claim](https://veteransbenefitskb.com/vaclaim)
+[\> Filing a VA Disability Claim](https://www.veteransbenefitskb.com/vaclaim)
 
-[\> Filing an Appeal](https://veteransbenefitskb.com/appeals)
+[\> Filing an Appeal](https://www.veteransbenefitskb.com/appeals)
 
 * * *
 
 [Categories](https://www.veteransbenefitskb.com/hipthigh)
 
-> [Death/Survivor Benefits](https://veteransbenefitskb.com/#ds)
+> [Death/Survivor Benefits](https://www.veteransbenefitskb.com/#ds)
 
-\> [Education &](https://veteransbenefitskb.com/#ee)  [Employment](https://veteransbenefitskb.com/#ee)
+\> [Education &](https://www.veteransbenefitskb.com/#ee)  [Employment](https://www.veteransbenefitskb.com/#ee)
 
-\> [Health care](https://veteransbenefitskb.com/#healthcare)
+\> [Health care](https://www.veteransbenefitskb.com/#healthcare)
 
-\> [Housing](https://veteransbenefitskb.com/#housing)
+\> [Housing](https://www.veteransbenefitskb.com/#housing)
 
-\> [Miscellaneous](https://veteransbenefitskb.com/#misc)
+\> [Miscellaneous](https://www.veteransbenefitskb.com/#misc)
 
-\> [VA Disability Compensation](https://veteransbenefitskb.com/#va)
+\> [VA Disability Compensation](https://www.veteransbenefitskb.com/#va)
 
-\> [VA Pension](https://veteransbenefitskb.com/#pension)
+\> [VA Pension](https://www.veteransbenefitskb.com/#pension)
 
 **IMPORTANT NOTE:**
 
-- For the purposes of Range of Motion (ROM), the examiner/rater are **REQUIRED** to consider flair ups in your conditions. Meaning, if you do not happen to have an [Examination](https://veteransbenefitskb.com/cnp)  on your worst day, the examiner is required to reasonably estimate your impairment on your worst day! The rater is required to use this estimate, unless your ROM is somehow noted as being worse during ROM testing during the exam. In any event, the rater is to use the most impaired ROM measurements noted by the examiner!
+- For the purposes of Range of Motion (ROM), the examiner/rater are **REQUIRED** to consider flair ups in your conditions. Meaning, if you do not happen to have an [Examination](https://www.veteransbenefitskb.com/cnp)  on your worst day, the examiner is required to reasonably estimate your impairment on your worst day! The rater is required to use this estimate, unless your ROM is somehow noted as being worse during ROM testing during the exam. In any event, the rater is to use the most impaired ROM measurements noted by the examiner!
 
 * * *
 
@@ -9165,7 +9165,7 @@ Featured
 
 ## **Amputation Rule**
 
-Veterans **CANNOT** have a total [Combined](https://veteransbenefitskb.com/vamath)  rating for places in the body higher than a Veteran who had those areas amputated. IE A veteran who has various disabilities in their knee, ankle, and foot; Those ratings cannot combine to be more than a Veteran who had their leg amputated just above the knee.
+Veterans **CANNOT** have a total [Combined](https://www.veteransbenefitskb.com/vamath)  rating for places in the body higher than a Veteran who had those areas amputated. IE A veteran who has various disabilities in their knee, ankle, and foot; Those ratings cannot combine to be more than a Veteran who had their leg amputated just above the knee.
 
 * * *
 
@@ -9175,7 +9175,7 @@ Veterans **CANNOT** have a total [Combined](https://veteransbenefitskb.com/vamat
 
 ## **5160, 5161, 5162 Amputation**
 
-Veteran is entitled to [Special Monthly Compensation](https://veteransbenefitskb.com/smc)
+Veteran is entitled to [Special Monthly Compensation](https://www.veteransbenefitskb.com/smc)
 
 | Rating | Degree of Amputation |
 | --- | --- |
@@ -9202,7 +9202,7 @@ When the Hip joint cannot move.
 
 NOTE:
 
-- \*Veteran is entitled to [Special Monthly Compensation](https://veteransbenefitskb.com/smc)
+- \*Veteran is entitled to [Special Monthly Compensation](https://www.veteransbenefitskb.com/smc)
 
 | Rating | Description |
 | --- | --- |
@@ -9222,7 +9222,7 @@ NOTE:
 
 - If the hip joint had **ANY** other musculoskeletal hip evaluations (ankylosis, range of motion, etc.) they **WILL BE** discontinued the date of the procedure!
 
-- If **AFTER**, your temp 100% ends you think your evaluation should be higher you **CAN** file an [Increase claim](https://veteransbenefitskb.com/vaclaim)
+- If **AFTER**, your temp 100% ends you think your evaluation should be higher you **CAN** file an [Increase claim](https://www.veteransbenefitskb.com/vaclaim)
 
 - As hip resurfacing/not total replacement, does not have a minimum evaluation an examination after the temp 100% ends is **REQUIRED**!
 
@@ -9263,7 +9263,7 @@ NOTES:
 
 - \*Total replacement only; for VBA purposes a total replacement of the head of the femur or of the acetabulum counts.
 
-- \*\*Veteran is entitled to [Special Monthly Compensation](https://veteransbenefitskb.com/smc)
+- \*\*Veteran is entitled to [Special Monthly Compensation](https://www.veteransbenefitskb.com/smc)
 
 | Rating | Description |
 | --- | --- |
@@ -9354,7 +9354,7 @@ Longest bone in the body.
 
 NOTE:
 
-- For Veterans who's femur bone healed improperly. It will be rated in how it affects the hip or [Knee](https://veteransbenefitskb.com/kneeleg)  Whichever rating is higher
+- For Veterans who's femur bone healed improperly. It will be rated in how it affects the hip or [Knee](https://www.veteransbenefitskb.com/kneeleg)  Whichever rating is higher
 
 | Rating | Description |
 | --- | --- |
@@ -9380,7 +9380,7 @@ NOTES:
 
 - Measured from anterior superior spine of the ilium to the internal malleolus of the tibia.
 
-- \*Entitles the Veteran to [Special Monthly Compensation](https://veteransbenefitskb.com/smc)
+- \*Entitles the Veteran to [Special Monthly Compensation](https://www.veteransbenefitskb.com/smc)
 
 | Rating | Shortening of |
 | --- | --- |
@@ -9427,7 +9427,7 @@ The Veteran will **NOT** receive an additional rating if they fit the criteria o
 
 When a Veteran's arthritis does not warrant a rating based upon ROM or other miscellaneous situations. The Veteran's condition will be rated under degenerative arthritis.
 
-- For an explanation of arthritis ratings click [HERE](https://veteransbenefitskb.com/msdiseases#5003)
+- For an explanation of arthritis ratings click [HERE](https://www.veteransbenefitskb.com/msdiseases#5003)
 
 [Return to top](https://www.veteransbenefitskb.com/hipthigh#top)
 
@@ -9437,9 +9437,9 @@ When a Veteran's arthritis does not warrant a rating based upon ROM or other mis
 
 ## **Disability Benefits Questionnaire (DBQs)**
 
-To get an idea of how a [C&P exam](https://veteransbenefitskb.com/cnp)  will be conducted it is recommended that the Veteran look at the applicable DBQ.
+To get an idea of how a [C&P exam](https://www.veteransbenefitskb.com/cnp)  will be conducted it is recommended that the Veteran look at the applicable DBQ.
 
-Veteran's may ask a physician to complete a DBQ on their behalf to submit with their claim. For more information on DBQs click [HERE](https://veteransbenefitskb.com/dbq)
+Veteran's may ask a physician to complete a DBQ on their behalf to submit with their claim. For more information on DBQs click [HERE](https://www.veteransbenefitskb.com/dbq)
 
 - [Hip and Thigh](https://www.benefits.va.gov/compensation/docs/Hip_and_Thigh.pdf)
 
@@ -9451,7 +9451,7 @@ Veteran's may ask a physician to complete a DBQ on their behalf to submit with t
 
 ## **Having Trouble Finding Your Condition?**
 
-- Click [HERE](https://veteransbenefitskb.com/master)  to view the Master Condition List.
+- Click [HERE](https://www.veteransbenefitskb.com/master)  to view the Master Condition List.
 
 [Return to top](https://www.veteransbenefitskb.com/hipthigh#top)
 
@@ -9475,14 +9475,14 @@ Veteran's may ask a physician to complete a DBQ on their behalf to submit with t
 
 |     |     |
 | --- | --- |
-| \> Cariovascular System\> Arteries & Veins\> Blood\> Heart | \> [Conditions that the VA will **NOT** Rate](https://veteransbenefitskb.com/norate)  |
-| \> [Dental and Oral](https://veteransbenefitskb.com/mouthsystem)  | \> [Digestive System](https://veteransbenefitskb.com/digsystem)  |
-| \> [Endocrine System](https://veteransbenefitskb.com/endsystem)  | \> [Female Reproductive System](https://veteransbenefitskb.com/femalesystem)  |
-| \> [Genitourinary System](https://veteransbenefitskb.com/gensystem)  | \> Hematologic and Lymphatic Systems\> Blood\> Breasts |
-| \> [Infectious Diseases and Immune Disorders](https://veteransbenefitskb.com/infect)  | \> [Mental Disorders](https://veteransbenefitskb.com/mental)  |
+| \> Cariovascular System\> Arteries & Veins\> Blood\> Heart | \> [Conditions that the VA will **NOT** Rate](https://www.veteransbenefitskb.com/norate)  |
+| \> [Dental and Oral](https://www.veteransbenefitskb.com/mouthsystem)  | \> [Digestive System](https://www.veteransbenefitskb.com/digsystem)  |
+| \> [Endocrine System](https://www.veteransbenefitskb.com/endsystem)  | \> [Female Reproductive System](https://www.veteransbenefitskb.com/femalesystem)  |
+| \> [Genitourinary System](https://www.veteransbenefitskb.com/gensystem)  | \> Hematologic and Lymphatic Systems\> Blood\> Breasts |
+| \> [Infectious Diseases and Immune Disorders](https://www.veteransbenefitskb.com/infect)  | \> [Mental Disorders](https://www.veteransbenefitskb.com/mental)  |
 | \> Musculoskeletal System\> Ankle\> Elbow & Forearm\> Foot\> Hand\> Hip & Thigh\> Knee & Lower Leg\> Ribs\> Skull\> Shoulder & Arm\> Spine\> Wrist\> Cancers and Tumors\> Diseases\> Face\> Forearm and Hand\> Hernias\> Lower Leg and Foot\> Buttock, Hip, and Thigh\> Shoulder, and Upper Arm\> Torso and Neck | \> Nervous System\> Cranial Nerves\> Central Nervous System\> Lower Back and Legs\> Upper Back and Arms\> Traumatic Brain Injuries |
-| \> [Nutritional Deficiencies](https://veteransbenefitskb.com/nutritional)  | \> [Respiratory System](https://veteransbenefitskb.com/airsystem)  |
-| \> Senses\> Ears\> Eyes\> Taste/Smell | \> [Skin](https://veteransbenefitskb.com/skin)  |
+| \> [Nutritional Deficiencies](https://www.veteransbenefitskb.com/nutritional)  | \> [Respiratory System](https://www.veteransbenefitskb.com/airsystem)  |
+| \> Senses\> Ears\> Eyes\> Taste/Smell | \> [Skin](https://www.veteransbenefitskb.com/skin)  |
 
 <!-- Chunk 426/1206 | Heading: [Rating Schedule Index Navigation](https://www.veteransbenefitskb.com/ratingsindex) | Words: 165 -->
 
@@ -9548,39 +9548,39 @@ Open Menu
 
 Featured
 
-[\> Master Condition List](https://veteransbenefitskb.com/master)
+[\> Master Condition List](https://www.veteransbenefitskb.com/master)
 
-[\> Federal Benefits List by Combined Ratings](https://veteransbenefitskb.com/combinedbenefits)
+[\> Federal Benefits List by Combined Ratings](https://www.veteransbenefitskb.com/combinedbenefits)
 
-[\> Insider Insight into VBA Claim Processing](https://veteransbenefitskb.com/insight)
+[\> Insider Insight into VBA Claim Processing](https://www.veteransbenefitskb.com/insight)
 
-[\> Rating Schedule Index](https://veteransbenefitskb.com/ratingsindex)
+[\> Rating Schedule Index](https://www.veteransbenefitskb.com/ratingsindex)
 
-[\> Filing a VA Disability Claim](https://veteransbenefitskb.com/vaclaim)
+[\> Filing a VA Disability Claim](https://www.veteransbenefitskb.com/vaclaim)
 
-[\> Filing an Appeal](https://veteransbenefitskb.com/appeals)
+[\> Filing an Appeal](https://www.veteransbenefitskb.com/appeals)
 
 * * *
 
 [Categories](https://www.veteransbenefitskb.com/kneeleg)
 
-> [Death/Survivor Benefits](https://veteransbenefitskb.com/#ds)
+> [Death/Survivor Benefits](https://www.veteransbenefitskb.com/#ds)
 
-\> [Education &](https://veteransbenefitskb.com/#ee)  [Employment](https://veteransbenefitskb.com/#ee)
+\> [Education &](https://www.veteransbenefitskb.com/#ee)  [Employment](https://www.veteransbenefitskb.com/#ee)
 
-\> [Health care](https://veteransbenefitskb.com/#healthcare)
+\> [Health care](https://www.veteransbenefitskb.com/#healthcare)
 
-\> [Housing](https://veteransbenefitskb.com/#housing)
+\> [Housing](https://www.veteransbenefitskb.com/#housing)
 
-\> [Miscellaneous](https://veteransbenefitskb.com/#misc)
+\> [Miscellaneous](https://www.veteransbenefitskb.com/#misc)
 
-\> [VA Disability Compensation](https://veteransbenefitskb.com/#va)
+\> [VA Disability Compensation](https://www.veteransbenefitskb.com/#va)
 
-\> [VA Pension](https://veteransbenefitskb.com/#pension)
+\> [VA Pension](https://www.veteransbenefitskb.com/#pension)
 
 **IMPORTANT NOTE:**
 
-- For the purposes of Range of Motion (ROM), the examiner/rater are **REQUIRED** to consider flair ups in your conditions. Meaning, if you do not happen to have an [Examination](https://veteransbenefitskb.com/cnp)  on your worst day, the examiner is required to reasonably estimate your impairment on your worst day! The rater is required to use this estimate, unless your ROM is somehow noted as being worse during ROM testing during the exam. In any event, the rater is to use the most impaired ROM measurements noted by the examiner!
+- For the purposes of Range of Motion (ROM), the examiner/rater are **REQUIRED** to consider flair ups in your conditions. Meaning, if you do not happen to have an [Examination](https://www.veteransbenefitskb.com/cnp)  on your worst day, the examiner is required to reasonably estimate your impairment on your worst day! The rater is required to use this estimate, unless your ROM is somehow noted as being worse during ROM testing during the exam. In any event, the rater is to use the most impaired ROM measurements noted by the examiner!
 
 * * *
 
@@ -9590,11 +9590,11 @@ Featured
 
 ## **5163, 5164, 5165 Amputation**
 
-Veterans must be aware of the _Amputation Rule_. It boils down to a Veteran cannot be rated higher for disabilities of a limb that would [Combine](https://veteransbenefitskb.com/vamath)  to be more than a Veteran who has had an amputation that resulted in a loss of those areas.
+Veterans must be aware of the _Amputation Rule_. It boils down to a Veteran cannot be rated higher for disabilities of a limb that would [Combine](https://www.veteransbenefitskb.com/vamath)  to be more than a Veteran who has had an amputation that resulted in a loss of those areas.
 
 NOTE:
 
-- Veterans who have had these amputations are entitled to [Special Monthly Compensation](https://veteransbenefitskb.com/smc)
+- Veterans who have had these amputations are entitled to [Special Monthly Compensation](https://www.veteransbenefitskb.com/smc)
 
 | Rating | Degree of Amputation |
 | --- | --- |
@@ -9629,7 +9629,7 @@ When the Knee joint cannot move.
 
 - If the knee joint had **ANY** other musculoskeletal knee evaluations (ankylosis, instability, range of motion, etc.) they **WILL BE** discontinued the date of the procedure!
 
-- If **AFTER**, your temp 100% ends you think your evaluation should be higher you **CAN** file an [Increase claim](https://veteransbenefitskb.com/vaclaim)
+- If **AFTER**, your temp 100% ends you think your evaluation should be higher you **CAN** file an [Increase claim](https://www.veteransbenefitskb.com/vaclaim)
 
 - As knee resurfacing does not have a minimum evaluation an examination after the temp 100% ends is **REQUIRED**!
 
@@ -9876,7 +9876,7 @@ If the bones healed improperly or never heal at all.
 
 | Rating | Description |
 | --- | --- |
-| ?% | If either bone healed improperly. It will be rated by how it affects ROM of the knee _or_ [Ankle joints.](https://veteransbenefitskb.com/ankle)  |
+| ?% | If either bone healed improperly. It will be rated by how it affects ROM of the knee _or_ [Ankle joints.](https://www.veteransbenefitskb.com/ankle)  |
 | 40% | Either bone remains broken and will **NOT** heal **AND** requires a brace. |
 
 * * *
@@ -9938,7 +9938,7 @@ NOTE:
 | 50% | 3.5 to 4 inches\*. |
 | 60% | Over 4 inches\*. |
 
-\*Entitles the Veteran to [Special Monthly Compensation](https://veteransbenefitskb.com/smc)
+\*Entitles the Veteran to [Special Monthly Compensation](https://www.veteransbenefitskb.com/smc)
 
 [Return to top](https://www.veteransbenefitskb.com/kneeleg#top)
 
@@ -9976,7 +9976,7 @@ The Veteran will **NOT** receive an additional rating if they fit the criteria o
 
 When a Veteran's arthritis does not warrant a rating based upon ROM or other miscellaneous situations. The Veteran's condition will be rated under degenerative arthritis.
 
-- For an explanation of arthritis ratings click [HERE](https://veteransbenefitskb.com/msdiseases)
+- For an explanation of arthritis ratings click [HERE](https://www.veteransbenefitskb.com/msdiseases)
 
 [Return to top](https://www.veteransbenefitskb.com/kneeleg#top)
 
@@ -9986,9 +9986,9 @@ When a Veteran's arthritis does not warrant a rating based upon ROM or other mis
 
 ## **Disability Benefits Questionnaire (DBQs)**
 
-To get an idea of how a [C&P exam](https://veteransbenefitskb.com/cnp)  will be conducted it is recommended that the Veteran look at the applicable DBQ.
+To get an idea of how a [C&P exam](https://www.veteransbenefitskb.com/cnp)  will be conducted it is recommended that the Veteran look at the applicable DBQ.
 
-Veteran's may ask a physician to complete a DBQ on their behalf to submit with their claim. For more information on DBQs click [HERE](https://veteransbenefitskb.com/dbq)
+Veteran's may ask a physician to complete a DBQ on their behalf to submit with their claim. For more information on DBQs click [HERE](https://www.veteransbenefitskb.com/dbq)
 
 - [Knee & Lower Leg](https://www.benefits.va.gov/compensation/docs/Knee_and_Lower_Leg.pdf)
 
@@ -10000,7 +10000,7 @@ Veteran's may ask a physician to complete a DBQ on their behalf to submit with t
 
 ## **Having Trouble Finding Your Condition?**
 
-- Click [HERE](https://veteransbenefitskb.com/master)  to view the Master Condition List.
+- Click [HERE](https://www.veteransbenefitskb.com/master)  to view the Master Condition List.
 
 [Return to top](https://www.veteransbenefitskb.com/kneeleg#top)
 
@@ -10032,14 +10032,14 @@ Veteran's may ask a physician to complete a DBQ on their behalf to submit with t
 
 |     |     |
 | --- | --- |
-| \> Cariovascular System\> Arteries & Veins\> Blood\> Heart | \> [Conditions that the VA will **NOT** Rate](https://veteransbenefitskb.com/norate)  |
-| \> [Dental and Oral](https://veteransbenefitskb.com/mouthsystem)  | \> [Digestive System](https://veteransbenefitskb.com/digsystem)  |
-| \> [Endocrine System](https://veteransbenefitskb.com/endsystem)  | \> [Female Reproductive System](https://veteransbenefitskb.com/femalesystem)  |
-| \> [Genitourinary System](https://veteransbenefitskb.com/gensystem)  | \> Hematologic and Lymphatic Systems\> Blood\> Breasts |
-| \> [Infectious Diseases and Immune Disorders](https://veteransbenefitskb.com/infect)  | \> [Mental Disorders](https://veteransbenefitskb.com/mental)  |
+| \> Cariovascular System\> Arteries & Veins\> Blood\> Heart | \> [Conditions that the VA will **NOT** Rate](https://www.veteransbenefitskb.com/norate)  |
+| \> [Dental and Oral](https://www.veteransbenefitskb.com/mouthsystem)  | \> [Digestive System](https://www.veteransbenefitskb.com/digsystem)  |
+| \> [Endocrine System](https://www.veteransbenefitskb.com/endsystem)  | \> [Female Reproductive System](https://www.veteransbenefitskb.com/femalesystem)  |
+| \> [Genitourinary System](https://www.veteransbenefitskb.com/gensystem)  | \> Hematologic and Lymphatic Systems\> Blood\> Breasts |
+| \> [Infectious Diseases and Immune Disorders](https://www.veteransbenefitskb.com/infect)  | \> [Mental Disorders](https://www.veteransbenefitskb.com/mental)  |
 | \> Musculoskeletal System\> Ankle\> Elbow & Forearm\> Foot\> Hand\> Hip & Thigh\> Knee & Lower Leg\> Ribs\> Skull\> Shoulder & Arm\> Spine\> Wrist\> Cancers and Tumors\> Diseases\> Face\> Forearm and Hand\> Hernias\> Lower Leg and Foot\> Buttock, Hip, and Thigh\> Shoulder, and Upper Arm\> Torso and Neck | \> Nervous System\> Cranial Nerves\> Central Nervous System\> Lower Back and Legs\> Upper Back and Arms\> Traumatic Brain Injuries |
-| \> [Nutritional Deficiencies](https://veteransbenefitskb.com/nutritional)  | \> [Respiratory System](https://veteransbenefitskb.com/airsystem)  |
-| \> Senses\> Ears\> Eyes\> Taste/Smell | \> [Skin](https://veteransbenefitskb.com/skin)  |
+| \> [Nutritional Deficiencies](https://www.veteransbenefitskb.com/nutritional)  | \> [Respiratory System](https://www.veteransbenefitskb.com/airsystem)  |
+| \> Senses\> Ears\> Eyes\> Taste/Smell | \> [Skin](https://www.veteransbenefitskb.com/skin)  |
 
 <!-- Chunk 453/1206 | Heading: [Rating Schedule Index Navigation](https://www.veteransbenefitskb.com/ratingsindex) | Words: 165 -->
 
@@ -10105,35 +10105,35 @@ Open Menu
 
 Featured
 
-[\> Master Condition List](https://veteransbenefitskb.com/master)
+[\> Master Condition List](https://www.veteransbenefitskb.com/master)
 
-[\> Federal Benefits List by Combined Ratings](https://veteransbenefitskb.com/combinedbenefits)
+[\> Federal Benefits List by Combined Ratings](https://www.veteransbenefitskb.com/combinedbenefits)
 
-[\> Insider Insight into VBA Claim Processing](https://veteransbenefitskb.com/insight)
+[\> Insider Insight into VBA Claim Processing](https://www.veteransbenefitskb.com/insight)
 
-[\> Rating Schedule Index](https://veteransbenefitskb.com/ratingsindex)
+[\> Rating Schedule Index](https://www.veteransbenefitskb.com/ratingsindex)
 
-[\> Filing a VA Disability Claim](https://veteransbenefitskb.com/vaclaim)
+[\> Filing a VA Disability Claim](https://www.veteransbenefitskb.com/vaclaim)
 
-[\> Filing an Appeal](https://veteransbenefitskb.com/appeals)
+[\> Filing an Appeal](https://www.veteransbenefitskb.com/appeals)
 
 * * *
 
 [Categories](https://www.veteransbenefitskb.com/ribs)
 
-> [Death/Survivor Benefits](https://veteransbenefitskb.com/#ds)
+> [Death/Survivor Benefits](https://www.veteransbenefitskb.com/#ds)
 
-\> [Education &](https://veteransbenefitskb.com/#ee)  [Employment](https://veteransbenefitskb.com/#ee)
+\> [Education &](https://www.veteransbenefitskb.com/#ee)  [Employment](https://www.veteransbenefitskb.com/#ee)
 
-\> [Health care](https://veteransbenefitskb.com/#healthcare)
+\> [Health care](https://www.veteransbenefitskb.com/#healthcare)
 
-\> [Housing](https://veteransbenefitskb.com/#housing)
+\> [Housing](https://www.veteransbenefitskb.com/#housing)
 
-\> [Miscellaneous](https://veteransbenefitskb.com/#misc)
+\> [Miscellaneous](https://www.veteransbenefitskb.com/#misc)
 
-\> [VA Disability Compensation](https://veteransbenefitskb.com/#va)
+\> [VA Disability Compensation](https://www.veteransbenefitskb.com/#va)
 
-\> [VA Pension](https://veteransbenefitskb.com/#pension)
+\> [VA Pension](https://www.veteransbenefitskb.com/#pension)
 
 Veterans can get rated for any ribs that have been fully or partially removed.
 
@@ -10149,13 +10149,13 @@ Veterans can get rated for any ribs that have been fully or partially removed.
 
 - Veterans who have ratings for **ANY** of the following **CANNOT** receive a separate rating for the removal of ribs:
 
-- [Injuries of pleural cavity](https://veteransbenefitskb.com/musclehernia#5324)
+- [Injuries of pleural cavity](https://www.veteransbenefitskb.com/musclehernia#5324)
 
-- [Lobectomy](https://veteransbenefitskb.com/airsystem#6844)
+- [Lobectomy](https://www.veteransbenefitskb.com/airsystem#6844)
 
-- [Pneumonectomy](https://veteransbenefitskb.com/airsystem#6844)  _or_
+- [Pneumonectomy](https://www.veteransbenefitskb.com/airsystem#6844)  _or_
 
-- [Purrulent pleurisy](https://veteransbenefitskb.com/airsystem#6845)
+- [Purrulent pleurisy](https://www.veteransbenefitskb.com/airsystem#6845)
 
 | Rating | Number of Ribs Removed |
 | --- | --- |
@@ -10181,13 +10181,13 @@ Veterans can get rated for any ribs that have been fully or partially removed.
 
 - Veterans who have ratings for **ANY** of the following **CANNOT** receive a separate rating for the removal of ribs:
 
-- [Injuries of pleural cavity](https://veteransbenefitskb.com/musclehernia#5324)
+- [Injuries of pleural cavity](https://www.veteransbenefitskb.com/musclehernia#5324)
 
-- [Lobectomy](https://veteransbenefitskb.com/airsystem#6844)
+- [Lobectomy](https://www.veteransbenefitskb.com/airsystem#6844)
 
-- [Pneumonectomy](https://veteransbenefitskb.com/airsystem#6844)  _or_
+- [Pneumonectomy](https://www.veteransbenefitskb.com/airsystem#6844)  _or_
 
-- [Purrulent pleurisy](https://veteransbenefitskb.com/airsystem#6845)
+- [Purrulent pleurisy](https://www.veteransbenefitskb.com/airsystem#6845)
 
 | Rating | Number of Partial Ribs Removed |
 | --- | --- |
@@ -10213,7 +10213,7 @@ The Veteran will **NOT** receive an additional rating if they fit the criteria o
 
 When a Veteran's arthritis does not warrant a rating based upon ROM or other miscellaneous situations. The Veteran's condition will be rated under degenerative arthritis.
 
-- For an explanation of arthritis ratings click [HERE](https://veteransbenefitskb.com/msdiseases#5002)
+- For an explanation of arthritis ratings click [HERE](https://www.veteransbenefitskb.com/msdiseases#5002)
 
 [Return to top](https://www.veteransbenefitskb.com/ribs#top)
 
@@ -10223,7 +10223,7 @@ When a Veteran's arthritis does not warrant a rating based upon ROM or other mis
 
 ## **Disability Benefits Questionnaire (DBQs)**
 
-There is no public facing [DBQ](https://veteransbenefitskb.com/dbq)  for the ribs.
+There is no public facing [DBQ](https://www.veteransbenefitskb.com/dbq)  for the ribs.
 
 [Return to top](https://www.veteransbenefitskb.com/ribs#top)
 
@@ -10233,7 +10233,7 @@ There is no public facing [DBQ](https://veteransbenefitskb.com/dbq)  for the rib
 
 ## **Having Trouble Finding Your Condition?**
 
-- Click [HERE](https://veteransbenefitskb.com/master)  to view the Master Condition List.
+- Click [HERE](https://www.veteransbenefitskb.com/master)  to view the Master Condition List.
 
 [Return to top](https://www.veteransbenefitskb.com/ribs#top)
 
@@ -10257,14 +10257,14 @@ There is no public facing [DBQ](https://veteransbenefitskb.com/dbq)  for the rib
 
 |     |     |
 | --- | --- |
-| \> Cariovascular System\> Arteries & Veins\> Blood\> Heart | \> [Conditions that the VA will **NOT** Rate](https://veteransbenefitskb.com/norate)  |
-| \> [Dental and Oral](https://veteransbenefitskb.com/mouthsystem)  | \> [Digestive System](https://veteransbenefitskb.com/digsystem)  |
-| \> [Endocrine System](https://veteransbenefitskb.com/endsystem)  | \> [Female Reproductive System](https://veteransbenefitskb.com/femalesystem)  |
-| \> [Genitourinary System](https://veteransbenefitskb.com/gensystem)  | \> Hematologic and Lymphatic Systems\> Blood\> Breasts |
-| \> [Infectious Diseases and Immune Disorders](https://veteransbenefitskb.com/infect)  | \> [Mental Disorders](https://veteransbenefitskb.com/mental)  |
+| \> Cariovascular System\> Arteries & Veins\> Blood\> Heart | \> [Conditions that the VA will **NOT** Rate](https://www.veteransbenefitskb.com/norate)  |
+| \> [Dental and Oral](https://www.veteransbenefitskb.com/mouthsystem)  | \> [Digestive System](https://www.veteransbenefitskb.com/digsystem)  |
+| \> [Endocrine System](https://www.veteransbenefitskb.com/endsystem)  | \> [Female Reproductive System](https://www.veteransbenefitskb.com/femalesystem)  |
+| \> [Genitourinary System](https://www.veteransbenefitskb.com/gensystem)  | \> Hematologic and Lymphatic Systems\> Blood\> Breasts |
+| \> [Infectious Diseases and Immune Disorders](https://www.veteransbenefitskb.com/infect)  | \> [Mental Disorders](https://www.veteransbenefitskb.com/mental)  |
 | \> Musculoskeletal System\> Ankle\> Elbow & Forearm\> Foot\> Hand\> Hip & Thigh\> Knee & Lower Leg\> Ribs\> Skull\> Shoulder & Arm\> Spine\> Wrist\> Cancers and Tumors\> Diseases\> Face\> Forearm and Hand\> Hernias\> Lower Leg and Foot\> Buttock, Hip, and Thigh\> Shoulder, and Upper Arm\> Torso and Neck | \> Nervous System\> Cranial Nerves\> Central Nervous System\> Lower Back and Legs\> Upper Back and Arms\> Traumatic Brain Injuries |
-| \> [Nutritional Deficiencies](https://veteransbenefitskb.com/nutritional)  | \> [Respiratory System](https://veteransbenefitskb.com/airsystem)  |
-| \> Senses\> Ears\> Eyes\> Taste/Smell | \> [Skin](https://veteransbenefitskb.com/skin)  |
+| \> [Nutritional Deficiencies](https://www.veteransbenefitskb.com/nutritional)  | \> [Respiratory System](https://www.veteransbenefitskb.com/airsystem)  |
+| \> Senses\> Ears\> Eyes\> Taste/Smell | \> [Skin](https://www.veteransbenefitskb.com/skin)  |
 
 <!-- Chunk 464/1206 | Heading: [Rating Schedule Index Navigation](https://www.veteransbenefitskb.com/ratingsindex) | Words: 165 -->
 
@@ -10330,39 +10330,39 @@ Open Menu
 
 Featured
 
-[\> Master Condition List](https://veteransbenefitskb.com/master)
+[\> Master Condition List](https://www.veteransbenefitskb.com/master)
 
-[\> Federal Benefits List by Combined Ratings](https://veteransbenefitskb.com/combinedbenefits)
+[\> Federal Benefits List by Combined Ratings](https://www.veteransbenefitskb.com/combinedbenefits)
 
-[\> Insider Insight into VBA Claim Processing](https://veteransbenefitskb.com/insight)
+[\> Insider Insight into VBA Claim Processing](https://www.veteransbenefitskb.com/insight)
 
-[\> Rating Schedule Index](https://veteransbenefitskb.com/ratingsindex)
+[\> Rating Schedule Index](https://www.veteransbenefitskb.com/ratingsindex)
 
-[\> Filing a VA Disability Claim](https://veteransbenefitskb.com/vaclaim)
+[\> Filing a VA Disability Claim](https://www.veteransbenefitskb.com/vaclaim)
 
-[\> Filing an Appeal](https://veteransbenefitskb.com/appeals)
+[\> Filing an Appeal](https://www.veteransbenefitskb.com/appeals)
 
 * * *
 
 [Categories](https://www.veteransbenefitskb.com/skull)
 
-> [Death/Survivor Benefits](https://veteransbenefitskb.com/#ds)
+> [Death/Survivor Benefits](https://www.veteransbenefitskb.com/#ds)
 
-\> [Education &](https://veteransbenefitskb.com/#ee)  [Employment](https://veteransbenefitskb.com/#ee)
+\> [Education &](https://www.veteransbenefitskb.com/#ee)  [Employment](https://www.veteransbenefitskb.com/#ee)
 
-\> [Health care](https://veteransbenefitskb.com/#healthcare)
+\> [Health care](https://www.veteransbenefitskb.com/#healthcare)
 
-\> [Housing](https://veteransbenefitskb.com/#housing)
+\> [Housing](https://www.veteransbenefitskb.com/#housing)
 
-\> [Miscellaneous](https://veteransbenefitskb.com/#misc)
+\> [Miscellaneous](https://www.veteransbenefitskb.com/#misc)
 
-\> [VA Disability Compensation](https://veteransbenefitskb.com/#va)
+\> [VA Disability Compensation](https://www.veteransbenefitskb.com/#va)
 
-\> [VA Pension](https://veteransbenefitskb.com/#pension)
+\> [VA Pension](https://www.veteransbenefitskb.com/#pension)
 
 This schedule is purely regarding the bone structure of the Skull itself. It does not address the residuals of brain traumas.
 
-- For information on how Traumatic Brain Injuries (TBI) are rated click [HERE](https://veteransbenefitskb.com/TBI)
+- For information on how Traumatic Brain Injuries (TBI) are rated click [HERE](https://www.veteransbenefitskb.com/TBI)
 
 * * *
 
@@ -10399,14 +10399,14 @@ This schedule is purely regarding the bone structure of the Skull itself. It doe
 
 |     |     |
 | --- | --- |
-| \> Cariovascular System\> Arteries & Veins\> Blood\> Heart | \> [Conditions that the VA will **NOT** Rate](https://veteransbenefitskb.com/norate)  |
-| \> [Dental and Oral](https://veteransbenefitskb.com/mouthsystem)  | \> [Digestive System](https://veteransbenefitskb.com/digsystem)  |
-| \> [Endocrine System](https://veteransbenefitskb.com/endsystem)  | \> [Female Reproductive System](https://veteransbenefitskb.com/femalesystem)  |
-| \> [Genitourinary System](https://veteransbenefitskb.com/gensystem)  | \> Hematologic and Lymphatic Systems\> Blood\> Breasts |
-| \> [Infectious Diseases and Immune Disorders](https://veteransbenefitskb.com/infect)  | \> [Mental Disorders](https://veteransbenefitskb.com/mental)  |
+| \> Cariovascular System\> Arteries & Veins\> Blood\> Heart | \> [Conditions that the VA will **NOT** Rate](https://www.veteransbenefitskb.com/norate)  |
+| \> [Dental and Oral](https://www.veteransbenefitskb.com/mouthsystem)  | \> [Digestive System](https://www.veteransbenefitskb.com/digsystem)  |
+| \> [Endocrine System](https://www.veteransbenefitskb.com/endsystem)  | \> [Female Reproductive System](https://www.veteransbenefitskb.com/femalesystem)  |
+| \> [Genitourinary System](https://www.veteransbenefitskb.com/gensystem)  | \> Hematologic and Lymphatic Systems\> Blood\> Breasts |
+| \> [Infectious Diseases and Immune Disorders](https://www.veteransbenefitskb.com/infect)  | \> [Mental Disorders](https://www.veteransbenefitskb.com/mental)  |
 | \> Musculoskeletal System\> Ankle\> Elbow & Forearm\> Foot\> Hand\> Hip & Thigh\> Knee & Lower Leg\> Ribs\> Skull\> Shoulder & Arm\> Spine\> Wrist\> Cancers and Tumors\> Diseases\> Face\> Forearm and Hand\> Hernias\> Lower Leg and Foot\> Buttock, Hip, and Thigh\> Shoulder, and Upper Arm\> Torso and Neck | \> Nervous System\> Cranial Nerves\> Central Nervous System\> Lower Back and Legs\> Upper Back and Arms\> Traumatic Brain Injuries |
-| \> [Nutritional Deficiencies](https://veteransbenefitskb.com/nutritional)  | \> [Respiratory System](https://veteransbenefitskb.com/airsystem)  |
-| \> Senses\> Ears\> Eyes\> Taste/Smell | \> [Skin](https://veteransbenefitskb.com/skin)  |
+| \> [Nutritional Deficiencies](https://www.veteransbenefitskb.com/nutritional)  | \> [Respiratory System](https://www.veteransbenefitskb.com/airsystem)  |
+| \> Senses\> Ears\> Eyes\> Taste/Smell | \> [Skin](https://www.veteransbenefitskb.com/skin)  |
 
 <!-- Chunk 470/1206 | Heading: [Rating Schedule Index Navigation](https://www.veteransbenefitskb.com/ratingsindex) | Words: 165 -->
 
@@ -10472,39 +10472,39 @@ Open Menu
 
 Featured
 
-[\> Master Condition List](https://veteransbenefitskb.com/master)
+[\> Master Condition List](https://www.veteransbenefitskb.com/master)
 
-[\> Federal Benefits List by Combined Ratings](https://veteransbenefitskb.com/combinedbenefits)
+[\> Federal Benefits List by Combined Ratings](https://www.veteransbenefitskb.com/combinedbenefits)
 
-[\> Insider Insight into VBA Claim Processing](https://veteransbenefitskb.com/insight)
+[\> Insider Insight into VBA Claim Processing](https://www.veteransbenefitskb.com/insight)
 
-[\> Rating Schedule Index](https://veteransbenefitskb.com/ratingsindex)
+[\> Rating Schedule Index](https://www.veteransbenefitskb.com/ratingsindex)
 
-[\> Filing a VA Disability Claim](https://veteransbenefitskb.com/vaclaim)
+[\> Filing a VA Disability Claim](https://www.veteransbenefitskb.com/vaclaim)
 
-[\> Filing an Appeal](https://veteransbenefitskb.com/appeals)
+[\> Filing an Appeal](https://www.veteransbenefitskb.com/appeals)
 
 * * *
 
 [Categories](https://www.veteransbenefitskb.com/shoulderarm)
 
-> [Death/Survivor Benefits](https://veteransbenefitskb.com/#ds)
+> [Death/Survivor Benefits](https://www.veteransbenefitskb.com/#ds)
 
-\> [Education &](https://veteransbenefitskb.com/#ee)  [Employment](https://veteransbenefitskb.com/#ee)
+\> [Education &](https://www.veteransbenefitskb.com/#ee)  [Employment](https://www.veteransbenefitskb.com/#ee)
 
-\> [Health care](https://veteransbenefitskb.com/#healthcare)
+\> [Health care](https://www.veteransbenefitskb.com/#healthcare)
 
-\> [Housing](https://veteransbenefitskb.com/#housing)
+\> [Housing](https://www.veteransbenefitskb.com/#housing)
 
-\> [Miscellaneous](https://veteransbenefitskb.com/#misc)
+\> [Miscellaneous](https://www.veteransbenefitskb.com/#misc)
 
-\> [VA Disability Compensation](https://veteransbenefitskb.com/#va)
+\> [VA Disability Compensation](https://www.veteransbenefitskb.com/#va)
 
-\> [VA Pension](https://veteransbenefitskb.com/#pension)
+\> [VA Pension](https://www.veteransbenefitskb.com/#pension)
 
 **IMPORTANT NOTE:**
 
-- For the purposes of Range of Motion (ROM), the examiner/rater are **REQUIRED** to consider flair ups in your conditions. Meaning, if you do not happen to have an [Examination](https://veteransbenefitskb.com/cnp)  on your worst day, the examiner is required to reasonably estimate your impairment on your worst day! The rater is required to use this estimate, unless your ROM is somehow noted as being worse during ROM testing during the exam. In any event, the rater is to use the most impaired ROM measurements noted by the examiner!
+- For the purposes of Range of Motion (ROM), the examiner/rater are **REQUIRED** to consider flair ups in your conditions. Meaning, if you do not happen to have an [Examination](https://www.veteransbenefitskb.com/cnp)  on your worst day, the examiner is required to reasonably estimate your impairment on your worst day! The rater is required to use this estimate, unless your ROM is somehow noted as being worse during ROM testing during the exam. In any event, the rater is to use the most impaired ROM measurements noted by the examiner!
 
 NOTE:
 
@@ -10512,7 +10512,7 @@ NOTE:
 
 Amputation Rule
 
-- Veterans **CANNOT** have a total [Combined](https://veteransbenefitskb.com/vamath)  rating for places in the body higher than a Veteran who had those areas amputated. IE A veteran who has various disabilities in their knee, ankle, and foot; Those ratings cannot combine to be more than a Veteran who had their leg amputated just above the knee.
+- Veterans **CANNOT** have a total [Combined](https://www.veteransbenefitskb.com/vamath)  rating for places in the body higher than a Veteran who had those areas amputated. IE A veteran who has various disabilities in their knee, ankle, and foot; Those ratings cannot combine to be more than a Veteran who had their leg amputated just above the knee.
 
 <!-- Chunk 473/1206 | Heading: Shoulder and Upper Arm | Words: 225 -->
 
@@ -10520,7 +10520,7 @@ Amputation Rule
 
 ## **5120/5121/5122 Amputation**
 
-Veteran is entitled to [Special Monthly Compensation](https://veteransbenefitskb.com/smc)
+Veteran is entitled to [Special Monthly Compensation](https://www.veteransbenefitskb.com/smc)
 
 | Dominant Rating | Non-Dominant Rating | Degree of Amputation |
 | --- | --- | --- |
@@ -10755,7 +10755,7 @@ The Veteran will **NOT** receive an additional rating if they fit the criteria o
 
 When a Veteran's arthritis does not warrant a rating based upon ROM or other miscellaneous situations. The Veteran's condition will be rated under degenerative arthritis.
 
-- For an explanation of arthritis ratings click [HERE](https://veteransbenefitskb.com/msdiseases#5002)
+- For an explanation of arthritis ratings click [HERE](https://www.veteransbenefitskb.com/msdiseases#5002)
 
 [Return to top](https://www.veteransbenefitskb.com/shoulderarm#top)
 
@@ -10765,9 +10765,9 @@ When a Veteran's arthritis does not warrant a rating based upon ROM or other mis
 
 ## **Disability Benefits Questionnaire (DBQs)**
 
-To get an idea of how a [C&P exam](https://veteransbenefitskb.com/cnp)  will be conducted it is recommended that the Veteran look at the applicable DBQ.
+To get an idea of how a [C&P exam](https://www.veteransbenefitskb.com/cnp)  will be conducted it is recommended that the Veteran look at the applicable DBQ.
 
-Veteran's may ask a physician to complete a DBQ on their behalf to submit with their claim. For more information on DBQs click [HERE](https://veteransbenefitskb.com/dbq)
+Veteran's may ask a physician to complete a DBQ on their behalf to submit with their claim. For more information on DBQs click [HERE](https://www.veteransbenefitskb.com/dbq)
 
 - [Shoulder and Upper Arm](https://web.archive.org/web/20180903190601/http://www.vba.va.gov/pubs/forms/VBA-21-0960M-12-ARE.pdf)
 
@@ -10779,7 +10779,7 @@ Veteran's may ask a physician to complete a DBQ on their behalf to submit with t
 
 ## **Having Trouble Finding Your Condition?**
 
-- Click [HERE](https://veteransbenefitskb.com/master)  to view the Master Condition List.
+- Click [HERE](https://www.veteransbenefitskb.com/master)  to view the Master Condition List.
 
 [Return to top](https://www.veteransbenefitskb.com/shoulderarm#top)
 
@@ -10807,14 +10807,14 @@ Veteran's may ask a physician to complete a DBQ on their behalf to submit with t
 
 |     |     |
 | --- | --- |
-| \> Cariovascular System\> Arteries & Veins\> Blood\> Heart | \> [Conditions that the VA will **NOT** Rate](https://veteransbenefitskb.com/norate)  |
-| \> [Dental and Oral](https://veteransbenefitskb.com/mouthsystem)  | \> [Digestive System](https://veteransbenefitskb.com/digsystem)  |
-| \> [Endocrine System](https://veteransbenefitskb.com/endsystem)  | \> [Female Reproductive System](https://veteransbenefitskb.com/femalesystem)  |
-| \> [Genitourinary System](https://veteransbenefitskb.com/gensystem)  | \> Hematologic and Lymphatic Systems\> Blood\> Breasts |
-| \> [Infectious Diseases and Immune Disorders](https://veteransbenefitskb.com/infect)  | \> [Mental Disorders](https://veteransbenefitskb.com/mental)  |
+| \> Cariovascular System\> Arteries & Veins\> Blood\> Heart | \> [Conditions that the VA will **NOT** Rate](https://www.veteransbenefitskb.com/norate)  |
+| \> [Dental and Oral](https://www.veteransbenefitskb.com/mouthsystem)  | \> [Digestive System](https://www.veteransbenefitskb.com/digsystem)  |
+| \> [Endocrine System](https://www.veteransbenefitskb.com/endsystem)  | \> [Female Reproductive System](https://www.veteransbenefitskb.com/femalesystem)  |
+| \> [Genitourinary System](https://www.veteransbenefitskb.com/gensystem)  | \> Hematologic and Lymphatic Systems\> Blood\> Breasts |
+| \> [Infectious Diseases and Immune Disorders](https://www.veteransbenefitskb.com/infect)  | \> [Mental Disorders](https://www.veteransbenefitskb.com/mental)  |
 | \> Musculoskeletal System\> Ankle\> Elbow & Forearm\> Foot\> Hand\> Hip & Thigh\> Knee & Lower Leg\> Ribs\> Skull\> Shoulder & Arm\> Spine\> Wrist\> Cancers and Tumors\> Diseases\> Face\> Forearm and Hand\> Hernias\> Lower Leg and Foot\> Buttock, Hip, and Thigh\> Shoulder, and Upper Arm\> Torso and Neck | \> Nervous System\> Cranial Nerves\> Central Nervous System\> Lower Back and Legs\> Upper Back and Arms\> Traumatic Brain Injuries |
-| \> [Nutritional Deficiencies](https://veteransbenefitskb.com/nutritional)  | \> [Respiratory System](https://veteransbenefitskb.com/airsystem)  |
-| \> Senses\> Ears\> Eyes\> Taste/Smell | \> [Skin](https://veteransbenefitskb.com/skin)  |
+| \> [Nutritional Deficiencies](https://www.veteransbenefitskb.com/nutritional)  | \> [Respiratory System](https://www.veteransbenefitskb.com/airsystem)  |
+| \> Senses\> Ears\> Eyes\> Taste/Smell | \> [Skin](https://www.veteransbenefitskb.com/skin)  |
 
 <!-- Chunk 490/1206 | Heading: [Rating Schedule Index Navigation](https://www.veteransbenefitskb.com/ratingsindex) | Words: 165 -->
 
@@ -10880,41 +10880,41 @@ Open Menu
 
 Featured
 
-[\> Master Condition List](https://veteransbenefitskb.com/master)
+[\> Master Condition List](https://www.veteransbenefitskb.com/master)
 
-[\> Federal Benefits List by Combined Ratings](https://veteransbenefitskb.com/combinedbenefits)
+[\> Federal Benefits List by Combined Ratings](https://www.veteransbenefitskb.com/combinedbenefits)
 
-[\> Insider Insight into VBA Claim Processing](https://veteransbenefitskb.com/insight)
+[\> Insider Insight into VBA Claim Processing](https://www.veteransbenefitskb.com/insight)
 
-[\> Rating Schedule Index](https://veteransbenefitskb.com/ratingsindex)
+[\> Rating Schedule Index](https://www.veteransbenefitskb.com/ratingsindex)
 
-[\> Filing a VA Disability Claim](https://veteransbenefitskb.com/vaclaim)
+[\> Filing a VA Disability Claim](https://www.veteransbenefitskb.com/vaclaim)
 
-[\> Filing an Appeal](https://veteransbenefitskb.com/appeals)
+[\> Filing an Appeal](https://www.veteransbenefitskb.com/appeals)
 
 * * *
 
 [Categories](https://www.veteransbenefitskb.com/spine)
 
-\> [Death/Survivor Benefits](https://veteransbenefitskb.com/#ds)
+\> [Death/Survivor Benefits](https://www.veteransbenefitskb.com/#ds)
 
-\> [Education & Employment](https://veteransbenefitskb.com/#ee)
+\> [Education & Employment](https://www.veteransbenefitskb.com/#ee)
 
-\> [Health care](https://veteransbenefitskb.com/#healthcare)
+\> [Health care](https://www.veteransbenefitskb.com/#healthcare)
 
-\> [Housing](https://veteransbenefitskb.com/#housing)
+\> [Housing](https://www.veteransbenefitskb.com/#housing)
 
-\> [Miscellaneous](https://veteransbenefitskb.com/#misc)
+\> [Miscellaneous](https://www.veteransbenefitskb.com/#misc)
 
-\> [VA Disability Compensation](https://veteransbenefitskb.com/#va)
+\> [VA Disability Compensation](https://www.veteransbenefitskb.com/#va)
 
-\> [VA Pension](https://veteransbenefitskb.com/#pension)
+\> [VA Pension](https://www.veteransbenefitskb.com/#pension)
 
 For the purposes of VA disability. The diagnosis of your actual back condition is generally not all too important in how it is rated. The vast majority of spine conditions will be based upon the Veteran's limitation of Range of Motion (ROM). This is done based upon the Veteran's neck (cervical spine) or rest of the back (thoracolumbar spine).
 
 **IMPORTANT NOTE:**
 
-- For the purposes of Range of Motion (ROM), the examiner/rater are **REQUIRED** to consider flair ups in your conditions. Meaning, if you do not happen to have an [Examination](https://veteransbenefitskb.com/cnp)  on your worst day, the examiner is required to reasonably estimate your impairment on your worst day! The rater is required to use this estimate, unless your ROM is somehow noted as being worse during ROM testing during the exam. In any event, the rater is to use the most impaired ROM measurements noted by the examiner!
+- For the purposes of Range of Motion (ROM), the examiner/rater are **REQUIRED** to consider flair ups in your conditions. Meaning, if you do not happen to have an [Examination](https://www.veteransbenefitskb.com/cnp)  on your worst day, the examiner is required to reasonably estimate your impairment on your worst day! The rater is required to use this estimate, unless your ROM is somehow noted as being worse during ROM testing during the exam. In any event, the rater is to use the most impaired ROM measurements noted by the examiner!
 
 * * *
 
@@ -10982,7 +10982,7 @@ Additional names for IVDS include:
 
 - The Veteran's ROM rating can be replaced ( **NOT** rated in addition to) with one of these ratings; **Whichever rating is highest!**
 
-- If rated under this schedule, separate ratings for related spine- [Nerve](https://veteransbenefitskb.com/nervsystem)  conditions are **NOT** allowed!
+- If rated under this schedule, separate ratings for related spine- [Nerve](https://www.veteransbenefitskb.com/nervsystem)  conditions are **NOT** allowed!
 
 | Rating | Weeks of Rest |
 | --- | --- |
@@ -11021,11 +11021,11 @@ Additional names for IVDS include:
 
 When a Veteran's arthritis does not warrant a rating based upon ROM or other miscellaneous situations. The Veteran's condition will be rated under degenerative arthritis.
 
-- For an explanation of arthritis ratings click [HERE](https://veteransbenefitskb.com/msdiseases/#arthritis)
+- For an explanation of arthritis ratings click [HERE](https://www.veteransbenefitskb.com/msdiseases/#arthritis)
 
 **RATER NOTE:**
 
-- Degenerative Disc Disease (DDD) is **NOT** arthritis, and as such is **NOT** subject to [Presumptive service connection](https://veteransbenefitskb.com/time)
+- Degenerative Disc Disease (DDD) is **NOT** arthritis, and as such is **NOT** subject to [Presumptive service connection](https://www.veteransbenefitskb.com/time)
 
 * * *
 
@@ -11035,7 +11035,7 @@ When a Veteran's arthritis does not warrant a rating based upon ROM or other mis
 
 ### 5236 Sacroiliac Joint and Lumbosacral Joint
 
-- Rated based on limitation of range of motion of the thoracolumbar spine, [Hips](https://veteransbenefitskb.com/hipthigh)  **OR** [Arthritis](https://veteransbenefitskb.com/msdiseases#arthritis)  whichever is the primary disability.
+- Rated based on limitation of range of motion of the thoracolumbar spine, [Hips](https://www.veteransbenefitskb.com/hipthigh)  **OR** [Arthritis](https://www.veteransbenefitskb.com/msdiseases#arthritis)  whichever is the primary disability.
 
 * * *
 
@@ -11084,9 +11084,9 @@ Having spinal issues can bring with it a host of secondary conditions.
 
 The Veteran may find they have trouble controlling their pipes:
 
-- To see how _Bladder_ control issues are rated click [HERE](https://veteransbenefitskb.com/gensystem/#urinary)
+- To see how _Bladder_ control issues are rated click [HERE](https://www.veteransbenefitskb.com/gensystem/#urinary)
 
-- To see how _Bowel_ control issues are rated click [HERE](https://veteransbenefitskb.com/digsystem#7332)
+- To see how _Bowel_ control issues are rated click [HERE](https://www.veteransbenefitskb.com/digsystem#7332)
 
 * * *
 
@@ -11098,7 +11098,7 @@ The Veteran may find they have trouble controlling their pipes:
 
 Nerve pain, numbness, tingling, and/or weakness.
 
-- To learn how nerve issues are rated click [HERE](https://veteransbenefitskb.com/nervsystem)
+- To learn how nerve issues are rated click [HERE](https://www.veteransbenefitskb.com/nervsystem)
 
 **PYRAMIDING NOTE:**
 
@@ -11116,9 +11116,9 @@ Loss of use of limbs.
 
 NOTE:
 
-- If paralysis is in-complete then the Veteran will be rated based upon the severity of the [Paralysis](https://veteransbenefitskb.com/nervsystem)
+- If paralysis is in-complete then the Veteran will be rated based upon the severity of the [Paralysis](https://www.veteransbenefitskb.com/nervsystem)
 
-Entitled to [Special Monthly Compensation](https://veteransbenefitskb.com/smc)
+Entitled to [Special Monthly Compensation](https://www.veteransbenefitskb.com/smc)
 
 | Rating | Description |
 | --- | --- |
@@ -11133,9 +11133,9 @@ Entitled to [Special Monthly Compensation](https://veteransbenefitskb.com/smc)
 
 ## **Disability Benefits Questionnaire (DBQs)**
 
-To get an idea of how a [C&P exam](https://veteransbenefitskb.com/cnp)  will be conducted it is recommended that the Veteran look at the applicable DBQ.
+To get an idea of how a [C&P exam](https://www.veteransbenefitskb.com/cnp)  will be conducted it is recommended that the Veteran look at the applicable DBQ.
 
-Veteran's may ask a physician to complete a DBQ on their behalf to submit with their claim. For more information on DBQs click [HERE](https://veteransbenefitskb.com/dbq)
+Veteran's may ask a physician to complete a DBQ on their behalf to submit with their claim. For more information on DBQs click [HERE](https://www.veteransbenefitskb.com/dbq)
 
 - [Cervical Spine](https://www.benefits.va.gov/compensation/docs/Neck_Conditions_Cervical_Spine.pdf)
 
@@ -11149,7 +11149,7 @@ Veteran's may ask a physician to complete a DBQ on their behalf to submit with t
 
 ## **Having Trouble Finding Your Condition?**
 
-- Click [HERE](https://veteransbenefitskb.com/master)  to view the Master Condition List.
+- Click [HERE](https://www.veteransbenefitskb.com/master)  to view the Master Condition List.
 
 [Return to top](https://www.veteransbenefitskb.com/spine#top)
 
@@ -11187,14 +11187,14 @@ Veteran's may ask a physician to complete a DBQ on their behalf to submit with t
 
 |     |     |
 | --- | --- |
-| \> Cariovascular System\> Arteries & Veins\> Blood\> Heart | \> [Conditions that the VA will **NOT** Rate](https://veteransbenefitskb.com/norate)  |
-| \> [Dental and Oral](https://veteransbenefitskb.com/mouthsystem)  | \> [Digestive System](https://veteransbenefitskb.com/digsystem)  |
-| \> [Endocrine System](https://veteransbenefitskb.com/endsystem)  | \> [Female Reproductive System](https://veteransbenefitskb.com/femalesystem)  |
-| \> [Genitourinary System](https://veteransbenefitskb.com/gensystem)  | \> Hematologic and Lymphatic Systems\> Blood\> Breasts |
-| \> [Infectious Diseases and Immune Disorders](https://veteransbenefitskb.com/infect)  | \> [Mental Disorders](https://veteransbenefitskb.com/mental)  |
+| \> Cariovascular System\> Arteries & Veins\> Blood\> Heart | \> [Conditions that the VA will **NOT** Rate](https://www.veteransbenefitskb.com/norate)  |
+| \> [Dental and Oral](https://www.veteransbenefitskb.com/mouthsystem)  | \> [Digestive System](https://www.veteransbenefitskb.com/digsystem)  |
+| \> [Endocrine System](https://www.veteransbenefitskb.com/endsystem)  | \> [Female Reproductive System](https://www.veteransbenefitskb.com/femalesystem)  |
+| \> [Genitourinary System](https://www.veteransbenefitskb.com/gensystem)  | \> Hematologic and Lymphatic Systems\> Blood\> Breasts |
+| \> [Infectious Diseases and Immune Disorders](https://www.veteransbenefitskb.com/infect)  | \> [Mental Disorders](https://www.veteransbenefitskb.com/mental)  |
 | \> Musculoskeletal System\> Ankle\> Elbow & Forearm\> Foot\> Hand\> Hip & Thigh\> Knee & Lower Leg\> Ribs\> Skull\> Shoulder & Arm\> Spine\> Wrist\> Cancers and Tumors\> Diseases\> Face\> Forearm and Hand\> Hernias\> Lower Leg and Foot\> Buttock, Hip, and Thigh\> Shoulder, and Upper Arm\> Torso and Neck | \> Nervous System\> Cranial Nerves\> Central Nervous System\> Lower Back and Legs\> Upper Back and Arms\> Traumatic Brain Injuries |
-| \> [Nutritional Deficiencies](https://veteransbenefitskb.com/nutritional)  | \> [Respiratory System](https://veteransbenefitskb.com/airsystem)  |
-| \> Senses\> Ears\> Eyes\> Taste/Smell | \> [Skin](https://veteransbenefitskb.com/skin)  |
+| \> [Nutritional Deficiencies](https://www.veteransbenefitskb.com/nutritional)  | \> [Respiratory System](https://www.veteransbenefitskb.com/airsystem)  |
+| \> Senses\> Ears\> Eyes\> Taste/Smell | \> [Skin](https://www.veteransbenefitskb.com/skin)  |
 
 <!-- Chunk 507/1206 | Heading: [Rating Schedule Index Navigation](https://www.veteransbenefitskb.com/ratingsindex) | Words: 165 -->
 
@@ -11260,35 +11260,35 @@ Open Menu
 
 Featured
 
-[\> Master Condition List](https://veteransbenefitskb.com/master)
+[\> Master Condition List](https://www.veteransbenefitskb.com/master)
 
-[\> Federal Benefits List by Combined Ratings](https://veteransbenefitskb.com/combinedbenefits)
+[\> Federal Benefits List by Combined Ratings](https://www.veteransbenefitskb.com/combinedbenefits)
 
-[\> Insider Insight into VBA Claim Processing](https://veteransbenefitskb.com/insight)
+[\> Insider Insight into VBA Claim Processing](https://www.veteransbenefitskb.com/insight)
 
-[\> Rating Schedule Index](https://veteransbenefitskb.com/ratingsindex)
+[\> Rating Schedule Index](https://www.veteransbenefitskb.com/ratingsindex)
 
-[\> Filing a VA Disability Claim](https://veteransbenefitskb.com/vaclaim)
+[\> Filing a VA Disability Claim](https://www.veteransbenefitskb.com/vaclaim)
 
-[\> Filing an Appeal](https://veteransbenefitskb.com/appeals)
+[\> Filing an Appeal](https://www.veteransbenefitskb.com/appeals)
 
 * * *
 
 [Categories](https://www.veteransbenefitskb.com/wrist)
 
-> [Death/Survivor Benefits](https://veteransbenefitskb.com/#ds)
+> [Death/Survivor Benefits](https://www.veteransbenefitskb.com/#ds)
 
-\> [Education &](https://veteransbenefitskb.com/#ee)  [Employment](https://veteransbenefitskb.com/#ee)
+\> [Education &](https://www.veteransbenefitskb.com/#ee)  [Employment](https://www.veteransbenefitskb.com/#ee)
 
-\> [Health care](https://veteransbenefitskb.com/#healthcare)
+\> [Health care](https://www.veteransbenefitskb.com/#healthcare)
 
-\> [Housing](https://veteransbenefitskb.com/#housing)
+\> [Housing](https://www.veteransbenefitskb.com/#housing)
 
-\> [Miscellaneous](https://veteransbenefitskb.com/#misc)
+\> [Miscellaneous](https://www.veteransbenefitskb.com/#misc)
 
-\> [VA Disability Compensation](https://veteransbenefitskb.com/#va)
+\> [VA Disability Compensation](https://www.veteransbenefitskb.com/#va)
 
-\> [VA Pension](https://veteransbenefitskb.com/#pension)
+\> [VA Pension](https://www.veteransbenefitskb.com/#pension)
 
 **IMPORTANT NOTES:**
 
@@ -11304,13 +11304,13 @@ Featured
 
 ## **5125 Amputation at Wrist**
 
-This schedule is pretty straight forward. However, Veterans must be aware of the _Amputation Rule_. It boils down to a Veteran cannot be rated higher for disabilities of a limb that would [Combine](https://veteransbenefitskb.com/VAMath)  to be more than a Veteran who has had an amputation that resulted in a loss of those areas.
+This schedule is pretty straight forward. However, Veterans must be aware of the _Amputation Rule_. It boils down to a Veteran cannot be rated higher for disabilities of a limb that would [Combine](https://www.veteransbenefitskb.com/VAMath)  to be more than a Veteran who has had an amputation that resulted in a loss of those areas.
 
 NOTES:
 
 1. Veterans who have also had an amputation/loss of use of their foot in addition to a wrist will receive a singular rating of 100% for both the loss of the hand and foot.
 
-2. Veteran is entitled to [Special Monthly Compensation](https://veteransbenefitskb.com/smc)
+2. Veteran is entitled to [Special Monthly Compensation](https://www.veteransbenefitskb.com/smc)
 
 | Rating | Description |
 | --- | --- |
@@ -11332,7 +11332,7 @@ When the wrist joint cannot move.
 
 - Palmar flexion: Palm faces yourself.
 
-\*Veterans is entitled to [Special Monthly Compensation](https://veteransbenefitskb.com/smc)
+\*Veterans is entitled to [Special Monthly Compensation](https://www.veteransbenefitskb.com/smc)
 
 | Dominant Rating | Non-Dominant Rating | Degree Stuck |
 | --- | --- | --- |
@@ -11444,7 +11444,7 @@ The Veteran will **NOT** receive an additional rating if they fit the criteria o
 
 When a Veteran's arthritis does not warrant a rating based upon ROM or other miscellaneous situations. The Veteran's condition will be rated under degenerative arthritis.
 
-- For an explanation of arthritis ratings click [HERE](https://veteransbenefitskb.com/msdiseases)
+- For an explanation of arthritis ratings click [HERE](https://www.veteransbenefitskb.com/msdiseases)
 
 [Return to top](https://www.veteransbenefitskb.com/wrist#top)
 
@@ -11454,9 +11454,9 @@ When a Veteran's arthritis does not warrant a rating based upon ROM or other mis
 
 ## **Disability Benefits Questionnaire (DBQs)**
 
-To get an idea of how a [C&P exam](https://veteransbenefitskb.com/cnp)  will be conducted it is recommended that the Veteran look at the applicable DBQ.
+To get an idea of how a [C&P exam](https://www.veteransbenefitskb.com/cnp)  will be conducted it is recommended that the Veteran look at the applicable DBQ.
 
-Veteran's may ask their _treating physician_ to complete a DBQ on their behalf to submit with their claim. For more information on DBQs click [HERE](https://veteransbenefitskb.com/dbq)
+Veteran's may ask their _treating physician_ to complete a DBQ on their behalf to submit with their claim. For more information on DBQs click [HERE](https://www.veteransbenefitskb.com/dbq)
 
 - [Wrist](https://www.benefits.va.gov/compensation/docs/wrist.pdf)
 
@@ -11468,7 +11468,7 @@ Veteran's may ask their _treating physician_ to complete a DBQ on their behalf t
 
 ## **Having Trouble Finding Your Condition?**
 
-- Click [HERE](https://veteransbenefitskb.com/master)  to view the Master Condition List.
+- Click [HERE](https://www.veteransbenefitskb.com/master)  to view the Master Condition List.
 
 [Return to top](https://www.veteransbenefitskb.com/wrist#top)
 
@@ -11506,14 +11506,14 @@ Veteran's may ask their _treating physician_ to complete a DBQ on their behalf t
 
 |     |     |
 | --- | --- |
-| \> Cariovascular System\> Arteries & Veins\> Blood\> Heart | \> [Conditions that the VA will **NOT** Rate](https://veteransbenefitskb.com/norate)  |
-| \> [Dental and Oral](https://veteransbenefitskb.com/mouthsystem)  | \> [Digestive System](https://veteransbenefitskb.com/digsystem)  |
-| \> [Endocrine System](https://veteransbenefitskb.com/endsystem)  | \> [Female Reproductive System](https://veteransbenefitskb.com/femalesystem)  |
-| \> [Genitourinary System](https://veteransbenefitskb.com/gensystem)  | \> Hematologic and Lymphatic Systems\> Blood\> Breasts |
-| \> [Infectious Diseases and Immune Disorders](https://veteransbenefitskb.com/infect)  | \> [Mental Disorders](https://veteransbenefitskb.com/mental)  |
+| \> Cariovascular System\> Arteries & Veins\> Blood\> Heart | \> [Conditions that the VA will **NOT** Rate](https://www.veteransbenefitskb.com/norate)  |
+| \> [Dental and Oral](https://www.veteransbenefitskb.com/mouthsystem)  | \> [Digestive System](https://www.veteransbenefitskb.com/digsystem)  |
+| \> [Endocrine System](https://www.veteransbenefitskb.com/endsystem)  | \> [Female Reproductive System](https://www.veteransbenefitskb.com/femalesystem)  |
+| \> [Genitourinary System](https://www.veteransbenefitskb.com/gensystem)  | \> Hematologic and Lymphatic Systems\> Blood\> Breasts |
+| \> [Infectious Diseases and Immune Disorders](https://www.veteransbenefitskb.com/infect)  | \> [Mental Disorders](https://www.veteransbenefitskb.com/mental)  |
 | \> Musculoskeletal System\> Ankle\> Elbow & Forearm\> Foot\> Hand\> Hip & Thigh\> Knee & Lower Leg\> Ribs\> Skull\> Shoulder & Arm\> Spine\> Wrist\> Cancers and Tumors\> Diseases\> Face\> Forearm and Hand\> Hernias\> Lower Leg and Foot\> Buttock, Hip, and Thigh\> Shoulder, and Upper Arm\> Torso and Neck | \> Nervous System\> Cranial Nerves\> Central Nervous System\> Lower Back and Legs\> Upper Back and Arms\> Traumatic Brain Injuries |
-| \> [Nutritional Deficiencies](https://veteransbenefitskb.com/nutritional)  | \> [Respiratory System](https://veteransbenefitskb.com/airsystem)  |
-| \> Senses\> Ears\> Eyes\> Taste/Smell | \> [Skin](https://veteransbenefitskb.com/skin)  |
+| \> [Nutritional Deficiencies](https://www.veteransbenefitskb.com/nutritional)  | \> [Respiratory System](https://www.veteransbenefitskb.com/airsystem)  |
+| \> Senses\> Ears\> Eyes\> Taste/Smell | \> [Skin](https://www.veteransbenefitskb.com/skin)  |
 
 <!-- Chunk 521/1206 | Heading: [Rating Schedule Index Navigation](https://www.veteransbenefitskb.com/ratingsindex) | Words: 165 -->
 
@@ -11579,41 +11579,41 @@ Open Menu
 
 Featured
 
-[\> Master Condition List](https://veteransbenefitskb.com/master)
+[\> Master Condition List](https://www.veteransbenefitskb.com/master)
 
-[\> Federal Benefits List by Combined Ratings](https://veteransbenefitskb.com/combinedbenefits)
+[\> Federal Benefits List by Combined Ratings](https://www.veteransbenefitskb.com/combinedbenefits)
 
-[\> Insider Insight into VBA Claim Processing](https://veteransbenefitskb.com/insight)
+[\> Insider Insight into VBA Claim Processing](https://www.veteransbenefitskb.com/insight)
 
-[\> Rating Schedule Index](https://veteransbenefitskb.com/ratingsindex)
+[\> Rating Schedule Index](https://www.veteransbenefitskb.com/ratingsindex)
 
-[\> Filing a VA Disability Claim](https://veteransbenefitskb.com/vaclaim)
+[\> Filing a VA Disability Claim](https://www.veteransbenefitskb.com/vaclaim)
 
-[\> Filing an Appeal](https://veteransbenefitskb.com/appeals)
+[\> Filing an Appeal](https://www.veteransbenefitskb.com/appeals)
 
 * * *
 
 [Categories](https://www.veteransbenefitskb.com/mscancer)
 
-> [Death/Survivor Benefits](https://veteransbenefitskb.com/#ds)
+> [Death/Survivor Benefits](https://www.veteransbenefitskb.com/#ds)
 
-\> [Education &](https://veteransbenefitskb.com/#ee)  [Employment](https://veteransbenefitskb.com/#ee)
+\> [Education &](https://www.veteransbenefitskb.com/#ee)  [Employment](https://www.veteransbenefitskb.com/#ee)
 
-\> [Health care](https://veteransbenefitskb.com/#healthcare)
+\> [Health care](https://www.veteransbenefitskb.com/#healthcare)
 
-\> [Housing](https://veteransbenefitskb.com/#housing)
+\> [Housing](https://www.veteransbenefitskb.com/#housing)
 
-\> [Miscellaneous](https://veteransbenefitskb.com/#misc)
+\> [Miscellaneous](https://www.veteransbenefitskb.com/#misc)
 
-\> [VA Disability Compensation](https://veteransbenefitskb.com/#va)
+\> [VA Disability Compensation](https://www.veteransbenefitskb.com/#va)
 
-\> [VA Pension](https://veteransbenefitskb.com/#pension)
+\> [VA Pension](https://www.veteransbenefitskb.com/#pension)
 
 When cell replication runs amuck.
 
 **NOTE:**
 
-- The following are cancers & tumors of the musculoskeletal system. For cancers & tumors involving other systems go to their applicable [Schedules](https://veteransbenefitskb.com/ratingsindex)
+- The following are cancers & tumors of the musculoskeletal system. For cancers & tumors involving other systems go to their applicable [Schedules](https://www.veteransbenefitskb.com/ratingsindex)
 
 * * *
 
@@ -11627,7 +11627,7 @@ Know that bone cancers pertain only to cancers that originate from the bones and
 
 **IMPORTANT NOTE:**
 
-- This does **NOT** include bone marrow cancer, since that is considered a [Cancer of the blood](https://veteransbenefitskb.com/blood#7712)
+- This does **NOT** include bone marrow cancer, since that is considered a [Cancer of the blood](https://www.veteransbenefitskb.com/blood#7712)
 
 **PRESUMPTIVE CONDITION:**
 
@@ -11650,7 +11650,7 @@ Located in muscle, fat, ligament, or fibrous tissues.
 
 **PRESUMPTIVE CONDITION:**
 
-- If exposed to [Agent Orange](https://veteransbenefitskb.com/agentorange)
+- If exposed to [Agent Orange](https://www.veteransbenefitskb.com/agentorange)
 
 | Rating | Description |
 | --- | --- |
@@ -11682,9 +11682,9 @@ Cancers that affect the muscle that are not sarcomas.
 
 Tumors are by themselves non-compensational.
 
-However, if the tumor is in a location that results in the limitation of range of motion (ROM). The Veteran will be rated upon that [Limitation of ROM](https://veteransbenefitskb.com/msindex)
+However, if the tumor is in a location that results in the limitation of range of motion (ROM). The Veteran will be rated upon that [Limitation of ROM](https://www.veteransbenefitskb.com/msindex)
 
-Further, if the tumor is removed and left [Scaring](https://veteransbenefitskb.com/skin#7800)  or other [Secondary conditions](https://veteransbenefitskb.com/claimtype#secondary)  Those will be rated accordingly.
+Further, if the tumor is removed and left [Scaring](https://www.veteransbenefitskb.com/skin#7800)  or other [Secondary conditions](https://www.veteransbenefitskb.com/claimtype#secondary)  Those will be rated accordingly.
 
 [Return to top](https://www.veteransbenefitskb.com/mscancer#top)
 
@@ -11694,7 +11694,7 @@ Further, if the tumor is removed and left [Scaring](https://veteransbenefitskb.c
 
 ## **Disability Benefits Questionnaire (DBQs)**
 
-There is no public facing [DBQ](https://veteransbenefitskb.com/dbq)  for musculoskeletal cancers and tumors.
+There is no public facing [DBQ](https://www.veteransbenefitskb.com/dbq)  for musculoskeletal cancers and tumors.
 
 [Return to top](https://www.veteransbenefitskb.com/mscancer#top)
 
@@ -11704,7 +11704,7 @@ There is no public facing [DBQ](https://veteransbenefitskb.com/dbq)  for musculo
 
 ## **Having Trouble Finding Your Condition?**
 
-- Click [HERE](https://veteransbenefitskb.com/master)  to view the Master Condition List.
+- Click [HERE](https://www.veteransbenefitskb.com/master)  to view the Master Condition List.
 
 [Return to top](https://www.veteransbenefitskb.com/mscancer#top)
 
@@ -11726,14 +11726,14 @@ There is no public facing [DBQ](https://veteransbenefitskb.com/dbq)  for musculo
 
 |     |     |
 | --- | --- |
-| \> Cariovascular System\> Arteries & Veins\> Blood\> Heart | \> [Conditions that the VA will **NOT** Rate](https://veteransbenefitskb.com/norate)  |
-| \> [Dental and Oral](https://veteransbenefitskb.com/mouthsystem)  | \> [Digestive System](https://veteransbenefitskb.com/digsystem)  |
-| \> [Endocrine System](https://veteransbenefitskb.com/endsystem)  | \> [Female Reproductive System](https://veteransbenefitskb.com/femalesystem)  |
-| \> [Genitourinary System](https://veteransbenefitskb.com/gensystem)  | \> Hematologic and Lymphatic Systems\> Blood\> Breasts |
-| \> [Infectious Diseases and Immune Disorders](https://veteransbenefitskb.com/infect)  | \> [Mental Disorders](https://veteransbenefitskb.com/mental)  |
+| \> Cariovascular System\> Arteries & Veins\> Blood\> Heart | \> [Conditions that the VA will **NOT** Rate](https://www.veteransbenefitskb.com/norate)  |
+| \> [Dental and Oral](https://www.veteransbenefitskb.com/mouthsystem)  | \> [Digestive System](https://www.veteransbenefitskb.com/digsystem)  |
+| \> [Endocrine System](https://www.veteransbenefitskb.com/endsystem)  | \> [Female Reproductive System](https://www.veteransbenefitskb.com/femalesystem)  |
+| \> [Genitourinary System](https://www.veteransbenefitskb.com/gensystem)  | \> Hematologic and Lymphatic Systems\> Blood\> Breasts |
+| \> [Infectious Diseases and Immune Disorders](https://www.veteransbenefitskb.com/infect)  | \> [Mental Disorders](https://www.veteransbenefitskb.com/mental)  |
 | \> Musculoskeletal System\> Ankle\> Elbow & Forearm\> Foot\> Hand\> Hip & Thigh\> Knee & Lower Leg\> Ribs\> Skull\> Shoulder & Arm\> Spine\> Wrist\> Cancers and Tumors\> Diseases\> Face\> Forearm and Hand\> Hernias\> Lower Leg and Foot\> Buttock, Hip, and Thigh\> Shoulder, and Upper Arm\> Torso and Neck | \> Nervous System\> Cranial Nerves\> Central Nervous System\> Lower Back and Legs\> Upper Back and Arms\> Traumatic Brain Injuries |
-| \> [Nutritional Deficiencies](https://veteransbenefitskb.com/nutritional)  | \> [Respiratory System](https://veteransbenefitskb.com/airsystem)  |
-| \> Senses\> Ears\> Eyes\> Taste/Smell | \> [Skin](https://veteransbenefitskb.com/skin)  |
+| \> [Nutritional Deficiencies](https://www.veteransbenefitskb.com/nutritional)  | \> [Respiratory System](https://www.veteransbenefitskb.com/airsystem)  |
+| \> Senses\> Ears\> Eyes\> Taste/Smell | \> [Skin](https://www.veteransbenefitskb.com/skin)  |
 
 <!-- Chunk 532/1206 | Heading: [Rating Schedule Index Navigation](https://www.veteransbenefitskb.com/ratingsindex) | Words: 165 -->
 
@@ -11799,35 +11799,35 @@ Open Menu
 
 Featured
 
-[\> Master Condition List](https://veteransbenefitskb.com/master)
+[\> Master Condition List](https://www.veteransbenefitskb.com/master)
 
-[\> Federal Benefits List by Combined Ratings](https://veteransbenefitskb.com/combinedbenefits)
+[\> Federal Benefits List by Combined Ratings](https://www.veteransbenefitskb.com/combinedbenefits)
 
-[\> Insider Insight into VBA Claim Processing](https://veteransbenefitskb.com/insight)
+[\> Insider Insight into VBA Claim Processing](https://www.veteransbenefitskb.com/insight)
 
-[\> Rating Schedule Index](https://veteransbenefitskb.com/ratingsindex)
+[\> Rating Schedule Index](https://www.veteransbenefitskb.com/ratingsindex)
 
-[\> Filing a VA Disability Claim](https://veteransbenefitskb.com/vaclaim)
+[\> Filing a VA Disability Claim](https://www.veteransbenefitskb.com/vaclaim)
 
-[\> Filing an Appeal](https://veteransbenefitskb.com/appeals)
+[\> Filing an Appeal](https://www.veteransbenefitskb.com/appeals)
 
 * * *
 
 [Categories](https://www.veteransbenefitskb.com/msdiseases)
 
-> [Death/Survivor Benefits](https://veteransbenefitskb.com/#ds)
+> [Death/Survivor Benefits](https://www.veteransbenefitskb.com/#ds)
 
-\> [Education &](https://veteransbenefitskb.com/#ee)  [Employment](https://veteransbenefitskb.com/#ee)
+\> [Education &](https://www.veteransbenefitskb.com/#ee)  [Employment](https://www.veteransbenefitskb.com/#ee)
 
-\> [Health care](https://veteransbenefitskb.com/#healthcare)
+\> [Health care](https://www.veteransbenefitskb.com/#healthcare)
 
-\> [Housing](https://veteransbenefitskb.com/#housing)
+\> [Housing](https://www.veteransbenefitskb.com/#housing)
 
-\> [Miscellaneous](https://veteransbenefitskb.com/#misc)
+\> [Miscellaneous](https://www.veteransbenefitskb.com/#misc)
 
-\> [VA Disability Compensation](https://veteransbenefitskb.com/#va)
+\> [VA Disability Compensation](https://www.veteransbenefitskb.com/#va)
 
-\> [VA Pension](https://veteransbenefitskb.com/#pension)
+\> [VA Pension](https://www.veteransbenefitskb.com/#pension)
 
 Diseases include: Arthritis, bursitis, caisson disease, fibromyalgia, gout, osteomalacia, ostemyelitis, osteoporosis, synovitis, enosynovitis, and tuberculosis.
 
@@ -11843,7 +11843,7 @@ Swelling and tenderness of one or more of your joints.
 
 **IMPORTANT NOTE:**
 
-- **MOST** Veterans will be rated under the joint schedules and **NOT** under arthritis, as the [Joint schedules](https://veteransbenefitskb.com/msindex)  in **MOST** cases will give a higher [Combined](https://veteransbenefitskb.com/vamath)  evaluation than if a singular arthritis evaluation was given for the impacted joints!
+- **MOST** Veterans will be rated under the joint schedules and **NOT** under arthritis, as the [Joint schedules](https://www.veteransbenefitskb.com/msindex)  in **MOST** cases will give a higher [Combined](https://www.veteransbenefitskb.com/vamath)  evaluation than if a singular arthritis evaluation was given for the impacted joints!
 
 **PYRAMIDING NOTE:**
 
@@ -11851,7 +11851,7 @@ Swelling and tenderness of one or more of your joints.
 
 **PRESUMPTIVE CONDITION:**
 
-- If diagnosed within a [Year](https://veteransbenefitskb.com/time)  of separation **AND** the severity warranted _at least_ a 10% evaluation within that time.
+- If diagnosed within a [Year](https://www.veteransbenefitskb.com/time)  of separation **AND** the severity warranted _at least_ a 10% evaluation within that time.
 
 * * *
 
@@ -11861,33 +11861,33 @@ Swelling and tenderness of one or more of your joints.
 
 ### 5003, 5010 Degenerative Arthritis/Post-Traumatic Arthritis
 
-Generally a rating of last resort. If the Veteran's arthritis causes reduced range of motion of a compensational degree (10% or more) or pain with movement (minimum rating). The Veteran will be rated under the applicable [Bones, Tendons, and Joints schedule](https://veteransbenefitskb.com/msindex)
+Generally a rating of last resort. If the Veteran's arthritis causes reduced range of motion of a compensational degree (10% or more) or pain with movement (minimum rating). The Veteran will be rated under the applicable [Bones, Tendons, and Joints schedule](https://www.veteransbenefitskb.com/msindex)
 
 There are two groups of joints; major and minor.
 
 Major joints:
 
-- [Ankle](https://veteransbenefitskb.com/ankle)
+- [Ankle](https://www.veteransbenefitskb.com/ankle)
 
-- [Elbow](https://veteransbenefitskb.com/elbowforearm)
+- [Elbow](https://www.veteransbenefitskb.com/elbowforearm)
 
-- [Hip](https://veteransbenefitskb.com/hipthigh)
+- [Hip](https://www.veteransbenefitskb.com/hipthigh)
 
-- [Knee](https://veteransbenefitskb.com/kneeleg)
+- [Knee](https://www.veteransbenefitskb.com/kneeleg)
 
-- [Shoulder](https://veteransbenefitskb.com/shoulderarm)
+- [Shoulder](https://www.veteransbenefitskb.com/shoulderarm)
 
-- [Wrist](https://veteransbenefitskb.com/wrist)
+- [Wrist](https://www.veteransbenefitskb.com/wrist)
 
 Minor joints:
 
-- [Fingers](https://veteransbenefitskb.com/hands)
+- [Fingers](https://www.veteransbenefitskb.com/hands)
 
-- [Toes](https://veteransbenefitskb.com/foot)
+- [Toes](https://www.veteransbenefitskb.com/foot)
 
-- [Sacroiliac](https://veteransbenefitskb.com/spine)
+- [Sacroiliac](https://www.veteransbenefitskb.com/spine)
 
-- [Spine](https://veteransbenefitskb.com/spine)
+- [Spine](https://www.veteransbenefitskb.com/spine)
 
 NOTE:
 
@@ -11935,11 +11935,11 @@ Yes, it makes no sense.
 
 **PRESUMPTIVE CONDITIONS:**
 
-- If diagnosed with _pagetâ€™s disease_ or _osteomalacia_ within a [Year](https://veteransbenefitskb.com/time)  of separation **AND** the severity warranted _at least_ a 10% evaluation within that time.
+- If diagnosed with _pagetâ€™s disease_ or _osteomalacia_ within a [Year](https://www.veteransbenefitskb.com/time)  of separation **AND** the severity warranted _at least_ a 10% evaluation within that time.
 
 - [Former POW](https://www.veteransbenefitskb.com/pow)  for _at least_ 30 days and diagnosed with _osteoporosis_ **AND** the severity warranted _at least_ a 10% evaluation at any time.
 
-- If less than 30 days the Veteran must also have a diagnosis of [PTSD](https://veteransbenefitskb.com/mental)
+- If less than 30 days the Veteran must also have a diagnosis of [PTSD](https://www.veteransbenefitskb.com/mental)
 
 * * *
 
@@ -11983,7 +11983,7 @@ The following conditions are rated under multi-joint arthritis:
 
 NOTE:
 
-- If the Veteran no longer rates at least 20% under this schedule they will be rated under the [Degenerative Arthritis/Post-traumatic Arthritis](https://veteransbenefitskb.com/msdiseases#5003)  schedule, limitation of motion, or frozen joints; Whichever would give the highest rating will be the rating the Veteran will get.
+- If the Veteran no longer rates at least 20% under this schedule they will be rated under the [Degenerative Arthritis/Post-traumatic Arthritis](https://www.veteransbenefitskb.com/msdiseases#5003)  schedule, limitation of motion, or frozen joints; Whichever would give the highest rating will be the rating the Veteran will get.
 
 * * *
 
@@ -12002,7 +12002,7 @@ NOTE:
 
 **PYRAMIDING NOTE:**
 
-- One of the rare exceptions to the [Pyramiding rule](https://veteransbenefitskb.com/ratingsindex#pyramiding)  The Veteran **IS** allowed to have a rating for the bone infection, any loss of range of motion (or if the joint is frozen), and shortening of the leg, if applicable. However, the Veteran is still subject to the [Amputation rule](https://veteransbenefitskb.com/ratingsindex#amputation)  **UNLESS**, they get a singular rating of 60% or higher evaluation for the bone infection itself.
+- One of the rare exceptions to the [Pyramiding rule](https://www.veteransbenefitskb.com/ratingsindex#pyramiding)  The Veteran **IS** allowed to have a rating for the bone infection, any loss of range of motion (or if the joint is frozen), and shortening of the leg, if applicable. However, the Veteran is still subject to the [Amputation rule](https://www.veteransbenefitskb.com/ratingsindex#amputation)  **UNLESS**, they get a singular rating of 60% or higher evaluation for the bone infection itself.
 
 **IMPORTANT NOTE:**
 
@@ -12022,7 +12022,7 @@ NOTE:
 
 ## **5011 The Bends (Caisson Disease/Decompression sickness)**
 
-- The Veteran is rated upon their symptoms be it [Arthritis](https://veteransbenefitskb.com/msdiseases#5003)  [Auditory](https://veteransbenefitskb.com/ears#6100)  [Respiratory system](https://veteransbenefitskb.com/airsystem)  or [Neurological issues](https://veteransbenefitskb.com/nervesystem)
+- The Veteran is rated upon their symptoms be it [Arthritis](https://www.veteransbenefitskb.com/msdiseases#5003)  [Auditory](https://www.veteransbenefitskb.com/ears#6100)  [Respiratory system](https://www.veteransbenefitskb.com/airsystem)  or [Neurological issues](https://www.veteransbenefitskb.com/nervesystem)
 
 <!-- Chunk 541/1206 | Heading: 5011 The Bends (Caisson Disease/Decompression sickness) | Words: 24 -->
 
@@ -12060,7 +12060,7 @@ NOTE:
 
 When damaged muscle tissue releases its proteins and electrolytes into the blood.
 
-Each affected [Muscle group](https://veteransbenefitskb.com/msindex)  will be rated individually.
+Each affected [Muscle group](https://www.veteransbenefitskb.com/msindex)  will be rated individually.
 
 * * *
 
@@ -12072,7 +12072,7 @@ Each affected [Muscle group](https://veteransbenefitskb.com/msindex)  will be ra
 
 Painful condition that occurs when pressure within the muscles builds to dangerous levels.
 
-Each affected [Muscle group](https://veteransbenefitskb.com/msindex)  will be awarded a separate rating.
+Each affected [Muscle group](https://www.veteransbenefitskb.com/msindex)  will be awarded a separate rating.
 
 <!-- Chunk 544/1206 | Heading: 5331 Compartment Syndrome | Words: 27 -->
 
@@ -12092,9 +12092,9 @@ Each affected [Muscle group](https://veteransbenefitskb.com/msindex)  will be aw
 
 ## **Disability Benefits Questionnaire (DBQs)**
 
-To get an idea of how a [C&P exam](https://veteransbenefitskb.com/cnp)  will be conducted it is recommended that the Veteran look at the applicable DBQ.
+To get an idea of how a [C&P exam](https://www.veteransbenefitskb.com/cnp)  will be conducted it is recommended that the Veteran look at the applicable DBQ.
 
-Veteran's may ask their _treating physician_ to complete a DBQ on their behalf to submit with their claim. For more information on DBQs click [HERE](https://veteransbenefitskb.com/dbq)
+Veteran's may ask their _treating physician_ to complete a DBQ on their behalf to submit with their claim. For more information on DBQs click [HERE](https://www.veteransbenefitskb.com/dbq)
 
 - [Arthritis](https://www.benefits.va.gov/compensation/docs/Arthritis.pdf)
 
@@ -12110,7 +12110,7 @@ Veteran's may ask their _treating physician_ to complete a DBQ on their behalf t
 
 ## **Having Trouble Finding Your Condition?**
 
-- Click [HERE](https://veteransbenefitskb.com/master)  to view the Master Condition List.
+- Click [HERE](https://www.veteransbenefitskb.com/master)  to view the Master Condition List.
 
 [Return to top](https://www.veteransbenefitskb.com/msdiseases#top)
 
@@ -12148,14 +12148,14 @@ Veteran's may ask their _treating physician_ to complete a DBQ on their behalf t
 
 |     |     |
 | --- | --- |
-| \> Cariovascular System\> Arteries & Veins\> Blood\> Heart | \> [Conditions that the VA will **NOT** Rate](https://veteransbenefitskb.com/norate)  |
-| \> [Dental and Oral](https://veteransbenefitskb.com/mouthsystem)  | \> [Digestive System](https://veteransbenefitskb.com/digsystem)  |
-| \> [Endocrine System](https://veteransbenefitskb.com/endsystem)  | \> [Female Reproductive System](https://veteransbenefitskb.com/femalesystem)  |
-| \> [Genitourinary System](https://veteransbenefitskb.com/gensystem)  | \> Hematologic and Lymphatic Systems\> Blood\> Breasts |
-| \> [Infectious Diseases and Immune Disorders](https://veteransbenefitskb.com/infect)  | \> [Mental Disorders](https://veteransbenefitskb.com/mental)  |
+| \> Cariovascular System\> Arteries & Veins\> Blood\> Heart | \> [Conditions that the VA will **NOT** Rate](https://www.veteransbenefitskb.com/norate)  |
+| \> [Dental and Oral](https://www.veteransbenefitskb.com/mouthsystem)  | \> [Digestive System](https://www.veteransbenefitskb.com/digsystem)  |
+| \> [Endocrine System](https://www.veteransbenefitskb.com/endsystem)  | \> [Female Reproductive System](https://www.veteransbenefitskb.com/femalesystem)  |
+| \> [Genitourinary System](https://www.veteransbenefitskb.com/gensystem)  | \> Hematologic and Lymphatic Systems\> Blood\> Breasts |
+| \> [Infectious Diseases and Immune Disorders](https://www.veteransbenefitskb.com/infect)  | \> [Mental Disorders](https://www.veteransbenefitskb.com/mental)  |
 | \> Musculoskeletal System\> Ankle\> Elbow & Forearm\> Foot\> Hand\> Hip & Thigh\> Knee & Lower Leg\> Ribs\> Skull\> Shoulder & Arm\> Spine\> Wrist\> Cancers and Tumors\> Diseases\> Face\> Forearm and Hand\> Hernias\> Lower Leg and Foot\> Buttock, Hip, and Thigh\> Shoulder, and Upper Arm\> Torso and Neck | \> Nervous System\> Cranial Nerves\> Central Nervous System\> Lower Back and Legs\> Upper Back and Arms\> Traumatic Brain Injuries |
-| \> [Nutritional Deficiencies](https://veteransbenefitskb.com/nutritional)  | \> [Respiratory System](https://veteransbenefitskb.com/airsystem)  |
-| \> Senses\> Ears\> Eyes\> Taste/Smell | \> [Skin](https://veteransbenefitskb.com/skin)  |
+| \> [Nutritional Deficiencies](https://www.veteransbenefitskb.com/nutritional)  | \> [Respiratory System](https://www.veteransbenefitskb.com/airsystem)  |
+| \> Senses\> Ears\> Eyes\> Taste/Smell | \> [Skin](https://www.veteransbenefitskb.com/skin)  |
 
 <!-- Chunk 549/1206 | Heading: [Rating Schedule Index Navigation](https://www.veteransbenefitskb.com/ratingsindex) | Words: 165 -->
 
@@ -12221,39 +12221,39 @@ Open Menu
 
 Featured
 
-[\> Master Condition List](https://veteransbenefitskb.com/master)
+[\> Master Condition List](https://www.veteransbenefitskb.com/master)
 
-[\> Federal Benefits List by Combined Ratings](https://veteransbenefitskb.com/combinedbenefits)
+[\> Federal Benefits List by Combined Ratings](https://www.veteransbenefitskb.com/combinedbenefits)
 
-[\> Insider Insight into VBA Claim Processing](https://veteransbenefitskb.com/insight)
+[\> Insider Insight into VBA Claim Processing](https://www.veteransbenefitskb.com/insight)
 
-[\> Rating Schedule Index](https://veteransbenefitskb.com/ratingsindex)
+[\> Rating Schedule Index](https://www.veteransbenefitskb.com/ratingsindex)
 
-[\> Filing a VA Disability Claim](https://veteransbenefitskb.com/vaclaim)
+[\> Filing a VA Disability Claim](https://www.veteransbenefitskb.com/vaclaim)
 
-[\> Filing an Appeal](https://veteransbenefitskb.com/appeals)
+[\> Filing an Appeal](https://www.veteransbenefitskb.com/appeals)
 
 * * *
 
 [Categories](https://www.veteransbenefitskb.com/nervesystem)
 
-> [Death/Survivor Benefits](https://veteransbenefitskb.com/#ds)
+> [Death/Survivor Benefits](https://www.veteransbenefitskb.com/#ds)
 
-\> [Education &](https://veteransbenefitskb.com/#ee)  [Employment](https://veteransbenefitskb.com/#ee)
+\> [Education &](https://www.veteransbenefitskb.com/#ee)  [Employment](https://www.veteransbenefitskb.com/#ee)
 
-\> [Health care](https://veteransbenefitskb.com/#healthcare)
+\> [Health care](https://www.veteransbenefitskb.com/#healthcare)
 
-\> [Housing](https://veteransbenefitskb.com/#housing)
+\> [Housing](https://www.veteransbenefitskb.com/#housing)
 
-\> [Miscellaneous](https://veteransbenefitskb.com/#misc)
+\> [Miscellaneous](https://www.veteransbenefitskb.com/#misc)
 
-\> [VA Disability Compensation](https://veteransbenefitskb.com/#va)
+\> [VA Disability Compensation](https://www.veteransbenefitskb.com/#va)
 
-\> [VA Pension](https://veteransbenefitskb.com/#pension)
+\> [VA Pension](https://www.veteransbenefitskb.com/#pension)
 
 The body's electrical highway that tells your muscles to move.
 
-If by chance you were actually looking for ratings concerning _anxiety_ go [HERE](https://veteransbenefitskb.com/mental)
+If by chance you were actually looking for ratings concerning _anxiety_ go [HERE](https://www.veteransbenefitskb.com/mental)
 
 * * *
 
@@ -12265,7 +12265,7 @@ If by chance you were actually looking for ratings concerning _anxiety_ go [HERE
 
 Nerves that affect the head and neck.
 
-- [Cranial Nerves](https://veteransbenefitskb.com/cranialnerves)
+- [Cranial Nerves](https://www.veteransbenefitskb.com/cranialnerves)
 
 * * *
 
@@ -12277,7 +12277,7 @@ Nerves that affect the head and neck.
 
 Cancers & tumors of the brain, conditions of the spinal cord, epilepsy & seizures, headaches, and nervous system diseases (such as ALS).
 
-- [Central Nervous System](https://veteransbenefitskb.com/cns)
+- [Central Nervous System](https://www.veteransbenefitskb.com/cns)
 
 <!-- Chunk 554/1206 | Heading: Ratings Involving the Central Nervous System | Words: 33 -->
 
@@ -12285,7 +12285,7 @@ Cancers & tumors of the brain, conditions of the spinal cord, epilepsy & seizure
 
 ## **Ratings Involving the Lower Back and Legs**
 
-- [Lower Back](https://veteransbenefitskb.com/lownerves)  [and](https://veteransbenefitskb.com/lowernerves)  [Legs](https://veteransbenefitskb.com/lownerves)
+- [Lower Back](https://www.veteransbenefitskb.com/lownerves)  [and](https://www.veteransbenefitskb.com/lowernerves)  [Legs](https://www.veteransbenefitskb.com/lownerves)
 
 * * *
 
@@ -12297,14 +12297,14 @@ Cancers & tumors of the brain, conditions of the spinal cord, epilepsy & seizure
 
 |     |     |
 | --- | --- |
-| \> Cariovascular System\> Arteries & Veins\> Blood\> Heart | \> [Conditions that the VA will **NOT** Rate](https://veteransbenefitskb.com/norate)  |
-| \> [Dental and Oral](https://veteransbenefitskb.com/mouthsystem)  | \> [Digestive System](https://veteransbenefitskb.com/digsystem)  |
-| \> [Endocrine System](https://veteransbenefitskb.com/endsystem)  | \> [Female Reproductive System](https://veteransbenefitskb.com/femalesystem)  |
-| \> [Genitourinary System](https://veteransbenefitskb.com/gensystem)  | \> Hematologic and Lymphatic Systems\> Blood\> Breasts |
-| \> [Infectious Diseases and Immune Disorders](https://veteransbenefitskb.com/infect)  | \> [Mental Disorders](https://veteransbenefitskb.com/mental)  |
+| \> Cariovascular System\> Arteries & Veins\> Blood\> Heart | \> [Conditions that the VA will **NOT** Rate](https://www.veteransbenefitskb.com/norate)  |
+| \> [Dental and Oral](https://www.veteransbenefitskb.com/mouthsystem)  | \> [Digestive System](https://www.veteransbenefitskb.com/digsystem)  |
+| \> [Endocrine System](https://www.veteransbenefitskb.com/endsystem)  | \> [Female Reproductive System](https://www.veteransbenefitskb.com/femalesystem)  |
+| \> [Genitourinary System](https://www.veteransbenefitskb.com/gensystem)  | \> Hematologic and Lymphatic Systems\> Blood\> Breasts |
+| \> [Infectious Diseases and Immune Disorders](https://www.veteransbenefitskb.com/infect)  | \> [Mental Disorders](https://www.veteransbenefitskb.com/mental)  |
 | \> Musculoskeletal System\> Ankle\> Elbow & Forearm\> Foot\> Hand\> Hip & Thigh\> Knee & Lower Leg\> Ribs\> Skull\> Shoulder & Arm\> Spine\> Wrist\> Cancers and Tumors\> Diseases\> Face\> Forearm and Hand\> Hernias\> Lower Leg and Foot\> Buttock, Hip, and Thigh\> Shoulder, and Upper Arm\> Torso and Neck | \> Nervous System\> Cranial Nerves\> Central Nervous System\> Lower Back and Legs\> Upper Back and Arms\> Traumatic Brain Injuries |
-| \> [Nutritional Deficiencies](https://veteransbenefitskb.com/nutritional)  | \> [Respiratory System](https://veteransbenefitskb.com/airsystem)  |
-| \> Senses\> Ears\> Eyes\> Taste/Smell | \> [Skin](https://veteransbenefitskb.com/skin)  |
+| \> [Nutritional Deficiencies](https://www.veteransbenefitskb.com/nutritional)  | \> [Respiratory System](https://www.veteransbenefitskb.com/airsystem)  |
+| \> Senses\> Ears\> Eyes\> Taste/Smell | \> [Skin](https://www.veteransbenefitskb.com/skin)  |
 
 <!-- Chunk 556/1206 | Heading: [Rating Schedule Index Navigation](https://www.veteransbenefitskb.com/ratingsindex) | Words: 165 -->
 
@@ -12370,54 +12370,54 @@ Open Menu
 
 Featured
 
-[\> Master Condition List](https://veteransbenefitskb.com/master)
+[\> Master Condition List](https://www.veteransbenefitskb.com/master)
 
-[\> Federal Benefits List by Combined Ratings](https://veteransbenefitskb.com/combinedbenefits)
+[\> Federal Benefits List by Combined Ratings](https://www.veteransbenefitskb.com/combinedbenefits)
 
-[\> Insider Insight into VBA Claim Processing](https://veteransbenefitskb.com/insight)
+[\> Insider Insight into VBA Claim Processing](https://www.veteransbenefitskb.com/insight)
 
-[\> Rating Schedule Index](https://veteransbenefitskb.com/ratingsindex)
+[\> Rating Schedule Index](https://www.veteransbenefitskb.com/ratingsindex)
 
-[\> Filing a VA Disability Claim](https://veteransbenefitskb.com/vaclaim)
+[\> Filing a VA Disability Claim](https://www.veteransbenefitskb.com/vaclaim)
 
-[\> Filing an Appeal](https://veteransbenefitskb.com/appeals)
+[\> Filing an Appeal](https://www.veteransbenefitskb.com/appeals)
 
 * * *
 
 [Categories](https://www.veteransbenefitskb.com/cranialnerves)
 
-\> [Death/Survivor Benefits](https://veteransbenefitskb.com/#ds)
+\> [Death/Survivor Benefits](https://www.veteransbenefitskb.com/#ds)
 
-\> [Education & Employment](https://veteransbenefitskb.com/#ee)
+\> [Education & Employment](https://www.veteransbenefitskb.com/#ee)
 
-\> [Health care](https://veteransbenefitskb.com/#healthcare)
+\> [Health care](https://www.veteransbenefitskb.com/#healthcare)
 
-\> [Housing](https://veteransbenefitskb.com/#housing)
+\> [Housing](https://www.veteransbenefitskb.com/#housing)
 
-\> [Miscellaneous](https://veteransbenefitskb.com/#misc)
+\> [Miscellaneous](https://www.veteransbenefitskb.com/#misc)
 
-\> [VA Disability Compensation](https://veteransbenefitskb.com/#va)
+\> [VA Disability Compensation](https://www.veteransbenefitskb.com/#va)
 
-\> [VA Pension](https://veteransbenefitskb.com/#pension)
+\> [VA Pension](https://www.veteransbenefitskb.com/#pension)
 
 The cranial nerves are those that come directly from the brain, _not_ the spinal cord.
 
 NOTE:
 
-- While there are a total of 12 cranial nerves. Only 6 of them can be rated under this schedule. The other 6 are rated under the [Special senses](https://veteransbenefitskb.com/senses)  schedule.
+- While there are a total of 12 cranial nerves. Only 6 of them can be rated under this schedule. The other 6 are rated under the [Special senses](https://www.veteransbenefitskb.com/senses)  schedule.
 
 **PRESUMPTIVE CONDITION:**
 
-- If diagnosed within a [Year](https://veteransbenefitskb.com/time)  of separation **AND** the severity warranted _at least_ a 10% evaluation within that time.
+- If diagnosed within a [Year](https://www.veteransbenefitskb.com/time)  of separation **AND** the severity warranted _at least_ a 10% evaluation within that time.
 
 **PYRAMIDING NOTES:**
 
 - The nerve can only be rated under **_ONE_** category **OR** however it affects range of motion (ROM). Whichever will give the Veteran the highest rating.
 
-- However, if the Veteran has a [Musculoskeletal](https://veteransbenefitskb.com/msindex)  issue that can be attributed to the limitation of ROM. Then the Veteran **CAN** get separate ratings for both the nerve **AND** the ROM!
+- However, if the Veteran has a [Musculoskeletal](https://www.veteransbenefitskb.com/msindex)  issue that can be attributed to the limitation of ROM. Then the Veteran **CAN** get separate ratings for both the nerve **AND** the ROM!
 - The Veteran **CAN** get separate evaluations for each of the following 6 nerves.
 
-- There are a _pair_ of nerves (each controlling a side of the body). The Veteran **CAN** get an individual rating for **BOTH** sides affected! Meaning a Veteran can get upwards of a total of 12 separate evaluations! Do know that the cranial nerves however are **NOT** eligible for the [Bilateral factor](https://veteransbenefitskb.com/vamath)
+- There are a _pair_ of nerves (each controlling a side of the body). The Veteran **CAN** get an individual rating for **BOTH** sides affected! Meaning a Veteran can get upwards of a total of 12 separate evaluations! Do know that the cranial nerves however are **NOT** eligible for the [Bilateral factor](https://www.veteransbenefitskb.com/vamath)
 
 * * *
 
@@ -12473,7 +12473,7 @@ Nerve that lets your feel your face and controls chewing and biting.
 
 NOTE:
 
-- If only jaw range of motion is affected the Veteran will be rated under [Temporomandibular disorder](https://veteransbenefitskb.com/mouthsystem#9905)
+- If only jaw range of motion is affected the Veteran will be rated under [Temporomandibular disorder](https://www.veteransbenefitskb.com/mouthsystem#9905)
 
 <!-- Chunk 563/1206 | Heading: The Trigeminal Nerve (V Nerve, Fifth Nerve) | Words: 38 -->
 
@@ -12533,7 +12533,7 @@ Nerve that controls ability to shrug your shoulders and move your head.
 
 NOTE:
 
-- If only range of motion is affected the Veteran will be rated under the appropriate [Musculoskeletal schedule](https://veteransbenefitskb.com/msindex)
+- If only range of motion is affected the Veteran will be rated under the appropriate [Musculoskeletal schedule](https://www.veteransbenefitskb.com/msindex)
 
 <!-- Chunk 568/1206 | Heading: The Spinal Accessory Nerve (XI Nerve, Eleventh Nerve, Accessory Nerve) | Words: 42 -->
 
@@ -12565,9 +12565,9 @@ NOTE:
 
 ## **Disability Benefits Questionnaire (DBQs)**
 
-To get an idea of how a [C&P exam](https://veteransbenefitskb.com/CnP)  will be conducted it is recommended that the Veteran look at the applicable DBQ.
+To get an idea of how a [C&P exam](https://www.veteransbenefitskb.com/CnP)  will be conducted it is recommended that the Veteran look at the applicable DBQ.
 
-Veteran's may ask a physician to complete a DBQ on their behalf to submit with their claim. For more information on DBQs click [HERE](https://veteransbenefitskb.com/DBQ)
+Veteran's may ask a physician to complete a DBQ on their behalf to submit with their claim. For more information on DBQs click [HERE](https://www.veteransbenefitskb.com/DBQ)
 
 - [Cranial Nerve Conditions](https://www.benefits.va.gov/compensation/docs/Cranial_Nerve_Conditions.pdf)
 
@@ -12579,7 +12579,7 @@ Veteran's may ask a physician to complete a DBQ on their behalf to submit with t
 
 ## **Having Trouble Finding Your Condition?**
 
-- Click [HERE](https://veteransbenefitskb.com/master)  to view the Master Condition List.
+- Click [HERE](https://www.veteransbenefitskb.com/master)  to view the Master Condition List.
 
 [Return to top](https://www.veteransbenefitskb.com/cranialnerves#top)
 
@@ -12609,14 +12609,14 @@ Veteran's may ask a physician to complete a DBQ on their behalf to submit with t
 
 |     |     |
 | --- | --- |
-| \> Cariovascular System\> Arteries & Veins\> Blood\> Heart | \> [Conditions that the VA will **NOT** Rate](https://veteransbenefitskb.com/norate)  |
-| \> [Dental and Oral](https://veteransbenefitskb.com/mouthsystem)  | \> [Digestive System](https://veteransbenefitskb.com/digsystem)  |
-| \> [Endocrine System](https://veteransbenefitskb.com/endsystem)  | \> [Female Reproductive System](https://veteransbenefitskb.com/femalesystem)  |
-| \> [Genitourinary System](https://veteransbenefitskb.com/gensystem)  | \> Hematologic and Lymphatic Systems\> Blood\> Breasts |
-| \> [Infectious Diseases and Immune Disorders](https://veteransbenefitskb.com/infect)  | \> [Mental Disorders](https://veteransbenefitskb.com/mental)  |
+| \> Cariovascular System\> Arteries & Veins\> Blood\> Heart | \> [Conditions that the VA will **NOT** Rate](https://www.veteransbenefitskb.com/norate)  |
+| \> [Dental and Oral](https://www.veteransbenefitskb.com/mouthsystem)  | \> [Digestive System](https://www.veteransbenefitskb.com/digsystem)  |
+| \> [Endocrine System](https://www.veteransbenefitskb.com/endsystem)  | \> [Female Reproductive System](https://www.veteransbenefitskb.com/femalesystem)  |
+| \> [Genitourinary System](https://www.veteransbenefitskb.com/gensystem)  | \> Hematologic and Lymphatic Systems\> Blood\> Breasts |
+| \> [Infectious Diseases and Immune Disorders](https://www.veteransbenefitskb.com/infect)  | \> [Mental Disorders](https://www.veteransbenefitskb.com/mental)  |
 | \> Musculoskeletal System\> Ankle\> Elbow & Forearm\> Foot\> Hand\> Hip & Thigh\> Knee & Lower Leg\> Ribs\> Skull\> Shoulder & Arm\> Spine\> Wrist\> Cancers and Tumors\> Diseases\> Face\> Forearm and Hand\> Hernias\> Lower Leg and Foot\> Buttock, Hip, and Thigh\> Shoulder, and Upper Arm\> Torso and Neck | \> Nervous System\> Cranial Nerves\> Central Nervous System\> Lower Back and Legs\> Upper Back and Arms\> Traumatic Brain Injuries |
-| \> [Nutritional Deficiencies](https://veteransbenefitskb.com/nutritional)  | \> [Respiratory System](https://veteransbenefitskb.com/airsystem)  |
-| \> Senses\> Ears\> Eyes\> Taste/Smell | \> [Skin](https://veteransbenefitskb.com/skin)  |
+| \> [Nutritional Deficiencies](https://www.veteransbenefitskb.com/nutritional)  | \> [Respiratory System](https://www.veteransbenefitskb.com/airsystem)  |
+| \> Senses\> Ears\> Eyes\> Taste/Smell | \> [Skin](https://www.veteransbenefitskb.com/skin)  |
 
 <!-- Chunk 574/1206 | Heading: [Rating Schedule Index Navigation](https://www.veteransbenefitskb.com/ratingsindex) | Words: 165 -->
 
@@ -12682,35 +12682,35 @@ Open Menu
 
 Featured
 
-[\> Master Condition List](https://veteransbenefitskb.com/master)
+[\> Master Condition List](https://www.veteransbenefitskb.com/master)
 
-[\> Federal Benefits List by Combined Ratings](https://veteransbenefitskb.com/combinedbenefits)
+[\> Federal Benefits List by Combined Ratings](https://www.veteransbenefitskb.com/combinedbenefits)
 
-[\> Insider Insight into VBA Claim Processing](https://veteransbenefitskb.com/insight)
+[\> Insider Insight into VBA Claim Processing](https://www.veteransbenefitskb.com/insight)
 
-[\> Rating Schedule Index](https://veteransbenefitskb.com/ratingsindex)
+[\> Rating Schedule Index](https://www.veteransbenefitskb.com/ratingsindex)
 
-[\> Filing a VA Disability Claim](https://veteransbenefitskb.com/vaclaim)
+[\> Filing a VA Disability Claim](https://www.veteransbenefitskb.com/vaclaim)
 
-[\> Filing an Appeal](https://veteransbenefitskb.com/appeals)
+[\> Filing an Appeal](https://www.veteransbenefitskb.com/appeals)
 
 * * *
 
 [Categories](https://www.veteransbenefitskb.com/lownerves)
 
-> [Death/Survivor Benefits](https://veteransbenefitskb.com/#ds)
+> [Death/Survivor Benefits](https://www.veteransbenefitskb.com/#ds)
 
-\> [Education &](https://veteransbenefitskb.com/#ee)  [Employment](https://veteransbenefitskb.com/#ee)
+\> [Education &](https://www.veteransbenefitskb.com/#ee)  [Employment](https://www.veteransbenefitskb.com/#ee)
 
-\> [Health care](https://veteransbenefitskb.com/#healthcare)
+\> [Health care](https://www.veteransbenefitskb.com/#healthcare)
 
-\> [Housing](https://veteransbenefitskb.com/#housing)
+\> [Housing](https://www.veteransbenefitskb.com/#housing)
 
-\> [Miscellaneous](https://veteransbenefitskb.com/#misc)
+\> [Miscellaneous](https://www.veteransbenefitskb.com/#misc)
 
-\> [VA Disability Compensation](https://veteransbenefitskb.com/#va)
+\> [VA Disability Compensation](https://www.veteransbenefitskb.com/#va)
 
-\> [VA Pension](https://veteransbenefitskb.com/#pension)
+\> [VA Pension](https://www.veteransbenefitskb.com/#pension)
 
 The Nerves of the lower back and lower.
 
@@ -12718,15 +12718,15 @@ The Nerves of the lower back and lower.
 
 **PYRAMIDING NOTES:**
 
-- Nerves can only be rated under **_ONE_** [Category](https://veteransbenefitskb.com/lownerves#cat)  whichever is the primary disability.
+- Nerves can only be rated under **_ONE_** [Category](https://www.veteransbenefitskb.com/lownerves#cat)  whichever is the primary disability.
 
-- There are a _pair_ of nerves (each controlling a side of the body). As such, the veteran **CAN** get a separate rating for each leg! Know, the nerves **ARE** eligible for [Bilateral factor](https://veteransbenefitskb.com/vamath#bilateral)
+- There are a _pair_ of nerves (each controlling a side of the body). As such, the veteran **CAN** get a separate rating for each leg! Know, the nerves **ARE** eligible for [Bilateral factor](https://www.veteransbenefitskb.com/vamath#bilateral)
 
 **PRESUMPTIVE CONDITION:**
 
-- If diagnosed within a [Year](https://veteransbenefitskb.com/time)  of separation **AND** the severity warranted _at least_ a 10% evaluation within that time;
+- If diagnosed within a [Year](https://www.veteransbenefitskb.com/time)  of separation **AND** the severity warranted _at least_ a 10% evaluation within that time;
 
-- If diagnosed within a year of last possible exposure to [Agent Orange](https://veteransbenefitskb.com/agentorange)  **AND** the condition would have rated _at least_ 10% within that year;
+- If diagnosed within a year of last possible exposure to [Agent Orange](https://www.veteransbenefitskb.com/agentorange)  **AND** the condition would have rated _at least_ 10% within that year;
 
 - _Neurological signs or symptoms_ if exposed to [Gulf environmental hazards](https://sunflower-brass-pcgs.squarespace.com/gulfill)  and the condition is considered a MUCMI; or
 
@@ -12748,29 +12748,29 @@ If more than one nerve is impaired within group 2; Veterans gets a single evalua
 
 - Group 1
 
-- [Common Peroneal Nerve (Common Fibular Nerve, External Popliteal Nerve, Lateral Popliteal Nerve, Peroneal Nerve)](https://veteransbenefitskb.com/lownerves#8521)
+- [Common Peroneal Nerve (Common Fibular Nerve, External Popliteal Nerve, Lateral Popliteal Nerve, Peroneal Nerve)](https://www.veteransbenefitskb.com/lownerves#8521)
 
-- [The Deep Peroneal Nerve (Anterior Tibial Nerve, Deep Fibular](https://veteransbenefitskb.com/lownerves#8523)  [Nerve)](https://www.reddit.com/r/VeteransBenefits/wiki/lblnerves/#wiki_the_deep_peroneal_nerve_.28anterior_tibial_nerve.2C_deep_fibular_nerve.29)
+- [The Deep Peroneal Nerve (Anterior Tibial Nerve, Deep Fibular](https://www.veteransbenefitskb.com/lownerves#8523)  [Nerve)](https://www.reddit.com/r/VeteransBenefits/wiki/lblnerves/#wiki_the_deep_peroneal_nerve_.28anterior_tibial_nerve.2C_deep_fibular_nerve.29)
 
-- [The Posterior Tibial Nerve](https://veteransbenefitskb.com/lownerves#8525)
+- [The Posterior Tibial Nerve](https://www.veteransbenefitskb.com/lownerves#8525)
 
-- [The Sciatic Nerve (Ischiadic Nerve, Ischiatic Nerve)](https://veteransbenefitskb.com/lownerves#8520)
+- [The Sciatic Nerve (Ischiadic Nerve, Ischiatic Nerve)](https://www.veteransbenefitskb.com/lownerves#8520)
 
-- [The Superficial Peroneal Nerve (Musculocutaneous nerve, Superficial Fibular Nerve)](https://veteransbenefitskb.com/lownerves#8522)  and
+- [The Superficial Peroneal Nerve (Musculocutaneous nerve, Superficial Fibular Nerve)](https://www.veteransbenefitskb.com/lownerves#8522)  and
 
-- [The Tibial Nerve (Internal Popliteal Nerve)](https://veteransbenefitskb.com/lownerves#85240)
+- [The Tibial Nerve (Internal Popliteal Nerve)](https://www.veteransbenefitskb.com/lownerves#85240)
 - Group 2
 
-- [The Femoral Nerve (Anterior Crural Nerve)](https://veteransbenefitskb.com/lownerves#8526)  and
+- [The Femoral Nerve (Anterior Crural Nerve)](https://www.veteransbenefitskb.com/lownerves#8526)  and
 
-- [The Internal Saphenous Nerve (Long Saphenous Nerve, Saphenous Nerve)](https://veteransbenefitskb.com/lownerves#8527)
+- [The Internal Saphenous Nerve (Long Saphenous Nerve, Saphenous Nerve)](https://www.veteransbenefitskb.com/lownerves#8527)
 - Group 3
 
-- [The Ilioinguinal Nerve (Ilio-inguinal Nerve)](https://veteransbenefitskb.com/lownerves#8530)
+- [The Ilioinguinal Nerve (Ilio-inguinal Nerve)](https://www.veteransbenefitskb.com/lownerves#8530)
 
-- [The Lateral Femoral Cutaneous Nerve (External Cutaneous Nerve, Lateral Cutaneous Nerve)](https://veteransbenefitskb.com/lownerves#8529)  and
+- [The Lateral Femoral Cutaneous Nerve (External Cutaneous Nerve, Lateral Cutaneous Nerve)](https://www.veteransbenefitskb.com/lownerves#8529)  and
 
-- [The Obturator Nerve](https://veteransbenefitskb.com/lownerves#8528)
+- [The Obturator Nerve](https://www.veteransbenefitskb.com/lownerves#8528)
 
 <!-- Chunk 578/1206 | Heading: Nerve Groupings | Words: 243 -->
 
@@ -12794,7 +12794,7 @@ Nerve conditions are placed into 1 of 3 categories which are then rated upon the
 
 **IMPORTANT NOTE:**
 
-- There can be a fair bit of differences of opinions as to how to rate nerve severity. So if you got a mild when you thought you should have gotten at least moderate, filing a [Higher level review](https://veteransbenefitskb.com/appeals#hlr)  _may_ be a good idea.
+- There can be a fair bit of differences of opinions as to how to rate nerve severity. So if you got a mild when you thought you should have gotten at least moderate, filing a [Higher level review](https://www.veteransbenefitskb.com/appeals#hlr)  _may_ be a good idea.
 
 * * *
 
@@ -12893,7 +12893,7 @@ It is a major player in allowing leg, foot, and hip movements.
 
 ## **The Tibial Nerve (Internal Popliteal Nerve)**
 
-Branches off from the sciatic nerve just above the knee. It then goes down the back of the leg before it moves around the ankle to pass through the tarsal tunnel into the inner foot. It must be damaged before it moves around the ankle, to be rated under this schedule. If damaged after, it is rated under the [Posterior Tibial Nerve](https://veteransbenefitskb.com/lownerves#8525)
+Branches off from the sciatic nerve just above the knee. It then goes down the back of the leg before it moves around the ankle to pass through the tarsal tunnel into the inner foot. It must be damaged before it moves around the ankle, to be rated under this schedule. If damaged after, it is rated under the [Posterior Tibial Nerve](https://www.veteransbenefitskb.com/lownerves#8525)
 
 Controls movement of the foot and toes.
 
@@ -12933,7 +12933,7 @@ Controls movement of the foot and toes.
 
 ## **The Posterior Tibial Nerve**
 
-Starts where the tibial nerve curves around the ankle and continues into the arch of the foot. If damaged before it moves around the ankle and passes through the tarsal tunnel, then it is rated under the [Tibial Nerve](https://veteransbenefitskb.com/lownerves#85240)  schedule.
+Starts where the tibial nerve curves around the ankle and continues into the arch of the foot. If damaged before it moves around the ankle and passes through the tarsal tunnel, then it is rated under the [Tibial Nerve](https://www.veteransbenefitskb.com/lownerves#85240)  schedule.
 
 Controls movement of the foot and toes.
 
@@ -13215,9 +13215,9 @@ Does not controls movement, but does give feeling to the front and back of the t
 
 ## **Disability Benefits Questionnaire (DBQs)**
 
-To get an idea of how a [C&P exam](https://veteransbenefitskb.com/cnp)  will be conducted it is recommended that the Veteran look at the applicable DBQ.
+To get an idea of how a [C&P exam](https://www.veteransbenefitskb.com/cnp)  will be conducted it is recommended that the Veteran look at the applicable DBQ.
 
-Veteran's may ask a physician to complete a DBQ on their behalf to submit with their claim. For more information on DBQs click [HERE](https://veteransbenefitskb.com/dbq)
+Veteran's may ask a physician to complete a DBQ on their behalf to submit with their claim. For more information on DBQs click [HERE](https://www.veteransbenefitskb.com/dbq)
 
 - [Diabetic Peripheral Neuropathy](https://www.benefits.va.gov/compensation/docs/Diabetic_Peripheral_Neuropathy.pdf)
 
@@ -13231,7 +13231,7 @@ Veteran's may ask a physician to complete a DBQ on their behalf to submit with t
 
 ## **Having Trouble Finding Your Condition?**
 
-- Click [HERE](https://veteransbenefitskb.com/master)  to view the Master Condition List.
+- Click [HERE](https://www.veteransbenefitskb.com/master)  to view the Master Condition List.
 
 [Return to top](https://www.veteransbenefitskb.com/lownerves#top)
 
@@ -13259,14 +13259,14 @@ Veteran's may ask a physician to complete a DBQ on their behalf to submit with t
 
 |     |     |
 | --- | --- |
-| \> Cariovascular System\> Arteries & Veins\> Blood\> Heart | \> [Conditions that the VA will **NOT** Rate](https://veteransbenefitskb.com/norate)  |
-| \> [Dental and Oral](https://veteransbenefitskb.com/mouthsystem)  | \> [Digestive System](https://veteransbenefitskb.com/digsystem)  |
-| \> [Endocrine System](https://veteransbenefitskb.com/endsystem)  | \> [Female Reproductive System](https://veteransbenefitskb.com/femalesystem)  |
-| \> [Genitourinary System](https://veteransbenefitskb.com/gensystem)  | \> Hematologic and Lymphatic Systems\> Blood\> Breasts |
-| \> [Infectious Diseases and Immune Disorders](https://veteransbenefitskb.com/infect)  | \> [Mental Disorders](https://veteransbenefitskb.com/mental)  |
+| \> Cariovascular System\> Arteries & Veins\> Blood\> Heart | \> [Conditions that the VA will **NOT** Rate](https://www.veteransbenefitskb.com/norate)  |
+| \> [Dental and Oral](https://www.veteransbenefitskb.com/mouthsystem)  | \> [Digestive System](https://www.veteransbenefitskb.com/digsystem)  |
+| \> [Endocrine System](https://www.veteransbenefitskb.com/endsystem)  | \> [Female Reproductive System](https://www.veteransbenefitskb.com/femalesystem)  |
+| \> [Genitourinary System](https://www.veteransbenefitskb.com/gensystem)  | \> Hematologic and Lymphatic Systems\> Blood\> Breasts |
+| \> [Infectious Diseases and Immune Disorders](https://www.veteransbenefitskb.com/infect)  | \> [Mental Disorders](https://www.veteransbenefitskb.com/mental)  |
 | \> Musculoskeletal System\> Ankle\> Elbow & Forearm\> Foot\> Hand\> Hip & Thigh\> Knee & Lower Leg\> Ribs\> Skull\> Shoulder & Arm\> Spine\> Wrist\> Cancers and Tumors\> Diseases\> Face\> Forearm and Hand\> Hernias\> Lower Leg and Foot\> Buttock, Hip, and Thigh\> Shoulder, and Upper Arm\> Torso and Neck | \> Nervous System\> Cranial Nerves\> Central Nervous System\> Lower Back and Legs\> Upper Back and Arms\> Traumatic Brain Injuries |
-| \> [Nutritional Deficiencies](https://veteransbenefitskb.com/nutritional)  | \> [Respiratory System](https://veteransbenefitskb.com/airsystem)  |
-| \> Senses\> Ears\> Eyes\> Taste/Smell | \> [Skin](https://veteransbenefitskb.com/skin)  |
+| \> [Nutritional Deficiencies](https://www.veteransbenefitskb.com/nutritional)  | \> [Respiratory System](https://www.veteransbenefitskb.com/airsystem)  |
+| \> Senses\> Ears\> Eyes\> Taste/Smell | \> [Skin](https://www.veteransbenefitskb.com/skin)  |
 
 <!-- Chunk 614/1206 | Heading: [Rating Schedule Index Navigation](https://www.veteransbenefitskb.com/ratingsindex) | Words: 165 -->
 
@@ -13332,35 +13332,35 @@ Open Menu
 
 Featured
 
-[\> Master Condition List](https://veteransbenefitskb.com/master)
+[\> Master Condition List](https://www.veteransbenefitskb.com/master)
 
-[\> Federal Benefits List by Combined Ratings](https://veteransbenefitskb.com/combinedbenefits)
+[\> Federal Benefits List by Combined Ratings](https://www.veteransbenefitskb.com/combinedbenefits)
 
-[\> Insider Insight into VBA Claim Processing](https://veteransbenefitskb.com/insight)
+[\> Insider Insight into VBA Claim Processing](https://www.veteransbenefitskb.com/insight)
 
-[\> Rating Schedule Index](https://veteransbenefitskb.com/ratingsindex)
+[\> Rating Schedule Index](https://www.veteransbenefitskb.com/ratingsindex)
 
-[\> Filing a VA Disability Claim](https://veteransbenefitskb.com/vaclaim)
+[\> Filing a VA Disability Claim](https://www.veteransbenefitskb.com/vaclaim)
 
-[\> Filing an Appeal](https://veteransbenefitskb.com/appeals)
+[\> Filing an Appeal](https://www.veteransbenefitskb.com/appeals)
 
 * * *
 
 [Categories](https://www.veteransbenefitskb.com/cns)
 
-\> [Death/Survivor Benefits](https://veteransbenefitskb.com/#ds)
+\> [Death/Survivor Benefits](https://www.veteransbenefitskb.com/#ds)
 
-\> [Education & Employment](https://veteransbenefitskb.com/#ee)
+\> [Education & Employment](https://www.veteransbenefitskb.com/#ee)
 
-\> [Health care](https://veteransbenefitskb.com/#healthcare)
+\> [Health care](https://www.veteransbenefitskb.com/#healthcare)
 
-\> [Housing](https://veteransbenefitskb.com/#housing)
+\> [Housing](https://www.veteransbenefitskb.com/#housing)
 
-\> [Miscellaneous](https://veteransbenefitskb.com/#misc)
+\> [Miscellaneous](https://www.veteransbenefitskb.com/#misc)
 
-\> [VA Disability Compensation](https://veteransbenefitskb.com/#va)
+\> [VA Disability Compensation](https://www.veteransbenefitskb.com/#va)
 
-\> [VA Pension](https://veteransbenefitskb.com/#pension)
+\> [VA Pension](https://www.veteransbenefitskb.com/#pension)
 
 The brain itself and the spinal cord.
 
@@ -13374,7 +13374,7 @@ The brain itself and the spinal cord.
 
 **PRESUMPTIVE CONDITION:**
 
-- If diagnosed with an _organic disease of the nervous system_ within a [Year](https://veteransbenefitskb.com/time)  of separation **AND** the severity warranted _at least_ a 10% evaluation within that time; or
+- If diagnosed with an _organic disease of the nervous system_ within a [Year](https://www.veteransbenefitskb.com/time)  of separation **AND** the severity warranted _at least_ a 10% evaluation within that time; or
 
 - _Neurological signs or symptoms_ if exposed to [Gulf environmental hazards](https://sunflower-brass-pcgs.squarespace.com/gulfill)  and the condition is considered a MUCMI.
 
@@ -13390,7 +13390,7 @@ Things that affect or take place in the ole control room.
 
 NOTE:
 
-- For information on Traumatic Brain Injuries (TBI) click [HERE](https://veteransbenefitskb.com/tbi)
+- For information on Traumatic Brain Injuries (TBI) click [HERE](https://www.veteransbenefitskb.com/tbi)
 
 <!-- Chunk 618/1206 | Heading: Conditions of the Brain | Words: 27 -->
 
@@ -13402,7 +13402,7 @@ Brain swelling caused by a virus or bacteria.
 
 Symptoms may include:
 
-- [Headache](https://veteransbenefitskb.com/cns#8100)
+- [Headache](https://www.veteransbenefitskb.com/cns#8100)
 
 - Fever; and
 
@@ -13410,7 +13410,7 @@ Symptoms may include:
 
 **PRESUMPTIVE CONDITION:**
 
-- If diagnosed within a [Year](https://veteransbenefitskb.com/time)  of separation **AND** the severity warranted _at least_ a 10% evaluation within that time.
+- If diagnosed within a [Year](https://www.veteransbenefitskb.com/time)  of separation **AND** the severity warranted _at least_ a 10% evaluation within that time.
 
 * * *
 
@@ -13431,45 +13431,45 @@ Brain cells die, resulting in difficulties controlling bodily movements.
 
 This condition is presumptive under several different presumptive criteria:
 
-- [Agent Orange exposure](https://veteransbenefitskb.com/agentorange)
+- [Agent Orange exposure](https://www.veteransbenefitskb.com/agentorange)
 
-- [Camp Lejeune exposure](https://veteransbenefitskb.com/camplejeune)
+- [Camp Lejeune exposure](https://www.veteransbenefitskb.com/camplejeune)
 
 - [Secondary to a moderate or severe TBI](https://www.veteransbenefitskb.com/tbi#presumptive)  or
 
-- [Diagnosed within one year of separation](https://veteransbenefitskb.com/time)
+- [Diagnosed within one year of separation](https://www.veteransbenefitskb.com/time)
 
 Symptoms may include but are not limited too:
 
-- [Balance issues](https://veteransbenefitskb.com/ears#6204)
+- [Balance issues](https://www.veteransbenefitskb.com/ears#6204)
 
-- [Constipation](https://veteransbenefitskb.com/digsystem#7333)
+- [Constipation](https://www.veteransbenefitskb.com/digsystem#7333)
 
-- [Dementia & other mental disorders](https://veteransbenefitskb.com/mental)
+- [Dementia & other mental disorders](https://www.veteransbenefitskb.com/mental)
 
-- Difficulty chewing/swallowing, rated under [DC 7203](https://veteransbenefitskb.com/digsystem#7203)  **OR** [DC 8212](https://veteransbenefitskb.com/crainialnerves#8212)  whichever gives the highest evaluation;
+- Difficulty chewing/swallowing, rated under [DC 7203](https://www.veteransbenefitskb.com/digsystem#7203)  **OR** [DC 8212](https://www.veteransbenefitskb.com/crainialnerves#8212)  whichever gives the highest evaluation;
 
-- [Head tremor](https://veteransbenefitskb.com/crainialnerves#8205)
+- [Head tremor](https://www.veteransbenefitskb.com/crainialnerves#8205)
 
-- [Loss of autonomic movements (such as blinking)](https://veteransbenefitskb.com/cranialnerves#8207)
+- [Loss of autonomic movements (such as blinking)](https://www.veteransbenefitskb.com/cranialnerves#8207)
 
-- [Loss of smell](https://veteransbenefitskb.com/tastesmell#6275)
+- [Loss of smell](https://www.veteransbenefitskb.com/tastesmell#6275)
 
-- [Loss of taste](https://veteransbenefitskb.com/tastesmell#6276)
+- [Loss of taste](https://www.veteransbenefitskb.com/tastesmell#6276)
 
-- [Nerve issues (lower extremities)](https://veteransbenefitskb.com/lblnerves)
+- [Nerve issues (lower extremities)](https://www.veteransbenefitskb.com/lblnerves)
 
-- [Nerve issues (upper extremities)](https://veteransbenefitskb.com/upanerves)
+- [Nerve issues (upper extremities)](https://www.veteransbenefitskb.com/upanerves)
 
-- Sexual dysfunction, [Female](https://veteransbenefitskb.com/femalesystem#7632)  [Male](https://veteransbenefitskb.com/gensystem#7522)
+- Sexual dysfunction, [Female](https://www.veteransbenefitskb.com/femalesystem#7632)  [Male](https://www.veteransbenefitskb.com/gensystem#7522)
 
-- [Sleep apnea symptoms](https://veteransbenefitskb.com/airsystem#6847)
+- [Sleep apnea symptoms](https://www.veteransbenefitskb.com/airsystem#6847)
 
-- Speech changes, rated under [DC 6516](https://veteransbenefitskb.com/airsystem#6516)  [DC 6519](https://veteransbenefitskb.com/airsystem#6519)  **OR** [DC 8210](https://veteransbenefitskb.com/cranialnerves#8210)  whichever gives the highest evaluation;
+- Speech changes, rated under [DC 6516](https://www.veteransbenefitskb.com/airsystem#6516)  [DC 6519](https://www.veteransbenefitskb.com/airsystem#6519)  **OR** [DC 8210](https://www.veteransbenefitskb.com/cranialnerves#8210)  whichever gives the highest evaluation;
 
-- [Stooped posture](https://veteransbenefitskb.com/cranialnerves#8211)  and
+- [Stooped posture](https://www.veteransbenefitskb.com/cranialnerves#8211)  and
 
-- [Urinary dysfunction](https://veteransbenefitskb.com/gensystem#urinary)
+- [Urinary dysfunction](https://www.veteransbenefitskb.com/gensystem#urinary)
 
 * * *
 
@@ -13493,7 +13493,7 @@ Symptoms may include:
 
 **PRESUMPTIVE CONDITION:**
 
-- If diagnosed within a [Year](https://veteransbenefitskb.com/time)  of separation.
+- If diagnosed within a [Year](https://www.veteransbenefitskb.com/time)  of separation.
 
 * * *
 
@@ -13515,21 +13515,21 @@ Symptoms may include:
 
 Common symptoms include:
 
-- [Dementia & other mental disorders](https://veteransbenefitskb.com/mental)
+- [Dementia & other mental disorders](https://www.veteransbenefitskb.com/mental)
 
-- [Nerve paralysis](https://veteransbenefitskb.com/nervsystem)  and
+- [Nerve paralysis](https://www.veteransbenefitskb.com/nervsystem)  and
 
 - Weakness.
 
 **PRESUMPTIVE CONDITION:**
 
-- If diagnosed within a [Year](https://veteransbenefitskb.com/time)  of separation; or
+- If diagnosed within a [Year](https://www.veteransbenefitskb.com/time)  of separation; or
 
 - [Former POW](https://www.veteransbenefitskb.com/pow)
 
 **QUASI PRESUMPTIVE SERVICE-CONNECTION:**
 
-- If service-connection has been established for [Hypertension](https://veteransbenefitskb.com/bloodtubes#7101)  **AND** a stroke occurred **AFTER** the hypertension condition manifested. The VA is to presume the stroke is secondary to the hypertension ( [M21 V.iii.5.3.g.](https://www.knowva.ebenefits.va.gov/system/templates/selfservice/va_ssnew/help/customer/locale/en-US/portal/554400000001018/content/554400000014520/M21-1-Part-V-Subpart-iii-Chapter-5-Cardiovascular-System-Conditions#3)
+- If service-connection has been established for [Hypertension](https://www.veteransbenefitskb.com/bloodtubes#7101)  **AND** a stroke occurred **AFTER** the hypertension condition manifested. The VA is to presume the stroke is secondary to the hypertension ( [M21 V.iii.5.3.g.](https://www.knowva.ebenefits.va.gov/system/templates/selfservice/va_ssnew/help/customer/locale/en-US/portal/554400000001018/content/554400000014520/M21-1-Part-V-Subpart-iii-Chapter-5-Cardiovascular-System-Conditions#3)
 
 * * *
 
@@ -13549,17 +13549,17 @@ Syphilis that has infected the lining of the brain and its blood vessels.
 
 Symptoms may include:
 
-- [Dementia & other mental disorders](https://veteransbenefitskb.com/mental)
+- [Dementia & other mental disorders](https://www.veteransbenefitskb.com/mental)
 
-- [Double vision](https://veteransbenefitskb.com/eyes#6090)
+- [Double vision](https://www.veteransbenefitskb.com/eyes#6090)
 
-- [Fatigue](https://veteransbenefitskb.com/infect#6354)
+- [Fatigue](https://www.veteransbenefitskb.com/infect#6354)
 
-- [Headache](https://veteransbenefitskb.com/cns#8100)
+- [Headache](https://www.veteransbenefitskb.com/cns#8100)
 
-- [Nerve paralysis](https://veteransbenefitskb.com/nervsystem)  and
+- [Nerve paralysis](https://www.veteransbenefitskb.com/nervsystem)  and
 
-- [Memory issues](https://veteransbenefitskb.com/mental#9310)
+- [Memory issues](https://www.veteransbenefitskb.com/mental#9310)
 
 * * *
 
@@ -13577,15 +13577,15 @@ Pus in the brain due to infection.
 
 Symptoms may include:
 
-- [Dementia & other mental disorders](https://veteransbenefitskb.com/mental)
+- [Dementia & other mental disorders](https://www.veteransbenefitskb.com/mental)
 
-- [Fatigue](https://veteransbenefitskb.com/infect#6354)
+- [Fatigue](https://www.veteransbenefitskb.com/infect#6354)
 
-- [Headache](https://veteransbenefitskb.com/cns#8100)
+- [Headache](https://www.veteransbenefitskb.com/cns#8100)
 
-- [Nerve impairment](https://veteransbenefitskb.com/nervsystem)  and
+- [Nerve impairment](https://www.veteransbenefitskb.com/nervsystem)  and
 
-- [Seizures](https://veteransbenefitskb.com/cns#seizure)
+- [Seizures](https://www.veteransbenefitskb.com/cns#seizure)
 
 * * *
 
@@ -13604,19 +13604,19 @@ Caused by a breakdown in communication between nerves and muscles.
 
 Symptoms may include:
 
-- [Difficulty eating](https://veteransbenefitskb.com/digsystem#7203)
+- [Difficulty eating](https://www.veteransbenefitskb.com/digsystem#7203)
 
-- [Difficulty breathing](https://veteransbenefitskb.com/airsystem)
+- [Difficulty breathing](https://www.veteransbenefitskb.com/airsystem)
 
-- [Double vision](https://veteransbenefitskb.com/eyes#6090)
+- [Double vision](https://www.veteransbenefitskb.com/eyes#6090)
 
-- [Fatigue](https://veteransbenefitskb.com/infect#6354)  and
+- [Fatigue](https://www.veteransbenefitskb.com/infect#6354)  and
 
-- [Nerve impairment](https://veteransbenefitskb.com/nervsystem)
+- [Nerve impairment](https://www.veteransbenefitskb.com/nervsystem)
 
 **PRESUMPTIVE CONDITION:**
 
-- If diagnosed within a [Year](https://veteransbenefitskb.com/time)  of separation.
+- If diagnosed within a [Year](https://www.veteransbenefitskb.com/time)  of separation.
 
 * * *
 
@@ -13634,13 +13634,13 @@ Decreased blood flow due to plaque build up in the blood vessels of the brain.
 
 Symptoms may include:
 
-- [Difficulty speaking](https://veteransbenefitskb.com/airsystem#6519)
+- [Difficulty speaking](https://www.veteransbenefitskb.com/airsystem#6519)
 
-- [Headache](https://veteransbenefitskb.com/cns#8100)
+- [Headache](https://www.veteransbenefitskb.com/cns#8100)
 
-- [Numbness or weakness in the arms or legs](https://veteransbenefitskb.com/nervsystem)
+- [Numbness or weakness in the arms or legs](https://www.veteransbenefitskb.com/nervsystem)
 
-- [Loss of control of facial muscles](https://veteransbenefitskb.com/nervsystem)  and
+- [Loss of control of facial muscles](https://www.veteransbenefitskb.com/nervsystem)  and
 
 - Temporary loss of vision in one eye.
 
@@ -13666,17 +13666,17 @@ Inflammation of the spinal cord which can disrupt the normal responses from the 
 
 Symptoms may include:
 
-- [Incontinence (Fecal)](https://veteransbenefitskb.com/digsystem#7332)
+- [Incontinence (Fecal)](https://www.veteransbenefitskb.com/digsystem#7332)
 
-- [Incontinence (Urinary)](https://veteransbenefitskb.com/gensystem#7542)
+- [Incontinence (Urinary)](https://www.veteransbenefitskb.com/gensystem#7542)
 
-- [Nerve issues](https://veteransbenefitskb.com/nervsystem)  and
+- [Nerve issues](https://www.veteransbenefitskb.com/nervsystem)  and
 
 - Weakness.
 
 **PRESUMPTIVE CONDITION:**
 
-- If diagnosed within a [Year](https://veteransbenefitskb.com/time)  of separation.
+- If diagnosed within a [Year](https://www.veteransbenefitskb.com/time)  of separation.
 
 | Rating | Description |
 | --- | --- |
@@ -13692,7 +13692,7 @@ Virus which causes weakness and muscle loss.
 
 Symptoms may include:
 
-- [Nerve paralysis](https://veteransbenefitskb.com/nervsystem)  and
+- [Nerve paralysis](https://www.veteransbenefitskb.com/nervsystem)  and
 
 - Weakness.
 
@@ -13737,15 +13737,15 @@ A slow degeneration of the nerve cells and nerve fibers that carry sensory infor
 
 Symptoms may include:
 
-- [Incontinence (Urinary)](https://veteransbenefitskb.com/gensystem#7542)
+- [Incontinence (Urinary)](https://www.veteransbenefitskb.com/gensystem#7542)
 
-- [Mental disorders](https://veteransbenefitskb.com/mental)
+- [Mental disorders](https://www.veteransbenefitskb.com/mental)
 
 - Muscle weakness;
 
-- [Nerve issues](https://veteransbenefitskb.com/nervsystem)  and
+- [Nerve issues](https://www.veteransbenefitskb.com/nervsystem)  and
 
-- [Vision problems](https://veteransbenefitskb.com/eyes)
+- [Vision problems](https://www.veteransbenefitskb.com/eyes)
 
 * * *
 
@@ -13763,9 +13763,9 @@ Cyst that forms in the spinal cord.
 
 Symptoms may include:
 
-- [Headache](https://veteransbenefitskb.com/cns#8100)
+- [Headache](https://www.veteransbenefitskb.com/cns#8100)
 
-- [Nerve issues](https://veteransbenefitskb.com/nervsystem)  and
+- [Nerve issues](https://www.veteransbenefitskb.com/nervsystem)  and
 
 - Weakness.
 
@@ -13811,14 +13811,14 @@ Seizures are periods of abnormal electrical activity in the brain. The number of
 
 **IMPORTANT NOTES:**
 
-- Often those who have epilepsy also have an accompanying mental disorder. If the mental disorder is only present during a seizure then the mental disorder **CANNOT** get it's own individual rating. _However_, if the [Mental disorder](https://veteransbenefitskb.com/mental)  persists between seizures then it **CAN** get it's own individual rating!
+- Often those who have epilepsy also have an accompanying mental disorder. If the mental disorder is only present during a seizure then the mental disorder **CANNOT** get it's own individual rating. _However_, if the [Mental disorder](https://www.veteransbenefitskb.com/mental)  persists between seizures then it **CAN** get it's own individual rating!
 
-- If the above condition is meet and the mental disorder that manifests is a personality disorder. The VA will grant a rating - coding it under [Dementia](https://veteransbenefitskb.com/mental)
+- If the above condition is meet and the mental disorder that manifests is a personality disorder. The VA will grant a rating - coding it under [Dementia](https://www.veteransbenefitskb.com/mental)
 - In order for a Veteran to get a diagnosis for epilepsy the Veteran **MUST** have a seizure witnessed by a physician, **OR** verified by a physician. Verification can be done by an electroencephalogram (EEG), which measures electrical activity in the brain.
 
 **PRESUMPTIVE CONDITION:**
 
-- If diagnosed within a [Year](https://veteransbenefitskb.com/time)  of separation **AND** the severity warranted _at least_ a 10% evaluation within that time; or
+- If diagnosed within a [Year](https://www.veteransbenefitskb.com/time)  of separation **AND** the severity warranted _at least_ a 10% evaluation within that time; or
 
 - [Secondary to a moderate or severe TBI](https://www.veteransbenefitskb.com/tbi#presumptive)
 
@@ -13855,7 +13855,7 @@ If the condition can be rated under either major or minor seizures. The Veteran 
 
 A type of seizure that involves a loss of consciousness and violent muscle contractions.
 
-- Rated under [_Major Seizures_](https://veteransbenefitskb.com/cns#seizure)
+- Rated under [_Major Seizures_](https://www.veteransbenefitskb.com/cns#seizure)
 
 * * *
 
@@ -13869,7 +13869,7 @@ A type of seizure that involves a loss of consciousness and violent muscle contr
 
 A type of seizure that involves brief, sudden lapses in attention.
 
-- Rated under [_Minor Seizures_](https://veteransbenefitskb.com/cns#seizure)
+- Rated under [_Minor Seizures_](https://www.veteransbenefitskb.com/cns#seizure)
 
 * * *
 
@@ -13881,7 +13881,7 @@ A type of seizure that involves brief, sudden lapses in attention.
 
 Main symptoms involve muscle activity, such as jerking, loss of muscle tone or repeated movements.
 
-- Rated under [_Minor Seizures_](https://veteransbenefitskb.com/cns#seizure)
+- Rated under [_Minor Seizures_](https://www.veteransbenefitskb.com/cns#seizure)
 
 <!-- Chunk 636/1206 | Heading: 8912 Focal Motor Epilepsy, Jacksonian Seizure (Jacksonian March, Simple Partial Seizure), Sensory Epilepsy (Focal Seizures) | Words: 36 -->
 
@@ -13891,7 +13891,7 @@ Main symptoms involve muscle activity, such as jerking, loss of muscle tone or r
 
 Affects numerous parts of the brain at the same time, but not the entire brain.
 
-- Rated under [_Minor Seizures_](https://veteransbenefitskb.com/cns#seizure)  **OR** [_Major Seizures_](https://veteransbenefitskb.com/cns#seizure)
+- Rated under [_Minor Seizures_](https://www.veteransbenefitskb.com/cns#seizure)  **OR** [_Major Seizures_](https://www.veteransbenefitskb.com/cns#seizure)
 
 * * *
 
@@ -13903,7 +13903,7 @@ Affects numerous parts of the brain at the same time, but not the entire brain.
 
 Epilepsy that is typically limited to the temporal lobe of the brain.
 
-- Rated under [_Minor Seizures_](https://veteransbenefitskb.com/cns#seizure)  **OR** [_Major Seizures_](https://veteransbenefitskb.com/cns#seizure)
+- Rated under [_Minor Seizures_](https://www.veteransbenefitskb.com/cns#seizure)  **OR** [_Major Seizures_](https://www.veteransbenefitskb.com/cns#seizure)
 
 Will be rated under major if:
 
@@ -13923,7 +13923,7 @@ Will be rated under minor if:
 
 While it is not _technically_ a seizure related disorder.
 
-- It is rated under under [_Minor Seizures_](https://veteransbenefitskb.com/cns#seizure)
+- It is rated under under [_Minor Seizures_](https://www.veteransbenefitskb.com/cns#seizure)
 
 In essence, each episode counts as a seizure for the purposes of rating.
 
@@ -13953,7 +13953,7 @@ A fatal motor neuron disease.
 
 **PRESUMPTIVE CONDITION:**
 
-- This condition is [Presumptive](https://veteransbenefitskb.com/time)  if diagnosed **ANYTIME** after separation!
+- This condition is [Presumptive](https://www.veteransbenefitskb.com/time)  if diagnosed **ANYTIME** after separation!
 
 * * *
 
@@ -13967,13 +13967,13 @@ A fatal motor neuron disease.
 
 #### Auxiliary benefits
 
-- Your dependents are entitled to [Chapter 35 Dependents Educational Assistance (DEA)](https://veteransbenefitskb.com/survivorbenefits#dea)
+- Your dependents are entitled to [Chapter 35 Dependents Educational Assistance (DEA)](https://www.veteransbenefitskb.com/survivorbenefits#dea)
 
-- You are entitled to [VA automobile allowance and adaptive equipment](https://veteransbenefitskb.com/auto)
+- You are entitled to [VA automobile allowance and adaptive equipment](https://www.veteransbenefitskb.com/auto)
 
-- You are entitled to [Specially Adapted Housing grant](https://veteransbenefitskb.com/housing#sah)  and
+- You are entitled to [Specially Adapted Housing grant](https://www.veteransbenefitskb.com/housing#sah)  and
 
-- You may be entitled to [Special Monthly Compensation](https://veteransbenefitskb.com/smc)  depending upon the progression of the disease.
+- You may be entitled to [Special Monthly Compensation](https://www.veteransbenefitskb.com/smc)  depending upon the progression of the disease.
 
 <!-- Chunk 642/1206 | Heading: Auxiliary benefits | Words: 52 -->
 
@@ -13985,7 +13985,7 @@ Disease that causes swelling in the brain and spinal cord.
 
 **PRESUMPTIVE CONDITION:**
 
-- This condition is [Presumptive](https://veteransbenefitskb.com/time)  if it is diagnosed within **SEVEN YEARS** of separation!
+- This condition is [Presumptive](https://www.veteransbenefitskb.com/time)  if it is diagnosed within **SEVEN YEARS** of separation!
 
 * * *
 
@@ -13999,19 +13999,19 @@ Disease that causes swelling in the brain and spinal cord.
 
 #### Common secondary conditions:
 
-- [Bladder](https://veteransbenefitskb.com/gensystem#7542)  [Bowel control issues](https://veteransbenefitskb.com/digsystem#7332)
+- [Bladder](https://www.veteransbenefitskb.com/gensystem#7542)  [Bowel control issues](https://www.veteransbenefitskb.com/digsystem#7332)
 
-- [Depression](https://veteransbenefitskb.com/mental)
+- [Depression](https://www.veteransbenefitskb.com/mental)
 
-- [Dizziness/Vertigo](https://veteransbenefitskb.com/ears#6204)
+- [Dizziness/Vertigo](https://www.veteransbenefitskb.com/ears#6204)
 
-- [Fatigue](https://veteransbenefitskb.com/infect#6354)
+- [Fatigue](https://www.veteransbenefitskb.com/infect#6354)
 
-- [Nerve issues (lower extremities)](https://veteransbenefitskb.com/lownerves)
+- [Nerve issues (lower extremities)](https://www.veteransbenefitskb.com/lownerves)
 
-- [Nerve issues (upper extremities)](https://veteransbenefitskb.com/upnerves)
+- [Nerve issues (upper extremities)](https://www.veteransbenefitskb.com/upnerves)
 
-- [Vision problems](https://veteransbenefitskb.com/eyes)
+- [Vision problems](https://www.veteransbenefitskb.com/eyes)
 
 <!-- Chunk 644/1206 | Heading: Common secondary conditions: | Words: 28 -->
 
@@ -14019,17 +14019,17 @@ Disease that causes swelling in the brain and spinal cord.
 
 #### Less common secondary conditions:
 
-- [Breathing issues](https://veteransbenefitskb.com/airsystem)
+- [Breathing issues](https://www.veteransbenefitskb.com/airsystem)
 
-- [Hearing loss](https://veteransbenefitskb.com/ears#6100)
+- [Hearing loss](https://www.veteransbenefitskb.com/ears#6100)
 
-- [Seizures](https://veteransbenefitskb.com/cns#8910)
+- [Seizures](https://www.veteransbenefitskb.com/cns#8910)
 
-- [Speech issues](https://veteransbenefitskb.com/airsystem#6519)
+- [Speech issues](https://www.veteransbenefitskb.com/airsystem#6519)
 
-- [Swallowing issues](https://veteransbenefitskb.com/digsystem#7203)
+- [Swallowing issues](https://www.veteransbenefitskb.com/digsystem#7203)
 
-- [Tremors](https://veteransbenefitskb.com/cns#8103)
+- [Tremors](https://www.veteransbenefitskb.com/cns#8103)
 
 <!-- Chunk 645/1206 | Heading: Less common secondary conditions: | Words: 21 -->
 
@@ -14056,7 +14056,7 @@ Disease that interferes with the brain and spinal cordâ€™s ability to commu
 
 **PRESUMPTIVE CONDITION:**
 
-- If diagnosed within a [Year](https://veteransbenefitskb.com/time)  of separation.
+- If diagnosed within a [Year](https://www.veteransbenefitskb.com/time)  of separation.
 
 * * *
 
@@ -14084,11 +14084,11 @@ The key word the schedule uses is _"Prostrating"_:
 
 - It is important that the Veteran properly document the frequency and severity of their headaches. A lot of Veterans have found the use of various headache tracking/diary apps very helpful in this regard.
 
-- You may also find using [Personal](https://veteransbenefitskb.com/personal)  or [Buddy statements](https://veteransbenefitskb.com/buddy)  helpful in showing the severity and frequency of your headaches.
+- You may also find using [Personal](https://www.veteransbenefitskb.com/personal)  or [Buddy statements](https://www.veteransbenefitskb.com/buddy)  helpful in showing the severity and frequency of your headaches.
 
 **PRESUMPTIVE CONDITION:**
 
-- This condition is [Presumptive](https://veteransbenefitskb.com/time)  if it is diagnosed within **1 year** of separation **AND** the severity warranted _at least_ a 10% evaluation within that time;
+- This condition is [Presumptive](https://www.veteransbenefitskb.com/time)  if it is diagnosed within **1 year** of separation **AND** the severity warranted _at least_ a 10% evaluation within that time;
 
 - If exposed to [Gulf environmental hazards](https://sunflower-brass-pcgs.squarespace.com/gulfill)  and the condition is considered a MUCMI.
 
@@ -14201,9 +14201,9 @@ When cerebral palsy or brain damage causes the fingers, arms, legs, and neck to 
 
 **PRESUMPTIVE CONDITION:**
 
-- If diagnosed within a [Year](https://veteransbenefitskb.com/time)  of separation;
+- If diagnosed within a [Year](https://www.veteransbenefitskb.com/time)  of separation;
 
-- If exposed to [Burn pits](https://veteransbenefitskb.com/burnpits)  or
+- If exposed to [Burn pits](https://www.veteransbenefitskb.com/burnpits)  or
 
 - If exposed to [Ionizing radiation](https://www.veteransbenefitskb.com/ionizing)
 
@@ -14236,7 +14236,7 @@ When cerebral palsy or brain damage causes the fingers, arms, legs, and neck to 
 
 **PRESUMPTIVE CONDITION:**
 
-- If diagnosed within a [Year](https://veteransbenefitskb.com/time)  of separation.
+- If diagnosed within a [Year](https://www.veteransbenefitskb.com/time)  of separation.
 
 | Rating | Description |
 | --- | --- |
@@ -14265,9 +14265,9 @@ When cerebral palsy or brain damage causes the fingers, arms, legs, and neck to 
 
 **PRESUMPTIVE CONDITION:**
 
-- If diagnosed within a [Year](https://veteransbenefitskb.com/time)  of separation; or
+- If diagnosed within a [Year](https://www.veteransbenefitskb.com/time)  of separation; or
 
-- If exposed to [Agent Orange](https://veteransbenefitskb.com/agentorange)
+- If exposed to [Agent Orange](https://www.veteransbenefitskb.com/agentorange)
 
 * * *
 
@@ -14285,9 +14285,9 @@ When cerebral palsy or brain damage causes the fingers, arms, legs, and neck to 
 
 ## **Disability Benefits Questionnaire (DBQs)**
 
-To get an idea of how a [C&P exam](https://veteransbenefitskb.com/cnp)  will be conducted it is recommended that the Veteran look at the applicable DBQ.
+To get an idea of how a [C&P exam](https://www.veteransbenefitskb.com/cnp)  will be conducted it is recommended that the Veteran look at the applicable DBQ.
 
-Veteran's may ask a physician to complete a DBQ on their behalf to submit with their claim. For more information on DBQs click [HERE](https://veteransbenefitskb.com/dbq)
+Veteran's may ask a physician to complete a DBQ on their behalf to submit with their claim. For more information on DBQs click [HERE](https://www.veteransbenefitskb.com/dbq)
 
 - [ALS (Lou Gehrig's Disease)](https://www.benefits.va.gov/compensation/docs/ALS_Lou_Gehrigs_Disease.pdf)
 
@@ -14311,7 +14311,7 @@ Veteran's may ask a physician to complete a DBQ on their behalf to submit with t
 
 ## **Having Trouble Finding Your Condition?**
 
-- Click [HERE](https://veteransbenefitskb.com/master)  to view the Master Condition List.
+- Click [HERE](https://www.veteransbenefitskb.com/master)  to view the Master Condition List.
 
 [Return to top](https://www.veteransbenefitskb.com/cns#top)
 
@@ -14343,14 +14343,14 @@ Veteran's may ask a physician to complete a DBQ on their behalf to submit with t
 
 |     |     |
 | --- | --- |
-| \> Cariovascular System\> Arteries & Veins\> Blood\> Heart | \> [Conditions that the VA will **NOT** Rate](https://veteransbenefitskb.com/norate)  |
-| \> [Dental and Oral](https://veteransbenefitskb.com/mouthsystem)  | \> [Digestive System](https://veteransbenefitskb.com/digsystem)  |
-| \> [Endocrine System](https://veteransbenefitskb.com/endsystem)  | \> [Female Reproductive System](https://veteransbenefitskb.com/femalesystem)  |
-| \> [Genitourinary System](https://veteransbenefitskb.com/gensystem)  | \> Hematologic and Lymphatic Systems\> Blood\> Breasts |
-| \> [Infectious Diseases and Immune Disorders](https://veteransbenefitskb.com/infect)  | \> [Mental Disorders](https://veteransbenefitskb.com/mental)  |
+| \> Cariovascular System\> Arteries & Veins\> Blood\> Heart | \> [Conditions that the VA will **NOT** Rate](https://www.veteransbenefitskb.com/norate)  |
+| \> [Dental and Oral](https://www.veteransbenefitskb.com/mouthsystem)  | \> [Digestive System](https://www.veteransbenefitskb.com/digsystem)  |
+| \> [Endocrine System](https://www.veteransbenefitskb.com/endsystem)  | \> [Female Reproductive System](https://www.veteransbenefitskb.com/femalesystem)  |
+| \> [Genitourinary System](https://www.veteransbenefitskb.com/gensystem)  | \> Hematologic and Lymphatic Systems\> Blood\> Breasts |
+| \> [Infectious Diseases and Immune Disorders](https://www.veteransbenefitskb.com/infect)  | \> [Mental Disorders](https://www.veteransbenefitskb.com/mental)  |
 | \> Musculoskeletal System\> Ankle\> Elbow & Forearm\> Foot\> Hand\> Hip & Thigh\> Knee & Lower Leg\> Ribs\> Skull\> Shoulder & Arm\> Spine\> Wrist\> Cancers and Tumors\> Diseases\> Face\> Forearm and Hand\> Hernias\> Lower Leg and Foot\> Buttock, Hip, and Thigh\> Shoulder, and Upper Arm\> Torso and Neck | \> Nervous System\> Cranial Nerves\> Central Nervous System\> Lower Back and Legs\> Upper Back and Arms\> Traumatic Brain Injuries |
-| \> [Nutritional Deficiencies](https://veteransbenefitskb.com/nutritional)  | \> [Respiratory System](https://veteransbenefitskb.com/airsystem)  |
-| \> Senses\> Ears\> Eyes\> Taste/Smell | \> [Skin](https://veteransbenefitskb.com/skin)  |
+| \> [Nutritional Deficiencies](https://www.veteransbenefitskb.com/nutritional)  | \> [Respiratory System](https://www.veteransbenefitskb.com/airsystem)  |
+| \> Senses\> Ears\> Eyes\> Taste/Smell | \> [Skin](https://www.veteransbenefitskb.com/skin)  |
 
 <!-- Chunk 662/1206 | Heading: [Rating Schedule Index Navigation](https://www.veteransbenefitskb.com/ratingsindex) | Words: 165 -->
 
@@ -14416,35 +14416,35 @@ Open Menu
 
 Featured
 
-[\> Master Condition List](https://veteransbenefitskb.com/master)
+[\> Master Condition List](https://www.veteransbenefitskb.com/master)
 
-[\> Federal Benefits List by Combined Ratings](https://veteransbenefitskb.com/combinedbenefits)
+[\> Federal Benefits List by Combined Ratings](https://www.veteransbenefitskb.com/combinedbenefits)
 
-[\> Insider Insight into VBA Claim Processing](https://veteransbenefitskb.com/insight)
+[\> Insider Insight into VBA Claim Processing](https://www.veteransbenefitskb.com/insight)
 
-[\> Rating Schedule Index](https://veteransbenefitskb.com/ratingsindex)
+[\> Rating Schedule Index](https://www.veteransbenefitskb.com/ratingsindex)
 
-[\> Filing a VA Disability Claim](https://veteransbenefitskb.com/vaclaim)
+[\> Filing a VA Disability Claim](https://www.veteransbenefitskb.com/vaclaim)
 
-[\> Filing an Appeal](https://veteransbenefitskb.com/appeals)
+[\> Filing an Appeal](https://www.veteransbenefitskb.com/appeals)
 
 * * *
 
 [Categories](https://www.veteransbenefitskb.com/upnerves)
 
-> [Death/Survivor Benefits](https://veteransbenefitskb.com/#ds)
+> [Death/Survivor Benefits](https://www.veteransbenefitskb.com/#ds)
 
-\> [Education &](https://veteransbenefitskb.com/#ee)  [Employment](https://veteransbenefitskb.com/#ee)
+\> [Education &](https://www.veteransbenefitskb.com/#ee)  [Employment](https://www.veteransbenefitskb.com/#ee)
 
-\> [Health care](https://veteransbenefitskb.com/#healthcare)
+\> [Health care](https://www.veteransbenefitskb.com/#healthcare)
 
-\> [Housing](https://veteransbenefitskb.com/#housing)
+\> [Housing](https://www.veteransbenefitskb.com/#housing)
 
-\> [Miscellaneous](https://veteransbenefitskb.com/#misc)
+\> [Miscellaneous](https://www.veteransbenefitskb.com/#misc)
 
-\> [VA Disability Compensation](https://veteransbenefitskb.com/#va)
+\> [VA Disability Compensation](https://www.veteransbenefitskb.com/#va)
 
-\> [VA Pension](https://veteransbenefitskb.com/#pension)
+\> [VA Pension](https://www.veteransbenefitskb.com/#pension)
 
 The nerves of the upper back and arms. These nerves originate from the neck (cervical spine).
 
@@ -14454,9 +14454,9 @@ The nerves of the upper back and arms. These nerves originate from the neck (cer
 
 **PRESUMPTIVE CONDITION:**
 
-- If diagnosed within a [Year](https://veteransbenefitskb.com/time)  of separation;
+- If diagnosed within a [Year](https://www.veteransbenefitskb.com/time)  of separation;
 
-- If diagnosed within a year of last possible exposure to [Agent Orange](https://veteransbenefitskb.com/agentorange)  **AND** the condition would have rated _at least_ 10% within that year;
+- If diagnosed within a year of last possible exposure to [Agent Orange](https://www.veteransbenefitskb.com/agentorange)  **AND** the condition would have rated _at least_ 10% within that year;
 
 - _Neurological signs or symptoms_ if exposed to [Gulf environmental hazards](https://sunflower-brass-pcgs.squarespace.com/gulfill)  and the condition is considered a MUCMI; or
 
@@ -14466,9 +14466,9 @@ The nerves of the upper back and arms. These nerves originate from the neck (cer
 
 **PYRAMIDING NOTES:**
 
-- Nerves can only be rated under **_ONE_** [_C_ ategory](https://veteransbenefitskb.com/upnerves#cat)  whichever is the primary disability.
+- Nerves can only be rated under **_ONE_** [_C_ ategory](https://www.veteransbenefitskb.com/upnerves#cat)  whichever is the primary disability.
 
-- There are a _pair_ of nerves (each controlling a side of the body). As such, the veteran **CAN** get a rating for each arm! Know, the nerves **ARE** eligible for [Bilateral factor](https://veteransbenefitskb.com/vamath#bilateral)
+- There are a _pair_ of nerves (each controlling a side of the body). As such, the veteran **CAN** get a rating for each arm! Know, the nerves **ARE** eligible for [Bilateral factor](https://www.veteransbenefitskb.com/vamath#bilateral)
 
 - You can only get **ONE** nerve evaluation per arm, no matter how many groups/individual nerves are impaired!
 
@@ -14486,45 +14486,45 @@ Otherwise, if just some within a group are affected; the Veteran will get a sing
 
 ---
 
-### [Upper Radicular Group (Fifth and Sixth Cervicals)](https://veteransbenefitskb.com/upnerves\#8510)
+### [Upper Radicular Group (Fifth and Sixth Cervicals)](https://www.veteransbenefitskb.com/upnerves\#8510)
 
-- [Axillary (Circumflex) nerve](https://veteransbenefitskb.com/upnerves#8518)
+- [Axillary (Circumflex) nerve](https://www.veteransbenefitskb.com/upnerves#8518)
 
-- [Long thoracic nerve](https://veteransbenefitskb.com/upnerves#8519)
+- [Long thoracic nerve](https://www.veteransbenefitskb.com/upnerves#8519)
 
-- [Median nerve](https://veteransbenefitskb.com/upnerves#8515)
+- [Median nerve](https://www.veteransbenefitskb.com/upnerves#8515)
 
-- [Musculocutaneous nerve](https://veteransbenefitskb.com/upnerves#8516)
+- [Musculocutaneous nerve](https://www.veteransbenefitskb.com/upnerves#8516)
 
-- [Radial (Musculospiral) nerve](https://veteransbenefitskb.com/upnerves#8514)
+- [Radial (Musculospiral) nerve](https://www.veteransbenefitskb.com/upnerves#8514)
 
-<!-- Chunk 667/1206 | Heading: [Upper Radicular Group (Fifth and Sixth Cervicals)](https://veteransbenefitskb.com/upnerves\#8510) | Words: 26 -->
-
----
-
-### [Middle Radicular Group (Seventh Cervical)](https://veteransbenefitskb.com/upnerves\#8511)
-
-- [Long thoracic nerve](https://veteransbenefitskb.com/upnerves#8519)
-
-- [Median nerve](https://veteransbenefitskb.com/upnerves#8515)
-
-- [Musculocutaneous nerve](https://veteransbenefitskb.com/upnerves#8517)
-
-- [Radial (Musculospiral) nerve](https://veteransbenefitskb.com/upnerves#8514)
-
-<!-- Chunk 668/1206 | Heading: [Middle Radicular Group (Seventh Cervical)](https://veteransbenefitskb.com/upnerves\#8511) | Words: 20 -->
+<!-- Chunk 667/1206 | Heading: [Upper Radicular Group (Fifth and Sixth Cervicals)](https://www.veteransbenefitskb.com/upnerves\#8510) | Words: 26 -->
 
 ---
 
-### [Lower Radicular Group (Eighth Cervical and First Thoracic)](https://veteransbenefitskb.com/upnerves\#8512)
+### [Middle Radicular Group (Seventh Cervical)](https://www.veteransbenefitskb.com/upnerves\#8511)
 
-- [Median nerve](https://veteransbenefitskb.com/upnerves#8515)
+- [Long thoracic nerve](https://www.veteransbenefitskb.com/upnerves#8519)
 
-- [Radial (Musculospiral) nerve](https://veteransbenefitskb.com/upnerves#8514)
+- [Median nerve](https://www.veteransbenefitskb.com/upnerves#8515)
 
-- [Ulnar nerve](https://veteransbenefitskb.com/upnerves#8516)
+- [Musculocutaneous nerve](https://www.veteransbenefitskb.com/upnerves#8517)
 
-<!-- Chunk 669/1206 | Heading: [Lower Radicular Group (Eighth Cervical and First Thoracic)](https://veteransbenefitskb.com/upnerves\#8512) | Words: 19 -->
+- [Radial (Musculospiral) nerve](https://www.veteransbenefitskb.com/upnerves#8514)
+
+<!-- Chunk 668/1206 | Heading: [Middle Radicular Group (Seventh Cervical)](https://www.veteransbenefitskb.com/upnerves\#8511) | Words: 20 -->
+
+---
+
+### [Lower Radicular Group (Eighth Cervical and First Thoracic)](https://www.veteransbenefitskb.com/upnerves\#8512)
+
+- [Median nerve](https://www.veteransbenefitskb.com/upnerves#8515)
+
+- [Radial (Musculospiral) nerve](https://www.veteransbenefitskb.com/upnerves#8514)
+
+- [Ulnar nerve](https://www.veteransbenefitskb.com/upnerves#8516)
+
+<!-- Chunk 669/1206 | Heading: [Lower Radicular Group (Eighth Cervical and First Thoracic)](https://www.veteransbenefitskb.com/upnerves\#8512) | Words: 19 -->
 
 ---
 
@@ -14546,7 +14546,7 @@ Nerve conditions are placed into 1 of 3 categories which are then rated upon the
 
 **IMPORTANT NOTE:**
 
-- There can be a fair bit of differences of opinions as to how to rate nerve severity. So if you got a mild when you thought you should have gotten at least moderate, filing a [Higher level review](https://veteransbenefitskb.com/appeals#hlr)  _may_ be a good idea.
+- There can be a fair bit of differences of opinions as to how to rate nerve severity. So if you got a mild when you thought you should have gotten at least moderate, filing a [Higher level review](https://www.veteransbenefitskb.com/appeals#hlr)  _may_ be a good idea.
 
 * * *
 
@@ -15202,9 +15202,9 @@ Controls movement involved in:
 
 ## **Disability Benefits Questionnaire (DBQs)**
 
-To get an idea of how a [C&P exam](https://veteransbenefitskb.com/cnp)  will be conducted it is recommended that the Veteran look at the applicable DBQ.
+To get an idea of how a [C&P exam](https://www.veteransbenefitskb.com/cnp)  will be conducted it is recommended that the Veteran look at the applicable DBQ.
 
-Veteran's may ask a physician to complete a DBQ on their behalf to submit with their claim. For more information on DBQs click [HERE](https://veteransbenefitskb.com/dbq)
+Veteran's may ask a physician to complete a DBQ on their behalf to submit with their claim. For more information on DBQs click [HERE](https://www.veteransbenefitskb.com/dbq)
 
 - [Diabetic Peripheral Neuropathy](https://www.benefits.va.gov/compensation/docs/Diabetic_Peripheral_Neuropathy.pdf)
 
@@ -15218,7 +15218,7 @@ Veteran's may ask a physician to complete a DBQ on their behalf to submit with t
 
 ## **Having Trouble Finding Your Condition?**
 
-- Click [HERE](https://veteransbenefitskb.com/master)  to view the Master Condition List.
+- Click [HERE](https://www.veteransbenefitskb.com/master)  to view the Master Condition List.
 
 [Return to top](https://www.veteransbenefitskb.com/upnerves#top)
 
@@ -15246,14 +15246,14 @@ Veteran's may ask a physician to complete a DBQ on their behalf to submit with t
 
 |     |     |
 | --- | --- |
-| \> Cariovascular System\> Arteries & Veins\> Blood\> Heart | \> [Conditions that the VA will **NOT** Rate](https://veteransbenefitskb.com/norate)  |
-| \> [Dental and Oral](https://veteransbenefitskb.com/mouthsystem)  | \> [Digestive System](https://veteransbenefitskb.com/digsystem)  |
-| \> [Endocrine System](https://veteransbenefitskb.com/endsystem)  | \> [Female Reproductive System](https://veteransbenefitskb.com/femalesystem)  |
-| \> [Genitourinary System](https://veteransbenefitskb.com/gensystem)  | \> Hematologic and Lymphatic Systems\> Blood\> Breasts |
-| \> [Infectious Diseases and Immune Disorders](https://veteransbenefitskb.com/infect)  | \> [Mental Disorders](https://veteransbenefitskb.com/mental)  |
+| \> Cariovascular System\> Arteries & Veins\> Blood\> Heart | \> [Conditions that the VA will **NOT** Rate](https://www.veteransbenefitskb.com/norate)  |
+| \> [Dental and Oral](https://www.veteransbenefitskb.com/mouthsystem)  | \> [Digestive System](https://www.veteransbenefitskb.com/digsystem)  |
+| \> [Endocrine System](https://www.veteransbenefitskb.com/endsystem)  | \> [Female Reproductive System](https://www.veteransbenefitskb.com/femalesystem)  |
+| \> [Genitourinary System](https://www.veteransbenefitskb.com/gensystem)  | \> Hematologic and Lymphatic Systems\> Blood\> Breasts |
+| \> [Infectious Diseases and Immune Disorders](https://www.veteransbenefitskb.com/infect)  | \> [Mental Disorders](https://www.veteransbenefitskb.com/mental)  |
 | \> Musculoskeletal System\> Ankle\> Elbow & Forearm\> Foot\> Hand\> Hip & Thigh\> Knee & Lower Leg\> Ribs\> Skull\> Shoulder & Arm\> Spine\> Wrist\> Cancers and Tumors\> Diseases\> Face\> Forearm and Hand\> Hernias\> Lower Leg and Foot\> Buttock, Hip, and Thigh\> Shoulder, and Upper Arm\> Torso and Neck | \> Nervous System\> Cranial Nerves\> Central Nervous System\> Lower Back and Legs\> Upper Back and Arms\> Traumatic Brain Injuries |
-| \> [Nutritional Deficiencies](https://veteransbenefitskb.com/nutritional)  | \> [Respiratory System](https://veteransbenefitskb.com/airsystem)  |
-| \> Senses\> Ears\> Eyes\> Taste/Smell | \> [Skin](https://veteransbenefitskb.com/skin)  |
+| \> [Nutritional Deficiencies](https://www.veteransbenefitskb.com/nutritional)  | \> [Respiratory System](https://www.veteransbenefitskb.com/airsystem)  |
+| \> Senses\> Ears\> Eyes\> Taste/Smell | \> [Skin](https://www.veteransbenefitskb.com/skin)  |
 
 <!-- Chunk 715/1206 | Heading: [Rating Schedule Index Navigation](https://www.veteransbenefitskb.com/ratingsindex) | Words: 165 -->
 
@@ -15319,35 +15319,35 @@ Open Menu
 
 Featured
 
-[\> Master Condition List](https://veteransbenefitskb.com/master)
+[\> Master Condition List](https://www.veteransbenefitskb.com/master)
 
-[\> Federal Benefits List by Combined Ratings](https://veteransbenefitskb.com/combinedbenefits)
+[\> Federal Benefits List by Combined Ratings](https://www.veteransbenefitskb.com/combinedbenefits)
 
-[\> Insider Insight into VBA Claim Processing](https://veteransbenefitskb.com/insight)
+[\> Insider Insight into VBA Claim Processing](https://www.veteransbenefitskb.com/insight)
 
-[\> Rating Schedule Index](https://veteransbenefitskb.com/ratingsindex)
+[\> Rating Schedule Index](https://www.veteransbenefitskb.com/ratingsindex)
 
-[\> Filing a VA Disability Claim](https://veteransbenefitskb.com/vaclaim)
+[\> Filing a VA Disability Claim](https://www.veteransbenefitskb.com/vaclaim)
 
-[\> Filing an Appeal](https://veteransbenefitskb.com/appeals)
+[\> Filing an Appeal](https://www.veteransbenefitskb.com/appeals)
 
 * * *
 
 [Categories](https://www.veteransbenefitskb.com/tbi)
 
-> [Death/Survivor Benefits](https://veteransbenefitskb.com/#ds)
+> [Death/Survivor Benefits](https://www.veteransbenefitskb.com/#ds)
 
-\> [Education &](https://veteransbenefitskb.com/#ee)  [Employment](https://veteransbenefitskb.com/#ee)
+\> [Education &](https://www.veteransbenefitskb.com/#ee)  [Employment](https://www.veteransbenefitskb.com/#ee)
 
-\> [Health care](https://veteransbenefitskb.com/#healthcare)
+\> [Health care](https://www.veteransbenefitskb.com/#healthcare)
 
-\> [Housing](https://veteransbenefitskb.com/#housing)
+\> [Housing](https://www.veteransbenefitskb.com/#housing)
 
-\> [Miscellaneous](https://veteransbenefitskb.com/#misc)
+\> [Miscellaneous](https://www.veteransbenefitskb.com/#misc)
 
-\> [VA Disability Compensation](https://veteransbenefitskb.com/#va)
+\> [VA Disability Compensation](https://www.veteransbenefitskb.com/#va)
 
-\> [VA Pension](https://veteransbenefitskb.com/#pension)
+\> [VA Pension](https://www.veteransbenefitskb.com/#pension)
 
 When the brain gets damaged as a result of something like:
 
@@ -15365,9 +15365,9 @@ When the brain gets damaged as a result of something like:
 
 **IMPORTANT NOTES:**
 
-- If your TBI causes the loss of use or requires aid and attendance you may be entitled to [Special Monthly Compensation](https://veteransbenefitskb.com/smc#t)
+- If your TBI causes the loss of use or requires aid and attendance you may be entitled to [Special Monthly Compensation](https://www.veteransbenefitskb.com/smc#t)
 
-- TBI can be one of the most complicated conditions to rate and it is fairly easy for a rater to mess it up. If you feel you were not rated correctly, you may benefit from requesting a [Higher Level Review](https://veteransbenefitskb.com/appeals)
+- TBI can be one of the most complicated conditions to rate and it is fairly easy for a rater to mess it up. If you feel you were not rated correctly, you may benefit from requesting a [Higher Level Review](https://www.veteransbenefitskb.com/appeals)
 
 <!-- Chunk 718/1206 | Heading: Traumatic Brain Injury (TBI) | Words: 159 -->
 
@@ -15375,15 +15375,15 @@ When the brain gets damaged as a result of something like:
 
 ## **Pyramiding**
 
-The VA is prohibited from assigning multiple ratings for the same symptoms. This is complicated by the fact that TBI's rating criteria is a smoothy mix of symptoms! This is particularly true when it comes to [Area 10](https://veteransbenefitskb.com/tbi#10)
+The VA is prohibited from assigning multiple ratings for the same symptoms. This is complicated by the fact that TBI's rating criteria is a smoothy mix of symptoms! This is particularly true when it comes to [Area 10](https://www.veteransbenefitskb.com/tbi#10)
 
-The rater _should_ carefully consider how they rate TBI, to give the Veteran the maximum benefit; Meaning running through various scenarios to see which produces the best outcome. See [Example](https://veteransbenefitskb.com/tbi#example)  for more details.
+The rater _should_ carefully consider how they rate TBI, to give the Veteran the maximum benefit; Meaning running through various scenarios to see which produces the best outcome. See [Example](https://www.veteransbenefitskb.com/tbi#example)  for more details.
 
 **IMPORTANT NOTE:**
 
 - The VBA is **PROHIBITED** from awarding vertigo as a separate evaluation from TBI! Even if awarding vertigo would itself be the better evaluation!
 
-- Does it make sense? No butâ€¦ If you fit into this situationâ€¦ you could try appealing to the [Board of Veteran Appeals (BVA)](https://veteransbenefitskb.com/appeals#bva)  since they are **NOT** bound by VBA policy decisions.
+- Does it make sense? No butâ€¦ If you fit into this situationâ€¦ you could try appealing to the [Board of Veteran Appeals (BVA)](https://www.veteransbenefitskb.com/appeals#bva)  since they are **NOT** bound by VBA policy decisions.
 
 * * *
 
@@ -15393,7 +15393,7 @@ The rater _should_ carefully consider how they rate TBI, to give the Veteran the
 
 ### PTSD & TBI
 
-Due to overlapping nature of the symptoms of [PTSD](https://veteransbenefitskb.com/mental#9411)  and TBI. The VA often **WILL** lump a Veteran's PTSD and TBI ratings.
+Due to overlapping nature of the symptoms of [PTSD](https://www.veteransbenefitskb.com/mental#9411)  and TBI. The VA often **WILL** lump a Veteran's PTSD and TBI ratings.
 
 However, **IF** the Veteran's examiner/physician/specialist is able to separate the symptoms of the 2 disorders. The Veteran **CAN** get 2 separate individual ratings!
 
@@ -15405,7 +15405,7 @@ However, **IF** the Veteran's examiner/physician/specialist is able to separate 
 
 ## **How TBI is Rated**
 
-TBI is rated upon the severity of the residual symptoms a Veteran has. There are a total of 10 areas of impairment that the VA considers. The veteran will be evaluated in each of those 10 areas. The area that has the highest level of impairment will be the the basis of the Veteran's **SINGULAR** TBI rating. **UNLESS** it is more beneficial to break the symptoms into their own separate ratings(s). See [Example](https://veteransbenefitskb.com/tbi#example)  for more details.
+TBI is rated upon the severity of the residual symptoms a Veteran has. There are a total of 10 areas of impairment that the VA considers. The veteran will be evaluated in each of those 10 areas. The area that has the highest level of impairment will be the the basis of the Veteran's **SINGULAR** TBI rating. **UNLESS** it is more beneficial to break the symptoms into their own separate ratings(s). See [Example](https://www.veteransbenefitskb.com/tbi#example)  for more details.
 
 **IMPORTANT NOTES:**
 
@@ -15679,23 +15679,23 @@ This is a catch all for symptoms only the Veteran can attest to, that do not fit
 
 This includes but is not limited to:
 
-- [Anxiety](https://veteransbenefitskb.com/mental)
+- [Anxiety](https://www.veteransbenefitskb.com/mental)
 
-- [Blurred vision](https://veteransbenefitskb.com/eyes)
+- [Blurred vision](https://www.veteransbenefitskb.com/eyes)
 
 - Dizziness;
 
-- [Double vision](https://veteransbenefitskb.com/eyes#6090)
+- [Double vision](https://www.veteransbenefitskb.com/eyes#6090)
 
-- [Fatigue](https://veteransbenefitskb.com/infect#6354)
+- [Fatigue](https://www.veteransbenefitskb.com/infect#6354)
 
-- [Headaches](https://veteransbenefitskb.com/cns#8100)
+- [Headaches](https://www.veteransbenefitskb.com/cns#8100)
 
 - Hypersensitivity to light;
 
 - Hypersensitivity to sound;
 
-- [Tinnitus](https://veteransbenefitskb.com/ears#6260)  etc.
+- [Tinnitus](https://www.veteransbenefitskb.com/ears#6260)  etc.
 
 | Rating | Description |
 | --- | --- |
@@ -15715,17 +15715,17 @@ Veteran has the following symptoms:
 
 - Sensitivity to light: 0%
 
-- [Headaches](https://veteransbenefitskb.com/cns#8100)  30%
+- [Headaches](https://www.veteransbenefitskb.com/cns#8100)  30%
 
 - Social Interaction (Area 3): 40%
 
 - Subjective Symptoms (Area 10): 10%
 
-- [Tinnitus](https://veteransbenefitskb.com/ears#6260)  10%
+- [Tinnitus](https://www.veteransbenefitskb.com/ears#6260)  10%
 
-- [PTSD](https://veteransbenefitskb.com/mental#9411)  70%
+- [PTSD](https://www.veteransbenefitskb.com/mental#9411)  70%
 
-- [Vision impairment](https://veteransbenefitskb.com/eyes)  0%
+- [Vision impairment](https://www.veteransbenefitskb.com/eyes)  0%
 
 Is examiner able to separate TBI and mental health symptoms?: **NO**
 
@@ -15735,30 +15735,30 @@ So social interactions and PTSD are same set of symptoms, we **CANNOT** award a 
 
 - Sensitivity to light: 0%
 
-- [Headaches](https://veteransbenefitskb.com/cns#8100)  30%
+- [Headaches](https://www.veteransbenefitskb.com/cns#8100)  30%
 
 - Social Interaction (Area 3): 40%
 
 - Subjective Symptoms (Area 10): 10%
 
-- [Tinnitus](https://veteransbenefitskb.com/ears#6260)  10%
+- [Tinnitus](https://www.veteransbenefitskb.com/ears#6260)  10%
 
-- [PTSD: 70%](https://veteransbenefitskb.com/mental#9411)
-- [Vision impairment](https://veteransbenefitskb.com/eyes)  0%
+- [PTSD: 70%](https://www.veteransbenefitskb.com/mental#9411)
+- [Vision impairment](https://www.veteransbenefitskb.com/eyes)  0%
 
 Looking at the TBI areas, we only have area 10 left. However, since the subjective symptoms (headaches, and tinnitus) themselves will rate higher under their own schedules we can cross those out and set them aside.
 
 - Sensitivity to light: 0%
 
-- [Headaches](https://veteransbenefitskb.com/cns#8100)  30%
+- [Headaches](https://www.veteransbenefitskb.com/cns#8100)  30%
 - Social Interaction (Area 3): 40%
 
 - Subjective Symptoms (Area 10): 10%
 
-- [Tinnitus](https://veteransbenefitskb.com/ears#6260)  10%
+- [Tinnitus](https://www.veteransbenefitskb.com/ears#6260)  10%
 
-- [PTSD: 70%](https://veteransbenefitskb.com/mental#9411)
-- [Vision impairment](https://veteransbenefitskb.com/eyes)  0%
+- [PTSD: 70%](https://www.veteransbenefitskb.com/mental#9411)
+- [Vision impairment](https://www.veteransbenefitskb.com/eyes)  0%
 
 We still have sensitivity to light and vision impairment and area 10 remaining. But wait! We need to go back to the area 10 part of the schedule and re-run it! Since we parted out the other subjective symptoms, area 10 now rates 0%.
 
@@ -15785,23 +15785,23 @@ Due to the TBI rating consisting of a whole host of symptoms. If the TBI is show
 
 Again, be aware of pyramiding - the Veteran **CANNOT** have the same symptom rated twice!
 
-- [Headaches/Migraines](https://veteransbenefitskb.com/cns#8100)
+- [Headaches/Migraines](https://www.veteransbenefitskb.com/cns#8100)
 
-- [Hearings loss](https://veteransbenefitskb.com/ears#6100)
+- [Hearings loss](https://www.veteransbenefitskb.com/ears#6100)
 
-- [Hormone deficiencies](https://veteransbenefitskb.com/endsystem)
+- [Hormone deficiencies](https://www.veteransbenefitskb.com/endsystem)
 
-- [Mental health conditions](https://veteransbenefitskb.com/mental)
+- [Mental health conditions](https://www.veteransbenefitskb.com/mental)
 
-- [Parkinson's disease](https://veteransbenefitskb.com/cns#8004)
+- [Parkinson's disease](https://www.veteransbenefitskb.com/cns#8004)
 
-- [Scars](https://veteransbenefitskb.com/skin#7800)
+- [Scars](https://www.veteransbenefitskb.com/skin#7800)
 
-- [Seizures](https://veteransbenefitskb.com/cns#8103)
+- [Seizures](https://www.veteransbenefitskb.com/cns#8103)
 
-- [Tinnitus](https://veteransbenefitskb.com/ears#6260)
+- [Tinnitus](https://www.veteransbenefitskb.com/ears#6260)
 
-- [Vision impairment](https://veteransbenefitskb.com/eyes)
+- [Vision impairment](https://www.veteransbenefitskb.com/eyes)
 
 * * *
 
@@ -15819,15 +15819,15 @@ In 2014, Congress [Recognized](https://www.law.cornell.edu/cfr/text/38/3.310)  t
 
 The following 5 conditions are those that have been recognized as being presumptive. Each with their own rules. Such as the severity of the TBI experienced during service as well as the time frame in which the condition needs to be diagnosed **_since the TBI event_**.
 
-1. [Parkinson's disease](https://veteransbenefitskb.com/cns#8004)  \- moderate or severe TBI (during life of Veteran).
+1. [Parkinson's disease](https://www.veteransbenefitskb.com/cns#8004)  \- moderate or severe TBI (during life of Veteran).
 
-2. [Seizures](https://veteransbenefitskb.com/cns#8103)  \- moderate or severe TBI (during life of Veteran).
+2. [Seizures](https://www.veteransbenefitskb.com/cns#8103)  \- moderate or severe TBI (during life of Veteran).
 
-3. [Dementia (Alzheimer's disease)](https://veteransbenefitskb.com/mental)  \- moderate or severe TBI (within 15 years).
+3. [Dementia (Alzheimer's disease)](https://www.veteransbenefitskb.com/mental)  \- moderate or severe TBI (within 15 years).
 
-4. [Depression](https://veteransbenefitskb.com/mental)  \- mild (within 1 year) moderate or severe TBI (within 3 years).
+4. [Depression](https://www.veteransbenefitskb.com/mental)  \- mild (within 1 year) moderate or severe TBI (within 3 years).
 
-5. Hormone deficiencies due to damage to the [Pituitary gland](https://veteransbenefitskb.com/endsystem#7916)  or the hypothalamus - moderate or severe TBI (within 1 year).
+5. Hormone deficiencies due to damage to the [Pituitary gland](https://www.veteransbenefitskb.com/endsystem#7916)  or the hypothalamus - moderate or severe TBI (within 1 year).
 
 * * *
 
@@ -15883,7 +15883,7 @@ The severity is determined during the time surrounding the events immediately fo
 
 As you saw the TBI schedule is a bit all over the place and is _not_ particularly great at compensating Veterans.
 
-However, if your TBI and/or your other service-connected disabilities make you unable to hold down gainful employment. You should apply for [Total Disability based on Individual Unemployability (TDIU)](https://veteransbenefitskb.com/tdiu)
+However, if your TBI and/or your other service-connected disabilities make you unable to hold down gainful employment. You should apply for [Total Disability based on Individual Unemployability (TDIU)](https://www.veteransbenefitskb.com/tdiu)
 
 [Return to top](https://www.veteransbenefitskb.com/tbi#top)
 
@@ -15905,9 +15905,9 @@ If your TBI results in you needing regular aid and attendance you may qualify fo
 
 ## **Disability Benefits Questionnaire (DBQs)**
 
-To get an idea of how a [C&P exam](https://veteransbenefitskb.com/cnp)  will be conducted it is recommended that the Veteran look at the applicable DBQ.
+To get an idea of how a [C&P exam](https://www.veteransbenefitskb.com/cnp)  will be conducted it is recommended that the Veteran look at the applicable DBQ.
 
-Veteran's may ask a physician to complete a DBQ on their behalf to submit with their claim. For more information on DBQs click [HERE](https://veteransbenefitskb.com/dbq)
+Veteran's may ask a physician to complete a DBQ on their behalf to submit with their claim. For more information on DBQs click [HERE](https://www.veteransbenefitskb.com/dbq)
 
 - [TBI (OLD)](https://www.dcms.uscg.mil/Portals/10/CG-1/PSC/PSD/docs/VBA%20-%20Initial%20evaluation%20of%20TBI%20residuals.pdf?ver=2017-03-28-105323-973)
 
@@ -15919,7 +15919,7 @@ Veteran's may ask a physician to complete a DBQ on their behalf to submit with t
 
 ## **Having Trouble Finding Your Condition?**
 
-- Click [HERE](https://veteransbenefitskb.com/master)  to view the Master Condition List.
+- Click [HERE](https://www.veteransbenefitskb.com/master)  to view the Master Condition List.
 
 [Return to top](https://www.veteransbenefitskb.com/tbi#top)
 
@@ -15945,14 +15945,14 @@ Veteran's may ask a physician to complete a DBQ on their behalf to submit with t
 
 |     |     |
 | --- | --- |
-| \> Cariovascular System\> Arteries & Veins\> Blood\> Heart | \> [Conditions that the VA will **NOT** Rate](https://veteransbenefitskb.com/norate)  |
-| \> [Dental and Oral](https://veteransbenefitskb.com/mouthsystem)  | \> [Digestive System](https://veteransbenefitskb.com/digsystem)  |
-| \> [Endocrine System](https://veteransbenefitskb.com/endsystem)  | \> [Female Reproductive System](https://veteransbenefitskb.com/femalesystem)  |
-| \> [Genitourinary System](https://veteransbenefitskb.com/gensystem)  | \> Hematologic and Lymphatic Systems\> Blood\> Breasts |
-| \> [Infectious Diseases and Immune Disorders](https://veteransbenefitskb.com/infect)  | \> [Mental Disorders](https://veteransbenefitskb.com/mental)  |
+| \> Cariovascular System\> Arteries & Veins\> Blood\> Heart | \> [Conditions that the VA will **NOT** Rate](https://www.veteransbenefitskb.com/norate)  |
+| \> [Dental and Oral](https://www.veteransbenefitskb.com/mouthsystem)  | \> [Digestive System](https://www.veteransbenefitskb.com/digsystem)  |
+| \> [Endocrine System](https://www.veteransbenefitskb.com/endsystem)  | \> [Female Reproductive System](https://www.veteransbenefitskb.com/femalesystem)  |
+| \> [Genitourinary System](https://www.veteransbenefitskb.com/gensystem)  | \> Hematologic and Lymphatic Systems\> Blood\> Breasts |
+| \> [Infectious Diseases and Immune Disorders](https://www.veteransbenefitskb.com/infect)  | \> [Mental Disorders](https://www.veteransbenefitskb.com/mental)  |
 | \> Musculoskeletal System\> Ankle\> Elbow & Forearm\> Foot\> Hand\> Hip & Thigh\> Knee & Lower Leg\> Ribs\> Skull\> Shoulder & Arm\> Spine\> Wrist\> Cancers and Tumors\> Diseases\> Face\> Forearm and Hand\> Hernias\> Lower Leg and Foot\> Buttock, Hip, and Thigh\> Shoulder, and Upper Arm\> Torso and Neck | \> Nervous System\> Cranial Nerves\> Central Nervous System\> Lower Back and Legs\> Upper Back and Arms\> Traumatic Brain Injuries |
-| \> [Nutritional Deficiencies](https://veteransbenefitskb.com/nutritional)  | \> [Respiratory System](https://veteransbenefitskb.com/airsystem)  |
-| \> Senses\> Ears\> Eyes\> Taste/Smell | \> [Skin](https://veteransbenefitskb.com/skin)  |
+| \> [Nutritional Deficiencies](https://www.veteransbenefitskb.com/nutritional)  | \> [Respiratory System](https://www.veteransbenefitskb.com/airsystem)  |
+| \> Senses\> Ears\> Eyes\> Taste/Smell | \> [Skin](https://www.veteransbenefitskb.com/skin)  |
 
 <!-- Chunk 741/1206 | Heading: [Rating Schedule Index Navigation](https://www.veteransbenefitskb.com/ratingsindex) | Words: 165 -->
 
@@ -16018,41 +16018,41 @@ Open Menu
 
 Featured
 
-[\> Master Condition List](https://veteransbenefitskb.com/master)
+[\> Master Condition List](https://www.veteransbenefitskb.com/master)
 
-[\> Federal Benefits List by Combined Ratings](https://veteransbenefitskb.com/combinedbenefits)
+[\> Federal Benefits List by Combined Ratings](https://www.veteransbenefitskb.com/combinedbenefits)
 
-[\> Insider Insight into VBA Claim Processing](https://veteransbenefitskb.com/insight)
+[\> Insider Insight into VBA Claim Processing](https://www.veteransbenefitskb.com/insight)
 
-[\> Rating Schedule Index](https://veteransbenefitskb.com/ratingsindex)
+[\> Rating Schedule Index](https://www.veteransbenefitskb.com/ratingsindex)
 
-[\> Filing a VA Disability Claim](https://veteransbenefitskb.com/vaclaim)
+[\> Filing a VA Disability Claim](https://www.veteransbenefitskb.com/vaclaim)
 
-[\> Filing an Appeal](https://veteransbenefitskb.com/appeals)
+[\> Filing an Appeal](https://www.veteransbenefitskb.com/appeals)
 
 * * *
 
 [Categories](https://www.veteransbenefitskb.com/nutritional)
 
-> [Death/Survivor Benefits](https://veteransbenefitskb.com/#ds)
+> [Death/Survivor Benefits](https://www.veteransbenefitskb.com/#ds)
 
-\> [Education &](https://veteransbenefitskb.com/#ee)  [Employment](https://veteransbenefitskb.com/#ee)
+\> [Education &](https://www.veteransbenefitskb.com/#ee)  [Employment](https://www.veteransbenefitskb.com/#ee)
 
-\> [Health care](https://veteransbenefitskb.com/#healthcare)
+\> [Health care](https://www.veteransbenefitskb.com/#healthcare)
 
-\> [Housing](https://veteransbenefitskb.com/#housing)
+\> [Housing](https://www.veteransbenefitskb.com/#housing)
 
-\> [Miscellaneous](https://veteransbenefitskb.com/#misc)
+\> [Miscellaneous](https://www.veteransbenefitskb.com/#misc)
 
-\> [VA Disability Compensation](https://veteransbenefitskb.com/#va)
+\> [VA Disability Compensation](https://www.veteransbenefitskb.com/#va)
 
-\> [VA Pension](https://veteransbenefitskb.com/#pension)
+\> [VA Pension](https://www.veteransbenefitskb.com/#pension)
 
 When your body is unable to absorb or obtain nutrients from foods. This inability is commonly caused by diet, diseases, surgical complications, and environmental exposures.
 
 **IMPORTANT NOTE:**
 
-- If the nutritional deficiency is caused by an [Eating disorder](https://veteransbenefitskb.com/mental#9520)  **_INSTEAD_** of a disease or other source. The Veteran will be rated under the eating disorder schedule and **NOT** this schedule!
+- If the nutritional deficiency is caused by an [Eating disorder](https://www.veteransbenefitskb.com/mental#9520)  **_INSTEAD_** of a disease or other source. The Veteran will be rated under the eating disorder schedule and **NOT** this schedule!
 
 **PRESUMPTIVE CONDITION:**
 
@@ -16117,9 +16117,9 @@ Caused by a lack of the vitamin niacin (vitamin B3).
 
 ## **Disability Benefits Questionnaire (DBQs)**
 
-To get an idea of how a [C&P exam](https://veteransbenefitskb.com/cnp)  will be conducted it is recommended that the Veteran look at the applicable DBQ.
+To get an idea of how a [C&P exam](https://www.veteransbenefitskb.com/cnp)  will be conducted it is recommended that the Veteran look at the applicable DBQ.
 
-Veteran's may ask a physician to complete a DBQ on their behalf to submit with their claim. For more information on DBQs click [HERE](https://veteransbenefitskb.com/dbq)
+Veteran's may ask a physician to complete a DBQ on their behalf to submit with their claim. For more information on DBQs click [HERE](https://www.veteransbenefitskb.com/dbq)
 
 - [Nutritional Deficiencies](https://www.benefits.va.gov/compensation/docs/Nutritional_Deficiencies.pdf)
 
@@ -16131,7 +16131,7 @@ Veteran's may ask a physician to complete a DBQ on their behalf to submit with t
 
 ## **Having Trouble Finding Your Condition?**
 
-- Click [HERE](https://veteransbenefitskb.com/master)  to view the Master Condition List.
+- Click [HERE](https://www.veteransbenefitskb.com/master)  to view the Master Condition List.
 
 [Return to top](https://www.veteransbenefitskb.com/nutritional#top)
 
@@ -16155,14 +16155,14 @@ Veteran's may ask a physician to complete a DBQ on their behalf to submit with t
 
 |     |     |
 | --- | --- |
-| \> Cariovascular System\> Arteries & Veins\> Blood\> Heart | \> [Conditions that the VA will **NOT** Rate](https://veteransbenefitskb.com/norate)  |
-| \> [Dental and Oral](https://veteransbenefitskb.com/mouthsystem)  | \> [Digestive System](https://veteransbenefitskb.com/digsystem)  |
-| \> [Endocrine System](https://veteransbenefitskb.com/endsystem)  | \> [Female Reproductive System](https://veteransbenefitskb.com/femalesystem)  |
-| \> [Genitourinary System](https://veteransbenefitskb.com/gensystem)  | \> Hematologic and Lymphatic Systems\> Blood\> Breasts |
-| \> [Infectious Diseases and Immune Disorders](https://veteransbenefitskb.com/infect)  | \> [Mental Disorders](https://veteransbenefitskb.com/mental)  |
+| \> Cariovascular System\> Arteries & Veins\> Blood\> Heart | \> [Conditions that the VA will **NOT** Rate](https://www.veteransbenefitskb.com/norate)  |
+| \> [Dental and Oral](https://www.veteransbenefitskb.com/mouthsystem)  | \> [Digestive System](https://www.veteransbenefitskb.com/digsystem)  |
+| \> [Endocrine System](https://www.veteransbenefitskb.com/endsystem)  | \> [Female Reproductive System](https://www.veteransbenefitskb.com/femalesystem)  |
+| \> [Genitourinary System](https://www.veteransbenefitskb.com/gensystem)  | \> Hematologic and Lymphatic Systems\> Blood\> Breasts |
+| \> [Infectious Diseases and Immune Disorders](https://www.veteransbenefitskb.com/infect)  | \> [Mental Disorders](https://www.veteransbenefitskb.com/mental)  |
 | \> Musculoskeletal System\> Ankle\> Elbow & Forearm\> Foot\> Hand\> Hip & Thigh\> Knee & Lower Leg\> Ribs\> Skull\> Shoulder & Arm\> Spine\> Wrist\> Cancers and Tumors\> Diseases\> Face\> Forearm and Hand\> Hernias\> Lower Leg and Foot\> Buttock, Hip, and Thigh\> Shoulder, and Upper Arm\> Torso and Neck | \> Nervous System\> Cranial Nerves\> Central Nervous System\> Lower Back and Legs\> Upper Back and Arms\> Traumatic Brain Injuries |
-| \> [Nutritional Deficiencies](https://veteransbenefitskb.com/nutritional)  | \> [Respiratory System](https://veteransbenefitskb.com/airsystem)  |
-| \> Senses\> Ears\> Eyes\> Taste/Smell | \> [Skin](https://veteransbenefitskb.com/skin)  |
+| \> [Nutritional Deficiencies](https://www.veteransbenefitskb.com/nutritional)  | \> [Respiratory System](https://www.veteransbenefitskb.com/airsystem)  |
+| \> Senses\> Ears\> Eyes\> Taste/Smell | \> [Skin](https://www.veteransbenefitskb.com/skin)  |
 
 <!-- Chunk 751/1206 | Heading: [Rating Schedule Index Navigation](https://www.veteransbenefitskb.com/ratingsindex) | Words: 165 -->
 
@@ -16228,35 +16228,35 @@ Open Menu
 
 Featured
 
-[\> Master Condition List](https://veteransbenefitskb.com/master)
+[\> Master Condition List](https://www.veteransbenefitskb.com/master)
 
-[\> Federal Benefits List by Combined Ratings](https://veteransbenefitskb.com/combinedbenefits)
+[\> Federal Benefits List by Combined Ratings](https://www.veteransbenefitskb.com/combinedbenefits)
 
-[\> Insider Insight into VBA Claim Processing](https://veteransbenefitskb.com/insight)
+[\> Insider Insight into VBA Claim Processing](https://www.veteransbenefitskb.com/insight)
 
-[\> Rating Schedule Index](https://veteransbenefitskb.com/ratingsindex)
+[\> Rating Schedule Index](https://www.veteransbenefitskb.com/ratingsindex)
 
-[\> Filing a VA Disability Claim](https://veteransbenefitskb.com/vaclaim)
+[\> Filing a VA Disability Claim](https://www.veteransbenefitskb.com/vaclaim)
 
-[\> Filing an Appeal](https://veteransbenefitskb.com/appeals)
+[\> Filing an Appeal](https://www.veteransbenefitskb.com/appeals)
 
 * * *
 
 [Categories](https://www.veteransbenefitskb.com/airsystem)
 
-> [Death/Survivor Benefits](https://veteransbenefitskb.com/#ds)
+> [Death/Survivor Benefits](https://www.veteransbenefitskb.com/#ds)
 
-\> [Education &](https://veteransbenefitskb.com/#ee)  [Employment](https://veteransbenefitskb.com/#ee)
+\> [Education &](https://www.veteransbenefitskb.com/#ee)  [Employment](https://www.veteransbenefitskb.com/#ee)
 
-\> [Health care](https://veteransbenefitskb.com/#healthcare)
+\> [Health care](https://www.veteransbenefitskb.com/#healthcare)
 
-\> [Housing](https://veteransbenefitskb.com/#housing)
+\> [Housing](https://www.veteransbenefitskb.com/#housing)
 
-\> [Miscellaneous](https://veteransbenefitskb.com/#misc)
+\> [Miscellaneous](https://www.veteransbenefitskb.com/#misc)
 
-\> [VA Disability Compensation](https://veteransbenefitskb.com/#va)
+\> [VA Disability Compensation](https://www.veteransbenefitskb.com/#va)
 
-\> [VA Pension](https://veteransbenefitskb.com/#pension)
+\> [VA Pension](https://www.veteransbenefitskb.com/#pension)
 
 From the nose and sinuses to the lungs.
 
@@ -16330,7 +16330,7 @@ A lot of respiratory conditions are rated under the general schedule.
 
 - If the Veteran has results for multiple tests; The rater will base the rating on whichever test most closely resembles the extent of the Veteran's disability, as _marked by the examiner_. Which may not necessarily be the one that provides the highest rating!
 
-- **EXCEPTION**: Unless the Veteran meets the criteria for an evaluation under the [Heart test](https://veteransbenefitskb.com/airsystem#heart)  _or_ [Miscellaneous](https://veteransbenefitskb.com/airsystem#misc)  sub-schedules. In which case the rater will assign an 100% evaluation.
+- **EXCEPTION**: Unless the Veteran meets the criteria for an evaluation under the [Heart test](https://www.veteransbenefitskb.com/airsystem#heart)  _or_ [Miscellaneous](https://www.veteransbenefitskb.com/airsystem#misc)  sub-schedules. In which case the rater will assign an 100% evaluation.
 
 * * *
 
@@ -16399,11 +16399,11 @@ Swelling of the bronchi in the lungs.
 
 **PRESUMPTIVE CONDITION:**
 
-- If exposed to [Burn pits](https://veteransbenefitskb.com/burnpits)  or
+- If exposed to [Burn pits](https://www.veteransbenefitskb.com/burnpits)  or
 
 - If exposed to [Lewisite/Mustard gas](https://www.veteransbenefitskb.com/mustardgas)
 
-Rated under the [General Rating Schedule](https://veteransbenefitskb.com/airsystem#general)
+Rated under the [General Rating Schedule](https://www.veteransbenefitskb.com/airsystem#general)
 
 * * *
 
@@ -16417,11 +16417,11 @@ When part of the bronchial tree becomes enlarged, obstructing airflow.
 
 **PRESUMPTIVE CONDITION:**
 
-- If diagnosed within a [Year](https://veteransbenefitskb.com/time)  of separation **AND** the severity warranted at least a 10% evaluation within that time; or
+- If diagnosed within a [Year](https://www.veteransbenefitskb.com/time)  of separation **AND** the severity warranted at least a 10% evaluation within that time; or
 
-- If exposed to [Burn pits](https://veteransbenefitskb.com/burnpits)
+- If exposed to [Burn pits](https://www.veteransbenefitskb.com/burnpits)
 
-Rated under the [General Rating Schedule](https://veteransbenefitskb.com/airsystem#general)  _or_ on incapacitating episodes; Whichever gives the Veteran the highest rating.
+Rated under the [General Rating Schedule](https://www.veteransbenefitskb.com/airsystem#general)  _or_ on incapacitating episodes; Whichever gives the Veteran the highest rating.
 
 * * *
 
@@ -16460,7 +16460,7 @@ The Veteran will receive a singular rating, based upon the below tables - whiche
 
 **PRESUMPTIVE CONDITION:**
 
-- If exposed to [Burn pits](https://veteransbenefitskb.com/burnpits)  or
+- If exposed to [Burn pits](https://www.veteransbenefitskb.com/burnpits)  or
 
 - If exposed to [Lewisite/Mustard gas](https://www.veteransbenefitskb.com/mustardgas)
 
@@ -16606,11 +16606,11 @@ Disease that causes the tissues that maintain the shape of the lungs to die.
 
 **PRESUMPTIVE CONDITION:**
 
-- If exposed to [Burn pits](https://veteransbenefitskb.com/burnpits)  or
+- If exposed to [Burn pits](https://www.veteransbenefitskb.com/burnpits)  or
 
 - If exposed to [Lewisite/Mustard gas](https://www.veteransbenefitskb.com/mustardgas)
 
-Rated under the [General Rating Schedule](https://veteransbenefitskb.com/airsystem#general)
+Rated under the [General Rating Schedule](https://www.veteransbenefitskb.com/airsystem#general)
 
 * * *
 
@@ -16624,11 +16624,11 @@ Disease that results in difficulty breathing via blocked airways.
 
 **PRESUMPTIVE CONDITION:**
 
-- If exposed to [Burn pits](https://veteransbenefitskb.com/burnpits)  or
+- If exposed to [Burn pits](https://www.veteransbenefitskb.com/burnpits)  or
 
 - If exposed to [Lewisite/Mustard gas](https://www.veteransbenefitskb.com/mustardgas)
 
-Rated under the [General Rating Schedule](https://veteransbenefitskb.com/airsystem#general)
+Rated under the [General Rating Schedule](https://www.veteransbenefitskb.com/airsystem#general)
 
 [Return to top](https://www.veteransbenefitskb.com/airsystem#top)
 
@@ -16638,7 +16638,7 @@ Rated under the [General Rating Schedule](https://veteransbenefitskb.com/airsyst
 
 ### 6841 Injury of the Spinal Cord (Spinal Cord Injury with Respiratory Insufficiency)
 
-- Rated under the [General Rating Schedule](https://veteransbenefitskb.com/airsystem#general)
+- Rated under the [General Rating Schedule](https://www.veteransbenefitskb.com/airsystem#general)
 
 * * *
 
@@ -16656,7 +16656,7 @@ Rated under the [General Rating Schedule](https://veteransbenefitskb.com/airsyst
 
 These conditions limit the space in which the lungs can expand.
 
-- Rated under the [General Rating Schedule](https://veteransbenefitskb.com/airsystem#general)
+- Rated under the [General Rating Schedule](https://www.veteransbenefitskb.com/airsystem#general)
 
 * * *
 
@@ -16674,13 +16674,13 @@ Conditions or defects of the chest wall that keep the lungs from inflating prope
 
 **PYRAMIDING NOTES:**
 
-- If the muscles in [Group XXI](https://veteransbenefitskb.com/tnmuscles#5321)  are affected (they control breathing). The Veteran will receive a respiratory rating **OR** a muscular rating - whichever is higher.
+- If the muscles in [Group XXI](https://www.veteransbenefitskb.com/tnmuscles#5321)  are affected (they control breathing). The Veteran will receive a respiratory rating **OR** a muscular rating - whichever is higher.
 
 - If other muscle groups are affected the Veteran can receive ratings for **BOTH**.
 
 | Rating | Description |
 | --- | --- |
-| ?% | [General Rating Schedule.](https://veteransbenefitskb.com/airsystem#general)  |
+| ?% | [General Rating Schedule.](https://www.veteransbenefitskb.com/airsystem#general)  |
 | 20% | Gunshot wound to the lung (minimum evaluation): If the bullet remains lodged in the lung; **OR** there is a crackly/wheezing sound in the lung; **OR** lower chest or the diaphragm **CANNOT** fully expand. |
 | 100% | For 3 months after release from hospital. |
 
@@ -16692,7 +16692,7 @@ Conditions or defects of the chest wall that keep the lungs from inflating prope
 
 ### 6844 Removal of a Lung (Lobectomy, Pneumonectomy, etc.)
 
-- Rated under the [General Rating Schedule](https://veteransbenefitskb.com/airsystem#general)
+- Rated under the [General Rating Schedule](https://www.veteransbenefitskb.com/airsystem#general)
 
 * * *
 
@@ -16710,11 +16710,11 @@ Conditions or defects of the chest wall that keep the lungs from inflating prope
 
 **PRESUMPTIVE CONDITION:**
 
-- If exposed to [Burn pits](https://veteransbenefitskb.com/burnpits)
+- If exposed to [Burn pits](https://www.veteransbenefitskb.com/burnpits)
 
 | Rating | Description |
 | --- | --- |
-| ?% | [General Rating Schedule.](https://veteransbenefitskb.com/airsystem#general)  |
+| ?% | [General Rating Schedule.](https://www.veteransbenefitskb.com/airsystem#general)  |
 | 100% | While active. |
 
 * * *
@@ -16729,13 +16729,13 @@ When lumps form on the tissues surrounding the air sacs, bronchi and small blood
 
 **PRESUMPTIVE CONDITION:**
 
-- If diagnosed within a [Year](https://veteransbenefitskb.com/time)  of separation **AND** the severity warranted at least a 10% evaluation within that time; or
+- If diagnosed within a [Year](https://www.veteransbenefitskb.com/time)  of separation **AND** the severity warranted at least a 10% evaluation within that time; or
 
-- If exposed to [Burn pits](https://veteransbenefitskb.com/burnpits)
+- If exposed to [Burn pits](https://www.veteransbenefitskb.com/burnpits)
 
 | Rating | Description |
 | --- | --- |
-| ?% | [General Rating Schedule.](https://veteransbenefitskb.com/airsystem#general)  |
+| ?% | [General Rating Schedule.](https://www.veteransbenefitskb.com/airsystem#general)  |
 | 0% | Chronic hilar adenopathy or stable lung infiltrates without symptoms or physiologic impairment. |
 | 30% | Pulmonary involvement with persistent symptoms requiring chronic low dose (maintenance) or intermittent corticosteroids. |
 | 60% | Pulmonary involvement requiring systemic high dose (therapeutic) corticosteroids for control. |
@@ -16771,7 +16771,7 @@ Conditions that affect the tissues surrounding the air sacs in the lungs:
 
 **PRESUMPTIVE CONDITION:**
 
-- If exposed to [Burn pits](https://veteransbenefitskb.com/burnpits)
+- If exposed to [Burn pits](https://www.veteransbenefitskb.com/burnpits)
 
 - Conditions attributed to drugs, radiation, asbestos rebuts this presumptive.
 
@@ -16841,7 +16841,7 @@ Bacterial infections of the lungs:
 
 **PRESUMPTIVE CONDITION:**
 
-- If diagnosed with _tuberculosis_ within 3 [Years](https://veteransbenefitskb.com/time)  of separation.
+- If diagnosed with _tuberculosis_ within 3 [Years](https://www.veteransbenefitskb.com/time)  of separation.
 
 - If diagnosed with _mycobacterium tuberculosis_ **AND** exposed to [Gulf environmental hazards](https://www.veteransbenefitskb.com/gulfill)
 
@@ -16849,7 +16849,7 @@ Rated under the following schedule:
 
 | Rating | Description |
 | --- | --- |
-| ?% | If not active, it is rated under [General Rating Schedule or](https://veteransbenefitskb.com/airsystem#general)  [Interstitial Lung Schedule. Depending on whichever schedule is most appropriate.](https://veteransbenefitskb.com/airsystem#6825)  |
+| ?% | If not active, it is rated under [General Rating Schedule or](https://www.veteransbenefitskb.com/airsystem#general)  [Interstitial Lung Schedule. Depending on whichever schedule is most appropriate.](https://www.veteransbenefitskb.com/airsystem#6825)  |
 | 100% | While tuberculous is active and for 1 year after it goes inactive and treatment stops. |
 | 100% | Active infection with persistent symptoms of fever, weight loss, night sweats, or coughing up large amounts of blood. |
 
@@ -16878,7 +16878,7 @@ Caused by inhaling fungal spores:
 
 **PRESUMPTIVE CONDITION:**
 
-- If diagnosed with _coccidoidomycosis_ within a [Year](https://veteransbenefitskb.com/time)  of separation **AND** the severity warranted at least a 10% evaluation within that time.
+- If diagnosed with _coccidoidomycosis_ within a [Year](https://www.veteransbenefitskb.com/time)  of separation **AND** the severity warranted at least a 10% evaluation within that time.
 
 They are all rated under the following schedule:
 
@@ -16921,7 +16921,7 @@ When your nasal septum is significantly displaced to one side, making one nasal 
 
 **PYRAMIDING NOTE:**
 
-- If the Veteran would rate higher under [Disfiguring scars](https://veteransbenefitskb.com/skin#7800)  they will be rated under that schedule _instead_ of this one.
+- If the Veteran would rate higher under [Disfiguring scars](https://www.veteransbenefitskb.com/skin#7800)  they will be rated under that schedule _instead_ of this one.
 
 | Rating | Description |
 | --- | --- |
@@ -16942,13 +16942,13 @@ When the sinuses swell, often caused by an infection or allergy.
 
 - You **CAN** get separate evaluations for rhinitis and sinusitis!
 
-- Sinus headaches **CANNOT** be awarded a separate evaluation and/or be rated under the [Migraine](https://veteransbenefitskb.com/cns#8100)  schedule, even if the migraine schedule would give a higher evaluation! Typically a grant would look like â€˜chronic sinusitis with sinus headachesâ€™.
+- Sinus headaches **CANNOT** be awarded a separate evaluation and/or be rated under the [Migraine](https://www.veteransbenefitskb.com/cns#8100)  schedule, even if the migraine schedule would give a higher evaluation! Typically a grant would look like â€˜chronic sinusitis with sinus headachesâ€™.
 
-- The exception to being rated under the migraine schedule would require the rater to exercise an [Extra scheduler](https://veteransbenefitskb.com/ratingsindex#extra)  evaluation or a [BVA](https://veteransbenefitskb.com/appeals#bva)  or higher judge exercising judicial judgement.
+- The exception to being rated under the migraine schedule would require the rater to exercise an [Extra scheduler](https://www.veteransbenefitskb.com/ratingsindex#extra)  evaluation or a [BVA](https://www.veteransbenefitskb.com/appeals#bva)  or higher judge exercising judicial judgement.
 
 **PRESUMPTIVE CONDITION:**
 
-- If exposed to [Burn pits](https://veteransbenefitskb.com/burnpits)
+- If exposed to [Burn pits](https://www.veteransbenefitskb.com/burnpits)
 
 NOTES:
 
@@ -16971,7 +16971,7 @@ All sinusitis conditions are rated the same. This includes:
 
 Common Secondary Condition:
 
-- [Obstructive Sleep Apnea](https://veteransbenefitskb.com/airsystem#6847)
+- [Obstructive Sleep Apnea](https://www.veteransbenefitskb.com/airsystem#6847)
 
 | Rating | Description |
 | --- | --- |
@@ -16996,11 +16996,11 @@ Swelling of the tissues lining the nasal passage caused by allergies or other en
 
 **PRESUMPTIVE CONDITION:**
 
-- If exposed to [Burn pits](https://veteransbenefitskb.com/burnpits)
+- If exposed to [Burn pits](https://www.veteransbenefitskb.com/burnpits)
 
 Common Secondary Condition:
 
-- [Obstructive Sleep Apnea](https://veteransbenefitskb.com/airsystem#6847)
+- [Obstructive Sleep Apnea](https://www.veteransbenefitskb.com/airsystem#6847)
 
 | Rating | Description |
 | --- | --- |
@@ -17023,7 +17023,7 @@ Swelling of the tissues lining the nasal passage caused by a bacterial infection
 
 **PRESUMPTIVE CONDITION:**
 
-- If exposed to [Burn pits](https://veteransbenefitskb.com/burnpits)
+- If exposed to [Burn pits](https://www.veteransbenefitskb.com/burnpits)
 
 | Rating | Description |
 | --- | --- |
@@ -17042,7 +17042,7 @@ Swelling of the tissues lining the nasal passage with abnormal cell growths _not
 
 **PRESUMPTIVE CONDITION:**
 
-- If exposed to [Burn pits](https://veteransbenefitskb.com/burnpits)
+- If exposed to [Burn pits](https://www.veteransbenefitskb.com/burnpits)
 
 | Rating | Description |
 | --- | --- |
@@ -17078,8 +17078,8 @@ Swelling of the larynx (lasting at least 3 months at a time).
 
 | Rating | Description |
 | --- | --- |
-| ?% | Partial: Rated on residuals such a [Loss of speech,](https://veteransbenefitskb.com/airsystem#6519)  [Laryngitis,](https://veteransbenefitskb.com/airsystem#6516)  [Stenosis of the larynx, and/or](https://veteransbenefitskb.com/airsystem#6520)  [Scarring.](https://veteransbenefitskb.com/skin#7800)  |
-| 100% | Total. Veteran is also entitled to [Special Monthly Compensation (SMC) for loss of use.](https://veteransbenefitskb.com/smc)  |
+| ?% | Partial: Rated on residuals such a [Loss of speech,](https://www.veteransbenefitskb.com/airsystem#6519)  [Laryngitis,](https://www.veteransbenefitskb.com/airsystem#6516)  [Stenosis of the larynx, and/or](https://www.veteransbenefitskb.com/airsystem#6520)  [Scarring.](https://www.veteransbenefitskb.com/skin#7800)  |
+| 100% | Total. Veteran is also entitled to [Special Monthly Compensation (SMC) for loss of use.](https://www.veteransbenefitskb.com/smc)  |
 
 * * *
 
@@ -17091,16 +17091,16 @@ Swelling of the larynx (lasting at least 3 months at a time).
 
 **IMPORTANT NOTE:**
 
-- If the inability to speak is due to a [Mental disorder](https://veteransbenefitskb.com/mental)  and not a physical (to include nerve based) reason it **CANNOT** be rated under this schedule!
+- If the inability to speak is due to a [Mental disorder](https://www.veteransbenefitskb.com/mental)  and not a physical (to include nerve based) reason it **CANNOT** be rated under this schedule!
 
 NOTE:
 
-- If the Veteran's inability to speak comes and goes then they will be rated under [Chronic laryngitis](https://veteransbenefitskb.com/airsystem#6516)
+- If the Veteran's inability to speak comes and goes then they will be rated under [Chronic laryngitis](https://www.veteransbenefitskb.com/airsystem#6516)
 
 | Rating | Description |
 | --- | --- |
 | 60% | Can speak, but not above a whisper. |
-| 100% | Cannot speak at all. Veteran is also entitled to [Special Monthly Compensation (SMC) for loss of use.](https://veteransbenefitskb.com/smc)  |
+| 100% | Cannot speak at all. Veteran is also entitled to [Special Monthly Compensation (SMC) for loss of use.](https://www.veteransbenefitskb.com/smc)  |
 
 * * *
 
@@ -17114,7 +17114,7 @@ Narrowing of the larynx.
 
 NOTE:
 
-- If the Veteran's condition results in the chronic inability to speak it can be rated under [Aphonia](https://veteransbenefitskb.com/airsystem#6519)  instead - if it results in a higher rating.
+- If the Veteran's condition results in the chronic inability to speak it can be rated under [Aphonia](https://www.veteransbenefitskb.com/airsystem#6519)  instead - if it results in a higher rating.
 
 | Rating | Description |
 | --- | --- |
@@ -17147,7 +17147,7 @@ Affects the blood vessels leading to and from the lungs.
 
 | Rating | Description |
 | --- | --- |
-| ?% | [General Rating Schedule.](https://veteransbenefitskb.com/airsystem#general)  |
+| ?% | [General Rating Schedule.](https://www.veteransbenefitskb.com/airsystem#general)  |
 | 0% | Asymptomatic, following resolution of pulmonary thromboembolism. |
 | 30% | Symptomatic, following resolution of acute pulmonary embolism. |
 | 60% | Chronic pulmonary thromboembolism requiring anticoagulant therapy, **OR**; following inferior vena cava surgery without evidence of pulmonary hypertension or right ventricular dysfunction. |
@@ -17165,7 +17165,7 @@ Represents a progression toward the potential development of sleep apnea, caused
 
 However, UARS, in and of itself, does **NOT** meet the criteria of sleep-disordered breathing that defines sleep apnea and is **NOT** considered a ratable disability for compensation purposes.
 
-If you have a diagnosis for UARS, you should wait on submitting a [Claim](https://veteransbenefitskb.com/vaclaim)  till/if you get a diagnosis of sleep apnea.
+If you have a diagnosis for UARS, you should wait on submitting a [Claim](https://www.veteransbenefitskb.com/vaclaim)  till/if you get a diagnosis of sleep apnea.
 
 * * *
 
@@ -17218,9 +17218,9 @@ NOTES:
 
 **PRESUMPTIVE CONDITION:**
 
-- Cancers of: _lung_, _bronchus_, _larynx_, and _trachea_; if exposed to [Agent Orange](https://veteransbenefitskb.com/agentorange)
+- Cancers of: _lung_, _bronchus_, _larynx_, and _trachea_; if exposed to [Agent Orange](https://www.veteransbenefitskb.com/agentorange)
 
-- _Breathing_ related cancers; if exposed to [Burn pits](https://veteransbenefitskb.com/burnpits)
+- _Breathing_ related cancers; if exposed to [Burn pits](https://www.veteransbenefitskb.com/burnpits)
 
 - If diagnosed with _brochiolo-alveolar carcinoma_, _lung_, or _pharynx_ cancers and exposed to [Ionizing radiation](https://www.veteransbenefitskb.com/ionizing)
 
@@ -17241,7 +17241,7 @@ NOTES:
 
 Having a tumor itself is not a compensational condition.
 
-However, if the tumor causes [Secondary conditions](https://veteransbenefitskb.com/claimtype#secondary)  such as [Aphonia](https://veteransbenefitskb.com/airsystem#6519)  Those issues may be rated. As well as any resulting [scars](https://veteransbenefitskb.com/skin#7802)  that are the result of the removal of any tumor(s).
+However, if the tumor causes [Secondary conditions](https://www.veteransbenefitskb.com/claimtype#secondary)  such as [Aphonia](https://www.veteransbenefitskb.com/airsystem#6519)  Those issues may be rated. As well as any resulting [scars](https://www.veteransbenefitskb.com/skin#7802)  that are the result of the removal of any tumor(s).
 
 [Return to top](https://www.veteransbenefitskb.com/airsystem#top)
 
@@ -17251,9 +17251,9 @@ However, if the tumor causes [Secondary conditions](https://veteransbenefitskb.c
 
 ## **Disability Benefits Questionnaire (DBQs)**
 
-To get an idea of how a [C&P exam](https://veteransbenefitskb.com/cnp)  will be conducted it is recommended that the Veteran look at the applicable DBQ.
+To get an idea of how a [C&P exam](https://www.veteransbenefitskb.com/cnp)  will be conducted it is recommended that the Veteran look at the applicable DBQ.
 
-Veteran's may ask a physician to complete a DBQ on their behalf to submit with their claim. For more information on DBQs click [HERE](https://veteransbenefitskb.com/dbq)
+Veteran's may ask a physician to complete a DBQ on their behalf to submit with their claim. For more information on DBQs click [HERE](https://www.veteransbenefitskb.com/dbq)
 
 - [Respiratory Conditions (other than tuberculosis and sleep apnea)](https://www.benefits.va.gov/compensation/docs/Respiratory_Conditions_Other_than_Tuberculosis_and_Sleep_Apnea.pdf)
 
@@ -17269,7 +17269,7 @@ Veteran's may ask a physician to complete a DBQ on their behalf to submit with t
 
 ## **Having Trouble Finding Your Condition?**
 
-- Click [HERE](https://veteransbenefitskb.com/master)  to view the Master Condition List.
+- Click [HERE](https://www.veteransbenefitskb.com/master)  to view the Master Condition List.
 
 [Return to top](https://www.veteransbenefitskb.com/airsystem#top)
 
@@ -17299,14 +17299,14 @@ Veteran's may ask a physician to complete a DBQ on their behalf to submit with t
 
 |     |     |
 | --- | --- |
-| \> Cariovascular System\> Arteries & Veins\> Blood\> Heart | \> [Conditions that the VA will **NOT** Rate](https://veteransbenefitskb.com/norate)  |
-| \> [Dental and Oral](https://veteransbenefitskb.com/mouthsystem)  | \> [Digestive System](https://veteransbenefitskb.com/digsystem)  |
-| \> [Endocrine System](https://veteransbenefitskb.com/endsystem)  | \> [Female Reproductive System](https://veteransbenefitskb.com/femalesystem)  |
-| \> [Genitourinary System](https://veteransbenefitskb.com/gensystem)  | \> Hematologic and Lymphatic Systems\> Blood\> Breasts |
-| \> [Infectious Diseases and Immune Disorders](https://veteransbenefitskb.com/infect)  | \> [Mental Disorders](https://veteransbenefitskb.com/mental)  |
+| \> Cariovascular System\> Arteries & Veins\> Blood\> Heart | \> [Conditions that the VA will **NOT** Rate](https://www.veteransbenefitskb.com/norate)  |
+| \> [Dental and Oral](https://www.veteransbenefitskb.com/mouthsystem)  | \> [Digestive System](https://www.veteransbenefitskb.com/digsystem)  |
+| \> [Endocrine System](https://www.veteransbenefitskb.com/endsystem)  | \> [Female Reproductive System](https://www.veteransbenefitskb.com/femalesystem)  |
+| \> [Genitourinary System](https://www.veteransbenefitskb.com/gensystem)  | \> Hematologic and Lymphatic Systems\> Blood\> Breasts |
+| \> [Infectious Diseases and Immune Disorders](https://www.veteransbenefitskb.com/infect)  | \> [Mental Disorders](https://www.veteransbenefitskb.com/mental)  |
 | \> Musculoskeletal System\> Ankle\> Elbow & Forearm\> Foot\> Hand\> Hip & Thigh\> Knee & Lower Leg\> Ribs\> Skull\> Shoulder & Arm\> Spine\> Wrist\> Cancers and Tumors\> Diseases\> Face\> Forearm and Hand\> Hernias\> Lower Leg and Foot\> Buttock, Hip, and Thigh\> Shoulder, and Upper Arm\> Torso and Neck | \> Nervous System\> Cranial Nerves\> Central Nervous System\> Lower Back and Legs\> Upper Back and Arms\> Traumatic Brain Injuries |
-| \> [Nutritional Deficiencies](https://veteransbenefitskb.com/nutritional)  | \> [Respiratory System](https://veteransbenefitskb.com/airsystem)  |
-| \> Senses\> Ears\> Eyes\> Taste/Smell | \> [Skin](https://veteransbenefitskb.com/skin)  |
+| \> [Nutritional Deficiencies](https://www.veteransbenefitskb.com/nutritional)  | \> [Respiratory System](https://www.veteransbenefitskb.com/airsystem)  |
+| \> Senses\> Ears\> Eyes\> Taste/Smell | \> [Skin](https://www.veteransbenefitskb.com/skin)  |
 
 <!-- Chunk 802/1206 | Heading: [Rating Schedule Index Navigation](https://www.veteransbenefitskb.com/ratingsindex) | Words: 165 -->
 
@@ -17372,35 +17372,35 @@ Open Menu
 
 Featured
 
-[\> Master Condition List](https://veteransbenefitskb.com/master)
+[\> Master Condition List](https://www.veteransbenefitskb.com/master)
 
-[\> Federal Benefits List by Combined Ratings](https://veteransbenefitskb.com/combinedbenefits)
+[\> Federal Benefits List by Combined Ratings](https://www.veteransbenefitskb.com/combinedbenefits)
 
-[\> Insider Insight into VBA Claim Processing](https://veteransbenefitskb.com/insight)
+[\> Insider Insight into VBA Claim Processing](https://www.veteransbenefitskb.com/insight)
 
-[\> Rating Schedule Index](https://veteransbenefitskb.com/ratingsindex)
+[\> Rating Schedule Index](https://www.veteransbenefitskb.com/ratingsindex)
 
-[\> Filing a VA Disability Claim](https://veteransbenefitskb.com/vaclaim)
+[\> Filing a VA Disability Claim](https://www.veteransbenefitskb.com/vaclaim)
 
-[\> Filing an Appeal](https://veteransbenefitskb.com/appeals)
+[\> Filing an Appeal](https://www.veteransbenefitskb.com/appeals)
 
 * * *
 
 [Categories](https://www.veteransbenefitskb.com/ears)
 
-\> [Death/Survivor Benefits](https://veteransbenefitskb.com/#ds)
+\> [Death/Survivor Benefits](https://www.veteransbenefitskb.com/#ds)
 
-\> [Education & Employment](https://veteransbenefitskb.com/#ee)
+\> [Education & Employment](https://www.veteransbenefitskb.com/#ee)
 
-\> [Health care](https://veteransbenefitskb.com/#healthcare)
+\> [Health care](https://www.veteransbenefitskb.com/#healthcare)
 
-\> [Housing](https://veteransbenefitskb.com/#housing)
+\> [Housing](https://www.veteransbenefitskb.com/#housing)
 
-\> [Miscellaneous](https://veteransbenefitskb.com/#misc)
+\> [Miscellaneous](https://www.veteransbenefitskb.com/#misc)
 
-\> [VA Disability Compensation](https://veteransbenefitskb.com/#va)
+\> [VA Disability Compensation](https://www.veteransbenefitskb.com/#va)
 
-\> [VA Pension](https://veteransbenefitskb.com/#pension)
+\> [VA Pension](https://www.veteransbenefitskb.com/#pension)
 
 For those with hearing related issues. The inner ear also plays an important role in keeping your balance.
 
@@ -17422,9 +17422,9 @@ For those with hearing related issues. The inner ear also plays an important rol
 
 - In case the examiner forgets to tell you: **REMOVE** your hearing aids **BEFORE** you start the examination!
 
-- Depending on your [MOS](https://veteransbenefitskb.com/loud)  and/or [Combat](https://veteransbenefitskb.com/CombatVet)  experiences, your claim of hearing loss may be given additional weight for consideration for service-connection. Which is _not_ to say, if your MOS is not considered at high risk for noise exposure or that you did not see combat that you cannot get service connection.
+- Depending on your [MOS](https://www.veteransbenefitskb.com/loud)  and/or [Combat](https://www.veteransbenefitskb.com/CombatVet)  experiences, your claim of hearing loss may be given additional weight for consideration for service-connection. Which is _not_ to say, if your MOS is not considered at high risk for noise exposure or that you did not see combat that you cannot get service connection.
 
-In order to get a proper rating the audiologist conducting the [Examination](https://veteransbenefitskb.com/Cnp)  will conduct two tests to determine your hearing loss.
+In order to get a proper rating the audiologist conducting the [Examination](https://www.veteransbenefitskb.com/Cnp)  will conduct two tests to determine your hearing loss.
 
 - Speech discrimination - your ability to understand spoken words. Your examiner will say a word and you repeat it.
 
@@ -17435,7 +17435,7 @@ In order to get a proper rating the audiologist conducting the [Examination](htt
 
 **PRESUMPTIVE CONDITION:**
 
-- Hearing loss is considered a [Presumptive condition](https://veteransbenefitskb.com/time)  if it manifests within _one year_ of separation, **AND** the severity warranted _at least_ a 10% evaluation within that time.
+- Hearing loss is considered a [Presumptive condition](https://www.veteransbenefitskb.com/time)  if it manifests within _one year_ of separation, **AND** the severity warranted _at least_ a 10% evaluation within that time.
 
 NOTE:
 
@@ -17523,7 +17523,7 @@ If one ear is service-connected and the other ear is not. The VA **CAN** conside
 | X |  |  |  |  |  |  |  |  |  | 80% | 90% |
 | XI |  |  |  |  |  |  |  |  |  |  | 100%\* |
 
-**\*** Veteran is entitled to [Special Monthly Compensation](https://veteransbenefitskb.com/smc#k)
+**\*** Veteran is entitled to [Special Monthly Compensation](https://www.veteransbenefitskb.com/smc#k)
 
 As you can see, if you have one good ear or a decent one, your rating will be greatly affected!
 
@@ -17533,13 +17533,13 @@ As you can see, if you have one good ear or a decent one, your rating will be gr
 
 ---
 
-#### Common [Secondary Condition](https://veteransbenefitskb.com/claimtype)
+#### Common [Secondary Condition](https://www.veteransbenefitskb.com/claimtype)
 
-- [Tinnitus](https://veteransbenefitskb.com/ears#6260)
+- [Tinnitus](https://www.veteransbenefitskb.com/ears#6260)
 
 [Return to top](https://www.veteransbenefitskb.com/ears#top)
 
-<!-- Chunk 810/1206 | Heading: Common [Secondary Condition](https://veteransbenefitskb.com/claimtype) | Words: 9 -->
+<!-- Chunk 810/1206 | Heading: Common [Secondary Condition](https://www.veteransbenefitskb.com/claimtype) | Words: 9 -->
 
 ---
 
@@ -17565,19 +17565,19 @@ As you can see, if you have one good ear or a decent one, your rating will be gr
 
 ---
 
-#### Common [Secondary Conditions](https://veteransbenefitskb.com/claimtype)
+#### Common [Secondary Conditions](https://www.veteransbenefitskb.com/claimtype)
 
-- [Bone loss of the skull](https://veteransbenefitskb.com/skull)
+- [Bone loss of the skull](https://www.veteransbenefitskb.com/skull)
 
-- [Facial nerve paralysis](https://veteransbenefitskb.com/cranialnerves#8207)
+- [Facial nerve paralysis](https://www.veteransbenefitskb.com/cranialnerves#8207)
 
-- [Hearing loss](https://veteransbenefitskb.com/ears#6100)
+- [Hearing loss](https://www.veteransbenefitskb.com/ears#6100)
 
-- [Tinnitus](https://veteransbenefitskb.com/ears#6260)
+- [Tinnitus](https://www.veteransbenefitskb.com/ears#6260)
 
 * * *
 
-<!-- Chunk 812/1206 | Heading: Common [Secondary Conditions](https://veteransbenefitskb.com/claimtype) | Words: 22 -->
+<!-- Chunk 812/1206 | Heading: Common [Secondary Conditions](https://www.veteransbenefitskb.com/claimtype) | Words: 22 -->
 
 ---
 
@@ -17585,7 +17585,7 @@ As you can see, if you have one good ear or a decent one, your rating will be gr
 
 Bacterial infection of the middle ear that causes fluid buildup in the middle ear, but the eardrum does not rupture.
 
-- Rated based on [Hearing loss](https://veteransbenefitskb.com/ears#6100)
+- Rated based on [Hearing loss](https://www.veteransbenefitskb.com/ears#6100)
 
 * * *
 
@@ -17597,7 +17597,7 @@ Bacterial infection of the middle ear that causes fluid buildup in the middle ea
 
 Abnormal growth of bone of the _MIDDLE_ ear. This bone prevents structures within the ear from working properly and causes hearing loss.
 
-- Rated based on [Hearing loss](https://veteransbenefitskb.com/ears#6100)
+- Rated based on [Hearing loss](https://www.veteransbenefitskb.com/ears#6100)
 
 * * *
 
@@ -17619,15 +17619,15 @@ Abnormal growth of bone of the _MIDDLE_ ear. This bone prevents structures withi
 
 ---
 
-#### Common [Secondary Conditions](https://veteransbenefitskb.com/claimtype)
+#### Common [Secondary Conditions](https://www.veteransbenefitskb.com/claimtype)
 
-- [Hearing loss](https://veteransbenefitskb.com/ears#6100)
+- [Hearing loss](https://www.veteransbenefitskb.com/ears#6100)
 
-- [Scarring](https://veteransbenefitskb.com/skin)
+- [Scarring](https://www.veteransbenefitskb.com/skin)
 
 * * *
 
-<!-- Chunk 816/1206 | Heading: Common [Secondary Conditions](https://veteransbenefitskb.com/claimtype) | Words: 12 -->
+<!-- Chunk 816/1206 | Heading: Common [Secondary Conditions](https://www.veteransbenefitskb.com/claimtype) | Words: 12 -->
 
 ---
 
@@ -17659,13 +17659,13 @@ Eardrum is torn or has a hole in it.
 
 ---
 
-#### Common [Secondary Condition](https://veteransbenefitskb.com/claimtype)
+#### Common [Secondary Condition](https://www.veteransbenefitskb.com/claimtype)
 
-- [Hearing](https://veteransbenefitskb.com/ears#8100)  [loss](https://veteransbenefitskb.com/ears#6100)
+- [Hearing](https://www.veteransbenefitskb.com/ears#8100)  [loss](https://www.veteransbenefitskb.com/ears#6100)
 
 * * *
 
-<!-- Chunk 819/1206 | Heading: Common [Secondary Condition](https://veteransbenefitskb.com/claimtype) | Words: 10 -->
+<!-- Chunk 819/1206 | Heading: Common [Secondary Condition](https://www.veteransbenefitskb.com/claimtype) | Words: 10 -->
 
 ---
 
@@ -17679,7 +17679,7 @@ The ringing can come and go, be constant, be really loud or soft.
 
 **PRESUMPTIVE CONDITION:**
 
-- Tinnitus is considered a [Presumptive condition](https://veteransbenefitskb.com/time)  if diagnosed within _one year_ of separation.
+- Tinnitus is considered a [Presumptive condition](https://www.veteransbenefitskb.com/time)  if diagnosed within _one year_ of separation.
 
 NOTE:
 
@@ -17697,15 +17697,15 @@ NOTE:
 
 ---
 
-#### Common [Secondary Conditions](https://veteransbenefitskb.com/claimtype)
+#### Common [Secondary Conditions](https://www.veteransbenefitskb.com/claimtype)
 
-- [Mental health conditions](https://veteransbenefitskb.com/mental)
+- [Mental health conditions](https://www.veteransbenefitskb.com/mental)
 
-- [Migraines](https://veteransbenefitskb.com/cns#8100)
+- [Migraines](https://www.veteransbenefitskb.com/cns#8100)
 
 [Return to top](https://www.veteransbenefitskb.com/ears#top)
 
-<!-- Chunk 821/1206 | Heading: Common [Secondary Conditions](https://veteransbenefitskb.com/claimtype) | Words: 13 -->
+<!-- Chunk 821/1206 | Heading: Common [Secondary Conditions](https://www.veteransbenefitskb.com/claimtype) | Words: 13 -->
 
 ---
 
@@ -17771,7 +17771,7 @@ Symptoms include:
 
 1. One rating under this schedule; **OR**
 
-2. Up to three individual ratings for: [Hearing loss](https://veteransbenefitskb.com/ears#6100)  [Tinnitus](https://veteransbenefitskb.com/ears#6260)  [Peripheral vestibular disorder](https://veteransbenefitskb.com/ears#6204)  The (up to 3) ratings are then combined to determine if they would be higher than the rating under this schedule. If it is a higher result with them being combined, the rater will award the (up to 3) separate evaluations. For information on how the VA combines evaluations click [HERE](https://veteransbenefitskb.com/vamath)
+2. Up to three individual ratings for: [Hearing loss](https://www.veteransbenefitskb.com/ears#6100)  [Tinnitus](https://www.veteransbenefitskb.com/ears#6260)  [Peripheral vestibular disorder](https://www.veteransbenefitskb.com/ears#6204)  The (up to 3) ratings are then combined to determine if they would be higher than the rating under this schedule. If it is a higher result with them being combined, the rater will award the (up to 3) separate evaluations. For information on how the VA combines evaluations click [HERE](https://www.veteransbenefitskb.com/vamath)
 
 | Rating | Description |
 | --- | --- |
@@ -17791,7 +17791,7 @@ NOTES:
 
 - The following schedules are for cancers and tumors involving the inner bits of the ear.
 
-- If there are cancers and tumors that are affecting the skin of the ear itself it will be rated under the [Skin schedule](https://veteransbenefitskb.com/skin)
+- If there are cancers and tumors that are affecting the skin of the ear itself it will be rated under the [Skin schedule](https://www.veteransbenefitskb.com/skin)
 
 * * *
 
@@ -17827,9 +17827,9 @@ However, if the Veteran suffers chronic conditions due to the presence of the tu
 
 ## **Disability Benefits Questionnaire (DBQs)**
 
-To get an idea of how a [C&](https://www.reddit.com/r/VeteransBenefits/wiki/CnP)  [P](https://veteransbenefitskb.com/CnP)  [exam](https://www.reddit.com/r/VeteransBenefits/wiki/CnP)  will be conducted it is recommended that the Veteran look at the applicable DBQ.
+To get an idea of how a [C&](https://www.reddit.com/r/VeteransBenefits/wiki/CnP)  [P](https://www.veteransbenefitskb.com/CnP)  [exam](https://www.reddit.com/r/VeteransBenefits/wiki/CnP)  will be conducted it is recommended that the Veteran look at the applicable DBQ.
 
-Veterans may ask an _audiologist_ to complete a DBQ on their behalf to submit with their claim. For more information on DBQs click [HERE](https://veteransbenefitskb.com/DBQ)
+Veterans may ask an _audiologist_ to complete a DBQ on their behalf to submit with their claim. For more information on DBQs click [HERE](https://www.veteransbenefitskb.com/DBQ)
 
 - [Ear Conditions (including Vestibular and Infectious)](https://www.benefits.va.gov/compensation/docs/Ear_Including_Vestibular_and_Infectious.pdf)
 
@@ -17845,7 +17845,7 @@ Note:
 
 ## **Having Trouble Finding Your Condition?**
 
-- Click [HERE](https://veteransbenefitskb.com/master)  to view the Master Condition List.
+- Click [HERE](https://www.veteransbenefitskb.com/master)  to view the Master Condition List.
 
 [Return to top](https://www.veteransbenefitskb.com/ears#top)
 
@@ -17877,14 +17877,14 @@ Note:
 
 |     |     |
 | --- | --- |
-| \> Cariovascular System\> Arteries & Veins\> Blood\> Heart | \> [Conditions that the VA will **NOT** Rate](https://veteransbenefitskb.com/norate)  |
-| \> [Dental and Oral](https://veteransbenefitskb.com/mouthsystem)  | \> [Digestive System](https://veteransbenefitskb.com/digsystem)  |
-| \> [Endocrine System](https://veteransbenefitskb.com/endsystem)  | \> [Female Reproductive System](https://veteransbenefitskb.com/femalesystem)  |
-| \> [Genitourinary System](https://veteransbenefitskb.com/gensystem)  | \> Hematologic and Lymphatic Systems\> Blood\> Breasts |
-| \> [Infectious Diseases and Immune Disorders](https://veteransbenefitskb.com/infect)  | \> [Mental Disorders](https://veteransbenefitskb.com/mental)  |
+| \> Cariovascular System\> Arteries & Veins\> Blood\> Heart | \> [Conditions that the VA will **NOT** Rate](https://www.veteransbenefitskb.com/norate)  |
+| \> [Dental and Oral](https://www.veteransbenefitskb.com/mouthsystem)  | \> [Digestive System](https://www.veteransbenefitskb.com/digsystem)  |
+| \> [Endocrine System](https://www.veteransbenefitskb.com/endsystem)  | \> [Female Reproductive System](https://www.veteransbenefitskb.com/femalesystem)  |
+| \> [Genitourinary System](https://www.veteransbenefitskb.com/gensystem)  | \> Hematologic and Lymphatic Systems\> Blood\> Breasts |
+| \> [Infectious Diseases and Immune Disorders](https://www.veteransbenefitskb.com/infect)  | \> [Mental Disorders](https://www.veteransbenefitskb.com/mental)  |
 | \> Musculoskeletal System\> Ankle\> Elbow & Forearm\> Foot\> Hand\> Hip & Thigh\> Knee & Lower Leg\> Ribs\> Skull\> Shoulder & Arm\> Spine\> Wrist\> Cancers and Tumors\> Diseases\> Face\> Forearm and Hand\> Hernias\> Lower Leg and Foot\> Buttock, Hip, and Thigh\> Shoulder, and Upper Arm\> Torso and Neck | \> Nervous System\> Cranial Nerves\> Central Nervous System\> Lower Back and Legs\> Upper Back and Arms\> Traumatic Brain Injuries |
-| \> [Nutritional Deficiencies](https://veteransbenefitskb.com/nutritional)  | \> [Respiratory System](https://veteransbenefitskb.com/airsystem)  |
-| \> Senses\> Ears\> Eyes\> Taste/Smell | \> [Skin](https://veteransbenefitskb.com/skin)  |
+| \> [Nutritional Deficiencies](https://www.veteransbenefitskb.com/nutritional)  | \> [Respiratory System](https://www.veteransbenefitskb.com/airsystem)  |
+| \> Senses\> Ears\> Eyes\> Taste/Smell | \> [Skin](https://www.veteransbenefitskb.com/skin)  |
 
 <!-- Chunk 831/1206 | Heading: [Rating Schedule Index Navigation](https://www.veteransbenefitskb.com/ratingsindex) | Words: 165 -->
 
@@ -17950,35 +17950,35 @@ Open Menu
 
 Featured
 
-[\> Master Condition List](https://veteransbenefitskb.com/master)
+[\> Master Condition List](https://www.veteransbenefitskb.com/master)
 
-[\> Federal Benefits List by Combined Ratings](https://veteransbenefitskb.com/combinedbenefits)
+[\> Federal Benefits List by Combined Ratings](https://www.veteransbenefitskb.com/combinedbenefits)
 
-[\> Insider Insight into VBA Claim Processing](https://veteransbenefitskb.com/insight)
+[\> Insider Insight into VBA Claim Processing](https://www.veteransbenefitskb.com/insight)
 
-[\> Rating Schedule Index](https://veteransbenefitskb.com/ratingsindex)
+[\> Rating Schedule Index](https://www.veteransbenefitskb.com/ratingsindex)
 
-[\> Filing a VA Disability Claim](https://veteransbenefitskb.com/vaclaim)
+[\> Filing a VA Disability Claim](https://www.veteransbenefitskb.com/vaclaim)
 
-[\> Filing an Appeal](https://veteransbenefitskb.com/appeals)
+[\> Filing an Appeal](https://www.veteransbenefitskb.com/appeals)
 
 * * *
 
 [Categories](https://www.veteransbenefitskb.com/eyes)
 
-> [Death/Survivor Benefits](https://veteransbenefitskb.com/#ds)
+> [Death/Survivor Benefits](https://www.veteransbenefitskb.com/#ds)
 
-\> [Education &](https://veteransbenefitskb.com/#ee)  [Employment](https://veteransbenefitskb.com/#ee)
+\> [Education &](https://www.veteransbenefitskb.com/#ee)  [Employment](https://www.veteransbenefitskb.com/#ee)
 
-\> [Health care](https://veteransbenefitskb.com/#healthcare)
+\> [Health care](https://www.veteransbenefitskb.com/#healthcare)
 
-\> [Housing](https://veteransbenefitskb.com/#housing)
+\> [Housing](https://www.veteransbenefitskb.com/#housing)
 
-\> [Miscellaneous](https://veteransbenefitskb.com/#misc)
+\> [Miscellaneous](https://www.veteransbenefitskb.com/#misc)
 
-\> [VA Disability Compensation](https://veteransbenefitskb.com/#va)
+\> [VA Disability Compensation](https://www.veteransbenefitskb.com/#va)
 
-\> [VA Pension](https://veteransbenefitskb.com/#pension)
+\> [VA Pension](https://www.veteransbenefitskb.com/#pension)
 
 For the various eye problems you may be having.
 
@@ -17990,23 +17990,23 @@ For the various eye problems you may be having.
 
 ## **Visual Impairment Rating System**
 
-If you thought the [Hearing rating system](https://veteransbenefitskb.com/ears#6100)  was complicated... buckle in tight. This is undoubtedly the most complicated system devised to rate a condition.
+If you thought the [Hearing rating system](https://www.veteransbenefitskb.com/ears#6100)  was complicated... buckle in tight. This is undoubtedly the most complicated system devised to rate a condition.
 
 There are three different ways to rate visual impairment:
 
-1. [Central Visual Acuity](https://veteransbenefitskb.com/eyes#central)
+1. [Central Visual Acuity](https://www.veteransbenefitskb.com/eyes#central)
 
-2. [Visual Field](https://veteransbenefitskb.com/eyes#field)
+2. [Visual Field](https://www.veteransbenefitskb.com/eyes#field)
 
-3. [Muscle Dysfunction](https://veteransbenefitskb.com/eyes#muscle)
+3. [Muscle Dysfunction](https://www.veteransbenefitskb.com/eyes#muscle)
 
 And since we know Veterans can be impaired in more than one measure:
 
-- [Muscle Dysfunction and Central Visual Acuity](https://veteransbenefitskb.com/eyes#mc)
+- [Muscle Dysfunction and Central Visual Acuity](https://www.veteransbenefitskb.com/eyes#mc)
 
-- [Muscle Dysfunction and Visual Field](https://veteransbenefitskb.com/eyes#mv)
+- [Muscle Dysfunction and Visual Field](https://www.veteransbenefitskb.com/eyes#mv)
 
-- [Muscle Dysfunction, Central Visual Acuity, and Visual Field](https://veteransbenefitskb.com/eyes#all)
+- [Muscle Dysfunction, Central Visual Acuity, and Visual Field](https://www.veteransbenefitskb.com/eyes#all)
 
 **IMPORTANT NOTES:**
 
@@ -18056,11 +18056,11 @@ This is your typical vision test. It runs on the familiar 20/20 scale. So the wo
 | Blind\*\* \*\*\* | 30% | 40% | 50% | 60% | 70%\* | 80%\* | 90%\* | 100%\* |
 | Eye Removed\*\*\* | 40% | 50% | 60% | 60% | 70%\* | 80%\* | 90%\* | 100%\* |
 
-\*Veteran is entitled to [Specially Adapted Housing (SAH)](https://veteransbenefitskb.com/housing#sah)
+\*Veteran is entitled to [Specially Adapted Housing (SAH)](https://www.veteransbenefitskb.com/housing#sah)
 
 \*\*No more than light perception.
 
-\*\*\*Veteran is entitled to [Special Monthly Compensation](https://veteransbenefitskb.com/smc#k)
+\*\*\*Veteran is entitled to [Special Monthly Compensation](https://www.veteransbenefitskb.com/smc#k)
 
 **SPECIAL NOTES:**
 
@@ -18069,9 +18069,9 @@ This is your typical vision test. It runs on the familiar 20/20 scale. So the wo
 - Eye prescriptions are measured in diopters. They can be a negative or positive number, depending how your vision is being corrected. If the difference in diopter numbers between both eyes are _greater_ than three (e.g. -5.0 to get a corrected vision of 20/40 and -1.5 to get a corrected vision of 20/20). The **WORST EYE** can be rated based upon the uncorrected vision!
 
 - This can **ONLY** be applied if **BOTH** eyes are service-connected for visual impairment!
-- In the event one service connected eye has been removed and an artificial one (prosthesis) **CANNOT** be used. The Veteran's rating will be increased by 10% (real math, not [VA math](https://veteransbenefitskb.com/vamath)  Though, the rating cannot exceed 100%.
+- In the event one service connected eye has been removed and an artificial one (prosthesis) **CANNOT** be used. The Veteran's rating will be increased by 10% (real math, not [VA math](https://www.veteransbenefitskb.com/vamath)  Though, the rating cannot exceed 100%.
 
-- This is permitted in conjunction with a rating for [Disfigurement](https://veteransbenefitskb.com/skin#7800)  However the disfigurement rating can then **NOT** be based upon gross distortion or asymmetry of the eye. But it still **CAN** be rated based on other characteristics of disfigurement.
+- This is permitted in conjunction with a rating for [Disfigurement](https://www.veteransbenefitskb.com/skin#7800)  However the disfigurement rating can then **NOT** be based upon gross distortion or asymmetry of the eye. But it still **CAN** be rated based on other characteristics of disfigurement.
 
 <!-- Chunk 837/1206 | Heading: Impairment of Central Visual Acuity Rating Table | Words: 444 -->
 
@@ -18089,7 +18089,7 @@ The chart contains concentric circles and 8 lines radiating from the center. Eac
 
 The test itself involves lights that are moved closer and closer till the Veteran can see the a part of the ring in their vision. Depending how affected the Veteran's field of vision is. The resulting 'ring' of vision can be quite distorted.
 
-- For an example of how a rating for impairment of visual field is figured out from the chart click [HERE](https://veteransbenefitskb.com/fieldex)
+- For an example of how a rating for impairment of visual field is figured out from the chart click [HERE](https://www.veteransbenefitskb.com/fieldex)
 
 <!-- Chunk 838/1206 | Heading: Impairment of Visual Field | Words: 160 -->
 
@@ -18099,7 +18099,7 @@ The test itself involves lights that are moved closer and closer till the Vetera
 
 The Veteran can get a rating based upon **ONE** of the following:
 
-1. Losses of entire section(s) of vision (usually the result of [Brain trauma](https://veteransbenefitskb.com/tbi)  or
+1. Losses of entire section(s) of vision (usually the result of [Brain trauma](https://www.veteransbenefitskb.com/tbi)  or
 
 2. Average concentric contraction
 
@@ -18109,7 +18109,7 @@ NOTE:
 
 - 6081 Scotoma has a **MINIMUM** rating of 10% (per eye) **_IF_** 1/4th of visual field (quadrantanopsia) is affected **OR** the blind spots are located within the 30Â° circle.
 
-- If scotoma would rater higher on the under [Central Visual Acuity impairment](https://veteransbenefitskb.com/eyes#central)  it will be rated under that schedule instead.
+- If scotoma would rater higher on the under [Central Visual Acuity impairment](https://www.veteransbenefitskb.com/eyes#central)  it will be rated under that schedule instead.
 
 | One Eye Rating | Both Eyes Rating | Description |
 | --- | --- | --- |
@@ -18151,7 +18151,7 @@ The colors correspond to values in the below table:
 | Orange | 15/200 |
 | Red | 5/200 |
 
-- For an example of how a rating for muscle dysfunction is figured out from the chart click [HERE](https://veteransbenefitskb.com/muscleex)
+- For an example of how a rating for muscle dysfunction is figured out from the chart click [HERE](https://www.veteransbenefitskb.com/muscleex)
 
 <!-- Chunk 840/1206 | Heading: 6090, 6092 Muscle Dysfunction AKA Double Vision (Diplopia) | Words: 140 -->
 
@@ -18165,7 +18165,7 @@ The colors correspond to values in the below table:
 
 - **The following ratings are for ONLY for those with just muscle dysfunction(s).**
 
-- If the Veteran has **BOTH** a muscle dysfunction _with_ a [Central visual acuity issue](https://veteransbenefitskb.com/eyes#central)  **OR** a [Field of vision issue](https://veteransbenefitskb.com/eyes#field)  **OR** [All the above](https://veteransbenefitskb.com/eyes#all)  **IN EITHER OR BOTH EYES** they are instead rated on those linked schedules.
+- If the Veteran has **BOTH** a muscle dysfunction _with_ a [Central visual acuity issue](https://www.veteransbenefitskb.com/eyes#central)  **OR** a [Field of vision issue](https://www.veteransbenefitskb.com/eyes#field)  **OR** [All the above](https://www.veteransbenefitskb.com/eyes#all)  **IN EITHER OR BOTH EYES** they are instead rated on those linked schedules.
 - Only **ONE** rating can be given for muscle dysfunction, even if both eyes are impaired by muscle dysfunction (you get the worst of the 2).
 
 | Muscle Dysfunction Assigned Visual Acuity â†’ | 20/40 | 20/50 | 20/70 | 20/100 | 20/200 | 15/200 | 10/200 | 5/200 |
@@ -18184,9 +18184,9 @@ When the Veteran has both muscle dysfunction and central visual acuity issues.
 
 Go through the following steps:
 
-1. Figure out the [Central visual acuity](https://veteransbenefitskb.com/eyes#central)  of **BOTH** eyes.
+1. Figure out the [Central visual acuity](https://www.veteransbenefitskb.com/eyes#central)  of **BOTH** eyes.
 
-2. Figure out the _assigned visual acuity_ for [Muscle dysfunction](https://veteransbenefitskb.com/eyes#muscle)  Remember, only the most impacted eye gets an assigned visual acuity! Even if both eyes have dysfunction.
+2. Figure out the _assigned visual acuity_ for [Muscle dysfunction](https://www.veteransbenefitskb.com/eyes#muscle)  Remember, only the most impacted eye gets an assigned visual acuity! Even if both eyes have dysfunction.
 
 3. Plug the assigned visual acuity you got from muscle dysfunction into the following table and note how many steps you get:
 
@@ -18235,7 +18235,7 @@ When the Veteran has both muscle dysfunction and visual field issues.
 
 Go through the following steps:
 
-1. [Calculate impairment of visual field](https://veteransbenefitskb.com/fieldex)
+1. [Calculate impairment of visual field](https://www.veteransbenefitskb.com/fieldex)
 
 2. Convert the impairment using the following table:
 
@@ -18254,7 +18254,7 @@ Go through the following steps:
 | 6-15Â° | 20/200 |
 | Less than 6Â° | 5/200 |
 
-3\. Figure out the _assigned visual acuity_ for [Muscle dysfunction](https://veteransbenefitskb.com/muscleex)  Remember, only the most impacted eye gets an assigned visual acuity! Even if both eyes have dysfunction.
+3\. Figure out the _assigned visual acuity_ for [Muscle dysfunction](https://www.veteransbenefitskb.com/muscleex)  Remember, only the most impacted eye gets an assigned visual acuity! Even if both eyes have dysfunction.
 
 4\. Plug the assigned visual acuity you got from muscle dysfunction into the following table and note how many steps you get:
 
@@ -18361,7 +18361,7 @@ Under this schedule incapacitating episodes are defined as:
 
 Uveitis (Chorioretinitis) - inflammation of the middle layer of the eye.
 
-- Rated based on the [Visual Impairment Rating System](https://veteransbenefitskb.com/eyes#visual)  or on [Incapacitating Episodes](https://veteransbenefitskb.com/eyes#incap)  whichever gives the highest rating.
+- Rated based on the [Visual Impairment Rating System](https://www.veteransbenefitskb.com/eyes#visual)  or on [Incapacitating Episodes](https://www.veteransbenefitskb.com/eyes#incap)  whichever gives the highest rating.
 
 * * *
 
@@ -18377,7 +18377,7 @@ Disease of the cornea.
 
 - If diagnosed with Keratitis and exposed to [Mustard gas](https://www.veteransbenefitskb.com/mustardgas)
 
-Rated based on the [Visual Impairment Rating System](https://veteransbenefitskb.com/eyes#visual)  or on [Incapacitating Episodes](https://veteransbenefitskb.com/eyes#incap)  whichever gives the highest rating.
+Rated based on the [Visual Impairment Rating System](https://www.veteransbenefitskb.com/eyes#visual)  or on [Incapacitating Episodes](https://www.veteransbenefitskb.com/eyes#incap)  whichever gives the highest rating.
 
 * * *
 
@@ -18389,7 +18389,7 @@ Rated based on the [Visual Impairment Rating System](https://veteransbenefitskb.
 
 Disease that causes the sclera to become severely inflamed and red.
 
-- Rated based on the [Visual Impairment Rating System](https://veteransbenefitskb.com/eyes#visual)  or on [Incapacitating Episodes](https://veteransbenefitskb.com/eyes#incap)  whichever gives the highest rating.
+- Rated based on the [Visual Impairment Rating System](https://www.veteransbenefitskb.com/eyes#visual)  or on [Incapacitating Episodes](https://www.veteransbenefitskb.com/eyes#incap)  whichever gives the highest rating.
 
 * * *
 
@@ -18403,7 +18403,7 @@ Macular degeneration - degeneration of the macula.
 
 Retinopathy - damage to the blood vessels in the tissue at the back of the eye.
 
-- Rated based on the [Visual Impairment Rating System](https://veteransbenefitskb.com/eyes#visual)  or on [Incapacitating Episodes](https://veteransbenefitskb.com/eyes#incap)  whichever gives the highest rating.
+- Rated based on the [Visual Impairment Rating System](https://www.veteransbenefitskb.com/eyes#visual)  or on [Incapacitating Episodes](https://www.veteransbenefitskb.com/eyes#incap)  whichever gives the highest rating.
 
 * * *
 
@@ -18415,7 +18415,7 @@ Retinopathy - damage to the blood vessels in the tissue at the back of the eye.
 
 Bleeding in the eye that can be caused by injury or disease.
 
-- Rated based on the [Visual Impairment Rating System](https://veteransbenefitskb.com/eyes#visual)  or on [Incapacitating Episodes](https://veteransbenefitskb.com/eyes#incap)  whichever gives the highest rating.
+- Rated based on the [Visual Impairment Rating System](https://www.veteransbenefitskb.com/eyes#visual)  or on [Incapacitating Episodes](https://www.veteransbenefitskb.com/eyes#incap)  whichever gives the highest rating.
 
 * * *
 
@@ -18425,7 +18425,7 @@ Bleeding in the eye that can be caused by injury or disease.
 
 ### 6008 Detachment of the Retina
 
-- Rated based on the [Visual Impairment Rating System](https://veteransbenefitskb.com/eyes#visual)  or on [Incapacitating Episodes](https://veteransbenefitskb.com/eyes#incap)  whichever gives the highest rating.
+- Rated based on the [Visual Impairment Rating System](https://www.veteransbenefitskb.com/eyes#visual)  or on [Incapacitating Episodes](https://www.veteransbenefitskb.com/eyes#incap)  whichever gives the highest rating.
 
 * * *
 
@@ -18435,7 +18435,7 @@ Bleeding in the eye that can be caused by injury or disease.
 
 ### 6009 Unhealed Eye Injuries, Orbital Trauma (Injury to the Bone of the Eye Socket)
 
-- Rated based on the [Visual Impairment Rating System](https://veteransbenefitskb.com/eyes#visual)  or on [Incapacitating Episodes](https://veteransbenefitskb.com/eyes#incap)  whichever gives the highest rating.
+- Rated based on the [Visual Impairment Rating System](https://www.veteransbenefitskb.com/eyes#visual)  or on [Incapacitating Episodes](https://www.veteransbenefitskb.com/eyes#incap)  whichever gives the highest rating.
 
 * * *
 
@@ -18466,7 +18466,7 @@ Swelling of the conjunctiva due to a _bacterial infection_.
 
 - The rating for this condition is only in effect when the condition is active. If the condition is not active, then it is rated on any residuals.
 
-- Rated based on the [Visual Impairment Rating System](https://veteransbenefitskb.com/eyes#visual)  or on [Incapacitating Episodes](https://veteransbenefitskb.com/eyes#incap)  whichever gives the highest rating.
+- Rated based on the [Visual Impairment Rating System](https://www.veteransbenefitskb.com/eyes#visual)  or on [Incapacitating Episodes](https://www.veteransbenefitskb.com/eyes#incap)  whichever gives the highest rating.
 
 | Rating | Description |
 | --- | --- |
@@ -18486,7 +18486,7 @@ Conjunctivitis caused by anything _but_ bacteria. So your chemical agents, virus
 
 - The rating for this condition is only in effect when the condition is active. If the condition is not active, then it is rated on any residuals.
 
-- Rated based on the [Visual Impairment Rating System](https://veteransbenefitskb.com/eyes#visual)  or on [Incapacitating Episodes](https://veteransbenefitskb.com/eyes#incap)  whichever gives the highest rating.
+- Rated based on the [Visual Impairment Rating System](https://www.veteransbenefitskb.com/eyes#visual)  or on [Incapacitating Episodes](https://www.veteransbenefitskb.com/eyes#incap)  whichever gives the highest rating.
 
 **PRESUMPTIVE CONDITION:**
 
@@ -18508,7 +18508,7 @@ Conjunctivitis caused by anything _but_ bacteria. So your chemical agents, virus
 
 A partial or complete adhesion of the palpebral conjunctiva of the eyelid to the bulbar conjunctiva of the eyeball.
 
-- Rated based on [Visual Impairment Rating System](https://veteransbenefitskb.com/eyes#visual)  or [Incapacitating Episodes](https://veteransbenefitskb.com/eyes#incap)  whichever gives the highest rating. If the Veteran also suffers from [Disfigurement](https://veteransbenefitskb.com/skin#7800)  [Lagophthalmos](https://www.reddit.com/r/VeteransBenefits/wiki/eyes/#wiki_lagophthalmos)  or other [Secondary conditions](https://veteransbenefitskb.com/claimtype#secondary)  separate evaluations may be granted if applicable.
+- Rated based on [Visual Impairment Rating System](https://www.veteransbenefitskb.com/eyes#visual)  or [Incapacitating Episodes](https://www.veteransbenefitskb.com/eyes#incap)  whichever gives the highest rating. If the Veteran also suffers from [Disfigurement](https://www.veteransbenefitskb.com/skin#7800)  [Lagophthalmos](https://www.reddit.com/r/VeteransBenefits/wiki/eyes/#wiki_lagophthalmos)  or other [Secondary conditions](https://www.veteransbenefitskb.com/claimtype#secondary)  separate evaluations may be granted if applicable.
 
 [Return to top](https://www.veteransbenefitskb.com/eyes#top)
 
@@ -18520,11 +18520,11 @@ A partial or complete adhesion of the palpebral conjunctiva of the eyelid to the
 
 Condition in which the clear tissue on the front of the eye (cornea) bulges outward.
 
-- Rated based on the [Visual Impairment Rating System](https://veteransbenefitskb.com/eyes#visual)  or on [Incapacitating Episodes](https://veteransbenefitskb.com/eyes#incap)  whichever gives the highest rating.
+- Rated based on the [Visual Impairment Rating System](https://www.veteransbenefitskb.com/eyes#visual)  or on [Incapacitating Episodes](https://www.veteransbenefitskb.com/eyes#incap)  whichever gives the highest rating.
 
 NOTE:
 
-- This is the _only_ eye condition that is eligible for [Laser refractive surgery and corneal crosslinking](https://veteransbenefitskb.com/vision)  though the VA.
+- This is the _only_ eye condition that is eligible for [Laser refractive surgery and corneal crosslinking](https://www.veteransbenefitskb.com/vision)  though the VA.
 
 * * *
 
@@ -18534,7 +18534,7 @@ NOTE:
 
 ### 6036 Corneal Transplant (Status Post Corneal Transplant)
 
-- Rated based on the [Visual Impairment Rating System](https://veteransbenefitskb.com/eyes#visual)  or on [Incapacitating Episodes](https://veteransbenefitskb.com/eyes#incap)  whichever gives the highest rating.
+- Rated based on the [Visual Impairment Rating System](https://www.veteransbenefitskb.com/eyes#visual)  or on [Incapacitating Episodes](https://www.veteransbenefitskb.com/eyes#incap)  whichever gives the highest rating.
 
 | Rating | Description |
 | --- | --- |
@@ -18550,11 +18550,11 @@ NOTE:
 
 Cloudy area in the lens of the eye that leads to a decrease in vision.
 
-- Rated based on the [Visual Impairment Rating System](https://veteransbenefitskb.com/eyes#visual)  or on [Incapacitating Episodes](https://veteransbenefitskb.com/eyes#incap)  whichever gives the highest rating.
+- Rated based on the [Visual Impairment Rating System](https://www.veteransbenefitskb.com/eyes#visual)  or on [Incapacitating Episodes](https://www.veteransbenefitskb.com/eyes#incap)  whichever gives the highest rating.
 
 **IMPORTANT NOTE:**
 
-- If surgery was preformed to remove the cataract and there was **NO** replacement lens used. The Veteran will then be rated under the [Aphakia](https://veteransbenefitskb.com/eyes#6029)  schedule instead of this one.
+- If surgery was preformed to remove the cataract and there was **NO** replacement lens used. The Veteran will then be rated under the [Aphakia](https://www.veteransbenefitskb.com/eyes#6029)  schedule instead of this one.
 
 **PRESUMPTIVE CONDITION:**
 
@@ -18570,7 +18570,7 @@ Cloudy area in the lens of the eye that leads to a decrease in vision.
 
 Condition where there is no lens in the eye or the lens has been dislocated.
 
-- Rated based on the [Visual Impairment Rating System](https://veteransbenefitskb.com/eyes#visual)  or on [Incapacitating Episodes](https://veteransbenefitskb.com/eyes#incap)  whichever gives the highest rating.
+- Rated based on the [Visual Impairment Rating System](https://www.veteransbenefitskb.com/eyes#visual)  or on [Incapacitating Episodes](https://www.veteransbenefitskb.com/eyes#incap)  whichever gives the highest rating.
 
 **SPECIAL NOTE:**
 
@@ -18590,7 +18590,7 @@ Condition where there is no lens in the eye or the lens has been dislocated.
 
 Damage to the retina caused by diabetes.
 
-- Rated based on the [Visual Impairment Rating System](https://veteransbenefitskb.com/eyes#visual)  or on [Incapacitating Episodes](https://veteransbenefitskb.com/eyes#incap)  whichever gives the highest rating.
+- Rated based on the [Visual Impairment Rating System](https://www.veteransbenefitskb.com/eyes#visual)  or on [Incapacitating Episodes](https://www.veteransbenefitskb.com/eyes#incap)  whichever gives the highest rating.
 
 * * *
 
@@ -18602,7 +18602,7 @@ Damage to the retina caused by diabetes.
 
 Degeneration of the retina over time.
 
-- Rated based on the [Visual Impairment Rating System](https://veteransbenefitskb.com/eyes#visual)  or on [Incapacitating Episodes](https://veteransbenefitskb.com/eyes#incap)  whichever gives the highest rating.
+- Rated based on the [Visual Impairment Rating System](https://www.veteransbenefitskb.com/eyes#visual)  or on [Incapacitating Episodes](https://www.veteransbenefitskb.com/eyes#incap)  whichever gives the highest rating.
 
 NOTE:
 
@@ -18618,7 +18618,7 @@ NOTE:
 
 NOTES:
 
-- Can be rated based on the [Visual Impairment Rating System](https://veteransbenefitskb.com/eyes#visual)  [Incapacitating Episodes](https://veteransbenefitskb.com/eyes#incap)  or on the following schedule; whichever gives the highest rating.
+- Can be rated based on the [Visual Impairment Rating System](https://www.veteransbenefitskb.com/eyes#visual)  [Incapacitating Episodes](https://www.veteransbenefitskb.com/eyes#incap)  or on the following schedule; whichever gives the highest rating.
 
 - The Veteran can only get one rating, even if both eyes are affected; if rated based on the below schedule.
 
@@ -18636,9 +18636,9 @@ NOTES:
 
 Drooping of the upper or lower eyelid.
 
-- Rated based on the [Visual Impairment Rating System](https://veteransbenefitskb.com/eyes#visual)  or on [Incapacitating Episodes](https://veteransbenefitskb.com/eyes#incap)  whichever gives the highest rating.
+- Rated based on the [Visual Impairment Rating System](https://www.veteransbenefitskb.com/eyes#visual)  or on [Incapacitating Episodes](https://www.veteransbenefitskb.com/eyes#incap)  whichever gives the highest rating.
 
-Alternatively, if vision is **NOT** affected it _can_ be rated under [Disfigurement](https://veteransbenefitskb.com/skin#7800)
+Alternatively, if vision is **NOT** affected it _can_ be rated under [Disfigurement](https://www.veteransbenefitskb.com/skin#7800)
 
 * * *
 
@@ -18663,7 +18663,7 @@ Condition in which your eyelid is unable to fully close.
 
 ### 6032 Loss of the Eyelids (Partial or Complete)
 
-- Rated based on the [Visual Impairment Rating System](https://veteransbenefitskb.com/eyes#visual)  or on [Incapacitating Episodes](https://veteransbenefitskb.com/eyes#incap)  whichever gives the highest rating. **THEN** grant a separate evaluation for [Disfigurement](https://veteransbenefitskb.com/skin#7800)
+- Rated based on the [Visual Impairment Rating System](https://www.veteransbenefitskb.com/eyes#visual)  or on [Incapacitating Episodes](https://www.veteransbenefitskb.com/eyes#incap)  whichever gives the highest rating. **THEN** grant a separate evaluation for [Disfigurement](https://www.veteransbenefitskb.com/skin#7800)
 
 * * *
 
@@ -18696,15 +18696,15 @@ Usually resulting in dry eyes.
 
 ### Dry Eye Syndrome (Keratoconjunctivitis Sicca)
 
-- Rated based on the [Visual Impairment Rating System](https://veteransbenefitskb.com/eyes#visual)  [Incapacitating Episodes](https://veteransbenefitskb.com/eyes#incap)  **OR** the condition that is causing the dry eye syndrome; whichever gives the highest rating.
+- Rated based on the [Visual Impairment Rating System](https://www.veteransbenefitskb.com/eyes#visual)  [Incapacitating Episodes](https://www.veteransbenefitskb.com/eyes#incap)  **OR** the condition that is causing the dry eye syndrome; whichever gives the highest rating.
 
 Common causes of dry eye syndrome include:
 
-- [Conjunctiva disease](https://veteransbenefitskb.com/eyes#6017)
+- [Conjunctiva disease](https://www.veteransbenefitskb.com/eyes#6017)
 
-- [Disorder of lacrimal process](https://veteransbenefitskb.com/eyes#6025)  and
+- [Disorder of lacrimal process](https://www.veteransbenefitskb.com/eyes#6025)  and
 
-- [Glaucoma](https://veteransbenefitskb.com/eyes#6012)
+- [Glaucoma](https://www.veteransbenefitskb.com/eyes#6012)
 
 [Return to top](https://www.veteransbenefitskb.com/eyes#top)
 
@@ -18730,9 +18730,9 @@ When the iris bulges forward to narrow or block the drainage angle formed by the
 
 **PRESUMPTIVE CONDITION:**
 
-- If diagnosed within a [Year](https://veteransbenefitskb.com/time)  of separation **AND** the severity warranted _at least_ a 10% evaluation within that time.
+- If diagnosed within a [Year](https://www.veteransbenefitskb.com/time)  of separation **AND** the severity warranted _at least_ a 10% evaluation within that time.
 
-Rated based on the [Visual Impairment Rating System](https://veteransbenefitskb.com/eyes#visual)  or on [Incapacitating Episodes](https://veteransbenefitskb.com/eyes#incap)  whichever gives the highest rating.
+Rated based on the [Visual Impairment Rating System](https://www.veteransbenefitskb.com/eyes#visual)  or on [Incapacitating Episodes](https://www.veteransbenefitskb.com/eyes#incap)  whichever gives the highest rating.
 
 | Rating | Description |
 | --- | --- |
@@ -18750,9 +18750,9 @@ The drainage angle formed by the cornea and iris remains open, but the trabecula
 
 **PRESUMPTIVE CONDITION:**
 
-- If diagnosed within a [Year](https://veteransbenefitskb.com/time)  of separation **AND** the severity warranted _at least_ a 10% evaluation within that time.
+- If diagnosed within a [Year](https://www.veteransbenefitskb.com/time)  of separation **AND** the severity warranted _at least_ a 10% evaluation within that time.
 
-Rated based on the [Visual Impairment Rating System](https://veteransbenefitskb.com/eyes#visual)  or on [Incapacitating Episodes](https://veteransbenefitskb.com/eyes#incap)  whichever gives the highest rating.
+Rated based on the [Visual Impairment Rating System](https://www.veteransbenefitskb.com/eyes#visual)  or on [Incapacitating Episodes](https://www.veteransbenefitskb.com/eyes#incap)  whichever gives the highest rating.
 
 | Rating | Description |
 | --- | --- |
@@ -18770,9 +18770,9 @@ Damage to the optic nerve (not caused by glaucoma).
 
 **PRESUMPTIVE CONDITION:**
 
-- If diagnosed with _optic atrophy_ attributed to [Malnutrition](https://veteransbenefitskb.com/nutritional)  **AND** were a [POW](https://veteransbenefitskb.com/pow)  for at least 30 days and the condition had a severity of _at least_ 10% at some point.
+- If diagnosed with _optic atrophy_ attributed to [Malnutrition](https://www.veteransbenefitskb.com/nutritional)  **AND** were a [POW](https://www.veteransbenefitskb.com/pow)  for at least 30 days and the condition had a severity of _at least_ 10% at some point.
 
-Rated based on the [Visual Impairment Rating System](https://veteransbenefitskb.com/eyes#visual)  or on [Incapacitating Episodes](https://veteransbenefitskb.com/eyes#incap)  whichever gives the highest rating.
+Rated based on the [Visual Impairment Rating System](https://www.veteransbenefitskb.com/eyes#visual)  or on [Incapacitating Episodes](https://www.veteransbenefitskb.com/eyes#incap)  whichever gives the highest rating.
 
 * * *
 
@@ -18786,7 +18786,7 @@ Causes the eyes to make repetitive, uncontrolled movements.
 
 **IMPORTANT NOTE:**
 
-- If the condition is caused by a [Mental](https://veteransbenefitskb.com/mental)  or other medical condition it **CANNOT** be rated under this schedule.
+- If the condition is caused by a [Mental](https://www.veteransbenefitskb.com/mental)  or other medical condition it **CANNOT** be rated under this schedule.
 
 | Rating | Description |
 | --- | --- |
@@ -18814,9 +18814,9 @@ Condition where the oculomotor nerve is damaged.
 
 ### 6046 Post-chiasmal Disorders
 
-Any damage to the brain that affects the eyes. So things like [TBI](https://veteransbenefitskb.com/tbi)  brain infections, degeneration of the brain tissues, etc.
+Any damage to the brain that affects the eyes. So things like [TBI](https://www.veteransbenefitskb.com/tbi)  brain infections, degeneration of the brain tissues, etc.
 
-- Rated based on the [Visual Impairment Rating System](https://veteransbenefitskb.com/eyes#visual)  or on [Incapacitating Episodes](https://veteransbenefitskb.com/eyes#incap)  whichever gives the highest rating.
+- Rated based on the [Visual Impairment Rating System](https://www.veteransbenefitskb.com/eyes#visual)  or on [Incapacitating Episodes](https://www.veteransbenefitskb.com/eyes#incap)  whichever gives the highest rating.
 
 [Return to top](https://www.veteransbenefitskb.com/eyes#top)
 
@@ -18828,7 +18828,7 @@ Any damage to the brain that affects the eyes. So things like [TBI](https://vete
 
 NOTE:
 
-- For cancers and tumors that affect the skin _around_ the eyes click [HERE](https://veteransbenefitskb.com/skin#7818)
+- For cancers and tumors that affect the skin _around_ the eyes click [HERE](https://www.veteransbenefitskb.com/skin#7818)
 
 * * *
 
@@ -18840,11 +18840,11 @@ NOTE:
 
 **IMPORTANT NOTE:**
 
-- If the cancer does **NOT** require treatment it is rated based on [Visual Impairment Rating System](https://veteransbenefitskb.com/eyes#visual)  or on [Incapacitating Episodes](https://veteransbenefitskb.com/eyes#incap)  whichever gives the highest rating. Separate ratings for [Disfigurement](https://veteransbenefitskb.com/skin#7800)  or other [Secondary conditions](https://veteransbenefitskb.com/claimtype#secondary)  may be granted if applicable.
+- If the cancer does **NOT** require treatment it is rated based on [Visual Impairment Rating System](https://www.veteransbenefitskb.com/eyes#visual)  or on [Incapacitating Episodes](https://www.veteransbenefitskb.com/eyes#incap)  whichever gives the highest rating. Separate ratings for [Disfigurement](https://www.veteransbenefitskb.com/skin#7800)  or other [Secondary conditions](https://www.veteransbenefitskb.com/claimtype#secondary)  may be granted if applicable.
 
 | Rating | Description |
 | --- | --- |
-| ?% | Rated on any residuals such as [Visual Impairment or on](https://veteransbenefitskb.com/eyes#visual)  [Incapacitating episodes; whichever gives the highest rating. Separate ratings for](https://veteransbenefitskb.com/eyes#incap)  [Disfigurement or other](https://veteransbenefitskb.com/skin#7800)  [Secondary conditions may be granted if applicable.](https://veteransbenefitskb.com/claimtype#secondary)  |
+| ?% | Rated on any residuals such as [Visual Impairment or on](https://www.veteransbenefitskb.com/eyes#visual)  [Incapacitating episodes; whichever gives the highest rating. Separate ratings for](https://www.veteransbenefitskb.com/eyes#incap)  [Disfigurement or other](https://www.veteransbenefitskb.com/skin#7800)  [Secondary conditions may be granted if applicable.](https://www.veteransbenefitskb.com/claimtype#secondary)  |
 | 100% | While active **AND** treatment is required. After treatment ends, 100% continues for 6 months. |
 
 * * *
@@ -18857,7 +18857,7 @@ NOTE:
 
 Tumors in and of themselves are **NOT** compensational.
 
-However, the Veteran can get a rating for how the tumor(s) affect the Veteran's vision or other [Secondary conditions](https://veteransbenefitskb.com/claimtype#secondary)
+However, the Veteran can get a rating for how the tumor(s) affect the Veteran's vision or other [Secondary conditions](https://www.veteransbenefitskb.com/claimtype#secondary)
 
 * * *
 
@@ -18869,7 +18869,7 @@ However, the Veteran can get a rating for how the tumor(s) affect the Veteran's 
 
 Growth of the conjunctiva or mucous membrane that covers the white part of your eye over the cornea.
 
-- Rated based on [Visual Impairment Rating System](https://veteransbenefitskb.com/eyes#visual)  [Incapacitating Episodes](https://veteransbenefitskb.com/eyes#incap)  or [Conjunctivitis](https://veteransbenefitskb.com/eyes#6018)  whichever gives the highest rating. Separate ratings for [Disfigurement](https://veteransbenefitskb.com/skin#7800)  or other [Secondary conditions](https://veteransbenefitskb.com/claimtype#secondary)  may be granted if applicable.
+- Rated based on [Visual Impairment Rating System](https://www.veteransbenefitskb.com/eyes#visual)  [Incapacitating Episodes](https://www.veteransbenefitskb.com/eyes#incap)  or [Conjunctivitis](https://www.veteransbenefitskb.com/eyes#6018)  whichever gives the highest rating. Separate ratings for [Disfigurement](https://www.veteransbenefitskb.com/skin#7800)  or other [Secondary conditions](https://www.veteransbenefitskb.com/claimtype#secondary)  may be granted if applicable.
 
 * * *
 
@@ -18881,7 +18881,7 @@ Growth of the conjunctiva or mucous membrane that covers the white part of your 
 
 Yellow growth that develops on the conjunctiva.
 
-- Rated based on [Disfigurement](https://veteransbenefitskb.com/skin#7800)  **NOT** rated on vision impairment.
+- Rated based on [Disfigurement](https://www.veteransbenefitskb.com/skin#7800)  **NOT** rated on vision impairment.
 
 [Return to top](https://www.veteransbenefitskb.com/eyes#top)
 
@@ -18937,9 +18937,9 @@ Common examples are refractive errors such as:
 
 ## **Disability Benefits Questionnaire (DBQs)**
 
-To get an idea of how a [C&P exam](https://veteransbenefitskb.com/cnp)  will be conducted it is recommended that the Veteran look at the applicable DBQ.
+To get an idea of how a [C&P exam](https://www.veteransbenefitskb.com/cnp)  will be conducted it is recommended that the Veteran look at the applicable DBQ.
 
-Veteran's may ask an optometrist or ophthalmologist to complete a DBQ on their behalf to submit with their claim. For more information on DBQs click [HERE](https://veteransbenefitskb.com/dbq)
+Veteran's may ask an optometrist or ophthalmologist to complete a DBQ on their behalf to submit with their claim. For more information on DBQs click [HERE](https://www.veteransbenefitskb.com/dbq)
 
 - [Eye Conditions](https://www.benefits.va.gov/compensation/docs/Eye_Conditions.pdf)
 
@@ -18951,7 +18951,7 @@ Veteran's may ask an optometrist or ophthalmologist to complete a DBQ on their b
 
 ## **Having Trouble Finding Your Condition?**
 
-- Click [HERE](https://veteransbenefitskb.com/master)  to view the Master Condition List.
+- Click [HERE](https://www.veteransbenefitskb.com/master)  to view the Master Condition List.
 
 [Return to top](https://www.veteransbenefitskb.com/eyes#top)
 
@@ -18987,14 +18987,14 @@ Veteran's may ask an optometrist or ophthalmologist to complete a DBQ on their b
 
 |     |     |
 | --- | --- |
-| \> Cariovascular System\> Arteries & Veins\> Blood\> Heart | \> [Conditions that the VA will **NOT** Rate](https://veteransbenefitskb.com/norate)  |
-| \> [Dental and Oral](https://veteransbenefitskb.com/mouthsystem)  | \> [Digestive System](https://veteransbenefitskb.com/digsystem)  |
-| \> [Endocrine System](https://veteransbenefitskb.com/endsystem)  | \> [Female Reproductive System](https://veteransbenefitskb.com/femalesystem)  |
-| \> [Genitourinary System](https://veteransbenefitskb.com/gensystem)  | \> Hematologic and Lymphatic Systems\> Blood\> Breasts |
-| \> [Infectious Diseases and Immune Disorders](https://veteransbenefitskb.com/infect)  | \> [Mental Disorders](https://veteransbenefitskb.com/mental)  |
+| \> Cariovascular System\> Arteries & Veins\> Blood\> Heart | \> [Conditions that the VA will **NOT** Rate](https://www.veteransbenefitskb.com/norate)  |
+| \> [Dental and Oral](https://www.veteransbenefitskb.com/mouthsystem)  | \> [Digestive System](https://www.veteransbenefitskb.com/digsystem)  |
+| \> [Endocrine System](https://www.veteransbenefitskb.com/endsystem)  | \> [Female Reproductive System](https://www.veteransbenefitskb.com/femalesystem)  |
+| \> [Genitourinary System](https://www.veteransbenefitskb.com/gensystem)  | \> Hematologic and Lymphatic Systems\> Blood\> Breasts |
+| \> [Infectious Diseases and Immune Disorders](https://www.veteransbenefitskb.com/infect)  | \> [Mental Disorders](https://www.veteransbenefitskb.com/mental)  |
 | \> Musculoskeletal System\> Ankle\> Elbow & Forearm\> Foot\> Hand\> Hip & Thigh\> Knee & Lower Leg\> Ribs\> Skull\> Shoulder & Arm\> Spine\> Wrist\> Cancers and Tumors\> Diseases\> Face\> Forearm and Hand\> Hernias\> Lower Leg and Foot\> Buttock, Hip, and Thigh\> Shoulder, and Upper Arm\> Torso and Neck | \> Nervous System\> Cranial Nerves\> Central Nervous System\> Lower Back and Legs\> Upper Back and Arms\> Traumatic Brain Injuries |
-| \> [Nutritional Deficiencies](https://veteransbenefitskb.com/nutritional)  | \> [Respiratory System](https://veteransbenefitskb.com/airsystem)  |
-| \> Senses\> Ears\> Eyes\> Taste/Smell | \> [Skin](https://veteransbenefitskb.com/skin)  |
+| \> [Nutritional Deficiencies](https://www.veteransbenefitskb.com/nutritional)  | \> [Respiratory System](https://www.veteransbenefitskb.com/airsystem)  |
+| \> Senses\> Ears\> Eyes\> Taste/Smell | \> [Skin](https://www.veteransbenefitskb.com/skin)  |
 
 <!-- Chunk 888/1206 | Heading: [Rating Schedule Index Navigation](https://www.veteransbenefitskb.com/ratingsindex) | Words: 165 -->
 
@@ -19060,43 +19060,43 @@ Open Menu
 
 Featured
 
-[\> Master Condition List](https://veteransbenefitskb.com/master)
+[\> Master Condition List](https://www.veteransbenefitskb.com/master)
 
-[\> Federal Benefits List by Combined Ratings](https://veteransbenefitskb.com/combinedbenefits)
+[\> Federal Benefits List by Combined Ratings](https://www.veteransbenefitskb.com/combinedbenefits)
 
-[\> Insider Insight into VBA Claim Processing](https://veteransbenefitskb.com/insight)
+[\> Insider Insight into VBA Claim Processing](https://www.veteransbenefitskb.com/insight)
 
-[\> Rating Schedule Index](https://veteransbenefitskb.com/ratingsindex)
+[\> Rating Schedule Index](https://www.veteransbenefitskb.com/ratingsindex)
 
-[\> Filing a VA Disability Claim](https://veteransbenefitskb.com/vaclaim)
+[\> Filing a VA Disability Claim](https://www.veteransbenefitskb.com/vaclaim)
 
-[\> Filing an Appeal](https://veteransbenefitskb.com/appeals)
+[\> Filing an Appeal](https://www.veteransbenefitskb.com/appeals)
 
 * * *
 
 [Categories](https://www.veteransbenefitskb.com/tastesmell)
 
-> [Death/Survivor Benefits](https://veteransbenefitskb.com/#ds)
+> [Death/Survivor Benefits](https://www.veteransbenefitskb.com/#ds)
 
-\> [Education &](https://veteransbenefitskb.com/#ee)  [Employment](https://veteransbenefitskb.com/#ee)
+\> [Education &](https://www.veteransbenefitskb.com/#ee)  [Employment](https://www.veteransbenefitskb.com/#ee)
 
-\> [Health care](https://veteransbenefitskb.com/#healthcare)
+\> [Health care](https://www.veteransbenefitskb.com/#healthcare)
 
-\> [Housing](https://veteransbenefitskb.com/#housing)
+\> [Housing](https://www.veteransbenefitskb.com/#housing)
 
-\> [Miscellaneous](https://veteransbenefitskb.com/#misc)
+\> [Miscellaneous](https://www.veteransbenefitskb.com/#misc)
 
-\> [VA Disability Compensation](https://veteransbenefitskb.com/#va)
+\> [VA Disability Compensation](https://www.veteransbenefitskb.com/#va)
 
-\> [VA Pension](https://veteransbenefitskb.com/#pension)
+\> [VA Pension](https://www.veteransbenefitskb.com/#pension)
 
 As smell and taste are closely linked to one another it is not uncommon if someone losses their sense of smell to also lose their sense of taste or vice versa.
 
 **IMPORTANT NOTES:**
 
-- The loss of these senses _must_ be non-stop. So any temporary losses due to something like a cold or [Rhinitis](https://veteransbenefitskb.com/airsystem#6522)  is **NOT** rateable.
+- The loss of these senses _must_ be non-stop. So any temporary losses due to something like a cold or [Rhinitis](https://www.veteransbenefitskb.com/airsystem#6522)  is **NOT** rateable.
 
-- The loss of either of these two senses are **NOT** eligible for [Special Monthly Compensation K](https://veteransbenefitskb.com/smc#k)
+- The loss of either of these two senses are **NOT** eligible for [Special Monthly Compensation K](https://www.veteransbenefitskb.com/smc#k)
 
 - DoD does **NOT** consider this schedule when assigning ratings. If anything, the DoD might consider the loss of these senses as a benefit.
 
@@ -19132,9 +19132,9 @@ As smell and taste are closely linked to one another it is not uncommon if someo
 
 ## **Disability Benefits Questionnaire (DBQs)**
 
-To get an idea of how a [C&P exam](https://veteransbenefitskb.com/cnp)  will be conducted it is recommended that the Veteran look at the applicable DBQ.
+To get an idea of how a [C&P exam](https://www.veteransbenefitskb.com/cnp)  will be conducted it is recommended that the Veteran look at the applicable DBQ.
 
-Veterans may ask a physician to complete a DBQ on their behalf to submit with their claim. For more information on DBQs click [HERE](https://veteransbenefitskb.com/dbq)
+Veterans may ask a physician to complete a DBQ on their behalf to submit with their claim. For more information on DBQs click [HERE](https://www.veteransbenefitskb.com/dbq)
 
 - [Loss of Sense of Smell and or Taste](https://www.benefits.va.gov/compensation/docs/Loss_of_Sense_of_Smell_and_or_Taste.pdf)
 
@@ -19146,7 +19146,7 @@ Veterans may ask a physician to complete a DBQ on their behalf to submit with th
 
 ## **Having Trouble Finding Your Condition?**
 
-- Click [HERE](https://veteransbenefitskb.com/master)  to view the Master Condition List.
+- Click [HERE](https://www.veteransbenefitskb.com/master)  to view the Master Condition List.
 
 [Return to top](https://www.veteransbenefitskb.com/tastesmell#top)
 
@@ -19168,14 +19168,14 @@ Veterans may ask a physician to complete a DBQ on their behalf to submit with th
 
 |     |     |
 | --- | --- |
-| \> Cariovascular System\> Arteries & Veins\> Blood\> Heart | \> [Conditions that the VA will **NOT** Rate](https://veteransbenefitskb.com/norate)  |
-| \> [Dental and Oral](https://veteransbenefitskb.com/mouthsystem)  | \> [Digestive System](https://veteransbenefitskb.com/digsystem)  |
-| \> [Endocrine System](https://veteransbenefitskb.com/endsystem)  | \> [Female Reproductive System](https://veteransbenefitskb.com/femalesystem)  |
-| \> [Genitourinary System](https://veteransbenefitskb.com/gensystem)  | \> Hematologic and Lymphatic Systems\> Blood\> Breasts |
-| \> [Infectious Diseases and Immune Disorders](https://veteransbenefitskb.com/infect)  | \> [Mental Disorders](https://veteransbenefitskb.com/mental)  |
+| \> Cariovascular System\> Arteries & Veins\> Blood\> Heart | \> [Conditions that the VA will **NOT** Rate](https://www.veteransbenefitskb.com/norate)  |
+| \> [Dental and Oral](https://www.veteransbenefitskb.com/mouthsystem)  | \> [Digestive System](https://www.veteransbenefitskb.com/digsystem)  |
+| \> [Endocrine System](https://www.veteransbenefitskb.com/endsystem)  | \> [Female Reproductive System](https://www.veteransbenefitskb.com/femalesystem)  |
+| \> [Genitourinary System](https://www.veteransbenefitskb.com/gensystem)  | \> Hematologic and Lymphatic Systems\> Blood\> Breasts |
+| \> [Infectious Diseases and Immune Disorders](https://www.veteransbenefitskb.com/infect)  | \> [Mental Disorders](https://www.veteransbenefitskb.com/mental)  |
 | \> Musculoskeletal System\> Ankle\> Elbow & Forearm\> Foot\> Hand\> Hip & Thigh\> Knee & Lower Leg\> Ribs\> Skull\> Shoulder & Arm\> Spine\> Wrist\> Cancers and Tumors\> Diseases\> Face\> Forearm and Hand\> Hernias\> Lower Leg and Foot\> Buttock, Hip, and Thigh\> Shoulder, and Upper Arm\> Torso and Neck | \> Nervous System\> Cranial Nerves\> Central Nervous System\> Lower Back and Legs\> Upper Back and Arms\> Traumatic Brain Injuries |
-| \> [Nutritional Deficiencies](https://veteransbenefitskb.com/nutritional)  | \> [Respiratory System](https://veteransbenefitskb.com/airsystem)  |
-| \> Senses\> Ears\> Eyes\> Taste/Smell | \> [Skin](https://veteransbenefitskb.com/skin)  |
+| \> [Nutritional Deficiencies](https://www.veteransbenefitskb.com/nutritional)  | \> [Respiratory System](https://www.veteransbenefitskb.com/airsystem)  |
+| \> Senses\> Ears\> Eyes\> Taste/Smell | \> [Skin](https://www.veteransbenefitskb.com/skin)  |
 
 <!-- Chunk 897/1206 | Heading: [Rating Schedule Index Navigation](https://www.veteransbenefitskb.com/ratingsindex) | Words: 165 -->
 
@@ -19241,35 +19241,35 @@ Open Menu
 
 Featured
 
-[\> Master Condition List](https://veteransbenefitskb.com/master)
+[\> Master Condition List](https://www.veteransbenefitskb.com/master)
 
-[\> Federal Benefits List by Combined Ratings](https://veteransbenefitskb.com/combinedbenefits)
+[\> Federal Benefits List by Combined Ratings](https://www.veteransbenefitskb.com/combinedbenefits)
 
-[\> Insider Insight into VBA Claim Processing](https://veteransbenefitskb.com/insight)
+[\> Insider Insight into VBA Claim Processing](https://www.veteransbenefitskb.com/insight)
 
-[\> Rating Schedule Index](https://veteransbenefitskb.com/ratingsindex)
+[\> Rating Schedule Index](https://www.veteransbenefitskb.com/ratingsindex)
 
-[\> Filing a VA Disability Claim](https://veteransbenefitskb.com/vaclaim)
+[\> Filing a VA Disability Claim](https://www.veteransbenefitskb.com/vaclaim)
 
-[\> Filing an Appeal](https://veteransbenefitskb.com/appeals)
+[\> Filing an Appeal](https://www.veteransbenefitskb.com/appeals)
 
 * * *
 
 [Categories](https://www.veteransbenefitskb.com/skin)
 
-> [Death/Survivor Benefits](https://veteransbenefitskb.com/#ds)
+> [Death/Survivor Benefits](https://www.veteransbenefitskb.com/#ds)
 
-\> [Education &](https://veteransbenefitskb.com/#ee)  [Employment](https://veteransbenefitskb.com/#ee)
+\> [Education &](https://www.veteransbenefitskb.com/#ee)  [Employment](https://www.veteransbenefitskb.com/#ee)
 
-\> [Health care](https://veteransbenefitskb.com/#healthcare)
+\> [Health care](https://www.veteransbenefitskb.com/#healthcare)
 
-\> [Housing](https://veteransbenefitskb.com/#housing)
+\> [Housing](https://www.veteransbenefitskb.com/#housing)
 
-\> [Miscellaneous](https://veteransbenefitskb.com/#misc)
+\> [Miscellaneous](https://www.veteransbenefitskb.com/#misc)
 
-\> [VA Disability Compensation](https://veteransbenefitskb.com/#va)
+\> [VA Disability Compensation](https://www.veteransbenefitskb.com/#va)
 
-\> [VA Pension](https://veteransbenefitskb.com/#pension)
+\> [VA Pension](https://www.veteransbenefitskb.com/#pension)
 
 Your outermost layer of armor.
 
@@ -19312,7 +19312,7 @@ Your outermost layer of armor.
 
 - As of August 13, 2018, medications that are applied to the skin, including topical corticosteroids or immunosuppressives, are **NOT** considered systemic for Department of Veterans Affairs (VA) purposes! Yes, even if the use of said medications is continuous!
 
-- If the treatment for your service-connected skin condition results in permanent damage to clothing you may be entitled to a yearly [Clothing allowance](https://veteransbenefitskb.com/clothes)  of around $1,000.
+- If the treatment for your service-connected skin condition results in permanent damage to clothing you may be entitled to a yearly [Clothing allowance](https://www.veteransbenefitskb.com/clothes)  of around $1,000.
 
 <!-- Chunk 901/1206 | Heading: Terms to Know | Words: 155 -->
 
@@ -19390,7 +19390,7 @@ NOTE:
 
 - So if the length and width are 2" and 5" multiply to get an area of 10 inÂ² _then_ divide the area by 2 to get a final area of 5 inÂ².
 
-4\. Add your areas per body section If your skin condition is made up of multiple shapes, add those areas together per [Body section](https://veteransbenefitskb.com/skin#estimate)
+4\. Add your areas per body section If your skin condition is made up of multiple shapes, add those areas together per [Body section](https://www.veteransbenefitskb.com/skin#estimate)
 
 - In our pictured example:
 
@@ -19434,7 +19434,7 @@ Giving us a total area of exposed skin of 32.6%.
 
 - Percentage of Total Body affected is 3.07%
 
-With the percentages of total body and possibly exposed skin. You can now use the [General rating formula](https://veteransbenefitskb.com/skin#general)  to determine your rating.
+With the percentages of total body and possibly exposed skin. You can now use the [General rating formula](https://www.veteransbenefitskb.com/skin#general)  to determine your rating.
 
 [Return to top](https://www.veteransbenefitskb.com/skin#top)
 
@@ -19448,13 +19448,13 @@ Most conditions are rated under this general rating formula.
 
 **IMPORTANT NOTES:**
 
-- If the condition would rate higher under [Scars and Disfigurement Involving the Head, Face, or Neck](https://veteransbenefitskb.com/skin#7800)  then it can be rated under that schedule instead ( **NOT** in addition to).
+- If the condition would rate higher under [Scars and Disfigurement Involving the Head, Face, or Neck](https://www.veteransbenefitskb.com/skin#7800)  then it can be rated under that schedule instead ( **NOT** in addition to).
 
-- This does **NOT** apply to [Diseases of keratinization (including icthyoses, Darier's disease, and palmoplantar keratoderma)](https://veteransbenefitskb.com/skin#7824)
+- This does **NOT** apply to [Diseases of keratinization (including icthyoses, Darier's disease, and palmoplantar keratoderma)](https://www.veteransbenefitskb.com/skin#7824)
 
 **PRESUMPTIVE CONDITION:**
 
-- Diagnosed with [Porphyria cutanea tarda](https://veteransbenefitskb.com/skin#7816)  within a year of last possible exposure to [Agent Orange](https://veteransbenefitskb.com/agentorange)  **AND** the condition rates _at least_ 10% within that time.
+- Diagnosed with [Porphyria cutanea tarda](https://www.veteransbenefitskb.com/skin#7816)  within a year of last possible exposure to [Agent Orange](https://www.veteransbenefitskb.com/agentorange)  **AND** the condition rates _at least_ 10% within that time.
 
 | Rating | Description |
 | --- | --- |
@@ -19517,7 +19517,7 @@ This includes but is not limited to:
 
 - Plaque parapsoriasi (large or small)
 
-Rated under the [General rating formula](https://veteransbenefitskb.com/skin#general)
+Rated under the [General rating formula](https://www.veteransbenefitskb.com/skin#general)
 
 <!-- Chunk 907/1206 | Heading: 7822 Papulosquamous Disorders Not listed Elsewhere | Words: 55 -->
 
@@ -19544,7 +19544,7 @@ Cutaneous vasculitis is a group of disorders in which there are inflamed blood v
 
 **IMPORTANT NOTES:**
 
-- If the Veteran can get rated higher under [Disfigurement](https://veteransbenefitskb.com/skin#7800)  or [Scars](https://veteransbenefitskb.com/skin#7802)  They will be rated under one of those schedules _instead_ of this one.
+- If the Veteran can get rated higher under [Disfigurement](https://www.veteransbenefitskb.com/skin#7800)  or [Scars](https://www.veteransbenefitskb.com/skin#7802)  They will be rated under one of those schedules _instead_ of this one.
 
 - If this condition is caused by something like medications, infections, cancers, etc. It **CANNOT** be rated under this schedule.
 
@@ -19568,9 +19568,9 @@ Parasitic skin infection originating form the bite of an American sandfly.
 
 **PRESUMPTIVE CONDITION:**
 
-- If diagnosed within a year of separation **AND** had [Tropical service](https://veteransbenefitskb.com/tropical)  **WITH** the condition having had a severity of _at least 10%_ within that time.
+- If diagnosed within a year of separation **AND** had [Tropical service](https://www.veteransbenefitskb.com/tropical)  **WITH** the condition having had a severity of _at least 10%_ within that time.
 
-Rated under the [Dermatitis](https://veteransbenefitskb.com/skin#7806)  [Scars](https://veteransbenefitskb.com/skin#7802)  [Disfigurement](https://veteransbenefitskb.com/skin#7800)  Depending upon which schedule best whichever best describes the disability.
+Rated under the [Dermatitis](https://www.veteransbenefitskb.com/skin#7806)  [Scars](https://www.veteransbenefitskb.com/skin#7802)  [Disfigurement](https://www.veteransbenefitskb.com/skin#7800)  Depending upon which schedule best whichever best describes the disability.
 
 <!-- Chunk 910/1206 | Heading: 7807 New World (American) Mucocutaneous Leishmaniasis | Words: 62 -->
 
@@ -19582,9 +19582,9 @@ Parasitic skin infection originating from the bite of a European, Asian or Afric
 
 **PRESUMPTIVE CONDITION:**
 
-- If diagnosed within 18 months of separation **AND** had [Tropical service](https://veteransbenefitskb.com/tropical)  **WITH** the condition having had a severity of _at least 10%_ within that time.
+- If diagnosed within 18 months of separation **AND** had [Tropical service](https://www.veteransbenefitskb.com/tropical)  **WITH** the condition having had a severity of _at least 10%_ within that time.
 
-Rated under the [Dermatitis](https://veteransbenefitskb.com/skin#7806)  [Scars](https://veteransbenefitskb.com/skin#7802)  [Disfigurement](https://veteransbenefitskb.com/skin#7800)  Depending upon which schedule best whichever best describes the disability.
+Rated under the [Dermatitis](https://www.veteransbenefitskb.com/skin#7806)  [Scars](https://www.veteransbenefitskb.com/skin#7802)  [Disfigurement](https://www.veteransbenefitskb.com/skin#7800)  Depending upon which schedule best whichever best describes the disability.
 
 * * *
 
@@ -19598,7 +19598,7 @@ Rated under the [Dermatitis](https://veteransbenefitskb.com/skin#7806)  [Scars](
 
 Tuberculosis that affects the skin.
 
-- Rated under [Nonpulmonary TB](https://veteransbenefitskb.com/infect#nonpulmonary)
+- Rated under [Nonpulmonary TB](https://www.veteransbenefitskb.com/infect#nonpulmonary)
 
 * * *
 
@@ -19626,7 +19626,7 @@ Depending where on the body the fungus affects the body it has a different name:
 
 - Feet - Tinea pedis
 
-Rated under the [General rating formula](https://veteransbenefitskb.com/skin#general)
+Rated under the [General rating formula](https://www.veteransbenefitskb.com/skin#general)
 
 * * *
 
@@ -19658,7 +19658,7 @@ Toxic Epidermal Necrolysis - a severe skin infection that results in the skin pe
 
 ### 7820 Infections of the Skin Not Listed Elsewhere
 
-- Rated under the [General rating formula](https://veteransbenefitskb.com/skin#general)
+- Rated under the [General rating formula](https://www.veteransbenefitskb.com/skin#general)
 
 [Return to top](https://www.veteransbenefitskb.com/skin#top)
 
@@ -19686,7 +19686,7 @@ These disorders include:
 
 - Porphyria cutanea tarda
 
-Rated under the [General rating formula](https://veteransbenefitskb.com/skin#general)
+Rated under the [General rating formula](https://www.veteransbenefitskb.com/skin#general)
 
 * * *
 
@@ -19696,15 +19696,15 @@ Rated under the [General rating formula](https://veteransbenefitskb.com/skin#gen
 
 #### Common Secondary Conditions
 
-- [Eye conditions](https://veteransbenefitskb.com/eyes)
+- [Eye conditions](https://www.veteransbenefitskb.com/eyes)
 
-- [Digestive conditions](https://veteransbenefitskb.com/digsystem)
+- [Digestive conditions](https://www.veteransbenefitskb.com/digsystem)
 
-- [Genitourinary conditions](https://veteransbenefitskb.com/gensystem)
+- [Genitourinary conditions](https://www.veteransbenefitskb.com/gensystem)
 
-- [Lung conditions](https://veteransbenefitskb.com/airsystem)
+- [Lung conditions](https://www.veteransbenefitskb.com/airsystem)
 
-- [Mouth conditions](https://veteransbenefitskb.com/mouthsystem)
+- [Mouth conditions](https://www.veteransbenefitskb.com/mouthsystem)
 
 * * *
 
@@ -19716,7 +19716,7 @@ Rated under the [General rating formula](https://veteransbenefitskb.com/skin#gen
 
 A condition in which skin cells build up and form scales and itchy, dry patches.
 
-- Rated under the [General rating formula](https://veteransbenefitskb.com/skin#general)
+- Rated under the [General rating formula](https://www.veteransbenefitskb.com/skin#general)
 
 * * *
 
@@ -19730,9 +19730,9 @@ Chronic autoimmune disease that affects the skin.
 
 **PYRAMIDING NOTE:**
 
-- If lupus affects other parts of the body, it can be rated under [Systematic lupus erythematosus](https://veteransbenefitskb.com/infect#6350)  instead. The Veteran would keep the higher of the 2 ratings.
+- If lupus affects other parts of the body, it can be rated under [Systematic lupus erythematosus](https://www.veteransbenefitskb.com/infect#6350)  instead. The Veteran would keep the higher of the 2 ratings.
 
-Rated under the [General rating formula](https://veteransbenefitskb.com/skin#general)
+Rated under the [General rating formula](https://www.veteransbenefitskb.com/skin#general)
 
 * * *
 
@@ -19754,9 +19754,9 @@ This includes but is not limited to:
 
 **PRESUMPTIVE CONDITION:**
 
-- If diagnosed with _scleroderma_ within a [Year](https://veteransbenefitskb.com/time)  of separation **AND** the severity warranted at least a 10% evaluation within that time.
+- If diagnosed with _scleroderma_ within a [Year](https://www.veteransbenefitskb.com/time)  of separation **AND** the severity warranted at least a 10% evaluation within that time.
 
-Rated under the [General rating formula](https://veteransbenefitskb.com/skin#general)
+Rated under the [General rating formula](https://www.veteransbenefitskb.com/skin#general)
 
 * * *
 
@@ -19776,7 +19776,7 @@ Examples of diseases include but are not limited to:
 
 - Palmoplantar keratoderma
 
-Rated under the [General rating formula](https://veteransbenefitskb.com/skin#general)
+Rated under the [General rating formula](https://www.veteransbenefitskb.com/skin#general)
 
 [Return to top](https://www.veteransbenefitskb.com/skin#top)
 
@@ -19790,7 +19790,7 @@ Skin condition that occurs when your hair follicles become plugged with oil and 
 
 **IMPORTANT NOTE:**
 
-- If the Veteran's symptoms are best represented under [Disfigurement](https://veteransbenefitskb.com/skin#7800)  or [Scars](https://veteransbenefitskb.com/skin#7802)  They will be rated under one of those schedules _instead_ of this one.
+- If the Veteran's symptoms are best represented under [Disfigurement](https://www.veteransbenefitskb.com/skin#7800)  or [Scars](https://www.veteransbenefitskb.com/skin#7802)  They will be rated under one of those schedules _instead_ of this one.
 
 | Rating | Description |
 | --- | --- |
@@ -19810,11 +19810,11 @@ Acne-like eruption of blackheads, cysts, and pustules associated with exposure t
 
 **IMPORTANT NOTE:**
 
-- If the Veteran's symptoms are best represented under [Disfigurement](https://veteransbenefitskb.com/skin#7800)  or [Scars](https://veteransbenefitskb.com/skin#7802)  They will be rated under one of those schedules _instead_ of this one.
+- If the Veteran's symptoms are best represented under [Disfigurement](https://www.veteransbenefitskb.com/skin#7800)  or [Scars](https://www.veteransbenefitskb.com/skin#7802)  They will be rated under one of those schedules _instead_ of this one.
 
 **PRESUMPTIVE CONDITION:**
 
-- If diagnosed within a year of last possible exposure to [Agent Orange](https://veteransbenefitskb.com/agentorange)  **AND** the severity warranted _at least_ a 10% evaluation within that time.
+- If diagnosed within a year of last possible exposure to [Agent Orange](https://www.veteransbenefitskb.com/agentorange)  **AND** the severity warranted _at least_ a 10% evaluation within that time.
 
 | Rating | Description |
 | --- | --- |
@@ -19851,7 +19851,7 @@ Hair loss that starts with one or more circular bald patches that may overlap.
 
 **PYRAMIDING NOTE:**
 
-- Separate ratings **ARE** allowed for [Loss of eyebrows](https://veteransbenefitskb.com/eyes#6023)  and [Eyelashes](https://veteransbenefitskb.com/eyes#6024)
+- Separate ratings **ARE** allowed for [Loss of eyebrows](https://www.veteransbenefitskb.com/eyes#6023)  and [Eyelashes](https://www.veteransbenefitskb.com/eyes#6024)
 
 | Rating | Description |
 | --- | --- |
@@ -19995,13 +19995,13 @@ NOTES:
 
 If the Veteran experiences any of the following they **CAN** receive a separate rating for the condition.
 
-- [Nerve damage](https://veteransbenefitskb.com/nervesystem)
+- [Nerve damage](https://www.veteransbenefitskb.com/nervesystem)
 
-- [Loss of the eye](https://veteransbenefitskb.com/eyes)
+- [Loss of the eye](https://www.veteransbenefitskb.com/eyes)
 
-- [Complete loss of the outer ear](https://veteransbenefitskb.com/ears#6207)
+- [Complete loss of the outer ear](https://www.veteransbenefitskb.com/ears#6207)
 
-- [Jaw impairment](https://veteransbenefitskb.com/mouthsystem#9905)
+- [Jaw impairment](https://www.veteransbenefitskb.com/mouthsystem#9905)
 
 | Rating | Description |
 | --- | --- |
@@ -20030,13 +20030,13 @@ If the Veteran experiences any of the following they **CAN** receive a separate 
 
 Bilateral Factor:
 
-- These scars **ARE** eligible for [Bilateral consideration](https://veteransbenefitskb.com/vamath)  so long as the ratings are **NOT**:
+- These scars **ARE** eligible for [Bilateral consideration](https://www.veteransbenefitskb.com/vamath)  so long as the ratings are **NOT**:
 
 - Based on whole-body involvement;
 
 - Rated less than 10%; or
 
-- Specific to the [Head, face, and/or neck](https://veteransbenefitskb.com/skin#7800)
+- Specific to the [Head, face, and/or neck](https://www.veteransbenefitskb.com/skin#7800)
 
 | Body Section | Area |
 | --- | --- |
@@ -20124,11 +20124,11 @@ Unstable scars for the purposes of this schedule means - there is frequent loss 
 
 Common residuals:
 
-- [Disfigurement](https://veteransbenefitskb.com/skin#7800)
+- [Disfigurement](https://www.veteransbenefitskb.com/skin#7800)
 
-- [Scars](https://veteransbenefitskb.com/skin#7802)  and
+- [Scars](https://www.veteransbenefitskb.com/skin#7802)  and
 
-- [Limitation of Range of Motion](https://veteransbenefitskb.com/msindex)
+- [Limitation of Range of Motion](https://www.veteransbenefitskb.com/msindex)
 
 * * *
 
@@ -20138,7 +20138,7 @@ Common residuals:
 
 ### 7818 Cancer (Malignant Neoplasms - **NOT** including Melanoma)
 
-- Rated under [Disfigurement](https://veteransbenefitskb.com/skin#7800)  [Scars](https://veteransbenefitskb.com/skin#7802)  or [Limitation of Range of Motion](https://veteransbenefitskb.com/msindex)
+- Rated under [Disfigurement](https://www.veteransbenefitskb.com/skin#7800)  [Scars](https://www.veteransbenefitskb.com/skin#7802)  or [Limitation of Range of Motion](https://www.veteransbenefitskb.com/msindex)
 
 **IMPORTANT NOTE:**
 
@@ -20160,11 +20160,11 @@ Common residuals:
 
 Causes dark patches to form on the skin.
 
-- Rated under [Disfigurement](https://veteransbenefitskb.com/skin#7800)  [Scars](https://veteransbenefitskb.com/skin#7802)  or [Limitation of Range of Motion](https://veteransbenefitskb.com/msindex)
+- Rated under [Disfigurement](https://www.veteransbenefitskb.com/skin#7800)  [Scars](https://www.veteransbenefitskb.com/skin#7802)  or [Limitation of Range of Motion](https://www.veteransbenefitskb.com/msindex)
 
 **PRESUMPTIVE CONDITION:**
 
-- If exposed to [Burn pits](https://veteransbenefitskb.com/burnpits)  or
+- If exposed to [Burn pits](https://www.veteransbenefitskb.com/burnpits)  or
 
 - If diagnosed with _squamous cell carcinoma_ **AND** exposed to [Mustard gas](https://www.veteransbenefitskb.com/mustardgas)
 
@@ -20190,7 +20190,7 @@ Has no rating in and of itself.
 
 However, if the Veteran suffers residual symptoms due to the presence of the tumor(s) or any treatments used to deal with them. Those may be rated.
 
-If the Human papillomavirus (HPV) causes warts, those warts will be rated under this schedule. That said, HPV itself would _not_ otherwise get service-connected. However, if there is a [Medical opinion](https://veteransbenefitskb.com/imo)  that your in-service HPV led to cancer, then that cancer **CAN** get service-connected!
+If the Human papillomavirus (HPV) causes warts, those warts will be rated under this schedule. That said, HPV itself would _not_ otherwise get service-connected. However, if there is a [Medical opinion](https://www.veteransbenefitskb.com/imo)  that your in-service HPV led to cancer, then that cancer **CAN** get service-connected!
 
 [Return to top](https://www.veteransbenefitskb.com/skin#top)
 
@@ -20200,9 +20200,9 @@ If the Human papillomavirus (HPV) causes warts, those warts will be rated under 
 
 ## **Disability Benefits Questionnaire (DBQs)**
 
-To get an idea of how a [C&P exam](https://veteransbenefitskb.com/cnp)  will be conducted it is recommended that the Veteran look at the applicable DBQ.
+To get an idea of how a [C&P exam](https://www.veteransbenefitskb.com/cnp)  will be conducted it is recommended that the Veteran look at the applicable DBQ.
 
-Veteran's may ask a physician to complete a DBQ on their behalf to submit with their claim. For more information on DBQs click [HERE](https://veteransbenefitskb.com/dbq)
+Veteran's may ask a physician to complete a DBQ on their behalf to submit with their claim. For more information on DBQs click [HERE](https://www.veteransbenefitskb.com/dbq)
 
 - [Scars](https://www.benefits.va.gov/compensation/docs/scars.pdf)
 
@@ -20216,7 +20216,7 @@ Veteran's may ask a physician to complete a DBQ on their behalf to submit with t
 
 ## **Having Trouble Finding Your Condition?**
 
-- Click [HERE](https://veteransbenefitskb.com/master)  to view the Master Condition List.
+- Click [HERE](https://www.veteransbenefitskb.com/master)  to view the Master Condition List.
 
 [Return to top](https://www.veteransbenefitskb.com/skin#top)
 
@@ -20240,14 +20240,14 @@ Veteran's may ask a physician to complete a DBQ on their behalf to submit with t
 
 |     |     |
 | --- | --- |
-| \> Cariovascular System\> Arteries & Veins\> Blood\> Heart | \> [Conditions that the VA will **NOT** Rate](https://veteransbenefitskb.com/norate)  |
-| \> [Dental and Oral](https://veteransbenefitskb.com/mouthsystem)  | \> [Digestive System](https://veteransbenefitskb.com/digsystem)  |
-| \> [Endocrine System](https://veteransbenefitskb.com/endsystem)  | \> [Female Reproductive System](https://veteransbenefitskb.com/femalesystem)  |
-| \> [Genitourinary System](https://veteransbenefitskb.com/gensystem)  | \> Hematologic and Lymphatic Systems\> Blood\> Breasts |
-| \> [Infectious Diseases and Immune Disorders](https://veteransbenefitskb.com/infect)  | \> [Mental Disorders](https://veteransbenefitskb.com/mental)  |
+| \> Cariovascular System\> Arteries & Veins\> Blood\> Heart | \> [Conditions that the VA will **NOT** Rate](https://www.veteransbenefitskb.com/norate)  |
+| \> [Dental and Oral](https://www.veteransbenefitskb.com/mouthsystem)  | \> [Digestive System](https://www.veteransbenefitskb.com/digsystem)  |
+| \> [Endocrine System](https://www.veteransbenefitskb.com/endsystem)  | \> [Female Reproductive System](https://www.veteransbenefitskb.com/femalesystem)  |
+| \> [Genitourinary System](https://www.veteransbenefitskb.com/gensystem)  | \> Hematologic and Lymphatic Systems\> Blood\> Breasts |
+| \> [Infectious Diseases and Immune Disorders](https://www.veteransbenefitskb.com/infect)  | \> [Mental Disorders](https://www.veteransbenefitskb.com/mental)  |
 | \> Musculoskeletal System\> Ankle\> Elbow & Forearm\> Foot\> Hand\> Hip & Thigh\> Knee & Lower Leg\> Ribs\> Skull\> Shoulder & Arm\> Spine\> Wrist\> Cancers and Tumors\> Diseases\> Face\> Forearm and Hand\> Hernias\> Lower Leg and Foot\> Buttock, Hip, and Thigh\> Shoulder, and Upper Arm\> Torso and Neck | \> Nervous System\> Cranial Nerves\> Central Nervous System\> Lower Back and Legs\> Upper Back and Arms\> Traumatic Brain Injuries |
-| \> [Nutritional Deficiencies](https://veteransbenefitskb.com/nutritional)  | \> [Respiratory System](https://veteransbenefitskb.com/airsystem)  |
-| \> Senses\> Ears\> Eyes\> Taste/Smell | \> [Skin](https://veteransbenefitskb.com/skin)  |
+| \> [Nutritional Deficiencies](https://www.veteransbenefitskb.com/nutritional)  | \> [Respiratory System](https://www.veteransbenefitskb.com/airsystem)  |
+| \> Senses\> Ears\> Eyes\> Taste/Smell | \> [Skin](https://www.veteransbenefitskb.com/skin)  |
 
 <!-- Chunk 944/1206 | Heading: [Rating Schedule Index Navigation](https://www.veteransbenefitskb.com/ratingsindex) | Words: 165 -->
 
@@ -20315,35 +20315,35 @@ Open Menu
 
 Featured
 
-[\> Master Condition List](https://veteransbenefitskb.com/master)
+[\> Master Condition List](https://www.veteransbenefitskb.com/master)
 
-[\> Federal Benefits List by Combined Ratings](https://veteransbenefitskb.com/combinedbenefits)
+[\> Federal Benefits List by Combined Ratings](https://www.veteransbenefitskb.com/combinedbenefits)
 
-[\> Insider Insight into VBA Claim Processing](https://veteransbenefitskb.com/insight)
+[\> Insider Insight into VBA Claim Processing](https://www.veteransbenefitskb.com/insight)
 
-[\> Rating Schedule Index](https://veteransbenefitskb.com/ratingsindex)
+[\> Rating Schedule Index](https://www.veteransbenefitskb.com/ratingsindex)
 
-[\> Filing a VA Disability Claim](https://veteransbenefitskb.com/vaclaim)
+[\> Filing a VA Disability Claim](https://www.veteransbenefitskb.com/vaclaim)
 
-[\> Filing an Appeal](https://veteransbenefitskb.com/appeals)
+[\> Filing an Appeal](https://www.veteransbenefitskb.com/appeals)
 
 [Categories](https://www.veteransbenefitskb.com/combinedbenefits)
 
-\> [Death/Survivor Benefits](https://veteransbenefitskb.com/#ds)
+\> [Death/Survivor Benefits](https://www.veteransbenefitskb.com/#ds)
 
-\> [Education & Employment](https://veteransbenefitskb.com/#ee)
+\> [Education & Employment](https://www.veteransbenefitskb.com/#ee)
 
-\> [Health care](https://veteransbenefitskb.com/#healthcare)
+\> [Health care](https://www.veteransbenefitskb.com/#healthcare)
 
-\> [Housing](https://veteransbenefitskb.com/#housing)
+\> [Housing](https://www.veteransbenefitskb.com/#housing)
 
-\> [Miscellaneous](https://veteransbenefitskb.com/#misc)
+\> [Miscellaneous](https://www.veteransbenefitskb.com/#misc)
 
-\> [VA Disability Compensation](https://veteransbenefitskb.com/#va)
+\> [VA Disability Compensation](https://www.veteransbenefitskb.com/#va)
 
-\> [VA Pension](https://veteransbenefitskb.com/#pension)
+\> [VA Pension](https://www.veteransbenefitskb.com/#pension)
 
-This page is focused on Federal benefits granted to Veterans based on their [Combined total rating](https://veteransbenefitskb.com/vamath)
+This page is focused on Federal benefits granted to Veterans based on their [Combined total rating](https://www.veteransbenefitskb.com/vamath)
 
 **IMPORTANT NOTES:**
 
@@ -20362,20 +20362,20 @@ This page is focused on Federal benefits granted to Veterans based on their [Com
 | Category | Description |
 | --- | --- |
 | Business | [Service-disabled veteran-owned small businesses program](https://www.sba.gov/federal-contracting/contracting-assistance-programs/service-disabled-veteran-owned-small-businesses-program)  \- Joining the disabled Veteransâ€™ business program makes your business eligible to compete for the programâ€™s [set-aside contracts](http://www.sba.gov/federal-contracting/contracting-guide/types-contracts)  |
-| Death | [Dependency indemnity compensation (DIC)](https://veteransbenefitskb.com/survivorbenefits#dic)  \- If death is related to a service/service-connected disability/VA. |
+| Death | [Dependency indemnity compensation (DIC)](https://www.veteransbenefitskb.com/survivorbenefits#dic)  \- If death is related to a service/service-connected disability/VA. |
 | Death | Increased [Burial and plot allowance](https://www.benefits.va.gov/compensation/claims-special-burial.asp)  \- If death is determined to be connected to military service. |
 | Employment | [10-Point Disability Preference (XP)](https://www.veteransbenefitskb.com/federal)  Ten points are added to the passing examination score or rating. |
-| Financial | [VA clothing allowance](https://veteransbenefitskb.com/cloth)  \- Yearly allowance to replace clothing permanently damaged by prosthetic/orthopedic devices or skin medicine. The device or skin medicine **MUST** be prescribed to treat a service connected disability. It is possible to be granted more than one allowance. |
+| Financial | [VA clothing allowance](https://www.veteransbenefitskb.com/cloth)  \- Yearly allowance to replace clothing permanently damaged by prosthetic/orthopedic devices or skin medicine. The device or skin medicine **MUST** be prescribed to treat a service connected disability. It is possible to be granted more than one allowance. |
 | Financial | VA travel pay via the [Beneficiary Travel program](https://eauth.va.gov/accessva)  \- pays Veterans back for mileage and other travel expenses to and from approved health care appointments @. For service connected disabilities only@@. |
-| Life insurance | [Veterans Affairs life insurance (VALife)](https://veteransbenefitskb.com/life-insurance)  |
+| Life insurance | [Veterans Affairs life insurance (VALife)](https://www.veteransbenefitskb.com/life-insurance)  |
 | Health Care | Each disability that is rated at least 0% (service connected) entitles the Veteran to free treatment for that disability through the VA. This DOES include medications for those service connected conditions. |
 | Health Care | Priority group 5\* or 8 (Sub-priority E)\*\* for VA health care. |
-| Health Care | [Foreign Medical Program (FMP)](https://veteransbenefitskb.com/fmp)  \- VA will pay for health care services, medications, and durable medical equipment for service connected conditions. For Veterans living or traveling abroad. |
+| Health Care | [Foreign Medical Program (FMP)](https://www.veteransbenefitskb.com/fmp)  \- VA will pay for health care services, medications, and durable medical equipment for service connected conditions. For Veterans living or traveling abroad. |
 | Other | Free lifetime access to National parks & Federal recreational lands via the [America the Beautiful - National Parks & Federal Recreational Lands Access Pass](https://store.usgs.gov/access-pass)  The pass also grants other benefits such as [Discounts](https://store.usgs.gov/faq#Access-Pass)  on various services such as tours and camp sites.\*\*\* |
 | Other | Veterans with a service connected disability that results in them being unable to have biological children or requires them to use fertility treatments are eligible to be reimbursed $2,000 per child adopted. For full details click [HERE](https://www.law.cornell.edu/cfr/text/38/17.390)  |
-| Other | [Veterans Health Identification Card (VHIC)](https://veteransbenefitskb.com/vhic)  with "service connected" written on it. This grants the Veteran [access to military installations, class 6, commissary, exchange and MWR retail privileges](https://www.blogs.va.gov/VAntage/67974/commissary-military-service-exchange-mwr-access-extended-veterans-beginning-january/)  |
+| Other | [Veterans Health Identification Card (VHIC)](https://www.veteransbenefitskb.com/vhic)  with "service connected" written on it. This grants the Veteran [access to military installations, class 6, commissary, exchange and MWR retail privileges](https://www.blogs.va.gov/VAntage/67974/commissary-military-service-exchange-mwr-access-extended-veterans-beginning-january/)  |
 
-@This **DOES** include appointments made via the [Community care program](https://veteransbenefitskb.com/commcare)
+@This **DOES** include appointments made via the [Community care program](https://www.veteransbenefitskb.com/commcare)
 
 @@Veterans who are low-income may qualify for travel pay even for appointments for non service-connected disabilities.
 
@@ -20453,8 +20453,8 @@ Use of MWR activities primarily funded by appropriations are **NOT** authorized.
 | Employment | 10-Point Compensable Disability Preference (CP). Ten points are added to the passing examination score or rating. |
 | Employment | Eligibility for [Veteran Readiness and Employment (formerly called Vocational Rehabilitation and Employment (VR&E))](https://www.veteransbenefitskb.com/vre)  if the Veteran has a **SERIOUS** employment handicap **AND** did **NOT** receive a dishonorable discharge. |
 | Health Care | Priority group 6 for VA health care. |
-| Health Care | [Free hearing aids](https://veteransbenefitskb.com/hearing)  and associated components. |
-| Health Care | [Free _basic_ eyeglasses](https://veteransbenefitskb.com/vision)  from the VA. |
+| Health Care | [Free hearing aids](https://www.veteransbenefitskb.com/hearing)  and associated components. |
+| Health Care | [Free _basic_ eyeglasses](https://www.veteransbenefitskb.com/vision)  from the VA. |
 | Housing | [Exemption](https://www.veteransbenefitskb.com/housing)  from paying the funding fee for VA loans. |
 
 NOTE:
@@ -20475,7 +20475,7 @@ NOTE:
 | Health Care | Priority group 3 for VA health care. |
 | Health Care | **FREE**\\* VA health care **AND** [Community care](https://www.veteransbenefitskb.com/commcare)  for **BOTH** service **AND** non service-connected conditions (within the USA and its territories). |
 
-\*Non service connected medications and residential forms of [Long term care](https://veteransbenefitskb.com/elderlt)  are **NOT** free! You'll owe a [Small copay](https://www.va.gov/health-care/copay-rates/)  Additionally, dental is unavailable for those without a dental service-connected disability or meet other [Eligibility factors](https://veteransbenefitskb.com/dental)
+\*Non service connected medications and residential forms of [Long term care](https://www.veteransbenefitskb.com/elderlt)  are **NOT** free! You'll owe a [Small copay](https://www.va.gov/health-care/copay-rates/)  Additionally, dental is unavailable for those without a dental service-connected disability or meet other [Eligibility factors](https://www.veteransbenefitskb.com/dental)
 
 \*\*More than 3 visits to urgent care a year will result in owing a small copay.
 
@@ -20497,7 +20497,7 @@ NOTE:
 
 | Category | Description |
 | --- | --- |
-| Employment | Eligibility for [VR&E](https://veteransbenefitskb.com/vre)  if the Veteran has an employment handicap and did **NOT** receive a dishonorable discharge. |
+| Employment | Eligibility for [VR&E](https://www.veteransbenefitskb.com/vre)  if the Veteran has an employment handicap and did **NOT** receive a dishonorable discharge. |
 
 [Return to top](https://www.veteransbenefitskb.com/combinedbenefits#top)
 
@@ -20511,7 +20511,7 @@ NOTE:
 | --- | --- |
 | Employment | 10-Point 30 Percent Compensable Disability Preference (CPS) Ten points are added to the passing examination score or rating. |
 | Employment | [Disabled Veteran Leave](https://www.opm.gov/policy-data-oversight/pay-leave/leave-administration/fact-sheets/disabled-veteran-leave/)  \- Veterans working for the _Federal Government_ are eligible for up to **104 hours** of free leave. To be used when getting treatment/care for your service connected disabilities. Veterans have _1 year_ from the start of their employment to use this leave or when the Veteran establishes at least a 30% rating. Whichever is later, if hired after November 4, 2016. |
-| Financial | Can add [Eligible dependents](https://veteransbenefitskb.com/depends)  to their compensation benefits to get a higher payment. |
+| Financial | Can add [Eligible dependents](https://www.veteransbenefitskb.com/depends)  to their compensation benefits to get a higher payment. |
 | Financial | [VA travel pay via the Beneficiary Travel program](https://eauth.va.gov/accessva)  \- pays Veterans back for mileage and other travel expenses to and from approved health care appointments. |
 | Health care | Priority group 2 for VA health care. |
 
@@ -20525,7 +20525,7 @@ NOTE:
 
 | Category | Description |
 | --- | --- |
-| Financial | [Concurrent Retirement and Disability Pay (CRDP) \- Ability to draw military pension and VA disability at the same time.](https://veteransbenefitskb.com/medboard#crdp)  |
+| Financial | [Concurrent Retirement and Disability Pay (CRDP) \- Ability to draw military pension and VA disability at the same time.](https://www.veteransbenefitskb.com/medboard#crdp)  |
 | Health care | Priority group 1 for VA health care. |
 | Health care | **FREE** medications for **NON** service-connected disabilities! |
 
@@ -20533,7 +20533,7 @@ NOTE:
 
 | Category | Description |
 | --- | --- |
-| Financial | [Individual Unemployability \- Veteran **MUST** be have at least 1 service-connected disability rated at 60% (or higher) and be unable to hold down a steady job that supports you financially (known as substantially gainful employment) because of your service-connected disability. Odd jobs (marginal employment) dones not count against you.](https://veteransbenefitskb.com/tdiu)  |
+| Financial | [Individual Unemployability \- Veteran **MUST** be have at least 1 service-connected disability rated at 60% (or higher) and be unable to hold down a steady job that supports you financially (known as substantially gainful employment) because of your service-connected disability. Odd jobs (marginal employment) dones not count against you.](https://www.veteransbenefitskb.com/tdiu)  |
 
 <!-- Chunk 954/1206 | Heading: 50% | Words: 124 -->
 
@@ -20555,13 +20555,13 @@ NOTE:
 
 | Category | Description |
 | --- | --- |
-| Financial | [Individual Unemployability \- 2 or more service-connected disabilities with at least 1 rated at 40% or more disabling and a](https://veteransbenefitskb.com/tdiu)  [Combined rating of 70% or more and be unable to hold down a steady job that supports you financially (known as substantially gainful employment) because of your service-connected condition(s). Odd jobs (marginal employment) does not count against you.](https://veteransbenefitskb.com/vamath)  |
-| Health care | [Program of Comprehensive Assistance for Family Caregivers (PCAFC).](https://veteransbenefitskb.com/elderlt#pcafc)  |
-| Housing | Basic eligibility for [VA nursing homes.\*](https://veteransbenefitskb.com/elderlt)  |
+| Financial | [Individual Unemployability \- 2 or more service-connected disabilities with at least 1 rated at 40% or more disabling and a](https://www.veteransbenefitskb.com/tdiu)  [Combined rating of 70% or more and be unable to hold down a steady job that supports you financially (known as substantially gainful employment) because of your service-connected condition(s). Odd jobs (marginal employment) does not count against you.](https://www.veteransbenefitskb.com/vamath)  |
+| Health care | [Program of Comprehensive Assistance for Family Caregivers (PCAFC).](https://www.veteransbenefitskb.com/elderlt#pcafc)  |
+| Housing | Basic eligibility for [VA nursing homes.\*](https://www.veteransbenefitskb.com/elderlt)  |
 
 \*Each of the VA nursing home programs has their own admission and eligibility criteria. Nursing home care is available for Veterans who are enrolled in the VA health system who need nursing home care for service-connected disabilit(ities), **AND** for Veterans who have a 70% or higher service-connected disability.
 
-VA-provided nursing home care for all other honorably discharged Veterans is based on available resources. Eligibility for Veterans without service-connected disabilities is highly dependent upon their household income, i.e. countable income after medical expenses can generally not exceed the maximum annual rate of a [Veteran's Pension](https://veteransbenefitskb.com/pension)  payable to a Veteran in need of regular [Aid and attendance](https://veteransbenefitskb.com/aidattendance)
+VA-provided nursing home care for all other honorably discharged Veterans is based on available resources. Eligibility for Veterans without service-connected disabilities is highly dependent upon their household income, i.e. countable income after medical expenses can generally not exceed the maximum annual rate of a [Veteran's Pension](https://www.veteransbenefitskb.com/pension)  payable to a Veteran in need of regular [Aid and attendance](https://www.veteransbenefitskb.com/aidattendance)
 
 [Return to top](https://www.veteransbenefitskb.com/combinedbenefits#top)
 
@@ -20573,13 +20573,13 @@ VA-provided nursing home care for all other honorably discharged Veterans is bas
 
 | Category | Description |
 | --- | --- |
-| Death | [Dependency indemnity compensation (DIC) \- Death need **NOT** be related to a service-connected disability if additional conditions are met. See link for details.](https://veteransbenefitskb.com/survivorbenefits#dic)  |
+| Death | [Dependency indemnity compensation (DIC) \- Death need **NOT** be related to a service-connected disability if additional conditions are met. See link for details.](https://www.veteransbenefitskb.com/survivorbenefits#dic)  |
 | Education | Discharge of the Veteran's Federal student loans\* via the [Total and Permanent Disability (TPD) discharge program\*\*.](https://www.veteransbenefitskb.com/forgiveness)  |
 | Education | Nomination of children to a Service Academy: [Air Force,](https://www.academyadmissions.com/apply/nomination/)  [Army (West Point),](https://www.westpoint.edu/admissions/prospective-cadets/nomination-information)  [Navy.](https://www.usna.edu/Admissions/Apply/Children-of-POW-MIA-Deceased-Disabled-Vets.php)  |
 | Employment | [Derived Federal hiring preference for spouses and the Veteran's parents. See link for details.](https://www.opm.gov/fedshirevets/veteran-job-seekers/veteran-family-members/)  |
-| Health care | Free [Dental care through the VA (within the USA and its territories).](https://veteransbenefitskb.com/dental)  |
+| Health care | Free [Dental care through the VA (within the USA and its territories).](https://www.veteransbenefitskb.com/dental)  |
 | Other | [Additional MWR Access: Fitness, aquatics, and sports program, as well as libraries\*\*\*.](https://www.militaryonesource.mil/recreation-travel-shopping/recreation/fun-and-fitness/morale-welfare-and-recreation-programs-and-eligibility)  |
-| Other | [Disabled American Veteran 100% ID (DAV ID) \- See link for benefits.](https://veteransbenefitskb.com/dav)  |
+| Other | [Disabled American Veteran 100% ID (DAV ID) \- See link for benefits.](https://www.veteransbenefitskb.com/dav)  |
 
 \*This **DOES** include Parent Plus loans!
 
@@ -20589,7 +20589,7 @@ VA-provided nursing home care for all other honorably discharged Veterans is bas
 
 - Enter your library as the Department of Defense. It will ask you to provide your DoD ID number and date of birth to confirm eligibility.
 
-- For those who have a [VA ID card](https://veteransbenefitskb.com/vhic)  your member ID will be the same as your DoD ID number. Alternatively, your DoD ID is shown on your [DAV ID](https://veteransbenefitskb.com/dav)
+- For those who have a [VA ID card](https://www.veteransbenefitskb.com/vhic)  your member ID will be the same as your DoD ID number. Alternatively, your DoD ID is shown on your [DAV ID](https://www.veteransbenefitskb.com/dav)
 
 [Return to top](https://www.veteransbenefitskb.com/combinedbenefits#top)
 
@@ -20601,12 +20601,12 @@ VA-provided nursing home care for all other honorably discharged Veterans is bas
 
 | Category | Description |
 | --- | --- |
-| Education | Entitlement to Chapter 35 [Dependents Educational Assistance (DEA).](https://veteransbenefitskb.com/survivorbenefits#35)  |
+| Education | Entitlement to Chapter 35 [Dependents Educational Assistance (DEA).](https://www.veteransbenefitskb.com/survivorbenefits#35)  |
 | Financial | Removal of [10% penalty for early withdraw of 401K and IRAs.](https://www.irs.gov/retirement-plans/plan-participant-employee/retirement-topics-exceptions-to-tax-on-early-distributions)  |
-| Health care | Eligibility for Veteran's dependents to enroll in [CHAMPVA.](https://veteransbenefitskb.com/champva)  |
+| Health care | Eligibility for Veteran's dependents to enroll in [CHAMPVA.](https://www.veteransbenefitskb.com/champva)  |
 | Health care | During a medical emergency Veteran may freely use non-VA emergency rooms for any condition. Veteran does needs to submit a claim _within 2 years_ of the event to the VA for reimbursement. |
 | Social Security | [Expedited Processing of Veteranâ€™s disability claims.](https://www.ssa.gov/pubs/EN-05-10565.pdf)  |
-| Travel | [Free air travel on Space-A \- Allows travel in the Continental United States or directly between the CONUS and Alaska, Hawaii, Puerto Rico, the U.S. Virgin Islands, Guam, and American Samoa (Guam and American Samoa travelers may transit Hawaii or Alaska); or traveling within Alaska, Hawaii, Puerto Rico, or the U.S. Virgin Islands on flights operated by Air Mobility Command. This benefit **CAN** be used by the Veteran's dependents so long as the Veteran accompanies them.](https://veteransbenefitskb.com/space)  |
+| Travel | [Free air travel on Space-A \- Allows travel in the Continental United States or directly between the CONUS and Alaska, Hawaii, Puerto Rico, the U.S. Virgin Islands, Guam, and American Samoa (Guam and American Samoa travelers may transit Hawaii or Alaska); or traveling within Alaska, Hawaii, Puerto Rico, or the U.S. Virgin Islands on flights operated by Air Mobility Command. This benefit **CAN** be used by the Veteran's dependents so long as the Veteran accompanies them.](https://www.veteransbenefitskb.com/space)  |
 
 [Return to top](https://www.veteransbenefitskb.com/combinedbenefits#top)
 
@@ -20618,7 +20618,7 @@ VA-provided nursing home care for all other honorably discharged Veterans is bas
 
 Some states offer Veterans and their dependents free tuition. Some are based upon having a certain disability percentage or other requirements.
 
-- Click [HERE](https://veteransbenefitskb.com/free_tuition)  to see the list.
+- Click [HERE](https://www.veteransbenefitskb.com/free_tuition)  to see the list.
 
 [Return to top](https://www.veteransbenefitskb.com/combinedbenefits#top)
 
@@ -20630,7 +20630,7 @@ Some states offer Veterans and their dependents free tuition. Some are based upo
 
 Some States have been gracious enough to grant Veterans either a partial or full exemption from their property taxes. This can end up saving Veterans thousands of dollars a year!
 
-- Click [HERE](https://veteransbenefitskb.com/exempt)  to see the list.
+- Click [HERE](https://www.veteransbenefitskb.com/exempt)  to see the list.
 
 [Return to top](https://www.veteransbenefitskb.com/combinedbenefits#top)
 
@@ -20642,10 +20642,10 @@ Some States have been gracious enough to grant Veterans either a partial or full
 
 | Category | Description |
 | --- | --- |
-| Automobile | [VA automobile allowance and adaptive equipment \- A one time lump sum to help you buy a specially equipped vehicle.](https://veteransbenefitskb.com/auto)  |
+| Automobile | [VA automobile allowance and adaptive equipment \- A one time lump sum to help you buy a specially equipped vehicle.](https://www.veteransbenefitskb.com/auto)  |
 | Housing | [Home Improvement and Structural Alterations Program (HISA) \- To make medically necessary improvements and structural alterations to Veterans primary residence.](https://www.prosthetics.va.gov/psas/hisa2.asp)  |
-| Housing | [Specially Adapted Housing grant (SAH) \- To buy, build, or change your permanent home (a home you plan to live in for a long time). Grant may be used up to 3 times.](https://veteransbenefitskb.com/housing#sah)  |
-| Housing | [Special Home Adaptation (SHA) grant \- To buy, build, or change your permanent home (a home you plan to live in for a long time). Grant may be used up to 3 times.](https://veteransbenefitskb.com/housing#sah)  |
+| Housing | [Specially Adapted Housing grant (SAH) \- To buy, build, or change your permanent home (a home you plan to live in for a long time). Grant may be used up to 3 times.](https://www.veteransbenefitskb.com/housing#sah)  |
+| Housing | [Special Home Adaptation (SHA) grant \- To buy, build, or change your permanent home (a home you plan to live in for a long time). Grant may be used up to 3 times.](https://www.veteransbenefitskb.com/housing#sah)  |
 | Housing | [Temporary Residence Adaptation (TRA) grant \- Are living temporarily in a family memberâ€™s home that needs changes to meet your needs. (To use a TRA grant, you don't have to own the house).](https://www.va.gov/housing-assistance/disability-housing-grants/)  |
 
 [Return to top](https://www.veteransbenefitskb.com/combinedbenefits#top)
@@ -20714,35 +20714,35 @@ Open Menu
 
 Featured
 
-[\> Master Condition List](https://veteransbenefitskb.com/master)
+[\> Master Condition List](https://www.veteransbenefitskb.com/master)
 
-[\> Federal Benefits List by Combined Ratings](https://veteransbenefitskb.com/combinedbenefits)
+[\> Federal Benefits List by Combined Ratings](https://www.veteransbenefitskb.com/combinedbenefits)
 
-[\> Insider Insight into VBA Claim Processing](https://veteransbenefitskb.com/insight)
+[\> Insider Insight into VBA Claim Processing](https://www.veteransbenefitskb.com/insight)
 
-[\> Rating Schedule Index](https://veteransbenefitskb.com/ratingsindex)
+[\> Rating Schedule Index](https://www.veteransbenefitskb.com/ratingsindex)
 
-[\> Filing a VA Disability Claim](https://veteransbenefitskb.com/vaclaim)
+[\> Filing a VA Disability Claim](https://www.veteransbenefitskb.com/vaclaim)
 
-[\> Filing an Appeal](https://veteransbenefitskb.com/appeals)
+[\> Filing an Appeal](https://www.veteransbenefitskb.com/appeals)
 
 * * *
 
 [Categories](https://www.veteransbenefitskb.com/ratingsindex)
 
-\> [Death/Survivor Benefits](https://veteransbenefitskb.com/#ds)
+\> [Death/Survivor Benefits](https://www.veteransbenefitskb.com/#ds)
 
-\> [Education & Employment](https://veteransbenefitskb.com/#ee)
+\> [Education & Employment](https://www.veteransbenefitskb.com/#ee)
 
-\> [Health care](https://veteransbenefitskb.com/#healthcare)
+\> [Health care](https://www.veteransbenefitskb.com/#healthcare)
 
-\> [Housing](https://veteransbenefitskb.com/#housing)
+\> [Housing](https://www.veteransbenefitskb.com/#housing)
 
-\> [Miscellaneous](https://veteransbenefitskb.com/#misc)
+\> [Miscellaneous](https://www.veteransbenefitskb.com/#misc)
 
-\> [VA Disability Compensation](https://veteransbenefitskb.com/#va)
+\> [VA Disability Compensation](https://www.veteransbenefitskb.com/#va)
 
-\> [VA Pension](https://veteransbenefitskb.com/#pension)
+\> [VA Pension](https://www.veteransbenefitskb.com/#pension)
 
 The Veterans Benefits Administration (VBA) uses the [Schedule For Rating Disabilities](https://www.ecfr.gov/current/title-38/chapter-I/part-4)  in conjunction with the [M21-1 Adjudication Procedures Manual](https://www.knowva.ebenefits.va.gov/system/templates/selfservice/va_ssnew/help/customer/locale/en-US/portal/554400000001018/topic/554400000004049/M21-1-Adjudication-Procedures-Manual)  to determine what disability evaluation to award Veterans depending upon the severity of their disability and any other applicable policies and regulations.
 
@@ -20764,9 +20764,9 @@ The Veterans Benefits Administration (VBA) uses the [Schedule For Rating Disabil
 
 Due to the sheer size of the schedule, this page has been broken up into major section and then broken down further into the various sub-sections.
 
-Alternatively, if you would like to search the rating schedule by condition name click [HERE](https://veteransbenefitskb.com/master)  to view the Master Condition List; which links conditions directly to how it is rated in the schedule.
+Alternatively, if you would like to search the rating schedule by condition name click [HERE](https://www.veteransbenefitskb.com/master)  to view the Master Condition List; which links conditions directly to how it is rated in the schedule.
 
-- Advanced users can also search by VA Diagnostic Codes by clicking [HERE](https://veteransbenefitskb.com/diagnosticcodes)
+- Advanced users can also search by VA Diagnostic Codes by clicking [HERE](https://www.veteransbenefitskb.com/diagnosticcodes)
 
 <!-- Chunk 965/1206 | Heading: Organization | Words: 74 -->
 
@@ -20776,22 +20776,22 @@ Alternatively, if you would like to search the rating schedule by condition name
 
 | Major Section | Description |
 | --- | --- |
-| [The Cardiovascular System](https://veteransbenefitskb.com/heartsystem)  | Heart, blood, vein, and artery issues |
-| [Conditions that the VA will **NOT** Rate](https://veteransbenefitskb.com/norate)  | Things the VA will not service connect/rate |
-| [Dental and Oral](https://veteransbenefitskb.com/mouthsystem)  | Jaw, jaw joint, palates, and teeth |
-| [The Digestive System](https://veteransbenefitskb.com/digsystem)  | Abdomen & peritoneum, cancers & tumors, esophagus, gallbladder, hepatitis, hernias, and intestines |
-| [The Endocrine System](https://veteransbenefitskb.com/endsystem)  | Adrenal conditions, cancers & tumors, diabetes, parathyroid conditions, pituitary conditions, pluriglandular syndrome, and thyroid conditions |
-| [The Female Reproductive System](https://veteransbenefitskb.com/femalesystem)  | Breasts, cancers & tumors, endometriosis, fallopian tubes, fistulas, ovaries, uterus, vagina, vulva, and cervix |
-| [The Genitourinary System](https://veteransbenefitskb.com/gensystem)  | Cancers & tumors, renal conditions, penis & testis, tuberculosis, urinary conditions |
-| The Hematologic and Lymphatic Systems | [Blood and](https://veteransbenefitskb.com/blood)  [Breasts](https://veteransbenefitskb.com/femalesystem#breasts)  (integrated with other systems) |
-| [Infectious Diseases and Immune Disorders](https://veteransbenefitskb.com/infect)  | Self explanatory |
-| [Mental Disorders](https://veteransbenefitskb.com/mental)  | Anxiety, eating disorders, MDD, MST, PTSD, etc. |
-| [The Musculoskeletal System](https://veteransbenefitskb.com/msindex)  | Bones, tendons, joints, cancers & tumors, and muscle issues |
-| [The Nervous System](https://veteransbenefitskb.com/nervesystem)  | Nerves of the body. Also contains traumatic brain injuries (TBI) |
-| [Nutritional Deficiencies](https://veteransbenefitskb.com/nutritional)  | Bacterial infections, cancers & tumors, fungal infections, lung diseases, nose & sinuses, sleep apnea, throat, and tuberculosis, etc. |
-| [The Respiratory System](https://veteransbenefitskb.com/airsystem)  | Bacterial infections, cancers & tumors, fungal infections, lung diseases, nose & sinuses, sleep apnea, throat, and tuberculosis, etc. |
-| [The Senses](https://veteransbenefitskb.com/senses)  | Your traditional five senses: sight, sound, taste, touch, and smell. |
-| [The Skin](https://veteransbenefitskb.com/skin)  | Acne & chloracne, cancers & tumors, pores & hair, psoriasis, dermatitis & eczema, hives, keratin diseases, lupus, scars, skin discoloration, and skin infections, etc. |
+| [The Cardiovascular System](https://www.veteransbenefitskb.com/heartsystem)  | Heart, blood, vein, and artery issues |
+| [Conditions that the VA will **NOT** Rate](https://www.veteransbenefitskb.com/norate)  | Things the VA will not service connect/rate |
+| [Dental and Oral](https://www.veteransbenefitskb.com/mouthsystem)  | Jaw, jaw joint, palates, and teeth |
+| [The Digestive System](https://www.veteransbenefitskb.com/digsystem)  | Abdomen & peritoneum, cancers & tumors, esophagus, gallbladder, hepatitis, hernias, and intestines |
+| [The Endocrine System](https://www.veteransbenefitskb.com/endsystem)  | Adrenal conditions, cancers & tumors, diabetes, parathyroid conditions, pituitary conditions, pluriglandular syndrome, and thyroid conditions |
+| [The Female Reproductive System](https://www.veteransbenefitskb.com/femalesystem)  | Breasts, cancers & tumors, endometriosis, fallopian tubes, fistulas, ovaries, uterus, vagina, vulva, and cervix |
+| [The Genitourinary System](https://www.veteransbenefitskb.com/gensystem)  | Cancers & tumors, renal conditions, penis & testis, tuberculosis, urinary conditions |
+| The Hematologic and Lymphatic Systems | [Blood and](https://www.veteransbenefitskb.com/blood)  [Breasts](https://www.veteransbenefitskb.com/femalesystem#breasts)  (integrated with other systems) |
+| [Infectious Diseases and Immune Disorders](https://www.veteransbenefitskb.com/infect)  | Self explanatory |
+| [Mental Disorders](https://www.veteransbenefitskb.com/mental)  | Anxiety, eating disorders, MDD, MST, PTSD, etc. |
+| [The Musculoskeletal System](https://www.veteransbenefitskb.com/msindex)  | Bones, tendons, joints, cancers & tumors, and muscle issues |
+| [The Nervous System](https://www.veteransbenefitskb.com/nervesystem)  | Nerves of the body. Also contains traumatic brain injuries (TBI) |
+| [Nutritional Deficiencies](https://www.veteransbenefitskb.com/nutritional)  | Bacterial infections, cancers & tumors, fungal infections, lung diseases, nose & sinuses, sleep apnea, throat, and tuberculosis, etc. |
+| [The Respiratory System](https://www.veteransbenefitskb.com/airsystem)  | Bacterial infections, cancers & tumors, fungal infections, lung diseases, nose & sinuses, sleep apnea, throat, and tuberculosis, etc. |
+| [The Senses](https://www.veteransbenefitskb.com/senses)  | Your traditional five senses: sight, sound, taste, touch, and smell. |
+| [The Skin](https://www.veteransbenefitskb.com/skin)  | Acne & chloracne, cancers & tumors, pores & hair, psoriasis, dermatitis & eczema, hives, keratin diseases, lupus, scars, skin discoloration, and skin infections, etc. |
 
 [Return to top](https://www.veteransbenefitskb.com/ratingsindex#top)
 
@@ -20836,7 +20836,7 @@ Veterans who are hospitalized at a VA hospital or at an approved hospital for **
 
 This 100% rating will be paid to the end of the month that the Veteran was discharged in and the Veteran will have their evaluation returned to what it was previously\*.
 
-\*Unless the hospitalization lasted at least 6 months due to a [Mental disorder](https://veteransbenefitskb.com/mental)  In such case, the Veteran will continue to receive the 100% rating for 6 months, at which point the Veteran will receive a [Reevaluation](https://veteransbenefitskb.com/cnp)  to determine their current level of disability.
+\*Unless the hospitalization lasted at least 6 months due to a [Mental disorder](https://www.veteransbenefitskb.com/mental)  In such case, the Veteran will continue to receive the 100% rating for 6 months, at which point the Veteran will receive a [Reevaluation](https://www.veteransbenefitskb.com/cnp)  to determine their current level of disability.
 
 **IMPORTANT NOTES:**
 
@@ -20855,7 +20855,7 @@ NOTE:
 
 - [VHAâ€™s Mental Health Residential Rehabilitation Treatment Program (MH RRTP)](https://www.mentalhealth.va.gov/get-help/va-residential-rehabilitation/index.asp)  is a type of domiciliary care.
 
-- Depending upon the Veteran's other ratings they may become eligible for [SMC S](https://veteransbenefitskb.com/smc#s)  during their period of convalescence.
+- Depending upon the Veteran's other ratings they may become eligible for [SMC S](https://www.veteransbenefitskb.com/smc#s)  during their period of convalescence.
 
 * * *
 
@@ -20865,7 +20865,7 @@ NOTE:
 
 ### Filing for Temporary 100%
 
-The Veteran can seek the aid of a [VSO](https://veteransbenefitskb.com/vso)  or file online on VA.gov. If you file yourself, you can file it as a new claim â€œtemporary 100% due to hospitalizationâ€ and include evidence of the hospitalization or give the VA a [VA Form 21-4142/21-4142a](https://www.vba.va.gov/pubs/forms/vba-21-4142-are.pdf)  to obtain the records for you.
+The Veteran can seek the aid of a [VSO](https://www.veteransbenefitskb.com/vso)  or file online on VA.gov. If you file yourself, you can file it as a new claim â€œtemporary 100% due to hospitalizationâ€ and include evidence of the hospitalization or give the VA a [VA Form 21-4142/21-4142a](https://www.vba.va.gov/pubs/forms/vba-21-4142-are.pdf)  to obtain the records for you.
 
 In order for the VA to grant the temporary 100% the medical evidence **MUST** state:
 
@@ -20905,11 +20905,11 @@ The surgery or procedure **MUST** be done on something that is _service-connecte
 
 - Immobilization by cast, without surgery, of one major joint or more.
 
-After the convalescent period end the Veteran's disability _may_ be [Reevaluated](https://veteransbenefitskb.com/cnp)  **UNLESS**, the schedule dictates a minimum rating the Veteran.
+After the convalescent period end the Veteran's disability _may_ be [Reevaluated](https://www.veteransbenefitskb.com/cnp)  **UNLESS**, the schedule dictates a minimum rating the Veteran.
 
 NOTES:
 
-- Depending upon the Veteran's other ratings they may become eligible for [SMC S](https://veteransbenefitskb.com/smc#s)  during their period of convalescence.
+- Depending upon the Veteran's other ratings they may become eligible for [SMC S](https://www.veteransbenefitskb.com/smc#s)  during their period of convalescence.
 
 - If the rating schedule specifies a Veteran will get say 6, 12, etc. months of temporary 100% rate, the Veteran will get an additional month of 100%. So the Veteran will in effect have 7, 13, etc. months of temporary 100%.
 
@@ -20925,7 +20925,7 @@ NOTES:
 
 ### Filing for Temporary 100%
 
-The Veteran can seek the aid of a [VSO](https://veteransbenefitskb.com/vso)  or file online on VA.gov. If you file yourself, you can file it as a new claim â€œtemporary 100% due to convalescenceâ€ and include evidence of the convalescence or give the VA a [VA Form 21-4142/21-4142a](https://www.vba.va.gov/pubs/forms/vba-21-4142-are.pdf)  to obtain the records for you.
+The Veteran can seek the aid of a [VSO](https://www.veteransbenefitskb.com/vso)  or file online on VA.gov. If you file yourself, you can file it as a new claim â€œtemporary 100% due to convalescenceâ€ and include evidence of the convalescence or give the VA a [VA Form 21-4142/21-4142a](https://www.vba.va.gov/pubs/forms/vba-21-4142-are.pdf)  to obtain the records for you.
 
 In order for the VA to grant the temporary 100% the medical evidence **MUST** show:
 
@@ -20955,13 +20955,13 @@ Medical evidence **MUST** show (when related to surgery):
 
 ## **Amputation Rule (38 CFR 4.68)**
 
-A Veteran **CANNOT** get a [Combined VA rating](https://veteransbenefitskb.com/vamath)  higher for _musculoskeletal_ conditions for a limb than if it was amputated. In the rare cases in which the amputation rule is applied, the conditions that â€˜spill overâ€™ the maximum combined evaluation will be disabled and will **NOT** be applied to your combined disability evaluation!
+A Veteran **CANNOT** get a [Combined VA rating](https://www.veteransbenefitskb.com/vamath)  higher for _musculoskeletal_ conditions for a limb than if it was amputated. In the rare cases in which the amputation rule is applied, the conditions that â€˜spill overâ€™ the maximum combined evaluation will be disabled and will **NOT** be applied to your combined disability evaluation!
 
 For example:
 
 - If a Veteran had their right dominant arm amputated above the elbow they would be awarded a rating of 80%.
 
-- A Veteran who had no amputation could **NOT** have a combined VA rating higher than 80% for musculoskeletal conditions that involve their dominant [Elbow/forearm](https://veteransbenefitskb.com/elbowforearm)  [Wrist](https://veteransbenefitskb.com/wrist)  and/or [Hand](https://veteransbenefitskb.com/hand)
+- A Veteran who had no amputation could **NOT** have a combined VA rating higher than 80% for musculoskeletal conditions that involve their dominant [Elbow/forearm](https://www.veteransbenefitskb.com/elbowforearm)  [Wrist](https://www.veteransbenefitskb.com/wrist)  and/or [Hand](https://www.veteransbenefitskb.com/hand)
 
 **IMPORTANT NOTES:**
 
@@ -20991,11 +20991,11 @@ An example would be a Veteran diagnosed with 2 ankle conditions that result in r
 
 Newer raters are known to sometimes improperly rate disabilities. As such, sometimes they will rate something separately that they shouldn't. The following are common pyramiding errors. If you have active ratings for any of the following two disabilities. You should contact a VSO **BEFORE** you file any new claims or increases, as the VA may identify the error(s) and fix them - which could result in you ending up with a lower rating than when you started!
 
-- [Sleep apnea](https://veteransbenefitskb.com/airsystem#6847)  & [Asthma](https://veteransbenefitskb.com/airsystem#6602)
+- [Sleep apnea](https://www.veteransbenefitskb.com/airsystem#6847)  & [Asthma](https://www.veteransbenefitskb.com/airsystem#6602)
 
-- [Median nerve](https://veteransbenefitskb.com/upnerves#8515)  & [Ulnar nerve](https://veteransbenefitskb.com/upnerves#8516)  (same arm)
+- [Median nerve](https://www.veteransbenefitskb.com/upnerves#8515)  & [Ulnar nerve](https://www.veteransbenefitskb.com/upnerves#8516)  (same arm)
 
-- [PTSD](https://veteransbenefitskb.com/mental#9411)  & [TBI](https://veteransbenefitskb.com/cns#8045)
+- [PTSD](https://www.veteransbenefitskb.com/mental#9411)  & [TBI](https://www.veteransbenefitskb.com/cns#8045)
 
 \*Unless the examiner _can_ differentiate the symptoms of both; then the rater needs to give the Veteran a separate rating for each.
 
@@ -21033,23 +21033,23 @@ Veterans who have held their ratings for the following number of _continuous_ ye
 
 ### 5 Years - Reductions (38 CFR 3.344)
 
-A Veteran's rating _generally_ cannot be reduced based upon a single [C&P exam](https://veteransbenefitskb.com/cnp)  that shows the Veteran's disability has improved. This is because **CONTINUOUS** improvement **MUST** be shown when the evaluation has been held for at least 5 _continuous_ years.
+A Veteran's rating _generally_ cannot be reduced based upon a single [C&P exam](https://www.veteransbenefitskb.com/cnp)  that shows the Veteran's disability has improved. This is because **CONTINUOUS** improvement **MUST** be shown when the evaluation has been held for at least 5 _continuous_ years.
 
-In **MOST** cases it will take another exam showing the condition is still improved before the Veteran **WILL** receive a [Proposal for reduction](https://veteransbenefitskb.com/reduction)  (if the reduction reduces your [Combined](https://veteransbenefitskb.com/vamath)  evaluation; otherwise the condition will be reduced without notice).
+In **MOST** cases it will take another exam showing the condition is still improved before the Veteran **WILL** receive a [Proposal for reduction](https://www.veteransbenefitskb.com/reduction)  (if the reduction reduces your [Combined](https://www.veteransbenefitskb.com/vamath)  evaluation; otherwise the condition will be reduced without notice).
 
 Practical example to be reduced based on **ONE EXAM**:
 
-- The condition is rated on lab results like [Kidney](https://veteransbenefitskb.com/gensystem)  or [Lung function](https://veteransbenefitskb.com/airsystem)  and the VA _happens_ to have lab results that show improvementâ€¦ whelp if _you filed an increase_ for that condition for some reason - you should **EXPECT** a reduction/proposal based if the VA does another lab test because of your claim and it confirms the improvement!
+- The condition is rated on lab results like [Kidney](https://www.veteransbenefitskb.com/gensystem)  or [Lung function](https://www.veteransbenefitskb.com/airsystem)  and the VA _happens_ to have lab results that show improvementâ€¦ whelp if _you filed an increase_ for that condition for some reason - you should **EXPECT** a reduction/proposal based if the VA does another lab test because of your claim and it confirms the improvement!
 
 **IMPORTANT NOTES:**
 
 - This protection does **NOT** reset after 5 years! Meaning if you had an exam showing improvement on year 6 and then another exam shows improvement at year 16, the VA **CAN** still come for blood!
 
-- Ratings for diseases subject to temporary or episodic improvement, e.g., [Manic depressive](https://veteransbenefitskb.com/mental#9433)  or [Other psychotic reaction](https://veteransbenefitskb.com/mental#9411)  [Epilepsy](https://veteransbenefitskb.com/cns#seizure)  [Psychoneurotic reaction](https://veteransbenefitskb.com/mental#9400)  [Arteriosclerotic heart disease](https://veteransbenefitskb.com/heart#7005)  [Bronchial asthma](https://veteransbenefitskb.com/airsystem#6602)  [Gastric or duodenal ulcer](https://veteransbenefitskb.com/digsystem#7304)  many [Skin diseases](https://veteransbenefitskb.com/skin)  etc., will **NOT** be reduced based off of **ONE** examination showing improvement ( **EXCEPT** when all the evidence of record clearly shows that sustained improvement has been shown).
+- Ratings for diseases subject to temporary or episodic improvement, e.g., [Manic depressive](https://www.veteransbenefitskb.com/mental#9433)  or [Other psychotic reaction](https://www.veteransbenefitskb.com/mental#9411)  [Epilepsy](https://www.veteransbenefitskb.com/cns#seizure)  [Psychoneurotic reaction](https://www.veteransbenefitskb.com/mental#9400)  [Arteriosclerotic heart disease](https://www.veteransbenefitskb.com/heart#7005)  [Bronchial asthma](https://www.veteransbenefitskb.com/airsystem#6602)  [Gastric or duodenal ulcer](https://www.veteransbenefitskb.com/digsystem#7304)  many [Skin diseases](https://www.veteransbenefitskb.com/skin)  etc., will **NOT** be reduced based off of **ONE** examination showing improvement ( **EXCEPT** when all the evidence of record clearly shows that sustained improvement has been shown).
 
 - Conditions granted temporary 100% are **NOT** protected by this regulation!
 
-- Ratings for conditions which become comparatively symptom free (findings absent) after prolonged rest, e.g. residuals of [Phlebitis](https://veteransbenefitskb.com/bloodtubes#7121)  arteriosclerotic heart disease, etc., will **NOT** be reduced on examinations reflecting the improvement is _due_ to _bed rest_.
+- Ratings for conditions which become comparatively symptom free (findings absent) after prolonged rest, e.g. residuals of [Phlebitis](https://www.veteransbenefitskb.com/bloodtubes#7121)  arteriosclerotic heart disease, etc., will **NOT** be reduced on examinations reflecting the improvement is _due_ to _bed rest_.
 
 - **RATER COMMENT**: Yeahâ€¦ soâ€¦ if you _did not_ claim an increase for something unrelated to your claim and there is evidence of improvement - We ainâ€™t gonna go out of our ways to reduce you for that unclaimed/unrelated condition.
 
@@ -21134,9 +21134,9 @@ In the event that a Veteran has a non-service-connected **OR** service-connected
 
 In the event that the rating schedule changes, the Veteran will be grandfathered under the older schedule.
 
-Do know that in the event it is found that the Veteran has improved under their grandfathered schedule **AND** the new schedule, the Veteran will then have their evaluation reduced/ [Proposed to be reduced](https://veteransbenefitskb.com/reduction)  and rated per the current rating schedule (assuming they do **NOT** have a protected evaluation).
+Do know that in the event it is found that the Veteran has improved under their grandfathered schedule **AND** the new schedule, the Veteran will then have their evaluation reduced/ [Proposed to be reduced](https://www.veteransbenefitskb.com/reduction)  and rated per the current rating schedule (assuming they do **NOT** have a protected evaluation).
 
-If over the life of a claim the schedule changes, the Veteran's condition will be evaluated based upon the schedule in force on the [Effective date](https://veteransbenefitskb.com/edate)  of the grant. **IF** the new schedule is better then a [Stag](https://veteransbenefitskb.com/edate#staged)  [ed](https://www.reddit.com/r/VeteranBenefits/wiki/edate/#wiki_staged_effective_dates)  evaluation will be given, from the date of the schedule change.
+If over the life of a claim the schedule changes, the Veteran's condition will be evaluated based upon the schedule in force on the [Effective date](https://www.veteransbenefitskb.com/edate)  of the grant. **IF** the new schedule is better then a [Stag](https://www.veteransbenefitskb.com/edate#staged)  [ed](https://www.reddit.com/r/VeteranBenefits/wiki/edate/#wiki_staged_effective_dates)  evaluation will be given, from the date of the schedule change.
 
 * * *
 
@@ -21158,9 +21158,9 @@ What being aged over 55 or more _does_ do is:
 
 - Cancers; and
 
-- Infectious diseases such as [Tuberculous](https://veteransbenefitskb.com/infect#6730)
+- Infectious diseases such as [Tuberculous](https://www.veteransbenefitskb.com/infect#6730)
 
-So, if the Veteran decides to file a claim on a [Secondary basis](https://veteransbenefitskb.com/claimtype#secondary)  The VA _could possibly_ reevaluate the primary condition, and if appropriate - reduce the rating of the primary condition!
+So, if the Veteran decides to file a claim on a [Secondary basis](https://www.veteransbenefitskb.com/claimtype#secondary)  The VA _could possibly_ reevaluate the primary condition, and if appropriate - reduce the rating of the primary condition!
 
 [Return to top](https://www.veteransbenefitskb.com/ratingsindex#top)
 
@@ -21185,7 +21185,7 @@ Incarcerated Veterans have their pay reduced!
 - Rated 20% or higher:
 
 - Veteran will be paid at the 10% rate.
-- Rated 10%, paid at 10%, or getting **ONLY** [Special Monthly Compensations (SMC) K](https://veteransbenefitskb.com/smc)
+- Rated 10%, paid at 10%, or getting **ONLY** [Special Monthly Compensations (SMC) K](https://www.veteransbenefitskb.com/smc)
 
 - Veteran will be paid **HALF** the rate of 10%.
 - [VA Pension](https://www.veteransbenefitskb.com/pension)  (reduction may be due to either a felony conviction **_OR_** _misdemeanor)_:
@@ -21238,7 +21238,7 @@ For existing evaluations:
 - If the new schedule just so happens to be better, the Veteran would need to file for an increase.
 - If the Veteran files for an increase, they will be evaluated based upon the **NEW** schedule.
 
-- In the event it is found that the Veteran has improved under both the new **AND** the grandfathered schedule, the Veteran will then have their rating reduced and rated per the current rating schedule (if their evaluation is not [Protected](https://veteransbenefitskb.com/#protection)
+- In the event it is found that the Veteran has improved under both the new **AND** the grandfathered schedule, the Veteran will then have their rating reduced and rated per the current rating schedule (if their evaluation is not [Protected](https://www.veteransbenefitskb.com/#protection)
 
 For ongoing claims/appeals during a new schedule becoming active:
 
@@ -21270,7 +21270,7 @@ For ongoing claims/appeals during a new schedule becoming active:
 
 - Once treatment ends, the Veteran will be rated\* upon where their symptoms settle at.
 
-- If after surgery you qualify for a [Convalescent rating](https://veteransbenefitskb.com/30)  of temporary 100%, the Veteran will be [Reevaluated](https://veteransbenefitskb.com/cnp)  (unless the schedules lists a minimum evaluation).
+- If after surgery you qualify for a [Convalescent rating](https://www.veteransbenefitskb.com/30)  of temporary 100%, the Veteran will be [Reevaluated](https://www.veteransbenefitskb.com/cnp)  (unless the schedules lists a minimum evaluation).
 
 \*If and when the Veteran has a reevaluation.
 
@@ -21404,39 +21404,39 @@ Open Menu
 
 Featured
 
-[\> Master Condition List](https://veteransbenefitskb.com/master)
+[\> Master Condition List](https://www.veteransbenefitskb.com/master)
 
-[\> Federal Benefits List by Combined Ratings](https://veteransbenefitskb.com/combinedbenefits)
+[\> Federal Benefits List by Combined Ratings](https://www.veteransbenefitskb.com/combinedbenefits)
 
-[\> Insider Insight into VBA Claim Processing](https://veteransbenefitskb.com/insight)
+[\> Insider Insight into VBA Claim Processing](https://www.veteransbenefitskb.com/insight)
 
-[\> Rating Schedule Index](https://veteransbenefitskb.com/ratingsindex)
+[\> Rating Schedule Index](https://www.veteransbenefitskb.com/ratingsindex)
 
-[\> Filing a VA Disability Claim](https://veteransbenefitskb.com/vaclaim)
+[\> Filing a VA Disability Claim](https://www.veteransbenefitskb.com/vaclaim)
 
-[\> Filing an Appeal](https://veteransbenefitskb.com/appeals)
+[\> Filing an Appeal](https://www.veteransbenefitskb.com/appeals)
 
 * * *
 
 [Categories](https://www.veteransbenefitskb.com/vaclaim)
 
-> [Death/Survivor Benefits](https://veteransbenefitskb.com/#ds)
+> [Death/Survivor Benefits](https://www.veteransbenefitskb.com/#ds)
 
-\> [Education &](https://veteransbenefitskb.com/#ee)  [Employment](https://veteransbenefitskb.com/#ee)
+\> [Education &](https://www.veteransbenefitskb.com/#ee)  [Employment](https://www.veteransbenefitskb.com/#ee)
 
-\> [Health care](https://veteransbenefitskb.com/#healthcare)
+\> [Health care](https://www.veteransbenefitskb.com/#healthcare)
 
-\> [Housing](https://veteransbenefitskb.com/#housing)
+\> [Housing](https://www.veteransbenefitskb.com/#housing)
 
-\> [Miscellaneous](https://veteransbenefitskb.com/#misc)
+\> [Miscellaneous](https://www.veteransbenefitskb.com/#misc)
 
-\> [VA Disability Compensation](https://veteransbenefitskb.com/#va)
+\> [VA Disability Compensation](https://www.veteransbenefitskb.com/#va)
 
-\> [VA Pension](https://veteransbenefitskb.com/#pension)
+\> [VA Pension](https://www.veteransbenefitskb.com/#pension)
 
-Hello and welcome both currently serving Servicemembers and Veterans. This page is about helping you prepare and submit a claim for disability compensation. Alternatively, you can seek out a [Veterans Service Officer (VSO)](https://veteransbenefitskb.com/vso)  to assist you with submitting a claim.
+Hello and welcome both currently serving Servicemembers and Veterans. This page is about helping you prepare and submit a claim for disability compensation. Alternatively, you can seek out a [Veterans Service Officer (VSO)](https://www.veteransbenefitskb.com/vso)  to assist you with submitting a claim.
 
-- If you just want a quick and dirty step-by-step guide click [HERE](https://veteransbenefitskb.com/dirty)
+- If you just want a quick and dirty step-by-step guide click [HERE](https://www.veteransbenefitskb.com/dirty)
 
 * * *
 
@@ -21446,7 +21446,7 @@ Hello and welcome both currently serving Servicemembers and Veterans. This page 
 
 ## **VA Disability**
 
-VA disability is a monthly tax-free monetary benefit that ranges from over $100 to over **$10,000** in the case of [Special Monthly Compensation](https://veteransbenefitskb.com/smc)
+VA disability is a monthly tax-free monetary benefit that ranges from over $100 to over **$10,000** in the case of [Special Monthly Compensation](https://www.veteransbenefitskb.com/smc)
 
 * * *
 
@@ -21468,7 +21468,7 @@ Basic eligibility requirements for VA disability are:
 
 \*\*Even if your character of discharge was not Honorable, you _may_ still be eligible.
 
-- For more information click [HERE](https://veteransbenefitskb.com/upgrade)
+- For more information click [HERE](https://www.veteransbenefitskb.com/upgrade)
 
 <!-- Chunk 995/1206 | Heading: Eligibility | Words: 115 -->
 
@@ -21476,13 +21476,13 @@ Basic eligibility requirements for VA disability are:
 
 ## **Active Duty Servicemembers**
 
-[Benefits Delivery at Discharge (BDD)](https://veteransbenefitskb.com/bdd)  \- If you have 90-180 days before separation you may file a BDD. Ideally, this will allow you to get a claims decision the day after you separate.
+[Benefits Delivery at Discharge (BDD)](https://www.veteransbenefitskb.com/bdd)  \- If you have 90-180 days before separation you may file a BDD. Ideally, this will allow you to get a claims decision the day after you separate.
 
 If you have less than 90 days before separation you can and should still file a claim!
 
 To file a claim yourself, you can go to [VA.gov](https://www.va.gov/disability/how-to-file-claim/)
 
-For those undergoing a Medboard click [HERE](https://veteransbenefitskb.com/medboard)
+For those undergoing a Medboard click [HERE](https://www.veteransbenefitskb.com/medboard)
 
 **IMPORTANT NOTES:**
 
@@ -21496,7 +21496,7 @@ For those undergoing a Medboard click [HERE](https://veteransbenefitskb.com/medb
 
 - You will **NOT** be paid mileage for your visits to C&P exams (Those who have separated **WILL** be paid mileage to attend C&P exams).
 
-- If you need health care while on terminal leave you **CAN** use your [TRICARE](https://veteransbenefitskb.com/tricare)  health insurance.
+- If you need health care while on terminal leave you **CAN** use your [TRICARE](https://www.veteransbenefitskb.com/tricare)  health insurance.
 
 [Return to top](https://www.veteransbenefitskb.com/vaclaim#top)
 
@@ -21510,11 +21510,11 @@ If you incur or aggravate an injury, illness, or disease while in the line of du
 
 Please have your unit issue a Line of Duty (LOD) determination (or a Notice of Eligibility \[NOE\] if you're in the U.S. Coast Guard Reserve), in order to properly file a disability claim for those disabilities.
 
-If you do not obtain a LOD/NOE you _will_ need to rely on [(Buddy letters/VA Form 21-10210)](https://veteransbenefitskb.com/buddy)  or [Personal statements](https://veteransbenefitskb.com/personal)
+If you do not obtain a LOD/NOE you _will_ need to rely on [(Buddy letters/VA Form 21-10210)](https://www.veteransbenefitskb.com/buddy)  or [Personal statements](https://www.veteransbenefitskb.com/personal)
 
 Alternatively, having pre and post-deployment physicals will also serve as excellent evidence - assuming of course you were honest and did not withhold information when you had them done.
 
-- For more information on National Guard and Reservist claims click [HERE](https://veteransbenefitskb.com/ngr)
+- For more information on National Guard and Reservist claims click [HERE](https://www.veteransbenefitskb.com/ngr)
 
 [Return to top](https://www.veteransbenefitskb.com/vaclaim#top)
 
@@ -21547,7 +21547,7 @@ There are several ways to submit an Intent to File to the VA:
 - Online
 
 - At [VA.gov](https://www.va.gov/disability/how-to-file-claim/)  (just start the online form).
-- Using a [Veterans Service Officer (VSO)](https://veteransbenefitskb.com/vso)
+- Using a [Veterans Service Officer (VSO)](https://www.veteransbenefitskb.com/vso)
 
 - To find a VSO near you. Click [Here](https://www.va.gov/ogc/apps/accreditation/index.asp)
 - Phone
@@ -21575,7 +21575,7 @@ There are several ways to submit an Intent to File to the VA:
 
 - Intent to files are good for **ONE YEAR**. Take this time to gather all your evidence to make your claim as strong as possible.
 
-- Intent to files are good for **ONE** use only. **HOWEVER**, a single claim _can_ be used to file for multiple conditions. Further, if you file multiple claims/ [Appeals](https://veteransbenefitskb.com/appeals)  on the _same day_, then **ALL** will fall under the same intent to file!
+- Intent to files are good for **ONE** use only. **HOWEVER**, a single claim _can_ be used to file for multiple conditions. Further, if you file multiple claims/ [Appeals](https://www.veteransbenefitskb.com/appeals)  on the _same day_, then **ALL** will fall under the same intent to file!
 
 [Return to top](https://www.veteransbenefitskb.com/vaclaim#top)
 
@@ -21595,11 +21595,11 @@ Do **NOT** make a new claim for a condition when:
 
 If you do then your claim **WILL** be kicked back and you will be sent a letter saying you need to appeal.
 
-So please save yourself the trouble and submit an appropriate [Appeal](https://veteransbenefitskb.com/appeals)
+So please save yourself the trouble and submit an appropriate [Appeal](https://www.veteransbenefitskb.com/appeals)
 
 \*Yes, no matter how soon _or_ long ago it was!
 
-\*\*If you were denied for a lower back pain do **NOT** put in a new claim for back strain, lower spine stenosis, etc. However, [_PTSD_](https://veteransbenefitskb.com/mental#9411)  **IS** an exception. So if you previously claimed depression/anxiety and were denied you **CAN** put a new claim in for PTSD and vice versa.
+\*\*If you were denied for a lower back pain do **NOT** put in a new claim for back strain, lower spine stenosis, etc. However, [_PTSD_](https://www.veteransbenefitskb.com/mental#9411)  **IS** an exception. So if you previously claimed depression/anxiety and were denied you **CAN** put a new claim in for PTSD and vice versa.
 
 * * *
 
@@ -21609,7 +21609,7 @@ So please save yourself the trouble and submit an appropriate [Appeal](https://v
 
 ### **BARE MINIMUM** You Need **BEFORE** You File a Claim:
 
-If your claim does **NOT** have **ALL** three of the following parts do **NOT** file a claim. If you do, you will be denied without even being sent to a [Compensation & Pension Exam (C&P)](https://veteransbenefitskb.com/cnp)
+If your claim does **NOT** have **ALL** three of the following parts do **NOT** file a claim. If you do, you will be denied without even being sent to a [Compensation & Pension Exam (C&P)](https://www.veteransbenefitskb.com/cnp)
 
 | Part | Element |
 | --- | --- |
@@ -21617,7 +21617,7 @@ If your claim does **NOT** have **ALL** three of the following parts do **NOT** 
 | 2. | An in-service event (documented or supported by lay statement(s) condition started in service), or service-connected disability that caused or worsened your disability. |
 | 3. | A layman would think that 1 and 2 are related (nexus). |
 
-- For more information on methods of service-connection click [Here](https://veteransbenefitskb.com/serviceconnection)
+- For more information on methods of service-connection click [Here](https://www.veteransbenefitskb.com/serviceconnection)
 
 **IMPORTANT NOTES:**
 
@@ -21625,13 +21625,13 @@ If your claim does **NOT** have **ALL** three of the following parts do **NOT** 
 
 - Common conditions that this restriction applies to include:
 
-- [Endometriosis](https://veteransbenefitskb.com/femalesystem#7629)
+- [Endometriosis](https://www.veteransbenefitskb.com/femalesystem#7629)
 
-- [Prostate Cancer](https://veteransbenefitskb.com/gensystem#7528)  (requires a biopsy to diagnosis for VBA purposes)
-- [Veterans](https://www.veteransbenefitskb.com/personal)  and their [Buddies](https://veteransbenefitskb.com/buddy)  **CAN** provide lay statement(s) thatÂ the disability occurred from an in-service event, injury, or disease, the statement(s). VA **MUST** consider these statements so long as they are consistent with the places, types, and circumstances of the Veteranâ€™s military service ( [Parachutists](https://www.veteransbenefitskb.com/skill-badge)  having [Joint issues](https://veteransbenefitskb.com/msindex)  [Cannon crewmember](https://veteransbenefitskb.com/loud)  having [Hearing issues](https://veteransbenefitskb.com/ears#6100)  etc.).
+- [Prostate Cancer](https://www.veteransbenefitskb.com/gensystem#7528)  (requires a biopsy to diagnosis for VBA purposes)
+- [Veterans](https://www.veteransbenefitskb.com/personal)  and their [Buddies](https://www.veteransbenefitskb.com/buddy)  **CAN** provide lay statement(s) thatÂ the disability occurred from an in-service event, injury, or disease, the statement(s). VA **MUST** consider these statements so long as they are consistent with the places, types, and circumstances of the Veteranâ€™s military service ( [Parachutists](https://www.veteransbenefitskb.com/skill-badge)  having [Joint issues](https://www.veteransbenefitskb.com/msindex)  [Cannon crewmember](https://www.veteransbenefitskb.com/loud)  having [Hearing issues](https://www.veteransbenefitskb.com/ears#6100)  etc.).
 
 - VA **CANNOT** determine that lay evidence lacks credibility _merely because_ it is unaccompanied by contemporaneous medical evidence! ( [M21-1 IV.i.1.B.1.c](https://www.knowva.ebenefits.va.gov/system/templates/selfservice/va_ssnew/help/customer/locale/en-US/portal/554400000001018/content/554400000180495/M21-1-Part-IV-Subpart-i-Chapter-1-Section-B-Evidentiary-Standards-for-Finding-an-Examination-or-Opinion-Necessary)
-- If you are claiming something as [Secondary](https://veteransbenefitskb.com/claimtype#secondary)  you should explain in a [Statement](https://www.veteransbenefitskb.com/personal)  how the conditions are related:
+- If you are claiming something as [Secondary](https://www.veteransbenefitskb.com/claimtype#secondary)  you should explain in a [Statement](https://www.veteransbenefitskb.com/personal)  how the conditions are related:
 
 - If your [Ankle](https://www.veteransbenefitskb.com/ankle)  condition caused an altered gait so you walk wonky and you think it caused your [Knee](https://www.veteransbenefitskb.com/kneeleg)  issue due to how you walk now - **STATE IT**!
 
@@ -21640,18 +21640,18 @@ If your claim does **NOT** have **ALL** three of the following parts do **NOT** 
 - If you think your [Sleep apnea](https://www.veteransbenefitskb.com/airsystem#6847)  is due to medications used to treat a service-connected condition by way of those medications causing [Obesity](https://www.veteransbenefitskb.com/tertiary)  \- **STATE IT**!
 - For those who are still **Active Duty** _OR are_ **within one year of leaving service**, just having number 1 will work (in order to get an examination).
 
-- You **CANNOT** purely claim exposure to something. This includes [Asbestos](https://veteransbenefitskb.com/toxic)  [Agent Orange](https://veteransbenefitskb.com/agentorange)  [Burn pits](https://veteransbenefitskb.com/burnpits)  etc.
+- You **CANNOT** purely claim exposure to something. This includes [Asbestos](https://www.veteransbenefitskb.com/toxic)  [Agent Orange](https://www.veteransbenefitskb.com/agentorange)  [Burn pits](https://www.veteransbenefitskb.com/burnpits)  etc.
 
 - You **MUST** claim the condition(s) you think the exposure caused! Just be sure to state in the claim what the exposure(s) were.
 - Having non-presumptive [Toxic exposures](https://www.veteransbenefitskb.com/toxic)  **CAN** meet element 2 for conditions that are **NOT** [Mental](https://www.veteransbenefitskb.com/mental)  or [Musculoskeletal](https://www.veteransbenefitskb.com/msindex)
 
-- Having held **ANY** [MOS](https://www.veteransbenefitskb.com/loud)  meets element 2 for [Hearing loss](https://veteransbenefitskb.com/ears#6100)  [Tinnitus](https://veteransbenefitskb.com/ears#6260)
+- Having held **ANY** [MOS](https://www.veteransbenefitskb.com/loud)  meets element 2 for [Hearing loss](https://www.veteransbenefitskb.com/ears#6100)  [Tinnitus](https://www.veteransbenefitskb.com/ears#6260)
 
 - Your claim **MUST** be specific regarding which limbs or joints are affected! You **CANNOT** just claim "Arthritis" or "Knee pain" you **MUST** state which joints are affected _as well as_ which side of the body IE right, left, or both!
 
 - Certain groups of eligible Veterans (which **INCLUDES** recently separated Veterans) may be entitled to presumptive service-connection for certain disabilities. (Assuming certain conditions are met.)
 
-- Please click [HERE](https://veteransbenefitskb.com/presumptive)  to learn more.
+- Please click [HERE](https://www.veteransbenefitskb.com/presumptive)  to learn more.
 
 * * *
 
@@ -21663,7 +21663,7 @@ If your claim does **NOT** have **ALL** three of the following parts do **NOT** 
 
 | Part | Example | Meets Standard (Y/N) | Explanation |
 | --- | --- | --- | --- |
-| 1. | [Right knee pain.](https://veteransbenefitskb.com/kneeleg)  | Y. | Is a symptom the Veteran can feel. |
+| 1. | [Right knee pain.](https://www.veteransbenefitskb.com/kneeleg)  | Y. | Is a symptom the Veteran can feel. |
 | 2. | Nothing in service records and no statements. | N. | VA needs _something_ to go off of. |
 | 3. | - | N. | Missing part 2. |
 
@@ -21677,8 +21677,8 @@ If your claim does **NOT** have **ALL** three of the following parts do **NOT** 
 
 | Part | Example | Meets Standard (Y/N) | Explanation |
 | --- | --- | --- | --- |
-| 1. | [IBS (with **NO** formal diagnosis).](https://veteransbenefitskb.com/digsystem#7319)  | N. | **UNLESS** you are a medical professional you **CANNOT** diagnosis yourself. You as a layman without a diagnosis **MUST** claim your IBS symptoms! |
-| 2. | [Buddy Statement: Since service they have have had digestive symptoms \[details...\].](https://veteransbenefitskb.com/buddy) | Y. | Spouse said they had it since service. |
+| 1. | [IBS (with **NO** formal diagnosis).](https://www.veteransbenefitskb.com/digsystem#7319)  | N. | **UNLESS** you are a medical professional you **CANNOT** diagnosis yourself. You as a layman without a diagnosis **MUST** claim your IBS symptoms! |
+| 2. | [Buddy Statement: Since service they have have had digestive symptoms \[details...\].](https://www.veteransbenefitskb.com/buddy) | Y. | Spouse said they had it since service. |
 | 3. | - | Y. | This is an interesting case in which part 2 also covers part 1, due to the claimed symptoms being explained. Claim makes sense; that their stomach issues could continue till now. |
 
 * * *
@@ -21691,8 +21691,8 @@ If your claim does **NOT** have **ALL** three of the following parts do **NOT** 
 
 | Part | Example | Meets Standard (Y/N) | Explanation |
 | --- | --- | --- | --- |
-| 1. | [Back pain.](https://veteransbenefitskb.com/spine)  | Y. | Is a symptom the Veteran can feel. |
-| 2. | Statement their service-connected [Headaches caused their back pain.](https://veteransbenefitskb.com/cns#8100)  | Y. | Connection is based on [Secondary service-connection.](https://veteransbenefitskb.com/claimtype#secondary)  |
+| 1. | [Back pain.](https://www.veteransbenefitskb.com/spine)  | Y. | Is a symptom the Veteran can feel. |
+| 2. | Statement their service-connected [Headaches caused their back pain.](https://www.veteransbenefitskb.com/cns#8100)  | Y. | Connection is based on [Secondary service-connection.](https://www.veteransbenefitskb.com/claimtype#secondary)  |
 | 3. | - | N. | Does not make sense. |
 
 * * *
@@ -21705,8 +21705,8 @@ If your claim does **NOT** have **ALL** three of the following parts do **NOT** 
 
 | Part | Example | Meets Standard (Y/N) | Explanation |
 | --- | --- | --- | --- |
-| 1. | [Gulf War Syndrome (GWS).](https://veteransbenefitskb.com/gulfill)  | N. | While the Veteran can feel these symptoms. It is not a proper claim as it is **NOT** specific. The Veteran must claim the specific conditions/symptoms they are claiming. IE [Headaches,](https://veteransbenefitskb.com/cns#8100)  [Breathing issues, etc..](https://veteransbenefitskb.com/airsystem)  |
-| 2. | Veteran served in Kuwait in 1991. | Y. | In service event is conceded due to [Gulf presumptives.](https://veteransbenefitskb.com/gulfill)  |
+| 1. | [Gulf War Syndrome (GWS).](https://www.veteransbenefitskb.com/gulfill)  | N. | While the Veteran can feel these symptoms. It is not a proper claim as it is **NOT** specific. The Veteran must claim the specific conditions/symptoms they are claiming. IE [Headaches,](https://www.veteransbenefitskb.com/cns#8100)  [Breathing issues, etc..](https://www.veteransbenefitskb.com/airsystem)  |
+| 2. | Veteran served in Kuwait in 1991. | Y. | In service event is conceded due to [Gulf presumptives.](https://www.veteransbenefitskb.com/gulfill)  |
 | 3. | - | Y/N. | If a symptom/condition is clarified, yes; otherwise not met. |
 
 * * *
@@ -21719,7 +21719,7 @@ If your claim does **NOT** have **ALL** three of the following parts do **NOT** 
 
 | Part | Example | Meets Standard (Y/N) | Explanation |
 | --- | --- | --- | --- |
-| 1. | Pain in both [Knees.](https://veteransbenefitskb.com/kneeleg)  | Y. | Veteran can certainly feel pain. |
+| 1. | Pain in both [Knees.](https://www.veteransbenefitskb.com/kneeleg)  | Y. | Veteran can certainly feel pain. |
 | 2. | Parachutist Badge W/X jumps. | Y. | Skill badge that is known to be hard on the body. |
 | 3. | - | Y. | Sounds plausible. |
 
@@ -21733,8 +21733,8 @@ If your claim does **NOT** have **ALL** three of the following parts do **NOT** 
 
 | Part | Example | Meets Standard (Y/N) | Explanation |
 | --- | --- | --- | --- |
-| 1. | [Skin rash on hands.](https://veteransbenefitskb.com/skin)  | Y. | Is a symptom the Veteran can see. |
-| 2. | MOS of mechanic or fueler; hands exposed to fuels. | Y. | [Exposure to chemicals.](https://veteransbenefitskb.com/toxic)  |
+| 1. | [Skin rash on hands.](https://www.veteransbenefitskb.com/skin)  | Y. | Is a symptom the Veteran can see. |
+| 2. | MOS of mechanic or fueler; hands exposed to fuels. | Y. | [Exposure to chemicals.](https://www.veteransbenefitskb.com/toxic)  |
 | 3. | - | Y. | Sounds plausible. |
 
 [Return to top](https://www.veteransbenefitskb.com/vaclaim#top)
@@ -21750,12 +21750,12 @@ In order for your claim to be **SUCCESSFUL** the claim needs **ALL** three eleme
 | Part | Element |
 | --- | --- |
 | 1. | A current diagnosis\* of a chronic disability. |
-| 2. | An in-service event, [Exposure, or service-connected disability that caused or worsened your disability.](https://veteransbenefitskb.com/toxic)  |
-| 3. | A [Medical opinion connecting 1 and 2 together, also known as a nexus statement.](https://veteransbenefitskb.com/imo)  |
+| 2. | An in-service event, [Exposure, or service-connected disability that caused or worsened your disability.](https://www.veteransbenefitskb.com/toxic)  |
+| 3. | A [Medical opinion connecting 1 and 2 together, also known as a nexus statement.](https://www.veteransbenefitskb.com/imo)  |
 
 \*There are two exceptions to this requirement:
 
-1. Undiagnosable [Gulf War medically unexplained chronic multi-symptom illness (MUCMI)](https://veteransbenefitskb.com/gulfill)  and
+1. Undiagnosable [Gulf War medically unexplained chronic multi-symptom illness (MUCMI)](https://www.veteransbenefitskb.com/gulfill)  and
 
 2. Undiagnosed chronic _physical_ conditions that cause functional impairment of earning ability.
 
@@ -21767,7 +21767,7 @@ NOTES:
 
 - There are certain conditions that Veterans often don't think they can claim but should be aware of.
 
-- Click [HERE](https://veteransbenefitskb.com/commonly)  to view a list of commonly overlooked condition **.**
+- Click [HERE](https://www.veteransbenefitskb.com/commonly)  to view a list of commonly overlooked condition **.**
 
 [Return to top](https://www.veteransbenefitskb.com/vaclaim#top)
 
@@ -21777,11 +21777,11 @@ NOTES:
 
 ## **Obtaining/Types of Evidence**
 
-The Veteran does **NOT** need to gather all evidence themselves - the VA has a [_Duty to Assist_](https://veteransbenefitskb.com/dta)  If the Veteran is unable to get their own _Service Treatment Records_ or _Private Medical Records_ the VA **WILL** request them for you. However, for the VA to get private medical records and/or [Vet Center](https://veteransbenefitskb.com/vetcenter)  records you **MUST** provide them with a [VA Form 21-4142/21-4142a](https://www.vba.va.gov/pubs/forms/vba-21-4142-are.pdf)  (records release).
+The Veteran does **NOT** need to gather all evidence themselves - the VA has a [_Duty to Assist_](https://www.veteransbenefitskb.com/dta)  If the Veteran is unable to get their own _Service Treatment Records_ or _Private Medical Records_ the VA **WILL** request them for you. However, for the VA to get private medical records and/or [Vet Center](https://www.veteransbenefitskb.com/vetcenter)  records you **MUST** provide them with a [VA Form 21-4142/21-4142a](https://www.vba.va.gov/pubs/forms/vba-21-4142-are.pdf)  (records release).
 
 **IMPORTANT NOTES:**
 
-- **ALL** evidence obtained by the VBA _or_ sent to the VBA is scanned into a virtual [Claim file (cfile)](https://veteransbenefitskb.com/cfile)  Evidence is **NOT** linked to any one claim _or_ [Appeal](https://veteransbenefitskb.com/appeals)  It is simply dumped into your cfile.
+- **ALL** evidence obtained by the VBA _or_ sent to the VBA is scanned into a virtual [Claim file (cfile)](https://www.veteransbenefitskb.com/cfile)  Evidence is **NOT** linked to any one claim _or_ [Appeal](https://www.veteransbenefitskb.com/appeals)  It is simply dumped into your cfile.
 
 - Do **NOT** re-submit any evidence you have previously given the VBA! Your VA claim file is _permanent_ and evidence that is already of record **WILL** remain there. So submitting duplicate evidence _can_ make your claim harder to process (and makes VBA employees more likely to overlook something).
 
@@ -21896,9 +21896,9 @@ Depending when you separated and what branch you served will determine how you c
 
 - Newspaper articles showing you were personally involved in an event or that an event occurred during a time you were in a location.
 
-- [Buddy Statements](https://veteransbenefitskb.com/buddy)  youâ€™d like to provide from family members, friends, clergy members, law enforcement personnel, or those you served with that can tell the VA more about your claimed condition and how and when it happened, how it got worse, and how it currently effects you.
+- [Buddy Statements](https://www.veteransbenefitskb.com/buddy)  youâ€™d like to provide from family members, friends, clergy members, law enforcement personnel, or those you served with that can tell the VA more about your claimed condition and how and when it happened, how it got worse, and how it currently effects you.
 
-- [Supporting/Personal Statements](https://veteransbenefitskb.com/personal)  Basically, if you want to point things out in your records, to help ensure the rater does not miss anything, or if you want to add some context/detail to your evidence that may otherwise not be known.
+- [Supporting/Personal Statements](https://www.veteransbenefitskb.com/personal)  Basically, if you want to point things out in your records, to help ensure the rater does not miss anything, or if you want to add some context/detail to your evidence that may otherwise not be known.
 
 **IMPORTANT NOTE:**
 
@@ -21910,7 +21910,7 @@ NOTES:
 
 - The VBA **CAN** access your VHA medical records themselves, so it is **NOT** necessary to upload them as apart of your claim!
 
-- **HOWEVER**, [Vet Center](https://veteransbenefitskb.com/vetcenter)  notes (you **MUST** give the VA [Written permission](https://www.vba.va.gov/pubs/forms/vba-21-4142-are.pdf)  to access these notes!)
+- **HOWEVER**, [Vet Center](https://www.veteransbenefitskb.com/vetcenter)  notes (you **MUST** give the VA [Written permission](https://www.vba.va.gov/pubs/forms/vba-21-4142-are.pdf)  to access these notes!)
 - Maximum file size allowed for uploading documents online is 50MB.
 
 [Return to top](https://www.veteransbenefitskb.com/vaclaim#top)
@@ -21937,21 +21937,21 @@ If you want to _help ensure_ the VA does **NOT** miss anything, go ahead and inc
 
 ### Table of Contents Examples
 
-- [Right Knee](https://veteransbenefitskb.com/kneeleg)  documents:
+- [Right Knee](https://www.veteransbenefitskb.com/kneeleg)  documents:
 
 - STRs: Pages 2-10.
 
 - Private Medical Records - Dr. Pepper: Pages 11-20.
 
-- [Personal Statement](https://veteransbenefitskb.com/personal)  Pages 21-23.
-- [PTSD](https://veteransbenefitskb.com/mental)  documents:
+- [Personal Statement](https://www.veteransbenefitskb.com/personal)  Pages 21-23.
+- [PTSD](https://www.veteransbenefitskb.com/mental)  documents:
 
 - STR: Page 2.
 
-- DD-214 - [Purple Heart](https://veteransbenefitskb.com/combatvet)  Page 3.
+- DD-214 - [Purple Heart](https://www.veteransbenefitskb.com/combatvet)  Page 3.
 
 - Supporting Statements for Service-connection for PTSD [VA Form 21-0781](https://www.vba.va.gov/pubs/forms/VBA-21-0781-ARE.pdf)  Pages 4-7.
-- [Back](https://veteransbenefitskb.com/spine)  documents:
+- [Back](https://www.veteransbenefitskb.com/spine)  documents:
 
 - STRs: Pages 2-102.
 
@@ -21965,7 +21965,7 @@ If you want to _help ensure_ the VA does **NOT** miss anything, go ahead and inc
 
 If you have a condition that started due to an incident that occurred during a _Special Operation_ or otherwise _Classified Mission_.
 
-- Click [HERE](https://veteransbenefitskb.com/secret)  to learn about additional information you need to provide the VA.
+- Click [HERE](https://www.veteransbenefitskb.com/secret)  to learn about additional information you need to provide the VA.
 
 [Return to top](https://www.veteransbenefitskb.com/vaclaim#top)
 
@@ -21975,7 +21975,7 @@ If you have a condition that started due to an incident that occurred during a _
 
 ## **Before Filing an Increase Claim**
 
-Please review the [Rating schedule](https://veteransbenefitskb.com/ratingsindex)  to see if your current level of disability qualifies for an increase.
+Please review the [Rating schedule](https://www.veteransbenefitskb.com/ratingsindex)  to see if your current level of disability qualifies for an increase.
 
 That said, the process of filing for an increase is similar to filing for service-connection.
 
@@ -21995,7 +21995,7 @@ You can file for it on the va.gov website and the VA will order new exam(s) to d
 
 ## **Common Errors when Filing Claims**
 
-If you decide to go in alone without a [VSO](https://veteransbenefitskb.com/vso)  please be extra careful before you send in your claim!
+If you decide to go in alone without a [VSO](https://www.veteransbenefitskb.com/vso)  please be extra careful before you send in your claim!
 
 Some common errors Veterans make are:
 
@@ -22019,7 +22019,7 @@ Some common errors Veterans make are:
 
 Veterans who meet certain conditions can file for priority processing.
 
-- Click [HERE](https://veteransbenefitskb.com/fast)  for more information.
+- Click [HERE](https://www.veteransbenefitskb.com/fast)  for more information.
 
 * * *
 
@@ -22027,15 +22027,15 @@ Veterans who meet certain conditions can file for priority processing.
 
 ---
 
-### [Compensation & Pension Examinations (C&P)](https://veteransbenefitskb.com/cnp)
+### [Compensation & Pension Examinations (C&P)](https://www.veteransbenefitskb.com/cnp)
 
-Veterans who do **NOT** want to use a specific contractor or VA medical center **OR** want to use a specific contractor or VA medical center can include a [Personal statement](https://veteransbenefitskb.com/personal)  with this request. The VA will _attempt_ to honor this request, if reasonable/possible.
+Veterans who do **NOT** want to use a specific contractor or VA medical center **OR** want to use a specific contractor or VA medical center can include a [Personal statement](https://www.veteransbenefitskb.com/personal)  with this request. The VA will _attempt_ to honor this request, if reasonable/possible.
 
 Likewise, if you would only like a tele-health appointment for say your mental health appointment, you can make that request as well.
 
 [Return to top](https://www.veteransbenefitskb.com/vaclaim#top)
 
-<!-- Chunk 1019/1206 | Heading: [Compensation & Pension Examinations (C&P)](https://veteransbenefitskb.com/cnp) | Words: 74 -->
+<!-- Chunk 1019/1206 | Heading: [Compensation & Pension Examinations (C&P)](https://www.veteransbenefitskb.com/cnp) | Words: 74 -->
 
 ---
 
@@ -22086,7 +22086,7 @@ There are several ways to file a claim.
 
 ## **After Submitting a Claim**
 
-The next step in the claims process that involves the Veteran is the [Compensation & Pension Exam (C&P)](https://veteransbenefitskb.com/cnp)  Click the link to learn more about the C&P process.
+The next step in the claims process that involves the Veteran is the [Compensation & Pension Exam (C&P)](https://www.veteransbenefitskb.com/cnp)  Click the link to learn more about the C&P process.
 
 Veterans can expect to be scheduled for a C&P exam shortly after they file their claim. However, there are cases in which a Veteran won't get one at all or it will take several months before one is scheduled.
 
@@ -22143,7 +22143,7 @@ Veterans can expect to be scheduled for a C&P exam shortly after they file their
 
 - #### What should I do if I disagree with my claim's decision?
 
-- If you disagree with your claim's decision (all or parts) you can [Appeal](https://veteransbenefitskb.com/appeals)  the decision. You have up to one year to appeal the decision and still preserve the initial "intent to file" [Effective date](https://veteransbenefitskb.com/edate)  of the claim.
+- If you disagree with your claim's decision (all or parts) you can [Appeal](https://www.veteransbenefitskb.com/appeals)  the decision. You have up to one year to appeal the decision and still preserve the initial "intent to file" [Effective date](https://www.veteransbenefitskb.com/edate)  of the claim.
 
 - #### Can I file for a secondary condition if the primary condition is not yet service-connected?
 
@@ -22239,17 +22239,17 @@ If you think it was closed in error consider making a [VERA appointment](https:/
 
 - [Filing an Appeal](https://www.veteransbenefitskb.com/appeals)
 
-- [Stages of a claim](https://veteransbenefitskb.com/stages)
+- [Stages of a claim](https://www.veteransbenefitskb.com/stages)
 
-- [Duty to assist](https://veteransbenefitskb.com/dta)
+- [Duty to assist](https://www.veteransbenefitskb.com/dta)
 
-- [Compensation and pension exams](https://veteransbenefitskb.com/cnp)
+- [Compensation and pension exams](https://www.veteransbenefitskb.com/cnp)
 
-- [Insight into the Claims Process (VBA Perspective)](https://veteransbenefitskb.com/insight)
+- [Insight into the Claims Process (VBA Perspective)](https://www.veteransbenefitskb.com/insight)
 
 - [Examiner Insight](https://www.veteransbenefitskb.com/exinsight)
 
-- [Individual Unemployability](https://veteransbenefitskb.com/tdiu)
+- [Individual Unemployability](https://www.veteransbenefitskb.com/tdiu)
 
 - [Understanding Rating Decisions](https://www.veteransbenefitskb.com/ratingdecision)
 
@@ -22345,37 +22345,37 @@ Open Menu
 
 Featured
 
-[\> Master Condition List](https://veteransbenefitskb.com/master)
+[\> Master Condition List](https://www.veteransbenefitskb.com/master)
 
-[\> Federal Benefits List by Combined Ratings](https://veteransbenefitskb.com/combinedbenefits)
+[\> Federal Benefits List by Combined Ratings](https://www.veteransbenefitskb.com/combinedbenefits)
 
-[\> Insider Insight into VBA Claim Processing](https://veteransbenefitskb.com/insight)
+[\> Insider Insight into VBA Claim Processing](https://www.veteransbenefitskb.com/insight)
 
-[\> Rating Schedule Index](https://veteransbenefitskb.com/ratingsindex)
+[\> Rating Schedule Index](https://www.veteransbenefitskb.com/ratingsindex)
 
-[\> Filing a VA Disability Claim](https://veteransbenefitskb.com/vaclaim)
+[\> Filing a VA Disability Claim](https://www.veteransbenefitskb.com/vaclaim)
 
-[\> Filing an Appeal](https://veteransbenefitskb.com/appeals)
+[\> Filing an Appeal](https://www.veteransbenefitskb.com/appeals)
 
 * * *
 
 [Categories](https://www.veteransbenefitskb.com/appeals)
 
-\> [Death/Survivor Benefits](https://veteransbenefitskb.com/#ds)
+\> [Death/Survivor Benefits](https://www.veteransbenefitskb.com/#ds)
 
-\> [Education & Employment](https://veteransbenefitskb.com/#ee)
+\> [Education & Employment](https://www.veteransbenefitskb.com/#ee)
 
-\> [Health care](https://veteransbenefitskb.com/#healthcare)
+\> [Health care](https://www.veteransbenefitskb.com/#healthcare)
 
-\> [Housing](https://veteransbenefitskb.com/#housing)
+\> [Housing](https://www.veteransbenefitskb.com/#housing)
 
-\> [Miscellaneous](https://veteransbenefitskb.com/#misc)
+\> [Miscellaneous](https://www.veteransbenefitskb.com/#misc)
 
-\> [VA Disability Compensation](https://veteransbenefitskb.com/va)
+\> [VA Disability Compensation](https://www.veteransbenefitskb.com/va)
 
-\> [VA Pension](https://veteransbenefitskb.com/#pension)
+\> [VA Pension](https://www.veteransbenefitskb.com/#pension)
 
-If you do **NOT** agree with your claim's decision, you may file an appeal. Just like [Filing a claim](https://veteransbenefitskb.com/vaclaim)  you _may_ use the assistance of a [VSO](https://veteransbenefitskb.com/vso)  lawyer, or an accredited claims agent.
+If you do **NOT** agree with your claim's decision, you may file an appeal. Just like [Filing a claim](https://www.veteransbenefitskb.com/vaclaim)  you _may_ use the assistance of a [VSO](https://www.veteransbenefitskb.com/vso)  lawyer, or an accredited claims agent.
 
 There are three initial different methods to appeal:
 
@@ -22389,7 +22389,7 @@ If your appeal is denied again you **CAN** try another eligible option (see appl
 
 **IMPORTANT NOTES:**
 
-- If you want to keep your [Effective date](https://veteransbenefitskb.com/edate)  (your back pay) you **MUST** file an appeal within **one year** of your claim's decision date! Veterans who fail to do that can only get their original effective date and back pay if there is a [Clear and Unmistakable Error (CUE)](https://veteransbenefitskb.com/appeals#cue)
+- If you want to keep your [Effective date](https://www.veteransbenefitskb.com/edate)  (your back pay) you **MUST** file an appeal within **one year** of your claim's decision date! Veterans who fail to do that can only get their original effective date and back pay if there is a [Clear and Unmistakable Error (CUE)](https://www.veteransbenefitskb.com/appeals#cue)
 
 - Lawyers and claims agents **CANNOT** charge more than **33.3%**\\* (excluding expenses\*\*) of the Veteran's back pay. Further, they can _only_ get paid if/when the Veteran wins their appeal. Again, VSOs are a resource that is free to the Veteran.
 
@@ -22453,7 +22453,7 @@ _Alternatively, after_ 10 days have past since the claim closed, you can call th
 
 ### Getting a Copy of Your C-file/Examiner's Report/Codesheet
 
-- Click [HERE](https://veteransbenefitskb.com/cfile)  to learn how to get your C-file/Examiner's reports.
+- Click [HERE](https://www.veteransbenefitskb.com/cfile)  to learn how to get your C-file/Examiner's reports.
 
 [Return to top](https://www.veteransbenefitskb.com/appeals#top)
 
@@ -22463,7 +22463,7 @@ _Alternatively, after_ 10 days have past since the claim closed, you can call th
 
 ## **Denied Service-Connection**
 
-If you were not granted [Service-connection](https://veteransbenefitskb.com/serviceconnection)  what was missing from your claim?
+If you were not granted [Service-connection](https://www.veteransbenefitskb.com/serviceconnection)  what was missing from your claim?
 
 - Was it a current diagnosis;
 
@@ -22473,7 +22473,7 @@ If you were not granted [Service-connection](https://veteransbenefitskb.com/serv
 
 If you feel that the rater did not properly evaluate the evidence that was a part of your claim, an HLR may be appropriate.
 
-Otherwise if you need to submit additional supporting information, a supplemental claim may be appropriate. Veterans who need help with the determination of service-connection may want to look into submitting an [Independent medical opinion (IMO)/Nexus letter](https://veteransbenefitskb.com/imo)  [Personal statement](https://veteransbenefitskb.com/personal)  or [Buddy statement(s)](https://veteransbenefitskb.com/buddy)  as appropriate.
+Otherwise if you need to submit additional supporting information, a supplemental claim may be appropriate. Veterans who need help with the determination of service-connection may want to look into submitting an [Independent medical opinion (IMO)/Nexus letter](https://www.veteransbenefitskb.com/imo)  [Personal statement](https://www.veteransbenefitskb.com/personal)  or [Buddy statement(s)](https://www.veteransbenefitskb.com/buddy)  as appropriate.
 
 If you were told you missed an exam then file a supplemental claim and state, "I am willing an able to attend exams at this time" on the appeal form.
 
@@ -22487,7 +22487,7 @@ If you were told you missed an exam then file a supplemental claim and state, "I
 
 If you were granted service-connection (at least 0% evaluation) but were given an evaluation that was lower than what you expected, you can appeal this. Your decision letter _should_ detail what the criteria is for the next highest evaluation. It should also note if the rating you were awarded was the maximum. If it says you are the maximum... you should really leave it be...
 
-If you feel that you meet the [Requirements](https://veteransbenefitskb.com/ratingSIndex)  for a higher rating then you should verify the information in the Examiner's [Disability Benefits Questionnaire (DBQ)](https://veteransbenefitskb.com/dbq)  If the DBQ indicates you should have gotten a higher rating, an HLR may be appropriate. If the DBQ indicates otherwise then a supplemental claim (with medical evidence dated **BEFORE** the rater made their decision, would be more appropriate).
+If you feel that you meet the [Requirements](https://www.veteransbenefitskb.com/ratingSIndex)  for a higher rating then you should verify the information in the Examiner's [Disability Benefits Questionnaire (DBQ)](https://www.veteransbenefitskb.com/dbq)  If the DBQ indicates you should have gotten a higher rating, an HLR may be appropriate. If the DBQ indicates otherwise then a supplemental claim (with medical evidence dated **BEFORE** the rater made their decision, would be more appropriate).
 
 [Return to top](https://www.veteransbenefitskb.com/appeals#top)
 
@@ -22499,7 +22499,7 @@ If you feel that you meet the [Requirements](https://veteransbenefitskb.com/rati
 
 Certain factors can make a Veteran eligible for priority process.
 
-- Click [HERE](https://veteransbenefitskb.com/fast)  to learn more.
+- Click [HERE](https://www.veteransbenefitskb.com/fast)  to learn more.
 
 [Return to top](https://www.veteransbenefitskb.com/appeals#top)
 
@@ -22515,7 +22515,7 @@ An entirely new review of your claim by an experienced (more senior) rater; form
 
 - New evidence (evidence received **AFTER** the decision was made) **CANNOT** be considered in a Higher-Level Review!
 
-- [Intent to files](https://veteransbenefitskb.com/vaclaim#itf)  do **NOT** apply to HLRs!
+- [Intent to files](https://www.veteransbenefitskb.com/vaclaim#itf)  do **NOT** apply to HLRs!
 
 - Unlike other raters DROs get the extra authority to issue a _differences of opinion_.
 
@@ -22523,7 +22523,7 @@ An entirely new review of your claim by an experienced (more senior) rater; form
 
 - Mere differences of opinions **CANNOT** result in a negative outcome for the Veteran!
 
-- However, if the previous rater(s) made [Clear and Unmistakable Errors (CUEs)](https://veteransbenefitskb.com/appeals#cue)  those errors **CAN** be corrected **EVEN** if negative (with appropriate [Due notice](https://veteransbenefitskb.com/proposed)
+- However, if the previous rater(s) made [Clear and Unmistakable Errors (CUEs)](https://www.veteransbenefitskb.com/appeals#cue)  those errors **CAN** be corrected **EVEN** if negative (with appropriate [Due notice](https://www.veteransbenefitskb.com/proposed)
 
 NOTES:
 
@@ -22567,7 +22567,7 @@ If you would like to plead your case to the person doing your appeal you may req
 
 #### Alternative to Informal Conference
 
-Instead of requesting an informal conference you may submit a [Personal statement](https://veteransbenefitskb.com/personal)  with your HLR.
+Instead of requesting an informal conference you may submit a [Personal statement](https://www.veteransbenefitskb.com/personal)  with your HLR.
 
 Again, you can **ONLY** write about errors of fact _or_ law as it relates to your appeal. Remember, you **CANNOT** use this statement as a means to add new evidence to your appeal!
 
@@ -22647,7 +22647,7 @@ If a de facto supplemental claim is opened then it will follow the normal stages
 
 ### Deciding a HLR
 
-If the senior rater is able to make an appropriate grant/denial based upon the existing evidence of record they will do so. However, if the senior rater finds a [Duty to Assist (DTA)](https://veteransbenefitskb.com/dta)  error they will make a rating decision and close the HLR; noting the DTA errors they found that need to be addressed.
+If the senior rater is able to make an appropriate grant/denial based upon the existing evidence of record they will do so. However, if the senior rater finds a [Duty to Assist (DTA)](https://www.veteransbenefitskb.com/dta)  error they will make a rating decision and close the HLR; noting the DTA errors they found that need to be addressed.
 
 These DTA errors will be addressed in a de facto supplemental claim, which is opened (at some point).
 
@@ -22655,7 +22655,7 @@ These DTA errors will be addressed in a de facto supplemental claim, which is op
 
 - The DRO **CAN** find a DTA error, confirm and continue, and issue a difference of opinion on separate issues all within the same decision.
 
-- This supplemental claim will **NOT** use any new [Intents to File](https://veteransbenefitskb.com/vaclaim#intent)
+- This supplemental claim will **NOT** use any new [Intents to File](https://www.veteransbenefitskb.com/vaclaim#intent)
 
 - If the VA is able to grant then any intent to file associated with the prior claim/appeals **CAN** be used to assign an [Effective date](https://www.veteransbenefitskb.com/edate#itf)  \- just that the de facto supplemental will not itself use any unassociated intents hanging around in your file.
 - This de facto supplemental claim **DOES** allow you to submit new and relevant evidence!
@@ -22687,25 +22687,25 @@ New and relevant evidence can take the form of:
 
 - New theory of service-connection (claiming your condition was caused by another service-connected disability);
 
-- This _does_ include [Presumptive conditions](https://veteransbenefitskb.com/Presumptive)  be they old or recently passed presumptives;
+- This _does_ include [Presumptive conditions](https://www.veteransbenefitskb.com/Presumptive)  be they old or recently passed presumptives;
 - Exam willingness - if you were previously denied because you missed an exam, simply state that you are willing and able to attend new examinations;
 
-- [Independent medical opinion (IMO)/Nexus letter](https://veteransbenefitskb.com/imo)
+- [Independent medical opinion (IMO)/Nexus letter](https://www.veteransbenefitskb.com/imo)
 
-- [DBQ](https://veteransbenefitskb.com/dbq)
+- [DBQ](https://www.veteransbenefitskb.com/dbq)
 
-- [Personal statements](https://veteransbenefitskb.com/personal)  or
+- [Personal statements](https://www.veteransbenefitskb.com/personal)  or
 
-- [Buddy statements](https://veteransbenefitskb.com/buddy)
+- [Buddy statements](https://www.veteransbenefitskb.com/buddy)
 
 **IMPORTANT NOTES:**
 
 - Remember you have **1 year** from the claim's decision to file an appeal (if you want to potentially keep your back pay). Which means 1 year to develop additional evidence for your claim. We recommend waiting until you have enough evidence to be successful before filing - your VSO or lawyer can advise you on this. Do not file appeals with insufficient evidence, this just gums up the system for you and other Veterans!
 
-- Do know you **CAN** extend this window for by filing an [Intent to file](https://veteransbenefitskb.com/vaclaim#intent)  The intent to file will give you a year (from the intent to file) to gather evidence. While allowing you to keep back pay.
-- If the VA grants an increased rating based upon a supplemental claim, the [Effective date](https://veteransbenefitskb.com/edate)  does **NOT** automatically go back to the original claim!
+- Do know you **CAN** extend this window for by filing an [Intent to file](https://www.veteransbenefitskb.com/vaclaim#intent)  The intent to file will give you a year (from the intent to file) to gather evidence. While allowing you to keep back pay.
+- If the VA grants an increased rating based upon a supplemental claim, the [Effective date](https://www.veteransbenefitskb.com/edate)  does **NOT** automatically go back to the original claim!
 
-- If **MEDICAL** evidence shows an increase is warranted that is dated **BEFORE/AFTER** you initiated your supplemental claim the effective date will typically be the date of the medical evidence showing an increase was warranted; this typically is the date of your [Examination](https://veteransbenefitskb.com/cnp)
+- If **MEDICAL** evidence shows an increase is warranted that is dated **BEFORE/AFTER** you initiated your supplemental claim the effective date will typically be the date of the medical evidence showing an increase was warranted; this typically is the date of your [Examination](https://www.veteransbenefitskb.com/cnp)
 - Do **NOT** file a supplemental claim for an evaluation after a year! Even if you have new evidence showing a higher evaluation was previously warranted! If you do, at best the effective date will be the date the supplemental was initiated or at **WORST** the date of the examination conducted **AFTER** your filed the supplemental! So in these cases, just file a increase claim!
 
 NOTES:
@@ -22714,7 +22714,7 @@ NOTES:
 
 - Veterans **CAN** submit a supplemental claim over and over again. _So long as_, there is new and relevant evidence being submitted _every time_.
 
-- If you need the VA to get non-federal medical records or [Vet Center](https://veteransbenefitskb.com/vetcenter)  records for you, then you will need to also submit a [VA Form 21-4142/21-4142a](https://www.vba.va.gov/pubs/forms/vba-21-4142-are.pdf)
+- If you need the VA to get non-federal medical records or [Vet Center](https://www.veteransbenefitskb.com/vetcenter)  records for you, then you will need to also submit a [VA Form 21-4142/21-4142a](https://www.vba.va.gov/pubs/forms/vba-21-4142-are.pdf)
 
 | Question | Description |
 | --- | --- |
@@ -23008,7 +23008,7 @@ In order to invoke a CUE the Veteran **MUST** state a CUE has occurred _AND_ **M
 
 - You only get **_ONE_** shot at a CUE per issue. That's it! If you pick something that isn't a CUE and you look back and 'gosh, oh shoot this other thing is the CUE!' That is it. Thanks for playing!
 
-- [Duty to Assist](https://veteransbenefitskb.com/dta)  errors can **NEVER** be the basis of a CUE; as only evidence of record at the time of the prior decision can be considered.
+- [Duty to Assist](https://www.veteransbenefitskb.com/dta)  errors can **NEVER** be the basis of a CUE; as only evidence of record at the time of the prior decision can be considered.
 
 - CUEs are a knife that **CAN** cut both ways! Meaning these errors getting corrected **CAN** end up hurting or helping you. It is common for raters to find multiple additional CUEs when you declare a CUE; since a rater who already made at least 1 CUE is generally just gonna mess everything else up!
 
@@ -23020,12 +23020,12 @@ In order to invoke a CUE the Veteran **MUST** state a CUE has occurred _AND_ **M
 
 - Generally forgotten and missed issues/benefits **CAN** be granted **WITH** back dated effective dates! You just need to point out in the claim/appeal that the VA failed to rate the issues in the previous decision and **EXPLAIN** why the VA should have considered it or that you meet the criteria of a grant previously and the VA failed to grant.
 
-- Commonly missed ancillary benefits are things like [Special Monthly Compensation (SMC)](https://veteransbenefitskb.com/smc)  and [Chapter 35](https://veteransbenefitskb.com/survivorbenefits#dea)
+- Commonly missed ancillary benefits are things like [Special Monthly Compensation (SMC)](https://www.veteransbenefitskb.com/smc)  and [Chapter 35](https://www.veteransbenefitskb.com/survivorbenefits#dea)
 
-- Commonly missed inferred conditions are things like [Residual scars](https://veteransbenefitskb.com/skin#7802)  and secondary [Nerve issues](https://veteransbenefitskb.com/nerveindex)  due to a [Spine](https://veteransbenefitskb.com/spine)  condition.
+- Commonly missed inferred conditions are things like [Residual scars](https://www.veteransbenefitskb.com/skin#7802)  and secondary [Nerve issues](https://www.veteransbenefitskb.com/nerveindex)  due to a [Spine](https://www.veteransbenefitskb.com/spine)  condition.
 
 - NOTE: Inferring issues became policy circa 2014. So missed inferred issues prior to this year **CANNOT** be considered.
-- The VA does not have a form for forgotten claims or CUES; So you can file via a [Personal statement](https://veteransbenefitskb.com/personal)  or on a [(20-0995)](http://www.vba.va.gov/pubs/forms/VBA-20-0995-ARE.pdf)  to help the VA with keeping track of the claim.
+- The VA does not have a form for forgotten claims or CUES; So you can file via a [Personal statement](https://www.veteransbenefitskb.com/personal)  or on a [(20-0995)](http://www.vba.va.gov/pubs/forms/VBA-20-0995-ARE.pdf)  to help the VA with keeping track of the claim.
 
 * * *
 
@@ -23037,19 +23037,19 @@ In order to invoke a CUE the Veteran **MUST** state a CUE has occurred _AND_ **M
 
 - Assigning incorrect SMC coding on codesheet
 
-- [Bilateral factor](https://veteransbenefitskb.com/vamath#bilateral)  was not set properly in the master record (the codesheet derives its information from the master record)
+- [Bilateral factor](https://www.veteransbenefitskb.com/vamath#bilateral)  was not set properly in the master record (the codesheet derives its information from the master record)
 
 - Rater set your left ankle as a right ankle. This can result in being underpaid if the bilateral factor would have increased your combined evaluation. The master record is mentioned here because the codesheet does **NOT** display what bilateral factor is selected by the rater; only what diagnostic codes have an active bilateral factor that is impacting your combined evaluation.
 - Conditions given a singular rating that should be rated separately
 
 - Conditions given separate ratings that should have been given a combined singular evaluation
 
-- [Effective dates](https://veteransbenefitskb.com/edate)
+- [Effective dates](https://www.veteransbenefitskb.com/edate)
 
-- Missing intents to file, that claim was filed within a year of separation, not applying [Liberalizing law](https://veteransbenefitskb.com/edate#lib)  etc.
+- Missing intents to file, that claim was filed within a year of separation, not applying [Liberalizing law](https://www.veteransbenefitskb.com/edate#lib)  etc.
 - Granting/Denying service-connection/benefits
 
-- [Rating](https://veteransbenefitskb.com/ratingsindex)  (too high or too low)
+- [Rating](https://www.veteransbenefitskb.com/ratingsindex)  (too high or too low)
 
 - Rating decision took an action that resulted in reduced disability compensation payments and due process was **NOT** provided
 
@@ -23063,7 +23063,7 @@ In order to invoke a CUE the Veteran **MUST** state a CUE has occurred _AND_ **M
 
 - #### How do I check the status of my appeal?
 
-- You can check the status of your appeals on [VA.gov](http://va.gov/)  by calling 1 (800) 827-1000, or making a [VERA appointment](https://veteransbenefitskb.com/vera)
+- You can check the status of your appeals on [VA.gov](http://va.gov/)  by calling 1 (800) 827-1000, or making a [VERA appointment](https://www.veteransbenefitskb.com/vera)
 
 - #### I filed my HLR/Supplemental claim via QuickSubmit and it has not shown up online yet?
 
@@ -23157,9 +23157,9 @@ In order to invoke a CUE the Veteran **MUST** state a CUE has occurred _AND_ **M
 
 ## **See Also**
 
-- [Becoming an Accredited Agent/Attorney](https://veteransbenefitskb.com/hiringaccredited)
+- [Becoming an Accredited Agent/Attorney](https://www.veteransbenefitskb.com/hiringaccredited)
 
-- [Effective Dates](https://veteransbenefitskb.com/edate)
+- [Effective Dates](https://www.veteransbenefitskb.com/edate)
 
 - [Requesting your C-File](https://www.veteransbenefitskb.com/cfile)
 
@@ -23283,37 +23283,37 @@ Open Menu
 
 Featured
 
-[\> Master Condition List](https://veteransbenefitskb.com/master)
+[\> Master Condition List](https://www.veteransbenefitskb.com/master)
 
-[\> Federal Benefits List by Combined Ratings](https://veteransbenefitskb.com/combinedbenefits)
+[\> Federal Benefits List by Combined Ratings](https://www.veteransbenefitskb.com/combinedbenefits)
 
-[\> Insider Insight into VBA Claim Processing](https://veteransbenefitskb.com/insight)
+[\> Insider Insight into VBA Claim Processing](https://www.veteransbenefitskb.com/insight)
 
-[\> Rating Schedule Index](https://veteransbenefitskb.com/ratingsindex)
+[\> Rating Schedule Index](https://www.veteransbenefitskb.com/ratingsindex)
 
-[\> Filing a VA Disability Claim](https://veteransbenefitskb.com/vaclaim)
+[\> Filing a VA Disability Claim](https://www.veteransbenefitskb.com/vaclaim)
 
-[\> Filing an Appeal](https://veteransbenefitskb.com/appeals)
+[\> Filing an Appeal](https://www.veteransbenefitskb.com/appeals)
 
 * * *
 
 [Categories](https://www.veteransbenefitskb.com/deathbenefits)
 
-> [Death/Survivor Benefits](https://veteransbenefitskb.com/#ds)
+> [Death/Survivor Benefits](https://www.veteransbenefitskb.com/#ds)
 
-\> [Education &](https://veteransbenefitskb.com/#ee)  [Employment](https://veteransbenefitskb.com/#ee)
+\> [Education &](https://www.veteransbenefitskb.com/#ee)  [Employment](https://www.veteransbenefitskb.com/#ee)
 
-\> [Health care](https://veteransbenefitskb.com/#healthcare)
+\> [Health care](https://www.veteransbenefitskb.com/#healthcare)
 
-\> [Housing](https://veteransbenefitskb.com/#housing)
+\> [Housing](https://www.veteransbenefitskb.com/#housing)
 
-\> [Miscellaneous](https://veteransbenefitskb.com/#misc)
+\> [Miscellaneous](https://www.veteransbenefitskb.com/#misc)
 
-\> [VA Disability Compensation](https://veteransbenefitskb.com/#va)
+\> [VA Disability Compensation](https://www.veteransbenefitskb.com/#va)
 
-\> [VA Pension](https://veteransbenefitskb.com/#pension)
+\> [VA Pension](https://www.veteransbenefitskb.com/#pension)
 
-This page is for benefits for the deceased Veteran. For Survivor benefits click [HERE](https://veteransbenefitskb.com/survivorbenefits)
+This page is for benefits for the deceased Veteran. For Survivor benefits click [HERE](https://www.veteransbenefitskb.com/survivorbenefits)
 
 <!-- Chunk 1064/1206 | Heading: Death Benefits | Words: 78 -->
 
@@ -23353,7 +23353,7 @@ There are three kinds of burial allowances: Non-Service Connected (NSC), Service
 
 Not every Veteran's survivors are entitled to a Burial allowance. If your Veteran was not in receipt of benefits at death, did not have a pending claim at death, or did not pass away under care, the claim for Burial benefits will very likely be denied.
 
-- **NSC Death**: This is VA's version of the [Social Security $255 Lump Sum Death Benefit](https://www.ssa.gov/forms/ssa-8.html)  The Veteran had to have been in receipt of benefits at the time of death ( [Compensation](https://veteransbenefitskb.com/vaclaim)  or [Pension](https://veteransbenefitskb.com/pension)
+- **NSC Death**: This is VA's version of the [Social Security $255 Lump Sum Death Benefit](https://www.ssa.gov/forms/ssa-8.html)  The Veteran had to have been in receipt of benefits at the time of death ( [Compensation](https://www.veteransbenefitskb.com/vaclaim)  or [Pension](https://www.veteransbenefitskb.com/pension)
 
 - The current _Maximum_ Burial Allowance is $978 and $978 for a plot.
 - **SC Death**: This is VA's burial decision indicating that the Veteran's death was somehow tied to their military service. The biggest driver of this is the combination of issues that the Veteran was rated for during their lifetime and the published cause of death on the death certificate. If you select SC Burial as an option on the application and that link is **NOT** obvious, you will get a letter asking you to provide scientific or medical evidence.
@@ -23679,35 +23679,35 @@ Open Menu
 
 Featured
 
-[\> Master Condition List](https://veteransbenefitskb.com/master)
+[\> Master Condition List](https://www.veteransbenefitskb.com/master)
 
-[\> Federal Benefits List by Combined Ratings](https://veteransbenefitskb.com/combinedbenefits)
+[\> Federal Benefits List by Combined Ratings](https://www.veteransbenefitskb.com/combinedbenefits)
 
-[\> Insider Insight into VBA Claim Processing](https://veteransbenefitskb.com/insight)
+[\> Insider Insight into VBA Claim Processing](https://www.veteransbenefitskb.com/insight)
 
-[\> Rating Schedule Index](https://veteransbenefitskb.com/ratingsindex)
+[\> Rating Schedule Index](https://www.veteransbenefitskb.com/ratingsindex)
 
-[\> Filing a VA Disability Claim](https://veteransbenefitskb.com/vaclaim)
+[\> Filing a VA Disability Claim](https://www.veteransbenefitskb.com/vaclaim)
 
-[\> Filing an Appeal](https://veteransbenefitskb.com/appeals)
+[\> Filing an Appeal](https://www.veteransbenefitskb.com/appeals)
 
 * * *
 
 [Categories](https://www.veteransbenefitskb.com/death-to-do)
 
-> [Death/Survivor Benefits](https://veteransbenefitskb.com/#ds)
+> [Death/Survivor Benefits](https://www.veteransbenefitskb.com/#ds)
 
-\> [Education &](https://veteransbenefitskb.com/#ee)  [Employment](https://veteransbenefitskb.com/#ee)
+\> [Education &](https://www.veteransbenefitskb.com/#ee)  [Employment](https://www.veteransbenefitskb.com/#ee)
 
-\> [Health care](https://veteransbenefitskb.com/#healthcare)
+\> [Health care](https://www.veteransbenefitskb.com/#healthcare)
 
-\> [Housing](https://veteransbenefitskb.com/#housing)
+\> [Housing](https://www.veteransbenefitskb.com/#housing)
 
-\> [Miscellaneous](https://veteransbenefitskb.com/#misc)
+\> [Miscellaneous](https://www.veteransbenefitskb.com/#misc)
 
-\> [VA Disability Compensation](https://veteransbenefitskb.com/#va)
+\> [VA Disability Compensation](https://www.veteransbenefitskb.com/#va)
 
-\> [VA Pension](https://veteransbenefitskb.com/#pension)
+\> [VA Pension](https://www.veteransbenefitskb.com/#pension)
 
 " _Grief is the price we pay for love_." \- _Queen Elizabeth_ II
 
@@ -23767,7 +23767,7 @@ If you need someone to talk to you can:
 
 ## **To-Do List**
 
-- Look over the Veteran [Death](https://veteransbenefitskb.com/death)  and [Survivor](https://veteransbenefitskb.com/survivor)  benefit pages.
+- Look over the Veteran [Death](https://www.veteransbenefitskb.com/death)  and [Survivor](https://www.veteransbenefitskb.com/survivor)  benefit pages.
 
 - To learn about benefits both you and the Veteran are entitled to.
 - Obtain 10-15 copies of the Death Certificate.
@@ -23780,7 +23780,7 @@ If you need someone to talk to you can:
 - **IMPORTANT NOTE:**
 
 - You are **NOT** required to accept the debt of the departed (if you are not party to the debt). Meaning if you did not co-sign things then the debt is (generally) owed just by the Veteranâ€™s estate. So if they had a mountain of credit card debt you do **NOT** have to assume the debt!
-- If Veteran received VA [Disability](https://veteransbenefitskb.com/vaclaim)  or [Pension](https://veteransbenefitskb.com/pension)  benefits:
+- If Veteran received VA [Disability](https://www.veteransbenefitskb.com/vaclaim)  or [Pension](https://www.veteransbenefitskb.com/pension)  benefits:
 
 - Contact the VA at 1-800-827-1000.
 - If Veteran received Social Security benefits:
@@ -23923,35 +23923,35 @@ Open Menu
 
 Featured
 
-[\> Master Condition List](https://veteransbenefitskb.com/master)
+[\> Master Condition List](https://www.veteransbenefitskb.com/master)
 
-[\> Federal Benefits List by Combined Ratings](https://veteransbenefitskb.com/combinedbenefits)
+[\> Federal Benefits List by Combined Ratings](https://www.veteransbenefitskb.com/combinedbenefits)
 
-[\> Insider Insight into VBA Claim Processing](https://veteransbenefitskb.com/insight)
+[\> Insider Insight into VBA Claim Processing](https://www.veteransbenefitskb.com/insight)
 
-[\> Rating Schedule Index](https://veteransbenefitskb.com/ratingsindex)
+[\> Rating Schedule Index](https://www.veteransbenefitskb.com/ratingsindex)
 
-[\> Filing a VA Disability Claim](https://veteransbenefitskb.com/vaclaim)
+[\> Filing a VA Disability Claim](https://www.veteransbenefitskb.com/vaclaim)
 
-[\> Filing an Appeal](https://veteransbenefitskb.com/appeals)
+[\> Filing an Appeal](https://www.veteransbenefitskb.com/appeals)
 
 * * *
 
 [Categories](https://www.veteransbenefitskb.com/life-insurance)
 
-> [Death/Survivor Benefits](https://veteransbenefitskb.com/#ds)
+> [Death/Survivor Benefits](https://www.veteransbenefitskb.com/#ds)
 
-\> [Education &](https://veteransbenefitskb.com/#ee)  [Employment](https://veteransbenefitskb.com/#ee)
+\> [Education &](https://www.veteransbenefitskb.com/#ee)  [Employment](https://www.veteransbenefitskb.com/#ee)
 
-\> [Health care](https://veteransbenefitskb.com/#healthcare)
+\> [Health care](https://www.veteransbenefitskb.com/#healthcare)
 
-\> [Housing](https://veteransbenefitskb.com/#housing)
+\> [Housing](https://www.veteransbenefitskb.com/#housing)
 
-\> [Miscellaneous](https://veteransbenefitskb.com/#misc)
+\> [Miscellaneous](https://www.veteransbenefitskb.com/#misc)
 
-\> [VA Disability Compensation](https://veteransbenefitskb.com/#va)
+\> [VA Disability Compensation](https://www.veteransbenefitskb.com/#va)
 
-\> [VA Pension](https://veteransbenefitskb.com/#pension)
+\> [VA Pension](https://www.veteransbenefitskb.com/#pension)
 
 Veterans who want to may purchase insurance policies that pay out to their selected beneficiary/ies, upon their death.
 
@@ -24007,7 +24007,7 @@ Must meet **ALL** of the following:
 
 - Be under 81\* years of age **BEFORE** applying.
 
-\*Exception: If you [Applied](https://veteransbenefitskb.com/vaclaim)  for VA disability **BEFORE** turning 81 and were later granted service-connection. You have **TWO YEARS** to apply from the day of the grant.
+\*Exception: If you [Applied](https://www.veteransbenefitskb.com/vaclaim)  for VA disability **BEFORE** turning 81 and were later granted service-connection. You have **TWO YEARS** to apply from the day of the grant.
 
 * * *
 
@@ -24053,7 +24053,7 @@ Meet one of the following:
 
 - Are within 1 year and 120 days of assignment to the Individual Ready Reserves (IRR) of a branch of service, or to the Inactive National Guard (ING). This includes members of the United States Public Health Service Inactive Reserve Corps (IRC); _or_
 
-- Are within 1 year and 120 days of being put on the [Temporary Disability Retirement List (TDRL)](https://veteransbenefitskb.com/medboard)
+- Are within 1 year and 120 days of being put on the [Temporary Disability Retirement List (TDRL)](https://www.veteransbenefitskb.com/medboard)
 
 * * *
 
@@ -24169,7 +24169,7 @@ The Veteran must meet all of the following criteria:
 
 - Be under 70 years of age; **AND**
 
-- Be approved for [Specially Adapted Housing (SAH) grant](https://veteransbenefitskb.com/housing#sah)
+- Be approved for [Specially Adapted Housing (SAH) grant](https://www.veteransbenefitskb.com/housing#sah)
 
 * * *
 
@@ -24345,37 +24345,37 @@ Open Menu
 
 Featured
 
-[\> Master Condition List](https://veteransbenefitskb.com/master)
+[\> Master Condition List](https://www.veteransbenefitskb.com/master)
 
-[\> Federal Benefits List by Combined Ratings](https://veteransbenefitskb.com/combinedbenefits)
+[\> Federal Benefits List by Combined Ratings](https://www.veteransbenefitskb.com/combinedbenefits)
 
-[\> Insider Insight into VBA Claim Processing](https://veteransbenefitskb.com/insight)
+[\> Insider Insight into VBA Claim Processing](https://www.veteransbenefitskb.com/insight)
 
-[\> Rating Schedule Index](https://veteransbenefitskb.com/ratingsindex)
+[\> Rating Schedule Index](https://www.veteransbenefitskb.com/ratingsindex)
 
-[\> Filing a VA Disability Claim](https://veteransbenefitskb.com/vaclaim)
+[\> Filing a VA Disability Claim](https://www.veteransbenefitskb.com/vaclaim)
 
-[\> Filing an Appeal](https://veteransbenefitskb.com/appeals)
+[\> Filing an Appeal](https://www.veteransbenefitskb.com/appeals)
 
 * * *
 
 [Categories](https://www.veteransbenefitskb.com/survivorbenefits)
 
-> [Death/Survivor Benefits](https://veteransbenefitskb.com/#ds)
+> [Death/Survivor Benefits](https://www.veteransbenefitskb.com/#ds)
 
-\> [Education &](https://veteransbenefitskb.com/#ee)  [Employment](https://veteransbenefitskb.com/#ee)
+\> [Education &](https://www.veteransbenefitskb.com/#ee)  [Employment](https://www.veteransbenefitskb.com/#ee)
 
-\> [Health care](https://veteransbenefitskb.com/#healthcare)
+\> [Health care](https://www.veteransbenefitskb.com/#healthcare)
 
-\> [Housing](https://veteransbenefitskb.com/#housing)
+\> [Housing](https://www.veteransbenefitskb.com/#housing)
 
-\> [Miscellaneous](https://veteransbenefitskb.com/#misc)
+\> [Miscellaneous](https://www.veteransbenefitskb.com/#misc)
 
-\> [VA Disability Compensation](https://veteransbenefitskb.com/#va)
+\> [VA Disability Compensation](https://www.veteransbenefitskb.com/#va)
 
-\> [VA Pension](https://veteransbenefitskb.com/#pension)
+\> [VA Pension](https://www.veteransbenefitskb.com/#pension)
 
-This page is for benefits for surviving spouses, children, and parents. For death benefits click [HERE](https://veteransbenefitskb.com/deathbenefits)
+This page is for benefits for surviving spouses, children, and parents. For death benefits click [HERE](https://www.veteransbenefitskb.com/deathbenefits)
 
 While these benefits won't help Veterans, they do help those who survive them. This is one of the reasons why it is important that we Veterans are aware of our own benefits, and also that our dependents are made aware of their own benefits.
 
@@ -24407,20 +24407,20 @@ If you need someone to talk to you can:
 
 | Benefit | Category | Spouse | Child | Parent |
 | --- | --- | --- | --- | --- |
-| [National Cemetery Burial](https://veteransbenefitskb.com/survivorbenefits#ncb)  | Death | Yes | Yes | No |
-| [Civilian Health and Medical Program of the Department of Veterans Affairs (CHAMPVA)](https://veteransbenefitskb.com/champva)  | Health Care | Yes | Yes | No |
-| [Continuance of Claim/Appeal](https://veteransbenefitskb.com/survivorbenefits#accrued)  | Monetary | Yes | Yes | Yes |
-| [Dependency Indemnity Compensation (DIC)](https://veteransbenefitskb.com/survivorbenefits#dic)  | Monetary | Yes | Yes | Yes |
-| [Dependents Educational Assistance (DEA)](https://veteransbenefitskb.com/survivorbenefits#dea)  | Education | Yes | Yes | No |
-| [Free Tuition](https://veteransbenefitskb.com/free_tuition)  | Education | Yes | Yes | No |
-| [Educational and Career Counseling (Chapter 36)](https://veteransbenefitskb.com/survivorbenefits#36)  | Education/Career | Yes | Yes | No |
-| [Federal Civil Service Preference](https://veteransbenefitskb.com/survivorbenefits#fcsp)  | Employment | Yes | No | Yes |
-| [Life Insurance](https://veteransbenefitskb.com/life-insurance)  | Monetary | Yes | Yes | Yes |
-| [Medal of Honor Pension](https://veteransbenefitskb.com/mohp)  | Monetary | Yes | No | No |
-| [Nomination of Children to a Service Academy](https://veteransbenefitskb.com/survivorbenefits#nomination)  | Education | No | Yes | No |
-| [Survivor Benefit Plan/Reserve Component (SBP)/(RCSBP)](https://veteransbenefitskb.com/survivorbenefits#sbp)  | Monetary | Yes | Yes | Yes |
-| [Survivors Pension](https://veteransbenefitskb.com/survivorbenefits#pension)  | Monetary | Yes | Yes | No |
-| [VA Home Loan](https://veteransbenefitskb.com/housing#loan)  | Housing | Yes | No | No |
+| [National Cemetery Burial](https://www.veteransbenefitskb.com/survivorbenefits#ncb)  | Death | Yes | Yes | No |
+| [Civilian Health and Medical Program of the Department of Veterans Affairs (CHAMPVA)](https://www.veteransbenefitskb.com/champva)  | Health Care | Yes | Yes | No |
+| [Continuance of Claim/Appeal](https://www.veteransbenefitskb.com/survivorbenefits#accrued)  | Monetary | Yes | Yes | Yes |
+| [Dependency Indemnity Compensation (DIC)](https://www.veteransbenefitskb.com/survivorbenefits#dic)  | Monetary | Yes | Yes | Yes |
+| [Dependents Educational Assistance (DEA)](https://www.veteransbenefitskb.com/survivorbenefits#dea)  | Education | Yes | Yes | No |
+| [Free Tuition](https://www.veteransbenefitskb.com/free_tuition)  | Education | Yes | Yes | No |
+| [Educational and Career Counseling (Chapter 36)](https://www.veteransbenefitskb.com/survivorbenefits#36)  | Education/Career | Yes | Yes | No |
+| [Federal Civil Service Preference](https://www.veteransbenefitskb.com/survivorbenefits#fcsp)  | Employment | Yes | No | Yes |
+| [Life Insurance](https://www.veteransbenefitskb.com/life-insurance)  | Monetary | Yes | Yes | Yes |
+| [Medal of Honor Pension](https://www.veteransbenefitskb.com/mohp)  | Monetary | Yes | No | No |
+| [Nomination of Children to a Service Academy](https://www.veteransbenefitskb.com/survivorbenefits#nomination)  | Education | No | Yes | No |
+| [Survivor Benefit Plan/Reserve Component (SBP)/(RCSBP)](https://www.veteransbenefitskb.com/survivorbenefits#sbp)  | Monetary | Yes | Yes | Yes |
+| [Survivors Pension](https://www.veteransbenefitskb.com/survivorbenefits#pension)  | Monetary | Yes | Yes | No |
+| [VA Home Loan](https://www.veteransbenefitskb.com/housing#loan)  | Housing | Yes | No | No |
 
 [Return to top](https://www.veteransbenefitskb.com/survivorbenefits#top)
 
@@ -24472,7 +24472,7 @@ Adult children who are unmarried and:
 
 ## **Civilian Health and Medical Program of the Department of Veterans Affairs (CHAMPVA)**
 
-- Click [HERE](https://veteransbenefitskb.com/champva)  for information on CHAMPVA.
+- Click [HERE](https://www.veteransbenefitskb.com/champva)  for information on CHAMPVA.
 
 [Return to top](https://www.veteransbenefitskb.com/survivorbenefits#top)
 
@@ -24541,7 +24541,7 @@ NOTES:
 
 ### How to File
 
-While you can file yourself, it is strongly recommended to utilize a [VSO](https://veteransbenefitskb.com/vso)  to help with this process.
+While you can file yourself, it is strongly recommended to utilize a [VSO](https://www.veteransbenefitskb.com/vso)  to help with this process.
 
 If you are comfortable doing it yourself complete the following appropriate form(s) and submit it as indicated on the form:
 
@@ -24571,9 +24571,9 @@ If youâ€™re the surviving spouse, child, or parent of a Servicemember who d
 - This **DOES** include unclaimed complications/aggravations of service-connected condition.
 - Died from something that is related to service but was never formally granted service-connection during their lifetime;
 
-- Died due to VA medical care/treatment (click [HERE](https://veteransbenefitskb.com/1151)  for details);
+- Died due to VA medical care/treatment (click [HERE](https://www.veteransbenefitskb.com/1151)  for details);
 
-- Died due to participation in a VA work program such as [Veteran Readiness and Employment (VR&E)](https://veteransbenefitskb.com/vre)  or
+- Died due to participation in a VA work program such as [Veteran Readiness and Employment (VR&E)](https://www.veteransbenefitskb.com/vre)  or
 
 - Didnâ€™t die from a service-connected illness or injury, **BUT** was rated as 100% due to s _ervice-connected_ disabilit(ities) for a _certain period of time_.
 
@@ -24583,7 +24583,7 @@ If youâ€™re the surviving spouse, child, or parent of a Servicemember who d
 
 - Since their release from Active Duty and for at least 5 years immediately before their death; or
 
-- For at least 1 year before their death if they were a [Former prisoner of war](https://veteransbenefitskb.com/pow)  who died after September 30, 1999.
+- For at least 1 year before their death if they were a [Former prisoner of war](https://www.veteransbenefitskb.com/pow)  who died after September 30, 1999.
 
 You may be able to get a tax-free monetary benefit:
 
@@ -24593,21 +24593,21 @@ You may be able to get a tax-free monetary benefit:
 
 **IMPORTANT NOTES:**
 
-- [Total Disability Individual Unemployability (TDIU/IU)](https://veteransbenefitskb.com/tdiu)  **DOES** count as being rated 100%!
+- [Total Disability Individual Unemployability (TDIU/IU)](https://www.veteransbenefitskb.com/tdiu)  **DOES** count as being rated 100%!
 
 - Those incarcerated for **over 60 days** due to a felony _or_ are a fugitive felon will have their payments **STOPPED**!
 
 - To file for apportionment [_VA Form 21-0788_](http://www.vba.va.gov/pubs/forms/VBA-21-0788-ARE.pdf)  must be completed, signed by either the surviving spouse _or_ their dependent(s), and submitted to the VA _._
-- DIC **CANNOT** be paid at the same time as [Survivors Pension Benefit](https://veteransbenefitskb.com/survivorbenefits#pension)
+- DIC **CANNOT** be paid at the same time as [Survivors Pension Benefit](https://www.veteransbenefitskb.com/survivorbenefits#pension)
 
 - The higher of the 2 rates will be paid out.
-- DIC **CAN** be paid at the same time as [Survivor Benefit Plan (SBP)](https://veteransbenefitskb.com/survivorbenefits#sbp)  or [Reserve Component Survivor Benefit Plan (RCSBP)](https://veteransbenefitskb.com/survivorbenefits#sbp)
+- DIC **CAN** be paid at the same time as [Survivor Benefit Plan (SBP)](https://www.veteransbenefitskb.com/survivorbenefits#sbp)  or [Reserve Component Survivor Benefit Plan (RCSBP)](https://www.veteransbenefitskb.com/survivorbenefits#sbp)
 
-- If Veteranâ€™s death was caused by something previously denied, that is now [Presumptive](https://veteransbenefitskb.com/presumptive)  _or_ was simply never claimed you **SHOULD** still apply!
+- If Veteranâ€™s death was caused by something previously denied, that is now [Presumptive](https://www.veteransbenefitskb.com/presumptive)  _or_ was simply never claimed you **SHOULD** still apply!
 
-- If the Veteran simply never filed for service-connection before, click [HERE](https://veteransbenefitskb.com/vaclaim)  to learn about what evidence the VA needs to help establish service-connection for DIC purposes. Additionally, if applicable VA will consider non-presumptive [Toxic exposures](https://veteransbenefitskb.com/toxic)
+- If the Veteran simply never filed for service-connection before, click [HERE](https://www.veteransbenefitskb.com/vaclaim)  to learn about what evidence the VA needs to help establish service-connection for DIC purposes. Additionally, if applicable VA will consider non-presumptive [Toxic exposures](https://www.veteransbenefitskb.com/toxic)
 
-- Even if the condition was previously denied and is **NOT** presumptive click [HERE](https://veteransbenefitskb.com/appeals)  to learn about evidence you can submit to try and overturn that denial to establish DIC. Additionally, if applicable VA will now consider non-presumptive toxic exposures.
+- Even if the condition was previously denied and is **NOT** presumptive click [HERE](https://www.veteransbenefitskb.com/appeals)  to learn about evidence you can submit to try and overturn that denial to establish DIC. Additionally, if applicable VA will now consider non-presumptive toxic exposures.
 
 **_SPECIAL NOTES:_**
 
@@ -24615,7 +24615,7 @@ You may be able to get a tax-free monetary benefit:
 
 - If DIC was previously denied based upon a condition the PACT ACT made presumptive, the effective date of the award will be back dated to when the prior application was received. ( [XII.i.3.A.2.c.](https://www.knowva.ebenefits.va.gov/system/templates/selfservice/va_ssnew/help/customer/locale/en-US/portal/554400000001018/content/554400000175209/M21-1-Part-XII-Subpart-i-Chapter-3-Section-A-Dependency-and-Indemnity-Compensation-DIC-Initial-Authorization-Issues)
 
-- If a law/regulation/policy made the condition presumptive then [Liberalizing law](https://veteransbenefitskb.com/edate#lib)  **CAN** apply to the effective date of the grant of DIC.
+- If a law/regulation/policy made the condition presumptive then [Liberalizing law](https://www.veteransbenefitskb.com/edate#lib)  **CAN** apply to the effective date of the grant of DIC.
 
 * * *
 
@@ -24721,7 +24721,7 @@ If youâ€™re a surviving parent, fill out an Application for Dependency and 
 
 #### Getting Help
 
-- If you need help you can use a [VSO](https://veteransbenefitskb.com/vso)  or go to a [VA regional office](https://www.va.gov/find-locations/?facilityType=benefits)  and get help from a VA employee.
+- If you need help you can use a [VSO](https://www.veteransbenefitskb.com/vso)  or go to a [VA regional office](https://www.va.gov/find-locations/?facilityType=benefits)  and get help from a VA employee.
 
 [Return to top](https://www.veteransbenefitskb.com/survivorbenefits#top)
 
@@ -24733,7 +24733,7 @@ If youâ€™re a surviving parent, fill out an Application for Dependency and 
 
 The Dependentsâ€™ Educational Assistance program provides education benefits for the spouse and dependent children (includes step and adopted) of a Veteran or Servicemember who meets one of the following criteria:
 
-- Veteran is [Permanently and totally](https://veteransbenefitskb.com/pnt)  disabled from service-connected conditions;
+- Veteran is [Permanently and totally](https://www.veteransbenefitskb.com/pnt)  disabled from service-connected conditions;
 
 - Died in service;
 
@@ -24915,7 +24915,7 @@ In the event a dependent is eligible for Chapter 35 under both parents, they may
 
 Depending upon the state you or your children live in or want to go to school in, they may be entitled to free tuition.
 
-- For more information click [HERE](https://veteransbenefitskb.com/free_tuition)
+- For more information click [HERE](https://www.veteransbenefitskb.com/free_tuition)
 
 [Return to top](https://www.veteransbenefitskb.com/survivorbenefits#top)
 
@@ -24965,7 +24965,7 @@ Derived Preference is a method where you, as the spouse, widow/widower, or paren
 
 The Veteran needs to be unable to qualify for a federal position along the general lines of his or her usual occupation because of a service-connected disability. This criteria is meet when:
 
-- Veteran is unemployed **AND** is rated at 100% or as [Unemployable](https://veteransbenefitskb.com/tdiu)
+- Veteran is unemployed **AND** is rated at 100% or as [Unemployable](https://www.veteransbenefitskb.com/tdiu)
 
 - Veteran has retired, been separated, or resigned from a civil service position on the basis of a disability that is service-connected; or
 
@@ -25025,7 +25025,7 @@ To be eligible the parent must be:
 
 ## **Life Insurance**
 
-- Click [HERE](https://veteransbenefitskb.com/life-insurance)  for information.
+- Click [HERE](https://www.veteransbenefitskb.com/life-insurance)  for information.
 
 [Return to top](https://www.veteransbenefitskb.com/survivorbenefits#top)
 
@@ -25045,7 +25045,7 @@ To be eligible the parent must be:
 
 ## **Nomination of Children to a Service Academy**
 
-If the Veteran is rated 100%/ [TDIU](https://veteransbenefitskb.com/tdiu)  **OR** died due to a service-connected disability their children can be nominated to the following service academies:
+If the Veteran is rated 100%/ [TDIU](https://www.veteransbenefitskb.com/tdiu)  **OR** died due to a service-connected disability their children can be nominated to the following service academies:
 
 - [Air Force](https://www.academyadmissions.com/apply/nomination/)
 
@@ -25171,7 +25171,7 @@ Be unmarried and meet at least one of the requirements listed below:
 
 ## **VA Home Loan**
 
-- Click [HERE](https://veteransbenefitskb.com/housing#loan)  for information.
+- Click [HERE](https://www.veteransbenefitskb.com/housing#loan)  for information.
 
 [Return to top](https://www.veteransbenefitskb.com/survivorbenefits#top)
 
@@ -25325,47 +25325,47 @@ Open Menu
 
 Featured
 
-[\> Master Condition List](https://veteransbenefitskb.com/master)
+[\> Master Condition List](https://www.veteransbenefitskb.com/master)
 
-[\> Federal Benefits List by Combined Ratings](https://veteransbenefitskb.com/combinedbenefits)
+[\> Federal Benefits List by Combined Ratings](https://www.veteransbenefitskb.com/combinedbenefits)
 
-[\> Insider Insight into VBA Claim Processing](https://veteransbenefitskb.com/insight)
+[\> Insider Insight into VBA Claim Processing](https://www.veteransbenefitskb.com/insight)
 
-[\> Rating Schedule Index](https://veteransbenefitskb.com/ratingsindex)
+[\> Rating Schedule Index](https://www.veteransbenefitskb.com/ratingsindex)
 
-[\> Filing a VA Disability Claim](https://veteransbenefitskb.com/vaclaim)
+[\> Filing a VA Disability Claim](https://www.veteransbenefitskb.com/vaclaim)
 
-[\> Filing an Appeal](https://veteransbenefitskb.com/appeals)
+[\> Filing an Appeal](https://www.veteransbenefitskb.com/appeals)
 
 * * *
 
 [Categories](https://www.veteransbenefitskb.com/button)
 
-> [Death/Survivor Benefits](https://veteransbenefitskb.com/#ds)
+> [Death/Survivor Benefits](https://www.veteransbenefitskb.com/#ds)
 
-\> [Education &](https://veteransbenefitskb.com/#ee)  [Employment](https://veteransbenefitskb.com/#ee)
+\> [Education &](https://www.veteransbenefitskb.com/#ee)  [Employment](https://www.veteransbenefitskb.com/#ee)
 
-\> [Health care](https://veteransbenefitskb.com/#healthcare)
+\> [Health care](https://www.veteransbenefitskb.com/#healthcare)
 
-\> [Housing](https://veteransbenefitskb.com/#housing)
+\> [Housing](https://www.veteransbenefitskb.com/#housing)
 
-\> [Miscellaneous](https://veteransbenefitskb.com/#misc)
+\> [Miscellaneous](https://www.veteransbenefitskb.com/#misc)
 
-\> [VA Disability Compensation](https://veteransbenefitskb.com/#va)
+\> [VA Disability Compensation](https://www.veteransbenefitskb.com/#va)
 
-\> [VA Pension](https://veteransbenefitskb.com/#pension)
+\> [VA Pension](https://www.veteransbenefitskb.com/#pension)
 
 Unfortunately, there is a lot of misinformation and confusion that surround this button. But here is the truth in the matter:
 
 There are only **FOUR** cases in which pressing this button _maybe_ does anything:
 
-1. You submitted a [Supplemental claim](https://veteransbenefitskb.com/appeals#995)  and did **NOT** select anything in the 5103 notice acknowledged block _or_ you selected you would like the VA to send it.
+1. You submitted a [Supplemental claim](https://www.veteransbenefitskb.com/appeals#995)  and did **NOT** select anything in the 5103 notice acknowledged block _or_ you selected you would like the VA to send it.
 
-2. Your POA submitted your [Claim](https://veteransbenefitskb.com/vaclaim)  or [Appeal](https://veteransbenefitskb.com/appeals)
+2. Your POA submitted your [Claim](https://www.veteransbenefitskb.com/vaclaim)  or [Appeal](https://www.veteransbenefitskb.com/appeals)
 
-3. You filed for [TDIU](https://veteransbenefitskb.com/tdiu)  and did **NOT** include a [VA Form 21-526EZ](https://www.vba.va.gov/pubs/forms/vba-21-526ez-are.pdf)
+3. You filed for [TDIU](https://www.veteransbenefitskb.com/tdiu)  and did **NOT** include a [VA Form 21-526EZ](https://www.vba.va.gov/pubs/forms/vba-21-526ez-are.pdf)
 
-4. You filed for [Aid and Attendance/SMC](https://veteransbenefitskb.com/smc)  and did **NOT** include a [VA Form 21-526EZ](https://www.vba.va.gov/pubs/forms/vba-21-526ez-are.pdf)
+4. You filed for [Aid and Attendance/SMC](https://www.veteransbenefitskb.com/smc)  and did **NOT** include a [VA Form 21-526EZ](https://www.vba.va.gov/pubs/forms/vba-21-526ez-are.pdf)
 
 * * *
 
@@ -25375,7 +25375,7 @@ There are only **FOUR** cases in which pressing this button _maybe_ does anythin
 
 ## **What the Button Actually Does**
 
-Pressing the button adds a document to your [Claim file](https://veteransbenefitskb.com/cfile)  that says you have submitted all evidence you plan on submitting.
+Pressing the button adds a document to your [Claim file](https://www.veteransbenefitskb.com/cfile)  that says you have submitted all evidence you plan on submitting.
 
 * * *
 
@@ -25401,7 +25401,7 @@ So yes, for those who say it does nothing... You are right in the _vast majority
 
 - #### Will pressing the button prevent the VA from obtaining evidence?
 
-- No, the VA is still free to obtain evidence. This **DOES** include ordering [Compensation and Pension Examinations](https://veteransbenefitskb.com/cnp)
+- No, the VA is still free to obtain evidence. This **DOES** include ordering [Compensation and Pension Examinations](https://www.veteransbenefitskb.com/cnp)
 
 - #### I can't find this button!?
 
@@ -25493,35 +25493,35 @@ Open Menu
 
 Featured
 
-[\> Master Condition List](https://veteransbenefitskb.com/master)
+[\> Master Condition List](https://www.veteransbenefitskb.com/master)
 
-[\> Federal Benefits List by Combined Ratings](https://veteransbenefitskb.com/combinedbenefits)
+[\> Federal Benefits List by Combined Ratings](https://www.veteransbenefitskb.com/combinedbenefits)
 
-[\> Insider Insight into VBA Claim Processing](https://veteransbenefitskb.com/insight)
+[\> Insider Insight into VBA Claim Processing](https://www.veteransbenefitskb.com/insight)
 
-[\> Rating Schedule Index](https://veteransbenefitskb.com/ratingsindex)
+[\> Rating Schedule Index](https://www.veteransbenefitskb.com/ratingsindex)
 
-[\> Filing a VA Disability Claim](https://veteransbenefitskb.com/vaclaim)
+[\> Filing a VA Disability Claim](https://www.veteransbenefitskb.com/vaclaim)
 
-[\> Filing an Appeal](https://veteransbenefitskb.com/appeals)
+[\> Filing an Appeal](https://www.veteransbenefitskb.com/appeals)
 
 * * *
 
 [Categories](https://www.veteransbenefitskb.com/bdd)
 
-> [Death/Survivor Benefits](https://veteransbenefitskb.com/#ds)
+> [Death/Survivor Benefits](https://www.veteransbenefitskb.com/#ds)
 
-\> [Education &](https://veteransbenefitskb.com/#ee)  [Employment](https://veteransbenefitskb.com/#ee)
+\> [Education &](https://www.veteransbenefitskb.com/#ee)  [Employment](https://www.veteransbenefitskb.com/#ee)
 
-\> [Health care](https://veteransbenefitskb.com/#healthcare)
+\> [Health care](https://www.veteransbenefitskb.com/#healthcare)
 
-\> [Housing](https://veteransbenefitskb.com/#housing)
+\> [Housing](https://www.veteransbenefitskb.com/#housing)
 
-\> [Miscellaneous](https://veteransbenefitskb.com/#misc)
+\> [Miscellaneous](https://www.veteransbenefitskb.com/#misc)
 
-\> [VA Disability Compensation](https://veteransbenefitskb.com/#va)
+\> [VA Disability Compensation](https://www.veteransbenefitskb.com/#va)
 
-\> [VA Pension](https://veteransbenefitskb.com/#pension)
+\> [VA Pension](https://www.veteransbenefitskb.com/#pension)
 
 If you are between **180-90 days** _before_ separation you can file a BDD claim within that window of time.
 
@@ -25539,11 +25539,11 @@ Ideally, this will allow your claim to get a head-start and get you a decision t
 - If some records are missing/incomplete that is fine - just submit what you can for now!
 - You do **NOT** need to attend all your exams before the window closes or even before you separate.
 
-- **ALWAYS** keep the VA updated of your location! That way they can properly notify you any [Examinations](https://veteransbenefitskb.com/#cnp)
+- **ALWAYS** keep the VA updated of your location! That way they can properly notify you any [Examinations](https://www.veteransbenefitskb.com/#cnp)
 
 - BDD claims **CANNOT** have ratings finalized till the day **AFTER** you officially separate from active duty!
 
-- If you had a previous period of service and had claimed condition(s) denied, you **MUST** file an appropriate [Appeal](https://veteransbenefitskb.com/appeals)  to re-claim those denied issues!
+- If you had a previous period of service and had claimed condition(s) denied, you **MUST** file an appropriate [Appeal](https://www.veteransbenefitskb.com/appeals)  to re-claim those denied issues!
 
 - If you decide to file for additional conditions when you are _under 90 days_ to separation, a separate claim **WILL** be created while the BDD continues as a BDD claim!
 
@@ -25551,7 +25551,7 @@ Ideally, this will allow your claim to get a head-start and get you a decision t
 
 **RATER NOTES:**
 
-- Seriously, if you have **NOT** been seen in-service for your claimed condition(s) it is **CRITICAL**that you file **_BEFORE_** you separate! It **WILL GREATLY** help you in getting [Service-connection](https://veteransbenefitskb.com/serviceconnection)  So even if it might delay you getting a decision it **WILL GREATLY** help you in the end!
+- Seriously, if you have **NOT** been seen in-service for your claimed condition(s) it is **CRITICAL**that you file **_BEFORE_** you separate! It **WILL GREATLY** help you in getting [Service-connection](https://www.veteransbenefitskb.com/serviceconnection)  So even if it might delay you getting a decision it **WILL GREATLY** help you in the end!
 
 - Seriously, the bar to get service-connection gets **NO LOWER** than when you file a claim while **STILL ON ACTIVE DUTY**! In short, in **MOST** cases so long as you can get a _current diagnosis_ you will get service-connection!
 
@@ -25559,9 +25559,9 @@ NOTES:
 
 - BDD claims _are_ given [Priority](https://www.veteransbenefitskb.com/fast)  in terms of claims processing.
 
-- All conditions will be considered under [Primary service-connection](https://veteransbenefitskb.com/serviceconnection)  even if they are factually due to another condition.
+- All conditions will be considered under [Primary service-connection](https://www.veteransbenefitskb.com/serviceconnection)  even if they are factually due to another condition.
 
-- Unless there is clear and unmistakable evidence the condition was preexisting, then the VA will consider under [Aggravation](https://veteransbenefitskb.com/agg)
+- Unless there is clear and unmistakable evidence the condition was preexisting, then the VA will consider under [Aggravation](https://www.veteransbenefitskb.com/agg)
 
 <!-- Chunk 1169/1206 | Heading: Benefits Delivery at Discharge (BDD) | Words: 526 -->
 
@@ -25571,7 +25571,7 @@ NOTES:
 
 To file a BDD claim online by yourself, you can go to [VA.gov](https://www.va.gov/disability/how-to-file-claim/)
 
-Alternatively, you can have a [Veterans Service Officer (VSO)](https://veteransbenefitskb.com/vso)  assist you in filing a claim.
+Alternatively, you can have a [Veterans Service Officer (VSO)](https://www.veteransbenefitskb.com/vso)  assist you in filing a claim.
 
 **IMPORTANT NOTES:**
 
@@ -25587,7 +25587,7 @@ Alternatively, you can have a [Veterans Service Officer (VSO)](https://veteransb
 
 ## **VA Overseas Military Coordinators (OMSCs)**
 
-For those currently stationed overseas, email these inboxes to help you schedule your [Compensation and Pension](https://veteransbenefitskb.com/Cnp)  examinations!
+For those currently stationed overseas, email these inboxes to help you schedule your [Compensation and Pension](https://www.veteransbenefitskb.com/Cnp)  examinations!
 
 | Location | Email Address |
 | --- | --- |
@@ -25616,11 +25616,11 @@ For those currently stationed overseas, email these inboxes to help you schedule
 
 ## **Viewing Exam Reports**
 
-Active Duty service members who have filed a BDD claim **ARE** be able to access their [Compensation & Pension](https://veteransbenefitskb.com/cnp)  Examiner Reports' via the [MHS Genesis](https://myaccess.dmdc.osd.mil/identitymanagement/app/login)  under medical records > documents.
+Active Duty service members who have filed a BDD claim **ARE** be able to access their [Compensation & Pension](https://www.veteransbenefitskb.com/cnp)  Examiner Reports' via the [MHS Genesis](https://myaccess.dmdc.osd.mil/identitymanagement/app/login)  under medical records > documents.
 
 These will usually show up there in around 30 days after the examination is completed.
 
-You can use these as a sneak-peak to try and predict what rating(s) you may get by comparing the results with the [Rating schedule](https://veteransbenefitskb.com/ratingsindex)
+You can use these as a sneak-peak to try and predict what rating(s) you may get by comparing the results with the [Rating schedule](https://www.veteransbenefitskb.com/ratingsindex)
 
 [Return to top](https://www.veteransbenefitskb.com/bdd#top)
 
@@ -25640,11 +25640,11 @@ You can use these as a sneak-peak to try and predict what rating(s) you may get 
 
 - #### Who gave the VA a time machine! My claim status shows a date in the future?
 
-- The date shown is the date after you separate from the military. This is because your [Effective date](https://veteransbenefitskb.com/edate)  cannot be any earlier.
+- The date shown is the date after you separate from the military. This is because your [Effective date](https://www.veteransbenefitskb.com/edate)  cannot be any earlier.
 
 - #### Do I have to explain how I developed a condition?
 
-- No, when you joined the military you did so with a presumption of soundness - meaning you were 100% healthy (barring anything brought up at MEPS). So the fact something popped up while you were in service means you are good to go (unless it is something the VA will [NOT service connect](https://veteransbenefitskb.com/NoRate)
+- No, when you joined the military you did so with a presumption of soundness - meaning you were 100% healthy (barring anything brought up at MEPS). So the fact something popped up while you were in service means you are good to go (unless it is something the VA will [NOT service connect](https://www.veteransbenefitskb.com/NoRate)
 
 - #### My separation date changed! Do I need to do anything?
 
@@ -25652,11 +25652,11 @@ You can use these as a sneak-peak to try and predict what rating(s) you may get 
 
 - #### Whoops, looks like I am just gonna stay in the military. Do I need to do anything?
 
-- Yes! Submit a [Personal statement](https://veteransbenefitskb.com/personal)  explaining the situation. Failure to do so _may_ result in a debt being created - if the VA starts paying you!
+- Yes! Submit a [Personal statement](https://www.veteransbenefitskb.com/personal)  explaining the situation. Failure to do so _may_ result in a debt being created - if the VA starts paying you!
 
 - #### The website is not letting me submit a claim online! I get a message to contact the VA and the phone people are not able to help me!
 
-- Looks like you ran into a technical issue (welcome to the VA!). If the VA is unable to sort this issue out and your BDD window is closing fast you should submit your claim via a [VSO](https://veteransbenefitskb.com//vso)  or via fax: 844-531-7818.
+- Looks like you ran into a technical issue (welcome to the VA!). If the VA is unable to sort this issue out and your BDD window is closing fast you should submit your claim via a [VSO](https://www.veteransbenefitskb.com//vso)  or via fax: 844-531-7818.
 
 - #### I am in the National Guard/Reserves can I file a BDD claim?
 
@@ -25706,13 +25706,13 @@ You can use these as a sneak-peak to try and predict what rating(s) you may get 
 
 ## **See Also**
 
-- [Advice for Separating Servicemembers](https://veteransbenefitskb.com/fresh)
+- [Advice for Separating Servicemembers](https://www.veteransbenefitskb.com/fresh)
 
-- [Commonly Overlooked Condition List](https://veteransbenefitskb.com/commonly)
+- [Commonly Overlooked Condition List](https://www.veteransbenefitskb.com/commonly)
 
-- [Compensation and Pension Examination](https://veteransbenefitskb.com/cnp)
+- [Compensation and Pension Examination](https://www.veteransbenefitskb.com/cnp)
 
-- [Filing a VA Claim](https://veteransbenefitskb.com/vaclaim)
+- [Filing a VA Claim](https://www.veteransbenefitskb.com/vaclaim)
 
 - [National Guard and Reserve Claims](https://www.veteransbenefitskb.com/ngr)
 
@@ -25800,35 +25800,35 @@ Open Menu
 
 Featured
 
-[\> Master Condition List](https://veteransbenefitskb.com/master)
+[\> Master Condition List](https://www.veteransbenefitskb.com/master)
 
-[\> Federal Benefits List by Combined Ratings](https://veteransbenefitskb.com/combinedbenefits)
+[\> Federal Benefits List by Combined Ratings](https://www.veteransbenefitskb.com/combinedbenefits)
 
-[\> Insider Insight into VBA Claim Processing](https://veteransbenefitskb.com/insight)
+[\> Insider Insight into VBA Claim Processing](https://www.veteransbenefitskb.com/insight)
 
-[\> Rating Schedule Index](https://veteransbenefitskb.com/ratingsindex)
+[\> Rating Schedule Index](https://www.veteransbenefitskb.com/ratingsindex)
 
-[\> Filing a VA Disability Claim](https://veteransbenefitskb.com/vaclaim)
+[\> Filing a VA Disability Claim](https://www.veteransbenefitskb.com/vaclaim)
 
-[\> Filing an Appeal](https://veteransbenefitskb.com/appeals)
+[\> Filing an Appeal](https://www.veteransbenefitskb.com/appeals)
 
 * * *
 
 [Categories](https://www.veteransbenefitskb.com/ratingsindex)
 
-\> [Death/Survivor Benefits](https://veteransbenefitskb.com/#ds)
+\> [Death/Survivor Benefits](https://www.veteransbenefitskb.com/#ds)
 
-\> [Education & Employment](https://veteransbenefitskb.com/#ee)
+\> [Education & Employment](https://www.veteransbenefitskb.com/#ee)
 
-\> [Health care](https://veteransbenefitskb.com/#healthcare)
+\> [Health care](https://www.veteransbenefitskb.com/#healthcare)
 
-\> [Housing](https://veteransbenefitskb.com/#housing)
+\> [Housing](https://www.veteransbenefitskb.com/#housing)
 
-\> [Miscellaneous](https://veteransbenefitskb.com/#misc)
+\> [Miscellaneous](https://www.veteransbenefitskb.com/#misc)
 
-\> [VA Disability Compensation](https://veteransbenefitskb.com/#va)
+\> [VA Disability Compensation](https://www.veteransbenefitskb.com/#va)
 
-\> [VA Pension](https://veteransbenefitskb.com/#pension)
+\> [VA Pension](https://www.veteransbenefitskb.com/#pension)
 
 The Veterans Benefits Administration (VBA) uses the [Schedule For Rating Disabilities](https://www.ecfr.gov/current/title-38/chapter-I/part-4)  in conjunction with the [M21-1 Adjudication Procedures Manual](https://www.knowva.ebenefits.va.gov/system/templates/selfservice/va_ssnew/help/customer/locale/en-US/portal/554400000001018/topic/554400000004049/M21-1-Adjudication-Procedures-Manual)  to determine what disability evaluation to award Veterans depending upon the severity of their disability and any other applicable policies and regulations.
 
@@ -25850,9 +25850,9 @@ The Veterans Benefits Administration (VBA) uses the [Schedule For Rating Disabil
 
 Due to the sheer size of the schedule, this page has been broken up into major section and then broken down further into the various sub-sections.
 
-Alternatively, if you would like to search the rating schedule by condition name click [HERE](https://veteransbenefitskb.com/master)  to view the Master Condition List; which links conditions directly to how it is rated in the schedule.
+Alternatively, if you would like to search the rating schedule by condition name click [HERE](https://www.veteransbenefitskb.com/master)  to view the Master Condition List; which links conditions directly to how it is rated in the schedule.
 
-- Advanced users can also search by VA Diagnostic Codes by clicking [HERE](https://veteransbenefitskb.com/diagnosticcodes)
+- Advanced users can also search by VA Diagnostic Codes by clicking [HERE](https://www.veteransbenefitskb.com/diagnosticcodes)
 
 <!-- Chunk 1179/1206 | Heading: Organization | Words: 74 -->
 
@@ -25862,22 +25862,22 @@ Alternatively, if you would like to search the rating schedule by condition name
 
 | Major Section | Description |
 | --- | --- |
-| [The Cardiovascular System](https://veteransbenefitskb.com/heartsystem)  | Heart, blood, vein, and artery issues |
-| [Conditions that the VA will **NOT** Rate](https://veteransbenefitskb.com/norate)  | Things the VA will not service connect/rate |
-| [Dental and Oral](https://veteransbenefitskb.com/mouthsystem)  | Jaw, jaw joint, palates, and teeth |
-| [The Digestive System](https://veteransbenefitskb.com/digsystem)  | Abdomen & peritoneum, cancers & tumors, esophagus, gallbladder, hepatitis, hernias, and intestines |
-| [The Endocrine System](https://veteransbenefitskb.com/endsystem)  | Adrenal conditions, cancers & tumors, diabetes, parathyroid conditions, pituitary conditions, pluriglandular syndrome, and thyroid conditions |
-| [The Female Reproductive System](https://veteransbenefitskb.com/femalesystem)  | Breasts, cancers & tumors, endometriosis, fallopian tubes, fistulas, ovaries, uterus, vagina, vulva, and cervix |
-| [The Genitourinary System](https://veteransbenefitskb.com/gensystem)  | Cancers & tumors, renal conditions, penis & testis, tuberculosis, urinary conditions |
-| The Hematologic and Lymphatic Systems | [Blood and](https://veteransbenefitskb.com/blood)  [Breasts](https://veteransbenefitskb.com/femalesystem#breasts)  (integrated with other systems) |
-| [Infectious Diseases and Immune Disorders](https://veteransbenefitskb.com/infect)  | Self explanatory |
-| [Mental Disorders](https://veteransbenefitskb.com/mental)  | Anxiety, eating disorders, MDD, MST, PTSD, etc. |
-| [The Musculoskeletal System](https://veteransbenefitskb.com/msindex)  | Bones, tendons, joints, cancers & tumors, and muscle issues |
-| [The Nervous System](https://veteransbenefitskb.com/nervesystem)  | Nerves of the body. Also contains traumatic brain injuries (TBI) |
-| [Nutritional Deficiencies](https://veteransbenefitskb.com/nutritional)  | Bacterial infections, cancers & tumors, fungal infections, lung diseases, nose & sinuses, sleep apnea, throat, and tuberculosis, etc. |
-| [The Respiratory System](https://veteransbenefitskb.com/airsystem)  | Bacterial infections, cancers & tumors, fungal infections, lung diseases, nose & sinuses, sleep apnea, throat, and tuberculosis, etc. |
-| [The Senses](https://veteransbenefitskb.com/senses)  | Your traditional five senses: sight, sound, taste, touch, and smell. |
-| [The Skin](https://veteransbenefitskb.com/skin)  | Acne & chloracne, cancers & tumors, pores & hair, psoriasis, dermatitis & eczema, hives, keratin diseases, lupus, scars, skin discoloration, and skin infections, etc. |
+| [The Cardiovascular System](https://www.veteransbenefitskb.com/heartsystem)  | Heart, blood, vein, and artery issues |
+| [Conditions that the VA will **NOT** Rate](https://www.veteransbenefitskb.com/norate)  | Things the VA will not service connect/rate |
+| [Dental and Oral](https://www.veteransbenefitskb.com/mouthsystem)  | Jaw, jaw joint, palates, and teeth |
+| [The Digestive System](https://www.veteransbenefitskb.com/digsystem)  | Abdomen & peritoneum, cancers & tumors, esophagus, gallbladder, hepatitis, hernias, and intestines |
+| [The Endocrine System](https://www.veteransbenefitskb.com/endsystem)  | Adrenal conditions, cancers & tumors, diabetes, parathyroid conditions, pituitary conditions, pluriglandular syndrome, and thyroid conditions |
+| [The Female Reproductive System](https://www.veteransbenefitskb.com/femalesystem)  | Breasts, cancers & tumors, endometriosis, fallopian tubes, fistulas, ovaries, uterus, vagina, vulva, and cervix |
+| [The Genitourinary System](https://www.veteransbenefitskb.com/gensystem)  | Cancers & tumors, renal conditions, penis & testis, tuberculosis, urinary conditions |
+| The Hematologic and Lymphatic Systems | [Blood and](https://www.veteransbenefitskb.com/blood)  [Breasts](https://www.veteransbenefitskb.com/femalesystem#breasts)  (integrated with other systems) |
+| [Infectious Diseases and Immune Disorders](https://www.veteransbenefitskb.com/infect)  | Self explanatory |
+| [Mental Disorders](https://www.veteransbenefitskb.com/mental)  | Anxiety, eating disorders, MDD, MST, PTSD, etc. |
+| [The Musculoskeletal System](https://www.veteransbenefitskb.com/msindex)  | Bones, tendons, joints, cancers & tumors, and muscle issues |
+| [The Nervous System](https://www.veteransbenefitskb.com/nervesystem)  | Nerves of the body. Also contains traumatic brain injuries (TBI) |
+| [Nutritional Deficiencies](https://www.veteransbenefitskb.com/nutritional)  | Bacterial infections, cancers & tumors, fungal infections, lung diseases, nose & sinuses, sleep apnea, throat, and tuberculosis, etc. |
+| [The Respiratory System](https://www.veteransbenefitskb.com/airsystem)  | Bacterial infections, cancers & tumors, fungal infections, lung diseases, nose & sinuses, sleep apnea, throat, and tuberculosis, etc. |
+| [The Senses](https://www.veteransbenefitskb.com/senses)  | Your traditional five senses: sight, sound, taste, touch, and smell. |
+| [The Skin](https://www.veteransbenefitskb.com/skin)  | Acne & chloracne, cancers & tumors, pores & hair, psoriasis, dermatitis & eczema, hives, keratin diseases, lupus, scars, skin discoloration, and skin infections, etc. |
 
 [Return to top](https://www.veteransbenefitskb.com/ratingsindex#top)
 
@@ -25922,7 +25922,7 @@ Veterans who are hospitalized at a VA hospital or at an approved hospital for **
 
 This 100% rating will be paid to the end of the month that the Veteran was discharged in and the Veteran will have their evaluation returned to what it was previously\*.
 
-\*Unless the hospitalization lasted at least 6 months due to a [Mental disorder](https://veteransbenefitskb.com/mental)  In such case, the Veteran will continue to receive the 100% rating for 6 months, at which point the Veteran will receive a [Reevaluation](https://veteransbenefitskb.com/cnp)  to determine their current level of disability.
+\*Unless the hospitalization lasted at least 6 months due to a [Mental disorder](https://www.veteransbenefitskb.com/mental)  In such case, the Veteran will continue to receive the 100% rating for 6 months, at which point the Veteran will receive a [Reevaluation](https://www.veteransbenefitskb.com/cnp)  to determine their current level of disability.
 
 **IMPORTANT NOTES:**
 
@@ -25941,7 +25941,7 @@ NOTE:
 
 - [VHAâ€™s Mental Health Residential Rehabilitation Treatment Program (MH RRTP)](https://www.mentalhealth.va.gov/get-help/va-residential-rehabilitation/index.asp)  is a type of domiciliary care.
 
-- Depending upon the Veteran's other ratings they may become eligible for [SMC S](https://veteransbenefitskb.com/smc#s)  during their period of convalescence.
+- Depending upon the Veteran's other ratings they may become eligible for [SMC S](https://www.veteransbenefitskb.com/smc#s)  during their period of convalescence.
 
 * * *
 
@@ -25951,7 +25951,7 @@ NOTE:
 
 ### Filing for Temporary 100%
 
-The Veteran can seek the aid of a [VSO](https://veteransbenefitskb.com/vso)  or file online on VA.gov. If you file yourself, you can file it as a new claim â€œtemporary 100% due to hospitalizationâ€ and include evidence of the hospitalization or give the VA a [VA Form 21-4142/21-4142a](https://www.vba.va.gov/pubs/forms/vba-21-4142-are.pdf)  to obtain the records for you.
+The Veteran can seek the aid of a [VSO](https://www.veteransbenefitskb.com/vso)  or file online on VA.gov. If you file yourself, you can file it as a new claim â€œtemporary 100% due to hospitalizationâ€ and include evidence of the hospitalization or give the VA a [VA Form 21-4142/21-4142a](https://www.vba.va.gov/pubs/forms/vba-21-4142-are.pdf)  to obtain the records for you.
 
 In order for the VA to grant the temporary 100% the medical evidence **MUST** state:
 
@@ -25991,11 +25991,11 @@ The surgery or procedure **MUST** be done on something that is _service-connecte
 
 - Immobilization by cast, without surgery, of one major joint or more.
 
-After the convalescent period end the Veteran's disability _may_ be [Reevaluated](https://veteransbenefitskb.com/cnp)  **UNLESS**, the schedule dictates a minimum rating the Veteran.
+After the convalescent period end the Veteran's disability _may_ be [Reevaluated](https://www.veteransbenefitskb.com/cnp)  **UNLESS**, the schedule dictates a minimum rating the Veteran.
 
 NOTES:
 
-- Depending upon the Veteran's other ratings they may become eligible for [SMC S](https://veteransbenefitskb.com/smc#s)  during their period of convalescence.
+- Depending upon the Veteran's other ratings they may become eligible for [SMC S](https://www.veteransbenefitskb.com/smc#s)  during their period of convalescence.
 
 - If the rating schedule specifies a Veteran will get say 6, 12, etc. months of temporary 100% rate, the Veteran will get an additional month of 100%. So the Veteran will in effect have 7, 13, etc. months of temporary 100%.
 
@@ -26011,7 +26011,7 @@ NOTES:
 
 ### Filing for Temporary 100%
 
-The Veteran can seek the aid of a [VSO](https://veteransbenefitskb.com/vso)  or file online on VA.gov. If you file yourself, you can file it as a new claim â€œtemporary 100% due to convalescenceâ€ and include evidence of the convalescence or give the VA a [VA Form 21-4142/21-4142a](https://www.vba.va.gov/pubs/forms/vba-21-4142-are.pdf)  to obtain the records for you.
+The Veteran can seek the aid of a [VSO](https://www.veteransbenefitskb.com/vso)  or file online on VA.gov. If you file yourself, you can file it as a new claim â€œtemporary 100% due to convalescenceâ€ and include evidence of the convalescence or give the VA a [VA Form 21-4142/21-4142a](https://www.vba.va.gov/pubs/forms/vba-21-4142-are.pdf)  to obtain the records for you.
 
 In order for the VA to grant the temporary 100% the medical evidence **MUST** show:
 
@@ -26041,13 +26041,13 @@ Medical evidence **MUST** show (when related to surgery):
 
 ## **Amputation Rule (38 CFR 4.68)**
 
-A Veteran **CANNOT** get a [Combined VA rating](https://veteransbenefitskb.com/vamath)  higher for _musculoskeletal_ conditions for a limb than if it was amputated. In the rare cases in which the amputation rule is applied, the conditions that â€˜spill overâ€™ the maximum combined evaluation will be disabled and will **NOT** be applied to your combined disability evaluation!
+A Veteran **CANNOT** get a [Combined VA rating](https://www.veteransbenefitskb.com/vamath)  higher for _musculoskeletal_ conditions for a limb than if it was amputated. In the rare cases in which the amputation rule is applied, the conditions that â€˜spill overâ€™ the maximum combined evaluation will be disabled and will **NOT** be applied to your combined disability evaluation!
 
 For example:
 
 - If a Veteran had their right dominant arm amputated above the elbow they would be awarded a rating of 80%.
 
-- A Veteran who had no amputation could **NOT** have a combined VA rating higher than 80% for musculoskeletal conditions that involve their dominant [Elbow/forearm](https://veteransbenefitskb.com/elbowforearm)  [Wrist](https://veteransbenefitskb.com/wrist)  and/or [Hand](https://veteransbenefitskb.com/hand)
+- A Veteran who had no amputation could **NOT** have a combined VA rating higher than 80% for musculoskeletal conditions that involve their dominant [Elbow/forearm](https://www.veteransbenefitskb.com/elbowforearm)  [Wrist](https://www.veteransbenefitskb.com/wrist)  and/or [Hand](https://www.veteransbenefitskb.com/hand)
 
 **IMPORTANT NOTES:**
 
@@ -26077,11 +26077,11 @@ An example would be a Veteran diagnosed with 2 ankle conditions that result in r
 
 Newer raters are known to sometimes improperly rate disabilities. As such, sometimes they will rate something separately that they shouldn't. The following are common pyramiding errors. If you have active ratings for any of the following two disabilities. You should contact a VSO **BEFORE** you file any new claims or increases, as the VA may identify the error(s) and fix them - which could result in you ending up with a lower rating than when you started!
 
-- [Sleep apnea](https://veteransbenefitskb.com/airsystem#6847)  & [Asthma](https://veteransbenefitskb.com/airsystem#6602)
+- [Sleep apnea](https://www.veteransbenefitskb.com/airsystem#6847)  & [Asthma](https://www.veteransbenefitskb.com/airsystem#6602)
 
-- [Median nerve](https://veteransbenefitskb.com/upnerves#8515)  & [Ulnar nerve](https://veteransbenefitskb.com/upnerves#8516)  (same arm)
+- [Median nerve](https://www.veteransbenefitskb.com/upnerves#8515)  & [Ulnar nerve](https://www.veteransbenefitskb.com/upnerves#8516)  (same arm)
 
-- [PTSD](https://veteransbenefitskb.com/mental#9411)  & [TBI](https://veteransbenefitskb.com/cns#8045)
+- [PTSD](https://www.veteransbenefitskb.com/mental#9411)  & [TBI](https://www.veteransbenefitskb.com/cns#8045)
 
 \*Unless the examiner _can_ differentiate the symptoms of both; then the rater needs to give the Veteran a separate rating for each.
 
@@ -26119,23 +26119,23 @@ Veterans who have held their ratings for the following number of _continuous_ ye
 
 ### 5 Years - Reductions (38 CFR 3.344)
 
-A Veteran's rating _generally_ cannot be reduced based upon a single [C&P exam](https://veteransbenefitskb.com/cnp)  that shows the Veteran's disability has improved. This is because **CONTINUOUS** improvement **MUST** be shown when the evaluation has been held for at least 5 _continuous_ years.
+A Veteran's rating _generally_ cannot be reduced based upon a single [C&P exam](https://www.veteransbenefitskb.com/cnp)  that shows the Veteran's disability has improved. This is because **CONTINUOUS** improvement **MUST** be shown when the evaluation has been held for at least 5 _continuous_ years.
 
-In **MOST** cases it will take another exam showing the condition is still improved before the Veteran **WILL** receive a [Proposal for reduction](https://veteransbenefitskb.com/reduction)  (if the reduction reduces your [Combined](https://veteransbenefitskb.com/vamath)  evaluation; otherwise the condition will be reduced without notice).
+In **MOST** cases it will take another exam showing the condition is still improved before the Veteran **WILL** receive a [Proposal for reduction](https://www.veteransbenefitskb.com/reduction)  (if the reduction reduces your [Combined](https://www.veteransbenefitskb.com/vamath)  evaluation; otherwise the condition will be reduced without notice).
 
 Practical example to be reduced based on **ONE EXAM**:
 
-- The condition is rated on lab results like [Kidney](https://veteransbenefitskb.com/gensystem)  or [Lung function](https://veteransbenefitskb.com/airsystem)  and the VA _happens_ to have lab results that show improvementâ€¦ whelp if _you filed an increase_ for that condition for some reason - you should **EXPECT** a reduction/proposal based if the VA does another lab test because of your claim and it confirms the improvement!
+- The condition is rated on lab results like [Kidney](https://www.veteransbenefitskb.com/gensystem)  or [Lung function](https://www.veteransbenefitskb.com/airsystem)  and the VA _happens_ to have lab results that show improvementâ€¦ whelp if _you filed an increase_ for that condition for some reason - you should **EXPECT** a reduction/proposal based if the VA does another lab test because of your claim and it confirms the improvement!
 
 **IMPORTANT NOTES:**
 
 - This protection does **NOT** reset after 5 years! Meaning if you had an exam showing improvement on year 6 and then another exam shows improvement at year 16, the VA **CAN** still come for blood!
 
-- Ratings for diseases subject to temporary or episodic improvement, e.g., [Manic depressive](https://veteransbenefitskb.com/mental#9433)  or [Other psychotic reaction](https://veteransbenefitskb.com/mental#9411)  [Epilepsy](https://veteransbenefitskb.com/cns#seizure)  [Psychoneurotic reaction](https://veteransbenefitskb.com/mental#9400)  [Arteriosclerotic heart disease](https://veteransbenefitskb.com/heart#7005)  [Bronchial asthma](https://veteransbenefitskb.com/airsystem#6602)  [Gastric or duodenal ulcer](https://veteransbenefitskb.com/digsystem#7304)  many [Skin diseases](https://veteransbenefitskb.com/skin)  etc., will **NOT** be reduced based off of **ONE** examination showing improvement ( **EXCEPT** when all the evidence of record clearly shows that sustained improvement has been shown).
+- Ratings for diseases subject to temporary or episodic improvement, e.g., [Manic depressive](https://www.veteransbenefitskb.com/mental#9433)  or [Other psychotic reaction](https://www.veteransbenefitskb.com/mental#9411)  [Epilepsy](https://www.veteransbenefitskb.com/cns#seizure)  [Psychoneurotic reaction](https://www.veteransbenefitskb.com/mental#9400)  [Arteriosclerotic heart disease](https://www.veteransbenefitskb.com/heart#7005)  [Bronchial asthma](https://www.veteransbenefitskb.com/airsystem#6602)  [Gastric or duodenal ulcer](https://www.veteransbenefitskb.com/digsystem#7304)  many [Skin diseases](https://www.veteransbenefitskb.com/skin)  etc., will **NOT** be reduced based off of **ONE** examination showing improvement ( **EXCEPT** when all the evidence of record clearly shows that sustained improvement has been shown).
 
 - Conditions granted temporary 100% are **NOT** protected by this regulation!
 
-- Ratings for conditions which become comparatively symptom free (findings absent) after prolonged rest, e.g. residuals of [Phlebitis](https://veteransbenefitskb.com/bloodtubes#7121)  arteriosclerotic heart disease, etc., will **NOT** be reduced on examinations reflecting the improvement is _due_ to _bed rest_.
+- Ratings for conditions which become comparatively symptom free (findings absent) after prolonged rest, e.g. residuals of [Phlebitis](https://www.veteransbenefitskb.com/bloodtubes#7121)  arteriosclerotic heart disease, etc., will **NOT** be reduced on examinations reflecting the improvement is _due_ to _bed rest_.
 
 - **RATER COMMENT**: Yeahâ€¦ soâ€¦ if you _did not_ claim an increase for something unrelated to your claim and there is evidence of improvement - We ainâ€™t gonna go out of our ways to reduce you for that unclaimed/unrelated condition.
 
@@ -26220,9 +26220,9 @@ In the event that a Veteran has a non-service-connected **OR** service-connected
 
 In the event that the rating schedule changes, the Veteran will be grandfathered under the older schedule.
 
-Do know that in the event it is found that the Veteran has improved under their grandfathered schedule **AND** the new schedule, the Veteran will then have their evaluation reduced/ [Proposed to be reduced](https://veteransbenefitskb.com/reduction)  and rated per the current rating schedule (assuming they do **NOT** have a protected evaluation).
+Do know that in the event it is found that the Veteran has improved under their grandfathered schedule **AND** the new schedule, the Veteran will then have their evaluation reduced/ [Proposed to be reduced](https://www.veteransbenefitskb.com/reduction)  and rated per the current rating schedule (assuming they do **NOT** have a protected evaluation).
 
-If over the life of a claim the schedule changes, the Veteran's condition will be evaluated based upon the schedule in force on the [Effective date](https://veteransbenefitskb.com/edate)  of the grant. **IF** the new schedule is better then a [Stag](https://veteransbenefitskb.com/edate#staged)  [ed](https://www.reddit.com/r/VeteranBenefits/wiki/edate/#wiki_staged_effective_dates)  evaluation will be given, from the date of the schedule change.
+If over the life of a claim the schedule changes, the Veteran's condition will be evaluated based upon the schedule in force on the [Effective date](https://www.veteransbenefitskb.com/edate)  of the grant. **IF** the new schedule is better then a [Stag](https://www.veteransbenefitskb.com/edate#staged)  [ed](https://www.reddit.com/r/VeteranBenefits/wiki/edate/#wiki_staged_effective_dates)  evaluation will be given, from the date of the schedule change.
 
 * * *
 
@@ -26244,9 +26244,9 @@ What being aged over 55 or more _does_ do is:
 
 - Cancers; and
 
-- Infectious diseases such as [Tuberculous](https://veteransbenefitskb.com/infect#6730)
+- Infectious diseases such as [Tuberculous](https://www.veteransbenefitskb.com/infect#6730)
 
-So, if the Veteran decides to file a claim on a [Secondary basis](https://veteransbenefitskb.com/claimtype#secondary)  The VA _could possibly_ reevaluate the primary condition, and if appropriate - reduce the rating of the primary condition!
+So, if the Veteran decides to file a claim on a [Secondary basis](https://www.veteransbenefitskb.com/claimtype#secondary)  The VA _could possibly_ reevaluate the primary condition, and if appropriate - reduce the rating of the primary condition!
 
 [Return to top](https://www.veteransbenefitskb.com/ratingsindex#top)
 
@@ -26271,7 +26271,7 @@ Incarcerated Veterans have their pay reduced!
 - Rated 20% or higher:
 
 - Veteran will be paid at the 10% rate.
-- Rated 10%, paid at 10%, or getting **ONLY** [Special Monthly Compensations (SMC) K](https://veteransbenefitskb.com/smc)
+- Rated 10%, paid at 10%, or getting **ONLY** [Special Monthly Compensations (SMC) K](https://www.veteransbenefitskb.com/smc)
 
 - Veteran will be paid **HALF** the rate of 10%.
 - [VA Pension](https://www.veteransbenefitskb.com/pension)  (reduction may be due to either a felony conviction **_OR_** _misdemeanor)_:
@@ -26324,7 +26324,7 @@ For existing evaluations:
 - If the new schedule just so happens to be better, the Veteran would need to file for an increase.
 - If the Veteran files for an increase, they will be evaluated based upon the **NEW** schedule.
 
-- In the event it is found that the Veteran has improved under both the new **AND** the grandfathered schedule, the Veteran will then have their rating reduced and rated per the current rating schedule (if their evaluation is not [Protected](https://veteransbenefitskb.com/#protection)
+- In the event it is found that the Veteran has improved under both the new **AND** the grandfathered schedule, the Veteran will then have their rating reduced and rated per the current rating schedule (if their evaluation is not [Protected](https://www.veteransbenefitskb.com/#protection)
 
 For ongoing claims/appeals during a new schedule becoming active:
 
@@ -26356,7 +26356,7 @@ For ongoing claims/appeals during a new schedule becoming active:
 
 - Once treatment ends, the Veteran will be rated\* upon where their symptoms settle at.
 
-- If after surgery you qualify for a [Convalescent rating](https://veteransbenefitskb.com/30)  of temporary 100%, the Veteran will be [Reevaluated](https://veteransbenefitskb.com/cnp)  (unless the schedules lists a minimum evaluation).
+- If after surgery you qualify for a [Convalescent rating](https://www.veteransbenefitskb.com/30)  of temporary 100%, the Veteran will be [Reevaluated](https://www.veteransbenefitskb.com/cnp)  (unless the schedules lists a minimum evaluation).
 
 \*If and when the Veteran has a reevaluation.
 
