@@ -102,6 +102,10 @@ def query_rag_system(prompt: str, history: list = None) -> Dict[str, Any]:
             }
             citations.append(citation)
         
+        # For analytics: use cache similarity if cache hit, otherwise use retrieval score
+        # This gives us a "relevance" number for every question
+        effective_similarity = response.semantic_similarity if response.semantic_similarity is not None else response.retrieval_score
+        
         return {
             "success": not response.error,
             "content": response.answer,
@@ -112,7 +116,8 @@ def query_rag_system(prompt: str, history: list = None) -> Dict[str, Any]:
                 "query_time_ms": response.query_time_ms,
                 "chunks_retrieved": response.chunks_retrieved,
                 "cache_hit": response.cache_hit,  # "exact", "semantic", "database", "topic", or None
-                "semantic_similarity": response.semantic_similarity  # Similarity score (0-1) for cache hits
+                "semantic_similarity": effective_similarity,  # Cache similarity or retrieval score
+                "retrieval_score": response.retrieval_score  # Raw retrieval score (for cache misses)
             },
             "error": response.error,
             "token_usage": {
@@ -125,7 +130,8 @@ def query_rag_system(prompt: str, history: list = None) -> Dict[str, Any]:
                 "question": prompt,
                 "answer": response.answer,
                 "cache_hit": response.cache_hit or "miss",
-                "semantic_similarity": response.semantic_similarity,  # Include in analytics
+                "semantic_similarity": effective_similarity,  # Always populated now
+                "retrieval_score": response.retrieval_score,  # Raw retrieval score
                 "sources": citations,
                 "chunks_retrieved": response.chunks_retrieved,
                 "model_used": response.model_used

@@ -2027,6 +2027,7 @@ def ask():
                         'question': prompt,
                         'answer': answer_content,
                         'cache_hit': rag_response.get("metadata", {}).get("cache_hit", "miss"),
+                        'semantic_similarity': rag_response.get("metadata", {}).get("semantic_similarity"),
                         'sources': rag_response.get("citations", []),
                         'chunks_retrieved': rag_response.get("metadata", {}).get("chunks_retrieved", 0),
                         'model_used': rag_response.get("metadata", {}).get("model")

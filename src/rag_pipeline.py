@@ -114,6 +114,7 @@ class RAGResponse:
     routing_reason: Optional[str] = None
     cache_hit: Optional[str] = None  # "exact", "semantic", "database", "topic", or None
     semantic_similarity: Optional[float] = None  # Similarity score for cache hits (0-1)
+    retrieval_score: Optional[float] = None  # Best retrieval score for cache misses (0-1)
     error: Optional[str] = None
     weak_retrieval: bool = False  # True if best chunk score was below threshold
     citation_verification: Optional[Dict[str, Any]] = None  # Citation verification results
@@ -136,6 +137,8 @@ class RAGResponse:
             result["metadata"]["cache_hit"] = self.cache_hit
         if self.semantic_similarity is not None:
             result["metadata"]["semantic_similarity"] = self.semantic_similarity
+        if self.retrieval_score is not None:
+            result["metadata"]["retrieval_score"] = self.retrieval_score
         if self.weak_retrieval:
             result["metadata"]["weak_retrieval"] = True
         if self.citation_verification:
@@ -740,6 +743,9 @@ class RAGPipeline:
                     query_embedding
                 )
             
+            # Calculate best retrieval score for analytics
+            best_retrieval_score = chunks[0]["score"] if chunks else None
+            
             return RAGResponse(
                 answer=answer,
                 sources=sources,
@@ -747,6 +753,7 @@ class RAGPipeline:
                 chunks_retrieved=len(chunks),
                 model_used=model_used,
                 routing_reason=routing_reason,
+                retrieval_score=best_retrieval_score,  # Best chunk relevance score
                 weak_retrieval=weak_retrieval,
                 citation_verification=verification_summary,
                 token_usage=token_usage
