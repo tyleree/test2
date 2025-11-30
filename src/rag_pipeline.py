@@ -411,6 +411,155 @@ class RAGPipeline:
         elapsed_ms = (time.time() - start_time) * 1000
         return chunks, elapsed_ms, weak_retrieval
     
+    def _log_low_confidence_report(
+        self,
+        question: str,
+        best_score: float,
+        chunks: List[Dict[str, Any]],
+        verification_result,
+        sanitization_report: Dict[str, Any],
+        model_used: str
+    ) -> None:
+        """
+        Generate a detailed report when confidence is low.
+        
+        This helps diagnose WHY the retrieval score was low and what
+        might be done to improve coverage for this topic.
+        """
+        import json
+        from datetime import datetime, timezone
+        
+        # Build comprehensive report
+        report = {
+            "timestamp": datetime.now(timezone.utc).isoformat(),
+            "type": "LOW_CONFIDENCE_REPORT",
+            "question": question,
+            "confidence_score": best_score,
+            "threshold_used": 0.50,
+            "analysis": {}
+        }
+        
+        # Analyze why score was low
+        analysis = report["analysis"]
+        
+        # 1. Query characteristics
+        query_words = question.lower().split()
+        analysis["query_analysis"] = {
+            "word_count": len(query_words),
+            "question_type": self._detect_question_type(question),
+            "contains_specific_terms": any(term in question.lower() for term in [
+                "dc", "diagnostic code", "percentage", "%", "rating",
+                "form", "va form", "cfr", "38 cfr"
+            ])
+        }
+        
+        # 2. Chunk analysis - why didn't we find better matches?
+        chunk_analysis = []
+        for i, chunk in enumerate(chunks[:5]):  # Top 5 chunks
+            chunk_info = {
+                "rank": i + 1,
+                "score": chunk.get("score", 0),
+                "topic": chunk.get("metadata", {}).get("topic", "Unknown"),
+                "type": chunk.get("metadata", {}).get("type", "Unknown"),
+                "text_preview": chunk.get("text", "")[:150] + "..."
+            }
+            chunk_analysis.append(chunk_info)
+        
+        analysis["retrieved_chunks"] = {
+            "total_retrieved": len(chunks),
+            "best_score": best_score,
+            "worst_score": chunks[-1]["score"] if chunks else 0,
+            "score_spread": best_score - (chunks[-1]["score"] if chunks else 0),
+            "chunks": chunk_analysis
+        }
+        
+        # 3. Coverage gap detection
+        # What topics were retrieved vs what was asked?
+        retrieved_topics = list(set(
+            c.get("metadata", {}).get("topic", "Unknown") 
+            for c in chunks
+        ))
+        analysis["topic_coverage"] = {
+            "retrieved_topics": retrieved_topics[:10],
+            "topic_count": len(retrieved_topics),
+            "possible_gap": best_score < 0.45  # Very likely a coverage gap
+        }
+        
+        # 4. Citation verification issues
+        if verification_result:
+            analysis["citation_issues"] = {
+                "total_citations": verification_result.total_citations,
+                "suspicious": verification_result.suspicious_citations,
+                "verification_score": verification_result.verification_score,
+                "issues": verification_result.overall_issues[:5]
+            }
+        
+        # 5. Number verification issues
+        if sanitization_report and "number_verification" in sanitization_report:
+            num_report = sanitization_report["number_verification"]
+            analysis["number_issues"] = {
+                "is_clean": num_report.get("is_clean", True),
+                "hallucinated_percentages": num_report.get("hallucinated_percentages", []),
+                "hallucinated_dc_codes": num_report.get("hallucinated_dc_codes", []),
+                "issues": num_report.get("issues", [])
+            }
+        
+        # 6. Recommendations
+        recommendations = []
+        if best_score < 0.45:
+            recommendations.append("CRITICAL: Very low score suggests topic may not be covered in knowledge base")
+        if best_score < 0.50:
+            recommendations.append("Consider adding more content about this topic to the corpus")
+        if len(retrieved_topics) == 1:
+            recommendations.append("Only one topic matched - may need broader coverage")
+        if analysis["query_analysis"]["contains_specific_terms"]:
+            recommendations.append("Question asks for specific data - verify corpus has exact values")
+        
+        analysis["recommendations"] = recommendations
+        
+        # Log the report
+        print("\n" + "="*80)
+        print("[LOW_CONFIDENCE_REPORT] Detailed Analysis")
+        print("="*80)
+        print(f"Question: {question}")
+        print(f"Confidence Score: {best_score:.1%} (threshold: 50%)")
+        print(f"Model Used: {model_used}")
+        print("-"*80)
+        print(f"Query Type: {analysis['query_analysis']['question_type']}")
+        print(f"Word Count: {analysis['query_analysis']['word_count']}")
+        print(f"Asks for Specific Data: {analysis['query_analysis']['contains_specific_terms']}")
+        print("-"*80)
+        print(f"Retrieved {len(chunks)} chunks from {len(retrieved_topics)} topics:")
+        for chunk_info in chunk_analysis[:3]:
+            print(f"  #{chunk_info['rank']}: {chunk_info['topic']} (score: {chunk_info['score']:.3f})")
+        print("-"*80)
+        print("Recommendations:")
+        for rec in recommendations:
+            print(f"  • {rec}")
+        print("="*80 + "\n")
+        
+        # Also log as JSON for structured parsing
+        print(f"[LOW_CONFIDENCE_JSON] {json.dumps(report, default=str)}")
+    
+    def _detect_question_type(self, question: str) -> str:
+        """Detect the type of question being asked."""
+        q_lower = question.lower()
+        
+        if any(w in q_lower for w in ["what is", "define", "explain"]):
+            return "definitional"
+        elif any(w in q_lower for w in ["how do", "how to", "how can"]):
+            return "procedural"
+        elif any(w in q_lower for w in ["percentage", "%", "rating", "score"]):
+            return "rating_criteria"
+        elif any(w in q_lower for w in ["compare", "difference", "vs", "versus"]):
+            return "comparison"
+        elif any(w in q_lower for w in ["can i", "am i eligible", "qualify"]):
+            return "eligibility"
+        elif any(w in q_lower for w in ["when", "how long", "timeline"]):
+            return "temporal"
+        else:
+            return "general"
+    
     def _generate_response(
         self,
         question: str,
@@ -770,6 +919,28 @@ class RAGPipeline:
                 print(f"[NUMBER_CHECK] Potential hallucinated numbers detected:")
                 for issue in number_issues:
                     print(f"  - {issue}")
+            
+            # Step 6c: Add confidence warning prefix for weak retrievals
+            # This adds transparency when our sources don't fully cover the topic
+            LOW_CONFIDENCE_THRESHOLD = 0.50
+            if weak_retrieval and best_score < LOW_CONFIDENCE_THRESHOLD:
+                confidence_warning = (
+                    "⚠️ **Note:** My sources may not fully cover this topic. "
+                    f"Our internal confidence score is **{best_score:.1%}** for this response - "
+                    "please verify the answer with your own due diligence. "
+                    "A report has been generated and someone will review this.\n\n"
+                )
+                answer = confidence_warning + answer
+                
+                # Generate detailed low-confidence report
+                self._log_low_confidence_report(
+                    question=question,
+                    best_score=best_score,
+                    chunks=chunks,
+                    verification_result=verification_result,
+                    sanitization_report=sanitization_report,
+                    model_used=model_used
+                )
             
             total_time = (time.time() - total_start) * 1000
             
