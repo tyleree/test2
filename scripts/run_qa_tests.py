@@ -23,8 +23,11 @@ QUESTIONS_FILE = Path(__file__).parent.parent / "qa_test_questions.txt"
 RESULTS_JSON = Path(__file__).parent.parent / "qa_test_results.json"
 RESULTS_MD = Path(__file__).parent.parent / "qa_test_results.md"
 
-# Rate limiting - reduced since IP is whitelisted for testing
-DELAY_BETWEEN_REQUESTS = 0.5  # seconds
+# Rate limiting - keep minimal delay since IP is whitelisted
+DELAY_BETWEEN_REQUESTS = 0.3  # seconds - IP whitelisted so can be fast
+
+# Resume from specific question (0 = start from beginning)
+START_FROM_QUESTION = 29  # Resume from question 29 (1-indexed)
 
 # Create SSL context - use unverified for macOS compatibility
 # (The API is served over HTTPS from Render, a trusted provider)
@@ -152,19 +155,30 @@ def ask_question(question: str) -> dict:
         }
 
 
-def run_tests(questions: list) -> list:
-    """Execute all test questions and collect results."""
+def run_tests(questions: list, start_from: int = 0) -> list:
+    """Execute all test questions and collect results.
+    
+    Args:
+        questions: List of question dictionaries
+        start_from: 1-indexed question number to start from (0 = start from beginning)
+    """
     results = []
     total = len(questions)
     
+    # Adjust for 1-indexed start_from
+    skip_count = max(0, start_from - 1) if start_from > 0 else 0
+    questions_to_run = questions[skip_count:]
+    
     print(f"\n{'='*60}")
-    print(f"RAG QA Testing - {total} Questions")
+    print(f"RAG QA Testing - {len(questions_to_run)} Questions")
+    if skip_count > 0:
+        print(f"(Resuming from question {start_from}, skipping first {skip_count})")
     print(f"API: {API_URL}")
     print(f"Started: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
     print(f"{'='*60}\n")
     
-    for i, q in enumerate(questions, 1):
-        print(f"[{i:2d}/{total}] {q['id']}: {q['question'][:50]}...")
+    for i, q in enumerate(questions_to_run, start_from if start_from > 0 else 1):
+        print(f"[{i:3d}/{total}] {q['id']}: {q['question'][:50]}...")
         
         start_time = time.time()
         response = ask_question(q['question'])
@@ -193,7 +207,7 @@ def run_tests(questions: list) -> list:
     print(f"\n{'='*60}")
     print(f"Completed: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
     success_count = sum(1 for r in results if r['response']['success'])
-    print(f"Results: {success_count}/{total} successful")
+    print(f"Results: {success_count}/{len(questions_to_run)} successful")
     print(f"{'='*60}\n")
     
     return results
@@ -358,10 +372,23 @@ def main():
         print("Error: No questions loaded!")
         return 1
     
-    # Run tests
-    results = run_tests(questions)
+    # Run tests (with optional resume from specific question)
+    results = run_tests(questions, start_from=START_FROM_QUESTION)
     
-    # Save results
+    # Save results (append mode if resuming)
+    if START_FROM_QUESTION > 1:
+        # Try to load existing results and merge
+        try:
+            with open(RESULTS_JSON, 'r') as f:
+                existing = json.load(f)
+                existing_results = existing.get('results', [])
+                # Keep results up to resume point
+                kept = [r for r in existing_results if r['number'] < START_FROM_QUESTION]
+                results = kept + results
+                print(f"Merged {len(kept)} existing results with {len(results) - len(kept)} new results")
+        except (FileNotFoundError, json.JSONDecodeError):
+            pass
+    
     save_results_json(results, RESULTS_JSON)
     generate_markdown_report(results, RESULTS_MD)
     

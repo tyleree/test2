@@ -1,8 +1,8 @@
 [
   {
-    "entry_id": "_corpus_version_2025-12-06-v5",
+    "entry_id": "_corpus_version_2025-12-06-v6",
     "topic": "Corpus Version",
-    "content": "This is a cache invalidation marker. Version: 2025-12-06-v5. Added diagnostic code overview, improved query preprocessing for DC, GI Bill, Chapter queries.",
+    "content": "This is a cache invalidation marker. Version: 2025-12-06-v6. Full QA testing with all fixes deployed.",
     "source_id": "system"
   },
   {
