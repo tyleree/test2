@@ -376,6 +376,55 @@ class RAGPipeline:
         # Default: use cheap model for cost efficiency
         return DEFAULT_CHAT_MODEL, "default_simple"
     
+    # Common DC codes mapped to condition names for better query expansion
+    DC_CODE_LOOKUP = {
+        # Cardiovascular (7XXX)
+        "7101": "hypertension high blood pressure",
+        "7005": "arteriosclerotic heart disease coronary artery disease",
+        "7007": "hypertensive heart disease",
+        "7010": "supraventricular arrhythmia",
+        "7011": "ventricular arrhythmia",
+        "7110": "aortic aneurysm",
+        "7114": "peripheral vascular disease",
+        # Mental Health (9XXX)
+        "9411": "PTSD post-traumatic stress disorder",
+        "9434": "major depressive disorder depression",
+        "9400": "generalized anxiety disorder",
+        "9201": "schizophrenia",
+        "9432": "bipolar disorder",
+        # Musculoskeletal (5XXX)
+        "5242": "degenerative arthritis spine",
+        "5237": "lumbosacral strain back pain",
+        "5260": "limitation of flexion knee",
+        "5261": "limitation of extension knee",
+        "5003": "degenerative arthritis",
+        "5010": "traumatic arthritis",
+        # Respiratory (6XXX)
+        "6602": "asthma bronchial asthma",
+        "6604": "COPD chronic obstructive pulmonary disease",
+        "6600": "chronic bronchitis",
+        "6847": "sleep apnea obstructive sleep apnea",
+        # Neurological (8XXX)
+        "8100": "migraine headaches",
+        "8520": "sciatic nerve paralysis",
+        "8045": "traumatic brain injury TBI",
+        # Digestive (7XXX)
+        "7305": "duodenal ulcer",
+        "7307": "chronic gastritis",
+        "7206": "GERD gastroesophageal reflux disease",
+        # Endocrine (7XXX)
+        "7913": "diabetes mellitus",
+        # Genitourinary (7XXX)
+        "7522": "erectile dysfunction",
+        "7527": "prostate conditions",
+        # Skin (7XXX)
+        "7806": "dermatitis eczema",
+        "7816": "psoriasis",
+        # Hearing/Ear (6XXX)
+        "6100": "hearing loss",
+        "6260": "tinnitus",
+    }
+    
     def _preprocess_query(self, query: str) -> str:
         """
         Preprocess query to expand abbreviations and normalize terminology
@@ -391,15 +440,27 @@ class RAGPipeline:
         
         processed = query
         
-        # Expand "DC" to "Diagnostic Code" for diagnostic code lookups
-        # Match "DC" followed by a number (e.g., "DC 7101", "DC7101", "dc 5237")
-        dc_pattern = r'\bDC\s*(\d{4})\b'
-        processed = re.sub(dc_pattern, r'Diagnostic Code \1', processed, flags=re.IGNORECASE)
-        
-        # Also handle "DC XXXX" at start of query without other context
-        if re.match(r'^(what is |what\'s )?(dc\s*\d{4})\s*\??$', processed, re.IGNORECASE):
-            code = re.search(r'\d{4}', processed).group()
-            processed = f"What is Diagnostic Code {code}? What condition does it cover?"
+        # Handle "DC XXXX" queries - expand with condition name if known
+        dc_match = re.search(r'\b(?:dc|diagnostic\s*code)\s*(\d{4})\b', processed, re.IGNORECASE)
+        if dc_match:
+            code = dc_match.group(1)
+            condition = self.DC_CODE_LOOKUP.get(code, "")
+            
+            # Replace the DC reference with full expansion
+            if condition:
+                replacement = f"Diagnostic Code {code} ({condition})"
+            else:
+                replacement = f"Diagnostic Code {code}"
+            
+            processed = re.sub(r'\bDC\s*' + code + r'\b', replacement, processed, flags=re.IGNORECASE)
+            processed = re.sub(r'\bdiagnostic\s*code\s*' + code + r'\b', replacement, processed, flags=re.IGNORECASE)
+            
+            # If it's a simple "What is DC XXXX?" query, expand further
+            if re.match(r'^(what is |what\'s )?(dc\s*\d{4}|diagnostic\s*code\s*\d{4})\s*\??$', query, re.IGNORECASE):
+                if condition:
+                    processed = f"What is Diagnostic Code {code}? {condition}. What are the rating criteria?"
+                else:
+                    processed = f"What is Diagnostic Code {code}? What condition does it cover?"
         
         # Handle "Chapter XX" education benefit queries
         chapter_patterns = {
@@ -1114,7 +1175,11 @@ def get_rag_pipeline() -> RAGPipeline:
     """Get or create the global RAG pipeline instance."""
     global _pipeline
     if _pipeline is None:
-        _pipeline = RAGPipeline()
+        # Check if caching should be disabled (for debugging/diagnostics)
+        disable_cache = os.getenv("DISABLE_RESPONSE_CACHE", "").lower() in ("true", "1", "yes")
+        if disable_cache:
+            print("[CONFIG] ⚠️ Response caching DISABLED via DISABLE_RESPONSE_CACHE env var")
+        _pipeline = RAGPipeline(enable_response_cache=not disable_cache)
     return _pipeline
 
 
