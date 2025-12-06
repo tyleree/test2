@@ -376,6 +376,53 @@ class RAGPipeline:
         # Default: use cheap model for cost efficiency
         return DEFAULT_CHAT_MODEL, "default_simple"
     
+    def _preprocess_query(self, query: str) -> str:
+        """
+        Preprocess query to expand abbreviations and normalize terminology
+        for better semantic matching.
+        
+        Args:
+            query: Original user query
+            
+        Returns:
+            Preprocessed query with expanded abbreviations
+        """
+        import re
+        
+        processed = query
+        
+        # Expand "DC" to "Diagnostic Code" for diagnostic code lookups
+        # Match "DC" followed by a number (e.g., "DC 7101", "DC7101", "dc 5237")
+        dc_pattern = r'\bDC\s*(\d{4})\b'
+        processed = re.sub(dc_pattern, r'Diagnostic Code \1', processed, flags=re.IGNORECASE)
+        
+        # Also handle "DC XXXX" at start of query without other context
+        if re.match(r'^(what is |what\'s )?(dc\s*\d{4})\s*\??$', processed, re.IGNORECASE):
+            code = re.search(r'\d{4}', processed).group()
+            processed = f"What is Diagnostic Code {code}? What condition does it cover?"
+        
+        # Expand common abbreviations
+        abbreviations = {
+            r'\bPTSD\b': 'PTSD (Post-Traumatic Stress Disorder)',
+            r'\bTDIU\b': 'TDIU (Total Disability Individual Unemployability)',
+            r'\bVR&E\b': 'VR&E (Veterans Readiness and Employment)',
+            r'\bVRE\b': 'VR&E (Veterans Readiness and Employment)',
+            r'\bBDD\b': 'BDD (Benefits Delivery at Discharge)',
+            r'\bC&P\b': 'C&P (Compensation and Pension)',
+            r'\bMGIB\b': 'MGIB (Montgomery GI Bill)',
+        }
+        
+        for abbrev, expanded in abbreviations.items():
+            # Only expand if not already expanded
+            if expanded not in processed:
+                processed = re.sub(abbrev, expanded, processed, flags=re.IGNORECASE)
+        
+        # If query changed, log it
+        if processed != query:
+            print(f"[PREPROCESS] Query expanded: '{query}' -> '{processed}'")
+        
+        return processed
+    
     def _retrieve_context(self, query: str) -> Tuple[List[Dict[str, Any]], float, bool]:
         """
         Retrieve relevant context chunks for a query with hallucination prevention.
@@ -828,6 +875,9 @@ class RAGPipeline:
             )
         
         total_start = time.time()
+        
+        # Query preprocessing - expand common abbreviations for better retrieval
+        question = self._preprocess_query(question)
         
         try:
             # Step 0: Generate query embedding for cache lookup

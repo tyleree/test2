@@ -1,0 +1,1810 @@
+{
+  "timestamp": "2025-12-06T12:57:05.330410",
+  "api_url": "https://veteransbenefits.ai/ask",
+  "total_questions": 50,
+  "results": [
+    {
+      "number": 1,
+      "id": "CARDIO-1",
+      "category": "CARDIO",
+      "question": "What is DC 7101?",
+      "response": {
+        "success": true,
+        "content": "I couldn't find any relevant information in my knowledge base to answer your question. Please try rephrasing your question or ask about a specific VA benefit or condition.",
+        "citations": [],
+        "source": "openai_rag",
+        "metadata": {
+          "cache_hit": "topic",
+          "chunks_retrieved": 0,
+          "model": "gpt-4.1-mini",
+          "query_time_ms": 12.530326843261719,
+          "retrieval_score": null,
+          "semantic_similarity": null
+        },
+        "status_code": 200,
+        "error": null
+      },
+      "elapsed_seconds": 0.14
+    },
+    {
+      "number": 2,
+      "id": "CARDIO-2",
+      "category": "CARDIO",
+      "question": "What are the rating criteria for hypertension?",
+      "response": {
+        "success": true,
+        "content": "The context provided does not include the specific rating criteria for hypertension. It mentions important notes about diagnosis, presumptive conditions, and quasi-presumptive service connection but does not detail the rating percentages or criteria for hypertension.\n\nI don't have specific information about the rating criteria for hypertension in my sources.\n\n**Sources:**\n\u00b9 [DC 7101 - High Blood Pressure - (rating_table)](https://www.veteransbenefitskb.com/bloodtubes#7101)",
+        "citations": [
+          {
+            "diagnostic_code": "7101",
+            "id": "7101-000",
+            "relevance_score": 0.5657006502151489,
+            "section": "7101 High Blood Pressure (Hypertension, Isolated Systolic Hypertension, Hypertensive Vascular Disease)",
+            "source_url": "https://www.veteransbenefitskb.com/bloodtubes#7101",
+            "title": "High Blood Pressure",
+            "url": "https://www.veteransbenefitskb.com/bloodtubes#7101"
+          }
+        ],
+        "source": "openai_rag",
+        "metadata": {
+          "cache_hit": "exact",
+          "chunks_retrieved": 0,
+          "model": "gpt-4.1-mini",
+          "query_time_ms": 0.06341934204101562,
+          "retrieval_score": null,
+          "semantic_similarity": 1.0
+        },
+        "status_code": 200,
+        "error": null
+      },
+      "elapsed_seconds": 0.14
+    },
+    {
+      "number": 3,
+      "id": "CARDIO-3",
+      "category": "CARDIO",
+      "question": "How is high blood pressure rated by the VA?",
+      "response": {
+        "success": true,
+        "content": "High blood pressure (hypertension, isolated systolic hypertension, hypertensive vascular disease) is rated by the VA based on blood pressure readings. Here are the key points for rating:\n\n- Blood pressure readings must be taken two or more times on at least three different days to properly diagnose hypertension.\n- Veterans can receive a separate rating for hypertension even if they have hypertensive heart disease.\n- Veterans with hypertension due to aortic insufficiency or hyperthyroidism will not receive a separate rating for hypertension.\n- Hypertension can be considered a presumptive condition if:\n  - It is diagnosed within a year of separation and was at least 10% disabling within that time,\n  - The veteran was exposed to Agent Orange,\n  - The veteran was a POW and the severity was at least 10% at some point.\n- There is also quasi presumptive service-connection for veterans who develop hypertension after certain amputations.\n\nThe specific rating percentages and criteria are not fully detailed in the provided context, but the process and requirements for diagnosis and rating eligibility are outlined\u00b9.\n\n**Sources:**\n\u00b9 [DC 7101 - High Blood Pressure - (rating_table)](https://www.veteransbenefitskb.com/bloodtubes#7101)",
+        "citations": [
+          {
+            "diagnostic_code": "7101",
+            "id": "7101-000",
+            "relevance_score": 0.7066009640693665,
+            "section": "7101 High Blood Pressure (Hypertension, Isolated Systolic Hypertension, Hypertensive Vascular Disease)",
+            "source_url": "https://www.veteransbenefitskb.com/bloodtubes#7101",
+            "title": "High Blood Pressure",
+            "url": "https://www.veteransbenefitskb.com/bloodtubes#7101"
+          },
+          {
+            "diagnostic_code": "7507",
+            "id": "7507-173",
+            "relevance_score": 0.5294816493988037,
+            "section": "7507 Hardening of the Kidney (Nephrosclerosis)",
+            "source_url": "https://www.veteransbenefitskb.com/gensystem#7507",
+            "title": "Hardening of the Kidney",
+            "url": "https://www.veteransbenefitskb.com/gensystem#7507"
+          },
+          {
+            "diagnostic_code": null,
+            "id": "GEN-0018",
+            "relevance_score": 0.5274865627288818,
+            "section": "References",
+            "source_url": "https://www.veteransbenefitskb.com/heart",
+            "title": "References",
+            "url": "https://www.veteransbenefitskb.com/heart"
+          },
+          {
+            "diagnostic_code": null,
+            "id": "GEN-0179",
+            "relevance_score": 0.5180758237838745,
+            "section": "Urinary Rating System",
+            "source_url": "https://www.veteransbenefitskb.com/gensystem",
+            "title": "Urinary Rating System",
+            "url": "https://www.veteransbenefitskb.com/gensystem"
+          },
+          {
+            "diagnostic_code": null,
+            "id": "GEN-0823",
+            "relevance_score": 0.5127919316291809,
+            "section": "70%",
+            "source_url": "https://www.veteransbenefitskb.com/combinedbenefits",
+            "title": "70%",
+            "url": "https://www.veteransbenefitskb.com/combinedbenefits"
+          },
+          {
+            "diagnostic_code": null,
+            "id": "GEN-0525",
+            "relevance_score": 0.5091813802719116,
+            "section": "Stroke",
+            "source_url": "https://www.veteransbenefitskb.com/bloodtubes",
+            "title": "Stroke",
+            "url": "https://www.veteransbenefitskb.com/bloodtubes"
+          },
+          {
+            "diagnostic_code": null,
+            "id": "GEN-0614",
+            "relevance_score": 0.5071206092834473,
+            "section": "Pyramiding",
+            "source_url": "https://www.veteransbenefitskb.com/appeals",
+            "title": "Pyramiding",
+            "url": "https://www.veteransbenefitskb.com/appeals"
+          }
+        ],
+        "source": "openai_rag",
+        "metadata": {
+          "cache_hit": "exact",
+          "chunks_retrieved": 0,
+          "model": "gpt-4.1",
+          "query_time_ms": 0.04792213439941406,
+          "retrieval_score": null,
+          "semantic_similarity": 1.0
+        },
+        "status_code": 200,
+        "error": null
+      },
+      "elapsed_seconds": 0.13
+    },
+    {
+      "number": 4,
+      "id": "CARDIO-4",
+      "category": "CARDIO",
+      "question": "What is the diagnostic code for heart disease?",
+      "response": {
+        "success": true,
+        "content": "I don't have enough information in my knowledge base to answer that question accurately. I'd recommend consulting the official VA website at va.gov or speaking with a Veterans Service Organization (VSO) for guidance on this topic.",
+        "citations": [
+          {
+            "diagnostic_code": "6817",
+            "id": "6817-681",
+            "relevance_score": 0.5471588373184204,
+            "section": "6817 Pulmonary Vascular Disease",
+            "source_url": "https://www.veteransbenefitskb.com/ratingsindex#6817",
+            "title": "Pulmonary Vascular Disease",
+            "url": "https://www.veteransbenefitskb.com/ratingsindex#6817"
+          },
+          {
+            "diagnostic_code": "7110",
+            "id": "7110-003",
+            "relevance_score": 0.5282864570617676,
+            "section": "7110 Aortic Aneurysm",
+            "source_url": "https://www.veteransbenefitskb.com/bloodtubes#7110",
+            "title": "Aortic Aneurysm",
+            "url": "https://www.veteransbenefitskb.com/bloodtubes#7110"
+          },
+          {
+            "diagnostic_code": "6604",
+            "id": "6604-657",
+            "relevance_score": 0.5281329154968262,
+            "section": "6604 Chronic Obstructive Pulmonary Disease (COPD)",
+            "source_url": "https://www.veteransbenefitskb.com/airsystem#6604",
+            "title": "Chronic Obstructive Pulmonary Disease",
+            "url": "https://www.veteransbenefitskb.com/airsystem#6604"
+          },
+          {
+            "diagnostic_code": "6040",
+            "id": "6040-742",
+            "relevance_score": 0.5115196108818054,
+            "section": "6040 Diabetic Retinopathy",
+            "source_url": "https://www.veteransbenefitskb.com/eyes#6040",
+            "title": "Diabetic Retinopathy",
+            "url": "https://www.veteransbenefitskb.com/eyes#6040"
+          },
+          {
+            "diagnostic_code": "7114",
+            "id": "7114-006",
+            "relevance_score": 0.5027452707290649,
+            "section": "7114 Peripheral Vascular Disease (Arteriosclerosis Obliterans)",
+            "source_url": "https://www.veteransbenefitskb.com/bloodtubes#7114",
+            "title": "Peripheral Vascular Disease",
+            "url": "https://www.veteransbenefitskb.com/bloodtubes#7114"
+          },
+          {
+            "diagnostic_code": "7346",
+            "id": "7346-111",
+            "relevance_score": 0.49232345819473267,
+            "section": "7346 Stomach Hernia (Hiatal Hernia and Paraesophageal Hernia)",
+            "source_url": "https://www.veteransbenefitskb.com/digsystem#7346",
+            "title": "Stomach Hernia",
+            "url": "https://www.veteransbenefitskb.com/digsystem#7346"
+          },
+          {
+            "diagnostic_code": "6603",
+            "id": "6603-656",
+            "relevance_score": 0.48643606901168823,
+            "section": "6603 Pulmonary Emphysema",
+            "source_url": "https://www.veteransbenefitskb.com/ratingsindex#6603",
+            "title": "Pulmonary Emphysema",
+            "url": "https://www.veteransbenefitskb.com/ratingsindex#6603"
+          }
+        ],
+        "source": "openai_rag",
+        "metadata": {
+          "cache_hit": "exact",
+          "chunks_retrieved": 0,
+          "model": "gpt-4.1",
+          "query_time_ms": 0.04887580871582031,
+          "retrieval_score": null,
+          "semantic_similarity": 1.0
+        },
+        "status_code": 200,
+        "error": null
+      },
+      "elapsed_seconds": 0.12
+    },
+    {
+      "number": 5,
+      "id": "CARDIO-5",
+      "category": "CARDIO",
+      "question": "Can I get service connected for hypertension as secondary to PTSD?",
+      "response": {
+        "success": true,
+        "content": "I don't have enough information in my knowledge base to answer that question accurately. I'd recommend consulting the official VA website at va.gov or speaking with a Veterans Service Organization (VSO) for guidance on this topic.",
+        "citations": [],
+        "source": "openai_rag",
+        "metadata": {
+          "cache_hit": "topic",
+          "chunks_retrieved": 0,
+          "model": "gpt-4.1",
+          "query_time_ms": 13.032913208007812,
+          "retrieval_score": null,
+          "semantic_similarity": null
+        },
+        "status_code": 200,
+        "error": null
+      },
+      "elapsed_seconds": 0.14
+    },
+    {
+      "number": 6,
+      "id": "MENTAL-1",
+      "category": "MENTAL",
+      "question": "What is the diagnostic code for PTSD?",
+      "response": {
+        "success": true,
+        "content": "I don't have enough information in my knowledge base to answer that question accurately. I'd recommend consulting the official VA website at va.gov or speaking with a Veterans Service Organization (VSO) for guidance on this topic.",
+        "citations": [
+          {
+            "diagnostic_code": null,
+            "id": "GEN-0287",
+            "relevance_score": 0.5681343078613281,
+            "section": "PTSD Service-Connection",
+            "source_url": "https://www.veteransbenefitskb.com/mental",
+            "title": "PTSD Service-Connection",
+            "url": "https://www.veteransbenefitskb.com/mental"
+          },
+          {
+            "diagnostic_code": null,
+            "id": "GEN-0296",
+            "relevance_score": 0.5409101843833923,
+            "section": "References",
+            "source_url": "https://www.veteransbenefitskb.com/mental",
+            "title": "References",
+            "url": "https://www.veteransbenefitskb.com/mental"
+          },
+          {
+            "diagnostic_code": "6602",
+            "id": "6602-652",
+            "relevance_score": 0.5262879729270935,
+            "section": "6602 Asthma",
+            "source_url": "https://www.veteransbenefitskb.com/airsystem#6602",
+            "title": "Asthma",
+            "url": "https://www.veteransbenefitskb.com/airsystem#6602"
+          },
+          {
+            "diagnostic_code": "6042",
+            "id": "6042-743",
+            "relevance_score": 0.5239391922950745,
+            "section": "6042 Retinal Dystrophy (Including Retinitis Pigmentosa, Wet or Dry Macular Degeneration, Early-onset Macular Degeneration, Rod and/or Cone Dystrophy)",
+            "source_url": "https://www.veteransbenefitskb.com/ears#6042",
+            "title": "Retinal Dystrophy",
+            "url": "https://www.veteransbenefitskb.com/ears#6042"
+          },
+          {
+            "diagnostic_code": "5003",
+            "id": "5003-455",
+            "relevance_score": 0.5200793743133545,
+            "section": "5003, 5010 Degenerative Arthritis/Post-Traumatic Arthritis",
+            "source_url": "https://www.veteransbenefitskb.com/ears#5003",
+            "title": "Degenerative Arthritis/Post-Traumatic Arthritis",
+            "url": "https://www.veteransbenefitskb.com/ears#5003"
+          },
+          {
+            "diagnostic_code": "5025",
+            "id": "5025-460",
+            "relevance_score": 0.5179342031478882,
+            "section": "5025 Fibromyalgia (Fibrositis, Primary Fibromyalgia Syndrome)",
+            "source_url": "https://www.veteransbenefitskb.com/bloodtubes#5025",
+            "title": "Fibromyalgia",
+            "url": "https://www.veteransbenefitskb.com/bloodtubes#5025"
+          },
+          {
+            "diagnostic_code": "6504",
+            "id": "6504-671",
+            "relevance_score": 0.5168994069099426,
+            "section": "6504 Loss of Part of the Nose/Significant Scarring",
+            "source_url": "https://www.veteransbenefitskb.com/skin#6504",
+            "title": "Loss of Part of the Nose/Significant Scarring",
+            "url": "https://www.veteransbenefitskb.com/skin#6504"
+          }
+        ],
+        "source": "openai_rag",
+        "metadata": {
+          "cache_hit": "exact",
+          "chunks_retrieved": 0,
+          "model": "gpt-4.1",
+          "query_time_ms": 0.04887580871582031,
+          "retrieval_score": null,
+          "semantic_similarity": 1.0
+        },
+        "status_code": 200,
+        "error": null
+      },
+      "elapsed_seconds": 0.18
+    },
+    {
+      "number": 7,
+      "id": "MENTAL-2",
+      "category": "MENTAL",
+      "question": "How is anxiety rated by the VA?",
+      "response": {
+        "success": false,
+        "content": "",
+        "citations": [],
+        "source": "",
+        "metadata": {},
+        "status_code": 429,
+        "error": "HTTP 429: {\"error\":\"Rate limit exceeded due to suspicious activity\",\"reason\":\"Burst requests detected\",\"retry_after\":300}\n"
+      },
+      "elapsed_seconds": 0.11
+    },
+    {
+      "number": 8,
+      "id": "MENTAL-3",
+      "category": "MENTAL",
+      "question": "What are the rating criteria for depression?",
+      "response": {
+        "success": true,
+        "content": "The rating criteria for depression (and other mental health disorders) are based on the severity of the totality of a veteran's symptoms, not the specific diagnosis. Veterans receive a single rating regardless of the number of mental health diagnoses they have. The rating is determined by how closely the veteran's symptoms match the criteria for each percentage level, considering all evidence submitted, such as examiner's reports, personal statements, and treatment notes.\n\nFor example, the 50% rating criteria for depression (and other mental disorders) are:\n\n- Occupational and social impairment with reduced reliability and productivity due to such symptoms as:\n  - Flattened affect\n  - Circumstantial, circumlocutory, or stereotyped speech\n  - Panic attacks more than once a week\n  - Difficulty in understanding complex commands\n  - Impairment of short- and long-term memory (e.g., retention of only highly learned material, forgetting to complete tasks)\n  - Impaired judgment\n  - Impaired abstract thinking\n  - Disturbances of motivation and mood\n  - Difficulty in establishing and maintaining effective work and social relationships\n\nAdditional notes for the 50% rating:\n- Mostly able to care for themselves, though hygiene may not always be maintained\n- Able to do daily tasks (driving, shopping, chores), but may occasionally be hospitalized\n- Can work, but may have difficulty staying employed for long periods\n- May be able to form relationships, but they may be short-lived due to difficulty being an active participant\n- Symptoms may include extreme lack of motivation, mood swings, inappropriate emotional responses, frequent panic attacks, severe anxiety, difficulty with complex directions, and poor judgment\u00b3\n\nThe rating is ultimately based on the totality of symptoms and how closely they match the criteria for each percentage level, not just the presence of a diagnosis like depression.\n\n**Sources:**\n\u00b9 [Mental Disorder Ratings - (notes)](https://www.veteransbenefitskb.com/mental)\n\u00b2 [How a Rater Decides - (policy)](https://www.veteransbenefitskb.com/cnp)\n\u00b3 [50% - (policy)](https://www.veteransbenefitskb.com/mental)",
+        "citations": [
+          {
+            "diagnostic_code": null,
+            "id": "GEN-0278",
+            "relevance_score": 0.521060049533844,
+            "section": "Mental Disorder Ratings",
+            "source_url": "https://www.veteransbenefitskb.com/mental",
+            "title": "Mental Disorder Ratings",
+            "url": "https://www.veteransbenefitskb.com/mental"
+          },
+          {
+            "diagnostic_code": null,
+            "id": "GEN-0279",
+            "relevance_score": 0.5130226612091064,
+            "section": "How a Rater Decides",
+            "source_url": "https://www.veteransbenefitskb.com/cnp",
+            "title": "How a Rater Decides",
+            "url": "https://www.veteransbenefitskb.com/cnp"
+          },
+          {
+            "diagnostic_code": null,
+            "id": "GEN-0283",
+            "relevance_score": 0.46866926550865173,
+            "section": "50%",
+            "source_url": "https://www.veteransbenefitskb.com/mental",
+            "title": "50%",
+            "url": "https://www.veteransbenefitskb.com/mental"
+          },
+          {
+            "diagnostic_code": null,
+            "id": "GEN-0275",
+            "relevance_score": 0.4607219696044922,
+            "section": "Mood Disorders",
+            "source_url": "https://www.veteransbenefitskb.com/mental",
+            "title": "Mood Disorders",
+            "url": "https://www.veteransbenefitskb.com/mental"
+          },
+          {
+            "diagnostic_code": null,
+            "id": "GEN-0536",
+            "relevance_score": 0.4556630849838257,
+            "section": "Rating Seizures",
+            "source_url": "https://www.veteransbenefitskb.com/ears",
+            "title": "Rating Seizures",
+            "url": "https://www.veteransbenefitskb.com/ears"
+          },
+          {
+            "diagnostic_code": null,
+            "id": "GEN-0617",
+            "relevance_score": 0.45153719186782837,
+            "section": "Severity of Impairment",
+            "source_url": "https://veteransbenefitskb.com",
+            "title": "Severity of Impairment",
+            "url": "https://veteransbenefitskb.com"
+          }
+        ],
+        "source": "openai_rag",
+        "metadata": {
+          "cache_hit": "exact",
+          "chunks_retrieved": 0,
+          "model": "gpt-4.1",
+          "query_time_ms": 0.06079673767089844,
+          "retrieval_score": null,
+          "semantic_similarity": 1.0
+        },
+        "status_code": 200,
+        "error": null
+      },
+      "elapsed_seconds": 0.16
+    },
+    {
+      "number": 9,
+      "id": "MENTAL-4",
+      "category": "MENTAL",
+      "question": "What is the 70% rating criteria for PTSD?",
+      "response": {
+        "success": true,
+        "content": "I don't have enough information in my knowledge base to answer that question accurately. I'd recommend consulting the official VA website at va.gov or speaking with a Veterans Service Organization (VSO) for guidance on this topic.",
+        "citations": [],
+        "source": "openai_rag",
+        "metadata": {
+          "cache_hit": "topic",
+          "chunks_retrieved": 0,
+          "model": "gpt-4.1",
+          "query_time_ms": 14.950037002563477,
+          "retrieval_score": null,
+          "semantic_similarity": null
+        },
+        "status_code": 200,
+        "error": null
+      },
+      "elapsed_seconds": 0.15
+    },
+    {
+      "number": 10,
+      "id": "MENTAL-5",
+      "category": "MENTAL",
+      "question": "What symptoms are required for a 50% PTSD rating?",
+      "response": {
+        "success": false,
+        "content": "",
+        "citations": [],
+        "source": "",
+        "metadata": {},
+        "status_code": 429,
+        "error": "HTTP 429: {\"error\":\"Rate limit exceeded due to suspicious activity\",\"reason\":\"Burst requests detected\",\"retry_after\":300}\n"
+      },
+      "elapsed_seconds": 0.12
+    },
+    {
+      "number": 11,
+      "id": "MSK-1",
+      "category": "MSK",
+      "question": "What is the diagnostic code for lumbar spine conditions?",
+      "response": {
+        "success": true,
+        "content": "The diagnostic code for lumbar spine conditions related to the sacroiliac joint and lumbosacral joint is 5236\u00b9.\n\n**Sources:**\n\u00b9 [DC 5236 - Sacroiliac Joint and Lumbosacral Joint - (condition_definition)](https://www.veteransbenefitskb.com/spine#5236)",
+        "citations": [
+          {
+            "diagnostic_code": "5236",
+            "id": "5236-428",
+            "relevance_score": 0.6029657125473022,
+            "section": "5236 Sacroiliac Joint and Lumbosacral Joint",
+            "source_url": "https://www.veteransbenefitskb.com/spine#5236",
+            "title": "Sacroiliac Joint and Lumbosacral Joint",
+            "url": "https://www.veteransbenefitskb.com/spine#5236"
+          },
+          {
+            "diagnostic_code": "8021",
+            "id": "8021-559",
+            "relevance_score": 0.5675591230392456,
+            "section": "8021 Spinal Cord Cancer (Malignant Tumor)",
+            "source_url": "https://www.veteransbenefitskb.com/cancer#8021",
+            "title": "Spinal Cord Cancer",
+            "url": "https://www.veteransbenefitskb.com/cancer#8021"
+          },
+          {
+            "diagnostic_code": "8022",
+            "id": "8022-560",
+            "relevance_score": 0.5423034429550171,
+            "section": "8022 Spinal Cord Tumor (Benign)",
+            "source_url": "https://veteransbenefitskb.com#8022",
+            "title": "Spinal Cord Tumor",
+            "url": "https://veteransbenefitskb.com#8022"
+          },
+          {
+            "diagnostic_code": "5235",
+            "id": "5235-424",
+            "relevance_score": 0.5373398065567017,
+            "section": "5235 through 5242 Ratings Based Off Limitations of Range of Motion (ROM)",
+            "source_url": "https://www.veteransbenefitskb.com/nervesystem#5235",
+            "title": "through 5242 Ratings Based Off Limitations of Range of Motion",
+            "url": "https://www.veteransbenefitskb.com/nervesystem#5235"
+          },
+          {
+            "diagnostic_code": "8010",
+            "id": "8010-530",
+            "relevance_score": 0.5342119336128235,
+            "section": "8010 Inflammation of the Spinal Cord (Myelitis)",
+            "source_url": "https://www.veteransbenefitskb.com/ears#8010",
+            "title": "Inflammation of the Spinal Cord",
+            "url": "https://www.veteransbenefitskb.com/ears#8010"
+          },
+          {
+            "diagnostic_code": "5298",
+            "id": "5298-429",
+            "relevance_score": 0.5239554047584534,
+            "section": "5298 The Tailbone (Coccyx)",
+            "source_url": "https://www.veteransbenefitskb.com/spine#5298",
+            "title": "The Tailbone",
+            "url": "https://www.veteransbenefitskb.com/spine#5298"
+          },
+          {
+            "diagnostic_code": "8012",
+            "id": "8012-532",
+            "relevance_score": 0.5208714008331299,
+            "section": "8012 Hematomyelia",
+            "source_url": "https://www.veteransbenefitskb.com/spine#8012",
+            "title": "Hematomyelia",
+            "url": "https://www.veteransbenefitskb.com/spine#8012"
+          }
+        ],
+        "source": "openai_rag",
+        "metadata": {
+          "cache_hit": "exact",
+          "chunks_retrieved": 0,
+          "model": "gpt-4.1",
+          "query_time_ms": 0.05745887756347656,
+          "retrieval_score": null,
+          "semantic_similarity": 1.0
+        },
+        "status_code": 200,
+        "error": null
+      },
+      "elapsed_seconds": 0.15
+    },
+    {
+      "number": 12,
+      "id": "MSK-2",
+      "category": "MSK",
+      "question": "How are knee conditions rated by the VA?",
+      "response": {
+        "success": true,
+        "content": "Knee conditions are rated by the VA primarily based on range of motion (ROM). The examiner and rater are required to consider flare-ups in your condition, meaning they must estimate your impairment as it would be on your worst day, even if your examination does not occur during a flare-up. The most impaired ROM measurements noted by the examiner must be used for rating purposes\u00b9.\n\nIf arthritis is present in the knee and does not warrant a rating based on ROM, the condition will be rated under degenerative arthritis criteria. For degenerative arthritis, there must be x-ray evidence to confirm the diagnosis. Ratings for degenerative arthritis are as follows:\n\n- 10%: If 2 or more major joints (including the knee) or 2 or more minor joint groups are affected\u00b3.\n\nIf the knee condition is due to certain diseases (like bursitis, gout, or tendinitis), these are rated only on how they affect range of motion and do not receive the major/minor joint treatment\u00b2.\n\n**Sources:**\n\u00b9 [Rating Schedule for the Knee and Lower Leg - (notes)](https://www.veteransbenefitskb.com/ratingsindex)\n\u00b2 [DC 5013 - VA Doing VA Things - (condition_definition)](https://www.veteransbenefitskb.com/mental#5013)\n\u00b3 [DC 5003 - Degenerative Arthritis/Post-Traumatic Arthritis - (rating_table)](https://www.veteransbenefitskb.com/ears#5003)",
+        "citations": [
+          {
+            "diagnostic_code": null,
+            "id": "GEN-0374",
+            "relevance_score": 0.6492632627487183,
+            "section": "Rating Schedule for the Knee and Lower Leg",
+            "source_url": "https://www.veteransbenefitskb.com/ratingsindex",
+            "title": "Rating Schedule for the Knee and Lower Leg",
+            "url": "https://www.veteransbenefitskb.com/ratingsindex"
+          },
+          {
+            "diagnostic_code": "5013",
+            "id": "5013-456",
+            "relevance_score": 0.6367368102073669,
+            "section": "5013-5024 VA Doing VA Things",
+            "source_url": "https://www.veteransbenefitskb.com/mental#5013",
+            "title": "VA Doing VA Things",
+            "url": "https://www.veteransbenefitskb.com/mental#5013"
+          },
+          {
+            "diagnostic_code": "5003",
+            "id": "5003-455",
+            "relevance_score": 0.6365672945976257,
+            "section": "5003, 5010 Degenerative Arthritis/Post-Traumatic Arthritis",
+            "source_url": "https://www.veteransbenefitskb.com/ears#5003",
+            "title": "Degenerative Arthritis/Post-Traumatic Arthritis",
+            "url": "https://www.veteransbenefitskb.com/ears#5003"
+          },
+          {
+            "diagnostic_code": null,
+            "id": "GEN-0371",
+            "relevance_score": 0.6178086996078491,
+            "section": "Arthritis",
+            "source_url": "https://www.veteransbenefitskb.com/hip",
+            "title": "Arthritis",
+            "url": "https://www.veteransbenefitskb.com/hip"
+          },
+          {
+            "diagnostic_code": null,
+            "id": "GEN-0308",
+            "relevance_score": 0.6177961826324463,
+            "section": "Arthritis",
+            "source_url": "https://www.veteransbenefitskb.com/ankle",
+            "title": "Arthritis",
+            "url": "https://www.veteransbenefitskb.com/ankle"
+          },
+          {
+            "diagnostic_code": null,
+            "id": "GEN-0420",
+            "relevance_score": 0.6177690029144287,
+            "section": "Arthritis",
+            "source_url": "https://www.veteransbenefitskb.com/shoulder",
+            "title": "Arthritis",
+            "url": "https://www.veteransbenefitskb.com/shoulder"
+          },
+          {
+            "diagnostic_code": null,
+            "id": "GEN-0326",
+            "relevance_score": 0.6177690029144287,
+            "section": "Arthritis",
+            "source_url": "https://www.veteransbenefitskb.com/msdiseases#5002",
+            "title": "Arthritis",
+            "url": "https://www.veteransbenefitskb.com/msdiseases#5002"
+          }
+        ],
+        "source": "openai_rag",
+        "metadata": {
+          "cache_hit": "exact",
+          "chunks_retrieved": 0,
+          "model": "gpt-4.1",
+          "query_time_ms": 0.05412101745605469,
+          "retrieval_score": null,
+          "semantic_similarity": 1.0
+        },
+        "status_code": 200,
+        "error": null
+      },
+      "elapsed_seconds": 0.13
+    },
+    {
+      "number": 13,
+      "id": "MSK-3",
+      "category": "MSK",
+      "question": "What is DC 5237?",
+      "response": {
+        "success": true,
+        "content": "I couldn't find any relevant information in my knowledge base to answer your question. Please try rephrasing your question or ask about a specific VA benefit or condition.",
+        "citations": [],
+        "source": "openai_rag",
+        "metadata": {
+          "cache_hit": "topic",
+          "chunks_retrieved": 0,
+          "model": "gpt-4.1-mini",
+          "query_time_ms": 11.06572151184082,
+          "retrieval_score": null,
+          "semantic_similarity": null
+        },
+        "status_code": 200,
+        "error": null
+      },
+      "elapsed_seconds": 0.14
+    },
+    {
+      "number": 14,
+      "id": "MSK-4",
+      "category": "MSK",
+      "question": "How is limited range of motion rated?",
+      "response": {
+        "success": false,
+        "content": "",
+        "citations": [],
+        "source": "",
+        "metadata": {},
+        "status_code": 429,
+        "error": "HTTP 429: {\"error\":\"Rate limit exceeded due to suspicious activity\",\"reason\":\"Burst requests detected\",\"retry_after\":300}\n"
+      },
+      "elapsed_seconds": 0.13
+    },
+    {
+      "number": 15,
+      "id": "MSK-5",
+      "category": "MSK",
+      "question": "What are the rating criteria for degenerative disc disease?",
+      "response": {
+        "success": true,
+        "content": "Degenerative Disc Disease (DDD) can be rated under two main criteria based on the context provided:\n\n### 1. Incapacitating Episodes (DC 5243)\nIf a Veteran with DDD (also known as Intervertebral Disc Syndrome or IVDS) has incapacitating episodes requiring **prescribed** bed rest within a 12-month period, the following ratings apply:\n\n- **10%**: At least 1 but less than 2 weeks of prescribed bed rest\n- **20%**: At least 2 but less than 4 weeks\n- **40%**: At least 4 but less than 6 weeks\n- **60%**: More than 6 weeks\n\n**Note:** The Veteran can be rated based on either incapacitating episodes or range of motion (ROM), but not both. The higher rating is used. If rated under this schedule, separate ratings for related spine nerve conditions are **not** allowed\u00b9.\n\n### 2. Limitations of Range of Motion (ROM) (DC 5235\u20135242)\nIf the Veteran does not meet the criteria for incapacitating episodes, DDD may be rated based on limitation of motion of the spine. Only one rating per section of the spine (neck or middle/lower back) is allowed, even if multiple conditions affect the same section\u00b3.\n\n#### Thoracolumbar (Back) Ratings:\n- **0%**: Forward flexion \u2265 90\u00b0, or combined ROM \u2265 240\u00b0\n- **10%**: Forward flexion > 60\u00b0 but \u2264 85\u00b0, or combined ROM 125\u00b0\u2013240\u00b0\n- (Further criteria are truncated in the context)\n\n#### Cervical (Neck) Ratings:\n- **0%**: Forward flexion \u2265 45\u00b0, or combined ROM \u2265 340\u00b0\n- **10%**: Forward flexion > 30\u00b0 but < 45\u00b0, or combined ROM 175\u00b0\u2013340\u00b0\n- (Further criteria are truncated in the context)\n\n**Note:** Only the most impaired ROM measurements should be used, including estimates for flare-ups if not directly observed during examination\u2076.\n\n### Additional Notes:\n- DDD is **not** considered arthritis and is not subject to presumptive service connection for arthritis\u00b2.\n- If a Veteran qualifies for both ROM and incapacitating episode ratings, only the higher rating is applied, not both\u00b9 \u2077.\n\n**Sources:**\n\u00b9 [DC 5243 - Rating Based off Incapacitating Episodes](https://www.veteransbenefitskb.com/digsystem#5243)  \n\u00b2 [Arthritis of the Spine - (policy)](https://www.veteransbenefitskb.com/spine)  \n\u00b3 [DC 5235 - through 5242 Ratings Based Off Limitations of Range of Motion - (rating_table)](https://www.veteransbenefitskb.com/nervesystem#5235)  \n\u2076 [Rating Schedule for the Knee and Lower Leg - (notes)](https://www.veteransbenefitskb.com/ratingsindex)  \n\u2077 [Miscellaneous - (rating_table)](https://veteransbenefitskb.com)",
+        "citations": [
+          {
+            "diagnostic_code": "5243",
+            "id": "5243-425",
+            "relevance_score": 0.5937564969062805,
+            "section": "5243 Rating Based off Incapacitating Episodes",
+            "source_url": "https://www.veteransbenefitskb.com/digsystem#5243",
+            "title": "Rating Based off Incapacitating Episodes",
+            "url": "https://www.veteransbenefitskb.com/digsystem#5243"
+          },
+          {
+            "diagnostic_code": null,
+            "id": "GEN-0427",
+            "relevance_score": 0.5515559911727905,
+            "section": "Arthritis of the Spine",
+            "source_url": "https://www.veteransbenefitskb.com/spine",
+            "title": "Arthritis of the Spine",
+            "url": "https://www.veteransbenefitskb.com/spine"
+          },
+          {
+            "diagnostic_code": "5235",
+            "id": "5235-424",
+            "relevance_score": 0.5381983518600464,
+            "section": "5235 through 5242 Ratings Based Off Limitations of Range of Motion (ROM)",
+            "source_url": "https://www.veteransbenefitskb.com/nervesystem#5235",
+            "title": "through 5242 Ratings Based Off Limitations of Range of Motion",
+            "url": "https://www.veteransbenefitskb.com/nervesystem#5235"
+          },
+          {
+            "diagnostic_code": "5003",
+            "id": "5003-455",
+            "relevance_score": 0.5286169052124023,
+            "section": "5003, 5010 Degenerative Arthritis/Post-Traumatic Arthritis",
+            "source_url": "https://www.veteransbenefitskb.com/ears#5003",
+            "title": "Degenerative Arthritis/Post-Traumatic Arthritis",
+            "url": "https://www.veteransbenefitskb.com/ears#5003"
+          },
+          {
+            "diagnostic_code": null,
+            "id": "GEN-0484",
+            "relevance_score": 0.499986857175827,
+            "section": "Rating Schedule for the Peripheral Nerves of the Low Back and Legs",
+            "source_url": "https://www.veteransbenefitskb.com/ratingsindex",
+            "title": "Rating Schedule for the Peripheral Nerves of the Low Back and Legs",
+            "url": "https://www.veteransbenefitskb.com/ratingsindex"
+          },
+          {
+            "diagnostic_code": null,
+            "id": "GEN-0374",
+            "relevance_score": 0.49935382604599,
+            "section": "Rating Schedule for the Knee and Lower Leg",
+            "source_url": "https://www.veteransbenefitskb.com/ratingsindex",
+            "title": "Rating Schedule for the Knee and Lower Leg",
+            "url": "https://www.veteransbenefitskb.com/ratingsindex"
+          },
+          {
+            "diagnostic_code": null,
+            "id": "GEN-0426",
+            "relevance_score": 0.4965081512928009,
+            "section": "Miscellaneous",
+            "source_url": "https://veteransbenefitskb.com",
+            "title": "Miscellaneous",
+            "url": "https://veteransbenefitskb.com"
+          }
+        ],
+        "source": "openai_rag",
+        "metadata": {
+          "cache_hit": "exact",
+          "chunks_retrieved": 0,
+          "model": "gpt-4.1",
+          "query_time_ms": 0.05507469177246094,
+          "retrieval_score": null,
+          "semantic_similarity": 1.0
+        },
+        "status_code": 200,
+        "error": null
+      },
+      "elapsed_seconds": 0.13
+    },
+    {
+      "number": 16,
+      "id": "RESP-1",
+      "category": "RESP",
+      "question": "What is the diagnostic code for asthma?",
+      "response": {
+        "success": true,
+        "content": "The diagnostic code for asthma is 6602\u00b9.\n\n**Sources:**\n\u00b9 [DC 6602 - Asthma - (condition_definition)](https://www.veteransbenefitskb.com/airsystem#6602)",
+        "citations": [
+          {
+            "diagnostic_code": "6602",
+            "id": "6602-652",
+            "relevance_score": 0.6305109858512878,
+            "section": "6602 Asthma",
+            "source_url": "https://www.veteransbenefitskb.com/airsystem#6602",
+            "title": "Asthma",
+            "url": "https://www.veteransbenefitskb.com/airsystem#6602"
+          },
+          {
+            "diagnostic_code": "6604",
+            "id": "6604-657",
+            "relevance_score": 0.5887547731399536,
+            "section": "6604 Chronic Obstructive Pulmonary Disease (COPD)",
+            "source_url": "https://www.veteransbenefitskb.com/airsystem#6604",
+            "title": "Chronic Obstructive Pulmonary Disease",
+            "url": "https://www.veteransbenefitskb.com/airsystem#6604"
+          },
+          {
+            "diagnostic_code": "6600",
+            "id": "6600-649",
+            "relevance_score": 0.5796190500259399,
+            "section": "6600 Chronic Bronchitis",
+            "source_url": "https://www.veteransbenefitskb.com/ratingsindex#6600",
+            "title": "Chronic Bronchitis",
+            "url": "https://www.veteransbenefitskb.com/ratingsindex#6600"
+          },
+          {
+            "diagnostic_code": "6601",
+            "id": "6601-650",
+            "relevance_score": 0.5676152110099792,
+            "section": "6601 Bronchiectasis",
+            "source_url": "https://www.veteransbenefitskb.com/ratingsindex#6601",
+            "title": "Bronchiectasis",
+            "url": "https://www.veteransbenefitskb.com/ratingsindex#6601"
+          },
+          {
+            "diagnostic_code": "6603",
+            "id": "6603-656",
+            "relevance_score": 0.5135388374328613,
+            "section": "6603 Pulmonary Emphysema",
+            "source_url": "https://www.veteransbenefitskb.com/ratingsindex#6603",
+            "title": "Pulmonary Emphysema",
+            "url": "https://www.veteransbenefitskb.com/ratingsindex#6603"
+          },
+          {
+            "diagnostic_code": "6846",
+            "id": "6846-663",
+            "relevance_score": 0.49743735790252686,
+            "section": "6846 Sarcoidosis",
+            "source_url": "https://www.veteransbenefitskb.com/ratingsindex#6846",
+            "title": "Sarcoidosis",
+            "url": "https://www.veteransbenefitskb.com/ratingsindex#6846"
+          },
+          {
+            "diagnostic_code": "6845",
+            "id": "6845-662",
+            "relevance_score": 0.48289555311203003,
+            "section": "6845 Chronic Pleural Effusion, Fibrosis, or Pleurisy with Empyema",
+            "source_url": "https://www.veteransbenefitskb.com/ratingsindex#6845",
+            "title": "Chronic Pleural Effusion, Fibrosis, or Pleurisy with Empyema",
+            "url": "https://www.veteransbenefitskb.com/ratingsindex#6845"
+          }
+        ],
+        "source": "openai_rag",
+        "metadata": {
+          "cache_hit": "exact",
+          "chunks_retrieved": 0,
+          "model": "gpt-4.1",
+          "query_time_ms": 0.05340576171875,
+          "retrieval_score": null,
+          "semantic_similarity": 1.0
+        },
+        "status_code": 200,
+        "error": null
+      },
+      "elapsed_seconds": 0.13
+    },
+    {
+      "number": 17,
+      "id": "RESP-2",
+      "category": "RESP",
+      "question": "How is sleep apnea rated by the VA?",
+      "response": {
+        "success": true,
+        "content": "Sleep apnea is rated by the VA under Diagnostic Code 6847. The ratings are based on the severity of symptoms and the need for breathing assistance devices. Here are the rating criteria:\n\n- **0%**: No symptoms, but there is a diagnosis.\n- **30%**: Persistent sleepiness during the daytime or not feeling rested after sleeping.\n- **50%**: Requires use of a breathing assistance device such as a CPAP machine or similar devices (e.g., APAP, BiPAP, NIPPV, NIV, nasopharyngeal appliances, oral appliances, or implanted genioglossal nerve stimulation devices).\n\n**Important notes:**\n- The VA must have a sleep study to grant service connection for sleep apnea. Home sleep studies are acceptable if a competent medical provider has evaluated the results and determined they are appropriate.\n- The veteran only needs to be prescribed a CPAP (or similar device) to qualify for the 50% rating; actual use is not required to maintain this rating\u00b9.\n\n**Sources:**\n\u00b9 [DC 6847 - Sleep Apnea - (rating_table)](https://www.veteransbenefitskb.com/airsystem#6847)",
+        "citations": [
+          {
+            "diagnostic_code": "6847",
+            "id": "6847-683",
+            "relevance_score": 0.7001024484634399,
+            "section": "6847 Sleep Apnea (SA, Obstructive, Central, Mixed)",
+            "source_url": "https://www.veteransbenefitskb.com/airsystem#6847",
+            "title": "Sleep Apnea",
+            "url": "https://www.veteransbenefitskb.com/airsystem#6847"
+          },
+          {
+            "diagnostic_code": null,
+            "id": "GEN-0270",
+            "relevance_score": 0.5687270164489746,
+            "section": "Remaining Mental Disorders",
+            "source_url": "https://www.veteransbenefitskb.com/mental",
+            "title": "Remaining Mental Disorders",
+            "url": "https://www.veteransbenefitskb.com/mental"
+          },
+          {
+            "diagnostic_code": null,
+            "id": "GEN-0642",
+            "relevance_score": 0.5311167240142822,
+            "section": "GENERAL PYRAMIDING NOTES:",
+            "source_url": "https://www.veteransbenefitskb.com/airsystem",
+            "title": "GENERAL PYRAMIDING NOTES:",
+            "url": "https://www.veteransbenefitskb.com/airsystem"
+          },
+          {
+            "diagnostic_code": null,
+            "id": "GEN-0682",
+            "relevance_score": 0.5208966732025146,
+            "section": "Upper Airway Resistance Syndrome (UARS)",
+            "source_url": "https://www.veteransbenefitskb.com/airsystem",
+            "title": "Upper Airway Resistance Syndrome (UARS)",
+            "url": "https://www.veteransbenefitskb.com/airsystem"
+          },
+          {
+            "diagnostic_code": null,
+            "id": "GEN-0644",
+            "relevance_score": 0.5108546018600464,
+            "section": "General Rating Schedule",
+            "source_url": "https://www.veteransbenefitskb.com/ratingsindex",
+            "title": "General Rating Schedule",
+            "url": "https://www.veteransbenefitskb.com/ratingsindex"
+          },
+          {
+            "diagnostic_code": null,
+            "id": "GEN-1037",
+            "relevance_score": 0.4894404411315918,
+            "section": "Common Pyramiding Errors",
+            "source_url": "https://www.veteransbenefitskb.com/mental",
+            "title": "Common Pyramiding Errors",
+            "url": "https://www.veteransbenefitskb.com/mental"
+          },
+          {
+            "diagnostic_code": null,
+            "id": "GEN-0841",
+            "relevance_score": 0.4893934726715088,
+            "section": "Common Pyramiding Errors",
+            "source_url": "https://www.veteransbenefitskb.com/mental",
+            "title": "Common Pyramiding Errors",
+            "url": "https://www.veteransbenefitskb.com/mental"
+          }
+        ],
+        "source": "openai_rag",
+        "metadata": {
+          "cache_hit": "exact",
+          "chunks_retrieved": 0,
+          "model": "gpt-4.1",
+          "query_time_ms": 0.04792213439941406,
+          "retrieval_score": null,
+          "semantic_similarity": 1.0
+        },
+        "status_code": 200,
+        "error": null
+      },
+      "elapsed_seconds": 0.13
+    },
+    {
+      "number": 18,
+      "id": "RESP-3",
+      "category": "RESP",
+      "question": "What are the rating levels for DC 6602?",
+      "response": {
+        "success": true,
+        "content": "I couldn't find any relevant information in my knowledge base to answer your question. Please try rephrasing your question or ask about a specific VA benefit or condition.",
+        "citations": [],
+        "source": "openai_rag",
+        "metadata": {
+          "cache_hit": null,
+          "chunks_retrieved": 0,
+          "model": "gpt-4.1-mini",
+          "query_time_ms": 277.57906913757324,
+          "retrieval_score": null,
+          "semantic_similarity": null
+        },
+        "status_code": 200,
+        "error": null
+      },
+      "elapsed_seconds": 0.59
+    },
+    {
+      "number": 19,
+      "id": "GIBILL-1",
+      "category": "GIBILL",
+      "question": "What is the GI Bill?",
+      "response": {
+        "success": true,
+        "content": "Voc Rehab, now known as Veterans Readiness and Employment (VR&E) or Chapter 31, is a program designed to help veterans with service-connected disabilities prepare for, find, and maintain suitable employment. It was formerly called Vocational Rehabilitation and Employment. The program provides various services to support veterans in their transition to civilian work life\u00b9.\n\n**Sources:**\n\u00b9 [Veterans Readiness and Employment (VR&E) - (overview)](https://www.veteransbenefitskb.com/vre)",
+        "citations": [],
+        "source": "openai_rag",
+        "metadata": {
+          "cache_hit": "topic",
+          "chunks_retrieved": 0,
+          "model": "gpt-4.1-mini",
+          "query_time_ms": 14.82248306274414,
+          "retrieval_score": null,
+          "semantic_similarity": null
+        },
+        "status_code": 200,
+        "error": null
+      },
+      "elapsed_seconds": 0.14
+    },
+    {
+      "number": 20,
+      "id": "GIBILL-2",
+      "category": "GIBILL",
+      "question": "How do I apply for the Post-9/11 GI Bill?",
+      "response": {
+        "success": true,
+        "content": "Voc Rehab, now known as Veterans Readiness and Employment (VR&E) or Chapter 31, is a program designed to help veterans with service-connected disabilities prepare for, find, and maintain suitable employment. It was formerly called Vocational Rehabilitation and Employment. The program provides various services to support veterans in their transition to civilian work life\u00b9.\n\n**Sources:**\n\u00b9 [Veterans Readiness and Employment (VR&E) - (overview)](https://www.veteransbenefitskb.com/vre)",
+        "citations": [],
+        "source": "openai_rag",
+        "metadata": {
+          "cache_hit": "topic",
+          "chunks_retrieved": 0,
+          "model": "gpt-4.1-mini",
+          "query_time_ms": 13.202905654907227,
+          "retrieval_score": null,
+          "semantic_similarity": null
+        },
+        "status_code": 200,
+        "error": null
+      },
+      "elapsed_seconds": 0.18
+    },
+    {
+      "number": 21,
+      "id": "GIBILL-3",
+      "category": "GIBILL",
+      "question": "What is Chapter 33?",
+      "response": {
+        "success": false,
+        "content": "",
+        "citations": [],
+        "source": "",
+        "metadata": {},
+        "status_code": 429,
+        "error": "HTTP 429: {\"error\":\"Rate limit exceeded due to suspicious activity\",\"reason\":\"Burst requests detected\",\"retry_after\":300}\n"
+      },
+      "elapsed_seconds": 0.12
+    },
+    {
+      "number": 22,
+      "id": "GIBILL-4",
+      "category": "GIBILL",
+      "question": "What is the Montgomery GI Bill?",
+      "response": {
+        "success": false,
+        "content": "",
+        "citations": [],
+        "source": "",
+        "metadata": {},
+        "status_code": 429,
+        "error": "HTTP 429: {\"error\":\"Rate limit exceeded due to suspicious activity\",\"reason\":\"Burst requests detected\",\"retry_after\":300}\n"
+      },
+      "elapsed_seconds": 0.12
+    },
+    {
+      "number": 23,
+      "id": "GIBILL-5",
+      "category": "GIBILL",
+      "question": "Can dependents use GI Bill benefits?",
+      "response": {
+        "success": true,
+        "content": "CHAMPVA (Civilian Health and Medical Program of the Department of Veterans Affairs) is a health care benefits program that provides coverage to the spouse or widow(er) and to the children of a Veteran who meets certain criteria. Specifically, the Veteran must be:\n\n- Rated Permanently and Totally disabled due to service-connected condition(s)\n- Rated Permanently and Totally disabled due to service-connected condition(s) at the time of death\n- Deceased due to a service-connected condition\n- Deceased on Active Duty, with dependents who are NOT otherwise eligible for Department of Defense TRICARE benefits\n\nCHAMPVA covers most health care services and supplies that are medically and psychologically necessary. However, dental care is NOT covered unless you also enroll in the VA Dental Insurance Program (VADIP). To be eligible for CHAMPVA, the beneficiary cannot be eligible for TRICARE. There are additional eligibility rules regarding remarriage, divorce, and age for children\u00b9\u2074\u2075.\n\n**Sources:**\n\u00b9 [Civilian Health and Medical Program of the Department of Veterans Affairs (CHAMPVA) - (policy)](https://www.veteransbenefitskb.com/survivorbenefits#top)  \n\u2074 [Benefits - (benefits)](https://www.veteransbenefitskb.com/champva#benefits)  \n\u2075 [Eligibility - (eligibility)](https://www.veteransbenefitskb.com/champva#eligibility)",
+        "citations": [],
+        "source": "openai_rag",
+        "metadata": {
+          "cache_hit": "topic",
+          "chunks_retrieved": 0,
+          "model": "gpt-4.1",
+          "query_time_ms": 15.350103378295898,
+          "retrieval_score": null,
+          "semantic_similarity": null
+        },
+        "status_code": 200,
+        "error": null
+      },
+      "elapsed_seconds": 0.14
+    },
+    {
+      "number": 24,
+      "id": "CHAMPVA-1",
+      "category": "CHAMPVA",
+      "question": "What is CHAMPVA?",
+      "response": {
+        "success": true,
+        "content": "CHAMPVA (Civilian Health and Medical Program of the Department of Veterans Affairs) is a health care benefits program that provides coverage to the spouse or widow(er) and to the children of a Veteran who meets certain criteria. Specifically, the Veteran must be:\n\n- Rated Permanently and Totally disabled due to service-connected condition(s)\n- Rated Permanently and Totally disabled due to service-connected condition(s) at the time of death\n- Deceased due to a service-connected condition\n- Deceased on Active Duty, with dependents who are NOT otherwise eligible for Department of Defense TRICARE benefits\n\nCHAMPVA covers most health care services and supplies that are medically and psychologically necessary. However, dental care is NOT covered unless you also enroll in the VA Dental Insurance Program (VADIP). To be eligible for CHAMPVA, the beneficiary cannot be eligible for TRICARE. There are additional eligibility rules regarding remarriage, divorce, and age for children\u00b9\u2074\u2075.\n\n**Sources:**\n\u00b9 [Civilian Health and Medical Program of the Department of Veterans Affairs (CHAMPVA) - (policy)](https://www.veteransbenefitskb.com/survivorbenefits#top)  \n\u2074 [Benefits - (benefits)](https://www.veteransbenefitskb.com/champva#benefits)  \n\u2075 [Eligibility - (eligibility)](https://www.veteransbenefitskb.com/champva#eligibility)",
+        "citations": [
+          {
+            "diagnostic_code": null,
+            "id": "GEN-0976",
+            "relevance_score": 0.7777630090713501,
+            "section": "Civilian Health and Medical Program of the Department of Veterans Affairs (CHAMPVA)",
+            "source_url": "https://www.veteransbenefitskb.com/survivorbenefits#top",
+            "title": "Civilian Health and Medical Program of the Department of Veterans Affairs (CHAMPVA)",
+            "url": "https://www.veteransbenefitskb.com/survivorbenefits#top"
+          },
+          {
+            "diagnostic_code": null,
+            "id": "CHAMPVA-1073",
+            "relevance_score": 0.7439013719558716,
+            "section": "CHAMPVA",
+            "source_url": "https://www.veteransbenefitskb.com/champva",
+            "title": "CHAMPVA",
+            "url": "https://www.veteransbenefitskb.com/champva"
+          },
+          {
+            "diagnostic_code": null,
+            "id": "CHAMPVA-1075",
+            "relevance_score": 0.6795159578323364,
+            "section": "Additional Eligibility",
+            "source_url": "https://www.veteransbenefitskb.com/champva#additionaleligibilit",
+            "title": "Additional Eligibility",
+            "url": "https://www.veteransbenefitskb.com/champva#additionaleligibilit"
+          },
+          {
+            "diagnostic_code": null,
+            "id": "CHAMPVA-1080",
+            "relevance_score": 0.6761780977249146,
+            "section": "Benefits",
+            "source_url": "https://www.veteransbenefitskb.com/champva#benefits",
+            "title": "Benefits",
+            "url": "https://www.veteransbenefitskb.com/champva#benefits"
+          },
+          {
+            "diagnostic_code": null,
+            "id": "CHAMPVA-1074",
+            "relevance_score": 0.6576973795890808,
+            "section": "Eligibility",
+            "source_url": "https://www.veteransbenefitskb.com/champva#eligibility",
+            "title": "Eligibility",
+            "url": "https://www.veteransbenefitskb.com/champva#eligibility"
+          },
+          {
+            "diagnostic_code": null,
+            "id": "CHAMPVA-1082",
+            "relevance_score": 0.6239176988601685,
+            "section": "Frequently",
+            "source_url": "https://www.veteransbenefitskb.com/champva#frequently",
+            "title": "Frequently (Part 1)",
+            "url": "https://www.veteransbenefitskb.com/champva#frequently"
+          },
+          {
+            "diagnostic_code": null,
+            "id": "CHAMPVA-1086",
+            "relevance_score": 0.6187543869018555,
+            "section": "References",
+            "source_url": "https://www.veteransbenefitskb.com/champva#references",
+            "title": "References",
+            "url": "https://www.veteransbenefitskb.com/champva#references"
+          }
+        ],
+        "source": "openai_rag",
+        "metadata": {
+          "cache_hit": "exact",
+          "chunks_retrieved": 0,
+          "model": "gpt-4.1",
+          "query_time_ms": 0.05459785461425781,
+          "retrieval_score": null,
+          "semantic_similarity": 1.0
+        },
+        "status_code": 200,
+        "error": null
+      },
+      "elapsed_seconds": 0.15
+    },
+    {
+      "number": 25,
+      "id": "CHAMPVA-2",
+      "category": "CHAMPVA",
+      "question": "Who is eligible for CHAMPVA?",
+      "response": {
+        "success": false,
+        "content": "",
+        "citations": [],
+        "source": "",
+        "metadata": {},
+        "status_code": 429,
+        "error": "HTTP 429: {\"error\":\"Rate limit exceeded due to suspicious activity\",\"reason\":\"Burst requests detected\",\"retry_after\":300}\n"
+      },
+      "elapsed_seconds": 0.13
+    },
+    {
+      "number": 26,
+      "id": "CHAMPVA-3",
+      "category": "CHAMPVA",
+      "question": "How do I enroll in CHAMPVA?",
+      "response": {
+        "success": true,
+        "content": "CHAMPVA (Civilian Health and Medical Program of the Department of Veterans Affairs) is a health care benefits program that provides coverage to the spouse or widow(er) and to the children of a Veteran who meets certain criteria. Specifically, the Veteran must be:\n\n- Rated Permanently and Totally disabled due to service-connected condition(s)\n- Rated Permanently and Totally disabled due to service-connected condition(s) at the time of death\n- Deceased due to a service-connected condition\n- Deceased on Active Duty, with dependents who are NOT otherwise eligible for Department of Defense TRICARE benefits\n\nCHAMPVA covers most health care services and supplies that are medically and psychologically necessary. However, dental care is NOT covered unless you also enroll in the VA Dental Insurance Program (VADIP). To be eligible for CHAMPVA, the beneficiary cannot be eligible for TRICARE. There are additional eligibility rules regarding remarriage, divorce, and age for children\u00b9\u2074\u2075.\n\n**Sources:**\n\u00b9 [Civilian Health and Medical Program of the Department of Veterans Affairs (CHAMPVA) - (policy)](https://www.veteransbenefitskb.com/survivorbenefits#top)  \n\u2074 [Benefits - (benefits)](https://www.veteransbenefitskb.com/champva#benefits)  \n\u2075 [Eligibility - (eligibility)](https://www.veteransbenefitskb.com/champva#eligibility)",
+        "citations": [],
+        "source": "openai_rag",
+        "metadata": {
+          "cache_hit": "topic",
+          "chunks_retrieved": 0,
+          "model": "gpt-4.1",
+          "query_time_ms": 176.45716667175293,
+          "retrieval_score": null,
+          "semantic_similarity": null
+        },
+        "status_code": 200,
+        "error": null
+      },
+      "elapsed_seconds": 0.3
+    },
+    {
+      "number": 27,
+      "id": "CHAMPVA-4",
+      "category": "CHAMPVA",
+      "question": "What does CHAMPVA cover?",
+      "response": {
+        "success": false,
+        "content": "",
+        "citations": [],
+        "source": "",
+        "metadata": {},
+        "status_code": 429,
+        "error": "HTTP 429: {\"error\":\"Rate limit exceeded due to suspicious activity\",\"reason\":\"Burst requests detected\",\"retry_after\":300}\n"
+      },
+      "elapsed_seconds": 0.16
+    },
+    {
+      "number": 28,
+      "id": "1151-1",
+      "category": "1151",
+      "question": "What is a 1151 claim?",
+      "response": {
+        "success": false,
+        "content": "",
+        "citations": [],
+        "source": "",
+        "metadata": {},
+        "status_code": 429,
+        "error": "HTTP 429: {\"error\":\"Rate limit exceeded due to suspicious activity\",\"reason\":\"Burst requests detected\",\"retry_after\":300}\n"
+      },
+      "elapsed_seconds": 0.18
+    },
+    {
+      "number": 29,
+      "id": "1151-2",
+      "category": "1151",
+      "question": "What is a federal tort claim?",
+      "response": {
+        "success": false,
+        "content": "",
+        "citations": [],
+        "source": "",
+        "metadata": {},
+        "status_code": 429,
+        "error": "HTTP 429: {\"error\":\"Rate limit exceeded due to suspicious activity\",\"reason\":\"Burst requests detected\",\"retry_after\":300}\n"
+      },
+      "elapsed_seconds": 0.12
+    },
+    {
+      "number": 30,
+      "id": "1151-3",
+      "category": "1151",
+      "question": "Can I sue the VA for malpractice?",
+      "response": {
+        "success": false,
+        "content": "",
+        "citations": [],
+        "source": "",
+        "metadata": {},
+        "status_code": 429,
+        "error": "HTTP 429: {\"error\":\"Rate limit exceeded due to suspicious activity\",\"reason\":\"Burst requests detected\",\"retry_after\":300}\n"
+      },
+      "elapsed_seconds": 0.11
+    },
+    {
+      "number": 31,
+      "id": "1151-4",
+      "category": "1151",
+      "question": "How do I file an 1151 claim?",
+      "response": {
+        "success": true,
+        "content": "To file an 1151 claim, you need to:\n\n- Identify your claim as a 1151 claim when filing your VA disability claim. There is no special or separate form for a 1151 claim\u00b9.\n- Provide information to help the VA obtain relevant records, including:\n  - Where the event occurred\n  - Approximately when the event occurred\n  - An explanation of how the provider made a mistake\u00b9\n- Your claim should include:\n  1. An event that meets the 1151 criteria (such as an injury or aggravation caused by VA medical care).\n  2. Evidence that a disability or death began or was made worse after the event.\n  3. A nexus letter or independent medical opinion linking the event to the disability or death\u00b9.\n\nYou can file a claim in several ways, including:\n\n- Online at [VA.gov](https://www.va.gov/disability/how-to-file-claim/)\n- With the help of a Veterans Service Officer (VSO)\n- By completing VA Form 21-526EZ and submitting it online, by fax, in person at a VA Regional Office, or by mail to the VA Claims Intake Center\u00b3.\n\nWhen filing, make sure to clearly state that your claim is under 1151 and provide all the required details and supporting evidence.\n\n**Sources:**\n\u00b9 [Winning a 1151 Claim - (policy)](https://www.veteransbenefitskb.com/1151#winninga1151claim)\n\u00b3 [Filing a Claim - (notes)](https://www.veteransbenefitskb.com/vaclaim)",
+        "citations": [
+          {
+            "diagnostic_code": null,
+            "id": "1151-1089",
+            "relevance_score": 0.5956408381462097,
+            "section": "Winning a 1151 Claim",
+            "source_url": "https://www.veteransbenefitskb.com/1151#winninga1151claim",
+            "title": "Winning a 1151 Claim",
+            "url": "https://www.veteransbenefitskb.com/1151#winninga1151claim"
+          },
+          {
+            "diagnostic_code": null,
+            "id": "1151-1087",
+            "relevance_score": 0.5381181240081787,
+            "section": "1151 Claim",
+            "source_url": "https://www.veteransbenefitskb.com/1151",
+            "title": "1151 Claim",
+            "url": "https://www.veteransbenefitskb.com/1151"
+          },
+          {
+            "diagnostic_code": null,
+            "id": "GEN-0883",
+            "relevance_score": 0.5258320569992065,
+            "section": "Filing a Claim",
+            "source_url": "https://www.veteransbenefitskb.com/vaclaim",
+            "title": "Filing a Claim",
+            "url": "https://www.veteransbenefitskb.com/vaclaim"
+          },
+          {
+            "diagnostic_code": null,
+            "id": "GEN-1019",
+            "relevance_score": 0.4813212752342224,
+            "section": "Filing a BDD Claim",
+            "source_url": "https://www.veteransbenefitskb.com/vaclaim",
+            "title": "Filing a BDD Claim",
+            "url": "https://www.veteransbenefitskb.com/vaclaim"
+          },
+          {
+            "diagnostic_code": null,
+            "id": "CHAMPVA-1081",
+            "relevance_score": 0.4812881350517273,
+            "section": "Filing a Claim",
+            "source_url": "https://www.veteransbenefitskb.com/champva#filingaclaim",
+            "title": "Filing a Claim",
+            "url": "https://www.veteransbenefitskb.com/champva#filingaclaim"
+          },
+          {
+            "diagnostic_code": null,
+            "id": "GEN-0980",
+            "relevance_score": 0.4742417335510254,
+            "section": "How to File",
+            "source_url": "https://www.veteransbenefitskb.com/appeals",
+            "title": "How to File",
+            "url": "https://www.veteransbenefitskb.com/appeals"
+          },
+          {
+            "diagnostic_code": null,
+            "id": "1151-1088",
+            "relevance_score": 0.47325918078422546,
+            "section": "Winning a Federal Tort Claim",
+            "source_url": "https://www.veteransbenefitskb.com/1151#winningafederaltortc",
+            "title": "Winning a Federal Tort Claim",
+            "url": "https://www.veteransbenefitskb.com/1151#winningafederaltortc"
+          }
+        ],
+        "source": "openai_rag",
+        "metadata": {
+          "cache_hit": "exact",
+          "chunks_retrieved": 0,
+          "model": "gpt-4.1",
+          "query_time_ms": 0.060558319091796875,
+          "retrieval_score": null,
+          "semantic_similarity": 1.0
+        },
+        "status_code": 200,
+        "error": null
+      },
+      "elapsed_seconds": 0.13
+    },
+    {
+      "number": 32,
+      "id": "AO-1",
+      "category": "AO",
+      "question": "What is Agent Orange?",
+      "response": {
+        "success": false,
+        "content": "",
+        "citations": [],
+        "source": "",
+        "metadata": {},
+        "status_code": 429,
+        "error": "HTTP 429: {\"error\":\"Rate limit exceeded due to suspicious activity\",\"reason\":\"Burst requests detected\",\"retry_after\":300}\n"
+      },
+      "elapsed_seconds": 0.11
+    },
+    {
+      "number": 33,
+      "id": "AO-2",
+      "category": "AO",
+      "question": "What conditions are presumptive for Agent Orange exposure?",
+      "response": {
+        "success": false,
+        "content": "",
+        "citations": [],
+        "source": "",
+        "metadata": {},
+        "status_code": 429,
+        "error": "HTTP 429: {\"error\":\"Rate limit exceeded due to suspicious activity\",\"reason\":\"Burst requests detected\",\"retry_after\":300}\n"
+      },
+      "elapsed_seconds": 0.12
+    },
+    {
+      "number": 34,
+      "id": "AO-3",
+      "category": "AO",
+      "question": "What is Nehmer?",
+      "response": {
+        "success": true,
+        "content": "\u26a0\ufe0f **Note:** My sources may not fully cover this topic. Our internal confidence score is **47.6%** for this response - please verify the answer with your own due diligence. A report has been generated and someone will review this.\n\nNehmer refers to a VA policy under 38 CFR 3.816 that requires the VA to grant earlier effective dates for service connection (SC) of certain presumptive conditions related to Agent Orange exposure when those conditions were denied before they became presumptive. This policy applies to conditions named in 38 CFR 3.309(e), except chloracne, and mandates the VA to review prior decisions and adjust effective dates accordingly when a new presumptive condition is added. However, Nehmer does not apply if the original claim was denied before September 25, 1985, or if the claim was filed after the condition became presumptive. Conditions like hypertension and MGUS are currently not eligible for Nehmer consideration. Nehmer allows veterans to receive service connection effective from the date of the initial claim or evidence of diagnosis, even if the condition was not yet presumptive at that time.\n\n**Sources:**\n\u00b9 [Nehmer Class Members (38 CFR 3.816) (Part 4) - (policy)](https://www.veteransbenefitskb.com/agentorange#nehmerclassmembers38)  \n\u00b2 [Nehmer Class Members (38 CFR 3.816) (Part 3) - (policy)](https://www.veteransbenefitskb.com/agentorange#nehmerclassmembers38)",
+        "citations": [
+          {
+            "diagnostic_code": null,
+            "id": "AO-1107",
+            "relevance_score": 0.4755624234676361,
+            "section": "Nehmer Class Members (38 CFR 3.816)",
+            "source_url": "https://www.veteransbenefitskb.com/agentorange#nehmerclassmembers38",
+            "title": "Nehmer Class Members (38 CFR 3.816) (Part 4)",
+            "url": "https://www.veteransbenefitskb.com/agentorange#nehmerclassmembers38"
+          },
+          {
+            "diagnostic_code": null,
+            "id": "AO-1106",
+            "relevance_score": 0.4510907828807831,
+            "section": "Nehmer Class Members (38 CFR 3.816)",
+            "source_url": "https://www.veteransbenefitskb.com/agentorange#nehmerclassmembers38",
+            "title": "Nehmer Class Members (38 CFR 3.816) (Part 3)",
+            "url": "https://www.veteransbenefitskb.com/agentorange#nehmerclassmembers38"
+          }
+        ],
+        "source": "openai_rag",
+        "metadata": {
+          "cache_hit": "exact",
+          "chunks_retrieved": 0,
+          "model": "gpt-4.1-mini",
+          "query_time_ms": 0.0553131103515625,
+          "retrieval_score": null,
+          "semantic_similarity": 1.0
+        },
+        "status_code": 200,
+        "error": null
+      },
+      "elapsed_seconds": 0.15
+    },
+    {
+      "number": 35,
+      "id": "AO-4",
+      "category": "AO",
+      "question": "Am I eligible for Agent Orange benefits if I served in Vietnam?",
+      "response": {
+        "success": false,
+        "content": "",
+        "citations": [],
+        "source": "",
+        "metadata": {},
+        "status_code": 429,
+        "error": "HTTP 429: {\"error\":\"Rate limit exceeded due to suspicious activity\",\"reason\":\"Burst requests detected\",\"retry_after\":300}\n"
+      },
+      "elapsed_seconds": 0.1
+    },
+    {
+      "number": 36,
+      "id": "VRE-1",
+      "category": "VRE",
+      "question": "What is voc rehab?",
+      "response": {
+        "success": false,
+        "content": "",
+        "citations": [],
+        "source": "",
+        "metadata": {},
+        "status_code": 429,
+        "error": "HTTP 429: {\"error\":\"Rate limit exceeded due to suspicious activity\",\"reason\":\"Burst requests detected\",\"retry_after\":300}\n"
+      },
+      "elapsed_seconds": 0.12
+    },
+    {
+      "number": 37,
+      "id": "VRE-2",
+      "category": "VRE",
+      "question": "What is Chapter 31?",
+      "response": {
+        "success": true,
+        "content": "I couldn't find any relevant information in my knowledge base to answer your question. Please try rephrasing your question or ask about a specific VA benefit or condition.",
+        "citations": [],
+        "source": "openai_rag",
+        "metadata": {
+          "cache_hit": "topic",
+          "chunks_retrieved": 0,
+          "model": "gpt-4.1-mini",
+          "query_time_ms": 13.141632080078125,
+          "retrieval_score": null,
+          "semantic_similarity": null
+        },
+        "status_code": 200,
+        "error": null
+      },
+      "elapsed_seconds": 0.14
+    },
+    {
+      "number": 38,
+      "id": "VRE-3",
+      "category": "VRE",
+      "question": "How do I apply for VR&E?",
+      "response": {
+        "success": false,
+        "content": "",
+        "citations": [],
+        "source": "",
+        "metadata": {},
+        "status_code": 429,
+        "error": "HTTP 429: {\"error\":\"Rate limit exceeded due to suspicious activity\",\"reason\":\"Burst requests detected\",\"retry_after\":300}\n"
+      },
+      "elapsed_seconds": 0.18
+    },
+    {
+      "number": 39,
+      "id": "VRE-4",
+      "category": "VRE",
+      "question": "What are the different VR&E tracks?",
+      "response": {
+        "success": true,
+        "content": "You can apply for Veterans Readiness and Employment (VR&E) in two ways\u00b9:\n\n1. Online:\n   - Apply online by clicking [HERE](https://www.va.gov/careers-employment/vocational-rehabilitation/apply-vre-form-28-1900/start).\n2. By Mail:\n   - Complete VA Form 28-1900 and mail it to:\n     ```\n     Department of Veterans Affairs\n     VR&E Intake Center\n     P.O. Box 5210\n     Janesville, WI 53547-5210\n     ```\n\nAfter you apply, you will eventually be asked to complete VA Form 28-1902W, which helps your Vocational Rehabilitation Counselor (VRC) develop your plan. Make sure to fill out this form thoroughly and sign all required documents, as your VRC cannot process your plan without your signature and the debt prevention document\u00b9.\n\n**Sources:**\n\u00b9 [Applying - (process)](https://www.veteransbenefitskb.com/vre#applying)",
+        "citations": [],
+        "source": "openai_rag",
+        "metadata": {
+          "cache_hit": "topic",
+          "chunks_retrieved": 0,
+          "model": "gpt-4.1",
+          "query_time_ms": 13.725519180297852,
+          "retrieval_score": null,
+          "semantic_similarity": null
+        },
+        "status_code": 200,
+        "error": null
+      },
+      "elapsed_seconds": 0.14
+    },
+    {
+      "number": 40,
+      "id": "PROTECT-1",
+      "category": "PROTECT",
+      "question": "What is the 5 year rule?",
+      "response": {
+        "success": false,
+        "content": "",
+        "citations": [],
+        "source": "",
+        "metadata": {},
+        "status_code": 429,
+        "error": "HTTP 429: {\"error\":\"Rate limit exceeded due to suspicious activity\",\"reason\":\"Burst requests detected\",\"retry_after\":300}\n"
+      },
+      "elapsed_seconds": 0.15
+    },
+    {
+      "number": 41,
+      "id": "PROTECT-2",
+      "category": "PROTECT",
+      "question": "What is the 10 year rule?",
+      "response": {
+        "success": false,
+        "content": "",
+        "citations": [],
+        "source": "",
+        "metadata": {},
+        "status_code": 429,
+        "error": "HTTP 429: {\"error\":\"Rate limit exceeded due to suspicious activity\",\"reason\":\"Burst requests detected\",\"retry_after\":300}\n"
+      },
+      "elapsed_seconds": 0.12
+    },
+    {
+      "number": 42,
+      "id": "PROTECT-3",
+      "category": "PROTECT",
+      "question": "What is the 20 year rule for VA disability?",
+      "response": {
+        "success": false,
+        "content": "",
+        "citations": [],
+        "source": "",
+        "metadata": {},
+        "status_code": 429,
+        "error": "HTTP 429: {\"error\":\"Rate limit exceeded due to suspicious activity\",\"reason\":\"Burst requests detected\",\"retry_after\":300}\n"
+      },
+      "elapsed_seconds": 0.12
+    },
+    {
+      "number": 43,
+      "id": "DC-1",
+      "category": "DC",
+      "question": "What is the diagnostic code for tinnitus?",
+      "response": {
+        "success": true,
+        "content": "The diagnostic code for tinnitus is 6260\u00b9.\n\n**Sources:**\n\u00b9 [DC 6260 - Ringing in the Ears - (rating_table)](https://www.veteransbenefitskb.com/ears#6260)",
+        "citations": [
+          {
+            "diagnostic_code": "6260",
+            "id": "6260-703",
+            "relevance_score": 0.6112967729568481,
+            "section": "6260 Ringing in the Ears (Tinnitus)",
+            "source_url": "https://www.veteransbenefitskb.com/ears#6260",
+            "title": "Ringing in the Ears",
+            "url": "https://www.veteransbenefitskb.com/ears#6260"
+          },
+          {
+            "diagnostic_code": "6205",
+            "id": "6205-707",
+            "relevance_score": 0.5474990010261536,
+            "section": "6205 Meniere\u00e2\u20ac\u2122s Syndrome (Endolymphatic Hydrops)",
+            "source_url": "https://www.veteransbenefitskb.com/combinedbenefits#6205",
+            "title": "Meniere's Syndrome",
+            "url": "https://www.veteransbenefitskb.com/combinedbenefits#6205"
+          },
+          {
+            "diagnostic_code": "8721",
+            "id": "8721-501",
+            "relevance_score": 0.5331690311431885,
+            "section": "8721 Neuralgia",
+            "source_url": "https://www.veteransbenefitskb.com/nervesystem#8721",
+            "title": "Neuralgia",
+            "url": "https://www.veteransbenefitskb.com/nervesystem#8721"
+          },
+          {
+            "diagnostic_code": "8720",
+            "id": "8720-492",
+            "relevance_score": 0.5328490734100342,
+            "section": "8720 Neuralgia",
+            "source_url": "https://www.veteransbenefitskb.com/nervesystem#8720",
+            "title": "Neuralgia",
+            "url": "https://www.veteransbenefitskb.com/nervesystem#8720"
+          },
+          {
+            "diagnostic_code": "8725",
+            "id": "8725-498",
+            "relevance_score": 0.5321187973022461,
+            "section": "8725 Neuralgia",
+            "source_url": "https://www.veteransbenefitskb.com/nervesystem#8725",
+            "title": "Neuralgia",
+            "url": "https://www.veteransbenefitskb.com/nervesystem#8725"
+          },
+          {
+            "diagnostic_code": "8724",
+            "id": "8724-495",
+            "relevance_score": 0.5314359068870544,
+            "section": "8724 Neuralgia",
+            "source_url": "https://www.veteransbenefitskb.com/nervesystem#8724",
+            "title": "Neuralgia",
+            "url": "https://www.veteransbenefitskb.com/nervesystem#8724"
+          },
+          {
+            "diagnostic_code": "6211",
+            "id": "6211-701",
+            "relevance_score": 0.5302442312240601,
+            "section": "6211 Ruptured Eardrum (Perforated Eardrum, Tympanic Membrane Perforation)",
+            "source_url": "https://www.veteransbenefitskb.com/ears#6211",
+            "title": "Ruptured Eardrum",
+            "url": "https://www.veteransbenefitskb.com/ears#6211"
+          }
+        ],
+        "source": "openai_rag",
+        "metadata": {
+          "cache_hit": "exact",
+          "chunks_retrieved": 0,
+          "model": "gpt-4.1",
+          "query_time_ms": 0.05888938903808594,
+          "retrieval_score": null,
+          "semantic_similarity": 1.0
+        },
+        "status_code": 200,
+        "error": null
+      },
+      "elapsed_seconds": 0.13
+    },
+    {
+      "number": 44,
+      "id": "DC-2",
+      "category": "DC",
+      "question": "What is DC 5271?",
+      "response": {
+        "success": true,
+        "content": "I couldn't find any relevant information in my knowledge base to answer your question. Please try rephrasing your question or ask about a specific VA benefit or condition.",
+        "citations": [],
+        "source": "openai_rag",
+        "metadata": {
+          "cache_hit": "topic",
+          "chunks_retrieved": 0,
+          "model": "gpt-4.1-mini",
+          "query_time_ms": 14.857769012451172,
+          "retrieval_score": null,
+          "semantic_similarity": null
+        },
+        "status_code": 200,
+        "error": null
+      },
+      "elapsed_seconds": 0.16
+    },
+    {
+      "number": 45,
+      "id": "DC-3",
+      "category": "DC",
+      "question": "What is the diagnostic code for migraines?",
+      "response": {
+        "success": false,
+        "content": "",
+        "citations": [],
+        "source": "",
+        "metadata": {},
+        "status_code": 429,
+        "error": "HTTP 429: {\"error\":\"Rate limit exceeded\",\"limit\":\"5 per 1 hour\",\"message\":\"Too many requests. Please wait before retrying.\",\"retry_after\":null}\n"
+      },
+      "elapsed_seconds": 0.12
+    },
+    {
+      "number": 46,
+      "id": "DC-4",
+      "category": "DC",
+      "question": "What is DC 7913?",
+      "response": {
+        "success": true,
+        "content": "I couldn't find any relevant information in my knowledge base to answer your question. Please try rephrasing your question or ask about a specific VA benefit or condition.",
+        "citations": [],
+        "source": "openai_rag",
+        "metadata": {
+          "cache_hit": "topic",
+          "chunks_retrieved": 0,
+          "model": "gpt-4.1-mini",
+          "query_time_ms": 11.312484741210938,
+          "retrieval_score": null,
+          "semantic_similarity": null
+        },
+        "status_code": 200,
+        "error": null
+      },
+      "elapsed_seconds": 0.14
+    },
+    {
+      "number": 47,
+      "id": "EDGE-1",
+      "category": "EDGE",
+      "question": "wat is ptsd",
+      "response": {
+        "success": false,
+        "content": "",
+        "citations": [],
+        "source": "",
+        "metadata": {},
+        "status_code": 429,
+        "error": "HTTP 429: {\"error\":\"Rate limit exceeded\",\"limit\":\"5 per 1 hour\",\"message\":\"Too many requests. Please wait before retrying.\",\"retry_after\":null}\n"
+      },
+      "elapsed_seconds": 0.11
+    },
+    {
+      "number": 48,
+      "id": "EDGE-2",
+      "category": "EDGE",
+      "question": "hypertention rating",
+      "response": {
+        "success": true,
+        "content": "The rating for hypertension (high blood pressure) depends on specific diagnostic criteria and severity. Important points include:\n\n- To be diagnosed with hypertension, blood pressure readings must be taken two or more times on at least three different days.\n- Veterans with hypertensive heart disease can receive a separate rating for hypertension.\n- Hypertension due to aortic insufficiency or hyperthyroidism does not receive a separate rating.\n- Presumptive service connection for hypertension applies if diagnosed within a year of separation with at least 10% severity, or if exposed to Agent Orange, or if the veteran was a POW with at least 10% severity at some point.\n- Quasi presumptive service connection applies for hypertension developing in veterans with certain service-connected amputations.\n\nThe exact rating percentages and criteria for hypertension are detailed in the rating table, but the context provided does not include the full rating table or specific percentages for hypertension alone.\n\nFor heart-related conditions linked to hypertension:\n- 100% rating applies for right-sided heart failure (Cor pulmonale).\n- 100% rating applies for pulmonary hypertension affecting arteries in the lungs and heart.\n\nI don't have the full hypertension rating percentages from the provided context, so I recommend reviewing the full rating table on the linked source for detailed rating criteria.\n\n**Sources:**\n\u00b9 [DC 7101 - High Blood Pressure](https://www.veteransbenefitskb.com/bloodtubes#7101)  \n\u00b2 [Heart Test](https://www.veteransbenefitskb.com/heart)",
+        "citations": [
+          {
+            "diagnostic_code": "7101",
+            "id": "7101-000",
+            "relevance_score": 0.5355295538902283,
+            "section": "7101 High Blood Pressure (Hypertension, Isolated Systolic Hypertension, Hypertensive Vascular Disease)",
+            "source_url": "https://www.veteransbenefitskb.com/bloodtubes#7101",
+            "title": "High Blood Pressure",
+            "url": "https://www.veteransbenefitskb.com/bloodtubes#7101"
+          },
+          {
+            "diagnostic_code": null,
+            "id": "GEN-0666",
+            "relevance_score": 0.45626193284988403,
+            "section": "Heart Test",
+            "source_url": "https://www.veteransbenefitskb.com/heart",
+            "title": "Heart Test",
+            "url": "https://www.veteransbenefitskb.com/heart"
+          }
+        ],
+        "source": "openai_rag",
+        "metadata": {
+          "cache_hit": "exact",
+          "chunks_retrieved": 0,
+          "model": "gpt-4.1-mini",
+          "query_time_ms": 0.060558319091796875,
+          "retrieval_score": null,
+          "semantic_similarity": 1.0
+        },
+        "status_code": 200,
+        "error": null
+      },
+      "elapsed_seconds": 0.13
+    },
+    {
+      "number": 49,
+      "id": "EDGE-3",
+      "category": "EDGE",
+      "question": "What is the best way to win my VA claim?",
+      "response": {
+        "success": false,
+        "content": "",
+        "citations": [],
+        "source": "",
+        "metadata": {},
+        "status_code": 429,
+        "error": "HTTP 429: {\"error\":\"Rate limit exceeded\",\"limit\":\"5 per 1 hour\",\"message\":\"Too many requests. Please wait before retrying.\",\"retry_after\":null}\n"
+      },
+      "elapsed_seconds": 0.11
+    },
+    {
+      "number": 50,
+      "id": "EDGE-4",
+      "category": "EDGE",
+      "question": "Tell me about diabetes",
+      "response": {
+        "success": false,
+        "content": "",
+        "citations": [],
+        "source": "",
+        "metadata": {},
+        "status_code": 429,
+        "error": "HTTP 429: {\"error\":\"Rate limit exceeded\",\"limit\":\"5 per 1 hour\",\"message\":\"Too many requests. Please wait before retrying.\",\"retry_after\":null}\n"
+      },
+      "elapsed_seconds": 0.1
+    }
+  ]
+}

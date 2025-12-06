@@ -1,0 +1,262 @@
+# QA Test Questions - 200 Questions
+# Format: CATEGORY-NUMBER | Question
+
+# === CARDIOVASCULAR (15 questions) ===
+CARDIO-1 | What is DC 7101?
+CARDIO-2 | What are the rating criteria for hypertension?
+CARDIO-3 | How is high blood pressure rated by the VA?
+CARDIO-4 | What is the diagnostic code for heart disease?
+CARDIO-5 | Can I get service connected for hypertension as secondary to PTSD?
+CARDIO-6 | What is the 60% rating for hypertension?
+CARDIO-7 | What is DC 7007?
+CARDIO-8 | How does the VA rate heart conditions?
+CARDIO-9 | What is the METS requirement for heart ratings?
+CARDIO-10 | What is the diagnostic code for coronary artery disease?
+CARDIO-11 | How is atrial fibrillation rated?
+CARDIO-12 | What is DC 7010?
+CARDIO-13 | What is hypertensive heart disease?
+CARDIO-14 | Can heart disease be secondary to sleep apnea?
+CARDIO-15 | What is the rating for a pacemaker?
+
+# === MENTAL HEALTH (20 questions) ===
+MENTAL-1 | What is the diagnostic code for PTSD?
+MENTAL-2 | How is anxiety rated by the VA?
+MENTAL-3 | What are the rating criteria for depression?
+MENTAL-4 | What is the 70% rating criteria for PTSD?
+MENTAL-5 | What symptoms are required for a 50% PTSD rating?
+MENTAL-6 | What is DC 9411?
+MENTAL-7 | How does the VA rate mental health conditions?
+MENTAL-8 | Can I have multiple mental health ratings?
+MENTAL-9 | What is the 100% rating for mental health?
+MENTAL-10 | What is the 30% mental health rating criteria?
+MENTAL-11 | How is bipolar disorder rated?
+MENTAL-12 | What is DC 9434?
+MENTAL-13 | What is DC 9400?
+MENTAL-14 | How is schizophrenia rated by the VA?
+MENTAL-15 | What is occupational and social impairment?
+MENTAL-16 | Can PTSD be service connected without combat?
+MENTAL-17 | What is a stressor for PTSD claims?
+MENTAL-18 | How is adjustment disorder rated?
+MENTAL-19 | What is the GAF scale?
+MENTAL-20 | Can I get 100% for PTSD alone?
+
+# === MUSCULOSKELETAL (20 questions) ===
+MSK-1 | What is the diagnostic code for lumbar spine conditions?
+MSK-2 | How are knee conditions rated by the VA?
+MSK-3 | What is DC 5237?
+MSK-4 | How is limited range of motion rated?
+MSK-5 | What are the rating criteria for degenerative disc disease?
+MSK-6 | What is DC 5260?
+MSK-7 | What is DC 5261?
+MSK-8 | How is back pain rated?
+MSK-9 | What is the rating for incapacitating episodes?
+MSK-10 | How are ankle conditions rated?
+MSK-11 | What is DC 5271?
+MSK-12 | What is DC 5003?
+MSK-13 | How is arthritis rated by the VA?
+MSK-14 | What is painful motion rating?
+MSK-15 | How are shoulder conditions rated?
+MSK-16 | What is DC 5201?
+MSK-17 | What is DC 5243?
+MSK-18 | How is radiculopathy rated?
+MSK-19 | What is intervertebral disc syndrome?
+MSK-20 | Can I get separate ratings for knee flexion and extension?
+
+# === RESPIRATORY (15 questions) ===
+RESP-1 | What is the diagnostic code for asthma?
+RESP-2 | How is sleep apnea rated by the VA?
+RESP-3 | What are the rating levels for DC 6602?
+RESP-4 | What is DC 6847?
+RESP-5 | What is the 50% rating for sleep apnea?
+RESP-6 | What is DC 6604?
+RESP-7 | How is COPD rated?
+RESP-8 | What FEV1 is required for 60% asthma rating?
+RESP-9 | Do I need a sleep study for sleep apnea?
+RESP-10 | What is the rating for CPAP use?
+RESP-11 | How are respiratory conditions tested?
+RESP-12 | What is DC 6600?
+RESP-13 | How is bronchitis rated?
+RESP-14 | What is pulmonary function testing?
+RESP-15 | Can sleep apnea be secondary to PTSD?
+
+# === GI BILL / EDUCATION (20 questions) ===
+GIBILL-1 | What is the GI Bill?
+GIBILL-2 | How do I apply for the Post-9/11 GI Bill?
+GIBILL-3 | What is Chapter 33?
+GIBILL-4 | What is the Montgomery GI Bill?
+GIBILL-5 | Can dependents use GI Bill benefits?
+GIBILL-6 | What is Chapter 30?
+GIBILL-7 | How much does the GI Bill pay?
+GIBILL-8 | What is the housing allowance for GI Bill?
+GIBILL-9 | Can I transfer my GI Bill benefits?
+GIBILL-10 | What is the Yellow Ribbon program?
+GIBILL-11 | What is Chapter 35?
+GIBILL-12 | What is DEA benefits?
+GIBILL-13 | How long do GI Bill benefits last?
+GIBILL-14 | Can I use GI Bill for graduate school?
+GIBILL-15 | What is the book stipend for GI Bill?
+GIBILL-16 | How do I check my GI Bill balance?
+GIBILL-17 | Can I use GI Bill for online courses?
+GIBILL-18 | What is the Post-9/11 GI Bill eligibility?
+GIBILL-19 | What is MGIB?
+GIBILL-20 | How do I convert Chapter 30 to Chapter 33?
+
+# === CHAMPVA (15 questions) ===
+CHAMPVA-1 | What is CHAMPVA?
+CHAMPVA-2 | Who is eligible for CHAMPVA?
+CHAMPVA-3 | How do I enroll in CHAMPVA?
+CHAMPVA-4 | What does CHAMPVA cover?
+CHAMPVA-5 | Is dental covered by CHAMPVA?
+CHAMPVA-6 | Can spouses get CHAMPVA?
+CHAMPVA-7 | What is the CHAMPVA deductible?
+CHAMPVA-8 | Does CHAMPVA cover prescriptions?
+CHAMPVA-9 | What is CITI program?
+CHAMPVA-10 | Can children use CHAMPVA?
+CHAMPVA-11 | Is CHAMPVA the same as TRICARE?
+CHAMPVA-12 | What is the CHAMPVA income limit?
+CHAMPVA-13 | Does CHAMPVA cover mental health?
+CHAMPVA-14 | How do I file a CHAMPVA claim?
+CHAMPVA-15 | What happens to CHAMPVA if spouse remarries?
+
+# === 1151 CLAIMS (15 questions) ===
+1151-1 | What is a 1151 claim?
+1151-2 | What is a federal tort claim?
+1151-3 | Can I sue the VA for malpractice?
+1151-4 | How do I file an 1151 claim?
+1151-5 | What is the difference between 1151 and tort?
+1151-6 | What is VA medical negligence?
+1151-7 | How long do I have to file a 1151 claim?
+1151-8 | What evidence do I need for 1151?
+1151-9 | Can I get compensation for VA hospital injury?
+1151-10 | What is informed consent for 1151?
+1151-11 | Can I file 1151 for surgical complications?
+1151-12 | What is the burden of proof for 1151?
+1151-13 | Do I need a lawyer for 1151 claim?
+1151-14 | Can I file both 1151 and tort claim?
+1151-15 | What is the statute of limitations for tort claims?
+
+# === AGENT ORANGE (15 questions) ===
+AO-1 | What is Agent Orange?
+AO-2 | What conditions are presumptive for Agent Orange exposure?
+AO-3 | What is Nehmer?
+AO-4 | Am I eligible for Agent Orange benefits if I served in Vietnam?
+AO-5 | What is the Blue Water Navy Act?
+AO-6 | Is diabetes presumptive for Agent Orange?
+AO-7 | What is the Agent Orange registry?
+AO-8 | Can my children get benefits from Agent Orange exposure?
+AO-9 | What is dioxin?
+AO-10 | Is Parkinson's disease connected to Agent Orange?
+AO-11 | What is herbicide exposure?
+AO-12 | Was Agent Orange used in Thailand?
+AO-13 | What is the C-123 Agent Orange claim?
+AO-14 | Is hypertension presumptive for Agent Orange?
+AO-15 | What is the Nehmer effective date?
+
+# === VR&E / VOC REHAB (15 questions) ===
+VRE-1 | What is voc rehab?
+VRE-2 | What is Chapter 31?
+VRE-3 | How do I apply for VR&E?
+VRE-4 | What are the different VR&E tracks?
+VRE-5 | What is vocational rehabilitation?
+VRE-6 | What is the employment track?
+VRE-7 | What is the self-employment track?
+VRE-8 | What is independent living track?
+VRE-9 | What is reemployment track?
+VRE-10 | Can I use VR&E and GI Bill together?
+VRE-11 | What is the VR&E subsistence allowance?
+VRE-12 | How long can I use VR&E benefits?
+VRE-13 | What is a rehabilitation counselor?
+VRE-14 | What disability rating do I need for VR&E?
+VRE-15 | Can VR&E pay for graduate school?
+
+# === PROTECTION RULES (10 questions) ===
+PROTECT-1 | What is the 5 year rule?
+PROTECT-2 | What is the 10 year rule?
+PROTECT-3 | What is the 20 year rule for VA disability?
+PROTECT-4 | Can the VA reduce my rating after 5 years?
+PROTECT-5 | What is protected rating?
+PROTECT-6 | When can the VA propose a reduction?
+PROTECT-7 | What is sustained improvement?
+PROTECT-8 | How do I fight a rating reduction?
+PROTECT-9 | Is my 100% rating protected after 20 years?
+PROTECT-10 | What happens at my C&P exam if I'm protected?
+
+# === DIAGNOSTIC CODE LOOKUPS (20 questions) ===
+DC-1 | What is the diagnostic code for tinnitus?
+DC-2 | What is DC 5271?
+DC-3 | What is the diagnostic code for migraines?
+DC-4 | What is DC 7913?
+DC-5 | What is DC 6260?
+DC-6 | What is the diagnostic code for diabetes?
+DC-7 | What is DC 8100?
+DC-8 | What is the diagnostic code for GERD?
+DC-9 | What is DC 7305?
+DC-10 | What is the diagnostic code for erectile dysfunction?
+DC-11 | What is DC 7522?
+DC-12 | What is the diagnostic code for hearing loss?
+DC-13 | What is DC 6100?
+DC-14 | What is the diagnostic code for eczema?
+DC-15 | What is DC 7806?
+DC-16 | What is DC 5242?
+DC-17 | What is the diagnostic code for sciatica?
+DC-18 | What is DC 8520?
+DC-19 | What is the diagnostic code for plantar fasciitis?
+DC-20 | What is DC 5276?
+
+# === CLAIMS PROCESS (15 questions) ===
+CLAIMS-1 | How do I file a VA disability claim?
+CLAIMS-2 | What is VA Form 21-526EZ?
+CLAIMS-3 | What is a C&P exam?
+CLAIMS-4 | How long does a VA claim take?
+CLAIMS-5 | What is a nexus letter?
+CLAIMS-6 | What is service connection?
+CLAIMS-7 | What is secondary service connection?
+CLAIMS-8 | What is aggravation?
+CLAIMS-9 | How do I get my service records?
+CLAIMS-10 | What is a buddy statement?
+CLAIMS-11 | What is ITF?
+CLAIMS-12 | What is the claims effective date?
+CLAIMS-13 | How do I check my claim status?
+CLAIMS-14 | What is a rating decision?
+CLAIMS-15 | What is deferred on my rating decision?
+
+# === APPEALS (10 questions) ===
+APPEAL-1 | How do I appeal a VA decision?
+APPEAL-2 | What is a supplemental claim?
+APPEAL-3 | What is higher level review?
+APPEAL-4 | What is the Board of Veterans Appeals?
+APPEAL-5 | How long do I have to appeal?
+APPEAL-6 | What is the CAVC?
+APPEAL-7 | What is new and material evidence?
+APPEAL-8 | Can I have a hearing for my appeal?
+APPEAL-9 | What is a DRO review?
+APPEAL-10 | What is the legacy appeals system?
+
+# === TDIU (10 questions) ===
+TDIU-1 | What is TDIU?
+TDIU-2 | What is individual unemployability?
+TDIU-3 | What are the schedular requirements for TDIU?
+TDIU-4 | Can I work and get TDIU?
+TDIU-5 | What is marginal employment?
+TDIU-6 | What is extraschedular TDIU?
+TDIU-7 | How do I apply for TDIU?
+TDIU-8 | What is VA Form 21-8940?
+TDIU-9 | Can TDIU be permanent?
+TDIU-10 | What is protected TDIU?
+
+# === EDGE CASES / VARIATIONS (15 questions) ===
+EDGE-1 | wat is ptsd
+EDGE-2 | hypertention rating
+EDGE-3 | What is the best way to win my VA claim?
+EDGE-4 | Tell me about diabetes
+EDGE-5 | dc7101
+EDGE-6 | chapter33 benefits
+EDGE-7 | voc rehab eligibility
+EDGE-8 | ptsd 70 percent
+EDGE-9 | knee rating va
+EDGE-10 | sleep apnea cpap rating
+EDGE-11 | How much is 100% disability?
+EDGE-12 | What is SMC?
+EDGE-13 | What is special monthly compensation?
+EDGE-14 | Can I get VA healthcare without service connection?
+EDGE-15 | What is aid and attendance?

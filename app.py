@@ -69,12 +69,33 @@ limiter = Limiter(
     strategy="fixed-window",
 )
 
+# Rate limit whitelist - IPs that bypass rate limiting and suspicious activity checks
+# Add trusted IPs here for testing or admin access
+RATE_LIMIT_WHITELIST = {
+    "127.0.0.1",       # localhost
+    "::1",             # IPv6 localhost
+    "73.202.244.73",   # Tyler's IP - admin access
+}
+
+# Load additional whitelisted IPs from environment variable (comma-separated)
+whitelist_env = os.environ.get("RATE_LIMIT_WHITELIST_IPS", "")
+if whitelist_env:
+    for ip in whitelist_env.split(","):
+        ip = ip.strip()
+        if ip:
+            RATE_LIMIT_WHITELIST.add(ip)
+            print(f"[INFO] Added {ip} to rate limit whitelist")
+
 # Suspicious behavior tracking (in-memory)
 suspicious_ips = {}
 suspicious_lock = Lock()
 
 def is_suspicious_request(ip_address: str, prompt: str):
     """Heuristics to flag abusive patterns for temporary throttling."""
+    # Skip checks for whitelisted IPs
+    if ip_address in RATE_LIMIT_WHITELIST:
+        return False, ""
+    
     from datetime import datetime, timedelta
     now = datetime.now()
     with suspicious_lock:
@@ -114,6 +135,10 @@ def is_suspicious_request(ip_address: str, prompt: str):
 
 def get_rate_limit_for_ip(ip_address: str) -> str:
     """Dynamic per-IP limit; tightens if heavy recent usage detected."""
+    # Whitelisted IPs get unlimited access
+    if ip_address in RATE_LIMIT_WHITELIST:
+        return "10000 per hour"  # Effectively unlimited
+    
     from datetime import datetime, timedelta
     now = datetime.now()
     with suspicious_lock:
