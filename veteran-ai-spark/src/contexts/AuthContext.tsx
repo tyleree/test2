@@ -16,7 +16,18 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
   useEffect(() => {
     // Check if already unlocked in this session
     const unlocked = sessionStorage.getItem("admin_unlocked") === "true";
-    setIsUnlocked(unlocked);
+    if (unlocked) {
+      setIsUnlocked(true);
+      return;
+    }
+    
+    // Also check for token in URL parameters (auto-unlock if valid)
+    const urlParams = new URLSearchParams(window.location.search);
+    const tokenFromUrl = urlParams.get("token");
+    if (tokenFromUrl === ADMIN_TOKEN) {
+      setIsUnlocked(true);
+      sessionStorage.setItem("admin_unlocked", "true");
+    }
   }, []);
 
   const unlock = (token: string): boolean => {
