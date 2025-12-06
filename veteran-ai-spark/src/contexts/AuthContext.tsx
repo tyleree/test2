@@ -1,6 +1,26 @@
-import { createContext, useContext, useState, useEffect, ReactNode } from "react";
+import { createContext, useContext, useState, ReactNode } from "react";
 
 const ADMIN_TOKEN = "Cisco123";
+
+// Check auth synchronously to avoid race conditions with ProtectedRoute
+const getInitialAuthState = (): boolean => {
+  // Check sessionStorage first
+  if (typeof window !== 'undefined' && sessionStorage.getItem("admin_unlocked") === "true") {
+    return true;
+  }
+  
+  // Check URL parameters for token
+  if (typeof window !== 'undefined') {
+    const urlParams = new URLSearchParams(window.location.search);
+    const tokenFromUrl = urlParams.get("token");
+    if (tokenFromUrl === ADMIN_TOKEN) {
+      sessionStorage.setItem("admin_unlocked", "true");
+      return true;
+    }
+  }
+  
+  return false;
+};
 
 interface AuthContextType {
   isUnlocked: boolean;
@@ -11,24 +31,8 @@ interface AuthContextType {
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
 export const AuthProvider = ({ children }: { children: ReactNode }) => {
-  const [isUnlocked, setIsUnlocked] = useState(false);
-
-  useEffect(() => {
-    // Check if already unlocked in this session
-    const unlocked = sessionStorage.getItem("admin_unlocked") === "true";
-    if (unlocked) {
-      setIsUnlocked(true);
-      return;
-    }
-    
-    // Also check for token in URL parameters (auto-unlock if valid)
-    const urlParams = new URLSearchParams(window.location.search);
-    const tokenFromUrl = urlParams.get("token");
-    if (tokenFromUrl === ADMIN_TOKEN) {
-      setIsUnlocked(true);
-      sessionStorage.setItem("admin_unlocked", "true");
-    }
-  }, []);
+  // Initialize synchronously to prevent race condition with ProtectedRoute
+  const [isUnlocked, setIsUnlocked] = useState(getInitialAuthState);
 
   const unlock = (token: string): boolean => {
     if (token === ADMIN_TOKEN) {
