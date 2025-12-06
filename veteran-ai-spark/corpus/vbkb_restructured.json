@@ -1,7 +1,9 @@
 [
   {
-    "_corpus_version": "2025-12-06-v2",
-    "_note": "Cache version marker - forces cache invalidation on deploy"
+    "entry_id": "_corpus_version_2025-12-06-v3",
+    "topic": "Corpus Version",
+    "content": "This is a cache invalidation marker. Version: 2025-12-06-v3. Update this to force cache clear.",
+    "source_id": "system"
   },
   {
     "source_id": "veteransbenefitskb_2025_11_27",
