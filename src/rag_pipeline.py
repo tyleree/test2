@@ -79,30 +79,45 @@ EMBEDDINGS_CACHE_PATH = "data/embeddings_cache.json"
 WEAK_RETRIEVAL_THRESHOLD = 0.55  # Log warning if best chunk is below this
 VERY_WEAK_THRESHOLD = 0.45  # Consider adding "I'm not sure" prefix if below this
 
-# Model routing thresholds
-SIMPLE_QUERY_MAX_WORDS = 15  # Queries with fewer words are likely simple
-COMPLEX_CONTEXT_THRESHOLD = 3000  # Context chars above this suggests complexity
-COMPLEX_CHUNKS_THRESHOLD = 5  # More chunks retrieved suggests complex topic
-HIGH_SCORE_THRESHOLD = 0.7  # High similarity = likely simple FAQ match
+# Model routing thresholds - OPTIMIZED for cost efficiency
+# Goal: Route ~80% to mini, ~20% to premium (only genuinely complex queries)
+SIMPLE_QUERY_MAX_WORDS = 20  # Increased from 15 - most queries are under 20 words
+COMPLEX_CONTEXT_THRESHOLD = 5000  # Increased from 3000 - higher threshold
+COMPLEX_CHUNKS_THRESHOLD = 8  # Increased from 5 - since TOP_K=7, this rarely triggers now
+HIGH_SCORE_THRESHOLD = 0.6  # Lowered from 0.7 - more queries qualify as "high confidence"
+GOOD_RETRIEVAL_THRESHOLD = 0.5  # New: if retrieval is good, mini model is sufficient
 
-# Keywords that suggest complex queries needing the premium model
+# Keywords that TRULY require premium model (reasoning, comparison, synthesis)
+# Removed common veteran terms that don't actually need premium reasoning
 COMPLEX_QUERY_INDICATORS = [
+    # Genuine comparison/analysis queries
     "compare", "comparison", "difference between", "versus", "vs",
-    "explain in detail", "comprehensive", "thoroughly",
-    "multiple conditions", "combined rating", "bilateral",
-    "secondary condition", "aggravation", "nexus",
-    "appeal", "higher level review", "board",
-    "tdiu", "individual unemployability",
-    "presumptive", "agent orange", "burn pit",
-    "effective date", "back pay", "retro",
+    "explain in detail", "comprehensive", "thoroughly", "analyze",
+    # Multi-condition complexity
+    "multiple conditions", "combined rating", "bilateral factor",
+    # Legal/procedural complexity requiring careful reasoning
+    "appeal strategy", "why was my claim denied", "how to win",
+    # Genuinely complex benefit calculations
+    "extraschedular", "special monthly compensation", "smc",
 ]
 
 # Keywords that suggest simple FAQ-style queries (use cheap model)
+# Expanded to catch more common patterns
 SIMPLE_QUERY_INDICATORS = [
-    "what is", "how do i", "where can i", "when can i",
-    "how to file", "how to apply", "what forms",
-    "phone number", "address", "contact",
-    "how long", "how much", "what percent",
+    # Basic questions
+    "what is", "what are", "what's", "how do i", "how can i",
+    "where can i", "when can i", "who can", "who is",
+    # Process questions
+    "how to file", "how to apply", "what forms", "how to get",
+    # Lookup questions
+    "phone number", "address", "contact", "website",
+    "how long", "how much", "what percent", "what rating",
+    # Definition questions
+    "define", "meaning of", "explain", "tell me about",
+    # Eligibility questions
+    "am i eligible", "can i get", "do i qualify",
+    # Diagnostic code lookups
+    "diagnostic code", "dc ", "what is dc",
 ]
 
 
@@ -310,9 +325,10 @@ class RAGPipeline:
         """
         Classify query complexity and select appropriate model.
         
-        This implements smart model routing:
-        - Simple FAQ-style queries -> cheap model (gpt-4.1-mini)
-        - Complex queries needing precision -> premium model (gpt-4.1)
+        OPTIMIZED for cost efficiency - defaults to mini model unless
+        there's a genuine need for premium reasoning capabilities.
+        
+        Target: ~80% mini, ~20% premium
         
         Args:
             query: User's question
@@ -324,12 +340,13 @@ class RAGPipeline:
         query_lower = query.lower().strip()
         word_count = len(query.split())
         
-        # Calculate context size
+        # Calculate context metrics
         total_context_chars = sum(len(c.get("text", "")) for c in chunks)
         num_chunks = len(chunks)
         avg_score = sum(c.get("score", 0) for c in chunks) / max(num_chunks, 1)
+        best_score = max((c.get("score", 0) for c in chunks), default=0)
         
-        # Check for complex query indicators
+        # Check for complex query indicators (genuinely complex queries)
         has_complex_indicators = any(
             indicator in query_lower 
             for indicator in COMPLEX_QUERY_INDICATORS
@@ -341,40 +358,49 @@ class RAGPipeline:
             for indicator in SIMPLE_QUERY_INDICATORS
         )
         
-        # Decision logic for model routing
+        # === ROUTING LOGIC (optimized for cost) ===
         
-        # 1. Explicit complex indicators -> use premium model
-        if has_complex_indicators:
+        # RULE 1: Simple indicators + good retrieval -> ALWAYS use mini
+        # This catches most "What is X?" and "How do I Y?" questions
+        if has_simple_indicators and avg_score >= GOOD_RETRIEVAL_THRESHOLD:
+            return DEFAULT_CHAT_MODEL, "simple_query_good_retrieval"
+        
+        # RULE 2: High retrieval confidence -> mini is sufficient
+        # If we found highly relevant content, mini can synthesize it well
+        if best_score >= HIGH_SCORE_THRESHOLD:
+            return DEFAULT_CHAT_MODEL, "high_confidence_retrieval"
+        
+        # RULE 3: Short queries are usually simple lookups
+        if word_count <= 10:
+            return DEFAULT_CHAT_MODEL, "short_query"
+        
+        # RULE 4: Explicit complex indicators -> premium (but only if no simple indicators)
+        # Avoid premium for "What is agent orange?" (simple) vs "Compare agent orange and burn pit exposure" (complex)
+        if has_complex_indicators and not has_simple_indicators:
             return PREMIUM_CHAT_MODEL, "complex_query_detected"
         
-        # 2. Very high similarity score + simple indicators -> cheap model is fine
-        if avg_score > HIGH_SCORE_THRESHOLD and has_simple_indicators:
-            return DEFAULT_CHAT_MODEL, "high_confidence_simple_match"
+        # RULE 5: Standard FAQ-style queries -> mini
+        if word_count <= SIMPLE_QUERY_MAX_WORDS and avg_score >= 0.45:
+            return DEFAULT_CHAT_MODEL, "standard_faq_query"
         
-        # 3. Short query + few chunks + high scores -> simple FAQ, use cheap model
-        if (word_count <= SIMPLE_QUERY_MAX_WORDS and 
-            num_chunks <= COMPLEX_CHUNKS_THRESHOLD and 
-            avg_score > 0.5):
-            return DEFAULT_CHAT_MODEL, "simple_faq_query"
+        # RULE 6: Very large context needing synthesis -> premium
+        # Only trigger for genuinely large contexts
+        if total_context_chars > COMPLEX_CONTEXT_THRESHOLD and num_chunks > 6:
+            return PREMIUM_CHAT_MODEL, "large_context_synthesis"
         
-        # 4. Large context retrieved -> might need better reasoning
-        if total_context_chars > COMPLEX_CONTEXT_THRESHOLD:
-            return PREMIUM_CHAT_MODEL, "large_context_needs_synthesis"
-        
-        # 5. Many chunks retrieved -> complex topic
-        if num_chunks > COMPLEX_CHUNKS_THRESHOLD:
-            return PREMIUM_CHAT_MODEL, "multi_source_complexity"
-        
-        # 6. Long query with multiple parts -> likely complex
-        if word_count > 25 or query.count("?") > 1 or " and " in query_lower:
+        # RULE 7: Multi-part questions -> premium
+        # Multiple question marks or explicit "and also" patterns
+        if query.count("?") > 1 or " and also " in query_lower or " as well as " in query_lower:
             return PREMIUM_CHAT_MODEL, "multi_part_query"
         
-        # 7. Low confidence scores -> need better reasoning
-        if avg_score < 0.4:
+        # RULE 8: Very low retrieval confidence -> premium for better reasoning
+        # Only use premium if retrieval is genuinely poor
+        if avg_score < 0.35:
             return PREMIUM_CHAT_MODEL, "low_confidence_needs_reasoning"
         
-        # Default: use cheap model for cost efficiency
-        return DEFAULT_CHAT_MODEL, "default_simple"
+        # DEFAULT: Use mini model for cost efficiency
+        # This is the key change - default to cheap model
+        return DEFAULT_CHAT_MODEL, "default_mini"
     
     # Common DC codes mapped to condition names for better query expansion
     DC_CODE_LOOKUP = {
