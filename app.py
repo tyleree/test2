@@ -1,7 +1,13 @@
 from flask import Flask, render_template, request, jsonify, send_from_directory, g, make_response
 from flask_limiter import Limiter
-from flask_limiter.util import get_remote_address
 from threading import Lock
+
+def get_remote_address():
+    """Get real client IP from X-Forwarded-For header (for Render proxy)"""
+    xff = request.headers.get('X-Forwarded-For', '')
+    if xff:
+        return xff.split(',')[0].strip()
+    return request.remote_addr or '127.0.0.1'
 import os
 from dotenv import load_dotenv
 import requests
