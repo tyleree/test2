@@ -249,6 +249,16 @@ class ResponseCache:
                 # Clear cached_responses table
                 session.execute(text("DELETE FROM cached_responses"))
                 
+                # Also clear topic graph edges to prevent stale topic-based cache hits
+                # These link questions to topics and would return old answers
+                try:
+                    session.execute(text("DELETE FROM question_topics"))
+                    session.execute(text("DELETE FROM question_entities"))
+                    session.execute(text("DELETE FROM question_sources"))
+                    print("[CACHE] Cleared topic graph edges (question_topics, question_entities, question_sources)")
+                except Exception as e:
+                    print(f"[CACHE] Note: Could not clear topic graph edges: {e}")
+                
                 # Update stored hash
                 session.execute(text("""
                     INSERT INTO cache_metadata (key, value, updated_at) 
