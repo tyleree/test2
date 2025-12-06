@@ -38,6 +38,7 @@ from src.vector_store import (
 from src.embeddings import (
     get_or_create_embeddings,
     embed_query_cached,
+    compute_corpus_hash,
     DEFAULT_EMBEDDING_MODEL
 )
 from src.prompts import (
@@ -246,6 +247,10 @@ class RAGPipeline:
             
             print(f"[NOTE] Prepared {len(documents)} documents for embedding")
             
+            # Compute corpus hash for cache invalidation
+            corpus_hash = compute_corpus_hash(documents)
+            print(f"[INFO] Corpus hash: {corpus_hash}")
+            
             # Get or create embeddings
             embeddings = get_or_create_embeddings(
                 documents,
@@ -259,10 +264,11 @@ class RAGPipeline:
             self.vector_store.load_corpus(self.corpus_path)
             self.vector_store.set_embeddings(embeddings)
             
-            # Initialize response cache
+            # Initialize response cache with corpus hash for automatic invalidation
+            # When corpus changes, stale cached answers will be cleared
             if self.enable_response_cache:
-                self.response_cache = get_response_cache()
-                print(f"[OK] Response cache initialized")
+                self.response_cache = get_response_cache(corpus_hash=corpus_hash)
+                print(f"[OK] Response cache initialized (corpus-aware)")
             
             # Initialize URL validator with corpus URLs
             initialize_url_validator(self.corpus_path)

@@ -189,19 +189,83 @@ class ResponseCache:
         self._initialized = False
         self._db_session = None
     
-    def initialize(self) -> None:
-        """Initialize cache and warm from database."""
+    def initialize(self, corpus_hash: Optional[str] = None) -> None:
+        """
+        Initialize cache and warm from database.
+        
+        Args:
+            corpus_hash: Hash of the current corpus. If different from stored hash,
+                        cache will be automatically invalidated to prevent stale answers.
+        """
         if self._initialized:
             return
             
         self._initialized = True
         
         if DB_AVAILABLE:
+            # Check if corpus has changed - if so, clear cache to prevent stale answers
+            if corpus_hash:
+                self._check_and_invalidate_on_corpus_change(corpus_hash)
             self._warm_from_database()
         else:
             print("[CACHE] No database - using in-memory cache only")
         
         print(f"[CACHE] Initialized with {len(self.memory_cache)} exact entries, {len(self.semantic_entries)} semantic entries")
+    
+    def _check_and_invalidate_on_corpus_change(self, corpus_hash: str) -> None:
+        """
+        Check if corpus has changed and invalidate cache if so.
+        
+        This prevents stale cached answers from being returned when new content
+        is added to the corpus.
+        """
+        session = self._get_db_session()
+        if not session:
+            return
+            
+        try:
+            from sqlalchemy import text
+            
+            # Create metadata table if it doesn't exist
+            session.execute(text("""
+                CREATE TABLE IF NOT EXISTS cache_metadata (
+                    key VARCHAR(64) PRIMARY KEY,
+                    value TEXT NOT NULL,
+                    updated_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
+                )
+            """))
+            session.commit()
+            
+            # Check stored corpus hash
+            result = session.execute(text("""
+                SELECT value FROM cache_metadata WHERE key = 'corpus_hash'
+            """)).scalar()
+            
+            if result != corpus_hash:
+                # Corpus has changed! Clear the cache
+                print(f"[CACHE] Corpus changed (stored: {result}, current: {corpus_hash})")
+                print("[CACHE] Clearing stale cache entries...")
+                
+                # Clear cached_responses table
+                session.execute(text("DELETE FROM cached_responses"))
+                
+                # Update stored hash
+                session.execute(text("""
+                    INSERT INTO cache_metadata (key, value, updated_at) 
+                    VALUES ('corpus_hash', :hash, NOW())
+                    ON CONFLICT (key) DO UPDATE SET value = :hash, updated_at = NOW()
+                """), {"hash": corpus_hash})
+                
+                session.commit()
+                print(f"[CACHE] Cache cleared and corpus hash updated to: {corpus_hash}")
+            else:
+                print(f"[CACHE] Corpus unchanged (hash: {corpus_hash[:8]}...)")
+                
+        except Exception as e:
+            print(f"[CACHE] Corpus hash check error: {e}")
+            session.rollback()
+        finally:
+            session.close()
     
     def _get_db_session(self):
         """Get a database session."""
@@ -679,14 +743,29 @@ class ResponseCache:
 
 # Global cache instance
 _cache: Optional[ResponseCache] = None
+_corpus_hash: Optional[str] = None
 
 
-def get_response_cache() -> ResponseCache:
-    """Get or create the global response cache."""
-    global _cache
+def get_response_cache(corpus_hash: Optional[str] = None) -> ResponseCache:
+    """
+    Get or create the global response cache.
+    
+    Args:
+        corpus_hash: Hash of the current corpus. If provided and different from
+                    stored hash, cache will be invalidated.
+    """
+    global _cache, _corpus_hash
     if _cache is None:
         _cache = ResponseCache()
-        _cache.initialize()
+        _cache.initialize(corpus_hash=corpus_hash)
+        _corpus_hash = corpus_hash
+    elif corpus_hash and corpus_hash != _corpus_hash:
+        # Corpus changed after initial init - clear and reinit
+        print(f"[CACHE] Corpus hash changed: {_corpus_hash} -> {corpus_hash}")
+        _cache.clear()
+        _cache._initialized = False
+        _cache.initialize(corpus_hash=corpus_hash)
+        _corpus_hash = corpus_hash
     return _cache
 
 
