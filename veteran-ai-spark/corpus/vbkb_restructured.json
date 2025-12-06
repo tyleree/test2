@@ -1,5 +1,9 @@
 [
   {
+    "_corpus_version": "2025-12-06-v2",
+    "_note": "Cache version marker - forces cache invalidation on deploy"
+  },
+  {
     "source_id": "veteransbenefitskb_2025_11_27",
     "entry_id": "7101-000",
     "topic": "High Blood Pressure",
