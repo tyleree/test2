@@ -1,9 +1,20 @@
 [
   {
-    "entry_id": "_corpus_version_2025-12-06-v4",
+    "entry_id": "_corpus_version_2025-12-06-v5",
     "topic": "Corpus Version",
-    "content": "This is a cache invalidation marker. Version: 2025-12-06-v4. Added aliases for GI Bill, CHAMPVA, 1151, Agent Orange, VR&E. Added DC query preprocessing.",
+    "content": "This is a cache invalidation marker. Version: 2025-12-06-v5. Added diagnostic code overview, improved query preprocessing for DC, GI Bill, Chapter queries.",
     "source_id": "system"
+  },
+  {
+    "source_id": "veteransbenefitskb_reference",
+    "entry_id": "DC-OVERVIEW-001",
+    "topic": "Common VA Diagnostic Codes Reference",
+    "type": "reference",
+    "original_heading": "Common VA Diagnostic Codes",
+    "url": "https://www.veteransbenefitskb.com/ratingsindex",
+    "last_updated": "2025-12-06",
+    "content": "## Common VA Diagnostic Codes (DC) Reference\n\nVA disability ratings use diagnostic codes to identify specific conditions. Here are the most commonly claimed diagnostic codes:\n\n### Mental Health (9XXX Series)\n- **DC 9411** - PTSD (Post-Traumatic Stress Disorder)\n- **DC 9434** - Major Depressive Disorder\n- **DC 9400** - Generalized Anxiety Disorder\n- **DC 9404** - Obsessive Compulsive Disorder\n- **DC 9432** - Bipolar Disorder\n\n### Musculoskeletal - Spine (52XX Series)\n- **DC 5237** - Cervical Strain (Neck)\n- **DC 5242** - Degenerative Arthritis of the Spine\n- **DC 5243** - Intervertebral Disc Syndrome (IVDS)\n- **DC 5236** - Sacroiliac Injury and Weakness (Lower Back)\n\n### Musculoskeletal - Extremities\n- **DC 5003** - Degenerative Arthritis\n- **DC 5260** - Limitation of Flexion of the Leg (Knee)\n- **DC 5261** - Limitation of Extension of the Leg (Knee)\n- **DC 5271** - Limited Motion of the Ankle\n\n### Cardiovascular (7XXX Series)\n- **DC 7101** - Hypertension (High Blood Pressure)\n- **DC 7005** - Arteriosclerotic Heart Disease (Coronary Artery Disease)\n- **DC 7007** - Hypertensive Heart Disease\n\n### Respiratory (6XXX Series)\n- **DC 6602** - Asthma\n- **DC 6847** - Sleep Apnea\n- **DC 6600** - Chronic Bronchitis\n\n### Endocrine (79XX Series)\n- **DC 7913** - Diabetes Mellitus\n\n### Neurological (87XX Series)\n- **DC 8100** - Migraine Headaches\n\n### Hearing/Ears (62XX Series)\n- **DC 6260** - Tinnitus (Ringing in the Ears)\n- **DC 6100** - Hearing Loss\n\nFor complete rating criteria, search for the specific diagnostic code number.",
+    "aliases": ["diagnostic code", "DC", "rating code", "va code", "disability code", "condition code"]
   },
   {
     "source_id": "veteransbenefitskb_2025_11_27",

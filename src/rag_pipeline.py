@@ -401,15 +401,41 @@ class RAGPipeline:
             code = re.search(r'\d{4}', processed).group()
             processed = f"What is Diagnostic Code {code}? What condition does it cover?"
         
+        # Handle "Chapter XX" education benefit queries
+        chapter_patterns = {
+            r'\bchapter\s*31\b': 'Chapter 31 VR&E (Veterans Readiness and Employment, Voc Rehab)',
+            r'\bchapter\s*33\b': 'Chapter 33 Post-9/11 GI Bill',
+            r'\bchapter\s*30\b': 'Chapter 30 Montgomery GI Bill',
+            r'\bchapter\s*35\b': 'Chapter 35 DEA (Dependents Educational Assistance)',
+            r'\bchapter\s*32\b': 'Chapter 32 VEAP (Veterans Educational Assistance Program)',
+        }
+        
+        for pattern, expanded in chapter_patterns.items():
+            if re.search(pattern, processed, re.IGNORECASE):
+                processed = re.sub(pattern, expanded, processed, flags=re.IGNORECASE)
+        
+        # Expand "GI Bill" queries to distinguish from VR&E
+        if re.search(r'\bgi\s*bill\b', processed, re.IGNORECASE):
+            # Don't add if already has chapter info
+            if not re.search(r'chapter\s*3[0-3]|montgomery|post.?9.?11', processed, re.IGNORECASE):
+                processed = re.sub(r'\bgi\s*bill\b', 'GI Bill (education benefits Chapter 30 33 Montgomery Post-9/11)', processed, flags=re.IGNORECASE)
+        
+        # Expand "Post-9/11" references
+        post911_pattern = r'\bpost[\s-]*9[\s/-]*11\b'
+        if re.search(post911_pattern, processed, re.IGNORECASE):
+            if 'GI Bill' not in processed and 'Chapter 33' not in processed:
+                processed = re.sub(post911_pattern, 'Post-9/11 GI Bill (Chapter 33 education benefits)', processed, flags=re.IGNORECASE)
+        
         # Expand common abbreviations
         abbreviations = {
             r'\bPTSD\b': 'PTSD (Post-Traumatic Stress Disorder)',
             r'\bTDIU\b': 'TDIU (Total Disability Individual Unemployability)',
             r'\bVR&E\b': 'VR&E (Veterans Readiness and Employment)',
-            r'\bVRE\b': 'VR&E (Veterans Readiness and Employment)',
+            r'\bVRE\b': 'VRE (Veterans Readiness and Employment, Voc Rehab)',
             r'\bBDD\b': 'BDD (Benefits Delivery at Discharge)',
             r'\bC&P\b': 'C&P (Compensation and Pension)',
             r'\bMGIB\b': 'MGIB (Montgomery GI Bill)',
+            r'\bvoc\s*rehab\b': 'Voc Rehab (Veterans Readiness and Employment, VR&E, Chapter 31)',
         }
         
         for abbrev, expanded in abbreviations.items():

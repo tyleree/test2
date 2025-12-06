@@ -75,6 +75,7 @@ RATE_LIMIT_WHITELIST = {
     "127.0.0.1",       # localhost
     "::1",             # IPv6 localhost
     "73.202.244.73",   # Tyler's IP - admin access
+    "174.249.145.60",  # Tyler's current IP - admin access
 }
 
 # Load additional whitelisted IPs from environment variable (comma-separated)
