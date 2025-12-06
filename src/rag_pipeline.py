@@ -231,10 +231,17 @@ class RAGPipeline:
                 doc_id = item.get("entry_id", "")
                 content = item.get("content", "")
                 if doc_id and content:
-                    # Include topic in the text for better semantic matching
+                    # Include topic and diagnostic_code for better semantic matching
+                    # This helps queries like "What is diagnostic code for X" match better
                     topic = item.get("topic", "")
-                    if topic:
+                    diagnostic_code = item.get("diagnostic_code", "")
+                    
+                    # Build prefix with diagnostic code if available
+                    if diagnostic_code and topic:
+                        content = f"Diagnostic Code {diagnostic_code} - {topic}\n\n{content}"
+                    elif topic:
                         content = f"{topic}\n\n{content}"
+                    
                     documents[doc_id] = content
             
             print(f"[NOTE] Prepared {len(documents)} documents for embedding")
