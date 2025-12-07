@@ -80,8 +80,8 @@ WEAK_RETRIEVAL_THRESHOLD = 0.55  # Log warning if best chunk is below this
 VERY_WEAK_THRESHOLD = 0.45  # Consider adding "I'm not sure" prefix if below this
 
 # HyDE (Hypothetical Document Embeddings) Configuration
-HYDE_ENABLED = True  # Enable HyDE fallback for weak retrievals
-HYDE_TRIGGER_THRESHOLD = 0.45  # Use HyDE when best score is below this
+HYDE_ENABLED = True  # Enable HyDE for all queries (not just fallback)
+HYDE_ALWAYS = True  # Always use HyDE for retrieval (better quality, +25% cost)
 HYDE_MODEL = "gpt-4.1-mini"  # Model for generating hypothetical documents
 HYDE_MAX_TOKENS = 300  # Max tokens for hypothetical document
 HYDE_TEMPERATURE = 0.3  # Low temperature for factual content
@@ -640,63 +640,44 @@ Response:"""
         """
         Retrieve relevant context chunks for a query with hallucination prevention.
         
-        Uses HyDE (Hypothetical Document Embeddings) as a fallback when standard
-        retrieval produces weak results or no results.
+        Uses HyDE (Hypothetical Document Embeddings) to improve retrieval quality.
+        When HYDE_ALWAYS is True, all queries use HyDE for better semantic matching.
         
         Args:
-            query: User's question
+            query: User's question (should already be preprocessed)
             
         Returns:
             Tuple of (chunks list, retrieval time in ms, weak_retrieval flag)
         """
         start_time = time.time()
-        
-        # Step 1: Standard retrieval
-        query_embedding = embed_query_cached(query, self.embedding_model)
-        
-        results: List[SearchResult] = self.vector_store.search(
-            query_embedding,
-            k=self.top_k,
-            min_score=self.min_score
-        )
-        
-        # Convert to chunk dicts
         chunks = []
-        for result in results:
-            chunks.append({
-                "id": result.document.id,
-                "text": result.document.text,
-                "metadata": result.document.metadata,
-                "score": result.score
-            })
+        best_score = 0
         
-        # Check if we should try HyDE
-        best_score = chunks[0]["score"] if chunks else 0
-        use_hyde = False
-        
-        if self.enable_hyde:
-            # Trigger HyDE if no results OR best score is below threshold
-            if not chunks:
-                print(f"[HYDE] Triggering: No chunks found for query")
-                use_hyde = True
-            elif best_score < HYDE_TRIGGER_THRESHOLD:
-                print(f"[HYDE] Triggering: Best score {best_score:.3f} < {HYDE_TRIGGER_THRESHOLD}")
-                use_hyde = True
-        
-        # Step 2: Try HyDE if standard retrieval was weak
-        if use_hyde:
-            hyde_chunks, hyde_time = self._retrieve_with_hyde(query)
+        # Use HyDE for all queries when HYDE_ALWAYS is enabled
+        if self.enable_hyde and HYDE_ALWAYS:
+            print(f"[HYDE] Using HyDE retrieval for: '{query[:60]}...'")
+            chunks, _ = self._retrieve_with_hyde(query)
+            best_score = chunks[0]["score"] if chunks else 0
+        else:
+            # Standard retrieval (fallback or when HyDE disabled)
+            query_embedding = embed_query_cached(query, self.embedding_model)
             
-            if hyde_chunks:
-                hyde_best_score = hyde_chunks[0]["score"]
-                
-                # Use HyDE results if they're better
-                if not chunks or hyde_best_score > best_score:
-                    print(f"[HYDE] Improved: {best_score:.3f} -> {hyde_best_score:.3f}")
-                    chunks = hyde_chunks
-                    best_score = hyde_best_score
-                else:
-                    print(f"[HYDE] No improvement: {hyde_best_score:.3f} <= {best_score:.3f}")
+            results: List[SearchResult] = self.vector_store.search(
+                query_embedding,
+                k=self.top_k,
+                min_score=self.min_score
+            )
+            
+            # Convert to chunk dicts
+            for result in results:
+                chunks.append({
+                    "id": result.document.id,
+                    "text": result.document.text,
+                    "metadata": result.document.metadata,
+                    "score": result.score
+                })
+            
+            best_score = chunks[0]["score"] if chunks else 0
         
         # Check for weak retrieval (hallucination risk)
         weak_retrieval = False
@@ -995,6 +976,9 @@ Response:"""
         
         total_start = time.time()
         
+        # Query preprocessing - expand common abbreviations for better retrieval
+        question = self._preprocess_query(question)
+        
         try:
             # Generate query embedding for cache lookup and retrieval
             query_embedding = embed_query_cached(question, self.embedding_model)
@@ -1018,7 +1002,7 @@ Response:"""
                     )
                     return
             
-            # Cache miss - proceed with retrieval
+            # Cache miss - proceed with HyDE-enhanced retrieval
             chunks, retrieval_time, weak_retrieval = self._retrieve_context(question)
             
             if not chunks:
