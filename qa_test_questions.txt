@@ -1,5 +1,6 @@
-# QA Test Questions - 230 Questions (Revised)
+# QA Test Questions - 338 Questions (Updated Dec 7, 2025)
 # Focus: Common veteran questions, practical scenarios, edge cases
+# Includes: Nehmer, P&T, Blue Water Navy, Burn Pits, Mental Rating, SMC, PTSD Stressor, VA Math, Money/Backpay
 # Format: CATEGORY-NUMBER | Question
 
 # === CLAIMS PROCESS (25 questions) ===
@@ -329,3 +330,81 @@ EDGE-17 | What is lay evidence?
 EDGE-18 | Can family members provide statements?
 EDGE-19 | What if my C&P examiner was rude?
 EDGE-20 | Can I request a different C&P examiner?
+
+# === NEHMER CLASS (6 questions) ===
+NEHMER-1 | What is the Nehmer rule?
+NEHMER-2 | Who is a Nehmer class member?
+NEHMER-3 | Can I get an earlier effective date under Nehmer?
+NEHMER-4 | What conditions are covered by Nehmer?
+NEHMER-5 | Does Nehmer apply to Blue Water Navy veterans?
+NEHMER-6 | What is 38 CFR 3.816?
+
+# === PERMANENT & TOTAL (8 questions) ===
+PT-1 | What is Permanent and Total disability?
+PT-2 | How do I know if I'm P&T?
+PT-3 | What benefits come with P&T status?
+PT-4 | Can I be reduced if I'm P&T?
+PT-5 | What is statutory P&T?
+PT-6 | How do I become P&T?
+PT-7 | Is TDIU the same as P&T?
+PT-8 | Does P&T mean I never have future exams?
+
+# === BLUE WATER NAVY (6 questions) ===
+BWN-1 | What is Blue Water Navy?
+BWN-2 | Am I a Blue Water Navy veteran?
+BWN-3 | What conditions are presumptive for Blue Water Navy?
+BWN-4 | What dates does Blue Water Navy cover?
+BWN-5 | How far offshore counts as Blue Water Navy?
+BWN-6 | What is Public Law 116-23?
+
+# === BURN PITS (8 questions) ===
+BURN-1 | What is burn pit exposure?
+BURN-2 | What conditions are presumptive for burn pit exposure?
+BURN-3 | What locations are covered for burn pit exposure?
+BURN-4 | Do I need to join the burn pit registry?
+BURN-5 | What cancers are presumptive for burn pits?
+BURN-6 | Is COPD presumptive for burn pits?
+BURN-7 | Is asthma presumptive for burn pits?
+BURN-8 | What dates are covered for burn pit presumptives?
+
+# === MENTAL HEALTH RATINGS (6 questions) ===
+MENTAL-1 | How is PTSD rated?
+MENTAL-2 | What are the criteria for a 70% mental health rating?
+MENTAL-3 | What is occupational and social impairment?
+MENTAL-4 | Can I get 100% for PTSD?
+MENTAL-5 | What symptoms qualify for a 50% mental health rating?
+MENTAL-6 | How does VA rate depression and anxiety?
+
+# === SMC - SPECIAL MONTHLY COMPENSATION (8 questions) ===
+SMC-1 | What is Special Monthly Compensation?
+SMC-2 | What is SMC-K?
+SMC-3 | What is SMC-L?
+SMC-4 | What is SMC-S?
+SMC-5 | How do I apply for SMC?
+SMC-6 | Can I get multiple SMC-K awards?
+SMC-7 | What is loss of use for SMC?
+SMC-8 | Is SMC paid on top of my disability rating?
+
+# === PTSD STRESSOR (6 questions) ===
+STRESSOR-1 | What is a PTSD stressor?
+STRESSOR-2 | How do I verify a PTSD stressor?
+STRESSOR-3 | What is VA Form 21-0781?
+STRESSOR-4 | Can a buddy statement verify my PTSD stressor?
+STRESSOR-5 | What is fear of hostile military activity?
+STRESSOR-6 | What is military sexual trauma (MST)?
+
+# === VA MATH (6 questions) ===
+MATH-1 | How does VA math work?
+MATH-2 | What is the combined ratings table?
+MATH-3 | Why doesn't VA just add ratings together?
+MATH-4 | What is the bilateral factor?
+MATH-5 | How do I calculate my combined rating?
+MATH-6 | What is the total person concept?
+
+# === MONEY & BACKPAY (6 questions) ===
+MONEY-1 | When will I get my VA back pay?
+MONEY-2 | Does VA prorate disability payments?
+MONEY-3 | When does VA pay disability each month?
+MONEY-4 | Can I get VA and military retirement pay?
+MONEY-5 | What is the VA disability pay table?
+MONEY-6 | Why is my back pay taking so long?

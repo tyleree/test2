@@ -146,6 +146,73 @@ FILES_TO_PROCESS = {
         "aliases": ["buddy letter", "buddy statement", "lay statement", "witness statement", "21-10210", "supporting statement"],
         "type": "claims_evidence"
     },
+    # New batch of files added Dec 7, 2025
+    "Nehmer.md": {
+        "topic": "Nehmer Class Members (38 CFR 3.816)",
+        "url": "https://www.veteransbenefitskb.com/nehmer",
+        "aliases": ["Nehmer", "Nehmer rule", "Nehmer class", "38 CFR 3.816", "agent orange effective date", "earlier effective date"],
+        "type": "claims_special"
+    },
+    "P&T.md": {
+        "topic": "Permanent and Total (P&T) Disability",
+        "url": "https://www.veteransbenefitskb.com/pnt",
+        "aliases": ["permanent and total", "P&T", "100% P&T", "TDIU P&T", "DEA eligibility", "static rating"],
+        "type": "rating_info"
+    },
+    "blue_water.md": {
+        "topic": "Blue Water Navy Vietnam Veterans Act",
+        "url": "https://www.veteransbenefitskb.com/bluewater",
+        "aliases": ["blue water navy", "blue water", "offshore Vietnam", "Public Law 116-23", "vietnam navy"],
+        "type": "presumptive"
+    },
+    "burn_pits.md": {
+        "topic": "Burn Pit Exposure",
+        "url": "https://www.veteransbenefitskb.com/burnpits",
+        "aliases": ["burn pit", "burn pits", "particulate matter", "PACT Act", "toxic exposure", "fine particulate matter"],
+        "type": "presumptive"
+    },
+    "mental_rating.md": {
+        "topic": "General Rating Formula for Mental Disorders",
+        "url": "https://www.veteransbenefitskb.com/mental",
+        "aliases": ["mental health rating", "PTSD rating", "depression rating", "anxiety rating", "mental disorder criteria", "occupational and social impairment"],
+        "type": "rating_criteria"
+    },
+    "smc.md": {
+        "topic": "Special Monthly Compensation (SMC)",
+        "url": "https://www.veteransbenefitskb.com/smc",
+        "aliases": ["SMC", "special monthly compensation", "SMC-K", "SMC-L", "SMC-S", "SMC-R", "aid and attendance", "loss of use"],
+        "type": "compensation"
+    },
+    "statement_of_the_case.md": {
+        "topic": "Statement of the Case (SOC)",
+        "url": "https://www.veteransbenefitskb.com/appeals#soc",
+        "aliases": ["SOC", "statement of the case", "VA Form 9", "VA Form 10182", "BVA appeal"],
+        "type": "appeals"
+    },
+    "stressor_PTSD.md": {
+        "topic": "PTSD Stressor Development and Verification",
+        "url": "https://www.knowva.ebenefits.va.gov/system/templates/selfservice/va_ssnew/help/customer/locale/en-US/portal/554400000001018/content/554400000177468/",
+        "aliases": ["PTSD stressor", "stressor verification", "combat stressor", "MST", "military sexual trauma", "personal assault", "in-service stressor"],
+        "type": "claims_process"
+    },
+    "va_math.md": {
+        "topic": "VA Math - Combined Ratings Calculation",
+        "url": "https://www.veteransbenefitskb.com/vamath",
+        "aliases": ["VA math", "combined ratings", "combined rating table", "total person concept", "bilateral factor", "disability math"],
+        "type": "rating_calculation"
+    },
+    "money_backpay": {
+        "topic": "VA Money Matters and Back Pay",
+        "url": "https://www.veteransbenefitskb.com/money",
+        "aliases": ["back pay", "backpay", "VA payment", "retro pay", "effective date pay", "VA disability pay"],
+        "type": "compensation"
+    },
+    "outside_resorces.md": {
+        "topic": "External VA Resources and Calculators",
+        "url": "https://www.veteransbenefitskb.com/resources",
+        "aliases": ["VA calculator", "disability calculator", "pay table", "SMC rates", "compensation rates"],
+        "type": "resources"
+    },
 }
 
 def strip_navigation_junk(content: str) -> str:
@@ -447,9 +514,9 @@ def main():
     
     # Update corpus version marker
     version_marker = {
-        "entry_id": f"_corpus_version_{datetime.now().strftime('%Y-%m-%d')}-v7",
+        "entry_id": f"_corpus_version_{datetime.now().strftime('%Y-%m-%d')}-v8",
         "topic": "Corpus Version",
-        "content": f"This is a cache invalidation marker. Version: {datetime.now().strftime('%Y-%m-%d')}-v7. Added new chunked content from corpus markdown files.",
+        "content": f"This is a cache invalidation marker. Version: {datetime.now().strftime('%Y-%m-%d')}-v8. Added new chunked content including Nehmer, P&T, Blue Water Navy, Burn Pits, Mental Rating, SMC, PTSD Stressor, VA Math, Money/Backpay, and External Resources.",
         "source_id": "system"
     }
     

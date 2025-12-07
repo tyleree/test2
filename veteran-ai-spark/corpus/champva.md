@@ -496,4 +496,84 @@ None. CHAMPVA beneficiaries don’t pay out-of-pocket expenses when receiving se
 - #### [Let Us Know!](https://www.veteransbenefitskb.com/report)
 
 
+
+**# 03.03.01 CATASTROPHIC CAP**
+
+## Article ID: 554400000009411
+
+Updated
+Jun 17, 2019
+
+
+[Add Article To Reply](https://vha.cc.va.gov/system/templates/selfservice/va_ssnew/help/customer/locale/en-US/portal/554400000001036/content/554400000009411/030301-CATASTROPHIC-CAP)
+
+* * *
+
+**TRANSMITTAL #:  103**
+
+**DATE:  02/23/2007**
+
+**TRICARE CHANGE #:  N/A**
+
+**CHAMPVA OPERATIONAL POLICY MANUAL**
+
+**CHAPTER:3**
+
+**SECTION:3.1**
+
+**TITLE:CATASTROPHIC CAP**
+
+**AUTHORITY:** 38 CFR 17.270 and 17.274-278
+
+**RELATED AUTHORITY:** Public Laws 100-180 and 102-484 10 USC 1079(b)(5) and 1086(b)(4)
+
+**I.EFFECTIVE DATE**
+
+A.March 21, 1988.
+
+B.Prior to and including December 31, 1992: annual (calendar year) catastrophic cap of $10,000.
+
+C.January 1, 1993:annual (calendar year) catastrophic cap of $7500.
+
+D.January 1, 2002:annual (calendar year) catastrophic cap of $3,000.
+
+**II.** **DESCRIPTION**
+
+A.To provide financial protection against the impact of a long-term illness or injury, an annual cost limit or catastrophic cap has been placed on the beneficiary cost share amount for covered services and supplies.The catastrophic cap is a cost "cap" or upper limit for out-of pocket medical expenses incurred by a CHAMPVA beneficiary in a calendar year.The annual cap on cost sharing is $3,000 per CHAMPVA-eligible family in a calendar year.
+
+**III.** **POLICY**
+
+A.The annual deductible and beneficiary cost share amounts for covered services are applied toward the catastrophic cap.
+
+B.When the annual (calendar year) catastrophic cap is met, no further beneficiary cost share is required for the calendar year.The CHAMPVA determined allowable amount will be paid in full by CHAMPVA.
+
+**IV.** **POLICY CONSIDERATIONS**
+
+A.OHI (Other Health Insurance).For purposes of catastrophic loss protection, only in cases where the beneficiary’s actual out of pocket liability remains after CHAMPVA payment, will the deductible and cost share be counted towards meeting the annual catastrophic cap.
+
+1.After the catastrophic cap has been met, the policy regarding OHI continues to be applicable.However, as the catastrophic cap has been met, the beneficiary will not be liable for any cost sharing amounts resulting from the application of the other health insurance policy and computation.
+
+2.An EOB (Explanation Of Benefits) from the OHI is required.
+
+B.CHAMPVA Supplemental Plans.As with OHI, only in cases where the beneficiary’s actual out of pocket liability remains after CHAMPVA payment, will the deductible and cost share be counted towards meeting the annual catastrophic cap.
+
+C.Multiple Family Situations.
+
+1.When a CHAMPVA sponsor has eligible beneficiaries living in separate households, that is, sponsor and new spouse and children live together, and sponsor's children from previous marriage live elsewhere, they will be considered one family.Their deductibles and cost shares will be combined toward the calendar year catastrophic cap.
+
+2.When a family's sponsor changes, that is, a spouse divorces a sponsor and marries another sponsor, then only the new sponsor's liabilities for deductible and cost shares in a calendar year will count toward meeting the cap.In other words, this spouse cannot carry to the new family those credits accumulated toward the cap under the previous sponsor.
+
+D.Inpatient Care Spanning Two Calendar Years.When the dates of inpatient care span different calendar years, the cost share will be credited toward the catastrophic cap for the year in which the beneficiary was discharged.
+
+E.If payment is under one dollar ($1.00), payment will not be issued, although the catastrophic cap and deductible will be credited.
+
+F.Beneficiary costs for non-covered services or beneficiary payments above the CHAMPVA determined allowable charges are not applied toward the catastrophic cap.
+
+**\*END OF POLICY\***
+
+> Article ID: 554400000009411
+>
+> **03.03.01 CATASTROPHIC CAP**
+
+
 © 2021-2025 Veterans Benefits Knowledge Base, all rights reserved.
