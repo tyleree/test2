@@ -79,6 +79,13 @@ EMBEDDINGS_CACHE_PATH = "data/embeddings_cache.json"
 WEAK_RETRIEVAL_THRESHOLD = 0.55  # Log warning if best chunk is below this
 VERY_WEAK_THRESHOLD = 0.45  # Consider adding "I'm not sure" prefix if below this
 
+# HyDE (Hypothetical Document Embeddings) Configuration
+HYDE_ENABLED = True  # Enable HyDE fallback for weak retrievals
+HYDE_TRIGGER_THRESHOLD = 0.45  # Use HyDE when best score is below this
+HYDE_MODEL = "gpt-4.1-mini"  # Model for generating hypothetical documents
+HYDE_MAX_TOKENS = 300  # Max tokens for hypothetical document
+HYDE_TEMPERATURE = 0.3  # Low temperature for factual content
+
 # Model routing thresholds - OPTIMIZED for cost efficiency
 # Goal: Route ~80% to mini, ~20% to premium (only genuinely complex queries)
 SIMPLE_QUERY_MAX_WORDS = 20  # Increased from 15 - most queries are under 20 words
@@ -196,7 +203,8 @@ class RAGPipeline:
         chat_model: str = DEFAULT_CHAT_MODEL,
         top_k: int = DEFAULT_TOP_K,
         min_score: float = DEFAULT_MIN_SCORE,
-        enable_response_cache: bool = True
+        enable_response_cache: bool = True,
+        enable_hyde: bool = HYDE_ENABLED
     ):
         self.corpus_path = corpus_path
         self.embeddings_cache_path = embeddings_cache_path
@@ -205,11 +213,13 @@ class RAGPipeline:
         self.top_k = top_k
         self.min_score = min_score
         self.enable_response_cache = enable_response_cache
+        self.enable_hyde = enable_hyde
         
         self.vector_store: Optional[InMemoryVectorStore] = None
         self.openai_client: Optional[OpenAI] = None
         self.response_cache: Optional[ResponseCache] = None
         self._is_initialized = False
+        self._hyde_calls = 0  # Track HyDE usage for analytics
     
     def initialize(self, force_regenerate_embeddings: bool = False) -> bool:
         """
@@ -536,9 +546,102 @@ class RAGPipeline:
         
         return processed
     
+    def _generate_hypothetical_document(self, query: str) -> Optional[str]:
+        """
+        Generate a hypothetical document/answer for HyDE (Hypothetical Document Embeddings).
+        
+        HyDE improves retrieval for short/vague queries by:
+        1. Generating a detailed hypothetical answer to the query
+        2. Embedding the hypothetical (which is semantically richer than a short query)
+        3. Using that embedding for vector search
+        
+        Args:
+            query: User's question
+            
+        Returns:
+            Hypothetical document text, or None if generation fails
+        """
+        try:
+            prompt = f"""You are an expert on VA (Veterans Affairs) disability benefits. Write a brief, factual paragraph answering this question:
+
+"{query}"
+
+Requirements:
+- Write as if you're a VA benefits expert with deep knowledge
+- Include specific details like relevant laws, CFR references, dates, and eligibility criteria
+- Mention specific rating percentages if applicable
+- Include relevant form numbers or official procedures
+- Keep the response under 200 words
+- Be factual and specific - this will be used to search a knowledge base
+- Do NOT include phrases like "I think" or "I believe" - state facts directly
+
+Response:"""
+
+            response = self.openai_client.chat.completions.create(
+                model=HYDE_MODEL,
+                messages=[{"role": "user", "content": prompt}],
+                max_tokens=HYDE_MAX_TOKENS,
+                temperature=HYDE_TEMPERATURE
+            )
+            
+            hypothetical = response.choices[0].message.content.strip()
+            print(f"[HYDE] Generated hypothetical document ({len(hypothetical)} chars)")
+            return hypothetical
+            
+        except Exception as e:
+            print(f"[HYDE] Error generating hypothetical: {e}")
+            return None
+    
+    def _retrieve_with_hyde(self, query: str) -> Tuple[List[Dict[str, Any]], float]:
+        """
+        Perform HyDE-enhanced retrieval.
+        
+        Args:
+            query: User's question
+            
+        Returns:
+            Tuple of (chunks list, retrieval time in ms)
+        """
+        start_time = time.time()
+        
+        # Generate hypothetical document
+        hypothetical = self._generate_hypothetical_document(query)
+        
+        if not hypothetical:
+            print("[HYDE] Fallback: using original query")
+            hypothetical = query
+        
+        # Embed the hypothetical document (not the original query)
+        hyde_embedding = embed_query_cached(hypothetical, self.embedding_model)
+        
+        # Search with hypothetical embedding
+        results: List[SearchResult] = self.vector_store.search(
+            hyde_embedding,
+            k=self.top_k,
+            min_score=self.min_score
+        )
+        
+        # Convert to chunk dicts
+        chunks = []
+        for result in results:
+            chunks.append({
+                "id": result.document.id,
+                "text": result.document.text,
+                "metadata": result.document.metadata,
+                "score": result.score
+            })
+        
+        elapsed_ms = (time.time() - start_time) * 1000
+        self._hyde_calls += 1
+        
+        return chunks, elapsed_ms
+
     def _retrieve_context(self, query: str) -> Tuple[List[Dict[str, Any]], float, bool]:
         """
         Retrieve relevant context chunks for a query with hallucination prevention.
+        
+        Uses HyDE (Hypothetical Document Embeddings) as a fallback when standard
+        retrieval produces weak results or no results.
         
         Args:
             query: User's question
@@ -548,10 +651,9 @@ class RAGPipeline:
         """
         start_time = time.time()
         
-        # Generate query embedding
+        # Step 1: Standard retrieval
         query_embedding = embed_query_cached(query, self.embedding_model)
         
-        # Search vector store
         results: List[SearchResult] = self.vector_store.search(
             query_embedding,
             k=self.top_k,
@@ -568,10 +670,37 @@ class RAGPipeline:
                 "score": result.score
             })
         
+        # Check if we should try HyDE
+        best_score = chunks[0]["score"] if chunks else 0
+        use_hyde = False
+        
+        if self.enable_hyde:
+            # Trigger HyDE if no results OR best score is below threshold
+            if not chunks:
+                print(f"[HYDE] Triggering: No chunks found for query")
+                use_hyde = True
+            elif best_score < HYDE_TRIGGER_THRESHOLD:
+                print(f"[HYDE] Triggering: Best score {best_score:.3f} < {HYDE_TRIGGER_THRESHOLD}")
+                use_hyde = True
+        
+        # Step 2: Try HyDE if standard retrieval was weak
+        if use_hyde:
+            hyde_chunks, hyde_time = self._retrieve_with_hyde(query)
+            
+            if hyde_chunks:
+                hyde_best_score = hyde_chunks[0]["score"]
+                
+                # Use HyDE results if they're better
+                if not chunks or hyde_best_score > best_score:
+                    print(f"[HYDE] Improved: {best_score:.3f} -> {hyde_best_score:.3f}")
+                    chunks = hyde_chunks
+                    best_score = hyde_best_score
+                else:
+                    print(f"[HYDE] No improvement: {hyde_best_score:.3f} <= {best_score:.3f}")
+        
         # Check for weak retrieval (hallucination risk)
         weak_retrieval = False
         if chunks:
-            best_score = chunks[0]["score"]
             if best_score < WEAK_RETRIEVAL_THRESHOLD:
                 print(f"[WARN] Weak retrieval for query: '{query[:80]}...' (best_score={best_score:.3f})")
                 weak_retrieval = True
