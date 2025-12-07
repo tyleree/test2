@@ -14,6 +14,7 @@ import os
 import json
 import time
 import hashlib
+import re
 from typing import List, Dict, Optional, Tuple
 from pathlib import Path
 from openai import OpenAI
@@ -21,7 +22,9 @@ from openai import OpenAI
 # Configuration
 DEFAULT_EMBEDDING_MODEL = "text-embedding-3-small"
 BATCH_SIZE = 100  # OpenAI recommends batches of ~100 for efficiency
-RATE_LIMIT_DELAY = 0.5  # Seconds between batches to avoid rate limits
+RATE_LIMIT_DELAY = 1.5  # Seconds between batches to avoid rate limits (increased for 1407 chunks)
+MAX_RETRIES = 5  # Max retry attempts for rate limit errors
+RETRY_BASE_DELAY = 3.0  # Base delay for exponential backoff (seconds)
 
 
 def get_openai_client() -> OpenAI:
@@ -102,27 +105,61 @@ def save_embedding_cache(
 def generate_embeddings_batch(
     client: OpenAI,
     texts: List[str],
-    model: str = DEFAULT_EMBEDDING_MODEL
+    model: str = DEFAULT_EMBEDDING_MODEL,
+    retry_count: int = 0
 ) -> List[List[float]]:
     """
-    Generate embeddings for a batch of texts.
+    Generate embeddings for a batch of texts with retry logic for rate limits.
     
     Args:
         client: OpenAI client
         texts: List of text strings to embed
         model: Embedding model to use
+        retry_count: Current retry attempt (for recursion)
         
     Returns:
         List of embedding vectors
     """
-    response = client.embeddings.create(
-        model=model,
-        input=texts
-    )
+    try:
+        response = client.embeddings.create(
+            model=model,
+            input=texts
+        )
+        
+        # Sort by index to ensure order matches input
+        sorted_data = sorted(response.data, key=lambda x: x.index)
+        return [item.embedding for item in sorted_data]
     
-    # Sort by index to ensure order matches input
-    sorted_data = sorted(response.data, key=lambda x: x.index)
-    return [item.embedding for item in sorted_data]
+    except Exception as e:
+        error_str = str(e)
+        
+        # Check if it's a rate limit error (429)
+        if "rate_limit" in error_str.lower() or "429" in error_str:
+            if retry_count < MAX_RETRIES:
+                # Extract wait time from error message if available
+                wait_time = RETRY_BASE_DELAY * (2 ** retry_count)  # Exponential backoff
+                
+                # Try to parse suggested wait time from error message
+                if "Please try again in" in error_str:
+                    match = re.search(r'try again in ([\d.]+)s', error_str)
+                    if match:
+                        try:
+                            suggested_wait = float(match.group(1))
+                            wait_time = max(wait_time, suggested_wait + 1.0)  # Add 1s buffer
+                        except (ValueError, AttributeError):
+                            pass
+                
+                print(f"   [RETRY] Rate limit hit, waiting {wait_time:.1f}s before retry {retry_count + 1}/{MAX_RETRIES}")
+                time.sleep(wait_time)
+                
+                # Retry with incremented count
+                return generate_embeddings_batch(client, texts, model, retry_count + 1)
+            else:
+                print(f"   [ERROR] Max retries ({MAX_RETRIES}) exceeded for rate limit")
+                raise
+        else:
+            # Not a rate limit error, raise immediately
+            raise
 
 
 def generate_all_embeddings(
@@ -155,22 +192,26 @@ def generate_all_embeddings(
         batch_ids = doc_ids[i:i + BATCH_SIZE]
         batch_texts = texts[i:i + BATCH_SIZE]
         
+        batch_start = i
+        batch_end = min(i + BATCH_SIZE, total)
+        
         try:
+            # Generate embeddings with automatic retry on rate limits
             batch_embeddings = generate_embeddings_batch(client, batch_texts, model)
             
             for doc_id, embedding in zip(batch_ids, batch_embeddings):
                 embeddings_dict[doc_id] = embedding
             
             if show_progress:
-                progress = min(i + BATCH_SIZE, total)
-                print(f"   Progress: {progress}/{total} ({100 * progress // total}%)")
+                progress = batch_end
+                print(f"   [{progress:4d}/{total}] Batch {batch_start}-{batch_end} complete ({100 * progress // total}%)")
             
-            # Rate limit delay between batches
-            if i + BATCH_SIZE < total:
+            # Rate limit delay between batches to avoid hitting limits
+            if batch_end < total:
                 time.sleep(RATE_LIMIT_DELAY)
                 
         except Exception as e:
-            print(f"[ERROR] Error generating embeddings for batch {i}-{i + BATCH_SIZE}: {e}")
+            print(f"[ERROR] Failed to generate embeddings for batch {batch_start}-{batch_end} after retries: {e}")
             raise
     
     print(f"[OK] Generated {len(embeddings_dict)} embeddings")
