@@ -21,8 +21,8 @@ from openai import OpenAI
 
 # Configuration
 DEFAULT_EMBEDDING_MODEL = "text-embedding-3-small"
-BATCH_SIZE = 50  # Reduced from 100 to stay under 8192 token limit per batch
-RATE_LIMIT_DELAY = 1.5  # Seconds between batches to avoid rate limits (increased for 1407 chunks)
+BATCH_SIZE = 1  # Process one chunk at a time (BoardRemands-2 alone is ~13k tokens, exceeds limit when batched)
+RATE_LIMIT_DELAY = 0.05  # Very short delay since we're processing 1407 individual chunks
 MAX_RETRIES = 5  # Max retry attempts for rate limit errors
 RETRY_BASE_DELAY = 3.0  # Base delay for exponential backoff (seconds)
 
