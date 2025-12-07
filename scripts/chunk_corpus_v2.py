@@ -21,7 +21,7 @@ from pathlib import Path
 # Configuration
 CORPUS_DIR = Path(__file__).parent.parent / "veteran-ai-spark" / "corpus"
 OUTPUT_FILE = CORPUS_DIR / "vbkb_restructured.json"
-SOURCE_ID_PREFIX = "veteransbenefitskb_2025_12_07"
+SOURCE_ID_PREFIX = "veteransbenefitskb_2025_12_07_v2"  # Updated to force cache refresh
 
 # Files to process with their metadata
 FILES_TO_PROCESS = {
