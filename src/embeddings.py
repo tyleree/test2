@@ -21,7 +21,7 @@ from openai import OpenAI
 
 # Configuration
 DEFAULT_EMBEDDING_MODEL = "text-embedding-3-small"
-BATCH_SIZE = 100  # OpenAI recommends batches of ~100 for efficiency
+BATCH_SIZE = 50  # Reduced from 100 to stay under 8192 token limit per batch
 RATE_LIMIT_DELAY = 1.5  # Seconds between batches to avoid rate limits (increased for 1407 chunks)
 MAX_RETRIES = 5  # Max retry attempts for rate limit errors
 RETRY_BASE_DELAY = 3.0  # Base delay for exponential backoff (seconds)
