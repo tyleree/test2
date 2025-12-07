@@ -1,0 +1,1202 @@
+[
+  {
+    "id": "CLAIMS-1",
+    "category": "CLAIMS PROCESS",
+    "question": "How do I file a VA disability claim?"
+  },
+  {
+    "id": "CLAIMS-2",
+    "category": "CLAIMS PROCESS",
+    "question": "What forms do I need to file a claim?"
+  },
+  {
+    "id": "CLAIMS-3",
+    "category": "CLAIMS PROCESS",
+    "question": "How long does a VA claim take?"
+  },
+  {
+    "id": "CLAIMS-4",
+    "category": "CLAIMS PROCESS",
+    "question": "What is a C&P exam?"
+  },
+  {
+    "id": "CLAIMS-5",
+    "category": "CLAIMS PROCESS",
+    "question": "How do I prepare for a C&P exam?"
+  },
+  {
+    "id": "CLAIMS-6",
+    "category": "CLAIMS PROCESS",
+    "question": "What happens after I file a claim?"
+  },
+  {
+    "id": "CLAIMS-7",
+    "category": "CLAIMS PROCESS",
+    "question": "Can I track my claim status?"
+  },
+  {
+    "id": "CLAIMS-8",
+    "category": "CLAIMS PROCESS",
+    "question": "What is an Intent to File?"
+  },
+  {
+    "id": "CLAIMS-9",
+    "category": "CLAIMS PROCESS",
+    "question": "How do I get my service records?"
+  },
+  {
+    "id": "CLAIMS-10",
+    "category": "CLAIMS PROCESS",
+    "question": "What is a buddy statement?"
+  },
+  {
+    "id": "CLAIMS-11",
+    "category": "CLAIMS PROCESS",
+    "question": "Do I need a lawyer to file a claim?"
+  },
+  {
+    "id": "CLAIMS-12",
+    "category": "CLAIMS PROCESS",
+    "question": "What is a nexus letter?"
+  },
+  {
+    "id": "CLAIMS-13",
+    "category": "CLAIMS PROCESS",
+    "question": "How do I get a nexus letter?"
+  },
+  {
+    "id": "CLAIMS-14",
+    "category": "CLAIMS PROCESS",
+    "question": "What evidence do I need for my claim?"
+  },
+  {
+    "id": "CLAIMS-15",
+    "category": "CLAIMS PROCESS",
+    "question": "Can I file a claim while still on active duty?"
+  },
+  {
+    "id": "CLAIMS-16",
+    "category": "CLAIMS PROCESS",
+    "question": "What is BDD (Benefits Delivery at Discharge)?"
+  },
+  {
+    "id": "CLAIMS-17",
+    "category": "CLAIMS PROCESS",
+    "question": "How do I file for an increase?"
+  },
+  {
+    "id": "CLAIMS-18",
+    "category": "CLAIMS PROCESS",
+    "question": "What is a supplemental claim?"
+  },
+  {
+    "id": "CLAIMS-19",
+    "category": "CLAIMS PROCESS",
+    "question": "What is a fully developed claim?"
+  },
+  {
+    "id": "CLAIMS-20",
+    "category": "CLAIMS PROCESS",
+    "question": "Can I reopen a denied claim?"
+  },
+  {
+    "id": "CLAIMS-21",
+    "category": "CLAIMS PROCESS",
+    "question": "What is the difference between direct and secondary service connection?"
+  },
+  {
+    "id": "CLAIMS-22",
+    "category": "CLAIMS PROCESS",
+    "question": "What is aggravation?"
+  },
+  {
+    "id": "CLAIMS-23",
+    "category": "CLAIMS PROCESS",
+    "question": "How do I prove service connection?"
+  },
+  {
+    "id": "CLAIMS-24",
+    "category": "CLAIMS PROCESS",
+    "question": "What if my medical records were lost?"
+  },
+  {
+    "id": "CLAIMS-25",
+    "category": "CLAIMS PROCESS",
+    "question": "Can I file a claim years after discharge?"
+  },
+  {
+    "id": "APPEAL-1",
+    "category": "APPEALS",
+    "question": "How do I appeal a VA decision?"
+  },
+  {
+    "id": "APPEAL-2",
+    "category": "APPEALS",
+    "question": "What is a Higher Level Review?"
+  },
+  {
+    "id": "APPEAL-3",
+    "category": "APPEALS",
+    "question": "What is a Supplemental Claim?"
+  },
+  {
+    "id": "APPEAL-4",
+    "category": "APPEALS",
+    "question": "What is the Board of Veterans Appeals?"
+  },
+  {
+    "id": "APPEAL-5",
+    "category": "APPEALS",
+    "question": "How long does an appeal take?"
+  },
+  {
+    "id": "APPEAL-6",
+    "category": "APPEALS",
+    "question": "What is a Notice of Disagreement?"
+  },
+  {
+    "id": "APPEAL-7",
+    "category": "APPEALS",
+    "question": "Can I get a hearing for my appeal?"
+  },
+  {
+    "id": "APPEAL-8",
+    "category": "APPEALS",
+    "question": "What is a Board hearing?"
+  },
+  {
+    "id": "APPEAL-9",
+    "category": "APPEALS",
+    "question": "Should I get a lawyer for my appeal?"
+  },
+  {
+    "id": "APPEAL-10",
+    "category": "APPEALS",
+    "question": "What happens if I miss the appeal deadline?"
+  },
+  {
+    "id": "APPEAL-11",
+    "category": "APPEALS",
+    "question": "What is the difference between legacy and AMA appeals?"
+  },
+  {
+    "id": "APPEAL-12",
+    "category": "APPEALS",
+    "question": "What is a remand?"
+  },
+  {
+    "id": "APPEAL-13",
+    "category": "APPEALS",
+    "question": "Can I submit new evidence on appeal?"
+  },
+  {
+    "id": "APPEAL-14",
+    "category": "APPEALS",
+    "question": "What is a Statement of the Case?"
+  },
+  {
+    "id": "APPEAL-15",
+    "category": "APPEALS",
+    "question": "How do I choose an appeal lane?"
+  },
+  {
+    "id": "APPEAL-16",
+    "category": "APPEALS",
+    "question": "What is the Court of Appeals for Veterans Claims?"
+  },
+  {
+    "id": "APPEAL-17",
+    "category": "APPEALS",
+    "question": "Can I appeal a C&P exam?"
+  },
+  {
+    "id": "APPEAL-18",
+    "category": "APPEALS",
+    "question": "What if my appeal is denied?"
+  },
+  {
+    "id": "APPEAL-19",
+    "category": "APPEALS",
+    "question": "How do I find a VSO to help with my appeal?"
+  },
+  {
+    "id": "APPEAL-20",
+    "category": "APPEALS",
+    "question": "What is duty to assist error?"
+  },
+  {
+    "id": "RATING-1",
+    "category": "RATINGS & COMPENSATION",
+    "question": "How are VA disability ratings calculated?"
+  },
+  {
+    "id": "RATING-2",
+    "category": "RATINGS & COMPENSATION",
+    "question": "What is combined rating?"
+  },
+  {
+    "id": "RATING-3",
+    "category": "RATINGS & COMPENSATION",
+    "question": "How does VA math work?"
+  },
+  {
+    "id": "RATING-4",
+    "category": "RATINGS & COMPENSATION",
+    "question": "What is the bilateral factor?"
+  },
+  {
+    "id": "RATING-5",
+    "category": "RATINGS & COMPENSATION",
+    "question": "Can I get 100% disability?"
+  },
+  {
+    "id": "RATING-6",
+    "category": "RATINGS & COMPENSATION",
+    "question": "What is the difference between schedular and TDIU?"
+  },
+  {
+    "id": "RATING-7",
+    "category": "RATINGS & COMPENSATION",
+    "question": "How much does 70% disability pay?"
+  },
+  {
+    "id": "RATING-8",
+    "category": "RATINGS & COMPENSATION",
+    "question": "What is SMC (Special Monthly Compensation)?"
+  },
+  {
+    "id": "RATING-9",
+    "category": "RATINGS & COMPENSATION",
+    "question": "What is SMC-S?"
+  },
+  {
+    "id": "RATING-10",
+    "category": "RATINGS & COMPENSATION",
+    "question": "What is housebound status?"
+  },
+  {
+    "id": "RATING-11",
+    "category": "RATINGS & COMPENSATION",
+    "question": "What is aid and attendance?"
+  },
+  {
+    "id": "RATING-12",
+    "category": "RATINGS & COMPENSATION",
+    "question": "Can my rating be reduced?"
+  },
+  {
+    "id": "RATING-13",
+    "category": "RATINGS & COMPENSATION",
+    "question": "What is a protected rating?"
+  },
+  {
+    "id": "RATING-14",
+    "category": "RATINGS & COMPENSATION",
+    "question": "What is static vs dynamic rating?"
+  },
+  {
+    "id": "RATING-15",
+    "category": "RATINGS & COMPENSATION",
+    "question": "How do I get backpay?"
+  },
+  {
+    "id": "RATING-16",
+    "category": "RATINGS & COMPENSATION",
+    "question": "What is an effective date?"
+  },
+  {
+    "id": "RATING-17",
+    "category": "RATINGS & COMPENSATION",
+    "question": "Can I get retro pay?"
+  },
+  {
+    "id": "RATING-18",
+    "category": "RATINGS & COMPENSATION",
+    "question": "What benefits come with 100% disability?"
+  },
+  {
+    "id": "RATING-19",
+    "category": "RATINGS & COMPENSATION",
+    "question": "What is P&T (Permanent and Total)?"
+  },
+  {
+    "id": "RATING-20",
+    "category": "RATINGS & COMPENSATION",
+    "question": "What is the 5 year rule?"
+  },
+  {
+    "id": "RATING-21",
+    "category": "RATINGS & COMPENSATION",
+    "question": "What is the 10 year rule?"
+  },
+  {
+    "id": "RATING-22",
+    "category": "RATINGS & COMPENSATION",
+    "question": "What is the 20 year rule?"
+  },
+  {
+    "id": "RATING-23",
+    "category": "RATINGS & COMPENSATION",
+    "question": "Can I work with 100% disability?"
+  },
+  {
+    "id": "RATING-24",
+    "category": "RATINGS & COMPENSATION",
+    "question": "What is individual unemployability?"
+  },
+  {
+    "id": "RATING-25",
+    "category": "RATINGS & COMPENSATION",
+    "question": "How do I apply for TDIU?"
+  },
+  {
+    "id": "MENTAL-1",
+    "category": "MENTAL HEALTH",
+    "question": "How is PTSD rated by the VA?"
+  },
+  {
+    "id": "MENTAL-2",
+    "category": "MENTAL HEALTH",
+    "question": "What symptoms qualify for PTSD rating?"
+  },
+  {
+    "id": "MENTAL-3",
+    "category": "MENTAL HEALTH",
+    "question": "Can I get service connected for PTSD without combat?"
+  },
+  {
+    "id": "MENTAL-4",
+    "category": "MENTAL HEALTH",
+    "question": "What is MST (Military Sexual Trauma)?"
+  },
+  {
+    "id": "MENTAL-5",
+    "category": "MENTAL HEALTH",
+    "question": "How do I file a claim for MST?"
+  },
+  {
+    "id": "MENTAL-6",
+    "category": "MENTAL HEALTH",
+    "question": "What is the 70% rating criteria for PTSD?"
+  },
+  {
+    "id": "MENTAL-7",
+    "category": "MENTAL HEALTH",
+    "question": "What is the 100% rating for mental health?"
+  },
+  {
+    "id": "MENTAL-8",
+    "category": "MENTAL HEALTH",
+    "question": "Can I have multiple mental health ratings?"
+  },
+  {
+    "id": "MENTAL-9",
+    "category": "MENTAL HEALTH",
+    "question": "How is anxiety rated?"
+  },
+  {
+    "id": "MENTAL-10",
+    "category": "MENTAL HEALTH",
+    "question": "How is depression rated?"
+  },
+  {
+    "id": "MENTAL-11",
+    "category": "MENTAL HEALTH",
+    "question": "What is occupational and social impairment?"
+  },
+  {
+    "id": "MENTAL-12",
+    "category": "MENTAL HEALTH",
+    "question": "What is a stressor statement?"
+  },
+  {
+    "id": "MENTAL-13",
+    "category": "MENTAL HEALTH",
+    "question": "Do I need a diagnosis for PTSD claim?"
+  },
+  {
+    "id": "MENTAL-14",
+    "category": "MENTAL HEALTH",
+    "question": "Can I get PTSD rating for non-combat trauma?"
+  },
+  {
+    "id": "MENTAL-15",
+    "category": "MENTAL HEALTH",
+    "question": "What evidence do I need for mental health claim?"
+  },
+  {
+    "id": "MENTAL-16",
+    "category": "MENTAL HEALTH",
+    "question": "How do I prove my PTSD stressor?"
+  },
+  {
+    "id": "MENTAL-17",
+    "category": "MENTAL HEALTH",
+    "question": "Can I get 100% for PTSD alone?"
+  },
+  {
+    "id": "MENTAL-18",
+    "category": "MENTAL HEALTH",
+    "question": "What is the difference between 50% and 70% PTSD?"
+  },
+  {
+    "id": "MENTAL-19",
+    "category": "MENTAL HEALTH",
+    "question": "How does the VA evaluate mental health?"
+  },
+  {
+    "id": "MENTAL-20",
+    "category": "MENTAL HEALTH",
+    "question": "Can TBI cause PTSD?"
+  },
+  {
+    "id": "PHYSICAL-1",
+    "category": "PHYSICAL CONDITIONS",
+    "question": "How is back pain rated by the VA?"
+  },
+  {
+    "id": "PHYSICAL-2",
+    "category": "PHYSICAL CONDITIONS",
+    "question": "What is the rating for knee pain?"
+  },
+  {
+    "id": "PHYSICAL-3",
+    "category": "PHYSICAL CONDITIONS",
+    "question": "How are shoulder conditions rated?"
+  },
+  {
+    "id": "PHYSICAL-4",
+    "category": "PHYSICAL CONDITIONS",
+    "question": "What is limited range of motion?"
+  },
+  {
+    "id": "PHYSICAL-5",
+    "category": "PHYSICAL CONDITIONS",
+    "question": "How is sleep apnea rated?"
+  },
+  {
+    "id": "PHYSICAL-6",
+    "category": "PHYSICAL CONDITIONS",
+    "question": "What rating do I get for CPAP use?"
+  },
+  {
+    "id": "PHYSICAL-7",
+    "category": "PHYSICAL CONDITIONS",
+    "question": "How is hypertension rated?"
+  },
+  {
+    "id": "PHYSICAL-8",
+    "category": "PHYSICAL CONDITIONS",
+    "question": "What is the rating for tinnitus?"
+  },
+  {
+    "id": "PHYSICAL-9",
+    "category": "PHYSICAL CONDITIONS",
+    "question": "How is hearing loss rated?"
+  },
+  {
+    "id": "PHYSICAL-10",
+    "category": "PHYSICAL CONDITIONS",
+    "question": "What is the rating for migraines?"
+  },
+  {
+    "id": "PHYSICAL-11",
+    "category": "PHYSICAL CONDITIONS",
+    "question": "How is diabetes rated?"
+  },
+  {
+    "id": "PHYSICAL-12",
+    "category": "PHYSICAL CONDITIONS",
+    "question": "What is the rating for erectile dysfunction?"
+  },
+  {
+    "id": "PHYSICAL-13",
+    "category": "PHYSICAL CONDITIONS",
+    "question": "How are scars rated?"
+  },
+  {
+    "id": "PHYSICAL-14",
+    "category": "PHYSICAL CONDITIONS",
+    "question": "What is radiculopathy?"
+  },
+  {
+    "id": "PHYSICAL-15",
+    "category": "PHYSICAL CONDITIONS",
+    "question": "How is GERD rated?"
+  },
+  {
+    "id": "PHYSICAL-16",
+    "category": "PHYSICAL CONDITIONS",
+    "question": "What is the rating for IBS?"
+  },
+  {
+    "id": "PHYSICAL-17",
+    "category": "PHYSICAL CONDITIONS",
+    "question": "How is plantar fasciitis rated?"
+  },
+  {
+    "id": "PHYSICAL-18",
+    "category": "PHYSICAL CONDITIONS",
+    "question": "What is the rating for carpal tunnel?"
+  },
+  {
+    "id": "PHYSICAL-19",
+    "category": "PHYSICAL CONDITIONS",
+    "question": "How are TBI symptoms rated?"
+  },
+  {
+    "id": "PHYSICAL-20",
+    "category": "PHYSICAL CONDITIONS",
+    "question": "What is the rating for chronic fatigue?"
+  },
+  {
+    "id": "SECONDARY-1",
+    "category": "SECONDARY CONDITIONS",
+    "question": "What is a secondary condition?"
+  },
+  {
+    "id": "SECONDARY-2",
+    "category": "SECONDARY CONDITIONS",
+    "question": "Can I get service connected for a secondary condition?"
+  },
+  {
+    "id": "SECONDARY-3",
+    "category": "SECONDARY CONDITIONS",
+    "question": "What conditions are secondary to PTSD?"
+  },
+  {
+    "id": "SECONDARY-4",
+    "category": "SECONDARY CONDITIONS",
+    "question": "Is sleep apnea secondary to PTSD?"
+  },
+  {
+    "id": "SECONDARY-5",
+    "category": "SECONDARY CONDITIONS",
+    "question": "Is hypertension secondary to PTSD?"
+  },
+  {
+    "id": "SECONDARY-6",
+    "category": "SECONDARY CONDITIONS",
+    "question": "What is secondary to diabetes?"
+  },
+  {
+    "id": "SECONDARY-7",
+    "category": "SECONDARY CONDITIONS",
+    "question": "Can depression be secondary to chronic pain?"
+  },
+  {
+    "id": "SECONDARY-8",
+    "category": "SECONDARY CONDITIONS",
+    "question": "What is secondary to back pain?"
+  },
+  {
+    "id": "SECONDARY-9",
+    "category": "SECONDARY CONDITIONS",
+    "question": "Is erectile dysfunction secondary to medication?"
+  },
+  {
+    "id": "SECONDARY-10",
+    "category": "SECONDARY CONDITIONS",
+    "question": "What conditions are secondary to sleep apnea?"
+  },
+  {
+    "id": "SECONDARY-11",
+    "category": "SECONDARY CONDITIONS",
+    "question": "Can I file for secondary conditions later?"
+  },
+  {
+    "id": "SECONDARY-12",
+    "category": "SECONDARY CONDITIONS",
+    "question": "What evidence do I need for secondary claim?"
+  },
+  {
+    "id": "SECONDARY-13",
+    "category": "SECONDARY CONDITIONS",
+    "question": "Is GERD secondary to PTSD medication?"
+  },
+  {
+    "id": "SECONDARY-14",
+    "category": "SECONDARY CONDITIONS",
+    "question": "What is aggravation of a secondary condition?"
+  },
+  {
+    "id": "SECONDARY-15",
+    "category": "SECONDARY CONDITIONS",
+    "question": "Can migraines be secondary to TBI?"
+  },
+  {
+    "id": "PRESUMPTIVE-1",
+    "category": "PRESUMPTIVE CONDITIONS",
+    "question": "What is a presumptive condition?"
+  },
+  {
+    "id": "PRESUMPTIVE-2",
+    "category": "PRESUMPTIVE CONDITIONS",
+    "question": "What conditions are presumptive for Gulf War veterans?"
+  },
+  {
+    "id": "PRESUMPTIVE-3",
+    "category": "PRESUMPTIVE CONDITIONS",
+    "question": "What is Agent Orange presumptive?"
+  },
+  {
+    "id": "PRESUMPTIVE-4",
+    "category": "PRESUMPTIVE CONDITIONS",
+    "question": "What conditions are presumptive for burn pit exposure?"
+  },
+  {
+    "id": "PRESUMPTIVE-5",
+    "category": "PRESUMPTIVE CONDITIONS",
+    "question": "What is the PACT Act?"
+  },
+  {
+    "id": "PRESUMPTIVE-6",
+    "category": "PRESUMPTIVE CONDITIONS",
+    "question": "Is hypertension presumptive for Agent Orange?"
+  },
+  {
+    "id": "PRESUMPTIVE-7",
+    "category": "PRESUMPTIVE CONDITIONS",
+    "question": "What is the 1 year presumptive period?"
+  },
+  {
+    "id": "PRESUMPTIVE-8",
+    "category": "PRESUMPTIVE CONDITIONS",
+    "question": "Is diabetes presumptive for Agent Orange?"
+  },
+  {
+    "id": "PRESUMPTIVE-9",
+    "category": "PRESUMPTIVE CONDITIONS",
+    "question": "What cancers are presumptive for burn pits?"
+  },
+  {
+    "id": "PRESUMPTIVE-10",
+    "category": "PRESUMPTIVE CONDITIONS",
+    "question": "Am I eligible for PACT Act benefits?"
+  },
+  {
+    "id": "PRESUMPTIVE-11",
+    "category": "PRESUMPTIVE CONDITIONS",
+    "question": "What is toxic exposure?"
+  },
+  {
+    "id": "PRESUMPTIVE-12",
+    "category": "PRESUMPTIVE CONDITIONS",
+    "question": "Is asthma presumptive for burn pit exposure?"
+  },
+  {
+    "id": "PRESUMPTIVE-13",
+    "category": "PRESUMPTIVE CONDITIONS",
+    "question": "What is Camp Lejeune water contamination?"
+  },
+  {
+    "id": "PRESUMPTIVE-14",
+    "category": "PRESUMPTIVE CONDITIONS",
+    "question": "What conditions are presumptive for radiation exposure?"
+  },
+  {
+    "id": "PRESUMPTIVE-15",
+    "category": "PRESUMPTIVE CONDITIONS",
+    "question": "How do I prove toxic exposure?"
+  },
+  {
+    "id": "GIBILL-1",
+    "category": "GI BILL & EDUCATION",
+    "question": "What is the GI Bill?"
+  },
+  {
+    "id": "GIBILL-2",
+    "category": "GI BILL & EDUCATION",
+    "question": "How do I apply for the Post-9/11 GI Bill?"
+  },
+  {
+    "id": "GIBILL-3",
+    "category": "GI BILL & EDUCATION",
+    "question": "What is Chapter 33?"
+  },
+  {
+    "id": "GIBILL-4",
+    "category": "GI BILL & EDUCATION",
+    "question": "What is the Montgomery GI Bill?"
+  },
+  {
+    "id": "GIBILL-5",
+    "category": "GI BILL & EDUCATION",
+    "question": "Can dependents use GI Bill benefits?"
+  },
+  {
+    "id": "GIBILL-6",
+    "category": "GI BILL & EDUCATION",
+    "question": "What is Chapter 30?"
+  },
+  {
+    "id": "GIBILL-7",
+    "category": "GI BILL & EDUCATION",
+    "question": "How much does the GI Bill pay?"
+  },
+  {
+    "id": "GIBILL-8",
+    "category": "GI BILL & EDUCATION",
+    "question": "What is the housing allowance for GI Bill?"
+  },
+  {
+    "id": "GIBILL-9",
+    "category": "GI BILL & EDUCATION",
+    "question": "Can I transfer my GI Bill benefits?"
+  },
+  {
+    "id": "GIBILL-10",
+    "category": "GI BILL & EDUCATION",
+    "question": "What is the Yellow Ribbon program?"
+  },
+  {
+    "id": "GIBILL-11",
+    "category": "GI BILL & EDUCATION",
+    "question": "What is Chapter 35 DEA?"
+  },
+  {
+    "id": "GIBILL-12",
+    "category": "GI BILL & EDUCATION",
+    "question": "How long do GI Bill benefits last?"
+  },
+  {
+    "id": "GIBILL-13",
+    "category": "GI BILL & EDUCATION",
+    "question": "Can I use GI Bill for graduate school?"
+  },
+  {
+    "id": "GIBILL-14",
+    "category": "GI BILL & EDUCATION",
+    "question": "What is the book stipend?"
+  },
+  {
+    "id": "GIBILL-15",
+    "category": "GI BILL & EDUCATION",
+    "question": "Can I use GI Bill for online courses?"
+  },
+  {
+    "id": "GIBILL-16",
+    "category": "GI BILL & EDUCATION",
+    "question": "What is the Post-9/11 GI Bill eligibility?"
+  },
+  {
+    "id": "GIBILL-17",
+    "category": "GI BILL & EDUCATION",
+    "question": "Can I use GI Bill for vocational training?"
+  },
+  {
+    "id": "GIBILL-18",
+    "category": "GI BILL & EDUCATION",
+    "question": "What happens to unused GI Bill benefits?"
+  },
+  {
+    "id": "GIBILL-19",
+    "category": "GI BILL & EDUCATION",
+    "question": "Can I use GI Bill and VR&E together?"
+  },
+  {
+    "id": "GIBILL-20",
+    "category": "GI BILL & EDUCATION",
+    "question": "What is the Forever GI Bill?"
+  },
+  {
+    "id": "VRE-1",
+    "category": "VR&E / VOC REHAB",
+    "question": "What is VR&E?"
+  },
+  {
+    "id": "VRE-2",
+    "category": "VR&E / VOC REHAB",
+    "question": "What is Voc Rehab?"
+  },
+  {
+    "id": "VRE-3",
+    "category": "VR&E / VOC REHAB",
+    "question": "What is Chapter 31?"
+  },
+  {
+    "id": "VRE-4",
+    "category": "VR&E / VOC REHAB",
+    "question": "Am I eligible for VR&E?"
+  },
+  {
+    "id": "VRE-5",
+    "category": "VR&E / VOC REHAB",
+    "question": "What disability rating do I need for VR&E?"
+  },
+  {
+    "id": "VRE-6",
+    "category": "VR&E / VOC REHAB",
+    "question": "How do I apply for VR&E?"
+  },
+  {
+    "id": "VRE-7",
+    "category": "VR&E / VOC REHAB",
+    "question": "What does VR&E pay for?"
+  },
+  {
+    "id": "VRE-8",
+    "category": "VR&E / VOC REHAB",
+    "question": "Can VR&E pay for graduate school?"
+  },
+  {
+    "id": "VRE-9",
+    "category": "VR&E / VOC REHAB",
+    "question": "What is the subsistence allowance?"
+  },
+  {
+    "id": "VRE-10",
+    "category": "VR&E / VOC REHAB",
+    "question": "What are the VR&E tracks?"
+  },
+  {
+    "id": "VRE-11",
+    "category": "VR&E / VOC REHAB",
+    "question": "What is the employment track?"
+  },
+  {
+    "id": "VRE-12",
+    "category": "VR&E / VOC REHAB",
+    "question": "What is the self-employment track?"
+  },
+  {
+    "id": "VRE-13",
+    "category": "VR&E / VOC REHAB",
+    "question": "What is the independent living track?"
+  },
+  {
+    "id": "VRE-14",
+    "category": "VR&E / VOC REHAB",
+    "question": "Can I use VR&E and GI Bill together?"
+  },
+  {
+    "id": "VRE-15",
+    "category": "VR&E / VOC REHAB",
+    "question": "How long can I use VR&E benefits?"
+  },
+  {
+    "id": "CHAMPVA-1",
+    "category": "CHAMPVA & HEALTHCARE",
+    "question": "What is CHAMPVA?"
+  },
+  {
+    "id": "CHAMPVA-2",
+    "category": "CHAMPVA & HEALTHCARE",
+    "question": "Who is eligible for CHAMPVA?"
+  },
+  {
+    "id": "CHAMPVA-3",
+    "category": "CHAMPVA & HEALTHCARE",
+    "question": "What does CHAMPVA cover?"
+  },
+  {
+    "id": "CHAMPVA-4",
+    "category": "CHAMPVA & HEALTHCARE",
+    "question": "How do I apply for CHAMPVA?"
+  },
+  {
+    "id": "CHAMPVA-5",
+    "category": "CHAMPVA & HEALTHCARE",
+    "question": "Is CHAMPVA the same as TRICARE?"
+  },
+  {
+    "id": "CHAMPVA-6",
+    "category": "CHAMPVA & HEALTHCARE",
+    "question": "Does CHAMPVA cover prescriptions?"
+  },
+  {
+    "id": "CHAMPVA-7",
+    "category": "CHAMPVA & HEALTHCARE",
+    "question": "What is the CHAMPVA deductible?"
+  },
+  {
+    "id": "CHAMPVA-8",
+    "category": "CHAMPVA & HEALTHCARE",
+    "question": "Can my spouse get CHAMPVA?"
+  },
+  {
+    "id": "CHAMPVA-9",
+    "category": "CHAMPVA & HEALTHCARE",
+    "question": "Does CHAMPVA cover dental?"
+  },
+  {
+    "id": "CHAMPVA-10",
+    "category": "CHAMPVA & HEALTHCARE",
+    "question": "What is the CITI program?"
+  },
+  {
+    "id": "CHAMPVA-11",
+    "category": "CHAMPVA & HEALTHCARE",
+    "question": "Can children use CHAMPVA?"
+  },
+  {
+    "id": "CHAMPVA-12",
+    "category": "CHAMPVA & HEALTHCARE",
+    "question": "Does CHAMPVA cover mental health?"
+  },
+  {
+    "id": "CHAMPVA-13",
+    "category": "CHAMPVA & HEALTHCARE",
+    "question": "What is the catastrophic cap?"
+  },
+  {
+    "id": "CHAMPVA-14",
+    "category": "CHAMPVA & HEALTHCARE",
+    "question": "Can I use CHAMPVA with Medicare?"
+  },
+  {
+    "id": "CHAMPVA-15",
+    "category": "CHAMPVA & HEALTHCARE",
+    "question": "What happens to CHAMPVA if I remarry?"
+  },
+  {
+    "id": "1151-1",
+    "category": "1151 CLAIMS & TORT",
+    "question": "What is a 1151 claim?"
+  },
+  {
+    "id": "1151-2",
+    "category": "1151 CLAIMS & TORT",
+    "question": "What is a federal tort claim?"
+  },
+  {
+    "id": "1151-3",
+    "category": "1151 CLAIMS & TORT",
+    "question": "Can I sue the VA for malpractice?"
+  },
+  {
+    "id": "1151-4",
+    "category": "1151 CLAIMS & TORT",
+    "question": "How do I file a 1151 claim?"
+  },
+  {
+    "id": "1151-5",
+    "category": "1151 CLAIMS & TORT",
+    "question": "What is the difference between 1151 and tort?"
+  },
+  {
+    "id": "1151-6",
+    "category": "1151 CLAIMS & TORT",
+    "question": "What evidence do I need for 1151?"
+  },
+  {
+    "id": "1151-7",
+    "category": "1151 CLAIMS & TORT",
+    "question": "What is VA negligence?"
+  },
+  {
+    "id": "1151-8",
+    "category": "1151 CLAIMS & TORT",
+    "question": "Can I get compensation for VA medical error?"
+  },
+  {
+    "id": "1151-9",
+    "category": "1151 CLAIMS & TORT",
+    "question": "What is the statute of limitations for tort claims?"
+  },
+  {
+    "id": "1151-10",
+    "category": "1151 CLAIMS & TORT",
+    "question": "Do I need a lawyer for 1151 claim?"
+  },
+  {
+    "id": "AO-1",
+    "category": "AGENT ORANGE",
+    "question": "What is Agent Orange?"
+  },
+  {
+    "id": "AO-2",
+    "category": "AGENT ORANGE",
+    "question": "What conditions are presumptive for Agent Orange?"
+  },
+  {
+    "id": "AO-3",
+    "category": "AGENT ORANGE",
+    "question": "What is the Nehmer rule?"
+  },
+  {
+    "id": "AO-4",
+    "category": "AGENT ORANGE",
+    "question": "Am I eligible for Agent Orange benefits?"
+  },
+  {
+    "id": "AO-5",
+    "category": "AGENT ORANGE",
+    "question": "What is Blue Water Navy?"
+  },
+  {
+    "id": "AO-6",
+    "category": "AGENT ORANGE",
+    "question": "Is diabetes presumptive for Agent Orange?"
+  },
+  {
+    "id": "AO-7",
+    "category": "AGENT ORANGE",
+    "question": "Is Parkinson's connected to Agent Orange?"
+  },
+  {
+    "id": "AO-8",
+    "category": "AGENT ORANGE",
+    "question": "What is herbicide exposure?"
+  },
+  {
+    "id": "AO-9",
+    "category": "AGENT ORANGE",
+    "question": "Can my children get benefits from Agent Orange?"
+  },
+  {
+    "id": "AO-10",
+    "category": "AGENT ORANGE",
+    "question": "Where was Agent Orange used?"
+  },
+  {
+    "id": "DEPENDENTS-1",
+    "category": "DEPENDENTS & SURVIVORS",
+    "question": "Can I add dependents to my VA benefits?"
+  },
+  {
+    "id": "DEPENDENTS-2",
+    "category": "DEPENDENTS & SURVIVORS",
+    "question": "What is DIC (Dependency and Indemnity Compensation)?"
+  },
+  {
+    "id": "DEPENDENTS-3",
+    "category": "DEPENDENTS & SURVIVORS",
+    "question": "How do I add my spouse to my benefits?"
+  },
+  {
+    "id": "DEPENDENTS-4",
+    "category": "DEPENDENTS & SURVIVORS",
+    "question": "What benefits do surviving spouses get?"
+  },
+  {
+    "id": "DEPENDENTS-5",
+    "category": "DEPENDENTS & SURVIVORS",
+    "question": "What is Chapter 35 DEA?"
+  },
+  {
+    "id": "DEPENDENTS-6",
+    "category": "DEPENDENTS & SURVIVORS",
+    "question": "Can my children get VA benefits?"
+  },
+  {
+    "id": "DEPENDENTS-7",
+    "category": "DEPENDENTS & SURVIVORS",
+    "question": "What is a helpless child?"
+  },
+  {
+    "id": "DEPENDENTS-8",
+    "category": "DEPENDENTS & SURVIVORS",
+    "question": "How do I apply for DIC?"
+  },
+  {
+    "id": "DEPENDENTS-9",
+    "category": "DEPENDENTS & SURVIVORS",
+    "question": "What is survivor pension?"
+  },
+  {
+    "id": "DEPENDENTS-10",
+    "category": "DEPENDENTS & SURVIVORS",
+    "question": "Can I get benefits if my veteran parent died?"
+  },
+  {
+    "id": "EDGE-1",
+    "category": "EDGE CASES & TRICKY QUESTIONS",
+    "question": "Can I get VA benefits with a bad conduct discharge?"
+  },
+  {
+    "id": "EDGE-2",
+    "category": "EDGE CASES & TRICKY QUESTIONS",
+    "question": "What is a discharge upgrade?"
+  },
+  {
+    "id": "EDGE-3",
+    "category": "EDGE CASES & TRICKY QUESTIONS",
+    "question": "Can I get benefits with an other than honorable discharge?"
+  },
+  {
+    "id": "EDGE-4",
+    "category": "EDGE CASES & TRICKY QUESTIONS",
+    "question": "What if I was dishonorably discharged?"
+  },
+  {
+    "id": "EDGE-5",
+    "category": "EDGE CASES & TRICKY QUESTIONS",
+    "question": "Can reservists get VA disability?"
+  },
+  {
+    "id": "EDGE-6",
+    "category": "EDGE CASES & TRICKY QUESTIONS",
+    "question": "Can National Guard get VA benefits?"
+  },
+  {
+    "id": "EDGE-7",
+    "category": "EDGE CASES & TRICKY QUESTIONS",
+    "question": "What is character of discharge?"
+  },
+  {
+    "id": "EDGE-8",
+    "category": "EDGE CASES & TRICKY QUESTIONS",
+    "question": "Can I get VA benefits if I never deployed?"
+  },
+  {
+    "id": "EDGE-9",
+    "category": "EDGE CASES & TRICKY QUESTIONS",
+    "question": "What if my condition started after service?"
+  },
+  {
+    "id": "EDGE-10",
+    "category": "EDGE CASES & TRICKY QUESTIONS",
+    "question": "Can I get benefits for conditions that existed before service?"
+  },
+  {
+    "id": "EDGE-11",
+    "category": "EDGE CASES & TRICKY QUESTIONS",
+    "question": "What is pre-existing condition aggravation?"
+  },
+  {
+    "id": "EDGE-12",
+    "category": "EDGE CASES & TRICKY QUESTIONS",
+    "question": "Can I get benefits for genetic conditions?"
+  },
+  {
+    "id": "EDGE-13",
+    "category": "EDGE CASES & TRICKY QUESTIONS",
+    "question": "What if I can't remember my stressor?"
+  },
+  {
+    "id": "EDGE-14",
+    "category": "EDGE CASES & TRICKY QUESTIONS",
+    "question": "Can I file a claim without medical records?"
+  },
+  {
+    "id": "EDGE-15",
+    "category": "EDGE CASES & TRICKY QUESTIONS",
+    "question": "What if my doctor won't write a nexus letter?"
+  },
+  {
+    "id": "EDGE-16",
+    "category": "EDGE CASES & TRICKY QUESTIONS",
+    "question": "Can I get benefits for conditions not in my service record?"
+  },
+  {
+    "id": "EDGE-17",
+    "category": "EDGE CASES & TRICKY QUESTIONS",
+    "question": "What is lay evidence?"
+  },
+  {
+    "id": "EDGE-18",
+    "category": "EDGE CASES & TRICKY QUESTIONS",
+    "question": "Can family members provide statements?"
+  },
+  {
+    "id": "EDGE-19",
+    "category": "EDGE CASES & TRICKY QUESTIONS",
+    "question": "What if my C&P examiner was rude?"
+  },
+  {
+    "id": "EDGE-20",
+    "category": "EDGE CASES & TRICKY QUESTIONS",
+    "question": "Can I request a different C&P examiner?"
+  }
+]

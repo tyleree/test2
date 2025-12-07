@@ -23,11 +23,13 @@ QUESTIONS_FILE = Path(__file__).parent.parent / "qa_test_questions.txt"
 RESULTS_JSON = Path(__file__).parent.parent / "qa_test_results.json"
 RESULTS_MD = Path(__file__).parent.parent / "qa_test_results.md"
 
-# Rate limiting - keep minimal delay since IP is whitelisted
-DELAY_BETWEEN_REQUESTS = 0.3  # seconds - IP whitelisted so can be fast
+# Rate limiting - add delay to avoid hitting OpenAI TPM limits
+# With gpt-4.1-mini at 200K TPM and ~3K tokens/query, we can do ~66/min
+# Using 1.5s delay = 40 queries/min = safe margin under the limit
+DELAY_BETWEEN_REQUESTS = 1.5  # seconds - prevents rate limiting
 
 # Resume from specific question (0 = start from beginning)
-START_FROM_QUESTION = 29  # Resume from question 29 (1-indexed)
+START_FROM_QUESTION = 0  # Start from beginning
 
 # Create SSL context - use unverified for macOS compatibility
 # (The API is served over HTTPS from Render, a trusted provider)

@@ -2,7 +2,7 @@
 
 *This document has been processed for contextual retrieval with navigation elements and metadata removed.*
 
-*Total chunks: 1206 | Total words: 124,574*
+*Total chunks: 1475 | Total words: 182,407*
 
 ---
 
@@ -26449,4 +26449,6440 @@ For ongoing claims/appeals during a new schedule becoming active:
 Â© 2021-2025 Veterans Benefits Knowledge Base, all rights reserved.
 
 <!-- Chunk 1206/1206 | Heading: Something Broken? | Words: 17 -->
+
+
+
+---
+
+# New Content Added (December 2025)
+
+*Added from corpus markdown files with improved FAQ and legal reference preservation.*
+
+### FAQ: The IMO I submitted showed I should have gotten service connection. But the VA went with what their examiner wrote! I thought ties went to the Veteran!?
+
+*Also known as: nexus letter, nexus, IMO, independent medical opinion, medical nexus, nexus opinion*
+
+**Question:** The IMO I submitted showed I should have gotten service connection. But the VA went with what their examiner wrote! I thought ties went to the Veteran!?
+
+**Answer:** The tie principle is **NOT** applicable here. Because the two are not equal. If for instance the C&P examiner was more experienced, specialized, etc. Their opinion may have carried more weight than your IMO. However, you should have your claim reviewed by a VSO. So they may help guide your through the [Appeals](https://www.reddit.com/r/VeteransBenefits/wiki/appeals) process. Since the VA may not have properly considered your IMO.
+
+**Source:** [https://www.veteransbenefitskb.com/imo#faq](https://www.veteransbenefitskb.com/imo#faq)
+
+<!-- Chunk 1207/1358 | Topic: Independent Medical Opinion (IMO) / Nexus Letter - FAQ | Type: faq | Words: 93 -->
+
+---
+
+### FAQ: Why is it called an independent medical opinion when you told me to get one from my treating doctor?
+
+*Also known as: nexus letter, nexus, IMO, independent medical opinion, medical nexus, nexus opinion*
+
+**Question:** Why is it called an independent medical opinion when you told me to get one from my treating doctor?
+
+**Answer:** It is kind of a misnomer. It is independent with respect to the VBA. IE it is an opinion from someone not affiliated with the VBA.
+
+**Source:** [https://www.veteransbenefitskb.com/imo#faq](https://www.veteransbenefitskb.com/imo#faq)
+
+<!-- Chunk 1208/1358 | Topic: Independent Medical Opinion (IMO) / Nexus Letter - FAQ | Type: faq | Words: 47 -->
+
+---
+
+### FAQ: My private physician will not write an IMO. What can I do?
+
+*Also known as: nexus letter, nexus, IMO, independent medical opinion, medical nexus, nexus opinion*
+
+**Question:** My private physician will not write an IMO. What can I do?
+
+**Answer:** While it may be a matter of personal/professional policy for them, it may also be that want to be properly compensated for their work and time. As such, you should make it clear that you will compensate them appropriately. It will take them time to go through your records, do any relevant research, type up the opinion, etc. and physician time isn't cheap - this will cost you at least a thousand dollars, possibly quite a bit more.
+
+  - If they are still unwilling, you will then have to seek out another physician.
+
+**Source:** [https://www.veteransbenefitskb.com/imo#faq](https://www.veteransbenefitskb.com/imo#faq)
+
+<!-- Chunk 1209/1358 | Topic: Independent Medical Opinion (IMO) / Nexus Letter - FAQ | Type: faq | Words: 107 -->
+
+---
+
+### FAQ: VA ordered me an exam do I need to attend?
+
+*Also known as: nexus letter, nexus, IMO, independent medical opinion, medical nexus, nexus opinion*
+
+**Question:** VA ordered me an exam do I need to attend?
+
+**Answer:** It is a dice roll. If the VA finds issue with your evidence they can assign it low/no evidentiary value. But… if you think your paperwork is in order you can cancel the exam, just be aware it may not pan out in your favor.
+
+  - If you are denied for not attending the exam you may find filing a [Higher Level Review](https://www.veteransbenefitskb.com/appeals) appropriate.
+
+**Source:** [https://www.veteransbenefitskb.com/imo#faq](https://www.veteransbenefitskb.com/imo#faq)
+
+<!-- Chunk 1210/1358 | Topic: Independent Medical Opinion (IMO) / Nexus Letter - FAQ | Type: faq | Words: 76 -->
+
+---
+
+### FAQ: I live abroad, can a local medical professional provide an IMO?
+
+*Also known as: nexus letter, nexus, IMO, independent medical opinion, medical nexus, nexus opinion*
+
+**Question:** I live abroad, can a local medical professional provide an IMO?
+
+**Answer:** Sure thing! Just be sure they provide evidence of their licensing/credentials.
+
+- The IMO also does **NOT** have to be translated to English, but it would speed things up if it was.
+
+**Source:** [https://www.veteransbenefitskb.com/imo#faq](https://www.veteransbenefitskb.com/imo#faq)
+
+<!-- Chunk 1211/1358 | Topic: Independent Medical Opinion (IMO) / Nexus Letter - FAQ | Type: faq | Words: 45 -->
+
+---
+
+### FAQ: Does the letter need to be on an official letterhead?
+
+*Also known as: nexus letter, nexus, IMO, independent medical opinion, medical nexus, nexus opinion*
+
+**Question:** Does the letter need to be on an official letterhead?
+
+**Answer:** No, but it is generally a good idea as it would have their practice’s information and give it an increased air of authority _and_ authenticity.
+
+**Source:** [https://www.veteransbenefitskb.com/imo#faq](https://www.veteransbenefitskb.com/imo#faq)
+
+<!-- Chunk 1212/1358 | Topic: Independent Medical Opinion (IMO) / Nexus Letter - FAQ | Type: faq | Words: 37 -->
+
+---
+
+### References and Legal Citations
+
+*Also known as: nexus letter, nexus, IMO, independent medical opinion, medical nexus, nexus opinion*
+
+## **References**
+
+- [38 CFR § 3.328 - Independent medical opinions](https://www.law.cornell.edu/cfr/text/38/3.328)
+
+- [M21-1, Part IV, Subpart i, Chapter 3, Section A - General Criteria for Sufficiency of Examination Reports](https://www.knowva.ebenefits.va.gov/system/templates/selfservice/va_ssnew/help/customer/locale/en-US/portal/554400000001018/content/554400000180514)
+
+- [M21-1, Part IV, Subpart i, Chapter 3, Section B - Examination Sufficiency for Specific Disabilities](https://www.knowva.ebenefits.va.gov/system/templates/selfservice/va_ssnew/help/customer/locale/en-US/portal/554400000001018/content/554400000180516/M21-1-Part-IV-Subpart-i-Chapter-3-Section-B-Examination-Sufficiency-for-Specific-Disabilities)
+
+- [M21-1, Part IV, Subpart i, Chapter 3, Section C - Insufficient Examinations](https://www.knowva.ebenefits.va.gov/system/templates/selfservice/va_ssnew/help/customer/locale/en-US/portal/554400000001018/content/554400000180517/M21-1-Part-IV-Subpart-i-Chapter-3-Section-C-Insufficient-Examinations)
+
+**Source:** [https://www.veteransbenefitskb.com/imo#references](https://www.veteransbenefitskb.com/imo#references)
+
+<!-- Chunk 1213/1358 | Topic: Independent Medical Opinion (IMO) / Nexus Letter - Legal References | Type: references | Words: 58 -->
+
+---
+
+## Independent Medical Opinion (IMO) / Nexus Letter
+
+*Also known as: nexus letter, nexus, IMO, independent medical opinion, medical nexus, nexus opinion*
+
+# **Independent Medical Opinion (IMO) / Nexus Letter**
+
+
+[![](https://images.squarespace-cdn.com/content/v1/66c515a3e8305f0f79e8b680/bd22f10b-2167-4509-9215-2b49d4a4e22f/search3.png)](https://cse.google.com/cse?cx=8392d3f710df0427c)
+
+
+
+[\> Master Condition List](https://veteransbenefitskb.com/master)
+
+[\> Federal Benefits List by Combined Ratings](https://veteransbenefitskb.com/combinedbenefits)
+
+[\> Insider Insight into VBA Claim Processing](https://veteransbenefitskb.com/insight)
+
+[\> Rating Schedule Index](https://veteransbenefitskb.com/ratingsindex)
+
+[\> Filing a VA Disability Claim](https://veteransbenefitskb.com/vaclaim)
+
+[\> Filing an Appeal](https://veteransbenefitskb.com/appeals)
+
+* * *
+
+
+
+
+
+
+
+
+
+This hot little ticket is the key to turning your [Claim](https://veteransbenefitskb.com/vaclaim) or [Appeal](https://veteransbenefitskb.com/appeals) from a dud to a stud. It provides your claim with one of the key elements that all claims need to be successful. Which is a medical opinion that your disability is a result of your military service or an already service-connected disability.
+
+NOTE:
+
+- An IMO is **NOT** a DBQ and a DBQ is **NOT** an IMO! For more information about DBQs click [HERE](https://veteransbenefitskb.com/dbq).
+
+
+**IMPORTANT NOTES:**
+
+- An IMO is **NOT** required to be submitted by you for your claim or appeal to be successful, so please do **NOT** feel obligated to include one! This is more for Veterans who's claims may be more complex, be it due to time since separation, controversy, confounding factors, etc.
+
+- As an IMO is primarily a records review and the application of medical knowledge/expertise, it is **NOT** necessary for the Veteran to meet face to face with the doctor who prepares the IMO.
+
+
+* * *
+
+**Source:** [https://www.veteransbenefitskb.com/imo#independentmedicalopinionimonexusletter](https://www.veteransbenefitskb.com/imo#independentmedicalopinionimonexusletter)
+
+<!-- Chunk 1214/1358 | Topic: Independent Medical Opinion (IMO) / Nexus Letter | Type: claims_evidence | Words: 211 -->
+
+---
+
+## Who Should Write an IMO
+
+## **Who Should Write an IMO**
+
+For an IMO to have any weight it should be completed by a medical expert. The more experienced and specialized the expert, the better.
+
+This medical expert should be:
+
+Currently Board Certified in their field of study _and_ their expertise should be relevant to the Veteran's focus. For example:
+
+- Audiologist - [Hearing loss](https://veteransbenefitskb.com/ears#6100) or [Tinnitus](https://veteransbenefitskb.com/ears#6260).
+
+- Cancers - an oncologist.
+
+- Disabilities relating to old bone injuries - an orthopedic surgeon.
+
+- [Traumatic Brain Injuries](https://veteransbenefitskb.com/tbi):
+
+  - Psychiatrists;
+
+  - Physiatrists;
+
+  - Neurologists; _or_
+
+  - Neurosurgeons.
+- [Mental health](https://veteransbenefitskb.com/mental):
+
+  - Board-certified or board-eligible psychiatrists;
+
+  - Licensed doctorate-level psychologists; **OR**
+
+One of the following _other_ mental health professionals, under the **CLOSE** supervision of a board-certified or board-eligible psychiatrist or licensed doctorate-level psychologist:
+
+- Doctorate-level mental health providers
+
+- Psychiatry residents; and
+
+- Clinical/Counseling psychologists completing a one-year internship or residency.
+
+
+NOTE:
+
+- “Close supervision” means that the supervising psychiatrist or psychologist met with the Veteran and conferred with the examining mental health professional in providing the diagnosis and the final assessment. The supervising psychiatrist or psychologist must co-sign the examination report.
+
+
+**SPECIAL NOTE:**
+
+- For PTSD, the examining psychiatrist or psychologist _should_ comment on whether the Veteran has experienced other traumatic events and, if so, indicate the relevance of these events to the current symptoms.
+
+**Source:** [https://www.veteransbenefitskb.com/imo#whoshouldwriteanimo](https://www.veteransbenefitskb.com/imo#whoshouldwriteanimo)
+
+<!-- Chunk 1215/1358 | Topic: Who Should Write an IMO | Type: claims_evidence | Words: 219 -->
+
+---
+
+## Where to get an IMO
+
+## **Where to get an IMO**
+
+Ideally, you should get your treating physician to prepare it for you.
+
+Unfortunately, if your treating physician is from the VA, you are kinda out of luck. The Veteran Health Administration (VHA) is primary concerned with treating Veterans. And as such, helping Veterans with their claims is generally outside of the scope of their job.
+
+Your VA Physician is _permitted_ but not _required_ to assist you with an IMO, and many would rather focus their efforts on treatment.
+
+So you may have to search out a private physician.
+
+**IMPORTANT NOTE:**
+
+- **PLEASE DO NOT GO ONLINE AND USE SOME SITE THAT PEDDLES IMOs and DBQS!** You'd be best served going through your own treating physician or someone else who is local.
+
+**Source:** [https://www.veteransbenefitskb.com/imo#wheretogetanimo](https://www.veteransbenefitskb.com/imo#wheretogetanimo)
+
+<!-- Chunk 1216/1358 | Topic: Where to get an IMO | Type: claims_evidence | Words: 127 -->
+
+---
+
+## Important Things an IMO Should Include
+
+## **Important Things an IMO Should Include**
+
+Here are a few things that your physician should be sure to include in their IMO:
+
+- Letter should only be the length needed. It should be direct and stick to the facts.
+
+- Statement that the physician has reviewed all of the Veteran's relevant/available pre/post medical records as well as of course the Veteran's military medical records.
+
+  - If there are things in your records which detract from a favorable opinion (other things could _also_ cause your condition), these things **SHOULD** be discussed! Why? Because it shows consideration was given to the entirety of the record. To _not_ show consideration shows a lack of attention to detail - which a rater **CAN** use to assign their opinion _lower_ weight!
+- A rationale which explains why the condition is related to the Veteran’s service/service-connected disability.
+
+  - This rationale **MUST** be supported by the evidence of record and have appropriate supporting medical proofs/studies.
+
+  - The rationale _should_ be in reference to a specific diagnosis. Giving an vague opinion on a non-specific condition is a **GREAT** way to get a rater to assign the opinion little to no weight! As failure to provide a diagnosis indicates your medical evidence has not been reviewed or that you have not been properly examined by them.
+
+  - This rationale _should_ also be specific and avoid the use of wide-sweeping generalizations without reference to specific events or duties.
+
+    - Vague statements of “duties” or “hardships” should be avoided; instead expressly state what those duties and hardships were. And then explain how they caused X condition.
+- Statement regarding their opinion\* as to if the Veteran's current disability is service-connected/or related to a Veteran's service-connected disability.
+
+
+\*This statement does **NOT** need to be absolute, as it can be really hard to be absolute with the origin of things.
+
+The language the VA uses and understands regarding statements of service-connection are as follows:
+
+- Is not related: 0% chance disability is service-connected.
+
+- Less likely than not: Less than 50% chance disability is service-connected.
+
+- As likely as not: 50% chance disability is service-connected.
+
+- More likely than not: More than a 50% chance disability is service-connected.
+
+- Is related: 100% chance disability is service-connected.
+
+
+**IMPORTANT NOTES:**
+
+- If your IMO is countering a prior negative opinion, the IMO _should_ also address why the VA examiner is wrong or why your argument is stronger. This will add more weight to the IMO - as it shows a deeper consideration of the medical evidence.
+
+- For VA purposes, if the likelihood is at least 50% then the VA considers it a **POSITIVE** opinion for the purposes of establishing service-connection!
+
+- Statements like “may have”, “possibly caused”, or “could have” do not fit into the above framework and are **NOT** considered favorable!
+
+**Source:** [https://www.veteransbenefitskb.com/imo#importantthingsanimoshouldinclude](https://www.veteransbenefitskb.com/imo#importantthingsanimoshouldinclude)
+
+<!-- Chunk 1217/1358 | Topic: Important Things an IMO Should Include | Type: claims_evidence | Words: 469 -->
+
+---
+
+## Nexus Letter Example
+
+## **Nexus Letter Example**
+
+Here is an example that you can show your doctor to give them more of an idea of what you are looking for:
+
+Date \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+Reference: \_\_\_\_\_\_\_\_\_ _(Veteran's name)_
+
+To Whom It May Concern,
+
+I am Dr. \_\_\_\_\_\_\_\_\_, I am medically licensed and board certified in my specialty of \_\_\_\_\_\_\_\_\_\_ in the state of \_\_\_\_\_\_\_\_. My credentials are included below. I have been asked to write a statement in support of the aforementioned Veteran's disability claim.
+
+MS/MR/MRS. \_\_\_\_\_\_\_\_ is a patient under my care since _(Date)_.
+
+I am familiar with their medical history and have personally examined MS/MR/MRS \_\_\_\_\_\_\_\_\_. Their diagnosis is \_\_\_\_\_\_\_\_\_\_\_ _(Name the condition and specify lab work, X-rays, etc. used to make this diagnosis determination)_
+
+I have personally reviewed their medical history _(Service Treatment Records, VA Medical Records, Private Medical Records From X, Y, etc)._ I have also reviewed and have noted the circumstances and events of their military service in the years \_\_\_\_\_\_\_\_\_\_\_\_ _(Event or Events stated as the cause of the condition)_ while they served during their military service in the \_\_\_\_\_\_\_\_ _(Branch and dates of service)._
+
+MS/MR/MRS. \_\_\_\_\_\_\_\_ has no other known risk factors that may have precipitated their current condition. \[ **_IF_** Veteran has risk factors state them and explain why you find they are less likely the cause of the diagnosed condition\]
+
+After a review of the pertinent records it is in my professional opinion that it is at least as likely as not that MS/MR/MRS. \_\_\_\_\_\_\_\_'s \_\_\_\_\_\_ (Condition) is a direct result of their \_\_\_\_\_\_\_ _(Event)_ as due to their military service. **_OR_** secondary to their service-connected \_\_\_\_\_\_ (Condition(s)).
+
+In my personal experience and in the medical literature it is known \_\_\_\_\_\_ _(Provide a rationale_ **_AND_** _references to medical literature)_.
+
+Signed,
+
+Dr. \_\_\_\_\_\_
+
+_(List credentials and contact information)_
+
+**Source:** [https://www.veteransbenefitskb.com/imo#nexusletterexample](https://www.veteransbenefitskb.com/imo#nexusletterexample)
+
+<!-- Chunk 1218/1358 | Topic: Nexus Letter Example | Type: claims_evidence | Words: 301 -->
+
+---
+
+## Final Words
+
+## **Final Words**
+
+Let there be no confusion here. Please do **NOT** go IMO shopping!
+
+If the physician determines that your disability is _less likely than not_ due to your military service/service-connected disability then you should generally accept this. If you do disagree with them you are of course free to get a second opinion - just don't keep trying to find the one doc that will go along with you.
+
+**Source:** [https://www.veteransbenefitskb.com/imo#finalwords](https://www.veteransbenefitskb.com/imo#finalwords)
+
+<!-- Chunk 1219/1358 | Topic: Final Words | Type: claims_evidence | Words: 71 -->
+
+---
+
+### References and Legal Citations
+
+*Also known as: aggravation, aggravated condition, pre-existing condition, preexisting*
+
+## **References**
+
+- [38 CFR § 3.303 Principles relating to service connection](https://www.law.cornell.edu/cfr/text/38/3.303)
+
+- [38 CFR § 3.304 Direct service connection; wartime and peacetime](https://www.law.cornell.edu/cfr/text/38/3.304)
+
+- [38 CFR § 3.306 Aggravation of preservice disability](https://www.law.cornell.edu/cfr/text/38/3.306)
+
+- [38 CFR § 3.310 Disabilities that are proximately due to, or aggravated by, service-connected disease or injury](https://www.law.cornell.edu/cfr/text/38/3.310)
+
+- [38 CFR § 3.322 Rating of disabilities aggravated by service](https://www.law.cornell.edu/cfr/text/38/3.322)
+
+- [38 CFR § 4.22 Rating of disabilities aggravated by active service](https://www.law.cornell.edu/cfr/text/38/4.22)
+
+- [38 U.S. Code § 1111 - Presumption of sound condition](https://www.law.cornell.edu/uscode/text/38/1111)
+
+- [38 U.S. Code § 1153 - Aggravation](https://www.law.cornell.edu/uscode/text/38/1153)
+
+- [M21-1, Part V, Subpart ii, Chapter 2, Section C - In-Service Aggravation of a Pre-Service Disability](https://www.knowva.ebenefits.va.gov/system/templates/selfservice/va_ssnew/help/customer/locale/en-US/portal/554400000001018/content/554400000180483/M21-1-Part-V-Subpart-ii-Chapter-2-Section-C-In-Service-Aggravation-of-a-Pre-Service-Disability)
+
+- [M21-1, Part V, Subpart ii, Chapter 2, Section D - Secondary Service Connection (SC) and Aggravation of Non-Service-Connected (NSC) Disabilities](https://www.knowva.ebenefits.va.gov/system/templates/selfservice/va_ssnew/help/customer/locale/en-US/portal/554400000001018/content/554400000180484/M21-1-Part-V-Subpart-ii-Chapter-2-Section-D-Secondary-Service-Connection-SC-and-Aggravation-of-Non-Service-Connected-NSC-Disabilities)
+
+**Source:** [https://www.veteransbenefitskb.com/agg#references](https://www.veteransbenefitskb.com/agg#references)
+
+<!-- Chunk 1220/1358 | Topic: Service-Connection by Aggravation - Legal References | Type: references | Words: 130 -->
+
+---
+
+## Service-Connection by Aggravation
+
+*Also known as: aggravation, aggravated condition, pre-existing condition, preexisting*
+
+# **Service-Connection by Aggravation**
+
+
+[![](https://images.squarespace-cdn.com/content/v1/66c515a3e8305f0f79e8b680/bd22f10b-2167-4509-9215-2b49d4a4e22f/search3.png)](https://cse.google.com/cse?cx=8392d3f710df0427c)
+
+
+
+[\> Master Condition List](https://veteransbenefitskb.com/master)
+
+[\> Federal Benefits List by Combined Ratings](https://veteransbenefitskb.com/combinedbenefits)
+
+[\> Insider Insight into VBA Claim Processing](https://veteransbenefitskb.com/insight)
+
+[\> Rating Schedule Index](https://veteransbenefitskb.com/ratingsindex)
+
+[\> Filing a VA Disability Claim](https://veteransbenefitskb.com/vaclaim)
+
+[\> Filing an Appeal](https://veteransbenefitskb.com/appeals)
+
+* * *
+
+
+
+
+
+
+
+
+
+There are two flavors of service-connection by aggravation:
+
+1. Aggravation of a preexisting (pre-service) condition by military service; and
+
+2. Aggravation of a existing (post-service) by a service-connected condition.
+
+
+Unlike the other forms of service-connection, aggravation has an extra layer of complication in determining your rating.
+
+* * *
+
+**Source:** [https://www.veteransbenefitskb.com/agg#serviceconnectionbyaggravation](https://www.veteransbenefitskb.com/agg#serviceconnectionbyaggravation)
+
+<!-- Chunk 1221/1358 | Topic: Service-Connection by Aggravation | Type: claims_evidence | Words: 89 -->
+
+---
+
+## Aggravation of a Preexisting (Pre-service) Condition
+
+## **Aggravation of a Preexisting (Pre-service) Condition**
+
+When your military service worsens a preexisting condition
+
+Before you joined the military you underwent a physical examination at a Military Entrance Processing Station (MEPS). During this examination any preexisting issues is recorded. Anything **NOT** recorded during that examination, the VA is instructed to 'presume soundness' - that is, if nothing is recorded that the Veteran came in with nothing wrong!
+
+Now with that said, there are _exceptions_:
+
+- If a _chronic_ condition is diagnosed shortly after service starts, **AND** it could be medically concluded ( _more likely than not_) that this condition existed before service - the VA will just **NOT** assume the condition just popped up during service.
+
+  - This said, it is _still_ possible to get service-connection!
+- If medical evidence shows a condition existed prior to service.
+
+  - Examples include: medical records dated **BEFORE** service or x-rays done in service that show well healed preexisting bone fractures.
+
+**IMPORTANT NOTES:**
+
+- Statements from the Veteran themselves _or_ others that a condition existed **BEFORE** service hold **ZERO WEIGHT**! **UNLESS**, there is medical evidence that backs up those statements!
+
+- If DoD **LOST** your entrance physical paperwork, the VA is to assume you entered into service with no issues (barring the previously mentioned exceptions).
+
+- Periods of [IADT](https://veteransbenefitskb.com/ngr) service; which did **NOT** have an entrance physical conducted prior to the period of service do **NOT** carry this presumption of soundness!
+
+
+* * *
+
+### Setting Up Consideration
+
+```
+So medical records indicated that a condition existed before service:
+```
+
+In order for the VA to consider a condition under aggravation of a preexisting (pre-service) condition the VA must establish two things:
+
+1. What the level of severity\* was **BEFORE** service; and
+
+2. What the level of severity was **DURING/AFTER** service.
+
+
+\*severity for VA purposes is as established by the [Rating schedule](https://veteransbenefitskb.com/ratingsindex).
+
+For number one, in _most_ cases (unless you say got a medical waiver), your severity before service will be established as 0%.
+
+Now number two, is where things get tricky for a lot of Veterans...
+
+The VA **NEEDS** proof that your service made your condition worse! If there are **NO** complaints _or_ treatment made in service for the preexisting condition - [You Lose! Good day sir!](https://www.youtube.com/watch?v=fpK36FZmTFY) For the most part...
+
+- _However_, there is _still_ some hope! You can submit [Buddy statements](https://veteransbenefitskb.com/buddy) in support of your claim! Alternatively, if the source of your aggravation is related to combat then you do **NOT** need documentation! You just need to submit a [Personal statement](https://veteransbenefitskb.com/personal) explaining how the injury that aggravated your condition occurred.
+
+- Additionally, if your aggravation occurred as a result of a specialized skill IE parachutist. You can state as much, as it is fairly well established that taking hard landings can mess stuff up.
+
+
+* * *
+
+### Making a Decision
+
+The VA now armed with elements one and two - can now get a medical opinion on aggravation.
+
+The VA will now ask a medical professional to provide a medical opinion as to if your military service _permanently_ worsened your preexisting condition at least as likely as not beyond it's natural progression.
+
+If the opinion is favorable then you are good to go.
+
+**Source:** [https://www.veteransbenefitskb.com/agg#aggravationofapreexistingpreservicecondition](https://www.veteransbenefitskb.com/agg#aggravationofapreexistingpreservicecondition)
+
+<!-- Chunk 1222/1358 | Topic: Aggravation of a Preexisting (Pre-service) Condition | Type: claims_evidence | Words: 534 -->
+
+---
+
+## Aggravation of an Existing (Post-service) Condition
+
+## **Aggravation of an Existing (Post-service) Condition**
+
+If your service-connected condition (or a condition that eventually becomes service-connected) aggravates an existing condition it can be service-connected.
+
+* * *
+
+### Setting Up Consideration
+
+In order for the VA to consider a condition under aggravation of an existing (post-service) condition the VA must establish two things:
+
+1. What the level of severity\* was **BEFORE** aggravation; and
+
+2. What the level of severity was **AFTER** aggravation.
+
+
+\*severity for VA purposes is as established by the [Rating schedule](https://veteransbenefitskb.com/ratingsindex).
+
+It is **REQUIRED** that you supply medical evidence to the VA that shows the level of severity of the condition **BEFORE** aggravation, **OR** as soon as possible after aggravation, _but_ before the date of receipt of the evidence establishing the _current_ level of severity of the aggravated condition.
+
+- In short - if you do not show the VA how much your service-connected condition aggravated a condition, you **CANNOT** get service-connection!
+
+
+* * *
+
+### Making a Decision
+
+The VA now armed with elements one and two - can now get a medical opinion on aggravation.
+
+The VA will now ask a medical professional to provide a medical opinion as to if your service-connected condition worsened your existing condition at least as likely as not beyond it's natural progression.
+
+If the opinion is favorable then you are good to go.
+
+**Source:** [https://www.veteransbenefitskb.com/agg#aggravationofanexistingpostservicecondition](https://www.veteransbenefitskb.com/agg#aggravationofanexistingpostservicecondition)
+
+<!-- Chunk 1223/1358 | Topic: Aggravation of an Existing (Post-service) Condition | Type: claims_evidence | Words: 225 -->
+
+---
+
+## Rating Aggravated Conditions
+
+## **Rating Aggravated Conditions**
+
+Rating service-connected aggravated conditions has an additional layer of complication. Instead of the traditional assigning a rating based upon the rating schedule, aggravated conditions involve some subtraction:
+
+> ```
+>  Current severity - preexisting condition severity = aggravated rating
+> ```
+
+**IMPORTANT NOTES:**
+
+- If the preexisting (pre-service) condition would rate 100% severity, the final aggravated rating **WILL BE** 100%!
+
+  - This does **NOT** apply to aggravations of conditions **AFTER** separation!
+- If the VA cannot determine the severity of a _preexisting (pre-service)_ condition, the VA will assume the severity was 0%.
+
+
+* * *
+
+### Examples Preexisting (Pre-Service)
+
+| Current Severity | Preexisting Severity | Aggravated Rating |
+| --- | --- | --- |
+| 0% | -0% | =0% |
+| 30% | -30% | =0% |
+| 50% | -10% | =40% |
+| 70% | -50% | =20% |
+| 100% | -100% | = **100%** |
+
+* * *
+
+### Examples Existing (Post-Service)
+
+| Current Severity | Preexisting Severity | Aggravated Rating |
+| --- | --- | --- |
+| 0% | -0% | =0% |
+| 30% | -30% | =0% |
+| 50% | -10% | =40% |
+| 70% | -50% | =20% |
+| 100% | -100% | =0% |
+
+**Source:** [https://www.veteransbenefitskb.com/agg#ratingaggravatedconditions](https://www.veteransbenefitskb.com/agg#ratingaggravatedconditions)
+
+<!-- Chunk 1224/1358 | Topic: Rating Aggravated Conditions | Type: claims_evidence | Words: 215 -->
+
+---
+
+## Bilateral Factor
+
+*Also known as: bilateral factor, bilateral, VA math bilateral, paired extremities*
+
+## **Bilateral Factor**
+
+Bilatteral source to include: https://www.veteransbenefitskb.com/vamath#bilateral
+
+Just when you thought VA math couldn't get more complicated!
+
+If a Veteran has a rated condition (more than 0%) that affects **BOTH** the left and right sides of the **SAME** extremity half. Either upper (above the waist) or lower extremity (below the waist) then a bilateral factor is added to the VA math.
+
+In short the bilateral conditions are given the VA math treatment and then an additional 10% is added. That number is then added back into consideration with the rest of the ratings.
+
+* * *
+
+### Bilateral Case Examples
+
+
+In the above image, you see the upper extremity half shown in a lighter shade and the lower extremity half shown in a darker shade of color.
+
+| Example Ratings | Supporting Image | Factor (Yes/No) | Explanation |
+| --- | --- | --- | --- |
+| 10% each for the following disabilities: Left knee, right shoulder, and tinnitus. | ![](https://images.squarespace-cdn.com/content/v1/66c515a3e8305f0f79e8b680/9d51af93-0e7c-47a4-836f-6d09bdf338ae/bi1.png) | No | Their are no disabilities that affect **BOTH** the left and right sides of the same extremity half. |
+| 0% right ankle and 10% each for the following disabilities: Left knee, left ankle. | ![](https://images.squarespace-cdn.com/content/v1/66c515a3e8305f0f79e8b680/d801c0ce-75a7-44cb-b7dd-d7e844cae28c/bi2.png) | No | While there are disabilities that affect both the left and right sides of the same extremity half, they **BOTH** need to be to a compensational degree (at least 10%). |
+| 10% each for the following disabilities: Left knee, right ankle, right hip, and right elbow. | ![](https://images.squarespace-cdn.com/content/v1/66c515a3e8305f0f79e8b680/b42378c7-0fd8-4d13-8e75-666497ad472a/bi3.png) | Yes/No | The factor is applied to the left knee, right ankle ratings, as well as the right hip. As the right hip falls under the lower extremity. However, the right elbow would **NOT** get the factor as the upper extremity is **NOT** affected on the left side. If it was, then they would get the factor as well. |
+
+**IMPORTANT NOTES:**
+
+- The Veteran does **NOT** need the same mirrored disability on both sides in order for the bilateral factor to apply! VA disability ratings look at whether an upper extremity (such as the shoulder, arm, or hand), or a lower extremity (such as the hip, knee, or foot) are affected by disabilities that affect both sides.
+
+- Effective April 16, 2023, in the rare circumstances in which the bilateral factor results in the combined disability evaluation being rounded down such as from 95 to 94%. The VA will _automatically_ disable the factor of a condition, so the end result is that the combined evaluation will be 100%!
+
+  - Veterans who were impacted by this change _should_ have been automatically reviewed and if appropriate been awarded [Dependents Educational Assistance (DEA)](https://www.veteransbenefitskb.com/survivorbenefits#dea).
+
+* * *
+
+### Applying the Factor
+
+The bilateral factor will be applied to such bilateral disabilities before other combinations are carried out and the rating for such disabilities including the bilateral factor in this section will be treated as one disability for the purpose of arranging in order of severity and for all further combinations.
+
+For example, with disabilities evaluated at 60%, 20%, 10% and 10% (the two 10's representing bilateral disabilities), the order of severity would be 60, 21 and 20. The 60 and 21 combine to 68 and the 68 and 20 to give you 74, rounding down to 70% as the final degree of disability.
+
+**IMPORTANT NOTES:**
+
+- [Painful/unstable scars](https://veteransbenefitskb.com/skin#7804) are **NOT** eligible for bilateral consideration.
+
+- [Deep](https://veteransbenefitskb.com/skin#7801) and [Superficial scars](https://veteransbenefitskb.com/skin#7802) **ARE** eligible for bilateral consideration so long as the ratings are **NOT**:
+
+  - Based on whole-body involvement; or
+
+  - Specific to the [Head, face, and/or neck](https://veteransbenefitskb.com/skin#7800).
+- [Hearing](https://veteransbenefitskb.com/ears) and [Eye](https://veteransbenefitskb.com/eyes) disabilities are **NOT** eligible for bilateral consideration.
+
+- [Cranial nerve](https://veteransbenefitskb.com/cranialnerves) conditions are **NOT** eligible for bilateral consideration.
+
+- [Fingers](https://veteransbenefitskb.com/hands) **ARE** eligible for bilateral consideration.
+
+- [Blood flow](https://www.veteransbenefitskb.com/bloodtubes) conditions involving extremities (such as varicose veins) **ARE** eligible for bilateral consideration.
+
+- [Feet](https://veteransbenefitskb.com/foot) disabilities that have "bilateral" in the name and bilateral [Shin splints](https://veteransbenefitskb.com/kneeleg#5262) do **NOT** automatically qualify for the bilateral factor ( **IF** they are the only bilateral eligible condition of that extremity!). **HOWEVER**, if there is another separate disability eligible for bilateral factor that affects the lower extremity - the other disability **AND** the bilateral named condition **WILL** _both_ get the bilateral factor!
+
+  - Bilateral pes planus rated at least 10% alone would **NOT** get the factor.
+
+  - Bilateral pes planus and a right ankle condition both rated at least 10% would **BOTH** get the factor.
+- To tell which conditions have an active bilateral factor, you would need to look at your codesheet.
+
+  - Click [Here](https://www.veteransbenefitskb.com/cfile) to learn how to request your codesheet.
+
+
+* * *
+
+#### VA Math Bilateral Factors Example One
+
+Lets look back to Jeff and say instead of a 40% back rating he has a right knee rating of 10%.
+
+| Jeff's Ratings | [Combined Ratings Table](https://veteransbenefitskb.com/vamath#combined) | Jeff's Combined Total Rating (Starts at 0%) |
+| --- | --- | --- |
+| Left knee = 30% |  | 30% |
+| Right knee = 10% | Row:30 Col:10 | 37% |
+| Bilateral Factor (Add 10%) |  | 7% + 3.7% = 41% (The 3.7% is obtained from taking 10% of 37%. Remember to round to the nearest whole number as well) |
+|  |  |  |
+| Bilateral Conditions 41% |  | 41% |
+| Left shoulder = 20% | Row:41 Col:20 | 53% |
+| Left wrist = 10% | Row:53 Col:10 | 58% |
+
+Jeff's Combined Rating rounds up to 60%.
+
+* * *
+
+#### VA Math Bilateral Factors Example Two
+
+Now let's figure out Smith's combined rating. Smith has a several of bilateral and normal conditions: 70% mental health, 40% right shoulder, 20% left ankle, 20% right ankle, 10% right hip, 10% left foot, 10% high blood pressure, and 10% bilateral hearing loss.
+
+| Smith's Ratings | [Combined Ratings Table](https://veteransbenefitskb.com/vamath#combined) | Smith's Combined Total Rating (Starts at 0%) |
+| --- | --- | --- |
+| Left ankle = 20% |  | 20% |
+| Right ankle = 20% | Row:20 Col:20 | 36% |
+| Right hip = 10% | Row:36 Col:10 | 42% |
+| Left foot = 10% | Row:42 Col:10 | 48% |
+| Bilateral Factor (Add 10%) |  | 48% + 4.8% = 53% (The 4.8% is obtained from taking 10% of 48%. Remember to round to the nearest whole number as well) |
+|  |  |  |
+| Bilateral Conditions 53% |  | 53% |
+| Mental health = 70% | Row:53 Col:70 | 86% |
+| Right shoulder = 40% | Row:86 Col:40 | 92% |
+| Bilateral hearing loss = 10% | Row:92 Col:10 | 93% |
+| High blood pressure = 10% | Row:93 Col:10 | 94% |
+
+Smith's Combined Rating rounds down to 94%.
+
+**CLARIFICATION NOTE:**
+
+- Yes, even if the bilateral factor _is lower_ than the first non-bilateral condition it is combined first!
+
+**Source:** [https://www.veteransbenefitskb.com/vamath#bilateral#bilateralfactor](https://www.veteransbenefitskb.com/vamath#bilateral#bilateralfactor)
+
+<!-- Chunk 1225/1358 | Topic: Bilateral Factor | Type: rating_calculation | Words: 1146 -->
+
+---
+
+### FAQ: The link does not work I got an ERROR!
+
+*Also known as: static rating, dynamic rating, static condition, permanent rating, static_ind*
+
+**Question:** The link does not work I got an ERROR!
+
+**Answer:** If you got an “{"errors":\[{"title":"Not found","detail":"There are no routes matching your request: v0/rated\_disabilties","code":"411","status":"404"}\]}” error message
+
+  - That likely means your login timed out on va.gov and/or your closed the tab that held your va.gov log in.
+
+  - Alternatively, those using an IOS device (Apple) try using the Safari browser (see the compass icon on the bottom right of your screen).
+
+**Source:** [https://www.veteransbenefitskb.com/static-check#faq](https://www.veteransbenefitskb.com/static-check#faq)
+
+<!-- Chunk 1226/1358 | Topic: Static vs Dynamic Ratings - FAQ | Type: faq | Words: 71 -->
+
+---
+
+### FAQ: I just cannot get it to work?
+
+*Also known as: static rating, dynamic rating, static condition, permanent rating, static_ind*
+
+**Question:** I just cannot get it to work?
+
+**Answer:** If you are unable to check online:
+
+  - You can request your C-File which will contain your code sheet. The code sheet will list all the conditions and whether the conditions are static or not.
+
+  - Your [VSO](https://www.veteransbenefitskb.com/vso) also may be able to obtain your code sheet for you.
+
+  - If you are exceptionally lucky the VA’s 1-800 people may also tell you.
+
+**Source:** [https://www.veteransbenefitskb.com/static-check#faq](https://www.veteransbenefitskb.com/static-check#faq)
+
+<!-- Chunk 1227/1358 | Topic: Static vs Dynamic Ratings - FAQ | Type: faq | Words: 72 -->
+
+---
+
+### FAQ: Some of my denied issues are not marked static?
+
+*Also known as: static rating, dynamic rating, static condition, permanent rating, static_ind*
+
+**Question:** Some of my denied issues are not marked static?
+
+**Answer:** Most raters are not going to take their time to mark denied issues as static since it just doesn’t matter.
+
+  - If it is not marked static it is not like VA is going to reevaluate it… as well… it is not considered related to service. So there would be no point in it.
+
+**Source:** [https://www.veteransbenefitskb.com/static-check#faq](https://www.veteransbenefitskb.com/static-check#faq)
+
+<!-- Chunk 1228/1358 | Topic: Static vs Dynamic Ratings - FAQ | Type: faq | Words: 65 -->
+
+---
+
+### FAQ: Huh? I am permanent and total but I have service-connected conditions not marked as static?
+
+*Also known as: static rating, dynamic rating, static condition, permanent rating, static_ind*
+
+**Question:** Huh? I am permanent and total but I have service-connected conditions not marked as static?
+
+**Answer:** One of three things could be happening here:
+
+1. 1\. You are permanent and total without the non-static condition(s);
+
+2. 2\. When VA migrated files from mostly paper to digital - some conditions were not properly marked as static when they are in-fact static; _or_
+
+3. 3\. The rater made a Clear and Unmistakable Error (CUE). Generally, the next rater who gets the file will make appropriate corrections/proposals.
+
+  - In any case, there is not anything you need to do.
+
+**Source:** [https://www.veteransbenefitskb.com/static-check#faq](https://www.veteransbenefitskb.com/static-check#faq)
+
+<!-- Chunk 1229/1358 | Topic: Static vs Dynamic Ratings - FAQ | Type: faq | Words: 97 -->
+
+---
+
+### FAQ: I tripled checked the VA math and the condition(s) that make up my 100% evaluation are static but I was not awarded permanent and total?
+
+*Also known as: static rating, dynamic rating, static condition, permanent rating, static_ind*
+
+**Question:** I tripled checked the VA math and the condition(s) that make up my 100% evaluation are static but I was not awarded permanent and total?
+
+**Answer:** While uncommon, sometimes raters overlook a grant of P&T. Whenever you are 100% combined and your conditions _are_ static, but P&T was **NOT** awarded, the VA will _automatically_ establish an audit (usually within 2 weeks of the rating decision). These audits are conducted by a human who will then give you a grant of P&T, assuming there are no other issues at play.
+
+- If no audit was ever started, you can:
+
+  - Make a [VERA appointment](https://www.veteransbenefitskb.com/vera) and ask if they could have their coach (supervisor) make an EP930 to control for the missed issue of entitlement to depent’s educational assistance;
+
+  - If within a year of **ANY** rating decision; filing a [Higher Level Review (HLR)](https://www.veteransbenefitskb.com/appeals) and cite “Missed issue of dependents’ educational assistance; **_OR_**
+
+  - [File a claim](https://www.veteransbenefitskb.com/vaclaim) for “Entitlement to Dependent’s Educational Assistance, due to being permanent and total”.
+
+  - A rater will review your file and grant if appropriate.
+
+**Source:** [https://www.veteransbenefitskb.com/static-check#faq](https://www.veteransbenefitskb.com/static-check#faq)
+
+<!-- Chunk 1230/1358 | Topic: Static vs Dynamic Ratings - FAQ | Type: faq | Words: 179 -->
+
+---
+
+## Static vs Dynamic Ratings
+
+*Also known as: static rating, dynamic rating, static condition, permanent rating, static_ind*
+
+# **Finding Which Conditions are Static (Online)**
+
+[![](https://images.squarespace-cdn.com/content/v1/66c515a3e8305f0f79e8b680/bd22f10b-2167-4509-9215-2b49d4a4e22f/search3.png)](https://cse.google.com/cse?cx=8392d3f710df0427c)
+
+
+
+[\> Master Condition List](https://veteransbenefitskb.com/master)
+
+[\> Federal Benefits List by Combined Ratings](https://veteransbenefitskb.com/combinedbenefits)
+
+[\> Insider Insight into VBA Claim Processing](https://veteransbenefitskb.com/insight)
+
+[\> Rating Schedule Index](https://veteransbenefitskb.com/ratingsindex)
+
+[\> Filing a VA Disability Claim](https://veteransbenefitskb.com/vaclaim)
+
+[\> Filing an Appeal](https://veteransbenefitskb.com/appeals)
+
+* * *
+
+
+
+
+
+
+
+
+
+You do **NOT** have to wait months for your [C-file](https://www.veteransbenefitskb.com/cfile), fight with a [VSO](https://www.veteransbenefitskb.com/vso), or the 1-800 number people to find out what conditions of yours are static ( **NOT** subject to [Regular Future Evaluations](https://www.veteransbenefitskb.com/mandatory))! As a bonus, this method will also show what [Diagnostic Code](https://www.veteransbenefitskb.com/diagnosticcodes) the condition was rated/considered under.
+
+* * *
+
+**Source:** [https://www.veteransbenefitskb.com/static-check#staticvsdynamicratings](https://www.veteransbenefitskb.com/static-check#staticvsdynamicratings)
+
+<!-- Chunk 1231/1358 | Topic: Static vs Dynamic Ratings | Type: rating_info | Words: 97 -->
+
+---
+
+## Steps to Find Out What Conditions Are Static
+
+## **Steps to Find Out What Conditions Are Static**
+
+1. Log into [Va.gov](https://www.va.gov/).
+
+2. In a **_NEW TAB_** go to: [https://api.va.gov/v0/rated\_disabilities](https://api.va.gov/v0/rated_disabilities)
+
+3. The lines which read “static\_ind” show if the condition is static or not.
+
+   - true means the condition is static.
+
+   - false means the condition is **NOT** static.
+
+For those who use the Chrome browser, be sure to select “Pretty-print” at the top left of your window to make things readable.
+
+**Source:** [https://www.veteransbenefitskb.com/static-check#stepstofindoutwhatconditionsarestatic](https://www.veteransbenefitskb.com/static-check#stepstofindoutwhatconditionsarestatic)
+
+<!-- Chunk 1232/1358 | Topic: Steps to Find Out What Conditions Are Static | Type: rating_info | Words: 73 -->
+
+---
+
+### FAQ: How do I check the status of my appeal?
+
+*Also known as: appeal, NOD, notice of disagreement, HLR, higher level review, supplemental claim, BVA, board appeal*
+
+**Question:** How do I check the status of my appeal?
+
+**Answer:** You can check the status of your appeals on [VA.gov](http://va.gov/), by calling 1 (800) 827-1000, or making a [VERA appointment](https://veteransbenefitskb.com/vera).
+
+**Source:** [https://www.veteransbenefitskb.com/appeals#faq](https://www.veteransbenefitskb.com/appeals#faq)
+
+<!-- Chunk 1233/1358 | Topic: Filing an Appeal - FAQ | Type: faq | Words: 31 -->
+
+---
+
+### FAQ: I filed my HLR/Supplemental claim via QuickSubmit and it has not shown up online yet?
+
+*Also known as: appeal, NOD, notice of disagreement, HLR, higher level review, supplemental claim, BVA, board appeal*
+
+**Question:** I filed my HLR/Supplemental claim via QuickSubmit and it has not shown up online yet?
+
+**Answer:** It can take a week or two before it will show up online.
+
+**Source:** [https://www.veteransbenefitskb.com/appeals#faq](https://www.veteransbenefitskb.com/appeals#faq)
+
+<!-- Chunk 1234/1358 | Topic: Filing an Appeal - FAQ | Type: faq | Words: 30 -->
+
+---
+
+### FAQ: My appeal shows closed but my conditions are still unchanged. Have I been denied?
+
+*Also known as: appeal, NOD, notice of disagreement, HLR, higher level review, supplemental claim, BVA, board appeal*
+
+**Question:** My appeal shows closed but my conditions are still unchanged. Have I been denied?
+
+**Answer:** It is possible, however the VA websites often do not update everything at the same time. So give it another day.
+
+  - Alternatively, if you filed an HLR. If an error was found that required the VA to obtain new evidence then your HLR will be administratively closed and re-opened as a supplemental claim.
+
+**Source:** [https://www.veteransbenefitskb.com/appeals#faq](https://www.veteransbenefitskb.com/appeals#faq)
+
+<!-- Chunk 1235/1358 | Topic: Filing an Appeal - FAQ | Type: faq | Words: 70 -->
+
+---
+
+### FAQ: You mentioned other power/authority DROs have?
+
+*Also known as: appeal, NOD, notice of disagreement, HLR, higher level review, supplemental claim, BVA, board appeal*
+
+**Question:** You mentioned other power/authority DROs have?
+
+**Answer:** In addition to the ability to issue differences of opinions: DROs are allowed to declare CUEs (that do not harm the vet) without getting another person to approve their determination.
+
+**Source:** [https://www.veteransbenefitskb.com/appeals#faq](https://www.veteransbenefitskb.com/appeals#faq)
+
+<!-- Chunk 1236/1358 | Topic: Filing an Appeal - FAQ | Type: faq | Words: 38 -->
+
+---
+
+### FAQ: During my HLR the VA found a duty to assist error and are sending me to another C&P exam. Can I now submit additional evidence, if I have some?
+
+*Also known as: appeal, NOD, notice of disagreement, HLR, higher level review, supplemental claim, BVA, board appeal*
+
+**Question:** During my HLR the VA found a duty to assist error and are sending me to another C&P exam. Can I now submit additional evidence, if I have some?
+
+**Answer:** Yes, your appeal has now become a supplemental claim. So you are free to [Submit](https://eauth.va.gov/accessva/?cspSelectFor=quicksubmit) any new and relevant evidence to your claim.
+
+**Source:** [https://www.veteransbenefitskb.com/appeals#faq](https://www.veteransbenefitskb.com/appeals#faq)
+
+<!-- Chunk 1237/1358 | Topic: Filing an Appeal - FAQ | Type: faq | Words: 54 -->
+
+---
+
+### FAQ: How do I change review options at the Board?
+
+*Also known as: appeal, NOD, notice of disagreement, HLR, higher level review, supplemental claim, BVA, board appeal*
+
+**Question:** How do I change review options at the Board?
+
+**Answer:** Fill out a new Board Appeal form. Make sure you check the box for the new review option, and list all of the issues.
+
+  - **IMPORTANT:** You have **one year** from the date on the decision, or **60 days** from the date that you submitted your Board Appeal, whichever is later to make this change!
+
+**Source:** [https://www.veteransbenefitskb.com/appeals#faq](https://www.veteransbenefitskb.com/appeals#faq)
+
+<!-- Chunk 1238/1358 | Topic: Filing an Appeal - FAQ | Type: faq | Words: 66 -->
+
+---
+
+### FAQ: How do I request different Board review options for different issues?
+
+*Also known as: appeal, NOD, notice of disagreement, HLR, higher level review, supplemental claim, BVA, board appeal*
+
+**Question:** How do I request different Board review options for different issues?
+
+**Answer:** You can submit one Board Appeal form and attach additional pages to explain how you want your issues reviewed, or you can submit multiple Board Appeal forms – one for each review option.
+
+**Source:** [https://www.veteransbenefitskb.com/appeals#faq](https://www.veteransbenefitskb.com/appeals#faq)
+
+<!-- Chunk 1239/1358 | Topic: Filing an Appeal - FAQ | Type: faq | Words: 46 -->
+
+---
+
+### FAQ: I lost my BVA appeal, what can I do now?
+
+*Also known as: appeal, NOD, notice of disagreement, HLR, higher level review, supplemental claim, BVA, board appeal*
+
+**Question:** I lost my BVA appeal, what can I do now?
+
+**Answer:** If you disagree with the Board’s decision and have new and relevant evidence that supports your case, you can file a Supplemental Claim. You can also appeal to the U.S. Court of Appeals for Veterans Claims.
+
+**Source:** [https://www.veteransbenefitskb.com/appeals#faq](https://www.veteransbenefitskb.com/appeals#faq)
+
+<!-- Chunk 1240/1358 | Topic: Filing an Appeal - FAQ | Type: faq | Words: 48 -->
+
+---
+
+### FAQ: How do I change my appeal from a Board Appeal to Supplemental Claim or Higher-Level Review?
+
+*Also known as: appeal, NOD, notice of disagreement, HLR, higher level review, supplemental claim, BVA, board appeal*
+
+**Question:** How do I change my appeal from a Board Appeal to Supplemental Claim or Higher-Level Review?
+
+**Answer:** Tell the Board in writing that you wish to withdraw your Board Appeal. Then you can file a Supplemental Claim or Higher-Level Review.
+
+**Source:** [https://www.veteransbenefitskb.com/appeals#faq](https://www.veteransbenefitskb.com/appeals#faq)
+
+<!-- Chunk 1241/1358 | Topic: Filing an Appeal - FAQ | Type: faq | Words: 41 -->
+
+---
+
+### FAQ: Should I hire an attorney/claims agent?
+
+*Also known as: appeal, NOD, notice of disagreement, HLR, higher level review, supplemental claim, BVA, board appeal*
+
+**Question:** Should I hire an attorney/claims agent?
+
+**Answer:** That is a personal decision. However, unless your appeal hangs on a certain legal issue/angle then the benefit they provide may not be there.
+
+**Source:** [https://www.veteransbenefitskb.com/appeals#faq](https://www.veteransbenefitskb.com/appeals#faq)
+
+<!-- Chunk 1242/1358 | Topic: Filing an Appeal - FAQ | Type: faq | Words: 32 -->
+
+---
+
+### FAQ: Can I file an appeal a specific condition decision, or do I have to appeal the entire claim?
+
+*Also known as: appeal, NOD, notice of disagreement, HLR, higher level review, supplemental claim, BVA, board appeal*
+
+**Question:** Can I file an appeal a specific condition decision, or do I have to appeal the entire claim?
+
+**Answer:** You can appeal a single decision, two, all of them, etc. Do know you **CANNOT** appeal the same condition via multiple appeal types at the same time!
+
+**Source:** [https://www.veteransbenefitskb.com/appeals#faq](https://www.veteransbenefitskb.com/appeals#faq)
+
+<!-- Chunk 1243/1358 | Topic: Filing an Appeal - FAQ | Type: faq | Words: 47 -->
+
+---
+
+### FAQ: On the supplemental claim form, what does "Check this box if any issue listed below is being withdrawn from the legacy appeals process. OPT-IN from SOC/SSOC"?
+
+*Also known as: appeal, NOD, notice of disagreement, HLR, higher level review, supplemental claim, BVA, board appeal*
+
+**Question:** On the supplemental claim form, what does "Check this box if any issue listed below is being withdrawn from the legacy appeals process. OPT-IN from SOC/SSOC"?
+
+**Answer:** This box only applies to Veterans who are wanting to convert their 'legacy appeal' to the modern appeal processes. In short, unless you have been in a continuous appeal since circa 2017, this box does **NOT** apply to you and **CAN** be ignored.
+
+**Source:** [https://www.veteransbenefitskb.com/appeals#faq](https://www.veteransbenefitskb.com/appeals#faq)
+
+<!-- Chunk 1244/1358 | Topic: Filing an Appeal - FAQ | Type: faq | Words: 71 -->
+
+---
+
+### FAQ: If I file an appeal, can the VA reduce my ratings?
+
+*Also known as: appeal, NOD, notice of disagreement, HLR, higher level review, supplemental claim, BVA, board appeal*
+
+**Question:** If I file an appeal, can the VA reduce my ratings?
+
+**Answer:** Yes, by filing an appeal you invite the VA to review your file. If it is found that a Clear and Unmistakable Error occurred and you were rated either too high or that service-connection was granted in error, the VA **WILL** start action to fix the error! That said, a mere difference of opinion is **NOT** enough! Further, if exams are ordered as apart of you claim and it is found that your condition(s) have improved, the VA _can_ start action to reduce you!
+
+**Source:** [https://www.veteransbenefitskb.com/appeals#faq](https://www.veteransbenefitskb.com/appeals#faq)
+
+<!-- Chunk 1245/1358 | Topic: Filing an Appeal - FAQ | Type: faq | Words: 97 -->
+
+---
+
+### FAQ: Will I need to resubmit evidence that I previously submitted?
+
+*Also known as: appeal, NOD, notice of disagreement, HLR, higher level review, supplemental claim, BVA, board appeal*
+
+**Question:** Will I need to resubmit evidence that I previously submitted?
+
+**Answer:** No, the VA permanently keeps **ALL** records they receive.
+
+**Source:** [https://www.veteransbenefitskb.com/appeals#faq](https://www.veteransbenefitskb.com/appeals#faq)
+
+<!-- Chunk 1246/1358 | Topic: Filing an Appeal - FAQ | Type: faq | Words: 21 -->
+
+---
+
+### FAQ: Will my pay be paused while the VA works on my appeal?
+
+*Also known as: appeal, NOD, notice of disagreement, HLR, higher level review, supplemental claim, BVA, board appeal*
+
+**Question:** Will my pay be paused while the VA works on my appeal?
+
+**Answer:** Your pay will continue as appropriate, during the appeals process.
+
+**Source:** [https://www.veteransbenefitskb.com/appeals#faq](https://www.veteransbenefitskb.com/appeals#faq)
+
+<!-- Chunk 1247/1358 | Topic: Filing an Appeal - FAQ | Type: faq | Words: 24 -->
+
+---
+
+### FAQ: Will filing an appeal slow down any active claims/appeals I have?
+
+*Also known as: appeal, NOD, notice of disagreement, HLR, higher level review, supplemental claim, BVA, board appeal*
+
+**Question:** Will filing an appeal slow down any active claims/appeals I have?
+
+**Answer:** No, each appeal is processed separately from all other claims/appeals.
+
+- In the event a separate appeal/claim hinges on the out outcome of its sister, then just the entangled issue(s) will be held in a waiting pattern till the primary issue is decided.
+
+**Source:** [https://www.veteransbenefitskb.com/appeals#faq](https://www.veteransbenefitskb.com/appeals#faq)
+
+<!-- Chunk 1248/1358 | Topic: Filing an Appeal - FAQ | Type: faq | Words: 56 -->
+
+---
+
+### FAQ: Can I use a BVA case as evidence to support my own appeal?
+
+*Also known as: appeal, NOD, notice of disagreement, HLR, higher level review, supplemental claim, BVA, board appeal*
+
+**Question:** Can I use a BVA case as evidence to support my own appeal?
+
+**Answer:** No, BVA cases do **NOT** establish precedence, only CAVC courts and higher do. However, you can try and use arguments presented in those cases.
+
+**Source:** [https://www.veteransbenefitskb.com/appeals#faq](https://www.veteransbenefitskb.com/appeals#faq)
+
+<!-- Chunk 1249/1358 | Topic: Filing an Appeal - FAQ | Type: faq | Words: 39 -->
+
+---
+
+### FAQ: If I file a supplemental claim will I get new exam(s)?
+
+*Also known as: appeal, NOD, notice of disagreement, HLR, higher level review, supplemental claim, BVA, board appeal*
+
+**Question:** If I file a supplemental claim will I get new exam(s)?
+
+**Answer:** It is typical to get new exams or [Medical opinions](https://www.veteransbenefitskb.com/imo) when you file a supplemental. However, if your appeal does not properly address the rationale for the denial it may be found not appropriate to order you exams/opinions.
+
+**Source:** [https://www.veteransbenefitskb.com/appeals#faq](https://www.veteransbenefitskb.com/appeals#faq)
+
+<!-- Chunk 1250/1358 | Topic: Filing an Appeal - FAQ | Type: faq | Words: 51 -->
+
+---
+
+### FAQ: My attorney/claim agent told me NOT TO TALK to the VA and that all communication needs to go through them?
+
+*Also known as: appeal, NOD, notice of disagreement, HLR, higher level review, supplemental claim, BVA, board appeal*
+
+**Question:** My attorney/claim agent told me NOT TO TALK to the VA and that all communication needs to go through them?
+
+**Answer:** This is generally **VERY BAD** advice and serves more to drag out the length of an appeal (more money for them) than it would help you.
+
+  - Further the VA will **NOT** honor a request for “exclusive contact” wherein the VA is prohibited from contacting the Veteran. You can of course refuse to respond/speak with the VA, as is your right - but you may find it best to answer questions as appropriate, especially if they are for the purposes of clarification.
+
+**Source:** [https://www.veteransbenefitskb.com/appeals#faq](https://www.veteransbenefitskb.com/appeals#faq)
+
+<!-- Chunk 1251/1358 | Topic: Filing an Appeal - FAQ | Type: faq | Words: 104 -->
+
+---
+
+### FAQ: An "Attorney Fee" popped up on VA.gov?
+
+*Also known as: appeal, NOD, notice of disagreement, HLR, higher level review, supplemental claim, BVA, board appeal*
+
+**Question:** An "Attorney Fee" popped up on VA.gov?
+
+**Answer:** This is a **VERY STRONG** indication that your appeal was granted and VA is working on figuring how much your attorney/claim agent is owed.
+
+**Source:** [https://www.veteransbenefitskb.com/appeals#faq](https://www.veteransbenefitskb.com/appeals#faq)
+
+<!-- Chunk 1252/1358 | Topic: Filing an Appeal - FAQ | Type: faq | Words: 33 -->
+
+---
+
+### FAQ: VA denied my CUE call but i am SURE they messed up and it is a CUE!
+
+*Also known as: appeal, NOD, notice of disagreement, HLR, higher level review, supplemental claim, BVA, board appeal*
+
+**Question:** VA denied my CUE call but i am SURE they messed up and it is a CUE!
+
+**Answer:** If your CUE call was denied it is very likely not a CUE and may fall more into a [Duty to Assist (DTA)](https://www.veteransbenefitskb.com/dta) error or a difference of opinion; both of which can never be the basis of a CUE. But if you are _super sure_ the rater messed up - you can file a HLR on the rating decision or take it to BVA.
+
+  - If the rating decision that denied your CUE call was over a year ago you have **NO ABILITY** to call the same CUE again or have it reviewed (officially). Best you can do is file a valid unrelated claim/appeal and mention how you feel a CUE exists. A rater _may then_ look into the matter and call a CUE if they agree.
+
+**Source:** [https://www.veteransbenefitskb.com/appeals#faq](https://www.veteransbenefitskb.com/appeals#faq)
+
+<!-- Chunk 1253/1358 | Topic: Filing an Appeal - FAQ | Type: faq | Words: 147 -->
+
+---
+
+### References and Legal Citations
+
+*Also known as: appeal, NOD, notice of disagreement, HLR, higher level review, supplemental claim, BVA, board appeal*
+
+## **References**
+
+- [38 CFR § 3.103 - Procedural due process and other rights](https://www.law.cornell.edu/cfr/text/38/3.103)
+
+- [38 CFR § 3.105 - Revision of decisions](https://www.law.cornell.edu/cfr/text/38/3.105)
+
+- [38 CFR § 3.156 - New evidence](https://www.law.cornell.edu/cfr/text/38/3.156)
+
+- [38 CFR § 3.159 - Department of Veterans Affairs assistance in developing claims](https://www.law.cornell.edu/cfr/text/38/3.159)
+
+- [38 CFR § 3.2501 - Supplemental claims](https://www.law.cornell.edu/cfr/text/38/3.2501)
+
+- [38 CFR § 3.2601 - Higher-level review](https://www.law.cornell.edu/cfr/text/38/3.2601)
+
+- [38 CFR § 14.631 - Powers of attorney; disclosure of claimant information](https://www.law.cornell.edu/cfr/text/38/14.631)
+
+- [38 CFR § 14.636 - Payment of fees for representation by agents and attorneys in proceedings before Agencies of Original Jurisdiction and before the Board of Veterans' Appeals](https://www.law.cornell.edu/cfr/text/38/14.636)
+
+- [38 CFR § 20.6 - Rule 6. Withdrawal of services by a representative](https://www.law.cornell.edu/cfr/text/38/20.6)
+
+- [38 CFR § 20.202 - Rule 202. Notice of Disagreement](https://www.law.cornell.edu/cfr/text/38/20.202)
+
+- [38 CFR § 20.1404 - Rule 1404. Filing and pleading requirements; withdrawal](https://www.law.cornell.edu/cfr/text/38/20.1404)
+
+- [38 U.S. Code § 5904 - Recognition of agents and attorneys generally](https://www.law.cornell.edu/uscode/text/38/5904)
+
+- [38 U.S. Code Chapter 71 - BOARD OF VETERANS’ APPEALS](https://www.law.cornell.edu/uscode/text/38/part-V/chapter-71)
+
+- [38 U.S. Code Chapter 72 - UNITED STATES COURT OF APPEALS FOR VETERANS CLAIMS](https://www.law.cornell.edu/uscode/text/38/part-V/chapter-72)
+
+- [Claim Accuracy Request](https://www.benefits.va.gov/benefits/docs/claim-accuracy-request.pdf)
+
+- [FPM, Part III, Chapter 1, Section C - Appeals Modernization Act](https://www.knowva.ebenefits.va.gov/system/templates/selfservice/va_ssnew/help/customer/locale/en-US/portal/554400000001018/content/554400000153979/FPM-Part-III-Chapter-1-Section-C-Appeals-Modernization-Act)
+
+- [M21-1, Part I, Subpart i, Chapter 2, Section A - General Information on Power of Attorney (POA)](https://www.knowva.ebenefits.va.gov/system/templates/selfservice/va_ssnew/help/customer/locale/en-US/portal/554400000001018/content/554400000181475/M21-1-Part-I-Subpart-i-Chapter-2-Section-A-General-Information-on-Power-of-Attorney-POA)
+
+- [M21-1, Part II, Subpart iii, Chapter 2, Section B - Supplemental Claims](https://www.knowva.ebenefits.va.gov/system/templates/selfservice/va_ssnew/help/customer/locale/en-US/portal/554400000001018/content/554400000174874/M21-1-Part-II-Subpart-iii-Chapter-2-Section-B-Supplemental-Claims)
+
+- [M21-1, Part X, Subpart ii, Chapter 5, Section A - Revision Due to Clear and Unmistakable Error (CUE)](https://www.knowva.ebenefits.va.gov/system/templates/selfservice/va_ssnew/help/customer/locale/en-US/portal/554400000001018/content/554400000177971/M21-1-Part-X-Subpart-ii-Chapter-5-Section-A-Revision-Due-to-Clear-and-Unmistakable-Error-CUE)
+
+- [M21-5, Chapter 5 - Higher-Level Review Procedures](https://www.knowva.ebenefits.va.gov/system/templates/selfservice/va_ssnew/help/customer/locale/en-US/portal/554400000001018/content/554400000141004/M21-5-Chapter-5-Higher-Level-Review-Procedures)
+
+- [M21-5, Chapter 7, Section C - Decision Review Officer (DRO) Process](https://www.knowva.ebenefits.va.gov/system/templates/selfservice/va_ssnew/help/customer/locale/en-US/portal/554400000001018/content/554400000139767/M21-5-Chapter-7-Section-C-Decision-Review-Officer-DRO-Process)
+
+- [M21-5, Chapter 7, Section G - Board of Veterans' Appeals (Board) Decisions and Remands](https://www.knowva.ebenefits.va.gov/system/templates/selfservice/va_ssnew/help/customer/locale/en-US/portal/554400000001018/content/554400000140917/M21-5-Chapter-7-Section-G-Board-of-Veterans-Appeals-Board-Decisions-and-Remands)
+
+- [M21-5, Chapter 8, Section A - Introduction to Fees](https://www.knowva.ebenefits.va.gov/system/templates/selfservice/va_ssnew/help/customer/locale/en-US/portal/554400000001018/content/554400000205495/M21-5-Chapter-8-Section-A-Introduction-to-Fees)
+
+- [M21-5, Chapter 8, Section B - Processing a Case Seeking Direct Payment of Fees](https://www.knowva.ebenefits.va.gov/system/templates/selfservice/va_ssnew/help/customer/locale/en-US/portal/554400000001018/content/554400000205497/M21-5-Chapter-8-Section-B-Processing-a-Case-Seeking-Direct-Payment-of-Fees)
+
+**Source:** [https://www.veteransbenefitskb.com/appeals#references](https://www.veteransbenefitskb.com/appeals#references)
+
+<!-- Chunk 1254/1358 | Topic: Filing an Appeal - Legal References | Type: references | Words: 306 -->
+
+---
+
+## Filing an Appeal
+
+*Also known as: appeal, NOD, notice of disagreement, HLR, higher level review, supplemental claim, BVA, board appeal*
+
+# **Filing an Appeal**
+
+
+[![Blank search bar with a magnifying glass icon](https://images.squarespace-cdn.com/content/v1/66c515a3e8305f0f79e8b680/bd22f10b-2167-4509-9215-2b49d4a4e22f/search3.png)](https://cse.google.com/cse?cx=8392d3f710df0427c)
+
+
+
+[\> Master Condition List](https://veteransbenefitskb.com/master)
+
+[\> Federal Benefits List by Combined Ratings](https://veteransbenefitskb.com/combinedbenefits)
+
+[\> Insider Insight into VBA Claim Processing](https://veteransbenefitskb.com/insight)
+
+[\> Rating Schedule Index](https://veteransbenefitskb.com/ratingsindex)
+
+[\> Filing a VA Disability Claim](https://veteransbenefitskb.com/vaclaim)
+
+[\> Filing an Appeal](https://veteransbenefitskb.com/appeals)
+
+* * *
+
+
+
+
+
+
+
+
+
+If you do **NOT** agree with your claim's decision, you may file an appeal. Just like [Filing a claim](https://veteransbenefitskb.com/vaclaim) you _may_ use the assistance of a [VSO](https://veteransbenefitskb.com/vso), lawyer, or an accredited claims agent.
+
+There are three initial different methods to appeal:
+
+1. Higher-Level Review;
+
+2. Supplemental claim; or
+
+3. Board of Veteran Appeals (BVA).
+
+
+If your appeal is denied again you **CAN** try another eligible option (see applicable notes).
+
+**IMPORTANT NOTES:**
+
+- If you want to keep your [Effective date](https://veteransbenefitskb.com/edate) (your back pay) you **MUST** file an appeal within **one year** of your claim's decision date! Veterans who fail to do that can only get their original effective date and back pay if there is a [Clear and Unmistakable Error (CUE)](https://veteransbenefitskb.com/appeals#cue).
+
+- Lawyers and claims agents **CANNOT** charge more than **33.3%**\\* (excluding expenses\*\*) of the Veteran's back pay. Further, they can _only_ get paid if/when the Veteran wins their appeal. Again, VSOs are a resource that is free to the Veteran.
+
+- **PICK A LANE**! You **CANNOT** file multiple appeals/methods for the _same issue_ at the same time ( _without_ first withdrawing the current appeal)!
+
+  - If you filed an appeal to BVA and are tired of waiting you **CANNOT** then file a supplemental claim while the BVA case is pending for the _same issues_.
+
+  - Likewise, you **CANNOT** file an HLR and supplemental claim for the same issue at the same time, etc.
+
+  - You **CAN** file an HLR for [Hearing loss](https://www.veteransbenefitskb.com/ears) and a supplemental claim for a [Back](https://www.veteransbenefitskb.com/spine) issue at the same time - since they are _different issues_.
+
+  - **EXCEPTION:**
+
+    - If you have an appeal in at a court above BVA you **_CAN_** then have a separate appeal open for the same issue (just can’t go immediately back to the previous lower court).
+
+\*The VA will only pay up to 20% automatically from the back pay. If the agreement is over 20% then, the Veteran will need to pay the difference to the lawyer themselves.
+
+\*\*Expenses can be things like postage, travel costs, or printing supplies.
+
+**Source:** [https://www.veteransbenefitskb.com/appeals#filinganappeal](https://www.veteransbenefitskb.com/appeals#filinganappeal)
+
+<!-- Chunk 1255/1358 | Topic: Filing an Appeal | Type: appeals | Words: 387 -->
+
+---
+
+## BEFORE You File an Appeal
+
+## **BEFORE You File an Appeal**
+
+**_BEFORE_** you appeal your claim do so in an informed manner! Don't run back onto the battlefield without a plan!
+
+Read your **Decision Letter**!
+
+- Was _all_ the evidence you submitted listed under evidence considered?
+
+- What were the favorable findings?
+
+- What does it say your claim was missing?
+
+- Did it say you missed an exam?
+
+
+Your decision letter _should_ outline what you need to do in order to make a successful appeal!
+
+- For information on understanding rating decisions click [HERE](https://www.veteransbenefitskb.com/ratingdecision).
+
+
+* * *
+
+### Getting a Copy of Your Decision Narrative
+
+You can get a copy of your decision online [HERE](https://www.va.gov/track-claims/your-claim-letters)\*.
+
+_Alternatively, after_ 10 days have past since the claim closed, you can call the VA at 1-800-827-1000 and request them email your decision narrative to you.
+
+\*This **CAN** be used to get old decision letters as well.
+
+* * *
+
+### Getting a Copy of Your C-file/Examiner's Report/Codesheet
+
+- Click [HERE](https://veteransbenefitskb.com/cfile) to learn how to get your C-file/Examiner's reports.
+
+**Source:** [https://www.veteransbenefitskb.com/appeals#beforeyoufileanappeal](https://www.veteransbenefitskb.com/appeals#beforeyoufileanappeal)
+
+<!-- Chunk 1256/1358 | Topic: BEFORE You File an Appeal | Type: appeals | Words: 170 -->
+
+---
+
+## Denied Service-Connection
+
+## **Denied Service-Connection**
+
+If you were not granted [Service-connection](https://veteransbenefitskb.com/serviceconnection), what was missing from your claim?
+
+- Was it a current diagnosis;
+
+- An in service event; and/or
+
+- Did the examiner say that there was _a less likely than not_ chance that your disability was the result of your service or service-connected disability?
+
+
+If you feel that the rater did not properly evaluate the evidence that was a part of your claim, an HLR may be appropriate.
+
+Otherwise if you need to submit additional supporting information, a supplemental claim may be appropriate. Veterans who need help with the determination of service-connection may want to look into submitting an [Independent medical opinion (IMO)/Nexus letter](https://veteransbenefitskb.com/imo), [Personal statement](https://veteransbenefitskb.com/personal), or [Buddy statement(s)](https://veteransbenefitskb.com/buddy), as appropriate.
+
+If you were told you missed an exam then file a supplemental claim and state, "I am willing an able to attend exams at this time" on the appeal form.
+
+**Source:** [https://www.veteransbenefitskb.com/appeals#deniedserviceconnection](https://www.veteransbenefitskb.com/appeals#deniedserviceconnection)
+
+<!-- Chunk 1257/1358 | Topic: Denied Service-Connection | Type: appeals | Words: 150 -->
+
+---
+
+## Low Rating
+
+## **Low Rating**
+
+If you were granted service-connection (at least 0% evaluation) but were given an evaluation that was lower than what you expected, you can appeal this. Your decision letter _should_ detail what the criteria is for the next highest evaluation. It should also note if the rating you were awarded was the maximum. If it says you are the maximum... you should really leave it be...
+
+If you feel that you meet the [Requirements](https://veteransbenefitskb.com/ratingSIndex) for a higher rating then you should verify the information in the Examiner's [Disability Benefits Questionnaire (DBQ)](https://veteransbenefitskb.com/dbq). If the DBQ indicates you should have gotten a higher rating, an HLR may be appropriate. If the DBQ indicates otherwise then a supplemental claim (with medical evidence dated **BEFORE** the rater made their decision, would be more appropriate).
+
+**Source:** [https://www.veteransbenefitskb.com/appeals#lowrating](https://www.veteransbenefitskb.com/appeals#lowrating)
+
+<!-- Chunk 1258/1358 | Topic: Low Rating | Type: appeals | Words: 132 -->
+
+---
+
+## Priority Processing
+
+## **Priority Processing**
+
+Certain factors can make a Veteran eligible for priority process.
+
+- Click [HERE](https://veteransbenefitskb.com/fast) to learn more.
+
+**Source:** [https://www.veteransbenefitskb.com/appeals#priorityprocessing](https://www.veteransbenefitskb.com/appeals#priorityprocessing)
+
+<!-- Chunk 1259/1358 | Topic: Priority Processing | Type: appeals | Words: 19 -->
+
+---
+
+## Higher-Level Review
+
+## **Higher-Level Review** [**(HLR 20-0996)**](https://www.vba.va.gov/pubs/forms/VBA-20-0996-ARE.pdf)
+
+An entirely new review of your claim by an experienced (more senior) rater; formally these are titled Decision Review Officers (DRO).
+
+**IMPORTANT NOTES:**
+
+- New evidence (evidence received **AFTER** the decision was made) **CANNOT** be considered in a Higher-Level Review!
+
+- [Intent to files](https://veteransbenefitskb.com/vaclaim#itf) do **NOT** apply to HLRs!
+
+- Unlike other raters DROs get the extra authority to issue a _differences of opinion_.
+
+  - Differences of opinions include weighing evidence differently which result in a favorable outcome for the Veteran. These differences of opinions are **NOT** errors made by the last rater, just a _difference of opinion_.
+
+  - Mere differences of opinions **CANNOT** result in a negative outcome for the Veteran!
+
+    - However, if the previous rater(s) made [Clear and Unmistakable Errors (CUEs)](https://veteransbenefitskb.com/appeals#cue) those errors **CAN** be corrected **EVEN** if negative (with appropriate [Due notice](https://veteransbenefitskb.com/proposed)).
+
+NOTES:
+
+- The Veteran **CANNOT** file a HLR, back-to-back. **HOWEVER**, you **CAN** file a HLR into a supplemental, into another HLR, into a supplemental, etc.
+
+- The Veteran **CANNOT** request an HLR after having a BVA denial.
+
+- The Veteran **MUST** submit their HLR within a year of their claim's decision. Veterans are **NOT** allowed to request an HLR after this time frame.
+
+
+| Question | Description |
+| --- | --- |
+| Should I choose this? | If you think the evidence the VA has is enough to make a positive decision. |
+| What will happen? | A senior rater will reexamine your claim. |
+
+* * *
+
+### Informal Conference
+
+If you would like to plead your case to the person doing your appeal you may request an informal conference (Section IV of the form).
+
+**IMPORTANT NOTES:**
+
+- If the rater **CAN** make a **POSITIVE** decision based upon the evidence of record the rater **CAN** decide that an informal conference is unnecessary! So do not feel bad if one is **NOT** scheduled!
+
+- You can **ONLY** talk about errors of fact _or_ law as it relates to your appeal during this call.
+
+  - This would include things such as, the VA missing or not considering evidence that was originally submitted with your claim.
+
+  - Ideally, you would have this planned out so you can point out specifically where evidence is: 'Evidence that I had an in-service event can be found on page x of my service treatment records'.
+- Choosing to have an informal conference _may_ result in your appeal taking longer to process.
+
+
+* * *
+
+#### Alternative to Informal Conference
+
+Instead of requesting an informal conference you may submit a [Personal statement](https://veteransbenefitskb.com/personal) with your HLR.
+
+Again, you can **ONLY** write about errors of fact _or_ law as it relates to your appeal. Remember, you **CANNOT** use this statement as a means to add new evidence to your appeal!
+
+* * *
+
+### Submitting an HLR
+
+There are several options to submit your HLR to the VA:
+
+- Complete and Submit Online Form
+
+  - Click [HERE](https://www.va.gov/decision-reviews/higher-level-review/request-higher-level-review-form-20-0996/start).
+- Submit Paper Form Online
+
+  - Click [HERE](https://eauth.va.gov/accessva/?cspSelectFor=quicksubmit).
+- Via your VSO
+
+- In-person
+
+  - Click [HERE](https://www.va.gov/find-locations/) to locate your nearest Regional Office.
+- Snail Mail
+
+
+> ```
+>  Department of Veterans Affairs
+>  Claims Intake Center
+>  PO Box 4444
+>  Janesville, WI 53547-4444
+> ```
+
+**!!WARNING!!**
+
+- The VA will **NOT** go by the postmark! The VA will go off the date the appeal is initially processed by the VA's intake center. As such, if your appeal is processed **AFTER** the one year deadline your appeal will be refused and you **WILL** lose your effective date (back pay)!
+
+
+* * *
+
+### Claim Accuracy Request (CAR) \[PILOT PROGRAM\]
+
+```
+May also be called claim accuracy review.
+```
+
+CAR is a quicker/priority lane version of an HLR, with the lofty goal of a decision within 30 days.
+
+**ONLY** VSOs, accredited attorneys, and accredited agents may request a CAR for obvious errors of fact or law (Does _not_ have to be a [Clear and Unmistakable Error (CUE)](https://www.veteransbenefitskb.com/appeals#cue), but that is the general idea behind it).
+
+**IMPORTANT NOTES:**
+
+- This request **MUST** be made within **30 DAYS** of the date of the notification letter for the rating decision!
+
+- If the CAR does _not_ find a error occurred, another HLR for the issue **CANNOT** be filed back-to-back! A supplemental or BVA appeal _can_ be filed.
+
+
+* * *
+
+### Flowchart of an HLR
+
+By their design HLRs could be considered as starting in the Rating step of the [Stages of a claim](https://www.veteransbenefitskb.com/stages) \- as they are simply a review of the existing evidence and do not allow consideration of new or gathering new evidence. Which is likely why the VA doesn’t give insight into where an HLR is at… since it is either waiting on a DRO or is in short order waiting on authorization.
+
+If a de facto supplemental claim is opened then it will follow the normal stages of a claim.
+
+
+* * *
+
+### Deciding a HLR
+
+If the senior rater is able to make an appropriate grant/denial based upon the existing evidence of record they will do so. However, if the senior rater finds a [Duty to Assist (DTA)](https://veteransbenefitskb.com/dta) error they will make a rating decision and close the HLR; noting the DTA errors they found that need to be addressed.
+
+These DTA errors will be addressed in a de facto supplemental claim, which is opened (at some point).
+
+**IMPORTANT NOTES:**
+
+- The DRO **CAN** find a DTA error, confirm and continue, and issue a difference of opinion on separate issues all within the same decision.
+
+- This supplemental claim will **NOT** use any new [Intents to File](https://veteransbenefitskb.com/vaclaim#intent)!
+
+  - If the VA is able to grant then any intent to file associated with the prior claim/appeals **CAN** be used to assign an [Effective date](https://www.veteransbenefitskb.com/edate#itf) \- just that the de facto supplemental will not itself use any unassociated intents hanging around in your file.
+- This de facto supplemental claim **DOES** allow you to submit new and relevant evidence!
+
+- This de facto supplemental claim _is_ decided by raters who are **NOT** DROs.
+
+  - These raters are **NOT** given the extra authority or power that DROs get!
+- If the de facto supplemental claim decision results in another denial you **CAN** file a HLR on the decision!
+
+**Source:** [https://www.veteransbenefitskb.com/appeals#higherlevelreview](https://www.veteransbenefitskb.com/appeals#higherlevelreview)
+
+<!-- Chunk 1260/1358 | Topic: Higher-Level Review | Type: appeals | Words: 1041 -->
+
+---
+
+## Supplemental Claim
+
+## **Supplemental Claim** [**(20-0995)**](http://www.vba.va.gov/pubs/forms/VBA-20-0995-ARE.pdf)
+
+An opportunity to submit **NEW AND RELEVANT** evidence.
+
+- New: The VA did not previously have/consider it.
+
+- Relevant: Directly addresses the rationale for the denial.
+
+  - For example: If you were denied for having no diagnosis, you need to supply evidence of a diagnosis.
+
+New and relevant evidence can take the form of:
+
+- Being seen by your doctor for the claimed issue(s);
+
+- New theory of service-connection (claiming your condition was caused by another service-connected disability);
+
+  - This _does_ include [Presumptive conditions](https://veteransbenefitskb.com/Presumptive) be they old or recently passed presumptives;
+- Exam willingness - if you were previously denied because you missed an exam, simply state that you are willing and able to attend new examinations;
+
+- [Independent medical opinion (IMO)/Nexus letter](https://veteransbenefitskb.com/imo);
+
+- [DBQ](https://veteransbenefitskb.com/dbq);
+
+- [Personal statements](https://veteransbenefitskb.com/personal); or
+
+- [Buddy statements](https://veteransbenefitskb.com/buddy).
+
+
+**IMPORTANT NOTES:**
+
+- Remember you have **1 year** from the claim's decision to file an appeal (if you want to potentially keep your back pay). Which means 1 year to develop additional evidence for your claim. We recommend waiting until you have enough evidence to be successful before filing - your VSO or lawyer can advise you on this. Do not file appeals with insufficient evidence, this just gums up the system for you and other Veterans!
+
+  - Do know you **CAN** extend this window for by filing an [Intent to file](https://veteransbenefitskb.com/vaclaim#intent)! The intent to file will give you a year (from the intent to file) to gather evidence. While allowing you to keep back pay.
+- If the VA grants an increased rating based upon a supplemental claim, the [Effective date](https://veteransbenefitskb.com/edate) does **NOT** automatically go back to the original claim!
+
+  - If **MEDICAL** evidence shows an increase is warranted that is dated **BEFORE/AFTER** you initiated your supplemental claim the effective date will typically be the date of the medical evidence showing an increase was warranted; this typically is the date of your [Examination](https://veteransbenefitskb.com/cnp)!
+- Do **NOT** file a supplemental claim for an evaluation after a year! Even if you have new evidence showing a higher evaluation was previously warranted! If you do, at best the effective date will be the date the supplemental was initiated or at **WORST** the date of the examination conducted **AFTER** your filed the supplemental! So in these cases, just file a increase claim!
+
+
+NOTES:
+
+- Veterans **CAN** file a supplemental claim **ANYTIME** after their denial. However, to _potentially_ get back pay from the start, they _must_ file within a year of the last decision.
+
+- Veterans **CAN** submit a supplemental claim over and over again. _So long as_, there is new and relevant evidence being submitted _every time_.
+
+- If you need the VA to get non-federal medical records or [Vet Center](https://veteransbenefitskb.com/vetcenter) records for you, then you will need to also submit a [VA Form 21-4142/21-4142a](https://www.vba.va.gov/pubs/forms/vba-21-4142-are.pdf).
+
+
+| Question | Description |
+| --- | --- |
+| Should I choose this? | If your appeal requires new evidence. |
+| What will happen? | A decision will be made looking at the new and previous evidence. |
+
+* * *
+
+### Submitting a Supplemental Claim
+
+There are several options to submit your supplemental claim to the VA:
+
+- Complete and Submit Online Form
+
+  - Click [HERE](https://www.va.gov/decision-reviews/supplemental-claim/file-supplemental-claim-form-20-0995/start).
+- Submit Paper Form Online
+
+  - Click [HERE](https://eauth.va.gov/accessva/?cspSelectFor=quicksubmit).
+- Via your VSO or lawyer
+
+- In-person
+
+  - Click [HERE](https://www.va.gov/find-locations/) to locate your nearest Regional Office.
+- Snail Mail
+
+
+> ```
+>  Department of Veterans Affairs
+>  Claims Intake Center
+>  PO Box 4444
+>  Janesville, WI 53547-4444
+> ```
+
+**!!WARNING!!**
+
+- The VA will **NOT** go by the postmark! The VA will go off the date the appeal is initially processed by the VA's intake center. As such, if your appeal is processed **AFTER** the one year deadline your appeal will be refused and you **WILL** lose your effective date (back pay)!
+
+
+* * *
+
+### Supplemental Claim Status
+
+Currently claim trackers will either show your claims status as:
+
+- "We don't know your status"; or
+
+- "A reviewer is examining your new evidence".
+
+
+Either of these statuses will remain till the claim is actually closed out.
+
+**Source:** [https://www.veteransbenefitskb.com/appeals#supplementalclaim](https://www.veteransbenefitskb.com/appeals#supplementalclaim)
+
+<!-- Chunk 1261/1358 | Topic: Supplemental Claim | Type: appeals | Words: 685 -->
+
+---
+
+## Board Veterans' Appeals (BVA) AKA, Notice of Disagreement (NOD), AKA
+
+## **Board Veterans' Appeals (BVA) AKA, Notice of Disagreement (NOD), AKA** [**10182**](https://www.va.gov/vaforms/va/pdf/VA10182.pdf)
+
+Review by a Veterans Law Judge at the Board of Veterans’ Appeals. These judges are **NOT** bound by VA Central Office policy decisions and **CAN** issue grants that raters are unable to do! So you will see decisions which are inconsistent or directly contradict VA policies being made by these judges.
+
+**IMPORTANT NOTES:**
+
+- Due to the time this takes to complete a BVA appeal ( **YEARS**) it is commonly only chosen once the other appeal options (Supplemental Claim and/or Higher Level Review) have been exhausted.
+
+- The Veteran can **MUST** submit their appeal to the BVA within a year of their claim's decision. Veterans are **NOT** allowed to request a BVA after this time frame.
+
+- Veterans are **NOT** allowed to request a BVA appeal _after_ receiving a BVA decision _for the same claimed item - back to back_.
+
+
+There are three lanes (appeal dockets) in which the Veteran can choose when going through the BVA:
+
+1. Direct Review
+
+2. Evidence Submission
+
+3. Hearing
+
+
+* * *
+
+### 1\. Direct Review
+
+In essence an HLR. However, instead of a senior rater a judge reviews your claim. Due to there be far fewer judges than senior raters, this **WILL** take much longer than an HLR.
+
+NOTE:
+
+- You **CANNOT** submit new evidence.
+
+
+* * *
+
+### 2\. Evidence Submission
+
+In essence a supplemental claim. However instead of a rater a judge reviews your claim. Due to there be far fewer judges than raters, this **WILL** take much longer than an supplemental claim.
+
+NOTE:
+
+- You **CAN** submit new evidence. If you do not submit all the evidence with your claim you have **90 days** from the day your NOD is received.
+
+
+* * *
+
+### 3\. Hearing
+
+Your chance to plead your case before a judge by videoconference (or in-person in DC). After your hearing you will have 90 days to submit any new evidence. The Judge will make a decision considering the hearing and the evidence of record.
+
+* * *
+
+### Submitting to BVA
+
+There are several options to submit your appeal to the BVA:
+
+- Online
+
+  - Click [HERE](https://www.va.gov/decision-reviews/board-appeal/request-board-appeal-form-10182/introduction).
+- Via your VSO or lawyer
+
+- Fax
+
+
+> ```
+>  844-678-8979
+> ```
+
+- Snail Mail
+
+
+> ```
+>  Board of Veterans' Appeals
+>  P.O. Box 27063
+>  Washington, DC 20038
+> ```
+
+**Source:** [https://www.veteransbenefitskb.com/appeals#boardveteransappealsbvaakanoticeofdisagreementnodaka](https://www.veteransbenefitskb.com/appeals#boardveteransappealsbvaakanoticeofdisagreementnodaka)
+
+<!-- Chunk 1262/1358 | Topic: Board Veterans' Appeals (BVA) AKA, Notice of Disagreement (NOD), AKA | Type: appeals | Words: 398 -->
+
+---
+
+## Higher Courts (Courts above BVA)
+
+## **Higher Courts (Courts above BVA)**
+
+If you run out of new evidence and feel you just really need to take it to a higher judge then you can continue!
+
+* * *
+
+### Court of Appeals for Veterans Claims (CAVC)
+
+These judges can really do whatever they want in terms of interpreting the laws and regulations that bind the VBA. As such, decisions made by the CAVC create case law that _does_ change how the VBA operates!
+
+Veterans have **120 days** after their BVA decision in which to have their appeal in the hands of the CAVC. This appeal **MUST** be made to the [CAVC itself](https://www.uscourts.cavc.gov/appeal.php) and **NOT** the VA!
+
+While the Veteran is allowed to represent themselves it is **STRONGLY** recommended that they seek out a lawyer at this stage!
+
+* * *
+
+### [Court of Appeals for the Federal Circuit (CAFC)](http://www.cafc.uscourts.gov/)
+
+Veterans **MUST** submit a Notice of Appeal (NOA) to the CAFC through the CAVC, within **60 days** after the judgment is issued.
+
+* * *
+
+### U.S. Supreme Court
+
+The last and highest court you can go to is the U.S. Supreme Court.
+
+**Source:** [https://www.veteransbenefitskb.com/appeals#highercourtscourtsabovebva](https://www.veteransbenefitskb.com/appeals#highercourtscourtsabovebva)
+
+<!-- Chunk 1263/1358 | Topic: Higher Courts (Courts above BVA) | Type: appeals | Words: 187 -->
+
+---
+
+## Researching Previous Cases
+
+## **Researching Previous Cases**
+
+The BVA decision [Search engine](https://search.usa.gov/search?affiliate=bvadecisions) is your best friend to see how other cases similar to yours have been decided. Plug in keywords for your claim/appeal and search away!
+
+- Click [HERE](http://www.uscourts.cavc.gov/orders_and_opinions.php) to see past cases decided by the Court of Appeals for Veterans Claims (CAVC).
+
+
+**IMPORTANT NOTE:**
+
+- BVA does **NOT** establish case law! But the decisions _can_ help you if you try and use the arguments they presented.
+
+**Source:** [https://www.veteransbenefitskb.com/appeals#researchingpreviouscases](https://www.veteransbenefitskb.com/appeals#researchingpreviouscases)
+
+<!-- Chunk 1264/1358 | Topic: Researching Previous Cases | Type: appeals | Words: 74 -->
+
+---
+
+## Accredited Agents and Attorneys
+
+## **Accredited Agents and Attorneys**
+
+For Veterans who have a claim that has a certain legal angle or issue(s). Obtaining the services of an accredited agent or attorney may be beneficial.
+
+**IMPORTANT NOTE:**
+
+- _Most_ appeals do **NOT** require legal assistance!
+
+
+In order for an accredited agent or attorney to represent the Veteran. Both parties must sign a [VA Form 21-22a](https://www.vba.va.gov/pubs/forms/vba-21-22a-are.pdf).
+
+**IMPORTANT NOTE:**
+
+- Pay attention to **Block 23**! If you are only interested in having representation for a specific claim you **MUST** write this interest in this block! Failure to do so allows them to file additional appeals without additional consent!
+
+
+* * *
+
+### Fees (Fee Agreement)
+
+By [Law](https://www.law.cornell.edu/cfr/text/38/14.636) the Veteran **CANNOT** be charged more than **33.3%** of any _back pay_ the Veteran receives from the VA.
+
+**IMPORTANT NOTE:**
+
+- If the Veteran feels their agent/attorney did not earn their fee. Due to perceptions of poor communication with the Veteran, lack of action, etc. The Veteran **CAN** file a motion to have the fee reduced **OR** removed.
+
+
+For more information on the process click [HERE](https://www.va.gov/ogc/docs/accred/howtochallengeafee.pdf).
+
+* * *
+
+### Removing Representation
+
+It is possible to remove an accredited agent or an attorney from representing you at **ANY** time. This can be done by:
+
+- Submitting a [Personal statement](https://www.veteransbenefitskb.com/personal) saying you want to remove/revoke access to your specific representative;
+
+- Calling the VA at 1-800-698-2411 and let them know “Please remove \[Name of representative\] as my representative immediately.”; _or_
+
+- Assigning someone new as your representative be it another attorney, claim agent, or [VSO](https://www.veteransbenefitskb.com/vso).
+
+
+**IMPORTANT NOTE:**
+
+- Removing their representation does **NOT VOID** the fee agreement (you likely signed)! If it did there would be a lot of slick Veterans trying to screw over their representative.
+
+  - Again, if you later win your appeal and you feel they did not earn their fee you **CAN** still fight it (as mentioned previously).
+
+**Source:** [https://www.veteransbenefitskb.com/appeals#accreditedagentsandattorneys](https://www.veteransbenefitskb.com/appeals#accreditedagentsandattorneys)
+
+<!-- Chunk 1265/1358 | Topic: Accredited Agents and Attorneys | Type: appeals | Words: 312 -->
+
+---
+
+## Clear and Unmistakable Error (CUE)
+
+## **Clear and Unmistakable Error (CUE)**
+
+Oh no, it has been over a year but I still want all my back pay! If your claim has a CUE it is possible to still get that back pay.
+
+CUEs are **EXTREMELY** fact specific as such it is **STRONGLY** advised that the Veteran seek out an experienced VSO or lawyer to help them! If the Veteran makes an error in their filing the VA does **NOT** have a duty to assist them in the cases of CUEs. As such the CUE may be wasted.
+
+CUEs are **NOT** a matter of a difference in opinion. CUEs involve errors that **CANNOT** be debated and must be such, that a _reasonable person_ would agree that the VA messed up.
+
+CUEs must be based upon evidence that was available to the VA at the time the decision was made. The Veteran **CANNOT** assert that later evidence or evidence that was not given to the VA proved that the Veteran should have been given a favorable decision!
+
+Further, CUEs **MUST** be considered in the realm of what the laws/regulations/policies were _at the time they were decided_. Veterans **CANNOT** try to apply current laws/regulations/policies to decisions that were made prior to them!
+
+In order to invoke a CUE the Veteran **MUST** state a CUE has occurred _AND_ **MUST** specify the factual or legal error(s) at issue.
+
+**Seriously, get help!**
+
+**IMPORTANT NOTES:**
+
+- You only get **_ONE_** shot at a CUE per issue. That's it! If you pick something that isn't a CUE and you look back and 'gosh, oh shoot this other thing is the CUE!' That is it. Thanks for playing!
+
+- [Duty to Assist](https://veteransbenefitskb.com/dta) errors can **NEVER** be the basis of a CUE; as only evidence of record at the time of the prior decision can be considered.
+
+- CUEs are a knife that **CAN** cut both ways! Meaning these errors getting corrected **CAN** end up hurting or helping you. It is common for raters to find multiple additional CUEs when you declare a CUE; since a rater who already made at least 1 CUE is generally just gonna mess everything else up!
+
+  - CUEs **CANNOT** sever service-connection for conditions that have been service-connected for at least 10 years (barring findings of the grant itself having no legal basis or fraud).
+
+    - If [Secondary](https://www.veteransbenefitskb.com/claimtype#secondary) service-connection is granted for a condition **AND** the condition it is secondary to is severed, then the VA will then propose to sever the secondary conditions - assuming there are no other routes to grant them service-connection.
+  - CUEs **CANNOT** reduce an evaluation held for at least 20 years.
+- Forgotten claims (conditions not rated) and missed issues (conditions that should have been inferred or ancillary benefits that were overlooked) are **NOT** CUEs! While they are certainly administrative errors, they are _not_ CUEs because the VA has not erred in making a decision one way or the other.
+
+  - Generally forgotten and missed issues/benefits **CAN** be granted **WITH** back dated effective dates! You just need to point out in the claim/appeal that the VA failed to rate the issues in the previous decision and **EXPLAIN** why the VA should have considered it or that you meet the criteria of a grant previously and the VA failed to grant.
+
+    - Commonly missed ancillary benefits are things like [Special Monthly Compensation (SMC)](https://veteransbenefitskb.com/smc) and [Chapter 35](https://veteransbenefitskb.com/survivorbenefits#dea).
+
+    - Commonly missed inferred conditions are things like [Residual scars](https://veteransbenefitskb.com/skin#7802) and secondary [Nerve issues](https://veteransbenefitskb.com/nerveindex) due to a [Spine](https://veteransbenefitskb.com/spine) condition.
+
+      - NOTE: Inferring issues became policy circa 2014. So missed inferred issues prior to this year **CANNOT** be considered.
+- The VA does not have a form for forgotten claims or CUES; So you can file via a [Personal statement](https://veteransbenefitskb.com/personal) or on a [(20-0995)](http://www.vba.va.gov/pubs/forms/VBA-20-0995-ARE.pdf) to help the VA with keeping track of the claim.
+
+- VBA does **NOT** have jurisdiction to call or handle CUEs on _any_ matters decided by BVA or higher courts. Meaning if BVA denied you and it is _somehow_ objectively a CUE, you **MUST** file a timely CAVC appeal or call a CUE against BVA to BVA.
+
+  - This applies to **ANY** rating decisions on the matter made **BEFORE** the BVA or higher court decision on the matter.
+
+    - If you were denied in 2011 for your back and also in 2019, to then be denied again by BVA in 2023. You could **NOT** call a CUE against the 2011 or 2019 decisions (to VBA). As it is assumed BVA has reviewed and found no CUEs in the prior decisions (regarding your back) already.
+  - For information on how to call a CUE against BVA click [HERE](https://www.law.cornell.edu/cfr/text/38/20.1404). (38 CFR 20.1404)
+
+* * *
+
+### CUE Examples
+
+- Assigning incorrect SMC coding on your [Codesheet](https://www.veteransbenefitskb.com/ratingdecision#codesheet)
+
+- [Bilateral factor](https://veteransbenefitskb.com/vamath#bilateral) was not set properly in the master record (the codesheet derives its information from the master record)
+
+  - Rater set your left ankle as a right ankle. This can result in being underpaid if the bilateral factor would have increased your combined evaluation. The master record is mentioned here because the codesheet does **NOT** display what bilateral factor is selected by the rater; only what diagnostic codes have an active bilateral factor that is impacting your combined evaluation.
+- Conditions given a singular rating that should be rated separately
+
+- Conditions given separate ratings that should have been given a combined singular evaluation
+
+- [Effective dates](https://veteransbenefitskb.com/edate)
+
+  - Missing intents to file, that claim was filed within a year of separation, not applying [Liberalizing law](https://veteransbenefitskb.com/edate#lib), etc.
+- Granting/Denying service-connection/benefits
+
+- [Rating](https://veteransbenefitskb.com/ratingsindex) (too high or too low)
+
+- Rating decision took an action that resulted in reduced disability compensation payments and due process was **NOT** provided
+
+
+* * *
+
+### CUE Call Example
+
+The rating decision dated March 2, 2025, made a clear and unmistakable error assigning an increased evaluation for my [PTSD](https://www.veteransbenefitskb.com/mental) to 50% effective October 23, 2024. When the evidence of record shows my claim for increase was received within one year of an [Intent to File (ITF)](https://www.veteransbenefitskb.com/edate#itf). Therefore, the correct effective date of the increased evaluation for PTSD is January 6, 2024. (38 CFR 3.155, 38 CFR 3.400)
+
+On January 6, 2024, VA received my completed ITF. On October 23, 2024, VA received my completed claim for increase on a VA Form 526EZ, for my PTSD. As my completed claim was received within a year of the ITF, the correct effective date is January 6, 2024.
+
+**Source:** [https://www.veteransbenefitskb.com/appeals#clearandunmistakableerrorcue](https://www.veteransbenefitskb.com/appeals#clearandunmistakableerrorcue)
+
+<!-- Chunk 1266/1358 | Topic: Clear and Unmistakable Error (CUE) | Type: appeals | Words: 1068 -->
+
+---
+
+## Toxic Exposure and Hazardous Materials
+
+*Also known as: toxic exposure, hazardous materials, burn pit, radiation, asbestos, mustard gas, project shad*
+
+# Exposure to hazardous chemicals and materials
+
+Learn about chemical hazards or other hazardous materials you may have come in contact with during military service. And find out if you can get VA disability compensation for illnesses or conditions related to these exposures. We call these presumptive conditions.
+
+**Source:** [https://www.va.gov/disability/eligibility/hazardous-materials-exposure/#toxicexposureandhazardousmaterials](https://www.va.gov/disability/eligibility/hazardous-materials-exposure/#toxicexposureandhazardousmaterials)
+
+<!-- Chunk 1267/1358 | Topic: Toxic Exposure and Hazardous Materials | Type: presumptive | Words: 48 -->
+
+---
+
+## Medical care for volunteers involved in chemical and biological testing
+
+## Medical care for volunteers involved in chemical and biological testing
+
+As many as 60,000 Veterans volunteered for medical research for the U.S. biological and chemical programs between 1942 and 1975. You can get medical care through the U.S. Army if you volunteered for this research and have an injury or illness directly caused by your participation.
+
+**Source:** [https://www.va.gov/disability/eligibility/hazardous-materials-exposure/#medicalcareforvolunteersinvolvedinchemicalandbiologicaltesting](https://www.va.gov/disability/eligibility/hazardous-materials-exposure/#medicalcareforvolunteersinvolvedinchemicalandbiologicaltesting)
+
+<!-- Chunk 1268/1358 | Topic: Medical care for volunteers involved in chemical and biological testing | Type: presumptive | Words: 57 -->
+
+---
+
+## Types of exposure
+
+## Types of exposure
+
+* * *
+
+### Agent Orange
+
+If you served in the Republic of Vietnam or in or near the Korean Demilitarized Zone (DMZ) during the Vietnam Era—or in certain related jobs—you may have had contact with Agent Orange, an herbicide used to clear plants and trees during the war.
+
+[Learn about compensation based on Agent Orange exposure](https://www.va.gov/disability/eligibility/hazardous-materials-exposure/agent-orange "Agent Orange exposure and disability compensation")
+
+### Asbestos
+
+If you worked in certain military jobs, you may have had contact with asbestos (toxic fibers once used in many buildings and products).
+
+[Learn about compensation based on asbestos exposure](https://www.va.gov/disability/eligibility/hazardous-materials-exposure/asbestos "Veterans asbestos exposure")
+
+### Birth defects like spina bifida
+
+If you served in the Republic of Vietnam, in Thailand, or in or near the Korean DMZ during the Vietnam Era—and your child has spina bifida or certain other birth defects—your child may be eligible for disability benefits.
+
+[Learn about compensation based on birth defects like spina bifida](https://www.va.gov/disability/eligibility/special-claims/birth-defects "Birth defects linked to Agent Orange")
+
+### Burn pits and other specific environmental hazards
+
+If you served in Iraq, Afghanistan, or certain other areas, you may have had contact with toxic chemicals in the air, water, or soil.
+
+[Learn about compensation based on burn pits and other specific environmental hazards](https://www.va.gov/disability/eligibility/hazardous-materials-exposure/specific-environmental-hazards "Exposure to burn pits and other specific environmental hazards")
+
+### Contact with mustard gas or lewisite
+
+If you served at the German bombing of Bari, Italy, in World War II or worked in certain other jobs, you may have had contact with mustard gas.
+
+[Learn about compensation based on mustard gas or lewisite exposure](https://www.va.gov/disability/eligibility/hazardous-materials-exposure/mustard-gas-lewisite "Mustard gas or lewisite exposure")
+
+### Contaminated drinking water at Camp Lejeune
+
+If you served at Camp Lejeune or MCAS New River between August 1953 and December 1987, you may be at risk of certain illnesses believed to be caused by contaminants found in the drinking water during that time.
+
+[Learn about compensation based on contaminated drinking water at Camp Lejeune](https://www.va.gov/disability/eligibility/hazardous-materials-exposure/camp-lejeune-water-contamination "Camp Lejeune water contamination health issues")
+
+### Gulf War Illnesses in Southwest Asia
+
+If you served in the Southwest Asia theater of operations, you may be at risk of certain illnesses or other conditions linked to this region.
+
+[Learn about compensation based on Gulf War illnesses in Southwest Asia](https://www.va.gov/disability/eligibility/hazardous-materials-exposure/gulf-war-illness-southwest-asia "Gulf War Illnesses linked to Southwest Asia service")
+
+### Gulf War Illnesses in Afghanistan
+
+If you served in Afghanistan, you may be at risk of certain illnesses or other conditions linked to this region.
+
+[Learn about compensation based on Gulf War illnesses in Afghanistan](https://www.va.gov/disability/eligibility/hazardous-materials-exposure/gulf-war-illness-afghanistan "Gulf War Illnesses linked to Afghanistan service")
+
+### Project 112 or Project SHAD
+
+If you were part of warfare testing for Project 112 or Project Shipboard Hazard and Defense (SHAD) from 1962 to 1974, you may be at risk of illnesses believed to be caused by chemical testing.
+
+[Learn about compensation based on Project 112/SHAD](https://www.va.gov/disability/eligibility/hazardous-materials-exposure/project-112-shad "Exposure through Project 112 or Project SHAD")
+
+### Radiation exposure
+
+If you served in the post-WWII occupation of Hiroshima or Nagasaki, were imprisoned in Japan, worked with or near nuclear weapons testing, or served at a gaseous diffusion plant or in certain other jobs, you may be at risk of illnesses believed to be caused by radiation.
+
+[Learn about compensation based on radiation exposure](https://www.va.gov/disability/eligibility/hazardous-materials-exposure/ionizing-radiation "Ionizing radiation exposure")
+
+[Back to topBack to top](https://www.va.gov/disability/eligibility/hazardous-materials-exposure/#ds-back-to-top)
+
+**Source:** [https://www.va.gov/disability/eligibility/hazardous-materials-exposure/#typesofexposure](https://www.va.gov/disability/eligibility/hazardous-materials-exposure/#typesofexposure)
+
+<!-- Chunk 1269/1358 | Topic: Types of exposure | Type: presumptive | Words: 541 -->
+
+---
+
+### FAQ: Should I bother completing FAFSA or getting scholarships/grants when VA will be paying for everything anyway?
+
+*Also known as: GI Bill, chapter 33, post-9/11, post 9/11 gi bill, montgomery gi bill, chapter 30, chapter 32, VEAP, MGIB, education benefits*
+
+**Question:** Should I bother completing FAFSA or getting scholarships/grants when VA will be paying for everything anyway?
+
+**Answer:** **YES**! Even if the VA does cover everything you **CAN** generally pocket that money after everything filters through your school!
+
+  - How this works is: School counts up what all fees and tuition you owe and offsets that by any loans, scholarships, grants, etc. If there ends up being a positive balance in your account when everything is said and done you will be refunded that positive balance! If the school applies your loans, scholarships, etc before VA pays the school **THAT IS FINE**! As in the end, the VA will pay the school as appropriate meaning any left over positive balance is still **YOURS**!
+
+    - Tuition assistance through say a job will not result in you pocketing that money. You will in essence be giving the government a discount is all.
+
+    - Scholarships and grants can be pocketed! So be sure to file for them!
+
+**Source:** [https://www.veteransbenefitskb.com/gibill#faq](https://www.veteransbenefitskb.com/gibill#faq)
+
+<!-- Chunk 1270/1358 | Topic: GI Bill Education Benefits - FAQ | Type: faq | Words: 164 -->
+
+---
+
+### FAQ: If I switch to the Post 9/11 GI Bill can I get my $1,200 back?
+
+*Also known as: GI Bill, chapter 33, post-9/11, post 9/11 gi bill, montgomery gi bill, chapter 30, chapter 32, VEAP, MGIB, education benefits*
+
+**Question:** If I switch to the Post 9/11 GI Bill can I get my $1,200 back?
+
+**Answer:** Yes, if you exhaust all 36 months you will get the money back in your final MHA payment. If you are **NOT** receiving MHA in your final month then you will **NOT** get this money back automatically!
+
+**Source:** [https://www.veteransbenefitskb.com/gibill#faq](https://www.veteransbenefitskb.com/gibill#faq)
+
+<!-- Chunk 1271/1358 | Topic: GI Bill Education Benefits - FAQ | Type: faq | Words: 54 -->
+
+---
+
+### FAQ: Will I have to repay the VA if I fail a course?
+
+*Also known as: GI Bill, chapter 33, post-9/11, post 9/11 gi bill, montgomery gi bill, chapter 30, chapter 32, VEAP, MGIB, education benefits*
+
+**Question:** Will I have to repay the VA if I fail a course?
+
+**Answer:** No, so long as the Veteran did not fail due to failure to attend the course (the professor annotated that the Veteran failed purely due to non-attendance). This is not to be confused with failure due to poor performance that may have been due to non/poor attendance.
+
+**Source:** [https://www.veteransbenefitskb.com/gibill#faq](https://www.veteransbenefitskb.com/gibill#faq)
+
+<!-- Chunk 1272/1358 | Topic: GI Bill Education Benefits - FAQ | Type: faq | Words: 61 -->
+
+---
+
+### FAQ: Will I have to repay the VA if I drop (withdraw) a course?
+
+*Also known as: GI Bill, chapter 33, post-9/11, post 9/11 gi bill, montgomery gi bill, chapter 30, chapter 32, VEAP, MGIB, education benefits*
+
+**Question:** Will I have to repay the VA if I drop (withdraw) a course?
+
+**Answer:** Maybe, if the course(s) you drop do not put you below full time you will not create any debt.
+
+If the course(s) you drop put you below full time you **may** create a debt.
+
+**UNLESS** this is the first time dropping 6 credits (that puts you below full time). This is known as the [6 credit hour exclusion](https://www.va.gov/resources/how-your-reason-for-withdrawing-from-a-class-affects-your-va-debt/)
+
+If you are going beyond this exclusion, you may still not owe a debt if you were/are experiencing [Mitigating circumstances](https://www.va.gov/resources/how-your-reason-for-withdrawing-from-a-class-affects-your-va-debt/).
+
+Otherwise, yes. You will owe a debt.
+
+**Source:** [https://www.veteransbenefitskb.com/gibill#faq](https://www.veteransbenefitskb.com/gibill#faq)
+
+<!-- Chunk 1273/1358 | Topic: GI Bill Education Benefits - FAQ | Type: faq | Words: 100 -->
+
+---
+
+### FAQ: I was told I owe a debt, can I request a debt waiver?
+
+*Also known as: GI Bill, chapter 33, post-9/11, post 9/11 gi bill, montgomery gi bill, chapter 30, chapter 32, VEAP, MGIB, education benefits*
+
+**Question:** I was told I owe a debt, can I request a debt waiver?
+
+**Answer:** Yes.
+
+  - For information click [HERE](https://www.va.gov/resources/waivers-for-va-benefit-debt/).
+
+**Source:** [https://www.veteransbenefitskb.com/gibill#faq](https://www.veteransbenefitskb.com/gibill#faq)
+
+<!-- Chunk 1274/1358 | Topic: GI Bill Education Benefits - FAQ | Type: faq | Words: 21 -->
+
+---
+
+### FAQ: Can I transfer my education benefits?
+
+*Also known as: GI Bill, chapter 33, post-9/11, post 9/11 gi bill, montgomery gi bill, chapter 30, chapter 32, VEAP, MGIB, education benefits*
+
+**Question:** Can I transfer my education benefits?
+
+**Answer:** If you have already separated **NO**!
+
+- If you were a member of the Armed Forces on August 1, 2009 and eligible for the Post-9/11 GI Bill, the Department of Defense (DoD) offers you the opportunity to transfer benefits to your spouse or dependents.
+
+For any deaths occurring on or after August 1, 2009:
+
+If the dependent you transferred benefits to dies, the Veteran/Servicemember may transfer any remaining unused benefits to a different eligible dependent.
+
+If a dependent has received transferred entitlement and the Veteran/Servicemember dies, the dependent may transfer his or her unused benefits to a different eligible dependent of the Veteran/Servicemember.
+
+Commissioned officers of the Public Health Service (PHS) and the National Oceanic and Atmospheric Administration (NOAA) are eligible for the transferability option effective August 1, 2011. While in the Armed Forces, transferors use the Transfer of Education Benefits (TEB) website to designate, modify, and revoke a Transfer of Entitlement (TOE) request. After leaving the Armed Forces, transferors may provide a future effective date for use of TOE, modify the number of months transferred, or revoke entitlement transferred by submitting a written request to VA.
+
+NOTE:
+
+  - After separating from the Armed Forces individuals cannot designate new dependents to receive transferred entitlement or amend the effective date of the initial transfer of entitlement to an earlier date.
+
+**Source:** [https://www.veteransbenefitskb.com/gibill#faq](https://www.veteransbenefitskb.com/gibill#faq)
+
+<!-- Chunk 1275/1358 | Topic: GI Bill Education Benefits - FAQ | Type: faq | Words: 227 -->
+
+---
+
+### FAQ: Can I use multiple education programs at the same time if I qualify for them?
+
+*Also known as: GI Bill, chapter 33, post-9/11, post 9/11 gi bill, montgomery gi bill, chapter 30, chapter 32, VEAP, MGIB, education benefits*
+
+**Question:** Can I use multiple education programs at the same time if I qualify for them?
+
+**Answer:** No, you can only use one program at a time.
+
+**Source:** [https://www.veteransbenefitskb.com/gibill#faq](https://www.veteransbenefitskb.com/gibill#faq)
+
+<!-- Chunk 1276/1358 | Topic: GI Bill Education Benefits - FAQ | Type: faq | Words: 27 -->
+
+---
+
+### FAQ: If I use up all of my GI bill benefits (run out of months) during the term what happens?
+
+*Also known as: GI Bill, chapter 33, post-9/11, post 9/11 gi bill, montgomery gi bill, chapter 30, chapter 32, VEAP, MGIB, education benefits*
+
+**Question:** If I use up all of my GI bill benefits (run out of months) during the term what happens?
+
+**Answer:** VA will pay out benefits to include tuition/mandatory fees for the remainder of the term.
+
+  - **UNLESS** you are a dependent using your parent’s GI bill! In which case, your benefit will end as detailed in the next question.
+
+**Source:** [https://www.veteransbenefitskb.com/gibill#faq](https://www.veteransbenefitskb.com/gibill#faq)
+
+<!-- Chunk 1277/1358 | Topic: GI Bill Education Benefits - FAQ | Type: faq | Words: 60 -->
+
+---
+
+### FAQ: If my GI bill expires (delimiting date) during the term what happens?
+
+*Also known as: GI Bill, chapter 33, post-9/11, post 9/11 gi bill, montgomery gi bill, chapter 30, chapter 32, VEAP, MGIB, education benefits*
+
+**Question:** If my GI bill expires (delimiting date) during the term what happens?
+
+**Answer:** VA will prorate the tuition/mandatory fees to the delimiting date and stop paying any housing allowance once you get to that delimiting date.
+
+**Source:** [https://www.veteransbenefitskb.com/gibill#faq](https://www.veteransbenefitskb.com/gibill#faq)
+
+<!-- Chunk 1278/1358 | Topic: GI Bill Education Benefits - FAQ | Type: faq | Words: 37 -->
+
+---
+
+### FAQ: I received something other than an Honorable discharge can I still qualify for the GI Bill?
+
+*Also known as: GI Bill, chapter 33, post-9/11, post 9/11 gi bill, montgomery gi bill, chapter 30, chapter 32, VEAP, MGIB, education benefits*
+
+**Question:** I received something other than an Honorable discharge can I still qualify for the GI Bill?
+
+**Answer:** It depends!
+
+If you reenlisted once or had an appropriate prior period of service that was honorable then you are good to go!
+
+**IMPORTANT NOTE:**
+
+- If the period of service(s) (time between reenlistment(s)) was shorter than the time needed to earn the full entitlement, then your benefit will be prorated appropriately.
+
+**Source:** [https://www.veteransbenefitskb.com/gibill#faq](https://www.veteransbenefitskb.com/gibill#faq)
+
+<!-- Chunk 1279/1358 | Topic: GI Bill Education Benefits - FAQ | Type: faq | Words: 70 -->
+
+---
+
+### FAQ: If I receive an Other than Honorable discharge from the Reserves/National Guard can I lose my Active Duty GI Bill?
+
+*Also known as: GI Bill, chapter 33, post-9/11, post 9/11 gi bill, montgomery gi bill, chapter 30, chapter 32, VEAP, MGIB, education benefits*
+
+**Question:** If I receive an Other than Honorable discharge from the Reserves/National Guard can I lose my Active Duty GI Bill?
+
+**Answer:** So long as that GI Bill was earned from a period of honorable service, you good.
+
+**Source:** [https://www.veteransbenefitskb.com/gibill#faq](https://www.veteransbenefitskb.com/gibill#faq)
+
+<!-- Chunk 1280/1358 | Topic: GI Bill Education Benefits - FAQ | Type: faq | Words: 38 -->
+
+---
+
+### FAQ: I know you just answered it... but what about if the GI Bill is from a deployment I did in the Reserves/Guard?
+
+*Also known as: GI Bill, chapter 33, post-9/11, post 9/11 gi bill, montgomery gi bill, chapter 30, chapter 32, VEAP, MGIB, education benefits*
+
+**Question:** I know you just answered it... but what about if the GI Bill is from a deployment I did in the Reserves/Guard?
+
+**Answer:** You are still entitled to your GI Bill assuming of course that deployment resulted in an Honorable discharge. A following period of service is not going to take that prior entitlement away.
+
+**Source:** [https://www.veteransbenefitskb.com/gibill#faq](https://www.veteransbenefitskb.com/gibill#faq)
+
+<!-- Chunk 1281/1358 | Topic: GI Bill Education Benefits - FAQ | Type: faq | Words: 56 -->
+
+---
+
+### FAQ: Can I use my education benefits overseas?
+
+*Also known as: GI Bill, chapter 33, post-9/11, post 9/11 gi bill, montgomery gi bill, chapter 30, chapter 32, VEAP, MGIB, education benefits*
+
+**Question:** Can I use my education benefits overseas?
+
+**Answer:** [Yes](https://www.va.gov/education/about-gi-bill-benefits/how-to-use-benefits/study-at-foreign-schools/), you can use your benefits so long as:
+
+  - The program is at an institution of higher learning where you’ll earn a standard associate degree or higher, or an equivalent degree at that foreign school; **AND**
+
+  - The VA has approved your program.
+
+**Source:** [https://www.veteransbenefitskb.com/gibill#faq](https://www.veteransbenefitskb.com/gibill#faq)
+
+<!-- Chunk 1282/1358 | Topic: GI Bill Education Benefits - FAQ | Type: faq | Words: 53 -->
+
+---
+
+### FAQ: Can I go to multiple schools at the same time?
+
+*Also known as: GI Bill, chapter 33, post-9/11, post 9/11 gi bill, montgomery gi bill, chapter 30, chapter 32, VEAP, MGIB, education benefits*
+
+**Question:** Can I go to multiple schools at the same time?
+
+**Answer:** You **CANNOT** use your GI Bill at two different schools at the same time to get 2 _separate_ degrees.
+
+- You **CAN** use your GI Bill at 2 separate schools if all courses are being applied toward 1 degree (concurrent enrollment).
+
+- You **CAN** use your GI Bill at 1 school and separately fund another degree at a separate school yourself.
+
+**Source:** [https://www.veteransbenefitskb.com/gibill#faq](https://www.veteransbenefitskb.com/gibill#faq)
+
+<!-- Chunk 1283/1358 | Topic: GI Bill Education Benefits - FAQ | Type: faq | Words: 73 -->
+
+---
+
+### FAQ: Why do online only programs pay half the national average rate instead of the full amount?
+
+*Also known as: GI Bill, chapter 33, post-9/11, post 9/11 gi bill, montgomery gi bill, chapter 30, chapter 32, VEAP, MGIB, education benefits*
+
+**Question:** Why do online only programs pay half the national average rate instead of the full amount?
+
+**Answer:** To discourage schools/Vets from milking their benefits for the housing allowance instead of getting a worthwhile degree. When Congress was contemplating giving online programs housing allowance, schools were propping up shell campuses at high allowance locations to lure Vets to their online programs. So to help prevent this issue, it was decided that half the national rate would be best.
+
+**Source:** [https://www.veteransbenefitskb.com/gibill#faq](https://www.veteransbenefitskb.com/gibill#faq)
+
+<!-- Chunk 1284/1358 | Topic: GI Bill Education Benefits - FAQ | Type: faq | Words: 78 -->
+
+---
+
+### FAQ: When do I get paid my housing allowance!?
+
+*Also known as: GI Bill, chapter 33, post-9/11, post 9/11 gi bill, montgomery gi bill, chapter 30, chapter 32, VEAP, MGIB, education benefits*
+
+**Question:** When do I get paid my housing allowance!?
+
+**Answer:** Two things:
+
+1. VA pays in arrears meaning: You are paid at the end of the of the month for the same month. So - September is paid at the **END** of September, etc.
+
+2. Benefits are paid out by the Treasury Department using a **_10 business day window_** centered around the end of the month. Meaning - there is no specific date each month the Treasury is required to pay any VA education benefits.
+
+**Source:** [https://www.veteransbenefitskb.com/gibill#faq](https://www.veteransbenefitskb.com/gibill#faq)
+
+<!-- Chunk 1285/1358 | Topic: GI Bill Education Benefits - FAQ | Type: faq | Words: 85 -->
+
+---
+
+### FAQ: I know VA disability does not pro-rate disability payments. But can my housing allowance get pro-rated?
+
+*Also known as: GI Bill, chapter 33, post-9/11, post 9/11 gi bill, montgomery gi bill, chapter 30, chapter 32, VEAP, MGIB, education benefits*
+
+**Question:** I know VA disability does not pro-rate disability payments. But can my housing allowance get pro-rated?
+
+**Answer:** **YES**! Unlike VA disability, education benefits **ARE** prorated (getting paid for partial months).
+
+**Source:** [https://www.veteransbenefitskb.com/gibill#faq](https://www.veteransbenefitskb.com/gibill#faq)
+
+<!-- Chunk 1286/1358 | Topic: GI Bill Education Benefits - FAQ | Type: faq | Words: 31 -->
+
+---
+
+### FAQ: I qualify for both the Montgomery and the Post 9/11, which is best?
+
+*Also known as: GI Bill, chapter 33, post-9/11, post 9/11 gi bill, montgomery gi bill, chapter 30, chapter 32, VEAP, MGIB, education benefits*
+
+**Question:** I qualify for both the Montgomery and the Post 9/11, which is best?
+
+**Answer:** This answer varies from person to person and what exactly they want to use their benefit on and their specific circumstances.
+
+  - Math breaks down to this in short: Does the Monty stipend or Post, let me pocket the most?
+
+    - While in most cases, Post comes out on top - this is **NOT** always the case. So it would behoove you to check.
+
+      - [HERE](https://www.va.gov/education/gi-bill-comparison-tool/) is the GI Bill Comparison Tool.
+
+**Source:** [https://www.veteransbenefitskb.com/gibill#faq](https://www.veteransbenefitskb.com/gibill#faq)
+
+<!-- Chunk 1287/1358 | Topic: GI Bill Education Benefits - FAQ | Type: faq | Words: 87 -->
+
+---
+
+### References and Legal Citations
+
+*Also known as: GI Bill, chapter 33, post-9/11, post 9/11 gi bill, montgomery gi bill, chapter 30, chapter 32, VEAP, MGIB, education benefits*
+
+## **References**
+
+- [38 CFR § 21.5022 - Eligibility under more than one program](https://www.law.cornell.edu/cfr/text/38/21.5022)
+
+- [38 CFR § 21.9530 - Eligibility time limit](https://www.law.cornell.edu/cfr/text/38/21.9530)
+
+- [38 CFR § 21.9650 - Increase in educational assistance](https://www.law.cornell.edu/cfr/text/38/21.9650)
+
+- [38 CFR § 21.9635 - Discontinuance dates](https://www.law.cornell.edu/cfr/text/38/21.9635)
+
+- [38 U.S. Code CHAPTER 30 — ALL-VOLUNTEER FORCE EDUCATIONAL ASSISTANCE PROGRAM](https://www.law.cornell.edu/uscode/text/38/part-III/chapter-30)
+
+- [38 U.S. Code CHAPTER 32 — POST-VIETNAM ERA VETERANS’ EDUCATIONAL ASSISTANCE](https://www.law.cornell.edu/uscode/text/38/part-III/chapter-32)
+
+- [38 U.S. Code CHAPTER 33 — POST–9/11 EDUCATIONAL ASSISTANCE](https://www.law.cornell.edu/uscode/text/38/part-III/chapter-33)
+
+- [38 U.S. Code CHAPTER 34 — VETERANS’ EDUCATIONAL ASSISTANCE](https://www.law.cornell.edu/uscode/text/38/part-III/chapter-34)
+
+- [38 U.S. Code § 5302 - Waiver of recovery of claims by the United States](https://www.law.cornell.edu/uscode/text/38/5302)
+
+- [Colonel John M. McHugh Tuition Fairness for Survivors Act of 2021](https://legiscan.com/US/text/SB1095/2021)
+
+- [M22-4](https://www.knowva.ebenefits.va.gov/system/templates/selfservice/va_ssnew/help/customer/locale/en-US/portal/554400000001018/topic/554400000016106/M22-4)
+
+- [M28C.V.B.6 Direct Reimbursement and Retroactive Induction](https://www.knowva.ebenefits.va.gov/system/templates/selfservice/va_ssnew/help/customer/locale/en-US/portal/554400000001018/content/554400000143066/M28CVB6-Direct-Reimbursement-and-Retroactive-Induction)
+
+- [Montgomery GI Bill - Active Duty](https://www.law.cornell.edu/cfr/text/38/part-21/subpart-K)
+
+- [Montgomery GI Bill - Selected Reserve](https://www.law.cornell.edu/cfr/text/38/part-21/subpart-L)
+
+- [PART 1, GENERAL, CHAPTER 11, COMMITTEE ON WAIVERS AND COMPROMISES](https://www.knowva.ebenefits.va.gov/system/templates/selfservice/va_ssnew/help/customer/locale/en-US/portal/554400000001018/content/554400000105890/PART-1-GENERAL-CHAPTER-11-COMMITTEE-ON-WAIVERS-AND-COMPROMISES)
+
+- [School Certifying Official Handbook](https://www.knowva.ebenefits.va.gov/system/templates/selfservice/va_ssnew/help/customer/locale/en-US/portal/554400000001018/content/554400000149088/School-Certifying-Official-Handbook-On-line#85%2F15%20Rule)
+
+- [Transferring Your POST-9/11 GI Bill](https://www.va.gov/education/transfer-post-9-11-gi-bill-benefits/)
+
+
+
+
+#### **Veterans Benefits Knowledge Base**
+
+- [Homepage Link](https://www.veteransbenefitskb.com/)
+
+
+#### Affiliated Partners
+
+- Sub-Reddit: [r/VeteransBenefits](https://www.reddit.com/r/VeteransBenefits/)
+
+- Discord Server: [U.S. Veterans Network](https://discord.gg/yjnYFUKBJC)
+
+- [VA Claim Tracker App](https://chromewebstore.google.com/detail/va-claim-tracker/onbanekcefgnibhlaiimeadkbdahjpoo)
+
+**Source:** [https://www.veteransbenefitskb.com/gibill#references](https://www.veteransbenefitskb.com/gibill#references)
+
+<!-- Chunk 1288/1358 | Topic: GI Bill Education Benefits - Legal References | Type: references | Words: 183 -->
+
+---
+
+## GI Bill Education Benefits
+
+*Also known as: GI Bill, chapter 33, post-9/11, post 9/11 gi bill, montgomery gi bill, chapter 30, chapter 32, VEAP, MGIB, education benefits*
+
+# **GI Bills**
+
+
+[![](https://images.squarespace-cdn.com/content/v1/66c515a3e8305f0f79e8b680/bd22f10b-2167-4509-9215-2b49d4a4e22f/search3.png)](https://cse.google.com/cse?cx=8392d3f710df0427c)
+
+
+
+[\> Master Condition List](https://veteransbenefitskb.com/master)
+
+[\> Federal Benefits List by Combined Ratings](https://veteransbenefitskb.com/combinedbenefits)
+
+[\> Insider Insight into VBA Claim Processing](https://veteransbenefitskb.com/insight)
+
+[\> Rating Schedule Index](https://veteransbenefitskb.com/ratingsindex)
+
+[\> Filing a VA Disability Claim](https://veteransbenefitskb.com/vaclaim)
+
+[\> Filing an Appeal](https://veteransbenefitskb.com/appeals)
+
+* * *
+
+
+
+
+
+
+
+
+
+The Department of Veteran Affairs offers several different types of education opportunities, each with their own eligibility requirements and benefit amounts.
+
+**IMPORTANT NOTES:**
+
+- Veterans have a lifetime limit of **48 months** of GI Bill benefits.
+
+  - This limit does **NOT** prevent the Veteran from using other education benefits such as the rehabilitation program under [Veteran Readiness and Employment (VR&E)](https://veteransbenefitskb.com/vre). **HOWEVER**, using your GI Bill **BEFORE** VR&E - goes against the limit usages for VR&E **UNLESS**:
+
+    - The GI Bill usage is considered as having been under VR&E via _retroactive induction_. In which case, the VA would restore the GI Bill eligibility (months used) and count the months used against the VR&E entitlement only.
+
+      - Click [HERE](https://www.knowva.ebenefits.va.gov/system/templates/selfservice/va_ssnew/help/customer/locale/en-US/portal/554400000001018/content/554400000143066/M28CVB6-Direct-Reimbursement-and-Retroactive-Induction#a%206.02) for details.
+- It **IS** possible for someone to use 48 months of VR&E benefits and then separately use 48 months of GI Bill benefits.
+
+- If you reenlisted at least once while on Active Duty and your last period of service was _Other than Honorable_ you can be eligible to _at least some_ GI bill benefits since that prior period **IS** considered to be Honorable!
+
+- VA disability direct deposit information is **NOT** shared with the education arm of things, meaning you **NEED** to set this up!
+
+- Benefits are **NOT PAID** when you are not using the benefit… meaning if you are not taking summer/winter courses you will **NOT** get benefits during those months! So be prepared!
+
+- Those using their parent’s GI Bill **MUST** do so **BEFORE** turning 26 years old!
+
+- Spouses using their spouse’s GI Bill **MUST** do so:
+
+  - Within 15 years from date of separation, if spouse separated before January 1, 2013.
+
+    - No limit if spouse separated on or after January 1, 2013.
+
+* * *
+
+**Source:** [https://www.veteransbenefitskb.com/gibill#gibilleducationbenefits](https://www.veteransbenefitskb.com/gibill#gibilleducationbenefits)
+
+<!-- Chunk 1289/1358 | Topic: GI Bill Education Benefits | Type: education | Words: 330 -->
+
+---
+
+## Chapter 30 (Montgomery GI Bill (MGIB) - Active Duty)
+
+## **Chapter 30 (Montgomery GI Bill (MGIB) - Active Duty)**
+
+Benefits are generally payable for **10 years** following your release from _honorable_ active service.
+
+**IMPORTANT UPDATE:**
+
+- On April 16, 2024 the [Supreme Court of the United States decided](https://www.supremecourt.gov/opinions/23pdf/22-888_1b8e.pdf?fbclid=IwZXh0bgNhZW0CMTAAAR1jgVkoU9pyW0_VUZ1quTTk9j_TgooxAcctNaiucPODSCf5e_yuokuHx7E_aem_AeZxOBBdYe_TbCLrTWjlbWeUyPkJj21guJkOHfF1gkENinJrzKFa-3YXbIq-hbQ0eSSD71Qbblu2C8ZIvsn8xkph) that if you served at least two periods ( **CAN** include a reenlistment _without_ a break in service) of service-one that qualifies for the Montgomery GI Bill (MGIB) and another that qualifies for the Post-9/11 GI Bill (PGIB)-you may be able to receive additional GI Bill benefits.
+
+  - For additional information click [HERE](https://benefits.va.gov/gibill/rudisill.asp).
+
+* * *
+
+### Eligibility
+
+You may be an eligible if you have an honorable discharge; **AND** you have a high school diploma or GED or in some cases 12 hours of college credit; **AND** you meet the requirements of 1 of the categories below:
+
+* * *
+
+#### CATEGORY I
+
+- Entered Active Duty after June 30, 1985, and did **NOT** decline participation in the program.
+
+- Had military pay reduced by $100 a month for first 12 months.
+
+- Continuously served for 3 years _or_ 2 years, if that is what you first enlisted for or if you entered the Selected Reserve within a year of leaving Active Duty and served 4 years (the 2 by 4 program).
+
+
+* * *
+
+#### CATEGORY II
+
+- Entered Active Duty before January 1, 1977.
+
+- Served at least 1 day between October 19, 1984 and June 30, 1985, and stayed on Active Duty through June 30, 1988, (or through June 30, 1987 if you entered the Selected Reserve within 1 year of leaving Active Duty and served 4 years).
+
+- On December 31, 1989, you had entitlement left from Vietnam-era GI Bill.
+
+
+* * *
+
+#### CATEGORY III
+
+- Not eligible for MGIB under Category I or II.
+
+- Served on Active Duty on September 30, 1990 **AND** separated involuntarily after February 2, 1991, **OR** involuntarily separated on or after November 30, 1993, **OR** voluntarily separated under either the Voluntary Separation Incentive (VSI) or Special Separation Benefit (SSB) program.
+
+- Before separation, you had military pay reduced by $1,200.
+
+
+* * *
+
+#### CATEGORY IV
+
+- Served on Active Duty on October 9, 1996 **AND** you had money remaining in a VEAP account on that date **AND** you elected MGIB by October 9, 1997, **OR** you entered full-time National Guard duty under title 32, U.S.C, between July 1, 1985, and November 28, 1989, **AND** you elected MGIB during the period October 9, 1996 - July 8, 1997.
+
+- Had military pay reduced by $100 a month for 12 months or made a $1,200 lump-sum contribution.
+
+
+* * *
+
+### Benefits
+
+- 36 months of a [Monthly stipend](https://www.va.gov/education/benefit-rates/montgomery-active-duty-rates).
+
+- May be used for college degree and certificate programs, technical or vocational courses, flight training, apprenticeships or on-the-job training, high-tech training, licensing and certification tests, entrepreneurship training, certain entrance examinations, and correspondence courses. Remedial, deficiency, and refresher courses may be approved under certain circumstances.
+
+
+* * *
+
+### $600 Buy-Up Program
+
+Servicemembers may contribute up to an additional $600 to the GI Bill to receive increased monthly benefits. For an additional $600 contribution, you may receive up to $5,400 in additional GI Bill benefits.
+
+**IMPORTANT NOTES:**
+
+- The additional contribution(s) **MUST** have been made while on Active Duty.
+
+
+- The Buy-Up Program is **NOT** refunded if the Veteran transfers over to the Post 9/11 GI Bill.
+
+
+* * *
+
+### Kicker AKA Branch College Fund
+
+Veterans who joined an MOS that was listed as having a critical shortage of personnel may have gotten a kicker that increased their benefit.
+
+The maximum is an additional $950 a month, which was based upon the length of your initial contract.
+
+The Veteran will be paid their kicker amount as a pro-rated lump sum (for however long the semester is and their percentage of degree of pursuit) at the start of the semester.
+
+**Source:** [https://www.veteransbenefitskb.com/gibill#chapter30montgomerygibillmgibactiveduty](https://www.veteransbenefitskb.com/gibill#chapter30montgomerygibillmgibactiveduty)
+
+<!-- Chunk 1290/1358 | Topic: Chapter 30 (Montgomery GI Bill (MGIB) - Active Duty) | Type: education | Words: 649 -->
+
+---
+
+## Chapter 32 (Veteran Education Assistance Program - VEAP)
+
+## **Chapter 32 (Veteran Education Assistance Program - VEAP)**
+
+You have 10 years from your release from Active Duty to use VEAP benefits. If the entitlement is not used after the 10-year period, your portion remaining in the fund _should_ be automatically refunded.
+
+If this does not happen, the Veteran may submit VA Form 22-5281 and mail it to their nearest VA Regional Office.
+
+* * *
+
+### Eligibility
+
+You must meet the following requirements to qualify:
+
+- Entered service for the first time between January 1, 1977, and June 30, 1985;
+
+- Opened a contribution account before April 1, 1987;
+
+- Voluntarily contributed from $25 to $2,700; and
+
+- Completed your first period of service and were discharged or released from service under conditions other than dishonorable.
+
+
+If you are currently on Active Duty and wish to receive VEAP benefits, you must have at least 3 months of contributions available.
+
+* * *
+
+### Benefits
+
+- 36 months depending on the number of monthly contributions.
+
+- You may use these benefits for degree, certificate, correspondence, apprenticeship/on-the-job training programs, and vocational flight training programs.
+
+**Source:** [https://www.veteransbenefitskb.com/gibill#chapter32veteraneducationassistanceprogramveap](https://www.veteransbenefitskb.com/gibill#chapter32veteraneducationassistanceprogramveap)
+
+<!-- Chunk 1291/1358 | Topic: Chapter 32 (Veteran Education Assistance Program - VEAP) | Type: education | Words: 184 -->
+
+---
+
+## Chapter 33 (Post-9/11 GI Bill)
+
+## **Chapter 33 (Post-9/11 GI Bill)**
+
+The Post-9/11 GI Bill provides up to 36 months of education benefits to those who have served on Active Duty after September 10, 2001. It can be used for Institutions of Higher Learning, training, licensing and certification reimbursement, and more. Visit the [Post-9/11 GI Bill website](https://www.va.gov/education/about-gi-bill-benefits/post-9-11/) to see additional training you may be eligible for. If you are attending at least one class in a classroom you _may_ be entitled to receive a housing allowance equal to the military BAH for an E-5 with dependents at the location of the school where the majority of the classes are being taken.
+
+Whether you want to apply your GI Bill benefits to college classes or an on-the-job training program, the [GI Bill Comparison Tool](https://www.vets.gov/gi-bill-comparison-tool) will help you make the most of them.
+
+**IMPORTANT UPDATE:**
+
+- On April 16, 2024 the [Supreme Court of the United States decided](https://www.supremecourt.gov/opinions/23pdf/22-888_1b8e.pdf?fbclid=IwZXh0bgNhZW0CMTAAAR1jgVkoU9pyW0_VUZ1quTTk9j_TgooxAcctNaiucPODSCf5e_yuokuHx7E_aem_AeZxOBBdYe_TbCLrTWjlbWeUyPkJj21guJkOHfF1gkENinJrzKFa-3YXbIq-hbQ0eSSD71Qbblu2C8ZIvsn8xkph) that if you served at least two periods ( **CAN** include a reenlistment _without_ a break in service) of service-one that qualifies for the Montgomery GI Bill (MGIB) and another that qualifies for the Post-9/11 GI Bill (PGIB)-you may be able to receive additional GI Bill benefits.
+
+  - For additional information click [HERE](https://benefits.va.gov/gibill/rudisill.asp).
+
+* * *
+
+### Eligibility
+
+Have an honorable period of Active Duty service on or after September 10, 2001.
+
+Certain members of the Reserves who lost education benefits when REAP was sunset in November 2015 may also be eligible to receive restored benefits under the Post-9/11 GI Bill.
+
+**IMPORTANT NOTE:**
+
+- Veterans have **15 years** to use this benefit _if discharged before_ **January 1, 2013**.
+
+  - If discharged _after_ January 1, 2013, there is **NO** time limit!
+
+* * *
+
+### Benefits
+
+For approved programs, the Post-9/11 GI Bill provides up to 36 months of education benefits.
+
+Full tuition and mandatory fees are paid directly to the school for all public higher learning institutions.
+
+For those attending _private or foreign schools_, tuition and fees are capped at the [National maximum rate](https://www.benefits.va.gov/GIBILL/resources/benefits_resources/rates/ch33/ch33rates080120.asp).
+
+If you're attending a private higher learning institution you _may_ be eligible for the [Yellow Ribbon Program](https://veteransbenefitskb.com/yellow) and entitled to additional education-related costs not covered by VA.
+
+**IMPORTANT NOTES:**
+
+- Public colleges/universities **MUST** charge Veterans **AND** dependents in-state tuition by [Law](https://www.benefits.va.gov/gibill/post911_residentraterequirements.asp) so long as you are using the Post 9/11 benefit and _are not_ on Active Duty!
+
+  - You **MUST** however still follow the institution’s residency requirements which will likely include living in their state.
+
+    - The requirement of living in the state for X time **MUST BE WAIVED**!
+- Rate of pursuit (how many credits you take a term) **DOES** prorate your length of benefit!
+
+  - If your rate of pursuit is say 50% for a 4 month term then only use 2 months of your 36 month total benefit is used **NOT** 4!
+
+  - Taking _over_ a full load of credits does **NOT** draw your benefits more than if you were just at full time!
+- If the benefit runs out during a semester (even if the Veteran only has a single day!) the VA will pay full tuition and the Veteran's MHA till the end of the semester!
+
+
+Depending on factors such as length of service will determine the amount of benefit(s) you can receive from the VA:
+
+| Active Duty Service/Special Circumstance | Percentage of Maximum Benefit Payable |
+| --- | --- |
+| At least 36 months. | 100% |
+| Received a Purple Heart. | 100% |
+| At least 30 _continuous days_ on Active Duty **AND** [Discharged due to a service-connected disability.](https://veteransbenefitskb.com/medboard) | 100% |
+| At least 30 months, but less than 36 months. | 90% |
+| At least 24 months, but less than 30 months. | 80% |
+| At least 18 months, but less than 24 months. | 70% |
+| At least 6 months, but less than 18 months. | 60% |
+| At least 90 days, but less than 6 months. | 50% |
+
+* * *
+
+#### Enrollment Verification
+
+In order to get paid your MHA you must verify your attendance to the VA. This can be done one of three ways:
+
+1\. Text Message (US phone numbers ONLY)
+
+- Opt-In:
+
+  - Before your semester starts you _should_ receive a text message asking if you would like to submit verification via text. Simply reply back with "Yes".
+- Verify:
+
+  - On the last day of the month you will receive a text asking if you are still enrolled. Provide a response and you are set!
+
+2\. Email
+
+- Opt-In:
+
+  - If you have opted out of the text message option you will automatically be set up for email verification.
+- Verify:
+
+  - On the last day of the month you will get an email asking for you to verify your enrollment. Select the option in the email that applies to you.
+
+3\. Call the Education Call Center (ECC)
+
+- Opt-In:
+
+  - Not applicable - you just do it.
+- Verify:
+
+  - Call 1-888-442-4551 _or_ 001-918-781-5678 if you are international.
+
+**IMPORTANT NOTES:**
+
+- When you text a response to verify your enrollment, it is **COMMON** to **NOT** get a response for an hour or 2, so do no panic if you do not get a response back right away!
+
+- Failure to verify for 2 months in a row **WILL** result in your MHA being suspended! To restart payments you will need to call the ECC.
+
+
+* * *
+
+### Book & Supply Stipend
+
+You may also receive a books and supplies stipend up to $1,000 each year (the amount _is_ prorated if you are less than full time).
+
+* * *
+
+### Monthly Housing Allowance (MHA)
+
+Monthly housing allowance (often mistakenly called BAH) is calculated based on the zip code of the campus where the student physically attends the majority of classes, rather than the location of the institution of higher learning where the student is enrolled. This applies to the first enrollment in an educational program on or after August 1, 2018.
+
+- To figure out how much you stand to get a month click [HERE](https://www.va.gov/gi-bill-comparison-tool/).
+
+
+**IMPORTANT NOTES:**
+
+- In order to get MHA you **MUST** be enrolled **OVER HALF TIME**! Those who are enrolled half time or less will **NOT GET ANY MHA**!
+
+  - Those enrolled over half time but less than full time will have their MHA prorated.
+
+  - For those in graduate program, the school determines what is considered full time.
+
+  - For those in an undergraduate program to be full time:
+
+    - 12 credit hours during a typical Fall/Spring semester;
+
+    - 6 credit hours during a typical Summer semester;
+
+    - 3 credit hours during a typical Winter semester;
+
+    - NOTE: Those in accelerated programs _may_ achieve full time with fewer credits.
+- MHA is prorated on a 30 day calendar. No matter how many days are actually in the month. So if that course started on February 21, you would be paid 9/30 the normal MHA amount for the month of February.
+
+  - For more examples click [HERE](https://www.veteransbenefitskb.com/money#education).
+- People who have courses that start/stop on different dates may have their amount of MHA reduced, if they fall below full time status.
+
+- Round-Out Rule: If during your last semester, your remaining credits to graduate is _less than_ what you need to be considered full time. You **CAN** take non-required courses to fill up your schedule to achieve full time _without_ penalty.
+
+  - If you do **NOT** fill up on courses then your MHA will be **REDUCED** appropriately!
+
+* * *
+
+### Rural Benefit
+
+A one time payment of $500 may be payable to certain Veterans relocating from highly rural areas (county with 6 persons or less per square mile (as determined by the most recent decennial census)) and either:
+
+- Physically relocate at least 500 miles to attend an educational institution; or
+
+- Travel by air to physically attend an educational institution if no other land-based transportation exists.
+
+
+* * *
+
+### Kicker AKA Branch College Fund
+
+Veterans who joined an MOS that was listed as having a critical shortage of personnel may have gotten a kicker that increased their benefit.
+
+The maximum is an additional $950 a month. Which was based upon the length of your initial contract.
+
+The Veteran will be paid their kicker amount every month. If the Veteran's rate of pursuit is less than full time their kicker amount will be reduced. If the month is less than a full month the kicker will be prorated as well.
+
+**IMPORTANT NOTE:**
+
+- If the Veteran does not receive MHA they will **NOT** get their kicker!
+
+**Source:** [https://www.veteransbenefitskb.com/gibill#chapter33post911gibill](https://www.veteransbenefitskb.com/gibill#chapter33post911gibill)
+
+<!-- Chunk 1292/1358 | Topic: Chapter 33 (Post-9/11 GI Bill) | Type: education | Words: 1434 -->
+
+---
+
+## Chapter 1606 (Montgomery GI Bill - Selected Reserve)
+
+## **Chapter 1606 (Montgomery GI Bill - Selected Reserve)**
+
+MGIB-SR program provides education and training benefits to eligible members of the Selected Reserve, including the Army, Navy, Air Force, Marine Corps, or Coast Guard Reserve, Army National Guard or Air National Guard. Eligibility for this program is determined by the Selected Reserve components and the VA makes the payments.
+
+* * *
+
+### Benefits
+
+May be used for college degree and certificate programs, co-op training, technical or vocational courses, flight training, apprenticeships or on-the-job training, high-tech training, licensing and certification tests, entrepreneurship training, certain entrance examinations, and correspondence courses. Remedial, deficiency, and refresher courses may be approved under certain circumstances.
+
+Up to 36 months of education benefits.
+
+* * *
+
+### Kicker AKA Branch College Fund
+
+Veterans who joined an MOS that was listed as having a critical shortage of personnel may have gotten a kicker that increased their benefit.
+
+The maximum is an additional $350 a month, which was based upon the length of your initial contract.
+
+The Veteran will be paid their kicker amount as a pro-rated lump sum (for however long the semester is and their percentage of degree of pursuit) at the start of the semester.
+
+* * *
+
+### Eligibility
+
+To qualify, you must meet the following requirements:
+
+- Have a 6-year obligation to serve in the Selected Reserve signed after June 30, 1985. If you are an officer, you must have agreed to serve 6 years in addition to your original obligation. For some types of training it is necessary to have a 6-year commitment that begins after September 30, 1990.
+
+- Complete your initial Active Duty for Training (IADT). Meet the requirement to receive a high school diploma or equivalency certificate before completing IADT. You may not use 12 hours toward a college degree to meet this requirement.
+
+- Remain in good standing while serving in an active Selected Reserve unit. You will also retain MGIB-SR eligibility if you were discharged from Selected Reserve service due to a disability that was not caused by misconduct. Your eligibility period may be extended if you are ordered to active duty.
+
+
+Your eligibility for this program normally ends the day you leave the Selected Reserve.
+
+An exception exists if you are mobilized or recalled to Active Duty from your reserve status in which case your eligibility may be extended for the amount of time you are mobilized PLUS 4 months. For example, if you are mobilized for 12 months, your eligibility period is extended for 16 months; 12 months of Active Duty PLUS 4 months. Even if you leave the Reserves after mobilization, you may have additional eligibility under the MGIB-SR.
+
+If your unit was deactivated during the period beginning October 1, 2007, through September 30, 2014, or you were involuntarily separated for reasons other than misconduct, you will retain your original period of eligibility, which is 14 years from the date of your first 6-year obligation with the Selected Reserves.
+
+**Source:** [https://www.veteransbenefitskb.com/gibill#chapter1606montgomerygibillselectedreserve](https://www.veteransbenefitskb.com/gibill#chapter1606montgomerygibillselectedreserve)
+
+<!-- Chunk 1293/1358 | Topic: Chapter 1606 (Montgomery GI Bill - Selected Reserve) | Type: education | Words: 495 -->
+
+---
+
+### FAQ: What does CHAMPVA pay?
+
+*Also known as: CHAMPVA, civilian health and medical program, dependent healthcare, spouse healthcare*
+
+**Question:** What does CHAMPVA pay?
+
+**Answer:** In most cases, CHAMPVA's allowable amount (what VA pays) for specific services and supplies—is equivalent to Medicare/TRICARE rates. CHAMPVA has an outpatient deductible ($50 per beneficiary per calendar year or a maximum of $100 per family per calendar year) and a patient cost share of 25% of our allowable amount up to the catastrophic cap ($3,000 per calendar year). Beneficiaries should NOT send checks to VHA OCC for their annual deductible; as claims are processed, charges are automatically credited to individual and family deductible requirements for each calendar year.
+
+- If your provider accepts assignment, which means the provider accepts CHAMPVA, the provider agrees to accept the VA's allowable amount as payment in full. A provider cannot bill you for the difference between the VA's allowable amount and their normally billed amount.
+
+- If the patient has other health insurance, then CHAMPVA pays the lesser of either 75% of the allowable amount after the $50 calendar year deductible is satisfied, or the remainder of the charges and the beneficiary will normally have no cost share.
+
+**Source:** [https://www.veteransbenefitskb.com/champva#faq](https://www.veteransbenefitskb.com/champva#faq)
+
+<!-- Chunk 1294/1358 | Topic: CHAMPVA Healthcare Program - FAQ | Type: faq | Words: 181 -->
+
+---
+
+### FAQ: I need coverage NOW but it is taking forever to get approved for CHAMPVA! What can I do?
+
+*Also known as: CHAMPVA, civilian health and medical program, dependent healthcare, spouse healthcare*
+
+**Question:** I need coverage NOW but it is taking forever to get approved for CHAMPVA! What can I do?
+
+**Answer:** Pay out of pocket for now and to file for reimbursement once you are finally approved.
+
+**Source:** [https://www.veteransbenefitskb.com/champva#faq](https://www.veteransbenefitskb.com/champva#faq)
+
+<!-- Chunk 1295/1358 | Topic: CHAMPVA Healthcare Program - FAQ | Type: faq | Words: 36 -->
+
+---
+
+### FAQ: Can the Veteran get coverage under CHAMPVA?
+
+*Also known as: CHAMPVA, civilian health and medical program, dependent healthcare, spouse healthcare*
+
+**Question:** Can the Veteran get coverage under CHAMPVA?
+
+**Answer:** Only if they are eligible via their spouse or being a caregiver as noted previously.
+
+**Source:** [https://www.veteransbenefitskb.com/champva#faq](https://www.veteransbenefitskb.com/champva#faq)
+
+<!-- Chunk 1296/1358 | Topic: CHAMPVA Healthcare Program - FAQ | Type: faq | Words: 24 -->
+
+---
+
+### FAQ: Are health care services at VA facilities available to CHAMPVA beneficiaries?
+
+*Also known as: CHAMPVA, civilian health and medical program, dependent healthcare, spouse healthcare*
+
+**Question:** Are health care services at VA facilities available to CHAMPVA beneficiaries?
+
+**Answer:** Only at participating VA facilities (most VA facilities do **NOT** participate).
+
+- Under the CHAMPVA In-house Treatment Initiative (CITI), CHAMPVA beneficiaries may receive cost-free health care services at _participating_ VA facilities.
+
+**Source:** [https://www.veteransbenefitskb.com/champva#faq](https://www.veteransbenefitskb.com/champva#faq)
+
+<!-- Chunk 1297/1358 | Topic: CHAMPVA Healthcare Program - FAQ | Type: faq | Words: 44 -->
+
+---
+
+### FAQ: How can I find out if the local VA facility is participating in the CITI program?
+
+*Also known as: CHAMPVA, civilian health and medical program, dependent healthcare, spouse healthcare*
+
+**Question:** How can I find out if the local VA facility is participating in the CITI program?
+
+**Answer:** Follow the following [link](https://www.va.gov/COMMUNITYCARE/programs/dependents/champva/CITI-Facilities.asp).
+
+**Source:** [https://www.veteransbenefitskb.com/champva#faq](https://www.veteransbenefitskb.com/champva#faq)
+
+<!-- Chunk 1298/1358 | Topic: CHAMPVA Healthcare Program - FAQ | Type: faq | Words: 22 -->
+
+---
+
+### FAQ: What out-of-pocket expenses can a CHAMPVA beneficiary expect under CITI?
+
+*Also known as: CHAMPVA, civilian health and medical program, dependent healthcare, spouse healthcare*
+
+**Question:** What out-of-pocket expenses can a CHAMPVA beneficiary expect under CITI?
+
+**Answer:** None. CHAMPVA beneficiaries don’t pay out-of-pocket expenses when receiving services under the CITI program.
+
+**Source:** [https://www.veteransbenefitskb.com/champva#faq](https://www.veteransbenefitskb.com/champva#faq)
+
+<!-- Chunk 1299/1358 | Topic: CHAMPVA Healthcare Program - FAQ | Type: faq | Words: 26 -->
+
+---
+
+### FAQ: Can a dependent parent parent be covered under CHAMPVA?
+
+*Also known as: CHAMPVA, civilian health and medical program, dependent healthcare, spouse healthcare*
+
+**Question:** Can a dependent parent parent be covered under CHAMPVA?
+
+**Answer:** No. According to [38 CFR § 17.271 - Eligibility](https://www.law.cornell.edu/cfr/text/38/17.271) they are **NOT** eligible (outside of being an appropriate caregiver)
+
+**Source:** [https://www.veteransbenefitskb.com/champva#faq](https://www.veteransbenefitskb.com/champva#faq)
+
+<!-- Chunk 1300/1358 | Topic: CHAMPVA Healthcare Program - FAQ | Type: faq | Words: 30 -->
+
+---
+
+### FAQ: Can CHAMPVA act as primary insurance if I have another insurance?
+
+*Also known as: CHAMPVA, civilian health and medical program, dependent healthcare, spouse healthcare*
+
+**Question:** Can CHAMPVA act as primary insurance if I have another insurance?
+
+**Answer:** **NO _UNLESS_** the other insurance is:
+
+  - Medicaid;
+
+  - State Victims of Crime Compensation Programs;
+
+  - Indian Health Services; or
+
+  - Supplemental CHAMPVA policies.
+
+**Source:** [https://www.veteransbenefitskb.com/champva#faq](https://www.veteransbenefitskb.com/champva#faq)
+
+<!-- Chunk 1301/1358 | Topic: CHAMPVA Healthcare Program - FAQ | Type: faq | Words: 37 -->
+
+---
+
+### FAQ: Can CHAMPVA be secondary (supplemental insurance) if I have another insurance?
+
+*Also known as: CHAMPVA, civilian health and medical program, dependent healthcare, spouse healthcare*
+
+**Question:** Can CHAMPVA be secondary (supplemental insurance) if I have another insurance?
+
+**Answer:** **YES _UNLESS_** the other insurance is:
+
+  - Medicaid;
+
+  - State Victims of Crime Compensation Programs;
+
+  - Indian Health Services; or
+
+  - Supplemental CHAMPVA policies.
+
+**Source:** [https://www.veteransbenefitskb.com/champva#faq](https://www.veteransbenefitskb.com/champva#faq)
+
+<!-- Chunk 1302/1358 | Topic: CHAMPVA Healthcare Program - FAQ | Type: faq | Words: 37 -->
+
+---
+
+### FAQ: If CHAMPVA is secondary how does the billing work?
+
+*Also known as: CHAMPVA, civilian health and medical program, dependent healthcare, spouse healthcare*
+
+**Question:** If CHAMPVA is secondary how does the billing work?
+
+**Answer:** Your health care provider should bill the other insurance first. The provider should then submit the Explanation of Benefits (EOB) from the other insurance along with the claim for reimbursement to CHAMPVA.
+
+**Source:** [https://www.veteransbenefitskb.com/champva#faq](https://www.veteransbenefitskb.com/champva#faq)
+
+<!-- Chunk 1303/1358 | Topic: CHAMPVA Healthcare Program - FAQ | Type: faq | Words: 43 -->
+
+---
+
+### FAQ: My spouse is pregnant when can we add our new child?
+
+*Also known as: CHAMPVA, civilian health and medical program, dependent healthcare, spouse healthcare*
+
+**Question:** My spouse is pregnant when can we add our new child?
+
+**Answer:** You won’t be able to add them till they have a Social Security Number. Once you get it, be sure to [Claim](https://www.veteransbenefitskb.com/depends) them as a dependent and **THEN** apply to have them added to CHAMPVA.
+
+**Source:** [https://www.veteransbenefitskb.com/champva#faq](https://www.veteransbenefitskb.com/champva#faq)
+
+<!-- Chunk 1304/1358 | Topic: CHAMPVA Healthcare Program - FAQ | Type: faq | Words: 48 -->
+
+---
+
+### FAQ: Since it takes so long for approval what's going to happen to the bills related to my newborn?
+
+*Also known as: CHAMPVA, civilian health and medical program, dependent healthcare, spouse healthcare*
+
+**Question:** Since it takes so long for approval what's going to happen to the bills related to my newborn?
+
+**Answer:** Don’t worry! The hospital and billing staff are well aware it is a process to get newborns added to insurance. With most not requiring you to pay immediately.
+
+  - In short, once the child has been added, go ahead and let the appropriate billing offices know their details and you will be fine.
+
+  - For procedures/treatment which may have required you to pay out of pocket - you will need to file a claim with CHAMPVA to seek reimbursement.
+
+**Source:** [https://www.veteransbenefitskb.com/champva#faq](https://www.veteransbenefitskb.com/champva#faq)
+
+<!-- Chunk 1305/1358 | Topic: CHAMPVA Healthcare Program - FAQ | Type: faq | Words: 99 -->
+
+---
+
+### FAQ: My dependent's application was denied because they are eligible for TRICARE; when they should not be?
+
+*Also known as: CHAMPVA, civilian health and medical program, dependent healthcare, spouse healthcare*
+
+**Question:** My dependent's application was denied because they are eligible for TRICARE; when they should not be?
+
+**Answer:** 1. Double check to see if DEERS has you listed as eligible or not.
+
+   - Click [HERE](https://tricare.mil/Plans/Eligibility/DEERS/milConnect/Proof) to see if you are listed as eligible for TRICARE coverage.
+2. If you think your eligibility is listed incorrectly call DMDC/DEERS support at 1-800-538-9552 and explain why you think it is wrong IE you are a Gray Area Retiree under 60 years of age.
+
+   - The keyword in their system is “Direct”, it needs to be removed.
+3. With DEERS now updated, submit a question to AskVA to have your denial looked into again. Be sure to include your denial case number/application ID.
+
+   - Click [HERE](https://www.va.gov/contact-us/ask-va/introduction) to use AskVA.
+4. The VA should then review the denial and grant CHAMPVA!
+
+**Source:** [https://www.veteransbenefitskb.com/champva#faq](https://www.veteransbenefitskb.com/champva#faq)
+
+<!-- Chunk 1306/1358 | Topic: CHAMPVA Healthcare Program - FAQ | Type: faq | Words: 136 -->
+
+---
+
+### FAQ: I am a Gray/Grey Area Retiree and I am having issues getting my dependent(s) approved?
+
+*Also known as: CHAMPVA, civilian health and medical program, dependent healthcare, spouse healthcare*
+
+**Question:** I am a Gray/Grey Area Retiree and I am having issues getting my dependent(s) approved?
+
+**Answer:** Please see the answer to the previous question.
+
+**Source:** [https://www.veteransbenefitskb.com/champva#faq](https://www.veteransbenefitskb.com/champva#faq)
+
+<!-- Chunk 1307/1358 | Topic: CHAMPVA Healthcare Program - FAQ | Type: faq | Words: 25 -->
+
+---
+
+### FAQ: Can CHAMPVA be used overseas?
+
+*Also known as: CHAMPVA, civilian health and medical program, dependent healthcare, spouse healthcare*
+
+**Question:** Can CHAMPVA be used overseas?
+
+**Answer:** Yes! If you live or travel overseas (excluding countries that are restricted or prohibited by the U.S. Department of Treasury), CHAMPVA will provide the **SAME** benefits. If the billing and medical documentation are written in a foreign language, translation will be arranged at no cost to you; but if you want to speed up the process you may translate things to English. Payments are made in U.S. dollars.
+
+**Source:** [https://www.veteransbenefitskb.com/champva#faq](https://www.veteransbenefitskb.com/champva#faq)
+
+<!-- Chunk 1308/1358 | Topic: CHAMPVA Healthcare Program - FAQ | Type: faq | Words: 75 -->
+
+---
+
+### References and Legal Citations
+
+*Also known as: CHAMPVA, civilian health and medical program, dependent healthcare, spouse healthcare*
+
+## **References**
+
+- [10 U.S. Code § 1076e - TRICARE program: TRICARE Retired Reserve coverage for certain members of the Retired Reserve who are qualified for a non-regular retirement but are not yet age 60](https://www.law.cornell.edu/uscode/text/10/1076e)
+
+- [CHAMPVA benefits](https://www.va.gov/family-and-caregiver-benefits/health-and-disability/champva/)
+
+- [CHAMPVA OPERATIONAL POLICY MANUAL](https://www.vha.cc.va.gov/system/templates/selfservice/va_ssnew/help/customer/locale/en-US/portal/554400000001036/content/554400000008918/010202-SPONSOR)
+
+- [Civilian Health and Medical Program of the Department of Veterans Affairs (CHAMPVA) - Medical Care for Survivors and Dependents of Certain Veterans (§§ 17.270 - 17.278)](https://www.law.cornell.edu/cfr/text/38/part-17)
+
+
+
+
+#### **Veterans Benefits Knowledge Base**
+
+- [Homepage Link](https://www.veteransbenefitskb.com/)
+
+
+#### Affiliated Partners
+
+- Sub-Reddit: [r/VeteransBenefits](https://www.reddit.com/r/VeteransBenefits/)
+
+- Discord Server: [U.S. Veterans Network](https://discord.gg/yjnYFUKBJC)
+
+- [VA Claim Tracker App](https://chromewebstore.google.com/detail/va-claim-tracker/onbanekcefgnibhlaiimeadkbdahjpoo)
+
+
+#### [Disclaimer](https://veteransbenefitskb.com/disclaimer)
+
+#### Something Broken?
+
+- #### [Let Us Know!](https://www.veteransbenefitskb.com/report)
+
+
+© 2021-2025 Veterans Benefits Knowledge Base, all rights reserved.
+
+**Source:** [https://www.veteransbenefitskb.com/champva#references](https://www.veteransbenefitskb.com/champva#references)
+
+<!-- Chunk 1309/1358 | Topic: CHAMPVA Healthcare Program - Legal References | Type: references | Words: 114 -->
+
+---
+
+## CHAMPVA Healthcare Program
+
+*Also known as: CHAMPVA, civilian health and medical program, dependent healthcare, spouse healthcare*
+
+# **Civilian Health and Medical Program of the Department of Veterans Affairs (CHAMPVA)**
+
+
+[![Empty search bar with a magnifying glass icon.](https://images.squarespace-cdn.com/content/v1/66c515a3e8305f0f79e8b680/bd22f10b-2167-4509-9215-2b49d4a4e22f/search3.png)](https://cse.google.com/cse?cx=8392d3f710df0427c)
+
+
+
+[\> Master Condition List](https://veteransbenefitskb.com/master)
+
+[\> Federal Benefits List by Combined Ratings](https://veteransbenefitskb.com/combinedbenefits)
+
+[\> Insider Insight into VBA Claim Processing](https://veteransbenefitskb.com/insight)
+
+[\> Rating Schedule Index](https://veteransbenefitskb.com/ratingsindex)
+
+[\> Filing a VA Disability Claim](https://veteransbenefitskb.com/vaclaim)
+
+[\> Filing an Appeal](https://veteransbenefitskb.com/appeals)
+
+* * *
+
+
+
+
+
+
+
+
+
+CHAMPVA is a comprehensive health care program in which the VA shares the cost of covered health care services and supplies with eligible beneficiaries.
+
+Compared to most health insurances CHAMPVA is exceptionally affordable per calendar year:
+
+- There is a $50 deductible per dependent, up to $100 **MAX** per family!
+
+- **MAX** out of pocket amount per family is $3,000!
+
+
+* * *
+
+**Source:** [https://www.veteransbenefitskb.com/champva#champvahealthcareprogram](https://www.veteransbenefitskb.com/champva#champvahealthcareprogram)
+
+<!-- Chunk 1310/1358 | Topic: CHAMPVA Healthcare Program | Type: healthcare | Words: 119 -->
+
+---
+
+## Eligibility
+
+## **Eligibility**
+
+CHAMPVA provides coverage to the spouse or widow(er) and to the children (aged 0-17, 18-23 enrolled in school, 18+ [Helpless child](https://www.veteransbenefitskb.com/dependents#helpless)) of a Veteran who:
+
+- Is rated [Permanently and Totally](https://veteransbenefitskb.com/permtotal) disabled due to service-connected condition(s);
+
+- Was rated Permanently and Totally disabled due to service-connected condition(s) at the time of death;
+
+- Died due to a service-connected condition; or
+
+- Died on Active Duty and the dependents are **NOT** otherwise eligible for Department of Defense TRICARE benefits.
+
+
+**IMPORTANT NOTES:**
+
+- To be eligible for CHAMPVA, the beneficiary **CANNOT** be eligible for [TRICARE](https://www.veteransbenefitskb.com/tricare).
+
+  - For Gray Area Retirees see the [Frequently Asked Questions](https://www.veteransbenefitskb.com/champva#faq) section.
+- Children who marry will lose eligibility.
+
+- In the event of divorce, entitlement for the former spouse is ended effective the date of the divorce!
+
+- If entitlement is established due to death of Veteran/Servicememember then remarriage will end entitlement **UNLESS**:
+
+  - Remarriage takes place on or after your 55th birthday; _or_
+
+  - If you remarry before age 55, and your remarriage **ENDS** (you will need to reapply to reestablish this benefit).
+
+**Source:** [https://www.veteransbenefitskb.com/champva#eligibility](https://www.veteransbenefitskb.com/champva#eligibility)
+
+<!-- Chunk 1311/1358 | Topic: Eligibility | Type: healthcare | Words: 179 -->
+
+---
+
+## Additional Eligibility
+
+## **Additional Eligibility**
+
+A Veteran's primary caregiver under [Program of Comprehensive Assistance for Family Caregivers (PCAFC)](https://veteransbenefitskb.com/elderlt#pcafc) can be eligible for CHAMPVA, assuming the caregiver does **NOT** have any other health insurance coverage.
+
+**IMPORTANT NOTE:**
+
+- To be eligible for CHAMPVA, the beneficiary **CANNOT** be eligible for TRICARE.
+
+**Source:** [https://www.veteransbenefitskb.com/champva#additionaleligibility](https://www.veteransbenefitskb.com/champva#additionaleligibility)
+
+<!-- Chunk 1312/1358 | Topic: Additional Eligibility | Type: healthcare | Words: 47 -->
+
+---
+
+## Applying
+
+## **Applying**
+
+You have several ways to submit an application and supporting documents:
+
+1. Online;
+
+2. Fax; and
+
+3. Snail mail.
+
+
+_Copies_ of Documents to include:
+
+- Related to Medicare status (if applicable):
+
+  - If the dependent qualifies for Medicare for **ANY** reason, they’ll need to submit a copy of their Medicare card.
+
+  - If the dependent is 65 years old or older and does not qualify for Medicare, they’ll need to send documentation from the Social Security Administration that confirms they don’t qualify for Medicare benefits under _anyone’s_ Social Security Number.
+- If you are including dependent children ages 18-23:
+
+  - [School certification of full-time enrollment](https://www.va.gov/COMMUNITYCARE/docs/pubfiles/factsheets/FactSheet_01-15.pdf).
+- If you’re a spouse or surviving spouse:
+
+  - Certificate of civil union;
+
+  - Common-law marriage affidavit; _or_
+
+  - Marriage certificate.
+- If you’re a surviving spouse who remarried before age 55 and your remarriage has ended:
+
+  - Annulment decree;
+
+  - Divorce decree; _or_
+
+  - Death certificate.
+
+**IMPORTANT NOTE:**
+
+- To expedite processing (for any dependent) include **COPIES** of:
+
+  - Dependents’ birth certificate;
+
+  - Benefits Letter - showing the Veteran is permanently and totally disabled (or the death rating if you’re a survivor); and
+
+  - Veteran’s DD214.
+
+* * *
+
+### 1\. Online
+
+- Click [HERE](https://www.va.gov/family-and-caregiver-benefits/health-and-disability/champva/apply-form-10-10d/introduction) to apply online.
+
+
+* * *
+
+### 2\. Fax/3. Snail Mail
+
+Complete the following forms:
+
+- [VA Form 10](http://www.va.gov/vaforms/form_detail.asp?FormNo=10d) [-](http://www.va.gov/vaforms/form_detail.asp?FormNo=10d) [10d](http://www.va.gov/vaforms/form_detail.asp?FormNo=10d)
+
+- [VA Form 10-7959C](https://www.va.gov/find-forms/about-form-10-7959c/)
+
+
+And include copies of any of the previously mentioned supporting/expediting documents.
+
+#### Fax
+
+> ```
+>  303-331-7809
+> ```
+
+#### Mail
+
+> ```
+>  VHA Office of Community Care
+>  CHAMPVA Eligibility
+>  PO Box 137
+>  Spring City, PA 19475
+> ```
+
+**Source:** [https://www.veteransbenefitskb.com/champva#applying](https://www.veteransbenefitskb.com/champva#applying)
+
+<!-- Chunk 1313/1358 | Topic: Applying | Type: healthcare | Words: 271 -->
+
+---
+
+## Finding a Provider
+
+## **Finding a Provider**
+
+CHAMPVA does not have a network of providers. As such it is recommended you visit the [Medicare website](https://www.medicare.gov/) or [TRICARE website](https://tricare.mil/FindDoctor) to find a doctor.
+
+Generally, providers who accept Medicare, Medicaid, or TRICARE also accept CHAMPVA - but they may not be familiar with the program and incorrectly assume that it is a group health insurance plan rather than a government health care program.
+
+If the receptionist tells you they don't accept CHAMPVA, ask the billing department - sometimes they are the only ones that _really_ know!
+
+* * *
+
+### Providers that Accept “Assignment” for VA Family Member Programs
+
+When you locate a medical provider, confirm that they will participate in the VA family member health care program you belong to. Providers most often refer to participation as "accepting assignment." Providers that accept assignment will bill the VA directly for covered services, items and supplies. Doctors or other providers who accept assignment must accept the VHA Office of Community Care (VHA OCC) allowable amount as payment-in-full and cannot collect additional amounts from you beyond your cost share and deductible.
+
+**IMPORTANT NOTE:**
+
+- All hospitals that participate in Medicare, and hospital-based health care professionals who are employed by, or contracted to, such hospitals are **required** by law to accept the VHA OCC allowable amount for inpatient hospital services.
+
+
+* * *
+
+### Providers that do **NOT** Accept “Assignment” for VA Family Member Programs
+
+If your provider does not accept assignment, you can still see that provider, but be aware that you will likely have to pay the entire charge at the time of service. Additionally, you may be charged more than the VHA OCC allowable amount.
+
+Providers that do not accept assignment are not permitted to file for reimbursement. If you choose to use them, you will have to submit for reimbursement yourself.
+
+To obtain reimbursement in cases where a VA family member health care program is your only insurance, you will have to submit the itemized bill from the provider along with the appropriate VA form. When the claim is processed, the VA will send you the VHA OCC share of the allowable amount.
+
+What this means to you is that when the medical provider does **NOT** accept assignment, your cost will include not only your share of our determined allowable amount, but _also_ any charges over the VA's allowable amount.
+
+**Source:** [https://www.veteransbenefitskb.com/champva#findingaprovider](https://www.veteransbenefitskb.com/champva#findingaprovider)
+
+<!-- Chunk 1314/1358 | Topic: Finding a Provider | Type: healthcare | Words: 396 -->
+
+---
+
+## Benefits
+
+## **Benefits**
+
+In general, CHAMPVA covers most health care services and supplies that are medically and psychologically necessary. Upon confirmation of eligibility, you will receive a [CHAMPVA Program Guide](https://www.va.gov/COMMUNITYCARE/docs/pubfiles/programguides/CHAMPVA-Guide.pdf) that specifically addresses covered and non-covered services and supplies.
+
+Dental care is **NOT** covered **UNLESS** you also enroll in [VA Dental Insurance Program (VADIP)](https://www.va.gov/health-care/about-va-health-benefits/dental-care/dental-insurance/).
+
+For a complete listing of non-covered services and supplies consult the [CHAMPVA Policy Manual](https://www.vha.cc.va.gov/).
+
+* * *
+
+### Pharmacy Benefits
+
+- Click [HERE](https://www.va.gov/COMMUNITYCARE/programs/dependents/pharmacy/index.asp) for information on pharmacy benefits.
+
+**Source:** [https://www.veteransbenefitskb.com/champva#benefits](https://www.veteransbenefitskb.com/champva#benefits)
+
+<!-- Chunk 1315/1358 | Topic: Benefits | Type: healthcare | Words: 81 -->
+
+---
+
+## Filing a Claim
+
+## **Filing a Claim**
+
+Generally, the providers should handle billing to CHAMPVA automatically.
+
+- However if you need to; click [HERE](https://www.va.gov/family-and-caregiver-benefits/health-and-disability/file-champva-claim-10-7959a/introduction) to file a claim online.
+
+**Source:** [https://www.veteransbenefitskb.com/champva#filingaclaim](https://www.veteransbenefitskb.com/champva#filingaclaim)
+
+<!-- Chunk 1316/1358 | Topic: Filing a Claim | Type: healthcare | Words: 26 -->
+
+---
+
+## Thanks To
+
+## **Thanks To**
+
+- [Admirable\_Form8202](https://www.reddit.com/user/Admirable_Form8202/)
+
+- [RetiredSeniorChief](https://www.reddit.com/user/RetiredSeniorChief/)
+
+**Source:** [https://www.veteransbenefitskb.com/champva#thanksto](https://www.veteransbenefitskb.com/champva#thanksto)
+
+<!-- Chunk 1317/1358 | Topic: Thanks To | Type: healthcare | Words: 7 -->
+
+---
+
+### FAQ: 1151 claims cover what again?
+
+*Also known as: 1151, section 1151, VA negligence, tort, federal tort claim, malpractice*
+
+**Question:** 1151 claims cover what again?
+
+**Answer:** 1151 claims cover:
+
+- Aggravation of pre-existing conditions;
+
+- New disabilities; and
+
+- Deaths.
+
+Caused by VA care and compensated work therapy program (in the circumstances mentioned above).
+
+**Source:** [https://www.veteransbenefitskb.com/1151#faq](https://www.veteransbenefitskb.com/1151#faq)
+
+<!-- Chunk 1318/1358 | Topic: 38 USC 1151 Claims (VA Negligence) - FAQ | Type: faq | Words: 35 -->
+
+---
+
+### FAQ: What is informed consent?
+
+*Also known as: 1151, section 1151, VA negligence, tort, federal tort claim, malpractice*
+
+**Question:** What is informed consent?
+
+**Answer:** Agreement by the Veteran or their surrogate about a treatment **AFTER** information about the treatment has been provided to the veteran and they have been given the opportunity to ask questions.
+
+**IMPORTANT NOTE:**
+
+- If there is an **EMERGENCY** situation in which consent **CANNOT** be obtained due to immediate care needs, then consent does **NOT** need to be obtained!
+
+  - You arrive in the ER and cannot respond by speech or other means. And waiting for any possible surrogate to response would likely result in death or permanent/worsening disability.
+
+**Source:** [https://www.veteransbenefitskb.com/1151#faq](https://www.veteransbenefitskb.com/1151#faq)
+
+<!-- Chunk 1319/1358 | Topic: 38 USC 1151 Claims (VA Negligence) - FAQ | Type: faq | Words: 95 -->
+
+---
+
+### FAQ: Can I file a 1151 claim for care done outside a VA Medical Center (VAMC)?
+
+*Also known as: 1151, section 1151, VA negligence, tort, federal tort claim, malpractice*
+
+**Question:** Can I file a 1151 claim for care done outside a VA Medical Center (VAMC)?
+
+**Answer:** It depends…
+
+- **YES** if:
+
+  - The VA referred you to a non-VA facility who conducted the referred procedure;
+
+  - If not for the VA referral the Veteran would not have suffered disability/death; **AND**
+
+  - VAs carelessness, negligence, lack of proper skill, error in judgement, resulted in disability/death.
+
+**Source:** [https://www.veteransbenefitskb.com/1151#faq](https://www.veteransbenefitskb.com/1151#faq)
+
+<!-- Chunk 1320/1358 | Topic: 38 USC 1151 Claims (VA Negligence) - FAQ | Type: faq | Words: 65 -->
+
+---
+
+### FAQ: Can I claim conditions as secondary to a condition that was granted under 1151?
+
+*Also known as: 1151, section 1151, VA negligence, tort, federal tort claim, malpractice*
+
+**Question:** Can I claim conditions as secondary to a condition that was granted under 1151?
+
+**Answer:** Yes, you can claim conditions that developed or were aggravated by your 1151 granted condition.
+
+**Source:** [https://www.veteransbenefitskb.com/1151#faq](https://www.veteransbenefitskb.com/1151#faq)
+
+<!-- Chunk 1321/1358 | Topic: 38 USC 1151 Claims (VA Negligence) - FAQ | Type: faq | Words: 31 -->
+
+---
+
+### FAQ: Isn't it a major conflict of interest to have the VA do their own exams? Wouldn't they try to hide their dirty laundry?
+
+*Also known as: 1151, section 1151, VA negligence, tort, federal tort claim, malpractice*
+
+**Question:** Isn't it a major conflict of interest to have the VA do their own exams? Wouldn't they try to hide their dirty laundry?
+
+**Answer:** 1151 claims are expressly prohibited to have exams conducted by VA staff conduct the examinations. Which is why all exams/opinions will be done by a 3rd party contractor.
+
+  - If you still feel iffy you can always provide your own properly credentialed medical opinion/examination at your own cost.
+
+**Source:** [https://www.veteransbenefitskb.com/1151#faq](https://www.veteransbenefitskb.com/1151#faq)
+
+<!-- Chunk 1322/1358 | Topic: 38 USC 1151 Claims (VA Negligence) - FAQ | Type: faq | Words: 73 -->
+
+---
+
+### References and Legal Citations
+
+*Also known as: 1151, section 1151, VA negligence, tort, federal tort claim, malpractice*
+
+## **References**
+
+- [38 U.S. Code § 1151 - Benefits for persons disabled by treatment or vocational rehabilitation](https://www.law.cornell.edu/uscode/text/38/1151)
+
+- [38 CFR § 3.154 - Injury due to hospital treatment, etc](https://www.law.cornell.edu/cfr/text/38/3.154)
+
+- [38 CFR § 3.358 - Compensation for disability or death from hospitalization, medical or surgical treatment, examinations or vocational rehabilitation training (§ 3.800)](https://www.law.cornell.edu/cfr/text/38/3.358)
+
+- [38 CFR § 3.361 - Benefits under 38 U.S.C. 1151(a) for additional disability or death due to hospital care, medical or surgical treatment, examination, training and rehabilitation services, or compensated work therapy program](https://www.law.cornell.edu/cfr/text/38/3.361)
+
+- [38 CFR § 3.362 - Offsets under 38 U.S.C. 1151(b) of benefits awarded under 38 U.S.C. 1151(a)](https://www.law.cornell.edu/cfr/text/38/3.362)
+
+- [38 CFR § 3.363 - Bar to benefits under 38 U.S.C. 1151](https://www.law.cornell.edu/cfr/text/38/3.363)
+
+- [38 CFR § 3.800 - Disability or death due to hospitalization, etc](https://www.law.cornell.edu/cfr/text/38/3.800)
+
+- [38 CFR § 14.600 - Federal Tort Claims Act—general](https://www.law.cornell.edu/cfr/text/38/14.600)
+
+- [38 CFR § 17.32 - Informed consent and advance directives](https://www.law.cornell.edu/cfr/text/38/17.32)
+
+- [Federal Tort Claims Act](https://www.va.gov/ogc/ftca.asp)
+
+- [M21-1, Part VIII, Subpart iv, Chapter 6, Section A - Developing Claims Filed Under 38 U.S.C. 1151](https://www.knowva.ebenefits.va.gov/system/templates/selfservice/va_ssnew/help/customer/locale/en-US/portal/554400000001018/content/554400000177483/M21-1-Part-VIII-Subpart-iv-Chapter-6-Section-A-Developing-Claims-Filed-Under-38-USC-1151)
+
+- [M21-1, Part VIII, Subpart iv, Chapter 6, Section B - Rating Claims Filed Under 38 U.S.C. 1151](https://www.knowva.ebenefits.va.gov/system/templates/selfservice/va_ssnew/help/customer/locale/en-US/portal/554400000001018/content/554400000177484/M21-1-Part-VIII-Subpart-iv-Chapter-6-Section-B-Rating-Claims-Filed-Under-38-USC-1151)
+
+- [M21-1, Part VIII, Subpart iv, Chapter 6, Section C - Authorization of Awards Under 38 U.S.C. 1151](https://www.knowva.ebenefits.va.gov/system/templates/selfservice/va_ssnew/help/customer/locale/en-US/portal/554400000001018/content/554400000177485/M21-1-Part-VIII-Subpart-iv-Chapter-6-Section-C-Authorization-of-Awards-Under-38-USC-1151)
+
+- [M21-1, Part XII, Subpart i, Chapter 1, Section B - Common Dependency and Indemnity Compensation (DIC) Processing Issues](https://www.knowva.ebenefits.va.gov/system/templates/selfservice/va_ssnew/help/customer/locale/en-US/portal/554400000001018/content/554400000175203/M21-1-Part-XII-Subpart-i-Chapter-1-Section-B-Common-Dependency-and-Indemnity-Compensation-DIC-Processing-Issues)
+
+- [M21-1, Part XII, Subpart i, Chapter 3, Section F - Prohibition Against Duplication of Benefits](https://www.knowva.ebenefits.va.gov/system/templates/selfservice/va_ssnew/help/customer/locale/en-US/portal/554400000001018/content/554400000175218/M21-1-Part-XII-Subpart-i-Chapter-3-Section-F-Prohibition-Against-Duplication-of-Benefits)
+
+
+
+
+#### **Veterans Benefits Knowledge Base**
+
+- [Homepage Link](https://www.veteransbenefitskb.com/)
+
+
+#### Affiliated Partners
+
+- Sub-Reddit: [r/VeteransBenefits](https://www.reddit.com/r/VeteransBenefits/)
+
+- Discord Server: [U.S. Veterans Network](https://discord.gg/yjnYFUKBJC)
+
+- [VA Claim Tracker App](https://chromewebstore.google.com/detail/va-claim-tracker/onbanekcefgnibhlaiimeadkbdahjpoo)
+
+
+#### [Disclaimer](https://veteransbenefitskb.com/disclaimer)
+
+#### Something Broken?
+
+- #### [Let Us Know!](https://www.veteransbenefitskb.com/report)
+
+
+© 2021-2025 Veterans Benefits Knowledge Base, all rights reserved.
+
+­
+
+**Source:** [https://www.veteransbenefitskb.com/1151#references](https://www.veteransbenefitskb.com/1151#references)
+
+<!-- Chunk 1323/1358 | Topic: 38 USC 1151 Claims (VA Negligence) - Legal References | Type: references | Words: 292 -->
+
+---
+
+## 38 USC 1151 Claims (VA Negligence)
+
+*Also known as: 1151, section 1151, VA negligence, tort, federal tort claim, malpractice*
+
+# **1151 Claim/Federal Tort Claim**
+
+
+[![](https://images.squarespace-cdn.com/content/v1/66c515a3e8305f0f79e8b680/bd22f10b-2167-4509-9215-2b49d4a4e22f/search3.png)](https://cse.google.com/cse?cx=8392d3f710df0427c)
+
+
+
+[\> Master Condition List](https://veteransbenefitskb.com/master)
+
+[\> Federal Benefits List by Combined Ratings](https://veteransbenefitskb.com/combinedbenefits)
+
+[\> Insider Insight into VBA Claim Processing](https://veteransbenefitskb.com/insight)
+
+[\> Rating Schedule Index](https://veteransbenefitskb.com/ratingsindex)
+
+[\> Filing a VA Disability Claim](https://veteransbenefitskb.com/vaclaim)
+
+[\> Filing an Appeal](https://veteransbenefitskb.com/appeals)
+
+* * *
+
+
+
+
+
+
+
+
+
+Compensation for disabilities caused, disabilities made worse, or death as a result of the carelessness, negligence, lack of proper skill, error in judgment, or similar instance of fault on the part of the **Department of Veterans affairs** in furnishing the hospital care, medical or surgical treatment, or examination, or caused by participation in a compensated work therapy program, such as [Veteran Readiness and Employment](https://veteransbenefitskb.com/vre).
+
+**IMPORTANT NOTES:**
+
+- If you are awarded a judgment against the United States (VA) in a civil action (Federal Tort Claim) due to the VA causing a disability **NO** extra disability benefits will be paid out _until_ the amount paid out to the Veteran via the judgement equals out!
+
+  - Meaning if you got a judgement for $100,000 and your Combined VA disability was 70% and the 1151 conditions bumped you to 90%; you would **NOT** get the increased rate of pay of the 90% (you’d keep getting the 70%) - till the VA withheld $100,000 worth of money.
+
+    - If for instance you got increases or got additional things service-connected and your combined without the 1151 conditions combined to 90%, then you’d get the 90% rate as normal. If with the 1151 conditions you were put at 100% then again, VA would again withhold the difference of the pay rates.
+  - Similarly, if [Auto](https://veteransbenefitskb.com/auto) or [DIC](https://www.veteransbenefitskb.com/survivorbenefits#dic) benefits are award with the basis being a 1151 condition then VA would withhold the payments till caught up.
+
+  - VA [Pension](https://www.veteransbenefitskb.com/pension) and [Survivors pension](https://veteransbenefitskb.com/survivorbenefits#pension) do **NOT** feature withholding; **BUT** the award amount itself would count against net worth calculations (if money is still on hand).
+- If you were previously denied service-connection for a condition and are now claiming that condition under 1151 (or vice versa), do **NOT** file an [Appeal](https://veteransbenefitskb.com/appeals)! As a claim under 1151 is **NOT** a claim for service-connection!
+
+  - However, if you were denied under 1151 and are again filing under 1151 for the condition, you **WOULD** need to file an appeal!
+- Grants under 1151 do **NOT** establish service-connection! Grants instead establish compensation as if the condition _was_ service-connected.
+
+- Treatment under [Community Care](https://www.veteransbenefitskb.com/commcare) does **NOT** qualify for 1151 grants _or_ federal torts!
+
+**Source:** [https://www.veteransbenefitskb.com/1151#38usc1151claimsvanegligence](https://www.veteransbenefitskb.com/1151#38usc1151claimsvanegligence)
+
+<!-- Chunk 1324/1358 | Topic: 38 USC 1151 Claims (VA Negligence) | Type: claims_special | Words: 401 -->
+
+---
+
+## Winning a Federal Tort Claim
+
+## **Winning a Federal Tort Claim**
+
+In order to win the claim the Veteran needs to show:
+
+1. Injured by a federal government employee;
+
+2. The employee was acting within the scope of his or her official duties;
+
+3. The employee was acting negligently or wrongfully; and
+
+4. The negligent or wrongful act proximately caused the injury of which he or she complains.
+
+
+To submit a claim you or your legal representative can complete a [Standard Form 95](https://www.gsa.gov/system/files/SF95-07a.pdf) and submit it to:
+
+Mail:
+
+> ```
+>   Department of Veterans Affairs
+>   Office of General Counsel
+>   Torts Law Group
+>   810 Vermont Avenue, NW
+>   Washington, DC 20420
+> ```
+
+Email: [ogc.torts@va.gov](mailto:ogc.torts@va.gov)
+
+Fax: (202) 495-5076
+
+It is **HIGHLY** recommended to seek an attorney who specializes in federal tort claims!
+
+**IMPORTANT NOTES:**
+
+- The claim **MUST** be received within 2 YEARS of the injury!
+
+- Unlike with a 1151 claim, the federal government has **NO** [Duty to Assist](https://www.veteransbenefitskb.com/dta). Meaning, you will need to do all the leg work and provide and gather the evidence needed to support your own claim!
+
+**Source:** [https://www.veteransbenefitskb.com/1151#winningafederaltortclaim](https://www.veteransbenefitskb.com/1151#winningafederaltortclaim)
+
+<!-- Chunk 1325/1358 | Topic: Winning a Federal Tort Claim | Type: claims_special | Words: 179 -->
+
+---
+
+## Winning a 1151 Claim
+
+## **Winning a 1151 Claim**
+
+In order to win the claim the Veteran's claim needs to contain the following 3 elements:
+
+1. An event that meets the below criteria.
+
+2. Disability or death that began or was made worse after element 1 occurred.
+
+3. A [Nexus letter/independent medical opinion](https://veteransbenefitskb.com/imo) that finds element 1 caused element 2.
+
+
+There is no special or separate form to file a 1151 claim. The Veteran simply needs to identify it as being a 1151 claim when filing their [Claim](https://veteransbenefitskb.com/vaclaim).
+
+To assist the VA in obtaining relevant records you need to identify:
+
+- Where the event occurred in;
+
+- Approximately when the event occurred; and
+
+- Explain how the provider messed up.
+
+
+**IMPORTANT NOTE:**
+
+- If a grant is based on aggravation then the condition will be evaluated under the formulation shown [HERE](https://veteransbenefitskb.com/agg#rating) in the pre-service example.
+
+**Source:** [https://www.veteransbenefitskb.com/1151#winninga1151claim](https://www.veteransbenefitskb.com/1151#winninga1151claim)
+
+<!-- Chunk 1326/1358 | Topic: Winning a 1151 Claim | Type: claims_special | Words: 141 -->
+
+---
+
+## Detailed Explanation of Criteria
+
+## **Detailed Explanation of Criteria**
+
+Compensation can be paid for disabilities that result from, are aggravated beyond their natural progression, or cause death due to:
+
+- Acts of omission;
+
+  - Failure to obtain **INFORMED** consent **PRIOR** to treatment;
+
+  - Failure to provide a _timely_ diagnosis or treatment for a disability.
+- Compensated work therapy program, such as [Veteran Readiness and Employment](https://veteransbenefitskb.com/vre);
+
+  - Disability or death caused by direct participation in the program.
+
+    - Meaning if you get hurt/sick while just being in a program (at large), is **NOT** enough! The disability **MUST** be a result of doing something required to complete the program. So for instance getting hurt due to falling down the stairs at home while you are in a program would **NOT** be covered.
+- Error in judgment;
+
+  - Errors involving _negligence_. This does **NOT** include errors that are the result of a misdiagnosis/treatment that are later found to be incorrect. Meaning, doctors are human and medicine is not always an exact science so not every error is due to negligence!
+- Examinations;
+
+- Failure to diagnose or treat;
+
+  - A determination that a physician exercising proper skill and care required by their profession would have reasonably been able to diagnose the condition and provide treatment. The VA **WILL** get a third party to provide a medical opinion on this matter if necessary.
+
+    - This failure **MUST** have resulted in disability or death that would have probably been avoided had a proper diagnosis and treatment been given.
+- Failure to follow the established standard of care;
+
+  - When the standard of care is not followed due to things like carelessness, negligence, lack of skill, etc.
+- Medication;
+
+  - Disability caused by the prescribing of the wrong dosage/medication.
+- Premature discharge.
+
+  - Disability was caused by or aggravated beyond its natural progression due to being released too soon.
+
+**IMPORTANT NOTES:**
+
+- If a disability is due to another patient (non-staff) while **NOT** under care/examination, the disability is **NOT** eligible for compensation under 1151!
+
+- If a disability is the result of the Veteran failing to follow medical instructions and this conclusion can be reasonably supported then a **DENIAL** is warranted!
+
+- If a disability or death is found to be the typical or natural progression of a disease of injury then compensation **CANNOT** be awarded.
+
+- Disabilities that are the result of reasonable care/treatment outcomes are **NOT** eligible for compensation (these are typically spelled out before consent for treatment is given).
+
+**Source:** [https://www.veteransbenefitskb.com/1151#detailedexplanationofcriteria](https://www.veteransbenefitskb.com/1151#detailedexplanationofcriteria)
+
+<!-- Chunk 1327/1358 | Topic: Detailed Explanation of Criteria | Type: claims_special | Words: 412 -->
+
+---
+
+## Effective Dates
+
+## **Effective Dates**
+
+[Effective dates](https://www.veteransbenefitskb.com/edate) for 1151 grants have additional considerations than typical claims:
+
+- Compensation is either:
+
+  - Date of the injury or aggravation, if the claim is received within _one year_ of the incident; or
+
+  - Date of claim was initiated.
+- [DIC](https://www.veteransbenefitskb.com/survivorbenefits#dic) is either the:
+
+  - First day of the month in which the Veteran’s death occurred, if a claim is received within _one year_ following the date of death; or
+
+  - Date claim was received.
+
+**Source:** [https://www.veteransbenefitskb.com/1151#effectivedates](https://www.veteransbenefitskb.com/1151#effectivedates)
+
+<!-- Chunk 1328/1358 | Topic: Effective Dates | Type: claims_special | Words: 79 -->
+
+---
+
+## Ancillary Benefits (Additional Benefits)
+
+## **Ancillary Benefits (Additional Benefits)**
+
+Veterans who are granted compensation under 1151 _may_ be eligible for additional benefits such as:
+
+- [Automobile/Adaptive equipment](https://veteransbenefitskb.com/auto);
+
+- [Clothing allowance](https://veteransbenefitskb.com/cloth); and/or
+
+- [Specially adaptive housing/Special housing adaptation](https://veteransbenefitskb.com/housing#sah).
+
+**Source:** [https://www.veteransbenefitskb.com/1151#ancillarybenefitsadditionalbenefits](https://www.veteransbenefitskb.com/1151#ancillarybenefitsadditionalbenefits)
+
+<!-- Chunk 1329/1358 | Topic: Ancillary Benefits (Additional Benefits) | Type: claims_special | Words: 33 -->
+
+---
+
+## Forbidden Ancillary Benefits
+
+## **Forbidden Ancillary Benefits**
+
+The following benefits **CANNOT** be based on any disabilities which have been granted via 1151! If the Veteran establishes eligibility for these benefits outside of 1151 grants then they will get them!
+
+- 10-point Civil Service Preference;
+
+- [Life insurance](https://veteransbenefitskb.com/life-insurance) (cannot apply based on a grant of 1151);
+
+- [CHAMPVA](https://veteransbenefitskb.com/champva);
+
+- Chapter 31 education benefits;
+
+- [Chapter 35 (DEA)](https://veteransbenefitskb.com/survivorbenefits#dea) benefits;
+
+- Loan guaranty (surviving spouses);
+
+- Waiver of loan guaranty fee.
+
+**Source:** [https://www.veteransbenefitskb.com/1151#forbiddenancillarybenefits](https://www.veteransbenefitskb.com/1151#forbiddenancillarybenefits)
+
+<!-- Chunk 1330/1358 | Topic: Forbidden Ancillary Benefits | Type: claims_special | Words: 75 -->
+
+---
+
+### FAQ: I am an eligible Veteran and I was diagnosed with a listed disability, but I was denied. What can I do?
+
+*Also known as: agent orange, herbicide, Vietnam, dioxin, presumptive conditions*
+
+**Question:** I am an eligible Veteran and I was diagnosed with a listed disability, but I was denied. What can I do?
+
+**Answer:** Sometimes the VBA makes a mistake or they are missing evidence that would indicate you are an eligible Veteran with a diagnosed condition. If this happens, it is strongly recommended that you seek out the assistance of a [VSO](https://www.va.gov/ogc/apps/accreditation/index.asp) to help you file an [Appeal](https://veteransbenefitskb.com/Appeals).
+
+Additionally,
+
+- If there is documentation that during service the Veteran's exposure was due to their own willful misconduct or that after the Veteran's separation there was a supervening condition or event that was more than likely the etiology of the disease, the Veteran may be denied service-connection.
+
+**Source:** [https://www.veteransbenefitskb.com/agentorange#faq](https://www.veteransbenefitskb.com/agentorange#faq)
+
+<!-- Chunk 1331/1358 | Topic: Agent Orange Exposure - FAQ | Type: faq | Words: 116 -->
+
+---
+
+### References and Legal Citations
+
+*Also known as: agent orange, herbicide, Vietnam, dioxin, presumptive conditions*
+
+## **References**
+
+- [38 CFR § 3.307 - Presumptive service connection for chronic, tropical, or prisoner-of-war related disease, disease associated with exposure to certain herbicide agents, or disease associated with exposure to contaminants in the water supply at Camp Lejeune; wartime and service on or after January 1, 1947.](https://www.law.cornell.edu/cfr/text/38/3.307)
+
+- [38 CFR § 3.309 - Disease subject to presumptive service connection](https://www.law.cornell.edu/cfr/text/38/3.309)
+
+- [38 CFR § 3.816 - Awards under the Nehmer Court Orders for disability or death caused by a condition presumptively associated with herbicide exposure](https://www.law.cornell.edu/cfr/text/38/3.816)
+
+- [38 U.S. Code § 1116 - Presumptions of service connection for diseases associated with exposure to certain herbicide agents; presumption of exposure for veterans who served in certain locations](https://www.law.cornell.edu/uscode/text/38/1116)
+
+- [38 U.S. Code § 1116A - Presumptions of service connection for veterans who served offshore of the Republic of Vietnam](https://www.law.cornell.edu/uscode/text/38/1116A)
+
+- [38 U.S. Code § 1116B - Presumption of herbicide exposure for certain veterans who served in Korea](https://www.law.cornell.edu/uscode/text/38/1116B)
+
+- [H.R.299 - Blue Water Navy Vietnam Veterans Act of 2019](https://www.congress.gov/bill/116th-congress/house-bill/299/text)
+
+- [M21-1, Part V, Subpart ii, Chapter 2, Section B - Presumptive Service Connection (SC)](https://www.knowva.ebenefits.va.gov/system/templates/selfservice/va_ssnew/help/customer/locale/en-US/portal/554400000001018/content/554400000180482/M21-1-Part-V-Subpart-ii-Chapter-2-Section-B-Presumptive-Service-Connection-SC)
+
+- [M21-1, Part VIII, Subpart i, Chapter 1, Section A - Developing Claims for Service Connection (SC) Based on Herbicide Exposure](https://www.knowva.ebenefits.va.gov/system/templates/selfservice/va_ssnew/help/customer/locale/en-US/portal/554400000001018/content/554400000177422/M21-1-Part-VIII-Subpart-i-Chapter-1-Section-A-Developing-Claims-for-Service-Connection-SC-Based-on-Herbicide-Exposure)
+
+- [M21-1, Part VIII, Subpart i, Chapter 1, Section B - Ratings for Disabilities Associated with Herbicide Exposure](https://www.knowva.ebenefits.va.gov/system/templates/selfservice/va_ssnew/help/customer/locale/en-US/portal/554400000001018/content/554400000177423/M21-1-Part-VIII-Subpart-i-Chapter-1-Section-B-Ratings-for-Disabilities-Associated-with-Herbicide-Exposure)
+
+- [M21-1, Part VIII, Subpart i, Chapter 2, Section A - Developing Claims Under the Nehmer Stipulation](https://www.knowva.ebenefits.va.gov/system/templates/selfservice/va_ssnew/help/customer/locale/en-US/portal/554400000001018/content/554400000177424/M21-1-Part-VIII-Subpart-i-Chapter-2-Section-A-Developing-Claims-Under-the-Nehmer-Stipulation)
+
+- [M21-1, Part VIII, Subpart i, Chapter 2, Section B - Determining Eligibility to Retroactive Payment Under the Nehmer Stipulation](https://www.knowva.ebenefits.va.gov/system/templates/selfservice/va_ssnew/help/customer/locale/en-US/portal/554400000001018/content/554400000177426/M21-1-Part-VIII-Subpart-i-Chapter-2-Section-B-Determining-Eligibility-to-Retroactive-Payment-Under-the-Nehmer-Stipulation)
+
+- [Nehmer v. U.S. Veterans’ Admin., 712 F. Supp. 1404 (N.D. Cal. 1989)](https://law.justia.com/cases/federal/district-courts/FSupp/712/1404/1475736/)
+
+- [Nehmer v. US Veterans Admin., 32 F. Supp. 2d 1175 (N.D. Cal. 1999)](https://law.justia.com/cases/federal/district-courts/FSupp2/32/1175/2338271/)
+
+- [NEHMER v. UNITED STATES DEPARTMENT OF VETERANS AFFAIRS (2007)](https://caselaw.findlaw.com/court/us-9th-circuit/1219226.html)
+
+- [Nehmer, et al v. US Veterans Administ, (N.D. Cal. 2020)](https://law.justia.com/cases/federal/district-courts/california/candce/3:1986cv06160/56297/492/)
+
+- [Nehmer, et al v. US Veterans Administ, (N.D. Cal. 2021)](https://law.justia.com/cases/federal/district-courts/california/candce/3:1986cv06160/56297/506/)
+
+- [Procopio v. Secretary of Veterans Affairs, No. 19-2184 (Fed. Cir. 2019)](https://law.justia.com/cases/federal/appellate-courts/cafc/19-2184/19-2184-2019-12-05.html)
+
+**Source:** [https://www.veteransbenefitskb.com/agentorange#references](https://www.veteransbenefitskb.com/agentorange#references)
+
+<!-- Chunk 1332/1358 | Topic: Agent Orange Exposure - Legal References | Type: references | Words: 328 -->
+
+---
+
+## Agent Orange Exposure
+
+*Also known as: agent orange, herbicide, Vietnam, dioxin, presumptive conditions*
+
+# **Agent Orange (AO)**
+
+
+[![](https://images.squarespace-cdn.com/content/v1/66c515a3e8305f0f79e8b680/bd22f10b-2167-4509-9215-2b49d4a4e22f/search3.png)](https://cse.google.com/cse?cx=8392d3f710df0427c)
+
+
+
+[\> Master Condition List](https://veteransbenefitskb.com/master)
+
+[\> Federal Benefits List by Combined Ratings](https://veteransbenefitskb.com/combinedbenefits)
+
+[\> Insider Insight into VBA Claim Processing](https://veteransbenefitskb.com/insight)
+
+[\> Rating Schedule Index](https://veteransbenefitskb.com/ratingsindex)
+
+[\> Filing a VA Disability Claim](https://veteransbenefitskb.com/vaclaim)
+
+[\> Filing an Appeal](https://veteransbenefitskb.com/appeals)
+
+* * *
+
+
+
+
+
+
+
+
+
+Congress has recognized that Veterans who were exposed to these agents are more likely to develop certain diseases.
+
+**IMPORTANT NOTE:**
+
+- If there is definitive evidence that the Veteran was **NOT** exposed to any agent orange during their service. They **_WILL_** be denied presumptive status!
+
+  - This situation would be super unusual and highly unlikely.
+
+* * *
+
+**Source:** [https://www.veteransbenefitskb.com/agentorange#agentorangeexposure](https://www.veteransbenefitskb.com/agentorange#agentorangeexposure)
+
+<!-- Chunk 1333/1358 | Topic: Agent Orange Exposure | Type: presumptive | Words: 98 -->
+
+---
+
+## Eligibility
+
+## **Eligibility**
+
+Eligibility is based upon where and when you served, as well as certain special duties:
+
+| Location | Dates |
+| --- | --- |
+| American Samoa (to include territorial waters) | January 9, 1962, through July 30, 1980 |
+| Cambodia (at Mimot or Krek, Kampong Cham Province) | April 16, 1969, through April 30, 1969 |
+| Guam (to include territorial waters) | January 9, 1962, through July 30, 1980 |
+| Johnston Atoll or on a ship that called at Johnston Atoll | January 1, 1972, through September 30, 1977 |
+| Korean DMZ (in or near) | September 1, 1967, through August 31, 1971 |
+| Laos | December 1, 1965, through September 30, 1969 |
+| Republic of Vietnam\* | January 9, 1962, through May 7, 1975 |
+| Thailand (any U.S. or Royal Thai military base) | January 9, 1962, through June 30, 1976 |
+
+\*This includes Brown Water Navy Service (inland waterways) and ‘Blue Water Navy (BWN) Service’ - service in the waters within 12 nautical miles seaward from the demarcation line of the waters of Vietnam, Cambodia, or service in other locations if the conditions of service involved duty or visitation in the Republic of Vietnam.
+
+* * *
+
+### Additional Eligibility
+
+- Served on Active Duty or as a Reservist in a Air Force unit where a C-123 aircraft with traces of Agent Orange was assigned\*\*, and had _repeated contact_ with this aircraft due to your flight, ground, or medical duties.
+
+  - \*\*For a list of these locations and time periods click [HERE](https://www.benefits.va.gov/compensation/docs/AO_C123_AFSpecialityCodesUnits.pdf).
+
+* * *
+
+### Non-Presumptive Locations
+
+The following locations have also been recognized as having stored, destroyed, or tested Agent Orange. Do know that being assigned to these bases during the respective exposure windows does **NOT** mean the VA considers you to be presumptuously exposed. **HOWEVER**, if you served in the locations **AND** you can show that exposure was at least as likely as not likely to have happened, then the VA **CAN** concede exposure!
+
+Examples of evidence that can show you may have been exposed include but are not limited to:
+
+- Personnel records showing you were assigned to the location/time and having a MOS that could be linked to storing, destroying, or testing AO;
+
+- Evaluations mentioning storing, destroying, or testing AO; and/or
+
+- Medical records showing you sought treatment after exposure.
+
+
+For a list of _US_ locations and time periods click [HERE](https://www.publichealth.va.gov/exposures/agentorange/locations/tests-storage/usa.asp).
+
+For a list of _overseas_ locations and time periods click [HERE](https://www.publichealth.va.gov/exposures/agentorange/locations/tests-storage/outside-vietnam.asp).
+
+**Source:** [https://www.veteransbenefitskb.com/agentorange#eligibility](https://www.veteransbenefitskb.com/agentorange#eligibility)
+
+<!-- Chunk 1334/1358 | Topic: Eligibility | Type: presumptive | Words: 421 -->
+
+---
+
+## Presumptive Diseases
+
+## **Presumptive Diseases**
+
+The Veteran must have developed these diseases **within ONE year** of the last possibility of them being exposed to the agent.
+
+- [Chloracne or other acneform disease consistent with chloracne](https://veteransbenefitskb.com/skin#7829);
+
+- [Early-onset peripheral neuropathy](https://veteransbenefitskb.com/nervsystem);
+
+- [Porphyria cutanea tarda](https://veteransbenefitskb.com/skin#7816).
+
+
+**IMPORTANT NOTE:**
+
+- These conditions **MUST** also have reached a severity of _at least_ 10% within that year of last exposure to be presumptive!
+
+**Source:** [https://www.veteransbenefitskb.com/agentorange#presumptivediseases](https://www.veteransbenefitskb.com/agentorange#presumptivediseases)
+
+<!-- Chunk 1335/1358 | Topic: Presumptive Diseases | Type: presumptive | Words: 65 -->
+
+---
+
+## Presumptive Diseases Continued
+
+## **Presumptive Diseases Continued**
+
+The Veteran may develop any of these diseases at **any point** before their death; **HOWEVER** the condition(s) severity **MUST** have been at least 10% at some point!
+
+- [AL amyloidosis](https://veteransbenefitskb.com/blood#7717);
+
+- [All chronic B-cell leukemias](https://veteransbenefitskb.com/blood#7703) (including, but not limited to, hairy-cell leukemia and chronic lymphocytic leukemia);
+
+- [Hodgkin's disease](https://veteransbenefitskb.com/blood#7709);
+
+- [Ischemic heart disease](https://veteransbenefitskb.com/heart#7005) (including, but not limited to, [Acute, subacute, and old myocardial infarction](https://veteransbenefitskb.com/heart#7006); [Arteriosclerotic cardiovascular disease](https://veteransbenefitskb.com/heart#7005); [Atherosclerotic cardiovascular disease](https://veteransbenefitskb.com/heart#7005) including [Coronary artery disease](https://veteransbenefitskb.com/heart#7005) (including coronary spasm) and [Coronary bypass surgery](https://veteransbenefitskb.com/heart#7017); and [Stable, unstable and Prinzmetal's angina](https://veteransbenefitskb.com/heart#7006);
+
+- [Multiple myeloma](https://veteransbenefitskb.com/blood#7712);
+
+- [Non-Hodgkin's lymphoma](https://veteransbenefitskb.com/blood#7715);
+
+- [Parkinson's disease](https://veteransbenefitskb.com/cns#8004);
+
+- [Prostate cancer](https://veteransbenefitskb.com/gensystem#7528);
+
+- [Respiratory cancers](https://veteransbenefitskb.com/airsystem#6819) (lung, bronchus, larynx, and trachea);
+
+- [Soft-tissue sarcoma](https://veteransbenefitskb.com/mscancer#5329) ( **NOT** Including: osteosarcoma (bone cancer), chondrosarcoma, Kaposi's sarcoma, or mesothelioma);
+
+- [Type 2 diabetes](https://veteransbenefitskb.com/endsystem#7913).
+
+
+NOTES:
+
+- The term ischemic heart disease does **NOT** include peripheral manifestations of arteriosclerosis such as peripheral vascular disease or stroke, or any other condition that does not qualify within the generally accepted medical definition of ischemic heart disease.
+
+- The term “soft-tissue sarcoma” includes the following:
+
+  - Adult fibrosarcoma;
+
+  - Alveolar soft part sarcoma;
+
+  - Angiosarcoma (hemangiosarcoma and lymphangiosarcoma);
+
+  - Clear cell sarcoma of tendons and aponeuroses;
+
+  - Congenital and infantile fibrosarcoma;
+
+  - Dermatofibrosarcoma protuberans;
+
+  - Ectomesenchymoma;
+
+  - Epithelioid leiomyosarcoma (malignant leiomyoblastoma);
+
+  - Epithelioid sarcoma;
+
+  - Extraskeletal Ewing's sarcoma;
+
+  - Leiomyosarcoma;
+
+  - Liposarcoma;
+
+  - Malignant fibrous histiocytoma;
+
+  - Malignant ganglioneuroma;
+
+  - Malignant giant cell tumor of tendon sheath;
+
+  - Malignant glomus tumor;
+
+  - Malignant granular cell tumor;
+
+  - Malignant hemangiopericytoma;
+
+  - Malignant mesenchymoma;
+
+  - Malignant schwannoma, including malignant schwannoma with rhabdomyoblastic differentiation (malignant Triton tumor), glandular and epithelioid malignant schwannomas;
+
+  - Proliferating (systemic) angioendotheliomatosis;
+
+  - Rhabdomyosarcoma;
+
+  - Synovial sarcoma (malignant synovioma).
+
+* * *
+
+**The following conditions do NOT have to manifest to an at least 10% evaluation to be presumptive!**
+
+- [Bladder cancer](https://veteransbenefitskb.com/gensystem#7528);
+
+- [Hypertension](https://veteransbenefitskb.com/bloodtubes#7101);
+
+- [Hypothyroidism](https://veteransbenefitskb.com/endsystem#7903);
+
+- [Monoclonal Gammopathy of Undetermined Significance (MGUS)](https://veteransbenefitskb.com/blood#7712); or
+
+- [Parkinsonism](https://veteransbenefitskb.com/cns#8004).
+
+**Source:** [https://www.veteransbenefitskb.com/agentorange#presumptivediseasescontinued](https://www.veteransbenefitskb.com/agentorange#presumptivediseasescontinued)
+
+<!-- Chunk 1336/1358 | Topic: Presumptive Diseases Continued | Type: presumptive | Words: 318 -->
+
+---
+
+## Nehmer Class Members (38 CFR 3.816)
+
+## **Nehmer Class Members (38 CFR 3.816)**
+
+Eligible claimants are entitled to earlier [Effective date(s)](https://www.veteransbenefitskb.com/edate) based on the class action lawsuit of [Nehmer v. U.S. Veterans’ Admin., 712 F. Supp. 1404 (N.D. Cal. 1989)](https://law.justia.com/cases/federal/district-courts/FSupp/712/1404/1475736/).
+
+Eligible conditions/benefits are to be backdated to the date the claim was initiated or date entitlement [Arose](https://www.veteransbenefitskb.com/edate#arose); whichever is later. In the case of eligible claims received within a year of separation, the backdate is to either the date after separation or date entitlement arose; whichever is later.
+
+**IMPORTANT NOTES:**
+
+- The limitation regarding liberalizing law (effective dates can be no earlier than the date of the law/policy change) does **NOT** apply to grants under 38 CFR 3.816!
+
+- The appeal does **NOT** need to be continuously pursued!
+
+- If a covered condition was later granted on [Appeal](https://www.veteransbenefitskb.com/appeals) via a [Secondary](https://www.veteransbenefitskb.com/claimtype#secondary), [Direct](https://www.veteransbenefitskb.com/serviceconnection#direct), different [Presumptive](https://www.veteransbenefitskb.com/presumptive), etc. basis - the VA is allowed to reopen the issue and award an earlier effective date via 38 CFR 3.816.
+
+- Claims/appeals do **NOT** need to have named Agent Orange as the basis of the condition!
+
+  - If for example you said originally that your lung cancer was due to radiation exposure, you can still be considered a Nehmer class member.
+
+* * *
+
+### Eligibility
+
+Veteran was exposed to Agent Orange and developed a covered condition _or_ their survivor claimed entitlement to a related [Death Benefit](https://www.veteransbenefitskb.com/deathbenefits), or [Survivor benefit](https://www.veteransbenefitskb.com/survivorbenefits) and was **DENIED** from September 25, 1985 to the date **BEFORE** the condition became presumptive.
+
+- To see the list of when conditions became presumptive click [HERE](https://www.veteransbenefitskb.com/edate#lib).
+
+
+**IMPORTANT NOTE:**
+
+- **ONLY** Veteran’s whose Agent Orange exposure happened _in_ Vietnam **_OR_** its waters (to include its waterways/ports (Brown and Blue Water Navy)) **_ARE_** subject to Nehmer! If exposure happened in a different country, Nehmer **CANNOT** be applied. [(N.D. Cal. 2020)](https://law.justia.com/cases/federal/district-courts/california/candce/3:1986cv06160/56297/492/)
+
+
+**SPECIAL NOTE:**
+
+- From September 25, 1985, if **ANY** claim or appeal was decided **AND** there was medical evidence of record that showed a _diagnosis_ of a condition which **BECAME** presumptive. **EVEN IF NOT AT ISSUE** in the claim/appeal, the now presumptive condition is eligible for Nehmer! (see example 3 below)
+
+
+* * *
+
+### Covered Conditions
+
+Nehmer applies to the conditions named in [38 CFR 3.309(e)](https://www.law.cornell.edu/cfr/text/38/3.309) **BESIDES** chloracne. If the condition is **NOT** named in the regulation then till such time it is added officially, the Nehmer stipulation **CANNOT** be applied!
+
+**IMPORTANT NOTES:**
+
+- When a new presumptive condition is added to 38 CFR 3.309(e), the VA is **REQUIRED** to review prior decisions and grant earlier effective dates as appropriate.
+
+  - So in theory, a person would never need to file a claim for an earlier effective date…
+- By their nature, claims for conditions filed **AFTER** they became presumptive are **NOT** subject to Nehmer.
+
+  - However, these claims are _still_ eligible for consideration under [Liberalizing law](https://www.veteransbenefitskb.com/edate#lib).
+- Currently hypertension and MGUS are **NOT** conditions eligible for Nehmer consideration.
+
+
+* * *
+
+#### Example 1 (Nehmer Stipulation Applies)
+
+AO Vietnam Veteran’s initial claim for lung cancer was received on October 20, 1992, and denied on December 23, 1992. Medical evidence showed a diagnosis of lung cancer in September 1992. The Veteran filed an appeal in March 2025 with evidence of the prior diagnosis.
+
+NOTE: Lung cancer became presumptive for AO June 9, 1994.
+
+RESULT:  SC for lung cancer is granted effective the date the initial claim was received, October 20, 1992.
+
+* * *
+
+#### Example 2 (Nehmer Stipulation Does **NOT** Apply)
+
+AO Vietnam Veteran’s initial claim for diabetes was received on June 22, 1984, and denied on February 2, 1985. The Veteran filed an appeal on January 6, 2025. The earliest medical evidence showing a diagnosis of diabetes type II was in January 10, 1980.
+
+NOTE: Diabetes became presumptive for AO May 08, 2001.
+
+RESULT: SC for diabetes is granted January 6, 2024. Nehmer does not apply in this context as the original claim was denied **BEFORE** September 25, 1985. However, liberalizing law does still apply, as Veteran was diagnosed before the condition was presumptive.
+
+* * *
+
+#### Example 3 (Nehmer Stipulation Applies)
+
+AO Vietnam Veteran files a claim for jaw pain in June 4, 2008. Medical records submitted with claim show a diagnosis of coronary artery disease dated May 10, 1999. December 5, 2020 Veteran files a claim for coronary artery disease.
+
+NOTE: Coronary artery disease became presumptive for AO Aug 31, 2010.
+
+RESULT: SC for coronary artery disease is granted the date a claim was made during which time there was evidence of record showing the diagnosis of the now presumptive condition, June 4, 2008.
+
+**IMPORTANT NOTE:**
+
+- **MOST** raters will **MISS THIS**!
+
+**Source:** [https://www.veteransbenefitskb.com/agentorange#nehmerclassmembers38cfr3816](https://www.veteransbenefitskb.com/agentorange#nehmerclassmembers38cfr3816)
+
+<!-- Chunk 1337/1358 | Topic: Nehmer Class Members (38 CFR 3.816) | Type: presumptive | Words: 766 -->
+
+---
+
+## [**Presumptive Navigation**](https://www.veteransbenefitskb.com/presumptive)
+
+## [**Presumptive Navigation**](https://www.veteransbenefitskb.com/presumptive)
+
+|     |     |
+| --- | --- |
+| [\> Afghanistan Veterans (Gulf War Illnesses)](https://veteransbenefitskb.com/afghanistanill) | [\> Agent Orange (AO)](https://veteransbenefitskb.com/agentorange) |
+| [\> Agent Orange - Children](https://veteransbenefitskb.com/aochild) | [\> Arteriosclerotic Manifestations due to Hypertension](https://veteransbenefitskb.com/arteriosclerotic) |
+| [\> Broken Bones](https://veteransbenefitskb.com/broken) | [\> Burn Pits/Particulate Matter](https://veteransbenefitskb.com/burnpits) |
+| [\> Camp Lejeune/New River](https://veteransbenefitskb.com/camplejeune) | [\> Cardiovascular Conditions due to Amputation](https://veteransbenefitskb.com/amputation) |
+| [\> Combat Veterans](https://veteransbenefitskb.com/combatvet) | [\> COVID-19](https://veteransbenefitskb.com/covid19) |
+| [\> Degenerative Arthritis](https://veteransbenefitskb.com/degenerative-arthritis) | [\> Firefighting Foam (PFAS/AFFF)](https://veteransbenefitskb.com/pfas) |
+| [\> Former Prisoners of War (POW)](https://veteransbenefitskb.com/pow) | [\> Mental Health (Chapter 17)](https://veteransbenefitskb.com/psych) |
+| [\> Mustard gas and Lewisite](https://veteransbenefitskb.com/mustardgas) | [\> Nerve conditions due to Spine issues](https://veteransbenefitskb.com/spine#presumptive) |
+| [\> Noise Exposure](https://veteransbenefitskb.com/loud) | [\> Persian Gulf Veterans (Gulf War Illnesses, SW Asia)](https://veteransbenefitskb.com/gulfill) |
+| [\> Project 112/Project Shipboard Hazard and Defense (SHAD)](https://veteransbenefitskb.com/shad) | [\> Radiation (Atomic Veterans)](https://veteransbenefitskb.com/ionizing) |
+| [\> Skill Badges](https://veteransbenefitskb.com/skill-badge) | [\> Toxic Exposure Risk Activity (TERA)](https://veteransbenefitskb.com/toxic) |
+| [\> Time Since Separation](https://veteransbenefitskb.com/time) | [\> Traumatic Brain Injury (TBI)](https://veteransbenefitskb.com/tbi#presumptive) |
+| \> [Tropical Diseases](https://veteransbenefitskb.com/tropical) |
+
+
+#### **Veterans Benefits Knowledge Base**
+
+- [Homepage Link](https://www.veteransbenefitskb.com/)
+
+**Source:** [https://www.veteransbenefitskb.com/agentorange#presumptivenavigationhttpswwwveteransbenefitskbcompresumptive](https://www.veteransbenefitskb.com/agentorange#presumptivenavigationhttpswwwveteransbenefitskbcompresumptive)
+
+<!-- Chunk 1338/1358 | Topic: [**Presumptive Navigation**](https://www.veteransbenefitskb.com/presumptive) | Type: presumptive | Words: 175 -->
+
+---
+
+### FAQ: I'm having trouble with my Case Manager/VRC. What can I do?
+
+*Also known as: VR&E, voc rehab, vocational rehab, chapter 31, vocational rehabilitation, employment services*
+
+**Question:** I'm having trouble with my Case Manager/VRC. What can I do?
+
+**Answer:** Click [HERE](https://www.knowva.ebenefits.va.gov/system/templates/selfservice/va_ssnew/help/customer/locale/en-US/portal/554400000001018/content/554400000260798/VRE-School-Certifying-Official-Handbook) to find the contact information for your Case Manager's boss at your nearest Regional Office.
+
+**Source:** [https://www.veteransbenefitskb.com/vre#faq](https://www.veteransbenefitskb.com/vre#faq)
+
+<!-- Chunk 1339/1358 | Topic: Veterans Readiness and Employment (VR&E) Chapter 31 - FAQ | Type: faq | Words: 30 -->
+
+---
+
+### FAQ: Will I loose TDIU if I go through VR&E?
+
+*Also known as: VR&E, voc rehab, vocational rehab, chapter 31, vocational rehabilitation, employment services*
+
+**Question:** Will I loose TDIU if I go through VR&E?
+
+**Answer:** No, only if after you complete the program you are able to maintain gainful employment for at least 12 continuous months.
+
+**Source:** [https://www.veteransbenefitskb.com/vre#faq](https://www.veteransbenefitskb.com/vre#faq)
+
+<!-- Chunk 1340/1358 | Topic: Veterans Readiness and Employment (VR&E) Chapter 31 - FAQ | Type: faq | Words: 32 -->
+
+---
+
+### FAQ: If I use VR&E, can this result in my rating being reevaluated?
+
+*Also known as: VR&E, voc rehab, vocational rehab, chapter 31, vocational rehabilitation, employment services*
+
+**Question:** If I use VR&E, can this result in my rating being reevaluated?
+
+**Answer:** No, using VR&E will **NOT** trigger a reevaluation.
+
+**Source:** [https://www.veteransbenefitskb.com/vre#faq](https://www.veteransbenefitskb.com/vre#faq)
+
+<!-- Chunk 1341/1358 | Topic: Veterans Readiness and Employment (VR&E) Chapter 31 - FAQ | Type: faq | Words: 22 -->
+
+---
+
+### FAQ: Can I use VR&E and DEA at the same time?
+
+*Also known as: VR&E, voc rehab, vocational rehab, chapter 31, vocational rehabilitation, employment services*
+
+**Question:** Can I use VR&E and DEA at the same time?
+
+**Answer:** No, you **CANNOT** use them at the same time.
+
+**Source:** [https://www.veteransbenefitskb.com/vre#faq](https://www.veteransbenefitskb.com/vre#faq)
+
+<!-- Chunk 1342/1358 | Topic: Veterans Readiness and Employment (VR&E) Chapter 31 - FAQ | Type: faq | Words: 21 -->
+
+---
+
+### FAQ: I did not earn the full 100% rate for the POST 9/11 GI bill. Would my amount of the BAH be reduced in kind?
+
+*Also known as: VR&E, voc rehab, vocational rehab, chapter 31, vocational rehabilitation, employment services*
+
+**Question:** I did not earn the full 100% rate for the POST 9/11 GI bill. Would my amount of the BAH be reduced in kind?
+
+**Answer:** No, the amount of BAH you would get is **NOT** impacted!
+
+**Source:** [https://www.veteransbenefitskb.com/vre#faq](https://www.veteransbenefitskb.com/vre#faq)
+
+<!-- Chunk 1343/1358 | Topic: Veterans Readiness and Employment (VR&E) Chapter 31 - FAQ | Type: faq | Words: 37 -->
+
+---
+
+### FAQ: Can I use a VR&E overseas?
+
+*Also known as: VR&E, voc rehab, vocational rehab, chapter 31, vocational rehabilitation, employment services*
+
+**Question:** Can I use a VR&E overseas?
+
+**Answer:** Yes, it is possible to get approval.
+
+**Source:** [https://www.veteransbenefitskb.com/vre#faq](https://www.veteransbenefitskb.com/vre#faq)
+
+<!-- Chunk 1344/1358 | Topic: Veterans Readiness and Employment (VR&E) Chapter 31 - FAQ | Type: faq | Words: 15 -->
+
+---
+
+### FAQ: The VA severed/reduced my conditions and I no longer meet the requirements to VR&E what happens now?
+
+*Also known as: VR&E, voc rehab, vocational rehab, chapter 31, vocational rehabilitation, employment services*
+
+**Question:** The VA severed/reduced my conditions and I no longer meet the requirements to VR&E what happens now?
+
+**Answer:** If you never applied then nothing.
+
+- If you were actively using it then your benefit will likely end. If you are currently taking classes, you will be allowed to finish the term. You’d be responsible for paying for the next term or you could potentially use a different education benefit (if you wanted to continue).
+
+**Source:** [https://www.veteransbenefitskb.com/vre#faq](https://www.veteransbenefitskb.com/vre#faq)
+
+<!-- Chunk 1345/1358 | Topic: Veterans Readiness and Employment (VR&E) Chapter 31 - FAQ | Type: faq | Words: 75 -->
+
+---
+
+### FAQ: Should I bother completing FAFSA or getting scholarships/grants when VA will be paying for classes anyway?
+
+*Also known as: VR&E, voc rehab, vocational rehab, chapter 31, vocational rehabilitation, employment services*
+
+**Question:** Should I bother completing FAFSA or getting scholarships/grants when VA will be paying for classes anyway?
+
+**Answer:** **YES**! Even if the VA does cover everything you **CAN** generally pocket that money after everything filters through your school!
+
+  - How this works is: School counts up what all fees and tuition you owe and offsets that by any loans, scholarships, grants, etc. If there ends up being a positive balance in your account when everything is said and done you will be refunded that positive balance! If the school applies your loans, scholarships, etc before VA pays the school **THAT IS FINE**! As in the end, the VA will pay the school as appropriate meaning any left over positive balance is still **YOURS**!
+
+    - Tuition assistance through say a job will not result in you pocketing that money. You will in essence be giving the government a discount is all.
+
+    - Scholarships and grants can be pocketed! So be sure to file for them!
+
+**Source:** [https://www.veteransbenefitskb.com/vre#faq](https://www.veteransbenefitskb.com/vre#faq)
+
+<!-- Chunk 1346/1358 | Topic: Veterans Readiness and Employment (VR&E) Chapter 31 - FAQ | Type: faq | Words: 164 -->
+
+---
+
+### FAQ: Can I get the full BAH amount if I take online only courses?
+
+*Also known as: VR&E, voc rehab, vocational rehab, chapter 31, vocational rehabilitation, employment services*
+
+**Question:** Can I get the full BAH amount if I take online only courses?
+
+**Answer:** No, if full time then you will get ½ the national average BAH rate (assuming you are eligible to get BAH).
+
+  - If you are less than full time, then your allowance will be prorated as appropriate.
+
+**Source:** [https://www.veteransbenefitskb.com/vre#faq](https://www.veteransbenefitskb.com/vre#faq)
+
+<!-- Chunk 1347/1358 | Topic: Veterans Readiness and Employment (VR&E) Chapter 31 - FAQ | Type: faq | Words: 52 -->
+
+---
+
+### FAQ: Can I get BAH if I am going to a foreign school (in-person)?
+
+*Also known as: VR&E, voc rehab, vocational rehab, chapter 31, vocational rehabilitation, employment services*
+
+**Question:** Can I get BAH if I am going to a foreign school (in-person)?
+
+**Answer:** If you are full time then you are entitled to 100% of the national average of the BAH rate (assuming you are eligible to get BAH).
+
+  - If you are less than full time, then your allowance will be prorated as appropriate.
+
+**Source:** [https://www.veteransbenefitskb.com/vre#faq](https://www.veteransbenefitskb.com/vre#faq)
+
+<!-- Chunk 1348/1358 | Topic: Veterans Readiness and Employment (VR&E) Chapter 31 - FAQ | Type: faq | Words: 57 -->
+
+---
+
+### FAQ: Can I get BAH if I am going to a school in a US Territory (in-person)?
+
+*Also known as: VR&E, voc rehab, vocational rehab, chapter 31, vocational rehabilitation, employment services*
+
+**Question:** Can I get BAH if I am going to a school in a US Territory (in-person)?
+
+**Answer:** Technically no… **BUT** if you are full timeyou are entitled to 100% of the Overseas Housing Allowance (OHA) based on the OHA rate of the school (assuming you are eligible to get BAH).
+
+  - If you are less than full time, then your allowance will be prorated as appropriate.
+
+**Source:** [https://www.veteransbenefitskb.com/vre#faq](https://www.veteransbenefitskb.com/vre#faq)
+
+<!-- Chunk 1349/1358 | Topic: Veterans Readiness and Employment (VR&E) Chapter 31 - FAQ | Type: faq | Words: 67 -->
+
+---
+
+### FAQ: When do I get paid my housing allowance!?
+
+*Also known as: VR&E, voc rehab, vocational rehab, chapter 31, vocational rehabilitation, employment services*
+
+**Question:** When do I get paid my housing allowance!?
+
+**Answer:** Two things:
+
+1. VA pays in arrears meaning: You are paid at the end of the of the month for the same month. So - September is paid at the **END** of September, etc.
+
+2. Benefits are paid out by the Treasury Department using a **_10 business day window_** centered around the end of the month. Meaning - there is no specific date each month the Treasury is required to pay any VA education benefits.
+
+**Source:** [https://www.veteransbenefitskb.com/vre#faq](https://www.veteransbenefitskb.com/vre#faq)
+
+<!-- Chunk 1350/1358 | Topic: Veterans Readiness and Employment (VR&E) Chapter 31 - FAQ | Type: faq | Words: 85 -->
+
+---
+
+### FAQ: I know VA disability does not pro-rate disability payments. But can my housing allowance get pro-rated?
+
+*Also known as: VR&E, voc rehab, vocational rehab, chapter 31, vocational rehabilitation, employment services*
+
+**Question:** I know VA disability does not pro-rate disability payments. But can my housing allowance get pro-rated?
+
+**Answer:** **YES**! Unlike VA disability, education benefits **ARE** prorated (getting paid for partial months).
+
+**Source:** [https://www.veteransbenefitskb.com/vre#faq](https://www.veteransbenefitskb.com/vre#faq)
+
+<!-- Chunk 1351/1358 | Topic: Veterans Readiness and Employment (VR&E) Chapter 31 - FAQ | Type: faq | Words: 31 -->
+
+---
+
+### References and Legal Citations
+
+*Also known as: VR&E, voc rehab, vocational rehab, chapter 31, vocational rehabilitation, employment services*
+
+## **References**
+
+- [38 CFR § 21.42 - Deferral or extension of the basic period of eligibility](https://www.law.cornell.edu/cfr/text/38/21.42)
+
+- [38 CFR § 21.70 - Vocational rehabilitation](https://www.law.cornell.edu/cfr/text/38/21.70)
+
+- [38 CFR § 21.260 - Subsistence allowance](https://www.law.cornell.edu/cfr/text/38/21.260)
+
+- [38 CFR Part 21 - VOCATIONAL REHABILITATION AND EDUCATION](https://www.law.cornell.edu/cfr/text/38/part-21)
+
+- [38 CFR Subpart M - Vocational Training and Rehabilitation for Certain Children of Vietnam Veterans and Veterans with Covered Service in Korea - Spina Bifida and Covered Birth Defects](https://www.law.cornell.edu/cfr/text/38/part-21/subpart-M)
+
+- [Changes to the “48 Month Rule” for VR&E and EDU Beneficiaries - FAQs](https://www.benefits.va.gov/GIBILL/docs/48_Month_Rule_FAQs.pdf)
+
+- [How to Calculate Post-9/11 BAH Subsistence Allowance Rate](https://benefits.va.gov/VOCREHAB/docs/CalculatingP91SubsistenceAllowance.pdf)
+
+- [M21-1, Part X, Subpart ii, Chapter 4, Section A - Rating Decisions for Reduction Due to Improvement](https://www.knowva.ebenefits.va.gov/system/templates/selfservice/va_ssnew/help/customer/locale/en-US/portal/554400000001018/content/554400000177969/M21-1-Part-X-Subpart-ii-Chapter-4-Section-A-Rating-Decisions-for-Reduction-Due-to-Improvement)
+
+- [M21-1, Part XIII, Subpart i, Chapter 5, Section A - Veteran Readiness and Employment (VR&E) Eligibility](https://www.knowva.ebenefits.va.gov/system/templates/selfservice/va_ssnew/help/customer/locale/en-US/portal/554400000001018/content/554400000173835/M21-1-Part-XIII-Subpart-i-Chapter-5-Section-A-Veteran-Readiness-and-Employment-VRE-Eligibility)
+
+- [M21-1, Part XIII, Subpart i, Chapter 5, Section B - Memorandum Vocational Rehabilitation/Employment (VR&E) Ratings](https://www.knowva.ebenefits.va.gov/system/templates/selfservice/va_ssnew/help/customer/locale/en-US/portal/554400000001018/content/554400000173834/M21-1-Part-XIII-Subpart-i-Chapter-5-Section-B-Memorandum-Vocational-RehabilitationEmployment-VRE-Ratings)
+
+- [M28C.I.A.1 Veteran Readiness and Employment Manual](https://knowva.ebenefits.va.gov/system/templates/selfservice/va_ssnew/help/customer/locale/en-US/portal/554400000001018/content/554400000146267/M28CIA1-Veteran-Readiness-and-Employment-Manual)
+
+- [M28C.IV.A.2 Eligibility and Entitlement](https://www.knowva.ebenefits.va.gov/system/templates/selfservice/va_ssnew/help/customer/locale/en-US/portal/554400000001018/content/554400000150221/M28CIVA2-Eligibility-and-Entitlement)
+
+- [M28C.V.B.9 Employment Adjustment Allowance](https://www.knowva.ebenefits.va.gov/system/templates/selfservice/va_ssnew/help/customer/locale/en-US/portal/554400000001018/content/554400000144166/M28CVB9-Employment-Adjustment-Allowance)
+
+- [VR&E School Certifying Official Handbook](https://www.knowva.ebenefits.va.gov/system/templates/selfservice/va_ssnew/help/customer/locale/en-US/portal/554400000001018/content/554400000260798/VRE-School-Certifying-Official-Handbook)
+
+
+
+
+#### **Veterans Benefits Knowledge Base**
+
+- [Homepage Link](https://www.veteransbenefitskb.com/)
+
+
+#### Affiliated Partners
+
+- Sub-Reddit: [r/VeteransBenefits](https://www.reddit.com/r/VeteransBenefits/)
+
+- Discord Server: [U.S. Veterans Network](https://discord.gg/yjnYFUKBJC)
+
+- [VA Claim Tracker App](https://chromewebstore.google.com/detail/va-claim-tracker/onbanekcefgnibhlaiimeadkbdahjpoo)
+
+
+#### [Disclaimer](https://veteransbenefitskb.com/disclaimer)
+
+#### Something Broken?
+
+- #### [Let Us Know!](https://www.veteransbenefitskb.com/report)
+
+
+© 2021-2025 Veterans Benefits Knowledge Base, all rights reserved.
+
+**Source:** [https://www.veteransbenefitskb.com/vre#references](https://www.veteransbenefitskb.com/vre#references)
+
+<!-- Chunk 1352/1358 | Topic: Veterans Readiness and Employment (VR&E) Chapter 31 - Legal References | Type: references | Words: 214 -->
+
+---
+
+## Veterans Readiness and Employment (VR&E) Chapter 31
+
+*Also known as: VR&E, voc rehab, vocational rehab, chapter 31, vocational rehabilitation, employment services*
+
+# **Veterans Readiness and Employment (VR&E) AKA Chapter 31 - Formerly Vocational Rehabilitation and Employment (Voc Rehab)**
+
+
+[![](https://images.squarespace-cdn.com/content/v1/66c515a3e8305f0f79e8b680/bd22f10b-2167-4509-9215-2b49d4a4e22f/search3.png)](https://cse.google.com/cse?cx=8392d3f710df0427c)
+
+
+
+[\> Master Condition List](https://veteransbenefitskb.com/master)
+
+[\> Federal Benefits List by Combined Ratings](https://veteransbenefitskb.com/combinedbenefits)
+
+[\> Insider Insight into VBA Claim Processing](https://veteransbenefitskb.com/insight)
+
+[\> Rating Schedule Index](https://veteransbenefitskb.com/ratingsindex)
+
+[\> Filing a VA Disability Claim](https://veteransbenefitskb.com/vaclaim)
+
+[\> Filing an Appeal](https://veteransbenefitskb.com/appeals)
+
+* * *
+
+
+
+
+
+
+
+
+
+Is a VA program that helps Veterans, Servicemembers, and certain eligible dependents attain employment.
+
+**IMPORTANT NOTE:**
+
+- VR&E is primarily an employment program, **NOT** just a means to get a graduate level degree!
+
+
+* * *
+
+**Source:** [https://www.veteransbenefitskb.com/vre#veteransreadinessandemploymentvrechapter31](https://www.veteransbenefitskb.com/vre#veteransreadinessandemploymentvrechapter31)
+
+<!-- Chunk 1353/1358 | Topic: Veterans Readiness and Employment (VR&E) Chapter 31 | Type: employment | Words: 89 -->
+
+---
+
+## Eligibility
+
+## **Eligibility**
+
+This program has 3 different eligibility groups.
+
+**IMPORTANT NOTE:**
+
+- To increase readability, only this section of the page will mention the different groups, with the following sections addressing **ALL** groups as ‘Veterans’; unless there is a difference.
+
+
+* * *
+
+### Veterans
+
+**IMPORTANT NOTE:**
+
+- If you last separated from Active Duty **BEFORE** January 1, 2013, you _generally_ **MUST** apply within 12 years of separation **_OR_** within 12 years of receiving your _first_ award of service-connection.
+
+  - **HOWEVER**, for those who have this ‘12 year rule’, your eligibility **CAN** be extended/waived based on things like:
+
+    - Medical condition(s) that would have made you unable to complete the program previously (conditions do **NOT** need to be service-connected); or
+
+    - Having a **SERIOUS** employment handicap (conditions do **NOT** need to be service-connected).
+
+      - **SERIOUS** employment handicap means a significant impairment of a veteran's ability to prepare for, obtain, or retain employment consistent with such veteran's abilities, aptitudes, and interest.
+
+Must meet **ALL** of the following requirements:
+
+- Have a service-connected disability of at least 10% (or are [paid at the 10% rate](https://www.law.cornell.edu/cfr/text/38/3.324));
+
+- **SERIOUS** employment handicap; and
+
+- Received anything other than a dishonorable character of discharge.
+
+
+**OR**
+
+- Have a service-connected disabilities that [Combine](https://veteransbenefitskb.com/vamath) to at least 20%;
+
+- Employment handicap; and
+
+  - This term means an impairment of a veteran's ability to prepare for, obtain, or retain employment consistent with such veteran's abilities, aptitudes, and interests.
+- Received anything other than a dishonorable character of discharge.
+
+
+* * *
+
+### Servicemembers
+
+Must meet **ONE** of the below criteria:
+
+- Have a 20% or higher pre-discharge disability rating (memorandum rating) and will soon leave the military
+
+- Are participating in the [Integrated Disability Evaluation System (IDES) process or awaiting discharge due to a medical condition resulting from a serious injury or illness that occurred in the line of duty](https://veteransbenefitskb.com/medboard)
+
+
+For more information click [HERE](https://www.va.gov/careers-employment/vocational-rehabilitation/ides/).
+
+* * *
+
+### Certain children of Vietnam Veterans and Veterans with covered service in Korea
+
+- For eligibility requirements click [HERE](https://veteransbenefitskb.com/aochild).
+
+**Source:** [https://www.veteransbenefitskb.com/vre#eligibility](https://www.veteransbenefitskb.com/vre#eligibility)
+
+<!-- Chunk 1354/1358 | Topic: Eligibility | Type: employment | Words: 338 -->
+
+---
+
+## Duration of Program
+
+## **Duration of Program**
+
+VR&E may not exceed 48 months of use. **UNLESS**, special conditions are meet.
+
+- Click [HERE](https://www.law.cornell.edu/cfr/text/38/21.78) for more information.
+
+
+**IMPORTANT NOTES:**
+
+- For Veterans who used their [GI bill](https://veteransbenefitskb.com/gibill) **BEFORE** VR&E, that time **DOES** count against the 48 month limit.
+
+  - **HOWEVER**, that GI bill eligibility (months used) **_CAN_** possibly be restored via [Retroactive induction](https://www.knowva.ebenefits.va.gov/system/templates/selfservice/va_ssnew/help/customer/locale/en-US/portal/554400000001018/content/554400000143066/M28CVB6-Direct-Reimbursement-and-Retroactive-Induction#a%206.02). Potentially allowing you to use the GI bill again.
+- It **IS** possible for someone to use 48 months of VR&E benefits and then separately use 48 months of GI Bill benefits.
+
+- Certain children of Vietnam Veterans and Veterans with covered service in Korea have a **MAX** eligibility of 24 months _instead_ of 48 months.
+
+**Source:** [https://www.veteransbenefitskb.com/vre#durationofprogram](https://www.veteransbenefitskb.com/vre#durationofprogram)
+
+<!-- Chunk 1355/1358 | Topic: Duration of Program | Type: employment | Words: 115 -->
+
+---
+
+## Tracks
+
+## **Tracks**
+
+There are a total of 5 tracks you can go down using VRE:
+
+1. Reemployment
+
+2. Rapid Access to Employment
+
+3. Self-Employment
+
+4. Employment Through Long-Term Services
+
+5. Independent Living
+
+
+* * *
+
+### 1\. Reemployment
+
+Assists Veterans in regaining employment with their _former_ employer. This may be accomplished by providing the employer assistance/equipment in accommodating the Veteran.
+
+NOTE:
+
+- This track may only be used if it is determined the Veteran's _former_ job is still suitable considering their existing disabilities.
+
+
+* * *
+
+### 2\. Rapid Access to Employment
+
+For Veterans who already have the skills, experience, and education needed to gain employment in their desired field. But they may be having difficulties in finding employment for one reason or another.
+
+Examples of some of the tools that will be made available include:
+
+- Assistance in job hunting
+
+- Career counseling
+
+- Interview prepping
+
+- Resume creation/modification
+
+
+NOTE:
+
+- If the Veteran requires some short term certification training. It may be possible to obtain it via this track.
+
+
+* * *
+
+### 3\. Self-Employment
+
+Want to be your own boss? This track is all you.
+
+Your counseling team will be there to assist you in developing a viable long term business plan.
+
+Examples of some of the tools that will be made available include:
+
+- Analysis of your business concept
+
+- Training in small-business operations, marketing, and finances
+
+- Tuition assistance to obtain needed certifications/licenses for the business
+
+- Financial assistance to cover applicable fees as well as related business startup costs
+
+
+NOTES:
+
+- This track is more-so for those who have limited access to traditional employment, need flexible work schedules, or need a more accommodating work environment due to their disabling conditions or other life circumstances.
+
+- The VA **MUST** approve your business plan _before_ they start offering you training/funding.
+
+
+* * *
+
+### 4\. Employment Through Long-Term Services
+
+For Veterans who need additional training or assistance to obtain and maintain long-term employment.
+
+Examples of some of the tools that will be made available include:
+
+- Assistance in job hunting
+
+- Career guidance
+
+- Higher level education - includes both undergraduate and graduate level degrees
+
+- Job skill assessment
+
+- Job-market evaluation
+
+- Resume creation/modification
+
+- Apprenticeship, on-the-job training, and volunteer opportunities
+
+- Vocational Training
+
+
+**IMPORTANT NOTE:**
+
+- Again, VRE is primarily an employment program and **NOT** an educational program. As such, if you can reasonably obtain employment in your desired field with your current educational attainment. You may find it very difficult to get approved for something like a Masters degree.
+
+
+* * *
+
+### 5\. Independent Living
+
+For Veterans who's service-connected disabilities limit their ability to perform activities of daily living (like bathing, dressing, accessing the community, and interacting with others) and can’t return to work right away.
+
+Veterans _may_ use this track in conjunction with trying to obtain employment.
+
+**IMPORTANT NOTE:**
+
+- This track has _advanced_ eligibility requirements:
+
+  - Must have a serious employment handicap; **AND**
+
+  - Disabilities prevent you from obtaining or returning to work; **AND**
+
+  - You need services to live as independently as possible.
+
+Examples of some of the tools that will be made available include:
+
+- Evaluation and counseling to identify your needs and goals
+
+- Referral to support resources
+
+- Evaluation to see if you're eligible for the VR&E home adaptation grant. This ~$90,0000 grant is part of your rehabilitation plan to improve accessibility features in your home.
+
+- Guidance to help you understand if you’re eligible for [Other adaptive-housing programs](https://veteransbenefitskb.com/housing#adapt).
+
+**Source:** [https://www.veteransbenefitskb.com/vre#tracks](https://www.veteransbenefitskb.com/vre#tracks)
+
+<!-- Chunk 1356/1358 | Topic: Tracks | Type: employment | Words: 583 -->
+
+---
+
+## Applying
+
+## **Applying**
+
+There are 2 ways to apply:
+
+1. Online
+
+   - To apply online click [HERE](https://www.va.gov/careers-employment/vocational-rehabilitation/apply-vre-form-28-1900/start).
+2. Mail - If you just _have_ to support the post office you may complete a [VA Form 28-1900](https://www.va.gov/find-forms/about-form-28-1900/) and mail the completed form to:
+
+
+> ```
+>  Department of Veterans Affairs
+>  VR&E Intake Center
+>  P.O. Box 5210
+>  Janesville, WI 53547-5210
+> ```
+
+* * *
+
+### VA Form 28-1902W
+
+Eventually you will be asked to complete a VA Form 28-1902W. This form helps your Vocational Rehabilitation Counselor (VRC) create a path to success for you using VR&E.
+
+Complete the form to the best of your abilities!
+
+NOTES:
+
+- **READ** the (notes) in the gray boxes of the SECTIONS to save yourself time filling in duplicate information.
+
+- In SECTION IX, this is where you let your VRC know what you’re interested in so they can prepare (labor market search, programs near you, review daily tasks, etc). This helps them go into your appointment with more specific questions **AND** so they don’t have to spend 1-2 hours filling out paperwork. Thus giving them time to actually have a conversation with you! That and potentially develop your plan sooner!
+
+
+* * *
+
+### After Approval and Plan is Developed
+
+**IT IS CRITICAL** that you actually sign the plan **AND** turn the plan in! Your VRC **CANNOT** process your plan without the signed plan and debt prevention document. So don’t just walk away and turn up mad when the VA has not funded anything because **_YOU DIDN’T_** finish your part!
+
+**Source:** [https://www.veteransbenefitskb.com/vre#applying](https://www.veteransbenefitskb.com/vre#applying)
+
+<!-- Chunk 1357/1358 | Topic: Applying | Type: employment | Words: 257 -->
+
+---
+
+## Other Benefits of VRE
+
+## **Other Benefits of VRE**
+
+To increase the odds of success, the VA offers additional benefits to those using the program.
+
+* * *
+
+### Advanced Health Care Coverage
+
+For the duration someone is involved in VR&E. They are entitled to [dental care](https://veteransbenefitskb.com/dental), so long as it is determined that having dental work is " _necessary to develop, carry out and complete the rehabilitation plan_".
+
+* * *
+
+### Subsistence Allowance
+
+Veterans doing tracks that have them doing some kind of educational or training program _may_ be eligible for a monthly subsistence allowance. This allowance does vary based upon your rate of pursuit as well as type of program you are doing.
+
+- Veterans who have **AT LEAST 1 DAY** of [Post 9/11 GI Bill](https://veteransbenefitskb.com/gibill) will receive Basic Allowance for Housing (BAH) at the E-5 with dependent rate for their location.
+
+- Veterans who have exhausted their Post 9/11 GI Bill or simply don't have it will be paid at the standard chapter 31 subsistence allowance rate.
+
+
+The BAH amount is far more generous than the standard rate.
+
+- To see the current rates for the subsistence allowance click [HERE](https://www.benefits.va.gov/vocrehab/subsistence_allowance_rates.asp).
+
+- To see the current rates for BAH at the E-5 with dependent rate click [HERE](https://www.travel.dod.mil/Allowances/Basic-Allowance-for-Housing/BAH-Rate-Lookup/).
+
+
+**IMPORTANT NOTES:**
+
+- Even if you are less than half time you **ARE** entitled to your allowance.
+
+- Depending on your [Work tolerance](https://www.law.cornell.edu/cfr/text/38/21.312), you _can_ be paid at your full rate even if less than full time.
+
+- After graduation from an educational _or_ training program you _can_ be approved for up to an _additional_ **2 MONTHS** of subsistence allowance under employment adjustment allowance - letting you to look for employment and worry less about income. You will need to provide evidence that you are actively applying for jobs.
+
+- Those who started using their POST 9/11 GI BIll **BEFORE** VR&E **CAN** have their GI Bill usage considered as Chapter 31 via _retroactive induction_, thus possibly restoring POST 9/11 eligibility if it was previously used up.
+
+  - Click [HERE](https://www.knowva.ebenefits.va.gov/system/templates/selfservice/va_ssnew/help/customer/locale/en-US/portal/554400000001018/content/554400000143066/M28CVB6-Direct-Reimbursement-and-Retroactive-Induction#a%206.02) for details.
+
+NOTE:
+
+- You will need to apply for the Post 9/11 GI Bill to show you are still eligible/have eligibility left for it - in order to get the BAH rate; you will **NOT** be using up any of your GI Bill entitlement by using VR&E.
+
+
+* * *
+
+### Supplies
+
+Supplies that the Veteran **NEEDS** to pursue their rehabilitation and achieve their goals will be given.
+
+**IMPORTANT NOTES:**
+
+- Pre-approval **IS** required **BEFORE** purchasing things!
+
+  - Your Vocational Rehabilitation Counselor (VRC) is in charge of approval.
+
+Supplies could include but are not limited to:
+
+- Books
+
+- Camera
+
+- Computer/Laptop
+
+- Musical instruments
+
+- Notebooks
+
+- Pens/paper
+
+- Printer
+
+- Protective clothing
+
+- Software like MS Office Suite
+
+- Tools
+
+- Other supplies and equipment which VA determines are necessary for the veteran's rehabilitation program.
+
+
+NOTES:
+
+- For supplies needed, but _not_ specifically required. The VA may approve the item:
+
+  - If they determine that the item, such as a calculator, while not required by the school for the pursuit of a particular school subject, is nevertheless necessary for the veteran to successfully pursue their program.
+- VA will generally only provide any non-consumable supplies once.
+
+  - **UNLESS**, they are lost, stolen, misplaced, or damaged beyond repair through _no fault_ of the Veteran.
+
+* * *
+
+### Adaptive Auto Allowance
+
+- Click [HERE](https://veteransbenefitskb.com/auto) for more information.
+
+**Source:** [https://www.veteransbenefitskb.com/vre#otherbenefitsofvre](https://www.veteransbenefitskb.com/vre#otherbenefitsofvre)
+
+<!-- Chunk 1358/1358 | Topic: Other Benefits of VRE | Type: employment | Words: 564 -->
+
+---
+
+
+
+---
+
+# Additional Content Added (December 2025 - Batch 2)
+
+*Added: PACT Act, Camp Lejeune, Yellow Ribbon, Aid & Attendance, Housebound, Duty to Assist, Lay Evidence*
+
+## 2.  Lay Evidence
+
+## 2.  Lay Evidence
+
+* * *
+
+|     |     |     |
+| --- | --- | --- |
+| ### Introduction |  | This topic contains information about lay evidence, including<br>- [acceptable lay evidence](https://www.knowva.ebenefits.va.gov/system/templates/selfservice/va_ssnew/help/customer/locale/en-US/portal/554400000001018/content/554400000014389/M21-1-Part-V-Subpart-ii-Chapter-1-Section-B-Reviewing-Testimony-and-Lay-Evidence#2a)<br>- [when to use lay evidence](https://www.knowva.ebenefits.va.gov/system/templates/selfservice/va_ssnew/help/customer/locale/en-US/portal/554400000001018/content/554400000014389/M21-1-Part-V-Subpart-ii-Chapter-1-Section-B-Reviewing-Testimony-and-Lay-Evidence#2b), and<br>- [descriptions of symptoms as evidence](https://www.knowva.ebenefits.va.gov/system/templates/selfservice/va_ssnew/help/customer/locale/en-US/portal/554400000001018/content/554400000014389/M21-1-Part-V-Subpart-ii-Chapter-1-Section-B-Reviewing-Testimony-and-Lay-Evidence#2c). |
+
+* * *
+
+|     |     |     |
+| --- | --- | --- |
+| ### Change Date |  | February 19, 2019 |
+
+* * *
+
+|     |     |     |
+| --- | --- | --- |
+| ### V.ii.1.B.2.a.  Acceptable Lay Evidence |  | Lay evidence is acceptable for the purpose of establishing service incurrence or aggravation, in the absence of service treatment records (STRs), for a combat Veteran or former prisoner of war (FPOW), if the evidence<br>- is satisfactory<br>  <br>- is consistent with the circumstances, conditions, or hardships of combat or FPOW internment, and<br>  <br>- can prevail in spite of the absence of official records showing incurrence or aggravation of the disease or injury during service.<br>  <br>**_Important_**:  Medical evidence of a link to a current condition is still needed to establish service connection.<br>A non-combat Veteran’s lay statements may be acceptable for establishing service incurrence or aggravation but must be weighed against other evidence in the claims folder including the absence of military records documenting or supporting the statements.<br>**_References_**:  For more information on<br>- considering evidence for combat-related disabilities, see [M21-1, Part V, Subpart ii, 2.A](https://www.knowva.ebenefits.va.gov/system/templates/selfservice/va_ssnew/help/customer/locale/en-US/portal/554400000001018/content/554400000180481/M21-1-Part-V-Subpart-ii-Chapter-2-Section-A-Direct-Service-Connection-SC-and-Service-Incurrence-of-an-Injury)<br>- considering lay evidence, see [38 U.S.C. 1154(a)](https://www.law.cornell.edu/uscode/text/38/1154)<br>- a non-combat Veteran’s statements, see [_Bardwell v. Shinseki_](https://www.knowva.ebenefits.va.gov/system/templates/selfservice/va_ssnew/help/customer/locale/en-US/portal/554400000001018/content/554400000014674/Bardwell-v-Shinseki-Aug-17-2010-24-VetApp-36), 24 Vet.App. 36 (2010), and<br>- evaluating STRs, see [M21-1, Part V, Subpart ii, 1.A.3.i](https://www.knowva.ebenefits.va.gov/system/templates/selfservice/va_ssnew/help/customer/locale/en-US/portal/554400000001018/content/554400000014383/M21-1-Part-V-Subpart-ii-Chapter-1-Section-A-Principles-of-Reviewing-and-Weighing-Evidence). |
+
+* * *
+
+|     |     |     |
+| --- | --- | --- |
+| ### V.ii.1.B.2.b.  When to Use Lay Evidence |  | Lay evidence is generally afforded probative value if it is provided by a person who has knowledge of facts or circumstances and conveys matters that can be observed and described by a lay person. <br>The value accorded to other types of lay evidence depends on such factors as<br>- the accuracy or clarity of the individual’s memory<br>  <br>- direct personal knowledge or experience<br>  <br>- recency of the event, and<br>  <br>- the competence of the reporting person.<br>  <br>A medically-untrained individual is not usually competent to offer a medical opinion regarding the etiology of disorders and such an opinion is generally assigned little probative weight.<br>**_References_**:  For more information on<br>- using lay evidence to support a claim, see [_Espiritu v. Derwinski_](https://www.knowva.ebenefits.va.gov/system/templates/selfservice/va_ssnew/help/customer/locale/en-US/portal/554400000001018/content/554400000073149/Espiritu-v-Derwinski-Jun-16-1992-2-VetApp-492-1992), 2 Vet.App. 492 (1992), and<br>- definition of lay evidence, see [38 CFR 3.159(a)(2)](http://www.ecfr.gov/cgi-bin/text-idx?SID=e05a20cdd9805601c9123df74a4fa27d&mc=true&node=se38.1.3_1159&rgn=div8). |
+
+* * *
+
+|     |     |     |
+| --- | --- | --- |
+| ### V.ii.1.B.2.c.  Descriptions of Symptoms as Evidence |  | A claimant’s own statement, covering in sufficient detail a condition that is within the claimant's ability to describe, such as their own symptoms, may to that extent constitute evidence.<br>**_Rationale_**:  While such statements have self-serving aspects, the claimant is often the most qualified source to describe the circumstances of the disabling effects of the disease or injury. |
+
+* * *
+
+[<\-\- Previous Section](https://www.knowva.ebenefits.va.gov/system/templates/selfservice/va_ssnew/help/customer/locale/en-US/portal/554400000001018/content/554400000014383/M21-1-Part-V-Subpart-ii-Chapter-1-Section-A-Principles-of-Reviewing-and-Weighing-Evidence) [Next Section -->](https://www.knowva.ebenefits.va.gov/system/templates/selfservice/va_ssnew/help/customer/locale/en-US/portal/554400000001018/content/554400000180481/M21-1-Part-V-Subpart-ii-Chapter-2-Section-A-Direct-Service-Connection-SC-and-Service-Incurrence-of-an-Injury)
+
+[To Top](https://www.knowva.ebenefits.va.gov/system/templates/selfservice/va_ssnew/help/customer/locale/en-US/portal/554400000001018/content/554400000014389/M21-1-Part-V-Subpart-ii-Chapter-1-Section-B-Reviewing-Testimony-and-Lay-Evidence#top)
+
+> Article ID: 554400000014389
+>
+> **M21-1, Part V, Subpart ii, Chapter 1, Section B - Reviewing Testimony and Lay Evidence**
+
+
+https://www.knowva.ebenefits.va.gov/system/templates/selfservice/va\_ssnew/help/customer/locale/en-US/portal/554400000001018/content/554400000014389/M21-1-Part-V-Subpart-ii-Chapter-1-Section-B-Reviewing-Testimony-and-Lay-Evidence#2
+
+
+* * *
+
+[Article Feedback](https://www.knowva.ebenefits.va.gov/system/templates/selfservice/va_ssnew/help/customer/locale/en-US/portal/554400000001018/content/554400000014389/M21-1-Part-V-Subpart-ii-Chapter-1-Section-B-Reviewing-Testimony-and-Lay-Evidence) [Email](https://www.knowva.ebenefits.va.gov/system/templates/selfservice/va_ssnew/help/customer/locale/en-US/portal/554400000001018/content/554400000014389/M21-1-Part-V-Subpart-ii-Chapter-1-Section-B-Reviewing-Testimony-and-Lay-Evidence) [Bookmark](https://www.knowva.ebenefits.va.gov/system/templates/selfservice/va_ssnew/help/customer/locale/en-US/portal/554400000001018/content/554400000014389/M21-1-Part-V-Subpart-ii-Chapter-1-Section-B-Reviewing-Testimony-and-Lay-Evidence) [Print](https://www.knowva.ebenefits.va.gov/system/templates/selfservice/va_ssnew/help/customer/locale/en-US/portal/554400000001018/content/554400000014389/M21-1-Part-V-Subpart-ii-Chapter-1-Section-B-Reviewing-Testimony-and-Lay-Evidence)
+
+* * *
+
+
+
+
+[Transmittal 12\_13\_05.doc](https://www.knowva.ebenefits.va.gov/system/templates/selfservice/va_ssnew/help/customer/locale/en-US/portal/554400000001018/content/554400000014389/M21-1-Part-V-Subpart-ii-Chapter-1-Section-B-Reviewing-Testimony-and-Lay-Evidence) [Change - April 21, 2015 - Transmittal Sheet - M21-1MRV\_ii\_1\_SecB\_TS.docx](https://www.knowva.ebenefits.va.gov/system/templates/selfservice/va_ssnew/help/customer/locale/en-US/portal/554400000001018/content/554400000014389/M21-1-Part-V-Subpart-ii-Chapter-1-Section-B-Reviewing-Testimony-and-Lay-Evidence) [Historical\_M21-1V\_ii\_1\_SecB\_4-21-15.docx](https://www.knowva.ebenefits.va.gov/system/templates/selfservice/va_ssnew/help/customer/locale/en-US/portal/554400000001018/content/554400000014389/M21-1-Part-V-Subpart-ii-Chapter-1-Section-B-Reviewing-Testimony-and-Lay-Evidence) [4-11-18\_Key Changes\_M21-1 V\_ii\_1\_SecB.docx](https://www.knowva.ebenefits.va.gov/system/templates/selfservice/va_ssnew/help/customer/locale/en-US/portal/554400000001018/content/554400000014389/M21-1-Part-V-Subpart-ii-Chapter-1-Section-B-Reviewing-Testimony-and-Lay-Evidence) [Reorganization Guide.docx](https://www.knowva.ebenefits.va.gov/system/templates/selfservice/va_ssnew/help/customer/locale/en-US/portal/554400000001018/content/554400000014389/M21-1-Part-V-Subpart-ii-Chapter-1-Section-B-Reviewing-Testimony-and-Lay-Evidence) [Historical\_M21-1V\_ii\_1\_SecB\_4-11-18.docx](https://www.knowva.ebenefits.va.gov/system/templates/selfservice/va_ssnew/help/customer/locale/en-US/portal/554400000001018/content/554400000014389/M21-1-Part-V-Subpart-ii-Chapter-1-Section-B-Reviewing-Testimony-and-Lay-Evidence) [9-1-21\_Key Changes\_M21-1V\_ii\_1\_SecB.docx](https://www.knowva.ebenefits.va.gov/system/templates/selfservice/va_ssnew/help/customer/locale/en-US/portal/554400000001018/content/554400000014389/M21-1-Part-V-Subpart-ii-Chapter-1-Section-B-Reviewing-Testimony-and-Lay-Evidence) [Historical\_M21-1V\_ii\_1\_SecB\_9-1-21.docx](https://www.knowva.ebenefits.va.gov/system/templates/selfservice/va_ssnew/help/customer/locale/en-US/portal/554400000001018/content/554400000014389/M21-1-Part-V-Subpart-ii-Chapter-1-Section-B-Reviewing-Testimony-and-Lay-Evidence) [9-15-21\_Key Changes\_M21-1V\_ii\_1\_SecB.docx](https://www.knowva.ebenefits.va.gov/system/templates/selfservice/va_ssnew/help/customer/locale/en-US/portal/554400000001018/content/554400000014389/M21-1-Part-V-Subpart-ii-Chapter-1-Section-B-Reviewing-Testimony-and-Lay-Evidence)
+
+
+- [M21-1, Part V, Subpart ii, Chapter 1, Section A - Principles of Reviewing and Weighing Evidence\\
+\\
+Updated May 27, 2025](https://www.knowva.ebenefits.va.gov/system/templates/selfservice/va_ssnew/help/customer/locale/en-US/portal/554400000001018/content/554400000014383/M21-1-Part-V-Subpart-ii-Chapter-1-Section-A-Principles-of-Reviewing-and-Weighing-Evidence?articleViewContext=article_view_related_article&isFeatured=undefined&topic=undefined)
+
+Topic menu, Heading level 2, press tab to navigate through topicsTopic Link,
+
+- ## Topics
+
+Press the Tab key to enter list items. Use Ctrl + Shift + Slash to move DOWN and Ctrl + Shift + Apostrophe to move UP the list"
+- Burial & MemorialUse shortcuts to get sub topics list,
+[ ]
+- Compensation and PensionUse shortcuts to get sub topics list,
+[ ]
+- eBenefitsUse shortcuts to get sub topics list,
+[ ]
+- Education ServiceUse shortcuts to get sub topics list,
+[ ]
+- Fiduciary ProgramUse shortcuts to get sub topics list,
+[ ]
+- Home & AutoUse shortcuts to get sub topics list,
+[ ]
+- Life InsuranceUse shortcuts to get sub topics list,
+[ ]
+- Outreach, Transition, and Economic DevelopmentUse shortcuts to get sub topics list,
+[ ]
+- Stakeholder Enterprise PortalUse shortcuts to get sub topics list,
+[ ]
+- Veteran Readiness and EmploymentUse shortcuts to get sub topics list,
+[ ]
+
+#### CONNECT
+
+[Veterans Crisis Line:](https://www.veteranscrisisline.net/)
+
+[1-800-273-8255](tel:+18002738255) (Press 1)
+
+
+Social Media
+
+[![Email icon](https://www.knowva.ebenefits.va.gov/system/templates/selfservice/va_ssnew/custom/media/external/social-email.png)](https://public.govdelivery.com/accounts/USVA/subscriber/new "Link to VA's Email Directory")
+
+[![Facebook icon](https://www.knowva.ebenefits.va.gov/system/templates/selfservice/va_ssnew/custom/media/external/social-fb.png)](http://www.facebook.com/VeteransAffairs "Link to VA's main Facebook page")
+
+[![Twitter icon](https://www.knowva.ebenefits.va.gov/system/templates/selfservice/va_ssnew/custom/media/external/social-twitter.png)](http://www.twitter.com/DeptVetAffairs/ "Link to VA's main Twitter account")
+
+[![Blog icon](https://www.knowva.ebenefits.va.gov/system/templates/selfservice/va_ssnew/custom/media/external/social-blog.png)](http://www.blogs.va.gov/ "Link to VA's Blog VAntage Point")
+
+[![Flickr icon](https://www.knowva.ebenefits.va.gov/system/templates/selfservice/va_ssnew/custom/media/external/social-flickr.png)](http://www.flickr.com/photos/VeteransAffairs/ "Link to VA's main Flickr account")
+
+[![Youtube icon](https://www.knowva.ebenefits.va.gov/system/templates/selfservice/va_ssnew/custom/media/external/social-youtube.png)](https://www.youtube.com/user/DeptVetAffairs "Link to VA's main Youtube account")
+
+[![Instagram icon](https://www.knowva.ebenefits.va.gov/system/templates/selfservice/va_ssnew/custom/media/external/social-instagram.png)](https://www.instagram.com/deptvetaffairs "Link to VA's main Instagram account")
+
+[Complete\\
+Directory](https://www.va.gov/opa/socialmedia.asp "The complete social media directory for the Department of Veterans Affairs")
+
+#### EMAIL UPDATES
+
+Email Address Required
+
+Button to subscribe to email
+
+#### VA HOME
+
+- [Notices](https://www.va.gov/about_va/va_notices.asp)
+- [Privacy](https://www.va.gov/privacy/)
+- [FOIA](http://www.foia.va.gov/)
+- [Regulations](https://www.va.gov/orpm/)
+- [Web Policies](https://www.va.gov/webpolicylinks.asp)
+- [No FEAR Act](https://www.va.gov/orm/NOFEAR_Select.asp)
+- [Whistleblower Rights &\\
+Protections](http://www.diversity.va.gov/whistleblower.aspx)
+- [Site Index](https://www.va.gov/general/site_map.htm)
+- [USA.gov](http://www.usa.gov/)
+- [White House](http://www.whitehouse.gov/)
+- [Inspector General](https://www.va.gov/oig/)
+
+#### QUICK LIST
+
+- [Apply for Benefits](http://www.benefits.va.gov/BENEFITS/Applying.asp)
+- [Apply for Health Care](https://www.vets.gov/healthcare/apply/)
+- [Prescriptions](https://www.myhealth.va.gov/pharmacy)
+- [My HealtheVet](https://www.myhealth.va.gov/)
+- [eBenefits](https://www.ebenefits.va.gov/)
+- [Life Insurance Online\\
+Applications](http://benefits.va.gov/insurance/choose.asp)
+- [VA Forms](https://www.va.gov/vaforms/)
+- [State and Local Resources](https://www.va.gov/landing2_locations.htm)
+- [Strat\\
+Plan FY 2014-2020](https://www.va.gov/op3/docs/StrategicPlanning/VA2014-2020strategicPlan.pdf)
+- [VA Plans, Budget, &\\
+Performance](https://www.va.gov/performance/index.asp)
+- [VA Claims Representation](https://www.va.gov/ogc/accreditation.asp)
+
+**Source:** [https://www.knowva.ebenefits.va.gov/system/templates/selfservice/va_ssnew/help/customer/locale/en-US/portal/554400000001018/content/554400000014389/#2layevidence](https://www.knowva.ebenefits.va.gov/system/templates/selfservice/va_ssnew/help/customer/locale/en-US/portal/554400000001018/content/554400000014389/#2layevidence)
+
+<!-- Chunk 1359/1398 | Topic: 2.  Lay Evidence | Type: claims_evidence | Words: 920 -->
+
+---
+
+### References and Legal Citations
+
+*Also known as: duty to assist, DTA, VA duty, duty to notify, records request*
+
+## **References**
+
+- [38 CFR § 3.159 - Department of Veterans Affairs assistance in developing claims](https://www.law.cornell.edu/cfr/text/38/3.159)
+
+- [38 CFR § 21.33 - VA has a duty to assist claimants in obtaining evidence](https://www.law.cornell.edu/cfr/text/38/21.33)
+
+- [38 U.S. Code § 5103 - Notice to claimants of required information and evidence](https://www.law.cornell.edu/uscode/text/38/5103)
+
+- [38 U.S. Code § 5103A - Duty to assist claimants](https://www.law.cornell.edu/uscode/text/38/5103A)
+
+- [M21-1, Part I, Subpart i, Chapter 1, Section A - Description and General Information on Duty to Notify and Duty to Assist](https://www.knowva.ebenefits.va.gov/system/templates/selfservice/va_ssnew/help/customer/locale/en-US/portal/554400000001018/content/554400000181474/M21-1-Part-I-Subpart-i-Chapter-1-Section-A-Description-and-General-Information-on-Duty-to-Notify-and-Duty-to-Assist)
+
+- [M21-1, Part III, Subpart i, Chapter 2, Section A - Development Duties and Responsibilities](https://www.knowva.ebenefits.va.gov/system/templates/selfservice/va_ssnew/help/customer/locale/en-US/portal/554400000001018/content/554400000014099/M21-1-Part-III-Subpart-i-Chapter-2-Section-A-Development-Duties-and-Responsibilities)
+
+- [M21-1, Part III, Subpart i, Chapter 2, Section C - Duty to Assist With Obtaining Records](https://www.knowva.ebenefits.va.gov/system/templates/selfservice/va_ssnew/help/customer/locale/en-US/portal/554400000001018/content/554400000014102/M21-1-Part-III-Subpart-i-Chapter-2-Section-C-Duty-to-Assist-With-Obtaining-Records)
+
+- [M21-1, Part III, Subpart i, Chapter 2, Section D - Evidence Requested From the Claimant](https://www.knowva.ebenefits.va.gov/system/templates/selfservice/va_ssnew/help/customer/locale/en-US/portal/554400000001018/content/554400000033257/M21-1-Part-III-Subpart-i-Chapter-2-Section-D-Evidence-Requested-From-the-Claimant)
+
+- [M21-1, Part III, Subpart i, Chapter 2, Section E - Relevance Determinations](https://www.knowva.ebenefits.va.gov/system/templates/selfservice/va_ssnew/help/customer/locale/en-US/portal/554400000001018/content/554400000046269/M21-1-Part-III-Subpart-i-Chapter-2-Section-E-Relevance-Determinations)
+
+- [M21-1, Part IV, Subpart i, Chapter 1, Section A - Duty to Assist With Providing a Medical Examination or Opinion](https://www.knowva.ebenefits.va.gov/system/templates/selfservice/va_ssnew/help/customer/locale/en-US/portal/554400000001018/content/554400000180494/M21-1-Part-IV-Subpart-i-Chapter-1-Section-A-Duty-to-Assist-With-Providing-a-Medical-Examination-or-Opinion)
+
+- [M21-1, Part IV, Subpart i, Chapter 1, Section B - Evidentiary Standards for Finding an Examination or Opinion Necessary](https://www.knowva.ebenefits.va.gov/system/templates/selfservice/va_ssnew/help/customer/locale/en-US/portal/554400000001018/content/554400000180495/M21-1-Part-IV-Subpart-i-Chapter-1-Section-B-Evidentiary-Standards-for-Finding-an-Examination-or-Opinion-Necessary)
+
+- [M21-1, Part V, Subpart i, Chapter 1, Section C - Pre-Rating Review of Claims by the Rating Activity](https://www.knowva.ebenefits.va.gov/system/templates/selfservice/va_ssnew/help/customer/locale/en-US/portal/554400000001018/content/554400000180479/M21-1-Part-V-Subpart-i-Chapter-1-Section-C-Pre-Rating-Review-of-Claims-by-the-Rating-Activity)
+
+- [M21-5, Chapter 5 - Higher-Level Review Procedures](https://www.knowva.ebenefits.va.gov/system/templates/selfservice/va_ssnew/help/customer/locale/en-US/portal/554400000001018/content/554400000141004/M21-5-Chapter-5-Higher-Level-Review-Procedures)
+
+
+
+
+#### **Veterans Benefits Knowledge Base**
+
+- [Homepage Link](https://www.veteransbenefitskb.com/)
+
+
+#### Affiliated Partners
+
+- Sub-Reddit: [r/VeteransBenefits](https://www.reddit.com/r/VeteransBenefits/)
+
+- Discord Server: [U.S. Veterans Network](https://discord.gg/yjnYFUKBJC)
+
+- [VA Claim Tracker App](https://chromewebstore.google.com/detail/va-claim-tracker/onbanekcefgnibhlaiimeadkbdahjpoo)
+
+
+#### [Disclaimer](https://veteransbenefitskb.com/disclaimer)
+
+#### Something Broken?
+
+- #### [Let Us Know!](https://www.veteransbenefitskb.com/report)
+
+
+© 2021-2025 Veterans Benefits Knowledge Base, all rights reserved.
+
+­
+
+**Source:** [https://www.veteransbenefitskb.com/dta#references](https://www.veteransbenefitskb.com/dta#references)
+
+<!-- Chunk 1360/1399 | Topic: Duty to Assist (DTA) - Legal References | Type: references | Words: 255 -->
+
+---
+
+## Duty to Assist (DTA)
+
+*Also known as: duty to assist, DTA, VA duty, duty to notify, records request*
+
+# **Duty to Assist (DTA)**
+
+
+[![](https://images.squarespace-cdn.com/content/v1/66c515a3e8305f0f79e8b680/bd22f10b-2167-4509-9215-2b49d4a4e22f/search3.png)](https://cse.google.com/cse?cx=8392d3f710df0427c)
+
+
+
+[\> Master Condition List](https://veteransbenefitskb.com/master)
+
+[\> Federal Benefits List by Combined Ratings](https://veteransbenefitskb.com/combinedbenefits)
+
+[\> Insider Insight into VBA Claim Processing](https://veteransbenefitskb.com/insight)
+
+[\> Rating Schedule Index](https://veteransbenefitskb.com/ratingsindex)
+
+[\> Filing a VA Disability Claim](https://veteransbenefitskb.com/vaclaim)
+
+[\> Filing an Appeal](https://veteransbenefitskb.com/appeals)
+
+* * *
+
+
+
+
+
+
+
+
+
+The VA is a very complicated beast, due in-part to this difficulty it has been established that the VA has a duty to assist Veterans when it comes to getting the benefits and recognition they deserve.
+
+Widely speaking, the VAs duty to assist can be broken down into 2 sections:
+
+1. Obtaining records
+
+2. Providing a medical examination/obtaining medical opinions
+
+
+But let it be stated that first and foremost to the duty to assist, is VAs _duty to notify_.
+
+This foundational notice is known as a ['5103 notice'](https://www.benefits.va.gov/COMPENSATION/notice.asp) and explains what evidence is needed to properly support your [Claim](https://veteransbenefitskb.com/vaclaim)/ [Appeal](https://veteransbenefitskb.com/appeals). Failure to send this notice is a common duty to assist error. But, if you filed a claim via [va.gov](https://www.va.gov/) or the [VA Form 21-526EZ](https://www.vba.va.gov/pubs/forms/VBA-21-526EZ-ARE.pdf) then that notice is 'baked-in' and the VA does not need to send it separately.
+
+**_SPECIAL NOTE:_**
+
+- In the following cases (not a complete list) the VA will stop/not provide duty to assist:
+
+  - Obtaining evidence would not reasonably further the claim;
+
+  - Claims that are inherently incredible or clearly lack merit;
+
+  - Claimant lacks qualifying service, Veteran status, or other legal eligibility; or
+
+  - Filing for a benefit for which there is no entitlement as a matter of law.
+
+**Source:** [https://www.veteransbenefitskb.com/dta#dutytoassistdta](https://www.veteransbenefitskb.com/dta#dutytoassistdta)
+
+<!-- Chunk 1361/1400 | Topic: Duty to Assist (DTA) | Type: claims_process | Words: 247 -->
+
+---
+
+## Obtaining Records
+
+## **Obtaining Records**
+
+VA will make _reasonable_ efforts (usually 2 attempts) to obtain relevant\* records to include records mentioned by the Veteran. These records commonly break down into 5 categories:
+
+1. Military (medical/personnel)
+
+2. Federal (non-military)
+
+3. Private medical
+
+4. Employment (non-federal)
+
+5. Other
+
+
+\*relate to the claimed disabilities **AND** will reasonably further the claim.
+
+**IMPORTANT NOTES:**
+
+- VA will **NOT** pay any fees to obtain records.
+
+- If the claimant fails to respond in a timely manner (30 days) to a request to provide enough detail to allow the VA to obtain records _or_ complete a [Release](https://www.vba.va.gov/pubs/forms/vba-21-4142-are.pdf) for medical records, the VA may make a decision without making additional attempts to get those records.
+
+- VA’s duty to assist generally would not require VA to obtain a court order to secure authority for third-party disclosure.
+
+- While VA will make a _reasonable effort_ to get these records for you, it is **ULTIMATELY** the Veteran's responsibility to supply these records to the VA. If the VA is unable to obtain relevant records, the VA has a duty to notify:
+
+  - What records the VA could not get;
+
+  - Explanation of attempts made to get the records;
+
+  - Explanation that after continued efforts to obtain Federal records, concludes that it is reasonably certain they do not exist or that further efforts to obtain them would be futile;
+
+  - A description of any further action VA will take regarding the claim, including, but not limited to, notice that VA will decide the claim based on the evidence of record unless the claimant submits the records VA was unable to obtain; and
+
+  - A notice that the claimant is ultimately responsible for obtaining the evidence.
+
+* * *
+
+### 1\. Military (Medical/Personnel)
+
+Whenever a claim is filed, VA will request your military medical records as a matter of default operations. However, the VA has a strong knack of forgetting to request [National guard/Reservist records](https://veteransbenefitskb.com/ngr).
+
+Military personnel records are _not_ always regularly requested by the VA as these records are not always relevant; unless the claim involves [PTSD](https://veteransbenefitskb.com/mental) or the claimed condition could be linked to [Toxic exposures](https://veteransbenefitskb.com/toxic).
+
+* * *
+
+### 2\. Federal (Non-Military)
+
+Big daddy government.
+
+There are 2 subcategories:
+
+1. Medical
+
+2. Non-medical
+
+
+* * *
+
+#### Medical
+
+Examples would include getting treatment at a military facility _after_ separation, records relating to filing for Social Security Disability, [Veteran Affairs Medical Centers (VAMC)](https://veteransbenefitskb.com/healthcare), and [Veteran Centers](https://veteransbenefitskb.com/vetcenter).
+
+NOTE:
+
+- VA **REQUIRES** a [Release](https://www.vba.va.gov/pubs/forms/vba-21-4142-are.pdf) to obtain records from Veteran centers.
+
+
+* * *
+
+#### Non-Medical
+
+An example would be records relating to former federal employment (non-military) for those who filed a claim for [Individual Unemployability](https://veteransbenefitskb.com/tdiu).
+
+* * *
+
+### 3\. Private Medical
+
+Your Kaiser Permanente, local foot doctor, Dr. Pepper, etc.
+
+**IMPORTANT NOTES:**
+
+- If you make make mention of getting treatment for your claimed condition at Dr. David and you don't provide a record's [Release](https://www.vba.va.gov/pubs/forms/vba-21-4142-are.pdf) **OR** those medical records, the VA _has_ a duty to assist to request you provide those records/release!
+
+  - VA **REQUIRES** a release to obtain these records, if you do not supply a copy of the records.
+
+* * *
+
+### 4\. Employment (Non-Federal)
+
+If you filed a claim for [Individual Unemployability](https://veteransbenefitskb.com/tdiu), the VA will reach out to your former employer(s).
+
+* * *
+
+### 5\. Other
+
+If you mention someone who knows about your claimed condition be it related to the injury, disease, sickness, or _current_ symptoms. The VA needs to inform the Veteran that they can have the person supply a [Buddy statement](https://veteransbenefitskb.com/buddy).
+
+**Source:** [https://www.veteransbenefitskb.com/dta#obtainingrecords](https://www.veteransbenefitskb.com/dta#obtainingrecords)
+
+<!-- Chunk 1362/1401 | Topic: Obtaining Records | Type: claims_process | Words: 586 -->
+
+---
+
+## Providing a Medical Examination/Obtaining Medical Opinions
+
+## **Providing a Medical Examination/Obtaining Medical Opinions**
+
+A major part of a claim is the all important medical examination/medical opinion.
+
+Unless the following 3 elements are **ALL** meet, the VA has **NO** duty to assist to provide an examination/obtain medical opinions:
+
+| Part | Element |
+| --- | --- |
+| 1. | Statement of symptoms (how the condition affects you) OR current diagnosis. |
+| 2. | An in-service event (documented or [Buddy statement condition started in service), or service-connected disability that caused or worsened your disability.](https://veteransbenefitskb.com/buddy) |
+| 3. | A layman would think that 1 and 2 are related (nexus). |
+
+- For more information on methods of service connection click [Here](https://veteransbenefitskb.com/serviceconnection).
+
+
+**IMPORTANT NOTES:**
+
+- There is no duty to assist to conduct a new exam/get a new opinion for [Supplemental claims](https://veteransbenefitskb.com/appeals#supplemental) **IF** the Veteran fails to submit new and relevant evidence with their appeal!
+
+- If the rater can grant the maximum [Scheduler evaluation](https://veteransbenefitskb.com/ratingsindex), an examination is **NOT** needed.
+
+**Source:** [https://www.veteransbenefitskb.com/dta#providingamedicalexaminationobtainingmedicalopinions](https://www.veteransbenefitskb.com/dta#providingamedicalexaminationobtainingmedicalopinions)
+
+<!-- Chunk 1363/1402 | Topic: Providing a Medical Examination/Obtaining Medical Opinions | Type: claims_process | Words: 164 -->
+
+---
+
+## Standard Procedures
+
+## **Standard Procedures**
+
+While technically duty to assist doesn’t apply if the chosen benefit isn’t indicated on the application or if the application is otherwise incomplete, the current policy is to assist the claimant with his or her generic/incomplete request for benefits.
+
+Meaning, VA should obtain clarification as to what is being claimed if the claim is vague or inform you if the application is incomplete.
+
+**Source:** [https://www.veteransbenefitskb.com/dta#standardprocedures](https://www.veteransbenefitskb.com/dta#standardprocedures)
+
+<!-- Chunk 1364/1403 | Topic: Standard Procedures | Type: claims_process | Words: 66 -->
+
+---
+
+## PACT Act
+
+*Also known as: PACT Act, pact, burn pit, toxic exposure, presumptive conditions, heath robinson*
+
+# The PACT Act and your VA benefits
+
+The PACT Act is a law that expands VA health care and benefits for Veterans exposed to burn pits, Agent Orange, and other toxic substances. This law helps us provide generations of Veterans—and their [survivors](https://www.va.gov/resources/the-pact-act-and-your-va-benefits/#information-for-survivors)—with the care and benefits they’ve earned and deserve. And starting **March 5, 2024,** we’re expanding VA health care to millions of Veterans—years earlier than called for by the PACT Act.
+
+This page will help answer your questions about what the PACT Act means for you or your loved ones. You can also call us at 800-698-2411 (TTY: 711). And you can file a claim for PACT Act-related disability compensation or apply for VA health care now.
+
+- [File a disability claim online](https://www.va.gov/disability/file-disability-claim-form-21-526ez/)
+- [Apply for VA health care](https://www.va.gov/health-care/apply-for-health-care-form-10-10ez/)
+
+**Source:** [https://www.va.gov/resources/the-pact-act-and-your-va-benefits/#pactact](https://www.va.gov/resources/the-pact-act-and-your-va-benefits/#pactact)
+
+<!-- Chunk 1365/1404 | Topic: PACT Act | Type: presumptive | Words: 131 -->
+
+---
+
+## On this page
+
+## On this page
+
+- [What’s the PACT Act and how will it affect my VA benefits and care?](https://www.va.gov/resources/the-pact-act-and-your-va-benefits/#whats-the-pact-act-and-how-wil)
+- [What does it mean to have a presumptive condition for toxic exposure?](https://www.va.gov/resources/the-pact-act-and-your-va-benefits/#what-does-it-mean-to-have-a-pr)
+- [Am I eligible for VA health care under the PACT Act?](https://www.va.gov/resources/the-pact-act-and-your-va-benefits/#am-i-eligible-for-va-health-ca)
+- [Gulf War era and post-9/11 Veteran eligibility](https://www.va.gov/resources/the-pact-act-and-your-va-benefits/#gulf-war-era-and-post-911-vete)
+- [Vietnam era Veteran eligibility](https://www.va.gov/resources/the-pact-act-and-your-va-benefits/#vietnam-era-veteran-eligibilit)
+- [Getting benefits](https://www.va.gov/resources/the-pact-act-and-your-va-benefits/#getting-benefits)
+- [Toxic exposure screenings](https://www.va.gov/resources/the-pact-act-and-your-va-benefits/#toxic-exposure-screenings)
+- [Information for survivors](https://www.va.gov/resources/the-pact-act-and-your-va-benefits/#information-for-survivors)
+
+**Source:** [https://www.va.gov/resources/the-pact-act-and-your-va-benefits/#onthispage](https://www.va.gov/resources/the-pact-act-and-your-va-benefits/#onthispage)
+
+<!-- Chunk 1366/1405 | Topic: On this page | Type: presumptive | Words: 68 -->
+
+---
+
+## What’s the PACT Act and how will it affect my VA benefits and care?
+
+## What’s the PACT Act and how will it affect my VA benefits and care?
+
+The PACT Act is perhaps the largest health care and benefit expansion in VA history. The full name of the law is The Sergeant First Class (SFC) Heath Robinson Honoring our Promise to Address Comprehensive Toxics (PACT) Act.
+
+**The PACT Act will bring these changes:**
+
+- Expands and extends eligibility for VA health care for Veterans with toxic exposures and Veterans of the Vietnam, Gulf War, and post-9/11 eras
+- Adds 20+ more presumptive conditions for burn pits, Agent Orange, and other toxic exposures
+- Adds more presumptive-exposure locations for Agent Orange and radiation
+- Requires VA to provide a toxic exposure screening to every Veteran enrolled in VA health care
+- Helps us improve research, staff education, and treatment related to toxic exposures
+
+If you’re a Veteran or survivor, you can file claims now to apply for PACT Act-related benefits.
+
+**Source:** [https://www.va.gov/resources/the-pact-act-and-your-va-benefits/#whatsthepactactandhowwillitaffectmyvabenefitsandcare](https://www.va.gov/resources/the-pact-act-and-your-va-benefits/#whatsthepactactandhowwillitaffectmyvabenefitsandcare)
+
+<!-- Chunk 1367/1406 | Topic: What’s the PACT Act and how will it affect my VA benefits and care? | Type: presumptive | Words: 156 -->
+
+---
+
+## What does it mean to have a presumptive condition for toxic exposure?
+
+## What does it mean to have a presumptive condition for toxic exposure?
+
+To get a VA disability rating, your disability must connect to your military service. For many health conditions, you need to prove that your service caused your condition.
+
+But for some conditions, we automatically assume (or “presume”) that your service caused your condition. We call these “presumptive conditions.”
+
+We consider a condition presumptive when it's established by law or regulation.
+
+If you have a presumptive condition, you don’t need to prove that your service caused the condition. You only need to meet the service requirements for the presumption.
+
+**Source:** [https://www.va.gov/resources/the-pact-act-and-your-va-benefits/#whatdoesitmeantohaveapresumptiveconditionfortoxicexposure](https://www.va.gov/resources/the-pact-act-and-your-va-benefits/#whatdoesitmeantohaveapresumptiveconditionfortoxicexposure)
+
+<!-- Chunk 1368/1407 | Topic: What does it mean to have a presumptive condition for toxic exposure? | Type: presumptive | Words: 101 -->
+
+---
+
+## Am I eligible for VA health care under the PACT Act?
+
+## Am I eligible for VA health care under the PACT Act?
+
+You’re eligible to enroll now—without needing to apply for disability benefits first—if you meet the basic service and discharge requirements and any of these descriptions are true for you:
+
+- You served in the Vietnam War, the Gulf War, Iraq, Afghanistan, or any other combat zone after 9/11, **or**
+- You deployed in support of the Global War on Terror, **or**
+- You were exposed to toxins or other hazards during military service at home or abroad
+
+Specific toxins and hazards include burn pits, sand and dust, particulates, oil well or sulfur fires, chemicals, radiation, warfare agents, depleted uranium, herbicides, and other occupational hazards. [Find more military exposure categories on our Public Health website](https://www.publichealth.va.gov/exposures/)
+
+**Note:** Even if none of these descriptions are true for you, you may still be eligible for VA health care based on your service. [Check the full health care eligibility requirements](https://www.va.gov/health-care/eligibility "Eligibility for VA health care")
+
+**Source:** [https://www.va.gov/resources/the-pact-act-and-your-va-benefits/#amieligibleforvahealthcareunderthepactact](https://www.va.gov/resources/the-pact-act-and-your-va-benefits/#amieligibleforvahealthcareunderthepactact)
+
+<!-- Chunk 1369/1408 | Topic: Am I eligible for VA health care under the PACT Act? | Type: presumptive | Words: 162 -->
+
+---
+
+## Gulf War era and post-9/11 Veteran eligibility
+
+## Gulf War era and post-9/11 Veteran eligibility
+
+- Expand all
+- Collapse all
+
+### What burn pit and other toxic exposure conditions are now presumptive?
+
+We’ve added more than 20 burn pit and other toxic exposure presumptive conditions based on the PACT Act. This change expands benefits for Gulf War era and post-9/11 Veterans.
+
+**These cancers are now presumptive:**
+
+- Brain cancer
+- Gastrointestinal cancer of any type
+- Glioblastoma
+- Head cancer of any type
+- Kidney cancer
+- Lymphoma of any type
+- Melanoma
+- Neck cancer of any type
+- Pancreatic cancer
+- Reproductive cancer of any type
+- Respiratory (breathing-related) cancer of any type
+
+[Learn more about presumptive cancers related to burn pits](https://www.va.gov/resources/presumptive-cancers-related-to-burn-pit-exposure "Presumptive cancers related to burn pit exposure")
+
+**These illnesses are now presumptive:**
+
+- Asthma that was diagnosed after service
+- Chronic bronchitis
+- Chronic obstructive pulmonary disease (COPD)
+- Chronic rhinitis
+- Chronic sinusitis
+- Constrictive bronchiolitis or obliterative bronchiolitis
+- Emphysema
+- Granulomatous disease
+- Interstitial lung disease (ILD)
+- Pleuritis
+- Pulmonary fibrosis
+- Sarcoidosis
+
+[Learn about other hazardous materials presumptive conditions that may make you eligible for care or benefits](https://www.va.gov/disability/eligibility/hazardous-materials-exposure/)
+
+### How do I know if I have a presumptive exposure to burn pits?
+
+If you served in any of these locations and time periods, we’ve determined that you had exposure to burn pits or other toxins. We call this having a presumption of exposure.
+
+**On or after September 11, 2001, in any of these locations:**
+
+- Afghanistan
+- Djibouti
+- Egypt
+- Jordan
+- Lebanon
+- Syria
+- Uzbekistan
+- Yemen
+- The airspace above any of these locations
+
+**On or after August 2, 1990, in any of these locations:**
+
+- Bahrain
+- Iraq
+- Kuwait
+- Oman
+- Qatar
+- Saudi Arabia
+- Somalia
+- The United Arab Emirates (UAE)
+- The airspace above any of these locations
+
+### Are there more exposure-related presumptive conditions?
+
+Yes. The PACT Act adds new presumptive conditions. But there are also many other health conditions that we presume are caused by exposure to toxic (or hazardous) materials. If you have any of these other conditions, you may be eligible for health care or benefits.
+
+[Learn about other presumptive conditions based on exposure to hazardous materials](https://www.va.gov/disability/eligibility/hazardous-materials-exposure/)
+
+### Am I eligible for VA health care as a Gulf War or post-9/11 Veteran?
+
+You’re eligible to enroll now—without needing to apply for disability benefits first—if you meet the basic service and discharge requirements and any of these descriptions are true for you.
+
+**You served on or after September 11, 2001, in any of these locations:**
+
+- Afghanistan
+- Djibouti
+- Egypt
+- Jordan
+- Lebanon
+- Syria
+- Uzbekistan
+- Yemen
+- Any other country determined relevant by VA (none at this time)
+- The airspace above any of these locations
+
+**You served on or after August 2, 1990, in any of these locations:**
+
+- Bahrain
+- Iraq
+- Kuwait
+- Oman
+- Qatar
+- Saudi Arabia
+- Somalia
+- The United Arab Emirates (UAE)
+- The airspace above any of these locations
+
+**You deployed in support of any of these operations:**
+
+- Operation Enduring Freedom
+- Operation Freedom’s Sentinel
+- Operation Iraqi Freedom
+- Operation New Dawn
+- Operation Inherent Resolve
+- Resolute Support Mission
+
+**Note:** You may also be eligible if you were exposed to any toxins or other hazards during training or active-duty service, or based on other factors.
+
+[Check the full health care eligibility requirements](https://www.va.gov/health-care/eligibility "Eligibility for VA health care")
+
+**Source:** [https://www.va.gov/resources/the-pact-act-and-your-va-benefits/#gulfwareraandpost911veteraneligibility](https://www.va.gov/resources/the-pact-act-and-your-va-benefits/#gulfwareraandpost911veteraneligibility)
+
+<!-- Chunk 1370/1409 | Topic: Gulf War era and post-9/11 Veteran eligibility | Type: presumptive | Words: 580 -->
+
+---
+
+## Vietnam era Veteran eligibility
+
+## Vietnam era Veteran eligibility
+
+- Expand all
+- Collapse all
+
+### What new Agent Orange presumptive conditions will VA add?
+
+Based on the PACT Act, we’ve added 2 new Agent Orange presumptive conditions:
+
+- High blood pressure (also called hypertension)
+- Monoclonal gammopathy of undetermined significance (MGUS)
+
+You may also be eligible for disability compensation based on other Agent Orange presumptive conditions. These conditions include certain cancers, type 2 diabetes, and other illnesses.
+
+[Get a list of other Agent Orange presumptive conditions](https://www.va.gov/disability/eligibility/hazardous-materials-exposure/agent-orange/#requirements-for-agent-orange-)
+
+If you think you’re eligible for VA health care and benefits, we encourage you to apply now.
+
+### Are there more exposure-related presumptive conditions?
+
+Yes. The PACT Act adds new presumptive conditions. But there are also many other health conditions that we presume are caused by exposure to toxic (or hazardous) materials. If you have any of these other conditions, you may be eligible for health care or benefits.
+
+[Learn about other presumptive conditions based on exposure to hazardous materials](https://www.va.gov/disability/eligibility/hazardous-materials-exposure/)
+
+### What new Agent Orange presumptive locations will VA add?
+
+We’ve added these 5 new locations to the list of presumptive locations:
+
+- Any U.S. or Royal Thai military base in Thailand from January 9, 1962, through June 30, 1976
+- Laos from December 1, 1965, through September 30, 1969
+- Cambodia at Mimot or Krek, Kampong Cham Province from April 16, 1969, through April 30, 1969
+- Guam or American Samoa or in the territorial waters off of Guam or American Samoa from January 9, 1962, through July 31, 1980
+- Johnston Atoll or on a ship that called at Johnston Atoll from January 1, 1972, through September 30, 1977
+
+If you served on active duty in any of these locations, we’ll automatically assume (or “presume”) that you had exposure to Agent Orange.
+
+**Note:** This isn’t the full list of presumptive locations for Agent Orange exposure. Review eligibility requirements for more presumptive locations.
+
+[Review eligibility requirements for Agent Orange presumptive exposure](https://www.va.gov/disability/eligibility/hazardous-materials-exposure/agent-orange#full-eligibility-requirements "Agent Orange exposure and disability compensation")
+
+### What new radiation presumptive locations will VA add?
+
+We’ve added these 3 new response efforts to the list of presumptive locations:
+
+- Cleanup of **Enewetak Atoll**, from January 1, 1977, through December 31, 1980
+- Cleanup of the Air Force B-52 bomber carrying nuclear weapons off the coast of **Palomares, Spain**, from January 17, 1966, through March 31, 1967
+- Response to the fire onboard an Air Force B-52 bomber carrying nuclear weapons near **Thule Air Force Base in Greenland** from January 21, 1968, to September 25, 1968
+
+If you took part in any of these efforts, we’ll automatically assume (or “presume”) that you had exposure to radiation.
+
+There are also other locations where we presume that you had exposure to radiation. If you served in any of these locations, you may be eligible for health care or benefits.
+
+[Get a list of other radiation presumptive locations](https://www.va.gov/disability/eligibility/hazardous-materials-exposure/ionizing-radiation "Ionizing radiation exposure")
+
+### Am I eligible for VA health care as a Vietnam Veteran?
+
+If you served on active duty in any of these locations during these time periods, you’re now eligible to apply for VA health care:
+
+- **The Republic of Vietnam** between January 9, 1962, and May 7, 1975
+- **Thailand at any U.S. or Royal Thai base** between January 9, 1962, and June 30, 1976
+- **Laos** between December 1, 1965, and September 30, 1969
+- **Certain provinces in Cambodia** between April 16, 1969, and April 30, 1969
+- **Guam or American Samoa** **(or their territorial waters)** between January 9, 1962, and July 31, 1980
+- **Johnston Atoll** **(or on a ship that called at Johnston Atoll)** between January 1, 1972, and September 30, 1977
+
+**Source:** [https://www.va.gov/resources/the-pact-act-and-your-va-benefits/#vietnameraveteraneligibility](https://www.va.gov/resources/the-pact-act-and-your-va-benefits/#vietnameraveteraneligibility)
+
+<!-- Chunk 1371/1410 | Topic: Vietnam era Veteran eligibility | Type: presumptive | Words: 608 -->
+
+---
+
+## Getting benefits
+
+## Getting benefits
+
+- Expand all
+- Collapse all
+
+### How do I file a disability claim for a new presumptive condition?
+
+**If you haven’t filed a claim yet for the presumptive condition,** you can file a new claim online now. You can also file by mail, in person, or with the help of a trained professional.
+
+[File for VA disability compensation online](https://www.va.gov/disability/file-disability-claim-form-21-526ez/)
+
+[Learn more about how to file a disability compensation claim](https://www.va.gov/disability/how-to-file-claim "How to file a VA disability claim")
+
+**If we denied your disability claim in the past and we now consider your condition presumptive,** you can submit a Supplemental Claim. We’ll review your case again.
+
+[Find out how to file a Supplemental Claim](https://www.va.gov/decision-reviews/supplemental-claim "Supplemental Claims")
+
+### What if VA denied my claim but now considers my condition presumptive?
+
+We encourage you to file a Supplemental Claim. When we receive a Supplemental Claim, we’ll review the claim again.
+
+[Find out how to file a Supplemental Claim](https://www.va.gov/decision-reviews/supplemental-claim "Supplemental Claims")
+
+**Note:** If we denied your claim in the past and we think you may be eligible now, we’ll try to contact you. But you don’t need to wait for us to contact you before you file a Supplemental Claim.
+
+### What if I have a pending claim for a condition that’s now presumptive?
+
+You don’t need to do anything. If we added your condition after you filed your claim, we’ll still consider it presumptive. We’ll send you a decision notice when we complete our review.
+
+### Can I still file PACT Act-related claims?
+
+Yes. The PACT Act is here to stay, and Veterans and survivors can file for benefits anytime. The sooner you file, the sooner you can start getting your earned benefits.
+
+So don’t wait. File your claim—or quickly submit your intent to file—today.
+
+[File a disability claim online](https://www.va.gov/disability/file-disability-claim-form-21-526ez/)
+
+[Learn how to submit your intent to file](https://www.va.gov/resources/your-intent-to-file-a-va-claim "https://www.va.gov/resources/your-intent-to-file-a-va-claim/")
+
+### When can I expect VA to make a decision on my PACT Act claim?
+
+We will process your claim with the utmost urgency to get you the benefits you deserve as quickly as possible. In the first year of the PACT Act, we completed 458,659 PACT Act-related claims—delivering more than $1.85 billion in earned benefits to Veterans and their survivors.
+
+**The time it takes to review your claim depends on these factors:**
+
+- The type of claim you filed
+- How many injuries or disabilities you claimed and how complex they are
+- How long it takes us to collect the evidence needed to decide your claim
+
+We regularly update the average number of days it’s taking us to make a decision on disability-related claims on our website.
+
+[Learn about the claims process and what happens after you file your claim](https://www.va.gov/disability/after-you-file-claim "The VA claim process after you file your claim")
+
+You can also check your claim status on VA.gov or through our VA: Health and Benefits mobile app.
+
+[Check your claim status](https://www.va.gov/claim-or-appeal-status "Check your VA claim, decision review, or appeal status")
+
+[Learn more about the VA: Health and Benefits mobile app on our mobile app website](https://mobile.va.gov/app/va-health-and-benefits)
+
+**Source:** [https://www.va.gov/resources/the-pact-act-and-your-va-benefits/#gettingbenefits](https://www.va.gov/resources/the-pact-act-and-your-va-benefits/#gettingbenefits)
+
+<!-- Chunk 1372/1411 | Topic: Getting benefits | Type: presumptive | Words: 505 -->
+
+---
+
+## Toxic exposure screenings
+
+## Toxic exposure screenings
+
+- Expand all
+- Collapse all
+
+### Can I get a toxic exposure screening at VA?
+
+Toxic exposure screenings are available at VA health facilities across the country.
+
+Every Veteran enrolled in VA health care will receive an initial screening and a follow-up screening at least once every 5 years. Veterans who aren’t enrolled and who meet eligibility requirements can enroll and receive the screening.
+
+The screening will ask you if you think you were exposed to any of these hazards while serving:
+
+- Open burn pits and other airborne hazards
+- Gulf War-related exposures
+- Agent Orange
+- Radiation
+- Camp Lejeune contaminated water exposure
+- Other exposures
+
+We’ll then give you information about any benefits, registry exams, and clinical resources you may need.
+
+Ask about the screening at your next VA health care appointment. If you want to get one sooner, contact your local VA health facility. Ask to get screened by the toxic exposure screening navigator.
+
+You can also schedule a telehealth screening on our VET-HOME website.
+
+[Learn more about toxic exposure screenings on our VET-HOME website](https://vethome.va.gov/)
+
+**Source:** [https://www.va.gov/resources/the-pact-act-and-your-va-benefits/#toxicexposurescreenings](https://www.va.gov/resources/the-pact-act-and-your-va-benefits/#toxicexposurescreenings)
+
+<!-- Chunk 1373/1412 | Topic: Toxic exposure screenings | Type: presumptive | Words: 184 -->
+
+---
+
+## Information for survivors
+
+## Information for survivors
+
+- Expand all
+- Collapse all
+
+### Can Veterans’ survivors get compensation payments under the PACT Act?
+
+Yes. If you’re a surviving family member of a Veteran, you may be eligible for these benefits:
+
+- **A monthly VA Dependency and Indemnity Compensation (DIC) payment.** You may qualify if you’re the surviving spouse, dependent child, or parent of a Veteran who died from a service-connected disability.
+
+[Learn how to apply for VA DIC](https://www.va.gov/family-and-caregiver-benefits/survivor-compensation/dependency-indemnity-compensation "About VA DIC for spouses, dependents, and parents")
+- **A one-time accrued benefits payment.** You may qualify if you’re the surviving spouse, dependent child, or dependent parent of a Veteran who we owed unpaid benefits at the time of their death.
+
+[Learn about evidence needed for accrued benefits](https://www.va.gov/resources/evidence-to-support-va-pension-dic-or-accrued-benefits-claims "Evidence to support VA pension, DIC, or accrued benefits claims")
+- **A Survivors Pension.** You may qualify if you’re the surviving spouse or child of a Veteran with wartime service.
+
+[Learn how to apply for a Survivors Pension](https://www.va.gov/family-and-caregiver-benefits/survivor-compensation/survivors-pension/rates "Current Survivors Pension benefit rates")
+
+### What if VA denied my DIC claim and I think I’m now eligible?
+
+You can submit a new application for VA dependency and indemnity compensation (VA DIC).
+
+[Learn about VA DIC and how to apply](https://www.va.gov/family-and-caregiver-benefits/survivor-compensation/dependency-indemnity-compensation "About VA DIC for spouses, dependents, and parents")
+
+**Note:** If we denied your claim in the past and we think you may be eligible now, we’ll try to contact you. We may be able to reevaluate your claim. But you don’t need to wait for us to contact you before you reapply.
+
+### What other VA benefits are survivors eligible for?
+
+You may be eligible for these VA benefits as the surviving family member of a Veteran:
+
+- **Burial benefits and memorial items** such as a gravesite in a VA national cemetery or a free headstone, marker, or medallion.
+- **A burial allowance** to help with the Veteran’s burial and funeral costs. You may qualify if you’re the Veteran’s surviving spouse, partner, child, or parent.
+- **Education and training.** You may qualify if you’re the survivor of a Veteran who died in the line of duty or as a result of service-connected disabilities.
+- **Health care through the Civilian Health and Medical Program of the Department of Veterans Affairs (CHAMPVA).** You may qualify if you’re the survivor or dependent of a Veteran with a service-connected disability.
+- **A VA-backed home loan.** You may qualify if you’re the surviving spouse of a Veteran.
+
+**Source:** [https://www.va.gov/resources/the-pact-act-and-your-va-benefits/#informationforsurvivors](https://www.va.gov/resources/the-pact-act-and-your-va-benefits/#informationforsurvivors)
+
+<!-- Chunk 1374/1413 | Topic: Information for survivors | Type: presumptive | Words: 405 -->
+
+---
+
+## Camp Lejeune Water Contamination
+
+*Also known as: camp lejeune, lejeune, water contamination, MCAS new river, contaminated water*
+
+# Camp Lejeune water contamination health issues
+
+If you served at either of these locations between August 1, 1953, and December 31, 1987, you may be eligible for disability and health care benefits:
+
+- Marine Corps Base Camp Lejeune, **or**
+- Marine Corps Air Station (MCAS) New River, North Carolina
+
+Keep reading on this page to learn more about these benefits and benefits for family members.
+
+**Source:** [https://www.va.gov/disability/eligibility/hazardous-materials-exposure/camp-lejeune-water-contamination/#camplejeunewatercontamination](https://www.va.gov/disability/eligibility/hazardous-materials-exposure/camp-lejeune-water-contamination/#camplejeunewatercontamination)
+
+<!-- Chunk 1375/1414 | Topic: Camp Lejeune Water Contamination | Type: presumptive | Words: 66 -->
+
+---
+
+## On this page
+
+## On this page
+
+- [Am I eligible for VA disability compensation?](https://www.va.gov/disability/eligibility/hazardous-materials-exposure/camp-lejeune-water-contamination/#am-i-eligible-for-va-disabilit)
+- [What does it mean to have a presumptive condition?](https://www.va.gov/disability/eligibility/hazardous-materials-exposure/camp-lejeune-water-contamination/#what-does-it-mean-to-have-a-pr)
+- [How do I file a claim for disability compensation?](https://www.va.gov/disability/eligibility/hazardous-materials-exposure/camp-lejeune-water-contamination/#how-do-i-file-a-claim-for-disa)
+- [Can I also get health care benefits?](https://www.va.gov/disability/eligibility/hazardous-materials-exposure/camp-lejeune-water-contamination/#can-i-also-get-health-care-ben)
+- [Benefits for families who lived at Camp Lejeune](https://www.va.gov/disability/eligibility/hazardous-materials-exposure/camp-lejeune-water-contamination/#benefits-for-families-who-live)
+- [How the PACT Act affects Camp Lejeune claims and related benefits](https://www.va.gov/disability/eligibility/hazardous-materials-exposure/camp-lejeune-water-contamination/#how-the-pact-act-affects-camp-)
+- [More helpful information](https://www.va.gov/disability/eligibility/hazardous-materials-exposure/camp-lejeune-water-contamination/#more-helpful-information)
+
+**Source:** [https://www.va.gov/disability/eligibility/hazardous-materials-exposure/camp-lejeune-water-contamination/#onthispage](https://www.va.gov/disability/eligibility/hazardous-materials-exposure/camp-lejeune-water-contamination/#onthispage)
+
+<!-- Chunk 1376/1415 | Topic: On this page | Type: presumptive | Words: 65 -->
+
+---
+
+## Am I eligible for VA disability compensation?
+
+## Am I eligible for VA disability compensation?
+
+You may be eligible for disability compensation payments on a presumptive basis if you meet all of these requirements. These requirements apply to Veterans, Reservists, and National Guard members.
+
+**Both of these descriptions must be true:**
+
+- You served at Camp Lejeune or MCAS New River, North Carolina, for at least 30 days total between August 1, 1953, and December 31, 1987, **and**
+- You didn’t receive a dishonorable discharge when you separated from the military
+
+**And you must have a diagnosis of 1 or more of these presumptive conditions:**
+
+- Adult leukemia
+- Aplastic anemia and other myelodysplastic syndromes
+- Bladder cancer
+- Kidney cancer
+- Liver cancer
+- Multiple myeloma
+- Non-Hodgkin’s lymphoma
+- Parkinson’s disease
+
+Evidence shows a link between these conditions and exposure to chemicals found in the drinking water at Camp Lejeune and MCAS New River during this time.
+
+**Source:** [https://www.va.gov/disability/eligibility/hazardous-materials-exposure/camp-lejeune-water-contamination/#amieligibleforvadisabilitycompensation](https://www.va.gov/disability/eligibility/hazardous-materials-exposure/camp-lejeune-water-contamination/#amieligibleforvadisabilitycompensation)
+
+<!-- Chunk 1377/1416 | Topic: Am I eligible for VA disability compensation? | Type: presumptive | Words: 152 -->
+
+---
+
+## What does it mean to have a presumptive condition?
+
+## What does it mean to have a presumptive condition?
+
+To get a VA disability rating, your disability must connect to your military service. For many health conditions, you need to prove that your service caused your condition.
+
+But for some conditions, we automatically assume (or “presume”) that your service caused your condition. We call these presumptive conditions.
+
+Presumptive conditions are established by law or regulation.
+
+If you have a presumptive condition, you don’t need to prove that your service caused the condition. You only need to meet the service requirements for the presumption.
+
+**Source:** [https://www.va.gov/disability/eligibility/hazardous-materials-exposure/camp-lejeune-water-contamination/#whatdoesitmeantohaveapresumptivecondition](https://www.va.gov/disability/eligibility/hazardous-materials-exposure/camp-lejeune-water-contamination/#whatdoesitmeantohaveapresumptivecondition)
+
+<!-- Chunk 1378/1417 | Topic: What does it mean to have a presumptive condition? | Type: presumptive | Words: 94 -->
+
+---
+
+## How do I file a claim for disability compensation?
+
+## How do I file a claim for disability compensation?
+
+You can file a new claim online now. You can also file by mail, in person, or with the help of a trained professional.
+
+[File for disability compensation online now](https://www.va.gov/disability/file-disability-claim-form-21-526ez/)
+
+[Learn more about how to file a disability compensation claim](https://www.va.gov/disability/how-to-file-claim "How to file a VA disability claim")
+
+**Note:** When you file, be sure to state that you’re applying for 1 or more of the presumptive conditions for Camp Lejeune.
+
+**You’ll need to provide this evidence (supporting documents) with your claim:**
+
+- Your military records that show you served at Camp Lejeune or MCAS New River for at least 30 days total between August 1, 1953, and December 31, 1987, **and**
+- Medical records that show you have 1 or more of the 8 Camp Lejeune presumptive conditions
+
+**Source:** [https://www.va.gov/disability/eligibility/hazardous-materials-exposure/camp-lejeune-water-contamination/#howdoifileaclaimfordisabilitycompensation](https://www.va.gov/disability/eligibility/hazardous-materials-exposure/camp-lejeune-water-contamination/#howdoifileaclaimfordisabilitycompensation)
+
+<!-- Chunk 1379/1418 | Topic: How do I file a claim for disability compensation? | Type: presumptive | Words: 137 -->
+
+---
+
+## Can I also get health care benefits?
+
+## Can I also get health care benefits?
+
+Yes. If you meet the service requirements for Camp Lejeune, you may be eligible to enroll in VA health care. If you have any of  the 15 covered health conditions  listed here, you won’t have to pay a copay for care for that condition.
+
+[Learn how to apply for VA health care](https://www.va.gov/health-care/how-to-apply "How to apply for VA health care")
+
+**Here are the 15 covered conditions related to Camp Lejeune:**
+
+- Bladder cancer
+- Breast cancer
+- Esophageal cancer
+- Female infertility
+- Hepatic steatosis
+- Kidney cancer
+- Leukemia
+- Lung cancer
+- Miscarriage
+- Multiple myeloma
+- Myelodysplastic syndromes
+- Neurobehavioral effects
+- Non-Hodgkin’s lymphoma
+- Renal toxicity
+- Scleroderma
+
+**Note:** If you also get VA health care for other conditions that aren’t on this list, you may need to pay a copay for that care.
+
+**Source:** [https://www.va.gov/disability/eligibility/hazardous-materials-exposure/camp-lejeune-water-contamination/#canialsogethealthcarebenefits](https://www.va.gov/disability/eligibility/hazardous-materials-exposure/camp-lejeune-water-contamination/#canialsogethealthcarebenefits)
+
+<!-- Chunk 1380/1419 | Topic: Can I also get health care benefits? | Type: presumptive | Words: 145 -->
+
+---
+
+## Benefits for families who lived at Camp Lejeune
+
+## Benefits for families who lived at Camp Lejeune
+
+- Expand all
+- Collapse all
+
+### Can family members who lived at Camp Lejeune get VA benefits?
+
+We may pay for or reimburse health care costs related to certain conditions if you meet all of these requirements.
+
+**All of these descriptions must be true:**
+
+- You must be or have been a family member (meaning the birth or adopted child, married spouse, or otherwise a legal dependent) of a Veteran who served at Camp Lejeune or MCAS New River, North Carolina, **and**
+- You must have lived (or have been in utero while your mother lived) at Camp Lejeune or MCAS New River, North Carolina, for at least 30 days total between August 1, 1953, and December 31, 1987, **and**
+- You must apply for and be approved for benefits under current law
+
+
+**Note:** “In utero” means that your mother was pregnant with you at the time.
+
+**We may pay for or reimburse for care related to these conditions:**
+
+- Bladder cancer
+- Breast cancer
+- Esophageal cancer
+- Female infertility
+- Hepatic steatosis
+- Kidney cancer
+- Leukemia
+- Lung cancer
+- Miscarriage
+- Multiple myeloma
+- Myelodysplastic syndromes
+- Neurobehavioral effects
+- Non-Hodgkin’s lymphoma
+- Renal toxicity
+- Scleroderma
+
+### How do I apply for Camp Lejeune family member benefits?
+
+You’ll need to fill out a Camp Lejeune Family Member Program Application (VA Form 10-10068) and send it to us by mail or fax.
+
+[Get VA Form 10-10068 to download](https://www.va.gov/find-forms/about-form-10-10068 "About VA Form 10-10068")
+
+#### By mail
+
+Mail your completed form to:
+
+**Department of Veterans Affairs**
+
+Financial Services Center
+
+PO Box 149200
+
+Austin, TX 78714-9200
+
+#### By fax
+
+Fax your form to [512-460-5536](tel:+15124605536).
+
+If you need help with your application, call us at [866-372-1144](tel:+18663721144) ( [TTY: 711](tel:711)). We’re here 8:30 a.m. to 4:55 p.m. ET.
+
+### What supporting documents do I need for my application?
+
+**You must provide all of this evidence:**
+
+- A document (like a marriage license, birth certificate, or adoption papers) that proves your relationship to the Veteran who served on active duty for at least 30 days at Camp Lejeune or MCAS New River, North Carolina, between August 1, 1953, and December 31, 1987, **and**
+- A document (like utility bills, base housing records, military orders, or tax forms) that proves you lived at Camp Lejeune or MCAS New River, North Carolina, for at least 30 days between August 1, 1953, and December 31, 1987, **and**
+- Medical records that show you have 1 of the 15 covered health conditions. The records must include the date of your diagnosis and the date you got treated for this illness.
+
+**You may also want to provide a report from your health care provider.** We don’t require this form, but it can help us determine your eligibility for benefits. Ask your provider to fill out a Camp Lejeune Family Member Program Treating Physician Report (VA Form 10-10068b).
+
+[Get VA Form 10-10068b to download](https://www.va.gov/find-forms/about-form-10-10068b "About VA Form 10-10068b")
+
+### How can I file a claim for reimbursement?
+
+For each claim, you’ll need to fill out a Camp Lejeune Family Member Program Claim Form (VA Form 10-10068a).
+
+[Get VA Form 10-10068a to download](https://www.va.gov/find-forms/about-form-10-10068a "About VA Form 10-10068a")
+
+You must provide an itemized billing statement from your health care provider with your claim. If you have other health insurance, you must provide a document called an Explanation of Benefits from your other health insurance.
+
+**Source:** [https://www.va.gov/disability/eligibility/hazardous-materials-exposure/camp-lejeune-water-contamination/#benefitsforfamilieswholivedatcamplejeune](https://www.va.gov/disability/eligibility/hazardous-materials-exposure/camp-lejeune-water-contamination/#benefitsforfamilieswholivedatcamplejeune)
+
+<!-- Chunk 1381/1420 | Topic: Benefits for families who lived at Camp Lejeune | Type: presumptive | Words: 574 -->
+
+---
+
+## How the PACT Act affects Camp Lejeune claims and related benefits
+
+## How the PACT Act affects Camp Lejeune claims and related benefits
+
+- Expand all
+- Collapse all
+
+### How does the PACT Act affect people who lived at Camp Lejeune?
+
+Section 804 of the Honoring our Promise to Address Comprehensive Toxics (PACT) Act addresses people who lived at Camp Lejeune. This law is also called the Camp Lejeune Justice Act of 2022.
+
+This law allows Veterans, survivors, and families to file for appropriate relief for harm caused by exposure to the contaminated water at Camp Lejeune.
+
+You (or your legal representative) can file for relief under this authority if either of these descriptions is true:
+
+- You lived, worked, or were otherwise exposed at Camp Lejeune for at least 30 days total between August 1, 1953, and December 31, 1987, **or**
+- Your mother lived, worked, or was otherwise exposed at Camp Lejeune for at least 30 days total between August 1, 1953, and December 31, 1987, while pregnant with you
+
+**Note:** The PACT Act doesn’t affect VA benefits related to Camp Lejeune. The law does expand VA health care and benefits for Veterans exposed to burn pits and other toxic substances.
+
+[Learn more about the PACT Act and your VA benefits](https://www.va.gov/resources/the-pact-act-and-your-va-benefits "The PACT Act and your VA benefits")
+
+### How can I file for relief under the Camp Lejeune Justice Act?
+
+You (or your legal representative) can start by filing an administrative claim with the Department of the Navy.
+
+You can follow the Navy’s process to seek an award of relief for your claim. You may also be able to choose the Department of the Navy’s new elective option to get a faster settlement decision directly from the Navy. Or if the Navy denies your claim or you wait longer than 6 months for a decision, you can file a lawsuit in the Eastern District of North Carolina.
+
+[Learn how to file for Camp Lejeune relief on the Navy's website](https://www.navy.mil/clja/)
+
+### Will filing for relief affect my VA benefits or health care?
+
+No. Filing for relief under the Camp Lejeune Justice Act of 2022 won’t affect your eligibility for VA disability or health care benefits.
+
+If the court awards you relief under this law (or if a court awarded relief in the past), this won’t affect the amount of your VA disability payments or your eligibility for VA health care.  A settlement through the Department of the Navy’s elective option process also won’t affect your VA benefits or health care in any way.
+
+### Will my VA benefits affect my award from a lawsuit?
+
+Yes, in some cases. Your benefits may affect your award if both of these descriptions are true:
+
+- A court awards you relief as a result of a lawsuit filed under the Camp Lejeune Justice Act of 2022, **and**
+
+- You already get VA benefits or health care related to exposure to water at Camp Lejeune
+
+
+The court must reduce (or “offset”) the award by the amount of any related disability award, payment, or benefit we provided to you or your legal representative from a lawsuit. If you choose the elective option claim process, this offset doesn’t apply to you.
+
+VA benefits that aren’t related to exposure to contaminated water at Camp Lejeune won’t affect your award from a lawsuit.
+
+### How can I check the status of my lawsuit under the Camp Lejeune Justice Act of 2022?
+
+You can contact the Department of Justice by phone or email:
+
+- Call [202-353-4426](tel:+12023534426) ( [TTY: 711](tel:711)), **or**
+- Send an email to [camplejeune.pactact@usdoj.gov](mailto:camplejeune.pactact@usdoj.gov)
+
+**Source:** [https://www.va.gov/disability/eligibility/hazardous-materials-exposure/camp-lejeune-water-contamination/#howthepactactaffectscamplejeuneclaimsandrelatedbenefits](https://www.va.gov/disability/eligibility/hazardous-materials-exposure/camp-lejeune-water-contamination/#howthepactactaffectscamplejeuneclaimsandrelatedbenefits)
+
+<!-- Chunk 1382/1421 | Topic: How the PACT Act affects Camp Lejeune claims and related benefits | Type: presumptive | Words: 588 -->
+
+---
+
+### FAQ: How much can I get from this program?
+
+*Also known as: yellow ribbon, yellow ribbon program, tuition assistance, private school, out of state tuition*
+
+**Question:** How much can I get from this program?
+
+**Answer:** This depends on several factors set by the school. Such as:
+
+- Degree Type (undergraduate, graduate, doctoral)
+
+- Degree Program (Engineering, Computer Science, Etc.)
+
+**Source:** [https://www.veteransbenefitskb.com/yellow#faq](https://www.veteransbenefitskb.com/yellow#faq)
+
+<!-- Chunk 1383/1422 | Topic: Yellow Ribbon Program - FAQ | Type: faq | Words: 34 -->
+
+---
+
+### FAQ: Can I use this program to cover the cost of summer terms?
+
+*Also known as: yellow ribbon, yellow ribbon program, tuition assistance, private school, out of state tuition*
+
+**Question:** Can I use this program to cover the cost of summer terms?
+
+**Answer:** Maybe, this is dependent upon your school.
+
+**Source:** [https://www.veteransbenefitskb.com/yellow#faq](https://www.veteransbenefitskb.com/yellow#faq)
+
+<!-- Chunk 1384/1423 | Topic: Yellow Ribbon Program - FAQ | Type: faq | Words: 21 -->
+
+---
+
+### FAQ: Do I have to reapply every semester?
+
+*Also known as: yellow ribbon, yellow ribbon program, tuition assistance, private school, out of state tuition*
+
+**Question:** Do I have to reapply every semester?
+
+**Answer:** No, so long as your school remains in the program you are automatically renewed into the program.
+
+UNLESS:
+
+- You take a semester (fall or spring) off, or
+
+- You do **NOT** make acceptable progress toward obtaining your degree (as determined by the school), or
+
+- Your Post 9/11 GI Bill runs out, or
+
+- You transfer to another school.
+
+**Source:** [https://www.veteransbenefitskb.com/yellow#faq](https://www.veteransbenefitskb.com/yellow#faq)
+
+<!-- Chunk 1385/1424 | Topic: Yellow Ribbon Program - FAQ | Type: faq | Words: 69 -->
+
+---
+
+### FAQ: If my school no longer offers the program how will I know?
+
+*Also known as: yellow ribbon, yellow ribbon program, tuition assistance, private school, out of state tuition*
+
+**Question:** If my school no longer offers the program how will I know?
+
+**Answer:** Your school will notify you before the start of the next semester.
+
+**Source:** [https://www.veteransbenefitskb.com/yellow#faq](https://www.veteransbenefitskb.com/yellow#faq)
+
+<!-- Chunk 1386/1425 | Topic: Yellow Ribbon Program - FAQ | Type: faq | Words: 26 -->
+
+---
+
+## Application Process
+
+## **Application Process**
+
+1. [Apply - for Post-9/11 GI Bill benefits](https://www.va.gov/education/how-to-apply/).
+
+2. Turn in - your certificate of eligibility (COE) to your school.
+
+   - Turning in usually means to your school’s certifying official (SCO), financial aid office, or military/Veteran liaison. When you do turn it it **REMEMBER** to ask to apply for your school’s Yellow Ribbon Program.
+3. Wait - Your school will determine if they have reached the maximum number of students they accept into the program as well as the amount of money you will receive.
+
+4. Notification - Your school will inform you if you got approved and for what amount.
+
+**Source:** [https://www.veteransbenefitskb.com/yellow#applicationprocess](https://www.veteransbenefitskb.com/yellow#applicationprocess)
+
+<!-- Chunk 1387/1426 | Topic: Application Process | Type: education | Words: 104 -->
+
+---
+
+## Reference
+
+## **Reference**
+
+- [38 CFR § 21.9700 - Yellow Ribbon Program](https://www.law.cornell.edu/cfr/text/38/21.9700)
+
+**Source:** [https://www.veteransbenefitskb.com/yellow#reference](https://www.veteransbenefitskb.com/yellow#reference)
+
+<!-- Chunk 1388/1427 | Topic: Reference | Type: education | Words: 11 -->
+
+---
+
+### References and Legal Citations
+
+*Also known as: aid and attendance, A&A, pension aid, nursing home, daily activities assistance*
+
+## **References**
+
+- [38 CFR § 3.23 - Improved pension rates - Veterans and surviving spouses](https://www.law.cornell.edu/cfr/text/38/3.23)
+
+- [38 CFR § 3.352 - Criteria for determining need for aid and attendance and “permanently bedridden”](https://www.law.cornell.edu/cfr/text/38/3.352)
+
+- [38 CFR § 3.351 - Special monthly dependency and indemnity compensation, death compensation, pension and spouse's compensation ratings](https://www.law.cornell.edu/cfr/text/38/3.351)
+
+- [M21-1, Part XIII, Subpart i, Chapter 3, Section D - Eligibility for Medical Services Associated With Aid and Attendance (A&A) or Housebound Status](https://www.knowva.ebenefits.va.gov/system/templates/selfservice/va_ssnew/help/customer/locale/en-US/portal/554400000001018/content/554400000173840/M21-1-Part-XIII-Subpart-i-Chapter-3-Section-D-Eligibility-for-Medical-Services-Associated-With-Aid-and-Attendance-AA-or-Housebound-Status)
+
+- [M21-1, Part IX, Subpart ii, Chapter 1, Section A - General Information on Requirements for Aid and Attendance (A&A) and Housebound Status Under 38 CFR 3.351](https://www.knowva.ebenefits.va.gov/system/templates/selfservice/va_ssnew/help/customer/locale/en-US/portal/554400000001018/content/554400000015095/M21-1-Part-IX-Subpart-ii-Chapter-1-Section-A-General-Information-on-Requirements-for-Aid-and-Attendance-AA-and-Housebound-Status-Under-38-CFR-3351)
+
+- [M21-1, Part IX, Subpart ii, Chapter 1, Section B - Aid and Attendance (A&A) Status for Beneficiaries Who Are Patients in a Qualified Nursing Home](https://www.knowva.ebenefits.va.gov/system/templates/selfservice/va_ssnew/help/customer/locale/en-US/portal/554400000001018/content/554400000015098/M21-1-Part-IX-Subpart-ii-Chapter-1-Section-B-Aid-and-Attendance-AA-Status-for-Beneficiaries-Who-Are-Patients-in-a-Qualified-Nursing-Home)
+
+- [M21-1, Part IX, Subpart ii, Chapter 2, Section C - Special Monthly Pension (SMP) Ratings](https://www.knowva.ebenefits.va.gov/system/templates/selfservice/va_ssnew/help/customer/locale/en-US/portal/554400000001018/content/554400000178522/M21-1,-Part-IX,-Subpart-ii,-Chapter-2,-Section-C---Special-Monthly-Pension-(SMP))
+
+**Source:** [https://www.veteransbenefitskb.com/pension-aa#references](https://www.veteransbenefitskb.com/pension-aa#references)
+
+<!-- Chunk 1389/1428 | Topic: Aid and Attendance (Pension) - Legal References | Type: references | Words: 145 -->
+
+---
+
+## Aid and Attendance (Pension)
+
+*Also known as: aid and attendance, A&A, pension aid, nursing home, daily activities assistance*
+
+For veterans who need aid and attendance as a result of non-service related condition(s) they may qualify for an increased [VA Pension](https://veteransbenefitskb.com/pension) benefit.
+
+For veterans who need aid and attendance as a result of a service related condition(s). Please see our article on [Special Monthly Compensation](https://veteransbenefitskb.com/smc). Specifically, SMC L (Aid and Attendance) or SMC R1/R2 (Special Aid and Attendance).
+
+* * *
+
+**Source:** [https://www.veteransbenefitskb.com/pension-aa#aidandattendancepension](https://www.veteransbenefitskb.com/pension-aa#aidandattendancepension)
+
+<!-- Chunk 1390/1429 | Topic: Aid and Attendance (Pension) | Type: pension | Words: 62 -->
+
+---
+
+## Eligibility
+
+## **Eligibility**
+
+- Qualify for [VA Pension](https://veteransbenefitskb.com/pension) **AND** meet _at least_ one of the following criteria:
+
+  - Need another person to help you perform daily activities, like bathing, feeding, and dressing;
+
+  - Have to stay in bed or spend a large portion of the day in bed—because of illness;
+
+  - Are a patient in a nursing home due to the loss of mental or physical abilities related to a disability; _or_
+
+  - Eyesight is limited (even with glasses or contact lenses you have only 5/200 or less in both eyes; or concentric contraction of the visual field to 5 degrees or less).
+
+**Source:** [https://www.veteransbenefitskb.com/pension-aa#eligibility](https://www.veteransbenefitskb.com/pension-aa#eligibility)
+
+<!-- Chunk 1391/1430 | Topic: Eligibility | Type: pension | Words: 102 -->
+
+---
+
+## Applying
+
+## **Applying**
+
+- For information on applying please click [HERE](https://www.veteransbenefitskb.com/aah).
+
+**Source:** [https://www.veteransbenefitskb.com/pension-aa#applying](https://www.veteransbenefitskb.com/pension-aa#applying)
+
+<!-- Chunk 1392/1431 | Topic: Applying | Type: pension | Words: 10 -->
+
+---
+
+### References and Legal Citations
+
+*Also known as: housebound, SMP, special monthly pension, housebound status, homebound*
+
+## **References**
+
+- [38 CFR § 3.23 - Improved pension rates - Veterans and surviving spouses](https://www.law.cornell.edu/cfr/text/38/3.23)
+
+- [38 CFR § 3.352 - Criteria for determining need for aid and attendance and “permanently bedridden”](https://www.law.cornell.edu/cfr/text/38/3.352)
+
+- [38 CFR § 3.351 - Special monthly dependency and indemnity compensation, death compensation, pension and spouse's compensation ratings](https://www.law.cornell.edu/cfr/text/38/3.351)
+
+- [M21-1, Part XIII, Subpart i, Chapter 3, Section D - Eligibility for Medical Services Associated With Aid and Attendance (A&A) or Housebound Status](https://www.knowva.ebenefits.va.gov/system/templates/selfservice/va_ssnew/help/customer/locale/en-US/portal/554400000001018/content/554400000173840/M21-1-Part-XIII-Subpart-i-Chapter-3-Section-D-Eligibility-for-Medical-Services-Associated-With-Aid-and-Attendance-AA-or-Housebound-Status)
+
+- [M21-1, Part IX, Subpart ii, Chapter 1, Section A - General Information on Requirements for Aid and Attendance (A&A) and Housebound Status Under 38 CFR 3.351](https://www.knowva.ebenefits.va.gov/system/templates/selfservice/va_ssnew/help/customer/locale/en-US/portal/554400000001018/content/554400000015095/M21-1-Part-IX-Subpart-ii-Chapter-1-Section-A-General-Information-on-Requirements-for-Aid-and-Attendance-AA-and-Housebound-Status-Under-38-CFR-3351)
+
+- [M21-1, Part IX, Subpart ii, Chapter 1, Section B - Aid and Attendance (A&A) Status for Beneficiaries Who Are Patients in a Qualified Nursing Home](https://www.knowva.ebenefits.va.gov/system/templates/selfservice/va_ssnew/help/customer/locale/en-US/portal/554400000001018/content/554400000015098/M21-1-Part-IX-Subpart-ii-Chapter-1-Section-B-Aid-and-Attendance-AA-Status-for-Beneficiaries-Who-Are-Patients-in-a-Qualified-Nursing-Home)
+
+- [M21-1, Part IX, Subpart ii, Chapter 2, Section C - Special Monthly Pension (SMP) Ratings](https://www.knowva.ebenefits.va.gov/system/templates/selfservice/va_ssnew/help/customer/locale/en-US/portal/554400000001018/content/554400000178522/M21-1,-Part-IX,-Subpart-ii,-Chapter-2,-Section-C---Special-Monthly-Pension-(SMP))
+
+**Source:** [https://www.veteransbenefitskb.com/pension-housebound#references](https://www.veteransbenefitskb.com/pension-housebound#references)
+
+<!-- Chunk 1393/1432 | Topic: Housebound - Special Monthly Pension - Legal References | Type: references | Words: 145 -->
+
+---
+
+## Housebound - Special Monthly Pension
+
+*Also known as: housebound, SMP, special monthly pension, housebound status, homebound*
+
+# **Housebound - Special Monthly Pension (SMP)**
+
+
+[![](https://images.squarespace-cdn.com/content/v1/66c515a3e8305f0f79e8b680/bd22f10b-2167-4509-9215-2b49d4a4e22f/search3.png)](https://cse.google.com/cse?cx=8392d3f710df0427c)
+
+
+
+[\> Master Condition List](https://veteransbenefitskb.com/master)
+
+[\> Federal Benefits List by Combined Ratings](https://veteransbenefitskb.com/combinedbenefits)
+
+[\> Insider Insight into VBA Claim Processing](https://veteransbenefitskb.com/insight)
+
+[\> Rating Schedule Index](https://veteransbenefitskb.com/ratingsindex)
+
+[\> Filing a VA Disability Claim](https://veteransbenefitskb.com/vaclaim)
+
+[\> Filing an Appeal](https://veteransbenefitskb.com/appeals)
+
+* * *
+
+
+
+
+
+
+
+
+
+Veterans who are Housebound as a result of non-service related condition(s) they may qualify for an increased [VA Pension](https://veteransbenefitskb.com/pension) benefit.
+
+Veterans who are Housebound as a result of a service related condition(s), please see our article on [Special Monthly Compenstation](https://veteransbenefitskb.com/smc). Specifically, SMC-S (Housebound).
+
+* * *
+
+**Source:** [https://www.veteransbenefitskb.com/pension-housebound#houseboundspecialmonthlypension](https://www.veteransbenefitskb.com/pension-housebound#houseboundspecialmonthlypension)
+
+<!-- Chunk 1394/1433 | Topic: Housebound - Special Monthly Pension | Type: pension | Words: 89 -->
+
+---
+
+## Eligibility
+
+## **Eligibility**
+
+- You qualify for [VA Pension](https://veteransbenefitskb.com/pension); **AND**
+
+- You spend most of your time in your home because of a permanent disability.
+
+
+* * *
+
+**Source:** [https://www.veteransbenefitskb.com/pension-housebound#eligibility](https://www.veteransbenefitskb.com/pension-housebound#eligibility)
+
+<!-- Chunk 1395/1434 | Topic: Eligibility | Type: pension | Words: 27 -->
+
+---
+
+## Applying
+
+## **Applying**
+
+- For information on applying click [HERE](https://www.veteransbenefitskb.com/aah).
+
+**Source:** [https://www.veteransbenefitskb.com/pension-housebound#applying](https://www.veteransbenefitskb.com/pension-housebound#applying)
+
+<!-- Chunk 1396/1435 | Topic: Applying | Type: pension | Words: 9 -->
+
+---
+
+## Pension Navigation
+
+## **Pension Navigation**
+
+|     |     |
+| --- | --- |
+| [\> Aid and Attendance](https://veteransbenefitskb.com/pension-aa) | [\> Housebound](https://veteransbenefitskb.com/pension-housebound) |
+| [\> Medal of Honor Pension](https://veteransbenefitskb.com/mohp) | [\> Survivors Pension](https://veteransbenefitskb.com/survivorbenefits#pension) |
+| \> [VA Pension](https://veteransbenefitskb.com/pension) |
+
+**Source:** [https://www.veteransbenefitskb.com/pension-housebound#pensionnavigation](https://www.veteransbenefitskb.com/pension-housebound#pensionnavigation)
+
+<!-- Chunk 1397/1436 | Topic: Pension Navigation | Type: pension | Words: 36 -->
+
+---
 
