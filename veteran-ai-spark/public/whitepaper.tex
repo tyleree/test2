@@ -18,6 +18,8 @@
 \usetikzlibrary{shapes.geometric, arrows, positioning, calc, fit, backgrounds, patterns}
 
 \geometry{margin=1in}
+\setlength{\headheight}{14pt}
+\addtolength{\topmargin}{-2pt}
 \pagestyle{fancy}
 \fancyhf{}
 \fancyhead[L]{Veterans Benefits AI - RAG System}
@@ -95,7 +97,7 @@ The Veterans Benefits AI system implements a sophisticated Retrieval-Augmented G
 
 The system implements a 6-stage RAG pipeline with HyDE (Hypothetical Document Embeddings) for enhanced retrieval, optimized for accuracy and cost-effectiveness.
 
-\begin{figure}[h]
+\begin{figure}[htbp]
 \centering
 \begin{tikzpicture}[node distance=1cm, scale=0.85, transform shape]
     % Nodes - arranged vertically for better fit
@@ -136,7 +138,7 @@ The system implements a 6-stage RAG pipeline with HyDE (Hypothetical Document Em
 
 The vector store maintains document embeddings in memory with cosine similarity search:
 
-\begin{figure}[h]
+\begin{figure}[htbp]
 \centering
 \begin{tikzpicture}[scale=0.85, transform shape]
     % Vector Store Box
@@ -202,37 +204,35 @@ The embedding of ``What is SMC?'' captures the semantic meaning of the question,
 
 HyDE addresses this by generating a \textbf{hypothetical answer} to the query before embedding:
 
-\begin{figure}[h]
+\begin{figure}[htbp]
 \centering
-\begin{tikzpicture}[node distance=0.8cm, scale=0.85, transform shape]
+\begin{tikzpicture}[node distance=0.6cm, scale=0.75, transform shape]
     % Traditional path (top)
-    \node[font=\small\bfseries] at (-4, 3.5) {Traditional RAG:};
-    \node (q1) [data, minimum width=3cm] at (0, 3.5) {``What is SMC?''};
-    \node (e1) [process, right=1.5cm of q1] {Embed Query};
-    \node (s1) [process, right=1.5cm of e1] {Search};
-    \node (r1) [data, right=1.5cm of s1, minimum width=2cm, fill=red!20] {Score: 0.52};
+    \node[font=\small\bfseries] at (-3.5, 3.5) {Traditional:};
+    \node (q1) [data, minimum width=2.5cm] at (0, 3.5) {``What is SMC?''};
+    \node (e1) [process, right=1cm of q1] {Embed};
+    \node (s1) [process, right=1cm of e1] {Search};
+    \node (r1) [data, right=1cm of s1, minimum width=1.8cm, fill=red!20] {Score: 0.52};
     
     \draw [arrow] (q1) -- (e1);
     \draw [arrow] (e1) -- (s1);
     \draw [arrow] (s1) -- (r1);
     
     % HyDE path (bottom)
-    \node[font=\small\bfseries] at (-4, 0.5) {HyDE RAG:};
-    \node (q2) [data, minimum width=3cm] at (0, 0.5) {``What is SMC?''};
-    \node (h2) [process, right=1.5cm of q2, fill=cyan!30, minimum width=2cm] {HyDE};
+    \node[font=\small\bfseries] at (-3.5, 0.5) {HyDE:};
+    \node (q2) [data, minimum width=2.5cm] at (0, 0.5) {``What is SMC?''};
+    \node (h2) [process, right=1cm of q2, fill=cyan!30, minimum width=1.5cm] {HyDE};
     
     % Hypothetical document box
-    \node (hyp) [draw, below=0.5cm of h2, minimum width=8cm, minimum height=1.5cm, fill=cyan!10, align=left, font=\tiny] {
+    \node (hyp) [draw, below=0.4cm of h2, minimum width=6cm, minimum height=1.3cm, fill=cyan!10, align=left, font=\tiny] {
         \textbf{Hypothetical Document:}\\
-        ``Special Monthly Compensation (SMC) is additional\\
-        compensation paid to veterans with specific severe\\
-        disabilities under 38 CFR 3.350. SMC rates range\\
-        from SMC-K to SMC-T based on condition severity...''
+        ``SMC is additional compensation for veterans\\
+        with severe disabilities under 38 CFR 3.350...''
     };
     
-    \node (e2) [process, right=3cm of h2] {Embed Hyp.};
-    \node (s2) [process, right=1.5cm of e2] {Search};
-    \node (r2) [data, right=1.5cm of s2, minimum width=2cm, fill=green!30] {Score: 0.77};
+    \node (e2) [process, right=2.5cm of h2] {Embed};
+    \node (s2) [process, right=1cm of e2] {Search};
+    \node (r2) [data, right=1cm of s2, minimum width=1.8cm, fill=green!30] {Score: 0.77};
     
     \draw [arrow] (q2) -- (h2);
     \draw [arrow] (h2) -- (hyp);
@@ -264,7 +264,7 @@ Requirements:
 
 \subsection{HyDE Architecture}
 
-\begin{figure}[h]
+\begin{figure}[htbp]
 \centering
 \begin{tikzpicture}[node distance=1cm, scale=0.9, transform shape]
     % Input
@@ -304,7 +304,7 @@ Requirements:
     \draw [arrow] (search) -- (results);
     
     % Corpus annotation
-    \node (corpus) [draw, right=2cm of search, minimum width=2cm, fill=green!20, rounded corners] {Corpus\\(1468 chunks)};
+    \node (corpus) [draw, right=2cm of search, minimum width=2cm, fill=green!20, rounded corners, align=center] {Corpus\\(1468 chunks)};
     \draw [arrow, dashed] (corpus) -- (search);
 \end{tikzpicture}
 \caption{HyDE Processing Pipeline}
@@ -312,7 +312,7 @@ Requirements:
 
 \subsection{HyDE Performance Impact}
 
-\begin{figure}[h]
+\begin{figure}[htbp]
 \centering
 \begin{tikzpicture}
 \begin{axis}[
@@ -346,7 +346,7 @@ Requirements:
 
 \subsection{Real-World HyDE Examples}
 
-\begin{table}[h]
+\begin{table}[htbp]
 \centering
 \begin{tabular}{@{}p{3cm}cc@{}}
 \toprule
@@ -366,7 +366,7 @@ Query & Traditional & HyDE \\
 
 HyDE adds a small additional cost per query:
 
-\begin{table}[h]
+\begin{table}[htbp]
 \centering
 \begin{tabular}{@{}lccc@{}}
 \toprule
@@ -384,16 +384,16 @@ Query Embedding & - & - & \$0.00002 \\
 \subsection{Why HyDE Works}
 
 \begin{enumerate}
-    \item \textbf{Semantic Enrichment}: The hypothetical document contains domain-specific terms (CFR references, rating percentages, form numbers) that match corpus vocabulary
+    \item \textbf{Semantic Enrichment}: The hypothetical document contains domain-specific terms (CFR references, rating percentages, forms) that match corpus vocabulary.
     
-    \item \textbf{Length Normalization}: Short 3-word queries become 150-word documents, providing more embedding dimensions to work with
+    \item \textbf{Length Normalization}: Short 3-word queries become 150-word documents, providing more embedding dimensions to work with.
     
-    \item \textbf{Domain Alignment}: The hypothetical is generated by a model trained on VA benefits knowledge, naturally aligning with corpus terminology
+    \item \textbf{Domain Alignment}: The hypothetical is generated by a model trained on VA benefits knowledge, naturally aligning with corpus terminology.
     
-    \item \textbf{Question-to-Answer Bridge}: Instead of matching a question embedding to answer embeddings, HyDE matches a hypothetical answer to real answers
+    \item \textbf{Question-to-Answer Bridge}: Instead of matching a question embedding to answer embeddings, HyDE matches a hypothetical answer to real answers.
 \end{enumerate}
 
-\begin{figure}[h]
+\begin{figure}[htbp]
 \centering
 \begin{tikzpicture}[scale=0.85, transform shape]
     % Embedding space
@@ -442,7 +442,7 @@ RAG systems can produce hallucinations through several mechanisms:
 
 The system implements a comprehensive 7-layer defense against hallucinations, with zero-token post-processing steps for cost efficiency.
 
-\begin{figure}[h]
+\begin{figure}[htbp]
 \centering
 \begin{tikzpicture}[scale=0.85, transform shape]
     % Layers - Pre-LLM
@@ -511,7 +511,7 @@ if best_score < VERY_WEAK_THRESHOLD:  # 0.45
 
 \textbf{Why this matters}: This prevents the LLM from hallucinating when context is insufficient. The cost is \textbf{zero tokens}---no LLM call is made.
 
-\begin{figure}[h]
+\begin{figure}[htbp]
 \centering
 \begin{tikzpicture}
 \begin{axis}[
@@ -572,7 +572,7 @@ u & \text{if } \text{domain}(u) \in \mathcal{W} \\
 
 where $\mathcal{W}$ is the set of whitelisted domains extracted from the corpus.
 
-\begin{figure}[h]
+\begin{figure}[htbp]
 \centering
 \begin{tikzpicture}
 \begin{axis}[
@@ -698,7 +698,7 @@ if weak_retrieval and best_score < 0.50:
 
 The report is logged in both human-readable and JSON formats for monitoring and prioritizing knowledge base updates.
 
-\begin{figure}[h]
+\begin{figure}[htbp]
 \centering
 \begin{tikzpicture}
 \begin{axis}[
@@ -733,7 +733,7 @@ The report is logged in both human-readable and JSON formats for monitoring and 
 
 \subsection{Hallucination Prevention Metrics}
 
-\begin{table}[h]
+\begin{table}[htbp]
 \centering
 \begin{tabular}{@{}lccc@{}}
 \toprule
@@ -754,7 +754,7 @@ Citation Verification Score & 78\% & 94\% & \textbf{98\%} \\
 
 Layers 3-7 operate as post-processing steps that cost zero additional LLM tokens:
 
-\begin{table}[h]
+\begin{table}[htbp]
 \centering
 \begin{tabular}{@{}lcc@{}}
 \toprule
@@ -771,15 +771,15 @@ L7: Confidence Warning & $\sim$25 & User transparency \\
 \end{table}
 
 \newpage
-\section{Knowledge Graph for Enhanced Cache Lookups}
+\section{Knowledge Graph for Cache Lookups}
 
-To further reduce hallucinations and improve response quality, the system implements a lightweight knowledge graph architecture in PostgreSQL. This graph enables intelligent cache lookups using topic, source, and entity relationships.
+To further reduce hallucinations and improve response quality, the system implements a lightweight knowledge graph in PostgreSQL. This enables intelligent cache lookups using topic, source, and entity relationships.
 
 \subsection{Graph Architecture Overview}
 
 The knowledge graph implements a bipartite pattern with questions connected to multiple node types:
 
-\begin{figure}[h]
+\begin{figure}[htbp]
 \centering
 \begin{tikzpicture}[scale=0.85, transform shape]
     % Central node
@@ -807,15 +807,15 @@ The knowledge graph implements a bipartite pattern with questions connected to m
 
 \subsection{Node Types}
 
-\begin{table}[h]
+\begin{table}[htbp]
 \centering
-\begin{tabular}{@{}llp{6cm}@{}}
+\begin{tabular}{@{}lp{4.5cm}p{5.5cm}@{}}
 \toprule
 Node Type & Examples & Purpose \\
 \midrule
 \textbf{Topics} & disability\_ratings, healthcare, appeals & Broad category classification for semantic grouping \\
 \textbf{Sources} & veteransbenefitskb.com/... & Document URLs used to answer questions \\
-\textbf{Entities} & DC 6260 (tinnitus), VA Form 21-526EZ & Specific codes, forms, and benefits mentioned \\
+\textbf{Entities} & DC 6260, VA Form 21-526EZ & Specific codes, forms, benefits mentioned \\
 \bottomrule
 \end{tabular}
 \caption{Knowledge Graph Node Types}
@@ -856,7 +856,7 @@ Questions are classified into predefined topics using keyword matching:
 \text{classify}(q) = \{t \in \mathcal{T} \mid \exists k \in t.\text{keywords}: k \subseteq q\}
 \end{equation}
 
-\begin{table}[h]
+\begin{table}[htbp]
 \centering
 \begin{tabular}{@{}lp{8cm}@{}}
 \toprule
@@ -895,7 +895,7 @@ LIMIT 5;
 
 The response cache now implements a three-level hierarchy:
 
-\begin{figure}[h]
+\begin{figure}[htbp]
 \centering
 \begin{tikzpicture}[scale=0.9, transform shape]
     % L1
@@ -951,7 +951,7 @@ The knowledge graph contributes to hallucination prevention by:
     \item \textbf{Verification Priority}: Verified answers are preferred over unverified ones
 \end{enumerate}
 
-\begin{figure}[h]
+\begin{figure}[htbp]
 \centering
 \begin{tikzpicture}
 \begin{axis}[
@@ -1029,7 +1029,7 @@ The intelligent model routing system automatically selects the appropriate model
 
 \subsection{Routing Decision Tree}
 
-\begin{figure}[h]
+\begin{figure}[htbp]
 \centering
 \begin{tikzpicture}[node distance=1cm, scale=0.85, transform shape]
     % Root
@@ -1066,7 +1066,7 @@ The intelligent model routing system automatically selects the appropriate model
 
 The system identifies complex queries using keyword matching:
 
-\begin{table}[h]
+\begin{table}[htbp]
 \centering
 \begin{tabular}{@{}ll@{}}
 \toprule
@@ -1085,7 +1085,7 @@ Financial & effective date, back pay, retro \\
 
 \subsection{Cost Impact}
 
-\begin{table}[h]
+\begin{table}[htbp]
 \centering
 \begin{tabular}{@{}lccc@{}}
 \toprule
@@ -1152,7 +1152,7 @@ C(q) &= \text{count of complex indicators in query } q\\
 
 \subsection{Technology Stack}
 
-\begin{figure}[h]
+\begin{figure}[htbp]
 \centering
 \begin{tikzpicture}[scale=0.85, transform shape]
     % Layers
@@ -1217,7 +1217,7 @@ corpus/
 
 \subsection{Model Specifications}
 
-\begin{table}[h]
+\begin{table}[htbp]
 \centering
 \begin{tabular}{@{}lll@{}}
 \toprule
@@ -1236,7 +1236,7 @@ Premium Chat & gpt-4.1 & Complex query responses \\
 
 \subsection{Latency Analysis}
 
-\begin{table}[h]
+\begin{table}[htbp]
 \centering
 \begin{tabular}{@{}lcc@{}}
 \toprule
@@ -1261,7 +1261,7 @@ Response Formatting & 20 & 1.1\% \\
 
 \subsection{Quality Metrics}
 
-\begin{table}[h]
+\begin{table}[htbp]
 \centering
 \begin{tabular}{@{}lcc@{}}
 \toprule
@@ -1278,7 +1278,7 @@ Hallucination Rate & 3.2\% & Multi-layer detection \\
 
 \subsection{Cost Comparison}
 
-\begin{figure}[h]
+\begin{figure}[htbp]
 \centering
 \begin{tikzpicture}
     % Bars
@@ -1311,7 +1311,7 @@ To evaluate production-ready alternatives to in-memory vector search, we benchma
 
 \subsection{Benchmark Configuration}
 
-\begin{table}[h]
+\begin{table}[htbp]
 \centering
 \begin{tabular}{@{}ll@{}}
 \toprule
@@ -1331,7 +1331,7 @@ Concurrent Threads & 4 \\
 
 \subsection{Latency Results}
 
-\begin{figure}[h]
+\begin{figure}[htbp]
 \centering
 \begin{tikzpicture}
 \begin{axis}[
@@ -1368,7 +1368,7 @@ Concurrent Threads & 4 \\
 
 \subsection{Throughput Results}
 
-\begin{figure}[h]
+\begin{figure}[htbp]
 \centering
 \begin{tikzpicture}
 \begin{axis}[
@@ -1396,7 +1396,7 @@ Concurrent Threads & 4 \\
 
 \subsection{Index Build Performance}
 
-\begin{table}[h]
+\begin{table}[htbp]
 \centering
 \begin{tabular}{@{}lccc@{}}
 \toprule
