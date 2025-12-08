@@ -2,102 +2,118 @@
 \providecommand\hyper@newdestlabel[2]{}
 \providecommand\HyField@AuxAddToFields[1]{}
 \providecommand\HyField@AuxAddToCoFields[2]{}
-\@writefile{toc}{\contentsline {section}{\numberline {1}Executive Summary}{3}{section.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {1.1}Key Features}{3}{subsection.1.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {1.2}Performance Highlights}{3}{subsection.1.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {2}System Architecture}{4}{section.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}High-Level Architecture}{4}{subsection.2.1}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces RAG Pipeline with Model Routing and Hallucination Guard}}{4}{figure.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Core Components}{4}{subsection.2.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.1}In-Memory Vector Store}{4}{subsubsection.2.2.1}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Vector Store Architecture with File-Backed Cache}}{4}{figure.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {1}Executive Summary}{4}{section.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.1}Key Features}{4}{subsection.1.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.2}Performance Highlights}{4}{subsection.1.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {2}System Architecture}{5}{section.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}High-Level Architecture}{5}{subsection.2.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces RAG Pipeline with HyDE, Model Routing, and Hallucination Guard}}{5}{figure.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Core Components}{5}{subsection.2.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.1}In-Memory Vector Store}{5}{subsubsection.2.2.1}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.2}Embedding System}{5}{subsubsection.2.2.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {3}Hallucination Prevention System}{6}{section.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}The Hallucination Problem}{6}{subsection.3.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Multi-Layer Defense Architecture}{6}{subsection.3.2}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces 7-Layer Hallucination Prevention Architecture}}{6}{figure.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Layer 1: Relevance Threshold}{6}{subsection.3.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.4}Layer 1b: Weak Retrieval Refusal}{7}{subsection.3.4}\protected@file@percent }
-\@writefile{lol}{\contentsline {lstlisting}{\numberline {1}Weak Retrieval Refusal}{7}{lstlisting.1}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Similarity Score Distribution with Threshold Boundaries}}{7}{figure.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.5}Layer 2: System Prompt Grounding}{7}{subsection.3.5}\protected@file@percent }
-\@writefile{lol}{\contentsline {lstlisting}{\numberline {2}Anti-Hallucination Prompt Rules}{7}{lstlisting.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.6}Layer 3: URL Whitelist Validation}{7}{subsection.3.6}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces URL Validation Outcomes}}{8}{figure.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.7}Layer 4: Citation Verification}{8}{subsection.3.7}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.8}Layer 5: Number/Percentage Verification (Zero Tokens)}{8}{subsection.3.8}\protected@file@percent }
-\@writefile{lol}{\contentsline {lstlisting}{\numberline {3}Number Verification Logic}{8}{lstlisting.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.9}Layer 6: Citation Cleanup (Zero Tokens)}{9}{subsection.3.9}\protected@file@percent }
-\@writefile{lol}{\contentsline {lstlisting}{\numberline {4}Citation Cleanup}{9}{lstlisting.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.10}Layer 7: Confidence Warning Prefix}{9}{subsection.3.10}\protected@file@percent }
-\@writefile{lol}{\contentsline {lstlisting}{\numberline {5}Confidence Warning}{9}{lstlisting.5}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Hallucination Rate: 7-Layer System Achieves 1.5\% Rate}}{10}{figure.6}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Progressive Impact of Hallucination Prevention Layers}}{10}{table.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.11}Hallucination Prevention Metrics}{10}{subsection.3.11}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.12}Zero-Token Post-Processing Benefits}{10}{subsection.3.12}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Zero-Token Hallucination Prevention Layers}}{10}{table.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {4}Knowledge Graph for Enhanced Cache Lookups}{11}{section.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Graph Architecture Overview}{11}{subsection.4.1}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Knowledge Graph Architecture: Questions linked to Topics, Sources, and Entities}}{11}{figure.7}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Node Types}{11}{subsection.4.2}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces Knowledge Graph Node Types}}{11}{table.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Entity Extraction}{11}{subsection.4.3}\protected@file@percent }
-\@writefile{lol}{\contentsline {lstlisting}{\numberline {6}Entity Extraction Patterns}{11}{lstlisting.6}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.1}Extracted Entity Examples}{12}{subsubsection.4.3.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.4}Topic Classification}{12}{subsection.4.4}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces Topic Classification Keywords}}{12}{table.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.5}Multi-Join Cache Lookup}{12}{subsection.4.5}\protected@file@percent }
-\@writefile{lol}{\contentsline {lstlisting}{\numberline {7}Enhanced Cache Lookup Query}{12}{lstlisting.7}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.6}Cache Hierarchy with Graph}{12}{subsection.4.6}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Three-Level Cache Hierarchy with Knowledge Graph}}{13}{figure.8}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.7}Verification and Flagging}{13}{subsection.4.7}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.8}Hallucination Prevention via Graph}{13}{subsection.4.8}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.9}Database Schema}{13}{subsection.4.9}\protected@file@percent }
-\@writefile{lol}{\contentsline {lstlisting}{\numberline {8}Knowledge Graph Schema (PostgreSQL)}{13}{lstlisting.8}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Knowledge Graph Reduces Hallucination Rate by 58\% vs Semantic-Only Cache}}{14}{figure.9}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {5}Intelligent Model Routing}{15}{section.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Routing Decision Tree}{15}{subsection.5.1}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Model Routing Decision Tree}}{15}{figure.10}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Complexity Indicators}{15}{subsection.5.2}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {5}{\ignorespaces Complex Query Indicators}}{15}{table.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.3}Cost Impact}{15}{subsection.5.3}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {6}{\ignorespaces Cost Analysis with Model Routing}}{15}{table.6}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {6}Mathematical Formulations}{16}{section.6}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.1}Cosine Similarity Search}{16}{subsection.6.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.2}Top-K Retrieval}{16}{subsection.6.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.3}Model Routing Score}{16}{subsection.6.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {7}Implementation Details}{17}{section.7}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.1}Technology Stack}{17}{subsection.7.1}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces System Technology Stack}}{17}{figure.11}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.2}File Structure}{17}{subsection.7.2}\protected@file@percent }
-\@writefile{lol}{\contentsline {lstlisting}{\numberline {9}Project Structure}{17}{lstlisting.9}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.3}Model Specifications}{17}{subsection.7.3}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {7}{\ignorespaces Model Configuration}}{17}{table.7}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {8}Performance Characteristics}{18}{section.8}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {8.1}Latency Analysis}{18}{subsection.8.1}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {8}{\ignorespaces Latency Breakdown by Stage}}{18}{table.8}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {8.2}Quality Metrics}{18}{subsection.8.2}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {9}{\ignorespaces Quality Evaluation Results}}{18}{table.9}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {8.3}Cost Comparison}{18}{subsection.8.3}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces Cost Reduction with Intelligent Model Routing}}{18}{figure.12}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {9}Vector Store Performance Benchmarks}{19}{section.9}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {9.1}Benchmark Configuration}{19}{subsection.9.1}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {10}{\ignorespaces pgvector Benchmark Configuration}}{19}{table.10}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {9.2}Latency Results}{19}{subsection.9.2}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {13}{\ignorespaces Query Latency Comparison: HNSW m=16 achieves 47\% lower median latency}}{19}{figure.13}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {9.3}Throughput Results}{19}{subsection.9.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {9.4}Index Build Performance}{19}{subsection.9.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {9.5}Key Findings}{19}{subsection.9.5}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {14}{\ignorespaces Throughput Comparison: HNSW m=16 delivers 4.6x higher QPS}}{20}{figure.14}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {11}{\ignorespaces HNSW Index Build Performance}}{20}{table.11}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {9.6}Architecture Recommendation}{20}{subsection.9.6}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {10}Corpus and Knowledge Base}{21}{section.10}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {10.1}Document Processing}{21}{subsection.10.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {10.2}Chunk Metadata}{21}{subsection.10.2}\protected@file@percent }
-\@writefile{lol}{\contentsline {lstlisting}{\numberline {10}Chunk Schema}{21}{lstlisting.10}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {11}Security and Deployment}{21}{section.11}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {11.1}Security Measures}{21}{subsection.11.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {11.2}Deployment Architecture}{21}{subsection.11.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {12}Conclusion}{22}{section.12}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {12.1}7-Layer Hallucination Prevention Summary}{22}{subsection.12.1}\protected@file@percent }
-\gdef \@abspage@last{22}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Vector Store Architecture with File-Backed Cache}}{6}{figure.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3}HyDE: Hypothetical Document Embeddings}{6}{section.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}The Problem with Short Queries}{6}{subsection.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}HyDE Solution}{6}{subsection.3.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces HyDE vs Traditional Retrieval: Short Query Example}}{6}{figure.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}HyDE Generation Process}{7}{subsection.3.3}\protected@file@percent }
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {1}HyDE Generation Prompt}{7}{lstlisting.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4}HyDE Architecture}{7}{subsection.3.4}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces HyDE Processing Pipeline}}{7}{figure.4}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces HyDE Improves Retrieval Scores by 15-48\% for Short/Vague Queries}}{8}{figure.5}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces HyDE Score Improvements on Real Queries}}{8}{table.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.5}HyDE Performance Impact}{8}{subsection.3.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.6}Real-World HyDE Examples}{8}{subsection.3.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.7}Cost Analysis}{8}{subsection.3.7}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces HyDE Cost per Query ($\sim $25\% increase over non-HyDE)}}{8}{table.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.8}Why HyDE Works}{8}{subsection.3.8}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces HyDE Moves Query Closer to Relevant Corpus Chunks in Embedding Space}}{9}{figure.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4}Hallucination Prevention System}{10}{section.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}The Hallucination Problem}{10}{subsection.4.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Multi-Layer Defense Architecture}{10}{subsection.4.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces 7-Layer Hallucination Prevention Architecture}}{10}{figure.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Layer 1: Relevance Threshold}{10}{subsection.4.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4}Layer 1b: Weak Retrieval Refusal}{11}{subsection.4.4}\protected@file@percent }
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {2}Weak Retrieval Refusal}{11}{lstlisting.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Similarity Score Distribution with Threshold Boundaries}}{11}{figure.8}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.5}Layer 2: System Prompt Grounding}{11}{subsection.4.5}\protected@file@percent }
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {3}Anti-Hallucination Prompt Rules}{11}{lstlisting.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.6}Layer 3: URL Whitelist Validation}{11}{subsection.4.6}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces URL Validation Outcomes}}{12}{figure.9}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.7}Layer 4: Citation Verification}{12}{subsection.4.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.8}Layer 5: Number/Percentage Verification (Zero Tokens)}{12}{subsection.4.8}\protected@file@percent }
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {4}Number Verification Logic}{12}{lstlisting.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.9}Layer 6: Citation Cleanup (Zero Tokens)}{13}{subsection.4.9}\protected@file@percent }
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {5}Citation Cleanup}{13}{lstlisting.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.10}Layer 7: Confidence Warning Prefix}{13}{subsection.4.10}\protected@file@percent }
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {6}Confidence Warning}{13}{lstlisting.6}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Hallucination Rate: 7-Layer System Achieves 1.5\% Rate}}{14}{figure.10}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces Progressive Impact of Hallucination Prevention Layers}}{14}{table.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.11}Hallucination Prevention Metrics}{14}{subsection.4.11}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.12}Zero-Token Post-Processing Benefits}{14}{subsection.4.12}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces Zero-Token Hallucination Prevention Layers}}{14}{table.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5}Knowledge Graph for Enhanced Cache Lookups}{15}{section.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Graph Architecture Overview}{15}{subsection.5.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces Knowledge Graph Architecture: Questions linked to Topics, Sources, and Entities}}{15}{figure.11}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Node Types}{15}{subsection.5.2}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {5}{\ignorespaces Knowledge Graph Node Types}}{15}{table.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3}Entity Extraction}{15}{subsection.5.3}\protected@file@percent }
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {7}Entity Extraction Patterns}{15}{lstlisting.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.3.1}Extracted Entity Examples}{16}{subsubsection.5.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4}Topic Classification}{16}{subsection.5.4}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {6}{\ignorespaces Topic Classification Keywords}}{16}{table.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.5}Multi-Join Cache Lookup}{16}{subsection.5.5}\protected@file@percent }
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {8}Enhanced Cache Lookup Query}{16}{lstlisting.8}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.6}Cache Hierarchy with Graph}{16}{subsection.5.6}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces Three-Level Cache Hierarchy with Knowledge Graph}}{17}{figure.12}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.7}Verification and Flagging}{17}{subsection.5.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.8}Hallucination Prevention via Graph}{17}{subsection.5.8}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.9}Database Schema}{17}{subsection.5.9}\protected@file@percent }
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {9}Knowledge Graph Schema (PostgreSQL)}{17}{lstlisting.9}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {13}{\ignorespaces Knowledge Graph Reduces Hallucination Rate by 58\% vs Semantic-Only Cache}}{18}{figure.13}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6}Intelligent Model Routing}{19}{section.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1}Routing Decision Tree}{19}{subsection.6.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {14}{\ignorespaces Model Routing Decision Tree}}{19}{figure.14}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.2}Complexity Indicators}{19}{subsection.6.2}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {7}{\ignorespaces Complex Query Indicators}}{19}{table.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.3}Cost Impact}{19}{subsection.6.3}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {8}{\ignorespaces Cost Analysis with HyDE and Model Routing}}{19}{table.8}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {7}Mathematical Formulations}{20}{section.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.1}Cosine Similarity Search}{20}{subsection.7.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.2}Top-K Retrieval}{20}{subsection.7.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.3}Model Routing Score}{20}{subsection.7.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {8}Implementation Details}{21}{section.8}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.1}Technology Stack}{21}{subsection.8.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {15}{\ignorespaces System Technology Stack with HyDE Layer}}{21}{figure.15}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.2}File Structure}{21}{subsection.8.2}\protected@file@percent }
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {10}Project Structure}{21}{lstlisting.10}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.3}Model Specifications}{21}{subsection.8.3}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {9}{\ignorespaces Model Configuration}}{22}{table.9}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {9}Performance Characteristics}{22}{section.9}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {9.1}Latency Analysis}{22}{subsection.9.1}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {10}{\ignorespaces Latency Breakdown by Stage (with HyDE)}}{22}{table.10}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {9.2}Quality Metrics}{22}{subsection.9.2}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {11}{\ignorespaces Quality Evaluation Results}}{22}{table.11}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {9.3}Cost Comparison}{22}{subsection.9.3}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {16}{\ignorespaces Cost Reduction with Intelligent Model Routing}}{23}{figure.16}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {10}Vector Store Performance Benchmarks}{23}{section.10}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {10.1}Benchmark Configuration}{23}{subsection.10.1}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {12}{\ignorespaces pgvector Benchmark Configuration}}{23}{table.12}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {10.2}Latency Results}{23}{subsection.10.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {10.3}Throughput Results}{23}{subsection.10.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {10.4}Index Build Performance}{23}{subsection.10.4}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {13}{\ignorespaces HNSW Index Build Performance}}{23}{table.13}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {10.5}Key Findings}{23}{subsection.10.5}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {17}{\ignorespaces Query Latency Comparison: HNSW m=16 achieves 47\% lower median latency}}{24}{figure.17}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {18}{\ignorespaces Throughput Comparison: HNSW m=16 delivers 4.6x higher QPS}}{24}{figure.18}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {10.6}Architecture Recommendation}{25}{subsection.10.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {11}Corpus and Knowledge Base}{26}{section.11}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {11.1}Document Processing}{26}{subsection.11.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {11.2}Chunk Metadata}{26}{subsection.11.2}\protected@file@percent }
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {11}Chunk Schema}{26}{lstlisting.11}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {12}Security and Deployment}{26}{section.12}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {12.1}Security Measures}{26}{subsection.12.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {12.2}Deployment Architecture}{26}{subsection.12.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {13}Conclusion}{27}{section.13}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {13.1}HyDE + 7-Layer Defense Summary}{27}{subsection.13.1}\protected@file@percent }
+\gdef \@abspage@last{28}
